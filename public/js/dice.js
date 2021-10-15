@@ -7,11 +7,11 @@ const dreams = [];
 
 // define variables that reference elements on our page
 const dreamsForm = document.forms[0];
-const dreamInput = dreamsForm.elements["dice"];
+const dreamInput = dreamsForm.elements["dream"];
 const dreamInputuser = dreamsForm.elements["username"];
 const dreamInputplayer = dreamsForm.elements["tokens"];
 
-const dreamsList = document.getElementById("dreams");
+const dreamsList = document.getElementById("dice");
 const clearButton = document.querySelector("#clear-dreams");
 
 // request the dreams from our app's sqlite database
