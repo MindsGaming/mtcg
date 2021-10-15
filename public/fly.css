@@ -153,7 +153,6 @@ code {
 .dreamtoken {
   float: left;
   display: block;
-  width: 25%;
   height: 20px;
   font-align: center;
   margin-top: 2px;
@@ -167,7 +166,6 @@ code {
 .dreamtokens {
   float: left;
   display: block;
-  width: 25%;
   height: 20px;
   font-align: center;
   margin-top: 2px;
