@@ -35,6 +35,7 @@
 
     <!-- import the webpage's client-side javascript file -->
     <script src="/js/fly.js" defer></script>
+    <script src="/js/dice.js" defer></script>
   </head>
 
   <body class="BETA" id="MGdark">
@@ -493,12 +494,16 @@
             </div>
           </div>
         </h1>
-
-        <h1 class="miner">
-          <iframe src="https://mtcg.glitch.me/log" class="iframe"> </iframe>
-        </h1>
+        <br />
+        <center>
+          <h1 class="miner">
+            Pending Claims:
+            <ul id="dreams"></ul>
+          </h1>
+        </center>
+        <br />
       </div>
-
+      <br />
       <!-- End Applications -->
 
       <!-- toolbar -->
@@ -984,7 +989,7 @@
 
         <section class="dreams">
           <div class="mini">
-            <ul id="dreams">
+            <ul id="dice">
               <h4>
                 Pending Claims
               </h4>
