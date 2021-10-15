@@ -14,6 +14,18 @@ const dreamInputplayer = dreamsForm.elements["tokens"];
 const dreamsList = document.getElementById("dice");
 const clearButton = document.querySelector("#clear-dreams");
 
+function gamertokens() {
+  var dreamtokens = document.getElementById("gamertokens");
+  dreamtokens.classList.toggle("dreamtokens");
+  dreamInputplayer.value = "GAMER";
+}
+
+function doobettertokens() {
+  var dreamtokens = document.getElementById("doobettertokens");
+  dreamtokens.classList.toggle("dreamtokens");
+  dreamInputplayer.value = "DooBetter";
+}
+
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
   .then(res => res.json())
