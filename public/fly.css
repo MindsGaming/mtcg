@@ -1,0 +1,195 @@
+/* styles */
+/* called by your view template */
+
+h2 {
+  font-size: 20px;
+  font-style: italic;
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p.blockchain {
+  color: gold;
+  font-size: 9px;
+}
+
+.SuperLogin {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90.5%;
+  background-color: red;
+  z-index: 12;
+}
+
+.LOGIN {
+  float: left;
+  display: block;
+  width: 55%;
+  height: 100%;
+  background-color: silver;
+}
+
+.backgrounds {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 45%;
+  height: 91%;
+  background-color: red;
+  overflow: scroll;
+  z-index: -1;
+}
+
+.hide {
+  display: none;
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: cyan;
+  display: inline-block;
+  width: 80%;
+  max-width: 340px;
+  border-radius: 3px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+  color: red;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-top: 4px;
+  color: red;
+  font-size: 18px;
+}
+
+a {
+  color: black;
+}
+
+code {
+  color: red;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.mini {
+  position: relitive;
+  width: 50%;
+}
+
+.link {
+  width: 100%;
+  margin-top: 55px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  display: block;
+}
+
+.questions {
+  float: right;
+  display: block;
+  font-size: 9px;
+  margin-bottom: 3px;
+  padding: 0.5px;
+  bold: bolder;
+  border-style: solid;
+  border-color: red;
+}
+
+.iframe {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  border-style: none;
+  overflow: hidden;
+}
+
+.SuperSplash {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: -1px;
+  border-style: none;
+}
+
+.Litem {
+  float: left;
+  display: block;
+  width: 25%;
+  height: 20px;
+  font-align: center;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  border-style: groove;
+  border-color: black;
+  cursor: pointer;
+}
+
+.LitemSelect {
+  float: left;
+  display: block;
+  width: 25%;
+  height: 20px;
+  font-align: center;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  border-style: groove;
+  border-color: black;
+  cursor: none;
+  background-color: yellow;
+}
+
+.LitemSelected {
+  float: left;
+  display: block;
+  width: 25%;
+  height: 20px;
+  font-align: center;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  border-style: groove;
+  border-color: black;
+  cursor: none;
+  background-color: transparent;
+}
