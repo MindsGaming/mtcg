@@ -13,14 +13,7 @@ const dreamInputplayer = dreamsForm.elements["tokens"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
 
-var minutes = 1000 * 60;
-var hours = minutes * 60;
-var days = hours * 24;
-var years = days * 365;
-var d = new Date();
-var t = d.getTime();
 
-var y = Math.round(t / years);
 
 function gamertokens() {
   var dreamtokens = document.getElementById("gamertokens");
