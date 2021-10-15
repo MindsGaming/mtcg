@@ -100,7 +100,7 @@ clearButton.addEventListener("click", event => {
 
 function guest() {
   var txt;
-  var r = confirm("Select A Miner!");
+  var r = confirm("Login To Earn Rewards!");
   if (r == true) {
     var badge = document.getElementById("badge");
     badge.innerHTML = "Guest";
