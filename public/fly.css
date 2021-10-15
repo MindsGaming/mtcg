@@ -150,7 +150,7 @@ code {
   border-style: none;
 }
 
-.Litem {
+.dreamtoken {
   float: left;
   display: block;
   width: 25%;
@@ -164,7 +164,7 @@ code {
   cursor: pointer;
 }
 
-.LitemSelect {
+.dreamtokens {
   float: left;
   display: block;
   width: 25%;
@@ -175,21 +175,6 @@ code {
   margin-left: 10px;
   border-style: groove;
   border-color: black;
-  cursor: none;
+  cursor: pointer;
   background-color: yellow;
-}
-
-.LitemSelected {
-  float: left;
-  display: block;
-  width: 25%;
-  height: 20px;
-  font-align: center;
-  margin-top: 2px;
-  margin-bottom: 3px;
-  margin-left: 10px;
-  border-style: groove;
-  border-color: black;
-  cursor: none;
-  background-color: transparent;
 }
