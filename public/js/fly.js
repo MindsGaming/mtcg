@@ -71,6 +71,13 @@ dreamsForm.onsubmit = event => {
   } else {
     txt = "Humm okkay";
   }
+  
+  function GamerToken(){
+    var dreamtoken = document.getElementById("GamerToken");
+    dreamtoken.classList.toggle("LitemSelect");
+    
+  }
+  
 
   // reset form
   dreamInput.value = "";
