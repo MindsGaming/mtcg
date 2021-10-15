@@ -1,15 +1,18 @@
 // client-side js
 // run by the browser each time your view template referencing it is loaded
 
-console.log("hello world :o");
+console.log("#MindsGaming");
 
 const dreams = [];
 
 // define variables that reference elements on our page
 const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
+const dreamInputuser = dreamsForm.elements["username"];
+const dreamInputplayer = dreamsForm.elements["tokens"];
+
 const dreamsList = document.getElementById("dreams");
-const clearButton = document.querySelector('#clear-dreams');
+const clearButton = document.querySelector("#clear-dreams");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -32,7 +35,10 @@ dreamsForm.onsubmit = event => {
   // stop our form submission from refreshing the page
   event.preventDefault();
 
-  const data = { dream: dreamInput.value };
+  const data = {
+    dream:
+      dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
+  };
 
   fetch("/addDream", {
     method: "POST",
@@ -44,15 +50,34 @@ dreamsForm.onsubmit = event => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
-  dreams.push(dreamInput.value);
-  appendNewDream(dreamInput.value);
+  dreams.push(
+    dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
+  );
+  appendNewDream(
+    dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
+  );
+
+  var txt;
+  var r = confirm("Select A Miner!");
+  if (r == true) {
+    var badge = document.getElementById("badge");
+    badge.innerHTML = dreamInputuser.value;
+    badge.title = dreamInputuser.value;
+
+    var login = document.getElementById("login");
+    login.classList.toggle("hide");
+    var backgrounds = document.getElementById("backgrounds");
+    backgrounds.classList.toggle("hide");
+  } else {
+    txt = "Humm okkay";
+  }
 
   // reset form
   dreamInput.value = "";
   dreamInput.focus();
 };
 
-clearButton.addEventListener('click', event => {
+clearButton.addEventListener("click", event => {
   fetch("/clearDreams", {})
     .then(res => res.json())
     .then(response => {
@@ -60,3 +85,20 @@ clearButton.addEventListener('click', event => {
     });
   dreamsList.innerHTML = "";
 });
+
+function guest() {
+  var txt;
+  var r = confirm("Select A Miner!");
+  if (r == true) {
+    var badge = document.getElementById("badge");
+    badge.innerHTML = "Guest";
+    badge.title = "Guest";
+
+    var login = document.getElementById("login");
+    login.classList.toggle("hide");
+    var backgrounds = document.getElementById("backgrounds");
+    backgrounds.classList.toggle("hide");
+  } else {
+    txt = "Humm okkay";
+  }
+}
