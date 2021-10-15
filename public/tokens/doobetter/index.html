@@ -83,7 +83,7 @@
               *A miner is running in tha background...
             </miner>
           </button>
-          <br />
+
           <div class="ClickMiner" id="ClickMiner">
             <div style="cursor: pointer" onclick="progress();">
               <meter
@@ -95,7 +95,7 @@
                 value="2"
               ></meter>
             </div>
-
+            <br />
             <div class="Eco">
               <p>
                 MTCG is the main token for our ecosystem that supports our
@@ -147,7 +147,7 @@
               *A miner is running in tha background...
             </miner>
           </button>
-          <br />
+
           <div class="ClickMiner" id="ClickMinerDB">
             <div style="cursor: pointer" onclick="progressDB();">
               <meter
@@ -158,6 +158,7 @@
                 max="100"
                 value="2"
               ></meter>
+              <br />
               <div class="Eco">
                 <a
                   href="https://mintme.com/token/doobetter/trade"
@@ -211,7 +212,7 @@
               *A miner is running in tha background...
             </miner>
           </button>
-          <br />
+
           <div class="ClickMiner" id="ClickMinerEC">
             <div style="cursor: pointer" onclick="progressEC();">
               <meter
@@ -222,6 +223,7 @@
                 max="100"
                 value="2"
               ></meter>
+              <br />
               <div class="Eco">
                 <a
                   href="https://mintme.com/token/eclipse/trade"
@@ -288,7 +290,8 @@
                 high="80"
                 max="100"
                 value="2"
-              ></meter>
+              ></meter
+              ><br />
               <div class="Eco">
                 <a href="https://mintme.com/token/bndr/trade" target="_blank">
                   <div class="BuyBNDR" title="Buy BNDR"></div
@@ -339,7 +342,7 @@
               *A miner is running in tha background...
             </miner>
           </button>
-          <br />
+
           <div class="ClickMiner" id="ClickMinerBF">
             <div style="cursor: pointer" onclick="progressBF();">
               <meter
@@ -349,7 +352,8 @@
                 high="80"
                 max="100"
                 value="2"
-              ></meter>
+              ></meter
+              ><br />
               <div class="Eco">
                 <a
                   href="https://mintme.com/token/blanketfort/trade"
@@ -402,7 +406,7 @@
               *A miner is running in tha background...
             </miner>
           </button>
-          <br />
+
           <div class="ClickMiner" id="ClickMinerLOKA">
             <div style="cursor: pointer" onclick="progressLOKA();">
               <meter
@@ -412,7 +416,8 @@
                 high="80"
                 max="100"
                 value="2"
-              ></meter>
+              ></meter
+              ><br />
               <div class="Eco">
                 <a href="https://mintme.com/token/loka/trade" target="_blank">
                   <div class="BuyLOKA" title="Buy LOKA"></div
@@ -459,7 +464,6 @@
               *A miner is running in tha background...
             </miner>
           </button>
-          <br />
           <div class="ClickMiner" id="ClickMinerGames">
             <div style="cursor: pointer" onclick="progressGames();">
               <meter
@@ -470,6 +474,7 @@
                 max="100"
                 value="2"
               ></meter>
+              <br />
               <div class="Eco">
                 <a
                   href="https://mindsgaming.glitch.me/mtcg/mario"
@@ -493,11 +498,11 @@
             </div>
           </div>
         </h1>
-           <h1 class="miner">
+        <h1 class="miner">
           <img
             class="MTCGtoken"
-            src="https://cdn.glitch.com/9fe59929-5ed9-40dc-a389-cb0374849ac1%2Fgames.png"
-            title="Games"
+            src="https://ipack.glitch.me/coolsmile.gif"
+            title="Claims"
           />
           <a
             href="https://mindsgaming.glitch.me/"
@@ -508,7 +513,7 @@
             (...)
           </p>
           <button class="StartMiner" id="StartMinerClaims">
-            <div onclick="StartMinerGames();" style="cursor: pointer;">
+            <div onclick="StartMinerClaims();" style="cursor: pointer;">
               View Claims
             </div>
             <miner>
@@ -516,47 +521,29 @@
               *A miner is running in tha background...
             </miner>
           </button>
-          <br />
-          <div class="ClickMiner" id="ClickMinerGames">
-            <div style="cursor: pointer" onclick="progressGames();">
+          <div class="ClickMiner" id="ClickMinerClaims">
+            <div style="cursor: pointer" onclick="progressClaims();">
               <meter
-                id="progressGames"
+                id="progressClaims"
                 min="5"
                 low="10"
                 high="80"
                 max="100"
                 value="2"
               ></meter>
+              <br />
               <div class="Eco">
-                <a
-                  href="https://mindsgaming.glitch.me/mtcg/mario"
-                  target="_blank"
-                >
-                  <div class="mario" title="Mario"></div
-                ></a>
-                <a
-                  href="https://mindsgaming.glitch.me/mtcg/digger"
-                  target="_blank"
-                >
-                  <div class="digger" title="Digger"></div
-                ></a>
-                <a
-                  href="https://mindsgaming.glitch.me/mtcg/survivor"
-                  target="_blank"
-                >
-                  <div class="survivor" title="Suvivor"></div
-                ></a>
+                <center>
+                  <h1 class="miner">
+                    Pending Claims:
+                    <ul id="dice"></ul>
+                  </h1>
+                </center>
+                <br />
               </div>
             </div>
           </div>
         </h1>
-        <br />
-        <center>
-          <h1 class="miner">
-            Pending Claims:
-            <ul id="dice"></ul>
-          </h1>
-        </center>
         <br />
       </div>
       <br />
