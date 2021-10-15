@@ -9,9 +9,7 @@ const dreams = [];
 const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
-const clearButton = document.querySelector("#clear-dreams");
-const dreamInputuser = dreamsForm.elements["username"];
-const dreamInputplayer = dreamsForm.elements["tokens"];
+const clearButton = document.querySelector('#clear-dreams');
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -21,21 +19,6 @@ fetch("/getDreams", {})
       appendNewDream(row.dream);
     });
   });
-
-var txt;
-var r = confirm("Select A Miner!");
-if (r == true) {
-  var badge = document.getElementById("badge");
-  badge.innerHTML = dreamInputuser.value;
-  badge.title = dreamInputuser.value;
-
-  var login = document.getElementById("login");
-  login.classList.toggle("hide");
-  var backgrounds = document.getElementById("backgrounds");
-  backgrounds.classList.toggle("hide");
-} else {
-  txt = "Humm okkay";
-}
 
 // a helper function that creates a list item for a given dream
 const appendNewDream = dream => {
@@ -49,7 +32,7 @@ dreamsForm.onsubmit = event => {
   // stop our form submission from refreshing the page
   event.preventDefault();
 
-  const data = { dream: dreamInput.value, dream.Inputuser, dream };
+  const data = { dream: dreamInput.value };
 
   fetch("/addDream", {
     method: "POST",
@@ -69,7 +52,7 @@ dreamsForm.onsubmit = event => {
   dreamInput.focus();
 };
 
-clearButton.addEventListener("click", event => {
+clearButton.addEventListener('click', event => {
   fetch("/clearDreams", {})
     .then(res => res.json())
     .then(response => {
