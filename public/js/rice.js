@@ -17,7 +17,7 @@ const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
 
 var totalSeconds = 0;
-setInterval(setTime, 500);
+setInterval(setTime, 3141);
 
 function setTime() {
   ++totalSeconds;

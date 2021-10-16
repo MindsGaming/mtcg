@@ -22,23 +22,29 @@ function cashTokens() {
   if (minutesLabel.innerHTML == "00") {
     alert("You Need A Full Token TO Cash Out!");
   } else {
-    const data = {
-      dream:
-        dreamInput.value +
-        "-" +
-        dreamInputuser.value +
-        dreamInputplayer.value +
-        " Reward: "
-    };
+    var txt;
+    var r = confirm("Are You Sure You Want To Claim & Logout?");
+    if (r == true) {
+      const data = {
+        dream:
+          dreamInput.value +
+          "-" +
+          dreamInputuser.value +
+          dreamInputplayer.value +
+          " Reward: "
+      };
 
-    appendNewDream(
-      dreamInput.value +
-        "-" +
-        dreamInputuser.value +
-        " Reward: " +
-        dreamInputplayer.value +
-        tokenCheck.value
-    );
-    window.open("/");
+      appendNewDream(
+        dreamInput.value +
+          "-" +
+          dreamInputuser.value +
+          " Reward: " +
+          dreamInputplayer.value +
+          tokenCheck.value
+      );
+      window.open("/", "_self");
+    } else {
+      txt = "You pressed Cancel!";
+    }
   }
 }
