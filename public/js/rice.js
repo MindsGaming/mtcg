@@ -13,21 +13,8 @@ const dreamInputplayer = dreamsForm.elements["tokens"];
 
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
-
 const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
-
-const dreamTokens = minutesLabel.value + "." + secondsLabel.value;
-const dreamerTokens = dreamsForm.elements["dreamreward"];
-
-dreamerTokens = minutesLabel.value + "." + secondsLabel.value;
-
-const dreamedTokens = dreamerTokens
-function gamertokens() {
-  var dreamtokens = document.getElementById("gamertokens");
-  dreamtokens.classList.toggle("dreamtokens");
-  dreamInputplayer.value = "GAMER";
-}
 
 var totalSeconds = 0;
 setInterval(setTime, 41);
@@ -36,8 +23,6 @@ function setTime() {
   ++totalSeconds;
   secondsLabel.innerHTML = pad(totalSeconds % 60);
   minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-  secondsLabel.value = secondsLabel.innerHTML;
-  minutesLabel.value = minutesLabel.innerHTML;
 }
 
 function pad(val) {
@@ -88,7 +73,8 @@ dreamsForm.onsubmit = event => {
       "-" +
       dreamInputuser.value +
       dreamInputplayer.value +
-      dreamedTokens
+      secondsLabel.innerHTML +
+      minutesLabel.innerHTML
   };
 
   fetch("/addDream", {
@@ -106,14 +92,16 @@ dreamsForm.onsubmit = event => {
       "-" +
       dreamInputuser.value +
       dreamInputplayer.value +
-      dreamedTokens
+      secondsLabel.innerHTML +
+      minutesLabel.innerHTML
   );
   appendNewDream(
     dreamInput.value +
       "-" +
       dreamInputuser.value +
       dreamInputplayer.value +
-      "Logged In"
+      secondsLabel.innerHTML +
+      minutesLabel.innerHTML
   );
 
   var txt;
@@ -132,6 +120,7 @@ dreamsForm.onsubmit = event => {
   }
 
   // reset form
+  dreamInput.value = "";
   dreamInput.focus();
 };
 
