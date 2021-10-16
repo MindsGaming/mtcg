@@ -14,6 +14,9 @@ function cashTokens() {
 
   const minutesLabel = document.getElementById("minutes");
   const secondsLabel = document.getElementById("seconds");
+  const tokenCheck = document.getElementById("tokenCheck");
+  
+tokenCheck.value = minutesLabel + 
 
   if (minutesLabel.innerHTML == "00") {
     alert("You Need A Full Token TO Cash Out!");
@@ -24,21 +27,9 @@ function cashTokens() {
         "-" +
         dreamInputuser.value +
         dreamInputplayer.value +
-        " Reward: " 
-       
+        " Reward: "
     };
 
-    // get dream value and add it to the list
-    dreams.push(
-      dreamInput.value +
-        "-" +
-        dreamInputuser.value +
-        dreamInputplayer.value +
-        " Reward: " +
-        secondsLabel.innerHTML +
-        "." +
-        minutesLabel.innerHTML
-    );
     appendNewDream(
       dreamInput.value +
         "-" +
@@ -51,6 +42,5 @@ function cashTokens() {
     );
     minutesLabel.innerHTML = "000";
     secondsLabel.innerHTML = "000";
-    setTime();
   }
 }
