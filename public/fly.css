@@ -111,13 +111,16 @@ code {
   width: 50%;
 }
 
-.link {
-  width: 100%;
+.links {
+  width: 99%;
   margin-top: 55px;
   text-decoration: none;
   text-align: center;
   font-size: 15px;
   display: block;
+  border-style: solid;
+  border-color: grey;
+  
 }
 
 .questions {
