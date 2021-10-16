@@ -43,6 +43,7 @@ function cashTokens() {
           dreamInputplayer.value +
           tokenCheck.value
       );
+
       window.open("/", "_self");
     } else {
       txt = "You pressed Cancel!";
