@@ -20,7 +20,7 @@ function cashTokens() {
       dreamInput.value +
       "-" +
       dreamInputuser.value +
-      dreamInputplayer.value +
+      dreamInputplayer.value + " Reward: " +
       secondsLabel.innerHTML +
       "." +
       minutesLabel.innerHTML
@@ -31,16 +31,16 @@ function cashTokens() {
     dreamInput.value +
       "-" +
       dreamInputuser.value +
-      dreamInputplayer.value +
-      secondsLabel.innerHTML +
+      dreamInputplayer.value + " Reward: " +
+      secondsLabel.innerHTML + 
       "." +
       minutesLabel.innerHTML
   );
   appendNewDream(
     dreamInput.value +
       "-" +
-      dreamInputuser.value +
-      dreamInputplayer.value +
+      dreamInputuser.value + " Reward: " +
+      dreamInputplayer.value + 
       secondsLabel.innerHTML +
       "." +
       minutesLabel.innerHTML

@@ -17,7 +17,7 @@ const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
 
 var totalSeconds = 0;
-setInterval(setTime, 41);
+setInterval(setTime, 3141);
 
 function setTime() {
   ++totalSeconds;
@@ -72,7 +72,7 @@ dreamsForm.onsubmit = event => {
       dreamInput.value +
       "-" +
       dreamInputuser.value +
-      dreamInputplayer.value +
+      dreamInputplayer.value + "Reward: " +
       secondsLabel.innerHTML + "." +
       minutesLabel.innerHTML
   };
