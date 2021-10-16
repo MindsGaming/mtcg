@@ -11,8 +11,29 @@ const dreamInput = dreamsForm.elements["dream"];
 const dreamInputuser = dreamsForm.elements["username"];
 const dreamInputplayer = dreamsForm.elements["tokens"];
 
-const dreamsList = document.getElementById("dice");
+const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
+
+const minutesLabel = document.getElementById("minutes");
+const secondsLabel = document.getElementById("seconds");
+
+var totalSeconds = 0;
+setInterval(setTime, 41);
+
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
 
 function gamertokens() {
   var dreamtokens = document.getElementById("gamertokens");
@@ -66,7 +87,11 @@ dreamsForm.onsubmit = event => {
     dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
   );
   appendNewDream(
-    dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
+    dreamInput.value +
+      "-" +
+      dreamInputuser.value +
+      dreamInputplayer.value +
+      "Logged In"
   );
 
   var txt;

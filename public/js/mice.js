@@ -1,117 +1,134 @@
 // client-side js
 // run by the browser each time your view template referencing it is loaded
+function cashTokens() {
+  console.log("#MindsGaming");
 
-console.log("#MindsGaming");
+  const dreams = [];
 
-const dreams = [];
+  // define variables that reference elements on our page
+  const dreamsForm = document.forms[0];
+  const dreamInput = dreamsForm.elements["dream"];
+  const dreamInputuser = dreamsForm.elements["username"];
+  const dreamInputplayer = dreamsForm.elements["tokens"];
 
-// define variables that reference elements on our page
-const dreamsForm = document.forms[0];
-const dreamInput = dreamsForm.elements["dream"];
-const dreamInputuser = dreamsForm.elements["username"];
-const dreamInputplayer = dreamsForm.elements["tokens"];
-const dreamsList = document.getElementById("dreams");
-const clearButton = document.querySelector("#clear-dreams");
+  const dreamsList = document.getElementById("dreams");
+  const clearButton = document.querySelector("#clear-dreams");
 
+  const minutesLabel = document.getElementById("minutes").innerHTML;
+  const secondsLabel = document.getElementById("seconds").innerHTML;
 
+  const dreamTokens = minutesLabel + secondsLabel;
 
-function gamertokens() {
-  var dreamtokens = document.getElementById("gamertokens");
-  dreamtokens.classList.toggle("dreamtokens");
-  dreamInputplayer.value = "GAMER";
-}
-
-function doobettertokens() {
-  var dreamtokens = document.getElementById("doobettertokens");
-  dreamtokens.classList.toggle("dreamtokens");
-  dreamInputplayer.value = "DooBetter";
-}
-
-// request the dreams from our app's sqlite database
-fetch("/getDreams", {})
-  .then(res => res.json())
-  .then(response => {
-    response.forEach(row => {
-      appendNewDream(row.dream);
-    });
-  });
-
-// a helper function that creates a list item for a given dream
-const appendNewDream = dream => {
-  const newListItem = document.createElement("li");
-  newListItem.innerText = dream;
-  dreamsList.appendChild(newListItem);
-};
-
-// listen for the form to be submitted and add a new dream when it is
-dreamsForm.onsubmit = event => {
-  // stop our form submission from refreshing the page
-  event.preventDefault();
-
-  const data = {
-    dream:
-      dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
-  };
-
-  fetch("/addDream", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: { "Content-Type": "application/json" }
-  })
-    .then(res => res.json())
-    .then(response => {
-      console.log(JSON.stringify(response));
-    });
-  // get dream value and add it to the list
-  dreams.push(
-    dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
-  );
-  appendNewDream(
-    dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
-  );
-
-  var txt;
-  var r = confirm("Select A Miner!");
-  if (r == true) {
-    var badge = document.getElementById("badge");
-    badge.innerHTML = dreamInputuser.value;
-    badge.title = dreamInputuser.value;
-
-    var login = document.getElementById("login");
-    login.classList.toggle("hide");
-    var backgrounds = document.getElementById("backgrounds");
-    backgrounds.classList.toggle("hide");
-  } else {
-    txt = "Humm okkay";
+  function gamertokens() {
+    var dreamtokens = document.getElementById("gamertokens");
+    dreamtokens.classList.toggle("dreamtokens");
+    dreamInputplayer.value = "GAMER";
   }
 
-  // reset form
-  dreamInput.value = "";
-  dreamInput.focus();
-};
+  function doobettertokens() {
+    var dreamtokens = document.getElementById("doobettertokens");
+    dreamtokens.classList.toggle("dreamtokens");
+    dreamInputplayer.value = "DooBetter";
+  }
 
-clearButton.addEventListener("click", event => {
-  fetch("/clearDreams", {})
+  // request the dreams from our app's sqlite database
+  fetch("/getDreams", {})
     .then(res => res.json())
     .then(response => {
-      console.log("cleared dreams");
+      response.forEach(row => {
+        appendNewDream(row.dream);
+      });
     });
-  dreamsList.innerHTML = "";
-});
 
-function guest() {
-  var txt;
-  var r = confirm("Login To Earn Rewards!");
-  if (r == true) {
-    var badge = document.getElementById("badge");
-    badge.innerHTML = "Guest";
-    badge.title = "Guest";
+  // a helper function that creates a list item for a given dream
+  const appendNewDream = dream => {
+    const newListItem = document.createElement("li");
+    newListItem.innerText = dream;
+    dreamsList.appendChild(newListItem);
+  };
 
-    var login = document.getElementById("login");
-    login.classList.toggle("hide");
-    var backgrounds = document.getElementById("backgrounds");
-    backgrounds.classList.toggle("hide");
-  } else {
-    txt = "Humm okkay";
+  // listen for the form to be submitted and add a new dream when it is
+  dreamsForm.onsubmit = event => {
+    // stop our form submission from refreshing the page
+    event.preventDefault();
+
+    const data = {
+      dream:
+        dreamInput.value +
+        "-" +
+        dreamInputuser.value +
+        dreamInputplayer.value +
+        dreamTokens
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" }
+    })
+      .then(res => res.json())
+      .then(response => {
+        console.log(JSON.stringify(response));
+      });
+    // get dream value and add it to the list
+    dreams.push(
+      dreamInput.value +
+        "-" +
+        dreamInputuser.value +
+        dreamInputplayer.value +
+        dreamTokens
+    );
+    appendNewDream(
+      dreamInput.value +
+        "-" +
+        dreamInputuser.value +
+        dreamInputplayer.value +
+        dreamTokens
+    );
+
+    var txt;
+    var r = confirm("Select A Miner!");
+    if (r == true) {
+      var badge = document.getElementById("badge");
+      badge.innerHTML = dreamInputuser.value;
+      badge.title = dreamInputuser.value;
+
+      var login = document.getElementById("login");
+      login.classList.toggle("hide");
+      var backgrounds = document.getElementById("backgrounds");
+      backgrounds.classList.toggle("hide");
+    } else {
+      txt = "Humm okkay";
+    }
+
+    // reset form
+    dreamInput.value = "";
+    dreamInput.focus();
+  };
+
+  clearButton.addEventListener("click", event => {
+    fetch("/clearDreams", {})
+      .then(res => res.json())
+      .then(response => {
+        console.log("cleared dreams");
+      });
+    dreamsList.innerHTML = "";
+  });
+
+  function guest() {
+    var txt;
+    var r = confirm("Login To Earn Rewards!");
+    if (r == true) {
+      var badge = document.getElementById("badge");
+      badge.innerHTML = "Guest";
+      badge.title = "Guest";
+
+      var login = document.getElementById("login");
+      login.classList.toggle("hide");
+      var backgrounds = document.getElementById("backgrounds");
+      backgrounds.classList.toggle("hide");
+    } else {
+      txt = "Humm okkay";
+    }
   }
 }
