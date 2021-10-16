@@ -997,6 +997,7 @@
             DooBetter
           </div>
           <input
+            type="hidden"
             list="tokens"
             name="tokens"
             id="token"
@@ -1010,6 +1011,14 @@
             <option value="...."> </option>
             <option value="...."> </option>
           </datalist>
+          <input
+            name="dreamreward"
+            aria-label="a new dream"
+            type="text"
+            maxlength="100"
+            placeholder="Reward: 0.00"
+            required
+          />
 
           <button type="submit" id="submit-dream">Login</button>
           <div class="guest" onclick="guest();">

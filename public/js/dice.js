@@ -17,7 +17,17 @@ const clearButton = document.querySelector("#clear-dreams");
 const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
 
-const dreamedTokens = minutesLabel.value + "." + secondsLabel.value;
+const dreamTokens = minutesLabel.value + "." + secondsLabel.value;
+const dreamerTokens = dreamsForm.elements["dreamreward"];
+
+dreamerTokens = minutesLabel.value + "." + secondsLabel.value;
+
+const dreamedTokens = dreamerTokens
+function gamertokens() {
+  var dreamtokens = document.getElementById("gamertokens");
+  dreamtokens.classList.toggle("dreamtokens");
+  dreamInputplayer.value = "GAMER";
+}
 
 var totalSeconds = 0;
 setInterval(setTime, 41);
