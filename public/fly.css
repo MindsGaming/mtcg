@@ -120,7 +120,15 @@ code {
   display: block;
   border-style: solid;
   border-color: grey;
-  
+}
+
+.cashout {
+  display: block;
+  border-style: groove;
+  margin: 3px;
+  padding: 1px;
+  background-color: gold;
+  color: black;
 }
 
 .questions {
@@ -179,3 +187,5 @@ code {
   cursor: pointer;
   background-color: yellow;
 }
+
+.avatar {float: left;}

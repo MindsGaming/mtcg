@@ -18,6 +18,7 @@ function cashTokens() {
 
   const tokenChecking = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
   tokenCheck.value = tokenChecking;
+  var badge = document.getElementById("badge");
 
   if (minutesLabel.innerHTML == "00") {
     alert("You Need A Full Token TO Cash Out!");
