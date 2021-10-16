@@ -192,8 +192,7 @@ code {
   float: left;
   width: 25px;
   height: 25px;
-  margin-top: 15%;
+  margin-top: 30%;
+  margin-left: 2%;
   background-size: contain;
-  border-style: groove;
-  border-radius: 50%;
 }
