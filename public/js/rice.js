@@ -17,7 +17,7 @@ const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
 
 var totalSeconds = 0;
-setInterval(setTime, 3141);
+setInterval(setTime, 41);
 
 function setTime() {
   ++totalSeconds;
@@ -34,8 +34,13 @@ function pad(val) {
   }
 }
 
+if ((minutesLabel.innerHTML == "59")) {
+  alert("Please Cash Out..");
+}
+
 function gamertokens() {
   var dreamtokens = document.getElementById("gamertokens");
+
   dreamtokens.classList.toggle("dreamtokens");
   dreamInputplayer.value = "GAMER";
 }
@@ -72,8 +77,10 @@ dreamsForm.onsubmit = event => {
       dreamInput.value +
       "-" +
       dreamInputuser.value +
-      dreamInputplayer.value + "Reward: " +
-      secondsLabel.innerHTML + "." +
+      dreamInputplayer.value +
+      "Reward: " +
+      secondsLabel.innerHTML +
+      "." +
       minutesLabel.innerHTML
   };
 
@@ -88,16 +95,10 @@ dreamsForm.onsubmit = event => {
     });
   // get dream value and add it to the list
   dreams.push(
-    dreamInput.value +
-      "-" +
-      dreamInputuser.value +
-      dreamInputplayer.value 
+    dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
   );
   appendNewDream(
-    dreamInput.value +
-      "-" +
-      dreamInputuser.value +
-      dreamInputplayer.value 
+    dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
   );
 
   var txt;
