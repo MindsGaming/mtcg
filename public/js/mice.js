@@ -15,7 +15,7 @@ function cashTokens() {
   const minutesLabel = document.getElementById("minutes");
   const secondsLabel = document.getElementById("seconds");
 
-  const dreamedTokens = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+  const dreamedTokens = minutesLabel.value + "." + secondsLabel.value;
   const data = {
     dream:
       dreamInput.value +

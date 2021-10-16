@@ -17,8 +17,7 @@ const clearButton = document.querySelector("#clear-dreams");
 const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
 
-const dreamedTokens = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
-
+const dreamedTokens = minutesLabel.value + "." + secondsLabel.value;
 
 var totalSeconds = 0;
 setInterval(setTime, 41);
@@ -27,8 +26,8 @@ function setTime() {
   ++totalSeconds;
   secondsLabel.innerHTML = pad(totalSeconds % 60);
   minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-  secondsLabel.value == secondsLabel.innerHTML;
-  minutesLabel.value == minutesLabel.innerHTML;
+  secondsLabel.value = secondsLabel.innerHTML;
+  minutesLabel.value = minutesLabel.innerHTML;
 }
 
 function pad(val) {
@@ -93,7 +92,11 @@ dreamsForm.onsubmit = event => {
     });
   // get dream value and add it to the list
   dreams.push(
-    dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value + dreamedTokens
+    dreamInput.value +
+      "-" +
+      dreamInputuser.value +
+      dreamInputplayer.value +
+      dreamedTokens
   );
   appendNewDream(
     dreamInput.value +
