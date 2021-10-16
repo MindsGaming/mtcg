@@ -15,29 +15,28 @@ function cashTokens() {
   const minutesLabel = document.getElementById("minutes");
   const secondsLabel = document.getElementById("seconds");
 
-  const dreamTokens = minutesLabel.value + "." + secondsLabel.value;
-  const dreamedTokens = dreamTokens;
+  const dreamedTokens = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
   const data = {
     dream:
       dreamInput.value +
       "-" +
       dreamInputuser.value +
       dreamInputplayer.value +
-      dreamedTokens.value
+      dreamedTokens
   };
   dreams.push(
     dreamInput.value +
       "-" +
       dreamInputuser.value +
       dreamInputplayer.value +
-      dreamedTokens.value
+      dreamedTokens
   );
   appendNewDream(
     dreamInput.value +
       "-" +
       dreamInputuser.value +
       dreamInputplayer.value +
-      dreamedTokens.value +
-      "check"
+      "Reward: " +
+      dreamedTokens
   );
 }
