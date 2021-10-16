@@ -24,10 +24,8 @@ function cashTokens() {
         "-" +
         dreamInputuser.value +
         dreamInputplayer.value +
-        " Reward: " +
-        secondsLabel.innerHTML +
-        "." +
-        minutesLabel.innerHTML
+        " Reward: " 
+       
     };
 
     // get dream value and add it to the list
@@ -51,7 +49,8 @@ function cashTokens() {
         "." +
         minutesLabel.innerHTML
     );
-    minutesLabel.innerHTML = "0";
-    secondsLabel.innerHTML = "0";
+    minutesLabel.innerHTML = "000";
+    secondsLabel.innerHTML = "000";
+    setTime();
   }
 }
