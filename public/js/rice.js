@@ -73,7 +73,7 @@ dreamsForm.onsubmit = event => {
       "-" +
       dreamInputuser.value +
       dreamInputplayer.value +
-      secondsLabel.innerHTML +
+      secondsLabel.innerHTML + "." +
       minutesLabel.innerHTML
   };
 
@@ -91,17 +91,13 @@ dreamsForm.onsubmit = event => {
     dreamInput.value +
       "-" +
       dreamInputuser.value +
-      dreamInputplayer.value +
-      secondsLabel.innerHTML +
-      minutesLabel.innerHTML
+      dreamInputplayer.value 
   );
   appendNewDream(
     dreamInput.value +
       "-" +
       dreamInputuser.value +
-      dreamInputplayer.value +
-      secondsLabel.innerHTML +
-      minutesLabel.innerHTML
+      dreamInputplayer.value 
   );
 
   var txt;
