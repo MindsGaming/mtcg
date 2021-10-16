@@ -110,7 +110,6 @@ dreamsForm.onsubmit = event => {
   }
 
   // reset form
-  dreamInput.value = "";
   dreamInput.focus();
 };
 

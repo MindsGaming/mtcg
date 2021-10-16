@@ -36,7 +36,6 @@
     <link rel="stylesheet" href="/fly.css" />
     <script src="/js/dice.js" defer></script>
     <script src="/js/mice.js" defer></script>
-
   </head>
 
   <body class="BETA" id="MGdark">
@@ -49,9 +48,13 @@
             >Login</a
           >
           <div class="link">
-            
+            Dream Tokens:
+            <label id="minutes" value="0"></label>.<label id="seconds" value="0"
+              >00</label
+            >
+            <a href="#" onclic="cashTokens(); return false">Cashout</a>
           </div>
-          
+
           <a class="link" href="/tokens">Ecosystem</a>
 
           <div class="link" onclick="InvestIn();">

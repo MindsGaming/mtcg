@@ -1,8 +1,6 @@
 // client-side js
 // run by the browser each time your view template referencing it is loaded
 function cashTokens() {
-  console.log("#MindsGaming");
-
   const dreams = [];
 
   // define variables that reference elements on our page
@@ -14,10 +12,10 @@ function cashTokens() {
   const dreamsList = document.getElementById("dreams");
   const clearButton = document.querySelector("#clear-dreams");
 
-  const minutesLabel = document.getElementById("minutes").innerHTML;
-  const secondsLabel = document.getElementById("seconds").innerHTML;
+  const minutesLabel = document.getElementById("minutes");
+  const secondsLabel = document.getElementById("seconds");
 
-  const dreamTokens = minutesLabel + secondsLabel;
+  const dreamTokens = minutesLabel.innerHTML + secondsLabel.innerHTML;
 
   function gamertokens() {
     var dreamtokens = document.getElementById("gamertokens");
@@ -54,11 +52,7 @@ function cashTokens() {
 
     const data = {
       dream:
-        dreamInput.value +
-        "-" +
-        dreamInputuser.value +
-        dreamInputplayer.value +
-        dreamTokens
+        dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
     };
 
     fetch("/addDream", {
@@ -102,7 +96,6 @@ function cashTokens() {
     }
 
     // reset form
-    dreamInput.value = "";
     dreamInput.focus();
   };
 
