@@ -15,8 +15,9 @@ function cashTokens() {
   const minutesLabel = document.getElementById("minutes");
   const secondsLabel = document.getElementById("seconds");
   const tokenCheck = document.getElementById("tokenCheck");
-  
-tokenCheck.value = minutesLabel + 
+
+  const tokenChecking = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+  tokenCheck.value = tokenChecking;
 
   if (minutesLabel.innerHTML == "00") {
     alert("You Need A Full Token TO Cash Out!");
@@ -36,11 +37,8 @@ tokenCheck.value = minutesLabel +
         dreamInputuser.value +
         " Reward: " +
         dreamInputplayer.value +
-        secondsLabel.innerHTML +
-        "." +
-        minutesLabel.innerHTML
+        tokenCheck.value
     );
-    minutesLabel.innerHTML = "000";
-    secondsLabel.innerHTML = "000";
+    window.open("/");
   }
 }
