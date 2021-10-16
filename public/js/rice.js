@@ -17,7 +17,7 @@ const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
 
 var totalSeconds = 0;
-setInterval(setTime, 41);
+setInterval(setTime, 3141);
 
 function setTime() {
   ++totalSeconds;
@@ -32,10 +32,6 @@ function pad(val) {
   } else {
     return valString;
   }
-}
-
-if ((minutesLabel.innerHTML == "59")) {
-  alert("Please Cash Out..");
 }
 
 function gamertokens() {

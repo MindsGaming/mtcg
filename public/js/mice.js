@@ -15,36 +15,43 @@ function cashTokens() {
   const minutesLabel = document.getElementById("minutes");
   const secondsLabel = document.getElementById("seconds");
 
-  const data = {
-    dream:
-      dreamInput.value +
-      "-" +
-      dreamInputuser.value +
-      dreamInputplayer.value + " Reward: " +
-      secondsLabel.innerHTML +
-      "." +
-      minutesLabel.innerHTML
-  };
+  if (minutesLabel.innerHTML == "00") {
+    alert("You Need A Full Token TO Cash Out!");
+  } else {
+    const data = {
+      dream:
+        dreamInput.value +
+        "-" +
+        dreamInputuser.value +
+        dreamInputplayer.value +
+        " Reward: " +
+        secondsLabel.innerHTML +
+        "." +
+        minutesLabel.innerHTML
+    };
 
-  // get dream value and add it to the list
-  dreams.push(
-    dreamInput.value +
-      "-" +
-      dreamInputuser.value +
-      dreamInputplayer.value + " Reward: " +
-      secondsLabel.innerHTML + 
-      "." +
-      minutesLabel.innerHTML
-  );
-  appendNewDream(
-    dreamInput.value +
-      "-" +
-      dreamInputuser.value + " Reward: " +
-      dreamInputplayer.value + 
-      secondsLabel.innerHTML +
-      "." +
-      minutesLabel.innerHTML
-  );
-  minutesLabel.innerHTML = "0";
-  secondsLabel.innerHTML = "0";
+    // get dream value and add it to the list
+    dreams.push(
+      dreamInput.value +
+        "-" +
+        dreamInputuser.value +
+        dreamInputplayer.value +
+        " Reward: " +
+        secondsLabel.innerHTML +
+        "." +
+        minutesLabel.innerHTML
+    );
+    appendNewDream(
+      dreamInput.value +
+        "-" +
+        dreamInputuser.value +
+        " Reward: " +
+        dreamInputplayer.value +
+        secondsLabel.innerHTML +
+        "." +
+        minutesLabel.innerHTML
+    );
+    minutesLabel.innerHTML = "0";
+    secondsLabel.innerHTML = "0";
+  }
 }
