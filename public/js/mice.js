@@ -17,8 +17,9 @@ function cashTokens() {
   const tokenCheck = document.getElementById("tokenCheck");
 
   const tokenChecking = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+  const tokenBoost = -"-3" + tokenChecking;
+  tokenBoost == tokenChecking;
   tokenCheck.value = tokenChecking;
-  var badge = document.getElementById("badge");
 
   if (minutesLabel.innerHTML == "00") {
     alert("You Need A Full Token TO Cash Out!");
@@ -43,7 +44,8 @@ function cashTokens() {
           dreamInputplayer.value +
           tokenCheck.value
       );
-
+      tokenCheck.innerHTML = "00.00";
+      tokenCheck.value = "00.00";
       window.open("/", "_self");
     } else {
       txt = "You pressed Cancel!";
