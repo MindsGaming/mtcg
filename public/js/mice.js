@@ -22,7 +22,7 @@ function cashTokens() {
   tokenCheck.value = tokenChecking;
 
   if (minutesLabel.innerHTML == "00") {
-    alert("You Need A Full Token TO Cash Out!");
+    alert("You Need A Full Token To Cash Out!");
   } else {
     var txt;
     var r = confirm("Are You Sure You Want To Claim & Logout?");
