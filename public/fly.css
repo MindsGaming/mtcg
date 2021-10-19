@@ -196,3 +196,7 @@ code {
   margin-left: 2%;
   background-size: contain;
 }
+
+miner {
+  display: none;
+}
