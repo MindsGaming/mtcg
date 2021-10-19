@@ -32,10 +32,11 @@
       href="https://mindsgaming.glitch.me/mtcg/style.css"
       defer
     />
+    <script src="/games/js/tokens.js" defer></script>
 
     <link rel="stylesheet" href="/fly.css" />
     <script src="/js/fly.js" defer></script>
-    <script src="/js/mice.js" defer></script>
+    <script src="/js/disable.js" defer></script>
   </head>
 
   <body class="BETA" id="MGdark">
@@ -197,7 +198,7 @@
                 ></a>
               </div>
               <img class="background" src="" />
-              <a href="/games/doobetter" target="_blank">
+              <a href="#" onclick="playDoobetter(); return false">
                 <button>
                   DooBetter Racing
                 </button></a
@@ -268,6 +269,65 @@
               >
                 <button>
                   ECLIPSE BeatBox
+                </button></a
+              >
+            </div>
+          </div>
+        </h1>
+
+        <h1 class="miner">
+          <img
+            class="MTCGtoken"
+            src="https://cdn.minds.com/icon/565876748307148809/medium/1460322545"
+            title="GAMER"
+          />
+          <a
+            href="https://mindsgaming.glitch.me/"
+            style="text-decoration:none; color: red; bold: bold;"
+            >GAMER
+          </a>
+          <p class="text">
+            (Blockchain Reward Token)
+          </p>
+          <button class="StartMiner" id="StartMinerGamer">
+            <div onclick="StartMinerGamer();" style="cursor: pointer;">
+              <b>GAMER</b> MINER
+            </div>
+            <miner>
+              <iframe src="https://mindsgaming.glitch.me/mtccg/miner"> </iframe>
+              *A miner is running in tha background...
+            </miner>
+          </button>
+
+          <div class="ClickMiner" id="ClickMinerGamer">
+            <div style="cursor: pointer" onclick="progressGamer();">
+              <meter
+                id="progressGAMER"
+                min="5"
+                low="10"
+                high="80"
+                max="100"
+                value="2"
+              ></meter>
+              <br />
+              <div class="Eco">
+                <a href="https://mintme.com/token/GAMER/trade" target="_blank">
+                  <div class="BuyGAMER" title="Buy GAMER"></div
+                ></a>
+                <a
+                  href="https://mintme.com/token/GAMER/intro/airdrop"
+                  target="_blank"
+                >
+                  <div class="AIRDROP" title="Airdrop"></div
+                ></a>
+                <a href="https://www.minds.com/GamerClan/" target="_blank">
+                  <div class="Subscribe" title="Subscribe"></div
+                ></a>
+              </div>
+              <img class="background" src="" />
+              <a href="#" onclick="playGamer(); return false">
+                <button>
+                  Earn GAMER
                 </button></a
               >
             </div>
