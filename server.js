@@ -32,7 +32,7 @@ db.serialize(() => {
     // insert default dreams
     db.serialize(() => {
       db.run(
-        'INSERT INTO Dreams (dream) VALUES ("Find and count some sheep"), ("Climb a really tall mountain"), ("Wash the dishes")'
+        'INSERT INTO Dreams (dream) VALUES ("Charging Up"), ("Finding Games"), ("Loading #MindsGaming")'
       );
     });
   } else {
@@ -109,4 +109,5 @@ const cleanseString = function(string) {
 var listener = app.listen(process.env.PORT, () => {
   console.log(`Your app is listening on port ${listener.address().port}`);
 });
+
 
