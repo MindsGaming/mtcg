@@ -1,9 +1,14 @@
 const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
+var halloween = document.getElementById("trick");
 
 function trick() {
-  
-  
+  halloween.classList.toggle("trick");
+  window.open(
+    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2FSkelotor.jpeg?",
+    "_self"
+  );
+  alert("Tricky NFT");
 }
 
 function treat() {
