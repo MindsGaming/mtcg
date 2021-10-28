@@ -35,57 +35,65 @@
     <script src="/games/js/tokens.js" defer></script>
 
     <link rel="stylesheet" href="/fly.css" />
+        <link rel="stylesheet" href="./fly.css" />
+
     <script src="/js/fly.js" defer></script>
     <script src="/js/mice.js" defer></script>
-    <script src="/js/halloween.js" defer></script>
-
-    <style>
-      .hallow {
-        float: left;
-        display: block;
-        width: 30%;
-        margin: 50px;
-        margin-left: 150px;
-        background-color: black;
-        border-style: groove;
-        border-radius: 11%;
-        color: yellow;
-        font-size: 40px;
-        font-align: center;
-        cursor: pointer;
-      }
-
-      h1 {
-        margin-top: 12%;
-      }
-      .tricks {
-        display: none;
-      }
-      .trick {
-        display: block;
-      }
-    </style>
   </head>
+
   <body>
     <wrap>
-      <center>
-        <div>
-          <h1>
-            Would You Like A Trick Or Treat
-          </h1>
-          <div class="hallow" onclick="trick(); return false">
-            Trick
-          </div>
-          <img
-            src="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2FSkelotor.jpeg"
-            class="tricks"
-            id="trick"
-          />
-          <div class="hallow" id="treat" onclick="treat(); return false">
-            Treat
+      <!-- desktop -->
+      <div class="desktop">
+        <div class="wrap">
+          <badge onclick="tokenmenu();">Menu</badge>
+          <div id="tokenmenu" class="HideMe">
+            <div id="avatar" class="avatar"></div>
+            <a
+              class="links"
+              href="#"
+              id="badge"
+              title="Login"
+              onclick="guest();"
+            >
+              Login</a
+            >
+            <div class="links">
+              Earned Tokens:
+              <label id="minutes" value="0">00</label>.<label
+                id="seconds"
+                value="0"
+                >00</label
+              ><br />
+              <meter class="hide" value="0" max="100" id="tokenCheck"></meter>
+              <a class="cashout" href="#" onclick="cashTokens(); return false"
+                >Cashout</a
+              >
+            </div>
+
+            <a class="links" href="./blogs"
+              >Blogs</a
+            >
+            <div class="links" onclick="InvestIn();">
+              Random Invest
+              <br />
+              <div id="create"></div>
+            </div>
+            <br />
+            <a class="links" href="https://mindsgaming.glitch.me/mtcg/docs"
+              >Docs</a
+            >
+            <br />
+            <br />
+            <br />
           </div>
         </div>
-      </center>
+      </div>
+      <div class="banner">
+        
+      </div>
+      
+      
     </wrap>
   </body>
 </html>
