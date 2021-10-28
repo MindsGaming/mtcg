@@ -16,7 +16,7 @@
   margin-right: 5%;
   width: 12%;
   height: 450px;
-  background-color: red;
+  background-color: transparent;
   text-align: center;
   opacity: 0.8;
 }
@@ -51,4 +51,23 @@ li {
   padding: 1px;
   border-style: groove;
   z-index: 1;
+}
+
+.hub {
+  text-align: center;
+  font-size: 22px;
+  color: gold;
+}
+
+.barLinks {
+  display: block;
+  border-style: solid;
+  border-radius: 50%;
+  background-color: gold;
+  color: blue;
+  width: 90%;
+  height: 45px;
+  font-align: cemter;
+  margin: 5px;
+  padding: 2px;
 }
