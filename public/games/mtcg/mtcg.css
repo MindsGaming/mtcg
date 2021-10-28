@@ -15,19 +15,25 @@
   background-color: green;
 }
 
-.draw {
+.card {
+  position: relative;
   float: left;
-  width: 90px;
-  height: 90%;
-  margin-left: 2px;
-  margin-right: 10px;
-  padding: 1px;
-  background-color: black;
-}
-
-card {
-  float: left;
-  margin-left: 15px;
+  display: block;
+  margin-left: .5%;
   margin-right: 2px;
-  
+  width: 90px;
+  height: 110px;
+  padding: 1px;
+  background-color: blue;
+}
+card {
+  position: relative;
+  float: left;
+  display: block;
+  margin-left: 5%;
+  margin-right: 2px;
+  width: 90px;
+  height: 110px;
+  padding: 1px;
+  background-color: blue;
 }
