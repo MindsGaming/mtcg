@@ -148,6 +148,11 @@ function guest() {
   }
 }
 
+function socailMedia() {
+  alert("You Need To Be Logged In...");
+  window.open("/social", "_self")
+}
+
 /* HTTPS */
 
 var loc = window.location.href + "";
