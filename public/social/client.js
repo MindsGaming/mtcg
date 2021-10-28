@@ -94,16 +94,16 @@ dreamsForm.onsubmit = event => {
     dreamInput.value +
       "(" +
       dreamInputuser.value +
-      " Social)" +
-      dreamInputplayer.value
+      dreamInputplayer.value +
+      " Social)"
   );
 
   appendNewDream(
     dreamInput.value +
       "(" +
       dreamInputuser.value +
-      " Socail)" +
       dreamInputplayer.value +
+      " Socail)" +
       " Logged In"
   );
 
