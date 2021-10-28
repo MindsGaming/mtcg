@@ -20,3 +20,15 @@
   text-align: center;
   opacity: 0.8;
 }
+
+form {
+  float: right;
+  margin: 0.5%;
+}
+
+.feed {
+  width: 60%;
+  margin-left: 15%;
+  height: 400px;
+  background-color: red;
+}

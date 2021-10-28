@@ -39,6 +39,7 @@
 
     <script src="/js/fly.js" defer></script>
     <script src="/js/mice.js" defer></script>
+    <script src="./social.js" defer></script>
   </head>
 
   <body>
@@ -89,6 +90,24 @@
         </h1>
         <a class="barLinks">MTCG</a>
       </div>
+
+      <div class="poster" align="center">
+        <form>
+          <input
+            name="dream"
+            aria-label="a new dream"
+            type="text"
+            maxlength="100"
+            placeholder="What's Up?"
+            required
+          />
+          <button type="submit" id="submit-dream" style="float: right;">
+            Post
+          </button>
+        </form>
+      </div>
+      <br />
+      <div class="feed" id="social"></div>
     </wrap>
   </body>
 </html>
