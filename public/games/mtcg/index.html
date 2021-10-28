@@ -38,11 +38,14 @@
     <link rel="stylesheet" href="/fly.css" />
     <script src="/js/fly.js" defer></script>
     <script src="/js/mice.js" defer></script>
+    <script src="/games/mtcg/attack.js" defer></script>
   </head>
 
   <body>
     <wrap>
       <div class="mtcgBoard">
+        <div class="attack" id="attacked"></div>
+
         <div class="army">
           <div id="playdeck" onclick="createID();">
             <script>
@@ -58,9 +61,8 @@
                 .getElementById("playdeck")
                 .appendChild(playdeck);
             </script>
-                    <card id="create"></card>
-
           </div>
+          <card id="create" onclick="attackED();" style="cursor: pointer;"></card>
         </div>
       </div>
     </wrap>

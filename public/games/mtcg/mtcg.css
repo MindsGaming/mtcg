@@ -15,3 +15,9 @@
   background-color: green;
 }
 
+.attack {
+  position: relative;
+  float: left;
+  margin-left: 20%;
+  margin-top: 11%;
+}
