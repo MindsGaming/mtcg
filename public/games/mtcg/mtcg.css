@@ -92,8 +92,11 @@ card {
 
 .battle {
   position: relative;
-  margin-top: 10%;
-  margin-left: 30%;
+  margin-top: 30%;
+  margin-left: 43%;
+  text-align: center;
   width: 6%;
   background-color: red;
+  border-style: groove;
+  border-color
 }
