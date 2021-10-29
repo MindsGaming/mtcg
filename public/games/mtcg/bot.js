@@ -1,3 +1,6 @@
+
+/* id crerator */
+
 function botID() {
   var MTCGid = "mtcg";
   var DooBetterid = "doobetter";
@@ -68,7 +71,7 @@ function botID() {
     mtcg.title = "MTCG";
     mtcg.id = "MTCG";
     mtcg.style = "cursor:pointer";
-    mtcg.value = "10";
+    mtcg.value = "1000000";
     var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
@@ -79,8 +82,8 @@ function botID() {
     doobetter.width = "120";
     doobetter.title = "DooBetter";
     doobetter.id = "DooBetter";
-    doobetter.style = "cursor: pointer";
     doobetter.value = "5";
+    doobetter.style = "cursor: pointer";
     var DooBetter = document.getElementById("doobetter").appendChild(doobetter);
   }
   if (create.id == "starshatter") {
@@ -92,7 +95,7 @@ function botID() {
     starshatter.title = "StarShatter";
     starshatter.id = "StarShatter";
     starshatter.style = "cursor: pointer";
-    starshatter.value = "4";
+    starshatter.value = "6";
     var StarShatter = document
       .getElementById("starshatter")
       .appendChild(starshatter);
@@ -107,7 +110,7 @@ function botID() {
     lokaya.title = "Lokaya";
     lokaya.id = "Lokaya";
     lokaya.style = "cursor: pointer";
-    lokaya.value = "6";
+    lokaya.value = "9";
     var Lokaya = document.getElementById("lokaya").appendChild(lokaya);
   }
 
@@ -380,6 +383,7 @@ function botID() {
     pretty.width = "120";
     pretty.title = "@XxPrettyLittleThingxX";
     pretty.id = "pretty";
+    pretty.style = "cursor: pointer";
     var Pretty = document.getElementById("pretty").appendChild(pretty);
   }
   if (create.id == "lucoin") {
@@ -390,6 +394,7 @@ function botID() {
     lucoin.width = "120";
     lucoin.title = "LuCoin";
     lucoin.id = "LuCoin";
+    lucoin.style = "cursor: pointer";
     var LuCoin = document.getElementById("lucoin").appendChild(lucoin);
   }
   if (create.id == "noid") {
@@ -400,6 +405,7 @@ function botID() {
     noid.width = "120";
     noid.title = "NOID";
     noid.id = "NOID";
+    noid.style = "cursor: pointer";
     var NOID = document.getElementById("noid").appendChild(noid);
   }
 
@@ -428,5 +434,23 @@ function botID() {
 
   if (create.id == "null") {
     alert("Something Went Wrong");
+  }
+  Create.addEventListener("click", attackED);
+
+  function attackED() {
+    Create.classList.toggle("card");
+    botID();
+    battling();
+  }
+
+  function battling() {
+    Create.addEventListener("click", magic);
+
+    function magic() {
+      alert(" has no value");
+      Create.classList.toggle("hide");
+      var poof = document.getElementById("graveyard");
+      poof.classList.toggle("hide");
+    }
   }
 }
