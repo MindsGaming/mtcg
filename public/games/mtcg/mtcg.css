@@ -21,6 +21,9 @@ card {
   width: 100%;
   height: 100%;
   background-color: yellow;
+  background-image: url("https://lh3.googleusercontent.com/sDZn9ERq9v4ORjKEnYgDNoWmgJl3Ltm8jTWK7Wz-zSjtRA-le9jCfXPphRIRW5Iy7nwI5bpupUsMIX-EfzSIsmaP7BGwjuNfidxG");
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: 2;
 }
 
