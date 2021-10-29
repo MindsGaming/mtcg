@@ -460,22 +460,19 @@ function createID() {
       Create.classList.toggle("hide");
       var poof = document.getElementById("botcard");
       poof.innerHTML = "";
+    
     }
   }
   botdeck();
-}
+    const blank = document.createElement("img");
 
-function botdeck() {
-  var idBuff = +1;
-  var poofid = 0+ idBuff;
-  var hidden = "hidden";
-  var poof = hidden + poofid;
-  /* MTCG */
-  const blank = document.createElement("img");
-  blank.src =
-    "https://lh3.googleusercontent.com/wXCSrw63MDFpFOYtqFHaIyKwYaQbBU4dMln5PZKKpcmQajwbiHMPGRepko1FSzeGbbButgpi8PNiTppf5eWm3KHsVfuFEP9D-q71WPg=w306";
-  blank.style = "width: 120px; margin-left: 25px;";
-  blank.title = "Hidden";
-  blank.id = poof;
-  var BLANK = document.getElementById("botarmy").appendChild(blank);
+  function botdeck() {
+    /* MTCG */
+    blank.src =
+      "https://lh3.googleusercontent.com/wXCSrw63MDFpFOYtqFHaIyKwYaQbBU4dMln5PZKKpcmQajwbiHMPGRepko1FSzeGbbButgpi8PNiTppf5eWm3KHsVfuFEP9D-q71WPg=w306";
+    blank.style = "width: 120px; margin-left: 25px;";
+    blank.title = "Hidden";
+    blank.id = "Hidden";
+  }
+
 }
