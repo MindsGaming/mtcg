@@ -1,13 +1,4 @@
-/* PlayDeck */
-const playdeck = document.createElement("img");
-playdeck.src =
-  "https://lh3.googleusercontent.com/wXCSrw63MDFpFOYtqFHaIyKwYaQbBU4dMln5PZKKpcmQajwbiHMPGRepko1FSzeGbbButgpi8PNiTppf5eWm3KHsVfuFEP9D-q71WPg=w301";
-playdeck.style = "position:fixed; bottom: 0;right:0; width:120px";
-playdeck.title = "PlayDeck";
-playdeck.id = "PlayedDeck";
-var PlayDeck = document.getElementById("playdeck").appendChild(playdeck);
-
-function createID() {
+function botID() {
   var MTCGid = "mtcg";
   var DooBetterid = "doobetter";
   var StarShatterid = "starshatter";
@@ -65,7 +56,7 @@ function createID() {
   const random = Selectid[Math.floor(Math.random() * Selectid.length)];
   var create = document.createElement("card");
   create.id = random;
-  var Create = document.getElementById("create").appendChild(create);
+  var Create = document.getElementById("botcard").appendChild(create);
 
   if (create.id == "mtcg") {
     /* MTCG */
@@ -541,11 +532,9 @@ function createID() {
   if (create.id == "null") {
     alert("Something Went Wrong");
   }
-  Create.addEventListener("click", attackED);
-
-  function attackED() {
-    botID();
-    Create.classList.toggle("card");
-  }
+  
+  var battle = document.getElementById("create");
+  alert("Aplha-testing assign damage");
+  Create.classList.toggle("hide");
+  
 }
-
