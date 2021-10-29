@@ -34,6 +34,7 @@ function createID() {
   var NOIDid = "noid";
   var TETNid = "tetn";
   var PINNid = "pinn";
+  var MaximumUnderDriveid = "maximumunderdrive";
   var JesusToken = "jesustoken";
 
   var Selectid = [
@@ -60,7 +61,8 @@ function createID() {
     Prettyid,
     NOIDid,
     TETNid,
-    PINNid
+    PINNid,
+    MaximumUnderDriveid
   ];
 
   const random = Selectid[Math.floor(Math.random() * Selectid.length)];
