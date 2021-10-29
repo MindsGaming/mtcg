@@ -1,9 +1,3 @@
-function attackED() {
-  var attack = document.getElementByTagName("card");
-  var attacked = attack.id;
-  attacked.classList.toggle("card");
-}
-
 /* PlayDeck */
 const playdeck = document.createElement("img");
 playdeck.src =
@@ -78,9 +72,10 @@ function createID() {
     const mtcg = document.createElement("img");
     mtcg.src =
       "https://lh3.googleusercontent.com/cLnkBaMVrYBjYX-xpVUdk4GThGc0JEvOrHKWmPFsPtsa-5zMd3wpU3lAQh_fTfDue1nGhaPLyqrEDEdoYIoeCDGtIrU5ngZ7RNUz7Q";
-    mtcg.style = "width: 120px; cursor: pointer";
+    mtcg.style = "width: 120px; cursor: pointer;";
     mtcg.title = "MTCG";
     mtcg.id = "MTCG";
+    mtcg.onclick = "function attackED(){mtcg.classList.toggle('card');}";
     var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
@@ -91,6 +86,7 @@ function createID() {
     doobetter.style = "width: 120px; cursor:pointer";
     doobetter.title = "DooBetter";
     doobetter.id = "DooBetter";
+    doobetter.onclick = "function attackED();";
     var DooBetter = document.getElementById("doobetter").appendChild(doobetter);
   }
   if (create.id == "starshatter") {
@@ -101,6 +97,7 @@ function createID() {
     starshatter.style = "width: 120px; cursor:pointer;";
     starshatter.title = "StarShatter";
     starshatter.id = "StarShatter";
+    starshatter.onclick = "function attackED(){};";
     var StarShatter = document
       .getElementById("starshatter")
       .appendChild(starshatter);
