@@ -385,6 +385,7 @@ function createID() {
     pretty.width = "120";
     pretty.title = "@XxPrettyLittleThingxX";
     pretty.id = "pretty";
+    pretty.style = "cursor: pointer";
     var Pretty = document.getElementById("pretty").appendChild(pretty);
   }
   if (create.id == "lucoin") {
@@ -395,6 +396,7 @@ function createID() {
     lucoin.width = "120";
     lucoin.title = "LuCoin";
     lucoin.id = "LuCoin";
+    lucoin.style = "cursor: pointer";
     var LuCoin = document.getElementById("lucoin").appendChild(lucoin);
   }
   if (create.id == "noid") {
@@ -405,6 +407,7 @@ function createID() {
     noid.width = "120";
     noid.title = "NOID";
     noid.id = "NOID";
+    noid.style = "cursor: pointer";
     var NOID = document.getElementById("noid").appendChild(noid);
   }
 
@@ -419,18 +422,18 @@ function createID() {
     tetn.style = "cursor: pointer;";
     var TETN = document.getElementById("tetn").appendChild(tetn);
   }
-if (create.id == "jesustoken") {
+  if (create.id == "jesustoken") {
     /* JesusToken */
     var jesustoken = document.createElement("img");
-    tetn.src =
-      "https://lh3.googleusercontent.com/xNo9Z7U-7FAl7LXB5k_l-uXOLCs_OOH6vxPb8oAAhkS7oeTkAqDcWmqToloZGruxRzJ25N0mG5FA9oRk77UauWBT5o9fkokWt0qv=w301";
-    jesus = "120";
-    tetn.title = "TETN";
-    tetn.id = "TETN";
-    tetn.style = "cursor: pointer;";
-    var TETN = document.getElementById("tetn").appendChild(tetn);
+    jesustoken.src =
+      "https://lh3.googleusercontent.com/y8eMN3i0NdX6WAPdjTK4C8FAtUZcysAjidIY6U31v5IW6uLjIHtV24MXizPgFywwrjssywJxUCU788RYH8LaIdcbzVN7p5lN--U=w301";
+    jesustoken.width = "120";
+    jesustoken.title = "JesusToken";
+    jesustoken.id = "JesusToken";
+    jesustoken.style = "cursor: pointer;";
+    var JesusToken = document.getElementById("tetn").appendChild(tetn);
   }
-  
+
   if (create.id == "null") {
     alert("Something Went Wrong");
   }

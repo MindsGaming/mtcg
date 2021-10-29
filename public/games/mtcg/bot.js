@@ -23,7 +23,7 @@ function botID() {
   var NOIDid = "noid";
   var TETNid = "tetn";
   var PINNid = "pinn";
-  var JesusTokenid = "jesustoken";
+  var JesusToken = "jesustoken";
 
   var Selectid = [
     MTCGid,
@@ -49,24 +49,23 @@ function botID() {
     Prettyid,
     NOIDid,
     TETNid,
-    PINNid,
-    JesusTokenid
+    PINNid
   ];
 
   const random = Selectid[Math.floor(Math.random() * Selectid.length)];
   var create = document.createElement("card");
   create.id = random;
-  var Create = document.getElementById("botcard").appendChild(create);
+  var Create = document.getElementById("create").appendChild(create);
 
   if (create.id == "mtcg") {
     /* MTCG */
     const mtcg = document.createElement("img");
     mtcg.src =
       "https://lh3.googleusercontent.com/cLnkBaMVrYBjYX-xpVUdk4GThGc0JEvOrHKWmPFsPtsa-5zMd3wpU3lAQh_fTfDue1nGhaPLyqrEDEdoYIoeCDGtIrU5ngZ7RNUz7Q";
-    mtcg.style = "width: 120px; cursor: pointer;";
+    mtcg.width = "120";
     mtcg.title = "MTCG";
     mtcg.id = "MTCG";
-    mtcg.onclick = "function attackED(){mtcg.classList.toggle('card');}";
+    mtcg.style = "cursor:pointer";
     var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
@@ -74,10 +73,10 @@ function botID() {
     const doobetter = document.createElement("img");
     doobetter.src =
       "https://lh3.googleusercontent.com/OhMKHby2FsaHEPrrYfI6U3OjSckqycY8UVMRNLeLgxZxQkvCFJnV2nMpFf0o4pCKBK-QPED4Z-1RacuFtrGnJy6_HUiIxOPqGYX8=w301";
-    doobetter.style = "width: 120px; cursor:pointer";
+    doobetter.width = "120";
     doobetter.title = "DooBetter";
     doobetter.id = "DooBetter";
-    doobetter.onclick = "function attackED();";
+    doobetter.style = "cursor: pointer";
     var DooBetter = document.getElementById("doobetter").appendChild(doobetter);
   }
   if (create.id == "starshatter") {
@@ -85,10 +84,10 @@ function botID() {
     const starshatter = document.createElement("img");
     starshatter.src =
       "https://lh3.googleusercontent.com/8cCsKn7ayobQ7gS2uIadh-UkNGLiAe_UimRtYFkheZDiDpiNNyvZSADBZaMWvA13syAB3Aw5NnFE34rTr0aP5ILU92nisT8z4EISA7A=w301";
-    starshatter.style = "width: 120px; cursor:pointer;";
+    starshatter.width = "120";
     starshatter.title = "StarShatter";
     starshatter.id = "StarShatter";
-    starshatter.onclick = "function attackED(){};";
+    starshatter.style = "cursor: pointer";
     var StarShatter = document
       .getElementById("starshatter")
       .appendChild(starshatter);
@@ -99,9 +98,10 @@ function botID() {
     const lokaya = document.createElement("img");
     lokaya.src =
       "https://lh3.googleusercontent.com/COU6psI3QgRoL_7pWfmEG0lz-pSvR7moF-unVNJgYnbqkeZCkYOIu3GhcQJr1DXdjC47eIsLOFUrzhAqZBm20UyjqVscEG5Jh2DlcFs=w301";
-    lokaya.style = "width: 120px; cursor: pointer;";
+    lokaya.width = "120";
     lokaya.title = "Lokaya";
     lokaya.id = "Lokaya";
+    lokaya.style = "cursor: pointer";
     var Lokaya = document.getElementById("lokaya").appendChild(lokaya);
   }
 
@@ -110,9 +110,10 @@ function botID() {
     const gametestplay = document.createElement("img");
     gametestplay.src =
       "https://lh3.googleusercontent.com/Urc29PlSBHGs5UKgA1nqYn8uRG5TU1rmuzDC2Gtf6gAIjVQvLelab5Mm-cMUDHUO5y4zlYUKkLNn5NXkpa6vIMGkaoZj_RVgxhCyPw=w301";
-    gametestplay.style = "width: 120px; cursor: pointer;";
+    gametestplay.width = "120";
     gametestplay.title = "GameTestPlay";
     gametestplay.id = "GameTestPlay";
+    gametestplay.style = "cursor:pointer";
     var GameTestPlay = document
       .getElementById("gametestplay")
       .appendChild(gametestplay);
@@ -123,9 +124,10 @@ function botID() {
     const ottman = document.createElement("img");
     ottman.src =
       "https://lh3.googleusercontent.com/bqmXxNzkaAvgFZmck_3EQXsqbOwwU2WnUHxsP3mWahIejxqKs7yeyy4oSurP7iARrKQQ1w0KtRKmOaS3I3Qo1eYy17L5IQlrLThd6Q=w301";
-    ottman.style = "width: 120px; cursor: pointer;";
+    ottman.width = "120";
     ottman.title = "Ottman";
     ottman.id = "Otmman";
+    ottman.style = "cursor: pointer";
     var Ottman = document.getElementById("ottman").appendChild(ottman);
   }
 
@@ -134,9 +136,10 @@ function botID() {
     const caged = document.createElement("img");
     caged.src =
       "https://lh3.googleusercontent.com/-NZ9O78X0ifWlFYBKhFfexxFoBlZBFhT0Tk9htwfcUUkabLVsgajmwdQ82TB7Ay5YZvpv-6elpepQkXMkmPc6rfI3JGEUcWMQan0=w301";
-    caged.style = "width: 120px; cursor: pointer;";
+    caged.width = "120";
     caged.title = "Caged";
     caged.id = "Caged";
+    caged.style = "cursor: pointer";
     var Caged = document.getElementById("caged").appendChild(caged);
   }
 
@@ -145,9 +148,10 @@ function botID() {
     const yorizzo = document.createElement("img");
     yorizzo.src =
       "https://lh3.googleusercontent.com/VuE_B1zzCZRdnFqJOu-Ct-bmMquTEjk3vikgwKN4JDwa8gtvQgexKV9O9o2mIImjzoPZmRNhX74BOyA__MHzYKH7aun8q622k_IU=w301";
-    yorizzo.style = "width: 120px; cursor: pointer";
+    yorizzo.width = "120";
     yorizzo.title = "YoRizzo";
     yorizzo.id = "YoRizzo";
+    yorizzo.style = "cursor: pointer";
     var Yorizzo = document.getElementById("yorizzo").appendChild(yorizzo);
   }
 
@@ -156,9 +160,10 @@ function botID() {
     const bndr = document.createElement("img");
     bndr.src =
       "https://lh3.googleusercontent.com/KD552s13stlopDhTmYVb6Dm1vgdelMCclR8uQ213hM2n301PhIWGXIL2ABON5FCfrIu_lmu_svX0kJ9AYjLXNtYI6prGNXcmhSzIUA=w301";
-    bndr.style = "width: 120px; cursor: pointer;";
+    bndr.width = "120";
     bndr.title = "BNDR";
     bndr.id = "BNDR";
+    bndr.style = "cursor: pointer";
     var BNDR = document.getElementById("bndr").appendChild(bndr);
   }
   if (create.id == "eclipse") {
@@ -166,9 +171,10 @@ function botID() {
     const eclipse = document.createElement("img");
     eclipse.src =
       "https://lh3.googleusercontent.com/j1IAftNxpUw8feUCBCSIR7GHGyCCzvfyAYuxlXj8il6ClYA10FUnDsFKFxvXp5VkPtsE84fpjgnpXVW1a1CquiIjLQw1yEagq3kO=w301";
-    eclipse.style = "with: 120px; cursor: pointer;";
+    eclipse.width = "120";
     eclipse.title = "Eclipse";
     eclipse.id = "Eclipse";
+    eclipse.style = "cursor: pointer";
     var Eclipse = document.getElementById("eclipse").appendChild(eclipse);
   }
 
@@ -179,7 +185,8 @@ function botID() {
       "https://lh3.googleusercontent.com/Nxa3pCZMNT9QrtR4YrlBOm5nsFq9rfI3cLZsg6zR75WSxyqgi8RMeqUmL8F4pkYQY7dXsLFrHMCtaC_1ATyKIfqSW8p1arkHagngjA=w301";
     pinn.width = "120";
     pinn.title = "PINN";
-    pinn.id = "PlayedPinn";
+    pinn.id = "Pinn";
+    pinn.style = "cursor: pointer";
     var PINN = document.getElementById("pinn").appendChild(pinn);
   }
 
@@ -190,7 +197,8 @@ function botID() {
       "https://lh3.googleusercontent.com/3Y_DfGPoWsBjF3vqWmry2-x4fCsEbMj0mqee7D8IcNfBN6MoHZlMJnK1rgK3cksult_-zA9nde7UeQiMf7bZEcsTZIJZMSE8T0ZC=w301";
     voxix.width = "120";
     voxix.title = "Voxix";
-    voxix.id = "PlayedVoxix";
+    voxix.id = "Voxix";
+    voxix.style = "cursor: pointer";
     var Voxix = document.getElementById("voxix").appendChild(voxix);
   }
 
@@ -202,6 +210,7 @@ function botID() {
     mindsbulb.width = "120";
     mindsbulb.title = "MindsBulb";
     mindsbulb.id = "MindsBulb";
+    mindsbulb.style = "cursor: pointer";
     var MindsBulb = document.getElementById("mindsbulb").appendChild(mindsbulb);
   }
   if (create.id == "pajunior") {
@@ -211,7 +220,8 @@ function botID() {
       "https://lh3.googleusercontent.com/I3GSgo1eOeu5-DqaZQevyHaRr9bo76b-wKiZ2oShs-cQp9fS5cPbfYJ62we2CHEACEP-gcl64i8zz6Xl4BnLj9-n8CTgtl2v5ntm5w=w301";
     pajunior.width = "120";
     pajunior.title = "PaJunior";
-    pajunior.id = "PlayedPajunior";
+    pajunior.id = "Pajunior";
+    pajunior.style = "cursor: pointer";
     var PaJunior = document.getElementById("pajunior").appendChild(pajunior);
   }
 
@@ -222,7 +232,8 @@ function botID() {
       "https://lh3.googleusercontent.com/ZVHxi4B9nK0pW9jJRqwxeRj63rPh6zMGNgTZH719vhyjrV1Ni6tePwgtx1ZFcYzfWn2FrnpYgCZrw9vt6yrflSUv_iXC5aYQPogJog=w301";
     alienship.width = "120";
     alienship.title = "Alien Ship";
-    alienship.id = "PlayedAlienShip";
+    alienship.id = "AlienShip";
+    alienship.style = "cursor: pointer";
     var AlienShip = document.getElementById("alienship").appendChild(alienship);
   }
   if (create.id == "invadergaming") {
@@ -232,7 +243,8 @@ function botID() {
       "https://lh3.googleusercontent.com/-IgFyeQtqhX5ejH_2Yvhgyg2tbv-VRewT8KOlsbujB6lEdDs72KnP0dMGkxWrzxi5_Im2i7eD4UzW26uc_SjIwqHB-pxr_HmIbzwhz0=w301";
     invadergaming.width = "120";
     invadergaming.title = "InvaderGaming";
-    invadergaming.id = "PlayedInvaderGaming";
+    invadergaming.id = "InvaderGaming";
+    invadergaming.style = "cursor: pointer";
     var InvaderGaming = document
       .getElementById("invadergaming")
       .appendChild(invadergaming);
@@ -245,7 +257,8 @@ function botID() {
       "https://lh3.googleusercontent.com/2hJH-1WGY1trFU61DhQIDka_DGOfZ3dVEGYLSq1J1_aFrgUHdZRxqodM3JLImLTjNy3X5TAsFMpItqDWknHYFmb32Hq8cKF-K0L4TQ=w301";
     grock.width = "120";
     grock.title = "GROCK";
-    grock.id = "PlayedGROCK";
+    grock.id = "GROCK";
+    grock.style = "cursor: pointer";
     var GROCK = document.getElementById("grock").appendChild(grock);
   }
 
@@ -256,7 +269,8 @@ function botID() {
       "https://lh3.googleusercontent.com/vJ_3UpjTDptS-urJvXJw4Kc0KP3a08GS8UwXVBnLiylvXbfio4ec-yABzmIED3i4iAkmIxyoq4aai60htI3MEq1GZa4XZZWwOGUf6g=w301";
     assassin.width = "120";
     assassin.title = "ASSASSIN";
-    assassin.id = "PlayedASSASSIN";
+    assassin.id = "ASSASSIN";
+    assassin.style = "cursor: pointer";
     var ASSASSIN = document.getElementById("assassin").appendChild(assassin);
   }
 
@@ -269,18 +283,6 @@ function botID() {
     charged.title = "Charged";
     charged.id = "Charged";
     charged.style = "cursor: pointer;";
-    charged.onclick = function move() {
-      var move = document.getElementById("Charged");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/gZHflIqlpsdvxT4XDyqEEPU8Ns7ZWs92jzaJoc4K-69LT7rMNKS4IhJ3Ys5jggezXdg3c3axZ1mQr-nSE_O8aYgblrkX0QX0mNcwmQ=w301";
-      newCard.width = "250";
-      newCard.title = "Charged";
-      newCard.id = "playedCharged";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var CHARGED = document.getElementById("charged").appendChild(charged);
   }
 
@@ -293,18 +295,6 @@ function botID() {
     freedomfightervictor.title = "FreesomFighterVictor";
     freedomfightervictor.id = "FreedomFighterVictor";
     freedomfightervictor.style = "cursor: pointer;";
-    freedomfightervictor.onclick = function move() {
-      var move = document.getElementById("FreedomFighterVictor");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/nkiNtc0G0u0F2Qvx3MNz9VfuPYe0FHqe_ov3465pPGjRE4x8m-zhh6f7-TpHKnyI7wJsSKkqNFDGiaERpxa_uk4I6xWhJMBinKQAISo=w301";
-      newCard.width = "250";
-      newCard.title = "FreedomFighterVictor";
-      newCard.id = "playedFreedomFighterVictor";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var FreedomFighterVictor = document
       .getElementById("freedomfightervictor")
       .appendChild(freedomfightervictor);
@@ -319,18 +309,6 @@ function botID() {
     christnat.title = "ChristNat";
     christnat.id = "ChristNat";
     christnat.style = "cursor: pointer;";
-    christnat.onclick = function move() {
-      var move = document.getElementById("ChristNat");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/yj36Qzr8EI6p8c0oGLfcX_m7nCkfsT-gSsk6H1yCJjAoHTnwBzPMuq27un7OpGe-LT4ZGRp9xbrlpRDloEu15ydQqdbvnncyCIawK1I=w301";
-      newCard.width = "250";
-      newCard.title = "ChristNat";
-      newCard.id = "playedChrisNat";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var ChristNat = document.getElementById("christnat").appendChild(christnat);
   }
 
@@ -343,18 +321,6 @@ function botID() {
     chrisdoogood.title = "ChrisDooGood";
     chrisdoogood.id = "ChrisDooGood";
     chrisdoogood.style = "cursor: pointer;";
-    chrisdoogood.onclick = function move() {
-      var move = document.getElementById("ChrisDooGood");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/ESR0NS8MQkj0A67i3yLPrDYGY28sgr2C7cqG53gGERdnLuX6xUOIqiI-fbPf9pnQ7_dnqpxIKdhbGBqZRuVME7oxWjcoq7yl3fajV48=w301";
-      newCard.width = "250";
-      newCard.title = "ChrisDooGood";
-      newCard.id = "playedChrisDooGood";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var ChrisDooGood = document
       .getElementById("chrisdoogood")
       .appendChild(chrisdoogood);
@@ -369,18 +335,6 @@ function botID() {
     thriftegaming.title = "thriftegaming";
     thriftegaming.id = "thriftegaming";
     thriftegaming.style = "cursor: pointer;";
-    thriftegaming.onclick = function move() {
-      var move = document.getElementById("thriftegaming");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/MBx3H3zbdZAVGFiWVWHw1AgEgAAOlzo_NBWTwRxRgq6rHsq3Uy0oNI-5vDwevE1v5hMDVEZOe16UkwGz38xBG7VMzDGIMyTasvi45w=w301";
-      newCard.width = "250";
-      newCard.title = "ThrifteGaming";
-      newCard.id = "playedthriftegaming";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var ThrifteGaming = document
       .getElementById("thriftegaming")
       .appendChild(thriftegaming);
@@ -395,19 +349,6 @@ function botID() {
     satorid.title = "SatoriD";
     satorid.id = "SatoriD";
     satorid.style = "cursor: pointer;";
-    satorid.onclick = function move() {
-      var move = document.getElementById("SatoriD");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/8Bw_Nbuizcus65bB92vCKkPvL_ksWEZutWxQxy0i_y-7eq9GexeTRWDgmNz7_t4CF9gCl7_xKoqiCPciBMdjkm5Lx7VsFM1W9kjnsg=w301";
-      newCard.width = "250";
-      newCard.title = "SatoriD";
-      newCard.id = "playedSatoriD";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
-
     var SatoriD = document.getElementById("satorid").appendChild(satorid);
   }
 
@@ -420,18 +361,6 @@ function botID() {
     maximumunderdrive.title = "MaximumUnderDrive";
     maximumunderdrive.id = "MaximumUnderDrive";
     maximumunderdrive.style = "cursor: pointer;";
-    maximumunderdrive.onclick = function move() {
-      var move = document.getElementById("MaximumUnderDrive");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/UuAf4nZTcffy4pN7gVvx4wbP9FhGM6923cF5332DU8Gmv9g15DExJQc30SL5AH_c5lSlYTKy6MqH_zveJH7hQnK44TK66ZGXTl48=w301";
-      newCard.width = "250";
-      newCard.title = "MaximumUnderDrive";
-      newCard.id = "played";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var MaximumUnderDrive = document
       .getElementById("maximumunderdrive")
       .appendChild(maximumunderdrive);
@@ -445,7 +374,6 @@ function botID() {
     pretty.width = "120";
     pretty.title = "@XxPrettyLittleThingxX";
     pretty.id = "pretty";
-
     var Pretty = document.getElementById("pretty").appendChild(pretty);
   }
   if (create.id == "lucoin") {
@@ -480,16 +408,27 @@ function botID() {
     tetn.style = "cursor: pointer;";
     var TETN = document.getElementById("tetn").appendChild(tetn);
   }
+  if (create.id == "jesustoken") {
+    /* JesusToken */
+    var jesustoken = document.createElement("img");
+    jesustoken.src =
+      "https://lh3.googleusercontent.com/y8eMN3i0NdX6WAPdjTK4C8FAtUZcysAjidIY6U31v5IW6uLjIHtV24MXizPgFywwrjssywJxUCU788RYH8LaIdcbzVN7p5lN--U=w301";
+    jesustoken.width = "120";
+    jesustoken.title = "JesusToken";
+    jesustoken.id = "JesusToken";
+    jesustoken.style = "cursor: pointer;";
+    var JesusToken = document.getElementById("tetn").appendChild(tetn);
+  }
 
   if (create.id == "null") {
     alert("Something Went Wrong");
   }
-  
+
   var battle = document.getElementById("create");
-battling();
-  Create.classList.toggle("hide");  
+  battling();
+  Create.classList.toggle("hide");
 }
 
-function battling(){
-  alert("alpha testing declaire damage")
+function battling() {
+  alert("alpha testing declaire damage");
 }
