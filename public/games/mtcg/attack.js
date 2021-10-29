@@ -447,15 +447,8 @@ function createID() {
   Create.addEventListener("click", attackED);
 
   function attackED() {
-    var move = document.getElementById("playercard");
-    var moved = move.className;
-    Create.classList.toggle(moved);
-    if (moved = "playercard"){
-      Create.onclick = "function(){Create.classList.toggle('hide')}"
-    }
-    
+    Create.classList.toggle("card");
   }
-  function battling() {}
 
   /* BOT JS */
   function botID() {
