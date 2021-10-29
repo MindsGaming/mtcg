@@ -65,3 +65,7 @@ card {
   margin-left: 20%;
   margin-top: 11%;
 }
+
+.hide {
+  dispay: none;
+}

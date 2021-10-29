@@ -546,9 +546,6 @@ function createID() {
   function attackED() {
     botID();
     Create.classList.toggle("card");
-    var botcard = document.getElementByID("botcard");
-    var battle = botcard.value - Create.value;
-    alert("battle")
   }
 }
 
