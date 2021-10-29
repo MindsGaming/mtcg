@@ -1,34 +1,58 @@
-var MTCGid = "mtcg";
-var DooBetterid = "doobetter";
-var StarShatterid = "starshatter";
-var Lokayaid = "lokaya";
-var GameTestPlayid = "gametestplay";
-var Cagedid = "caged";
-var Yorizzoid = "yorizzo";
-var Eclipseid = "eclipse";
-var Pajuniorid = "pajunior";
-var AlienShipid = "alienship";
-var InvaderGamingid = "invadergaming";
-var Grockid = "grock";
-var ASSASSINid = "assassin";
-var Chargedid = "charged";
-var FreedomFighterVictorid = "freedomfightervictor";
-var ChristNatid = "christnat";
-var ChrisDooGoodid = "chrisdoogood";
-var ThrifteGamingid = "thriftegaming";
-var SatoriDid = "satorid";
-var LuCoinid = "lucoin";
-var Prettyid = "pretty";
-var NOIDid = "noid";
-var TETNid = "tetn";
-var PINNid = "pinn";
-var JesusTokenid = "jesustoken";
+const MTCGid = "mtcg";
+const DooBetterid = "doobetter";
+const StarShatterid = "starshatter";
+const Lokayaid = "lokaya";
+const GameTestPlayid = "gametestplay";
+const Cagedid = "caged";
+const Yorizzoid = "yorizzo";
+const Eclipseid = "eclipse";
+const Pajuniorid = "pajunior";
+const AlienShipid = "alienship";
+const InvaderGamingid = "invadergaming";
+const Grockid = "grock";
+const ASSASSINid = "assassin";
+const Chargedid = "charged";
+const FreedomFighterVictorid = "freedomfightervictor";
+const ChristNatid = "christnat";
+const ChrisDooGoodid = "chrisdoogood";
+const ThrifteGamingid = "thriftegaming";
+const SatoriDid = "satorid";
+const LuCoinid = "lucoin";
+const Prettyid = "pretty";
+const NOIDid = "noid";
+const TETNid = "tetn";
+const PINNid = "pinn";
+const JesusTokenid = "jesustoken";
 
-MTCGid.addEventListener("click", attackED);
-DooBetterid.addEventListener("click", attackED);
-StarShatterid.addEventListener("click", attackED);
-Lokayaid.addEventListener("click", attackED);
+var moveCard = [
+  MTCGid,
+  DooBetterid,
+  StarShatterid,
+  Lokayaid,
+  GameTestPlayid,
+  Cagedid,
+  Yorizzoid,
+  Eclipseid,
+  Pajuniorid,
+  AlienShipid,
+  InvaderGamingid,
+  Grockid,
+  ASSASSINid,
+  Chargedid,
+  FreedomFighterVictorid,
+  ChristNatid,
+  ChrisDooGoodid,
+  ThrifteGamingid,
+  SatoriDid,
+  LuCoinid,
+  Prettyid,
+  NOIDid,
+  TETNid,
+  PINNid,
+  JesusTokenid
+];
 
+moveCard.addEventListener("click", attackED);
 
 function attackED() {
   var attack = document.getElementByTagName("card").id;
