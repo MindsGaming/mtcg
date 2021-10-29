@@ -75,9 +75,7 @@ function createID() {
     mtcg.style = "width: 120px; cursor: pointer;";
     mtcg.title = "MTCG";
     mtcg.id = "MTCG";
-    mtcg.onclick = function TapCard() {
-      var TapCard = document.getElementById(MTCGid);
-      TapCard.classList.toggle("card");
+    mtcg.onclick = "function attackED(){mtcg.classList.toggle('card');}";
     var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
@@ -543,4 +541,4 @@ function createID() {
   if (create.id == "null") {
     alert("Something Went Wrong");
   }
-  }}
+}
