@@ -460,19 +460,6 @@ function createID() {
       Create.classList.toggle("hide");
       var poof = document.getElementById("botcard");
       poof.innerHTML = "";
-    
     }
   }
-  botdeck();
-    const blank = document.createElement("img");
-
-  function botdeck() {
-    /* MTCG */
-    blank.src =
-      "https://lh3.googleusercontent.com/wXCSrw63MDFpFOYtqFHaIyKwYaQbBU4dMln5PZKKpcmQajwbiHMPGRepko1FSzeGbbButgpi8PNiTppf5eWm3KHsVfuFEP9D-q71WPg=w306";
-    blank.style = "width: 120px; margin-left: 25px;";
-    blank.title = "Hidden";
-    blank.id = "Hidden";
-  }
-
 }
