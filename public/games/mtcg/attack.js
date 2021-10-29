@@ -154,7 +154,7 @@ function createID() {
     const yorizzo = document.createElement("img");
     yorizzo.src =
       "https://lh3.googleusercontent.com/VuE_B1zzCZRdnFqJOu-Ct-bmMquTEjk3vikgwKN4JDwa8gtvQgexKV9O9o2mIImjzoPZmRNhX74BOyA__MHzYKH7aun8q622k_IU=w301";
-    yorizzo.style = "width: 120px cursor: pointer;";
+    yorizzo.style = "width: 120px; cursor: pointer";
     yorizzo.title = "YoRizzo";
     yorizzo.id = "YoRizzo";
     var Yorizzo = document.getElementById("yorizzo").appendChild(yorizzo);
@@ -175,9 +175,9 @@ function createID() {
     const eclipse = document.createElement("img");
     eclipse.src =
       "https://lh3.googleusercontent.com/j1IAftNxpUw8feUCBCSIR7GHGyCCzvfyAYuxlXj8il6ClYA10FUnDsFKFxvXp5VkPtsE84fpjgnpXVW1a1CquiIjLQw1yEagq3kO=w301";
-    eclipse.width = "120";
+    eclipse.style = "with: 120px; cursor: pointer;";
     eclipse.title = "Eclipse";
-    eclipse.id = "PlayedEclipse";
+    eclipse.id = "Eclipse";
     var Eclipse = document.getElementById("eclipse").appendChild(eclipse);
   }
 
