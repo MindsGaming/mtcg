@@ -443,8 +443,9 @@ function createID() {
   Create.addEventListener("click", attackED);
 
   function attackED() {
+    var magic = document.getElementById("create");
+    magic.value = Create.value;
     Create.classList.toggle("card");
-    
     botID();
     Create.classList.toggle("hide");
   }

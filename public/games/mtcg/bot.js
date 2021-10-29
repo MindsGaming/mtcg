@@ -425,12 +425,15 @@ function botID() {
   if (create.id == "null") {
     alert("Something Went Wrong");
   }
-
-  var battle = document.getElementById("create");
+  var magic = document.getElementById("botcard");
+  magic.value = Create.value;
   battling();
   Create.classList.toggle("hide");
 }
 
 function battling() {
-  alert("alpha testing declaire damage");
+  var battle = document.getElementById("create");
+  var magic = document.getElementById("botcard");
+  var damage = magic.value - battle.value;
+  alert(damage);
 }
