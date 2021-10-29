@@ -445,18 +445,6 @@ function botID() {
     pretty.width = "120";
     pretty.title = "@XxPrettyLittleThingxX";
     pretty.id = "pretty";
-    pretty.onclick = function move() {
-      var move = document.getElementById("pretty");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/LPYogOlTYnN2Mj50u6jM8pvBP2Ans5Hq1N4kSwDosdItpPSevRPXAAS4ez5Wjkvj6rMJKWA8TnjA4TD6JtLECtzK53wFqW96z1Mn=w301";
-      newCard.width = "250";
-      newCard.title = "@XxPrettyLittleThingxX";
-      newCard.id = "playedpretty";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
 
     var Pretty = document.getElementById("pretty").appendChild(pretty);
   }
@@ -468,18 +456,6 @@ function botID() {
     lucoin.width = "120";
     lucoin.title = "LuCoin";
     lucoin.id = "LuCoin";
-    lucoin.onclick = function move() {
-      var move = document.getElementById("LuCoin");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/chZ6LC9ISGFonHnL7mN3X57r69PgPqlT1wTQ-ImoBnWYJOMHKJBCByPws6hhfETJfdUIeNzGgIlxfvSrCTUeXgFIrx0KAGVpnVAZWO8=w301";
-      newCard.width = "250";
-      newCard.title = "LuCoin";
-      newCard.id = "playedLuCoin";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var LuCoin = document.getElementById("lucoin").appendChild(lucoin);
   }
   if (create.id == "noid") {
@@ -490,18 +466,6 @@ function botID() {
     noid.width = "120";
     noid.title = "NOID";
     noid.id = "NOID";
-    noid.onclick = function move() {
-      var move = document.getElementById("noid");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/GhpZVR1PzEiZlYxnHfPD92ss3hnoTPXAbmiYE_TTKOLOLpcXZLIwFu9nMYinpaP2vxdOl9kqfS9hQ0HWdg0QA6NqE5KTTwjVP1GOXg=w301";
-      newCard.width = "250";
-      newCard.title = "NOID";
-      newCard.id = "playedNOID";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var NOID = document.getElementById("noid").appendChild(noid);
   }
 
@@ -514,18 +478,6 @@ function botID() {
     tetn.title = "TETN";
     tetn.id = "TETN";
     tetn.style = "cursor: pointer;";
-    tetn.onclick = function move() {
-      var move = document.getElementById("tetn");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/xNo9Z7U-7FAl7LXB5k_l-uXOLCs_OOH6vxPb8oAAhkS7oeTkAqDcWmqToloZGruxRzJ25N0mG5FA9oRk77UauWBT5o9fkokWt0qv=w301";
-      newCard.width = "250";
-      newCard.title = "TETN";
-      newCard.id = "playedTETN";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var TETN = document.getElementById("tetn").appendChild(tetn);
   }
 
@@ -534,6 +486,10 @@ function botID() {
   }
   
   var battle = document.getElementById("create");
-  alert("Aplha-testing assign damage");
+battling();
   Create.classList.toggle("hide");  
+}
+
+function battling(){
+  alert("alpha testing declaire damage")
 }

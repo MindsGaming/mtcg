@@ -34,6 +34,7 @@ function createID() {
   var NOIDid = "noid";
   var TETNid = "tetn";
   var PINNid = "pinn";
+  var JesusToken = "jesustoken";
 
   var Selectid = [
     MTCGid,
@@ -75,7 +76,7 @@ function createID() {
     mtcg.width = "120";
     mtcg.title = "MTCG";
     mtcg.id = "MTCG";
-    mtcg.style="cursor:pointer"
+    mtcg.style = "cursor:pointer";
     var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
@@ -86,7 +87,7 @@ function createID() {
     doobetter.width = "120";
     doobetter.title = "DooBetter";
     doobetter.id = "DooBetter";
-    doobetter.style="cursor: pointer"
+    doobetter.style = "cursor: pointer";
     var DooBetter = document.getElementById("doobetter").appendChild(doobetter);
   }
   if (create.id == "starshatter") {
@@ -97,7 +98,7 @@ function createID() {
     starshatter.width = "120";
     starshatter.title = "StarShatter";
     starshatter.id = "StarShatter";
-    starshatter.style="cursor: pointer"
+    starshatter.style = "cursor: pointer";
     var StarShatter = document
       .getElementById("starshatter")
       .appendChild(starshatter);
@@ -123,7 +124,7 @@ function createID() {
     gametestplay.width = "120";
     gametestplay.title = "GameTestPlay";
     gametestplay.id = "GameTestPlay";
-    gametestplay.style="cursor:pointer"
+    gametestplay.style = "cursor:pointer";
     var GameTestPlay = document
       .getElementById("gametestplay")
       .appendChild(gametestplay);
@@ -137,7 +138,7 @@ function createID() {
     ottman.width = "120";
     ottman.title = "Ottman";
     ottman.id = "Otmman";
-    ottman.style="cursor: pointer"
+    ottman.style = "cursor: pointer";
     var Ottman = document.getElementById("ottman").appendChild(ottman);
   }
 
@@ -149,7 +150,7 @@ function createID() {
     caged.width = "120";
     caged.title = "Caged";
     caged.id = "Caged";
-    caged.style= "cursor: pointer";
+    caged.style = "cursor: pointer";
     var Caged = document.getElementById("caged").appendChild(caged);
   }
 
@@ -161,7 +162,7 @@ function createID() {
     yorizzo.width = "120";
     yorizzo.title = "YoRizzo";
     yorizzo.id = "YoRizzo";
-    yorizzo.style="cursor: pointer"
+    yorizzo.style = "cursor: pointer";
     var Yorizzo = document.getElementById("yorizzo").appendChild(yorizzo);
   }
 
@@ -196,7 +197,7 @@ function createID() {
     pinn.width = "120";
     pinn.title = "PINN";
     pinn.id = "Pinn";
-    pinn.style="cursor: pointer"
+    pinn.style = "cursor: pointer";
     var PINN = document.getElementById("pinn").appendChild(pinn);
   }
 
@@ -208,7 +209,7 @@ function createID() {
     voxix.width = "120";
     voxix.title = "Voxix";
     voxix.id = "Voxix";
-    voxix.style = "cursor: pointer"
+    voxix.style = "cursor: pointer";
     var Voxix = document.getElementById("voxix").appendChild(voxix);
   }
 
@@ -220,7 +221,7 @@ function createID() {
     mindsbulb.width = "120";
     mindsbulb.title = "MindsBulb";
     mindsbulb.id = "MindsBulb";
-    mindsbulb.style = "cursor: pointer"
+    mindsbulb.style = "cursor: pointer";
     var MindsBulb = document.getElementById("mindsbulb").appendChild(mindsbulb);
   }
   if (create.id == "pajunior") {
@@ -231,7 +232,7 @@ function createID() {
     pajunior.width = "120";
     pajunior.title = "PaJunior";
     pajunior.id = "Pajunior";
-    pajunior.style = "cursor: pointer"
+    pajunior.style = "cursor: pointer";
     var PaJunior = document.getElementById("pajunior").appendChild(pajunior);
   }
 
@@ -243,7 +244,7 @@ function createID() {
     alienship.width = "120";
     alienship.title = "Alien Ship";
     alienship.id = "AlienShip";
-    alienship.style = "cursor: pointer"
+    alienship.style = "cursor: pointer";
     var AlienShip = document.getElementById("alienship").appendChild(alienship);
   }
   if (create.id == "invadergaming") {
@@ -254,7 +255,7 @@ function createID() {
     invadergaming.width = "120";
     invadergaming.title = "InvaderGaming";
     invadergaming.id = "InvaderGaming";
-    invadergaming.style = "cursor"
+    invadergaming.style = "cursor: pointer";
     var InvaderGaming = document
       .getElementById("invadergaming")
       .appendChild(invadergaming);
@@ -267,7 +268,8 @@ function createID() {
       "https://lh3.googleusercontent.com/2hJH-1WGY1trFU61DhQIDka_DGOfZ3dVEGYLSq1J1_aFrgUHdZRxqodM3JLImLTjNy3X5TAsFMpItqDWknHYFmb32Hq8cKF-K0L4TQ=w301";
     grock.width = "120";
     grock.title = "GROCK";
-    grock.id = "PlayedGROCK";
+    grock.id = "GROCK";
+    grock.style = "cursor: pointer";
     var GROCK = document.getElementById("grock").appendChild(grock);
   }
 
@@ -278,7 +280,8 @@ function createID() {
       "https://lh3.googleusercontent.com/vJ_3UpjTDptS-urJvXJw4Kc0KP3a08GS8UwXVBnLiylvXbfio4ec-yABzmIED3i4iAkmIxyoq4aai60htI3MEq1GZa4XZZWwOGUf6g=w301";
     assassin.width = "120";
     assassin.title = "ASSASSIN";
-    assassin.id = "PlayedASSASSIN";
+    assassin.id = "ASSASSIN";
+    assassin.style = "cursor: pointer";
     var ASSASSIN = document.getElementById("assassin").appendChild(assassin);
   }
 
@@ -291,18 +294,6 @@ function createID() {
     charged.title = "Charged";
     charged.id = "Charged";
     charged.style = "cursor: pointer;";
-    charged.onclick = function move() {
-      var move = document.getElementById("Charged");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/gZHflIqlpsdvxT4XDyqEEPU8Ns7ZWs92jzaJoc4K-69LT7rMNKS4IhJ3Ys5jggezXdg3c3axZ1mQr-nSE_O8aYgblrkX0QX0mNcwmQ=w301";
-      newCard.width = "250";
-      newCard.title = "Charged";
-      newCard.id = "playedCharged";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var CHARGED = document.getElementById("charged").appendChild(charged);
   }
 
@@ -315,18 +306,6 @@ function createID() {
     freedomfightervictor.title = "FreesomFighterVictor";
     freedomfightervictor.id = "FreedomFighterVictor";
     freedomfightervictor.style = "cursor: pointer;";
-    freedomfightervictor.onclick = function move() {
-      var move = document.getElementById("FreedomFighterVictor");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/nkiNtc0G0u0F2Qvx3MNz9VfuPYe0FHqe_ov3465pPGjRE4x8m-zhh6f7-TpHKnyI7wJsSKkqNFDGiaERpxa_uk4I6xWhJMBinKQAISo=w301";
-      newCard.width = "250";
-      newCard.title = "FreedomFighterVictor";
-      newCard.id = "playedFreedomFighterVictor";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var FreedomFighterVictor = document
       .getElementById("freedomfightervictor")
       .appendChild(freedomfightervictor);
@@ -341,18 +320,6 @@ function createID() {
     christnat.title = "ChristNat";
     christnat.id = "ChristNat";
     christnat.style = "cursor: pointer;";
-    christnat.onclick = function move() {
-      var move = document.getElementById("ChristNat");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/yj36Qzr8EI6p8c0oGLfcX_m7nCkfsT-gSsk6H1yCJjAoHTnwBzPMuq27un7OpGe-LT4ZGRp9xbrlpRDloEu15ydQqdbvnncyCIawK1I=w301";
-      newCard.width = "250";
-      newCard.title = "ChristNat";
-      newCard.id = "playedChrisNat";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var ChristNat = document.getElementById("christnat").appendChild(christnat);
   }
 
@@ -365,18 +332,6 @@ function createID() {
     chrisdoogood.title = "ChrisDooGood";
     chrisdoogood.id = "ChrisDooGood";
     chrisdoogood.style = "cursor: pointer;";
-    chrisdoogood.onclick = function move() {
-      var move = document.getElementById("ChrisDooGood");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/ESR0NS8MQkj0A67i3yLPrDYGY28sgr2C7cqG53gGERdnLuX6xUOIqiI-fbPf9pnQ7_dnqpxIKdhbGBqZRuVME7oxWjcoq7yl3fajV48=w301";
-      newCard.width = "250";
-      newCard.title = "ChrisDooGood";
-      newCard.id = "playedChrisDooGood";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var ChrisDooGood = document
       .getElementById("chrisdoogood")
       .appendChild(chrisdoogood);
@@ -391,18 +346,6 @@ function createID() {
     thriftegaming.title = "thriftegaming";
     thriftegaming.id = "thriftegaming";
     thriftegaming.style = "cursor: pointer;";
-    thriftegaming.onclick = function move() {
-      var move = document.getElementById("thriftegaming");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/MBx3H3zbdZAVGFiWVWHw1AgEgAAOlzo_NBWTwRxRgq6rHsq3Uy0oNI-5vDwevE1v5hMDVEZOe16UkwGz38xBG7VMzDGIMyTasvi45w=w301";
-      newCard.width = "250";
-      newCard.title = "ThrifteGaming";
-      newCard.id = "playedthriftegaming";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var ThrifteGaming = document
       .getElementById("thriftegaming")
       .appendChild(thriftegaming);
@@ -417,19 +360,6 @@ function createID() {
     satorid.title = "SatoriD";
     satorid.id = "SatoriD";
     satorid.style = "cursor: pointer;";
-    satorid.onclick = function move() {
-      var move = document.getElementById("SatoriD");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/8Bw_Nbuizcus65bB92vCKkPvL_ksWEZutWxQxy0i_y-7eq9GexeTRWDgmNz7_t4CF9gCl7_xKoqiCPciBMdjkm5Lx7VsFM1W9kjnsg=w301";
-      newCard.width = "250";
-      newCard.title = "SatoriD";
-      newCard.id = "playedSatoriD";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
-
     var SatoriD = document.getElementById("satorid").appendChild(satorid);
   }
 
@@ -442,18 +372,6 @@ function createID() {
     maximumunderdrive.title = "MaximumUnderDrive";
     maximumunderdrive.id = "MaximumUnderDrive";
     maximumunderdrive.style = "cursor: pointer;";
-    maximumunderdrive.onclick = function move() {
-      var move = document.getElementById("MaximumUnderDrive");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/UuAf4nZTcffy4pN7gVvx4wbP9FhGM6923cF5332DU8Gmv9g15DExJQc30SL5AH_c5lSlYTKy6MqH_zveJH7hQnK44TK66ZGXTl48=w301";
-      newCard.width = "250";
-      newCard.title = "MaximumUnderDrive";
-      newCard.id = "played";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var MaximumUnderDrive = document
       .getElementById("maximumunderdrive")
       .appendChild(maximumunderdrive);
@@ -467,19 +385,6 @@ function createID() {
     pretty.width = "120";
     pretty.title = "@XxPrettyLittleThingxX";
     pretty.id = "pretty";
-    pretty.onclick = function move() {
-      var move = document.getElementById("pretty");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/LPYogOlTYnN2Mj50u6jM8pvBP2Ans5Hq1N4kSwDosdItpPSevRPXAAS4ez5Wjkvj6rMJKWA8TnjA4TD6JtLECtzK53wFqW96z1Mn=w301";
-      newCard.width = "250";
-      newCard.title = "@XxPrettyLittleThingxX";
-      newCard.id = "playedpretty";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
-
     var Pretty = document.getElementById("pretty").appendChild(pretty);
   }
   if (create.id == "lucoin") {
@@ -490,18 +395,6 @@ function createID() {
     lucoin.width = "120";
     lucoin.title = "LuCoin";
     lucoin.id = "LuCoin";
-    lucoin.onclick = function move() {
-      var move = document.getElementById("LuCoin");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/chZ6LC9ISGFonHnL7mN3X57r69PgPqlT1wTQ-ImoBnWYJOMHKJBCByPws6hhfETJfdUIeNzGgIlxfvSrCTUeXgFIrx0KAGVpnVAZWO8=w301";
-      newCard.width = "250";
-      newCard.title = "LuCoin";
-      newCard.id = "playedLuCoin";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var LuCoin = document.getElementById("lucoin").appendChild(lucoin);
   }
   if (create.id == "noid") {
@@ -512,18 +405,6 @@ function createID() {
     noid.width = "120";
     noid.title = "NOID";
     noid.id = "NOID";
-    noid.onclick = function move() {
-      var move = document.getElementById("noid");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/GhpZVR1PzEiZlYxnHfPD92ss3hnoTPXAbmiYE_TTKOLOLpcXZLIwFu9nMYinpaP2vxdOl9kqfS9hQ0HWdg0QA6NqE5KTTwjVP1GOXg=w301";
-      newCard.width = "250";
-      newCard.title = "NOID";
-      newCard.id = "playedNOID";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var NOID = document.getElementById("noid").appendChild(noid);
   }
 
@@ -536,25 +417,24 @@ function createID() {
     tetn.title = "TETN";
     tetn.id = "TETN";
     tetn.style = "cursor: pointer;";
-    tetn.onclick = function move() {
-      var move = document.getElementById("tetn");
-      var newCard = document.createElement("img");
-      newCard.src =
-        "https://lh3.googleusercontent.com/xNo9Z7U-7FAl7LXB5k_l-uXOLCs_OOH6vxPb8oAAhkS7oeTkAqDcWmqToloZGruxRzJ25N0mG5FA9oRk77UauWBT5o9fkokWt0qv=w301";
-      newCard.width = "250";
-      newCard.title = "TETN";
-      newCard.id = "playedTETN";
-      newCard.style = "float: left; margin-left: 10%; margin-top: 3%;";
-      var NEWCARD = document.getElementById("played").appendChild(newCard);
-      move.style = "display: none;";
-    };
     var TETN = document.getElementById("tetn").appendChild(tetn);
   }
-
+if (create.id == "jesustoken") {
+    /* JesusToken */
+    var jesustoken = document.createElement("img");
+    tetn.src =
+      "https://lh3.googleusercontent.com/xNo9Z7U-7FAl7LXB5k_l-uXOLCs_OOH6vxPb8oAAhkS7oeTkAqDcWmqToloZGruxRzJ25N0mG5FA9oRk77UauWBT5o9fkokWt0qv=w301";
+    jesus = "120";
+    tetn.title = "TETN";
+    tetn.id = "TETN";
+    tetn.style = "cursor: pointer;";
+    var TETN = document.getElementById("tetn").appendChild(tetn);
+  }
+  
   if (create.id == "null") {
     alert("Something Went Wrong");
   }
-   Create.addEventListener("click", attackED);
+  Create.addEventListener("click", attackED);
 
   function attackED() {
     Create.classList.toggle("card");
