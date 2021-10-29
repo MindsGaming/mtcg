@@ -1,3 +1,12 @@
+/* PlayDeck */
+const playdeck = document.createElement("img");
+playdeck.src =
+  "https://lh3.googleusercontent.com/wXCSrw63MDFpFOYtqFHaIyKwYaQbBU4dMln5PZKKpcmQajwbiHMPGRepko1FSzeGbbButgpi8PNiTppf5eWm3KHsVfuFEP9D-q71WPg=w301";
+playdeck.style = "position:fixed; bottom: 0;right:0; width:120px";
+playdeck.title = "PlayDeck";
+playdeck.id = "PlayedDeck";
+var PlayDeck = document.getElementById("playdeck").appendChild(playdeck);
+
 function createID() {
   var MTCGid = "mtcg";
   var DooBetterid = "doobetter";
@@ -66,11 +75,8 @@ function createID() {
     mtcg.style = "width: 120px; cursor: pointer";
     mtcg.title = "MTCG";
     mtcg.id = "MTCG";
-onclick= "function() {
-  var attack = document.getElementById("browser");
-  attack.classList.toggle("card");
-}";
-  var MTCG = document.getElementById("mtcg").appendChild(mtcg);
+    onclick = "function (){mtcg.classList.toggle('card');}";
+    var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
     /* DooBetter */
@@ -80,7 +86,7 @@ onclick= "function() {
     doobetter.style = "width: 120px; cursor:pointer";
     doobetter.title = "DooBetter";
     doobetter.id = "DooBetter";
-    onclick = "function(){attackED()}";
+    onclick = "function (){doobetter.classList.toggle('card');}";
     var DooBetter = document.getElementById("doobetter").appendChild(doobetter);
   }
   if (create.id == "starshatter") {
@@ -88,9 +94,9 @@ onclick= "function() {
     const starshatter = document.createElement("img");
     starshatter.src =
       "https://lh3.googleusercontent.com/8cCsKn7ayobQ7gS2uIadh-UkNGLiAe_UimRtYFkheZDiDpiNNyvZSADBZaMWvA13syAB3Aw5NnFE34rTr0aP5ILU92nisT8z4EISA7A=w301";
-    starshatter.width = "120";
-    starshatter.title = "DooBetter";
-    starshatter.id = "PlayedStarShatter";
+    starshatter.style = "width: 120px; cursor:pointer;";
+    starshatter.title = "StarShatter";
+    starshatter.id = "StarShatter";
     var StarShatter = document
       .getElementById("starshatter")
       .appendChild(starshatter);
@@ -101,9 +107,9 @@ onclick= "function() {
     const lokaya = document.createElement("img");
     lokaya.src =
       "https://lh3.googleusercontent.com/COU6psI3QgRoL_7pWfmEG0lz-pSvR7moF-unVNJgYnbqkeZCkYOIu3GhcQJr1DXdjC47eIsLOFUrzhAqZBm20UyjqVscEG5Jh2DlcFs=w301";
-    lokaya.width = "120";
-    lokaya.title = "DooBetter";
-    lokaya.id = "PlayedStarShatter";
+    lokaya.style = "width: 120px; cursor: pointer;";
+    lokaya.title = "Lokaya";
+    lokaya.id = "Lokaya";
     var Lokaya = document.getElementById("lokaya").appendChild(lokaya);
   }
 
@@ -114,7 +120,7 @@ onclick= "function() {
       "https://lh3.googleusercontent.com/Urc29PlSBHGs5UKgA1nqYn8uRG5TU1rmuzDC2Gtf6gAIjVQvLelab5Mm-cMUDHUO5y4zlYUKkLNn5NXkpa6vIMGkaoZj_RVgxhCyPw=w301";
     gametestplay.width = "120";
     gametestplay.title = "GameTestPlay";
-    gametestplay.id = "PlayedGameTestPlay";
+    gametestplay.id = "GameTestPlay";
     var GameTestPlay = document
       .getElementById("gametestplay")
       .appendChild(gametestplay);
