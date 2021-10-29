@@ -34,18 +34,20 @@
     <script src="/js/fly.js" defer></script>
     <script src="/js/mice.js" defer></script>
     <script src="/games/mtcg/attack.js" defer></script>
-        <script src="/games/mtcg/bot.js" defer></script>
-
+    <script src="/games/mtcg/bot.js" defer></script>
   </head>
   <body>
     <wrap>
       <div class="mtcgBoard">
-        <div id="graveyard">
-          <div class="botcard" id="botcard"></div>
+        <div class="botarmy">
+          <div id="botarmy" value="1"></div>
+          <div id="graveyard">
+            <div class="botcard" id="botcard"></div>
+          </div>
         </div>
+        <div class="army"><div id="create" value="1"></div></div>
+        <div class="playdeck" id="playdeck" onclick="createID();"></div>
       </div>
-      <div class="army"><div id="create" value="1"></div></div>
-      <div class="playdeck" id="playdeck" onclick="createID();"></div>
     </wrap>
   </body>
 </html>

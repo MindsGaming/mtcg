@@ -31,7 +31,6 @@ card {
   z-index: 3;
 }
 
-
 .mtcgBoard {
   position: fixed;
   left: 0;
@@ -48,6 +47,16 @@ card {
 .army {
   position: fixed;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 22%;
+  margin-left: 80px;
+  background-color: transparent;
+  z-index: 2;
+}
+.botarmy {
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   height: 22%;
