@@ -1,8 +1,3 @@
-function attackED() {
-  alert("test")
-  
-}
-
 function createID() {
   var MTCGid = "mtcg";
   var DooBetterid = "doobetter";
@@ -71,8 +66,11 @@ function createID() {
     mtcg.style = "width: 120px; cursor: pointer";
     mtcg.title = "MTCG";
     mtcg.id = "MTCG";
-    onclick = "function(attackED);"
-    var MTCG = document.getElementById("mtcg").appendChild(mtcg);
+onclick= "function() {
+  var attack = document.getElementById("browser");
+  attack.classList.toggle("card");
+}";
+  var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
     /* DooBetter */
