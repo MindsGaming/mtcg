@@ -118,7 +118,7 @@ function createID() {
     lokaya.title = "Lokaya";
     lokaya.id = "Lokaya";
     lokaya.style = "cursor: pointer";
-    lokaya.value = "9"
+    lokaya.value = "9";
     var Lokaya = document.getElementById("lokaya").appendChild(lokaya);
   }
 
@@ -446,8 +446,6 @@ function createID() {
   Create.addEventListener("click", attackED);
 
   function attackED() {
-    var magic = document.getElementById("create");
-    magic.value = Create.value;
     Create.classList.toggle("card");
     botID();
     Create.classList.toggle("hide");

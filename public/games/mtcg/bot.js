@@ -429,15 +429,13 @@ function botID() {
   if (create.id == "null") {
     alert("Something Went Wrong");
   }
-  var magic = document.getElementById("botcard");
-  magic.value = Create.value;
+  
   battling();
   Create.classList.toggle("hide");
 }
 
 function battling() {
-  var battle = document.getElementById("create");
-  var magic = document.getElementById("botcard");
-  var damage = magic.value - battle.value;
-  alert(damage);
+  
+  alert(" has no value")
+  
 }
