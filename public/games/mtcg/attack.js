@@ -1,4 +1,7 @@
-function attackED() {}
+function attackED() {
+  alert("test")
+  
+}
 
 function createID() {
   var MTCGid = "mtcg";
@@ -65,10 +68,10 @@ function createID() {
     const mtcg = document.createElement("img");
     mtcg.src =
       "https://lh3.googleusercontent.com/cLnkBaMVrYBjYX-xpVUdk4GThGc0JEvOrHKWmPFsPtsa-5zMd3wpU3lAQh_fTfDue1nGhaPLyqrEDEdoYIoeCDGtIrU5ngZ7RNUz7Q";
-    mtcg.width = "120";
+    mtcg.style = "width: 120px; cursor: pointer";
     mtcg.title = "MTCG";
     mtcg.id = "MTCG";
-    onclick = "attatcED();";
+    onclick = "function(attackED);"
     var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
@@ -76,11 +79,10 @@ function createID() {
     const doobetter = document.createElement("img");
     doobetter.src =
       "https://lh3.googleusercontent.com/OhMKHby2FsaHEPrrYfI6U3OjSckqycY8UVMRNLeLgxZxQkvCFJnV2nMpFf0o4pCKBK-QPED4Z-1RacuFtrGnJy6_HUiIxOPqGYX8=w301";
-    doobetter.width = "120";
+    doobetter.style = "width: 120px; cursor:pointer";
     doobetter.title = "DooBetter";
-    doobetter.id = "PlayedDooBetter";
-        onclick = "attatcED();";
-
+    doobetter.id = "DooBetter";
+    onclick = "function(){attackED()}";
     var DooBetter = document.getElementById("doobetter").appendChild(doobetter);
   }
   if (create.id == "starshatter") {
