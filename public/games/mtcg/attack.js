@@ -79,6 +79,7 @@ function createID() {
     mtcg.title = "MTCG";
     mtcg.id = "MTCG";
     mtcg.style = "cursor:pointer";
+    mtcg.value = "1000000";
     var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
@@ -443,6 +444,7 @@ function createID() {
 
   function attackED() {
     Create.classList.toggle("card");
+    
     botID();
     Create.classList.toggle("hide");
   }
