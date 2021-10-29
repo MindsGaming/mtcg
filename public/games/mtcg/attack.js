@@ -90,6 +90,7 @@ function createID() {
     doobetter.width = "120";
     doobetter.title = "DooBetter";
     doobetter.id = "DooBetter";
+    doobetter.value = "5";
     doobetter.style = "cursor: pointer";
     var DooBetter = document.getElementById("doobetter").appendChild(doobetter);
   }
@@ -102,6 +103,7 @@ function createID() {
     starshatter.title = "StarShatter";
     starshatter.id = "StarShatter";
     starshatter.style = "cursor: pointer";
+    starshatter.value = "6";
     var StarShatter = document
       .getElementById("starshatter")
       .appendChild(starshatter);
@@ -116,6 +118,7 @@ function createID() {
     lokaya.title = "Lokaya";
     lokaya.id = "Lokaya";
     lokaya.style = "cursor: pointer";
+    lokaya.value = "9"
     var Lokaya = document.getElementById("lokaya").appendChild(lokaya);
   }
 

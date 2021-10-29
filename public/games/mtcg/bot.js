@@ -68,6 +68,7 @@ function botID() {
     mtcg.title = "MTCG";
     mtcg.id = "MTCG";
     mtcg.style = "cursor:pointer";
+    mtcg.value = "10";
     var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
@@ -79,6 +80,7 @@ function botID() {
     doobetter.title = "DooBetter";
     doobetter.id = "DooBetter";
     doobetter.style = "cursor: pointer";
+    doobetter.value = "5";
     var DooBetter = document.getElementById("doobetter").appendChild(doobetter);
   }
   if (create.id == "starshatter") {
@@ -90,6 +92,7 @@ function botID() {
     starshatter.title = "StarShatter";
     starshatter.id = "StarShatter";
     starshatter.style = "cursor: pointer";
+    starshatter.value = "4";
     var StarShatter = document
       .getElementById("starshatter")
       .appendChild(starshatter);
@@ -104,6 +107,7 @@ function botID() {
     lokaya.title = "Lokaya";
     lokaya.id = "Lokaya";
     lokaya.style = "cursor: pointer";
+    lokaya.value = "6";
     var Lokaya = document.getElementById("lokaya").appendChild(lokaya);
   }
 
