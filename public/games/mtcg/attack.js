@@ -466,12 +466,16 @@ function createID() {
 }
 
 function botdeck() {
+  var idBuff = +1;
+  var poofid = 0+ idBuff;
+  var hidden = "hidden";
+  var poof = hidden + poofid;
   /* MTCG */
   const blank = document.createElement("img");
   blank.src =
-    "https://lh3.googleusercontent.com/cLnkBaMVrYBjYX-xpVUdk4GThGc0JEvOrHKWmPFsPtsa-5zMd3wpU3lAQh_fTfDue1nGhaPLyqrEDEdoYIoeCDGtIrU5ngZ7RNUz7Q";
-  blank.width = "120";
+    "https://lh3.googleusercontent.com/wXCSrw63MDFpFOYtqFHaIyKwYaQbBU4dMln5PZKKpcmQajwbiHMPGRepko1FSzeGbbButgpi8PNiTppf5eWm3KHsVfuFEP9D-q71WPg=w306";
+  blank.style = "width: 120px; margin-left: 25px;";
   blank.title = "Hidden";
-  blank.id = "HIDDDEN";
+  blank.id = poof;
   var BLANK = document.getElementById("botarmy").appendChild(blank);
 }
