@@ -444,15 +444,18 @@ function createID() {
     alert("Something Went Wrong");
   }
   Create.addEventListener("click", botID);
-  Create.addEventListener("click", battling);
   Create.addEventListener("click", attackED);
 
   function attackED() {
-    Create.classList.toggle("hide");
+    var move = document.getElementById("playercard");
+    var moved = move.className;
+    Create.classList.toggle(moved);
+    if (moved = "playercard"){
+      Create.onclick = "function(){Create.classList.toggle('hide')}"
+    }
+    
   }
-  function battling(){
-    alert(" has no attack value")
-  }
+  function battling() {}
 
   /* BOT JS */
   function botID() {
