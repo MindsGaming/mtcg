@@ -535,6 +535,5 @@ function botID() {
   
   var battle = document.getElementById("create");
   alert("Aplha-testing assign damage");
-  Create.classList.toggle("hide");
-  
+  Create.classList.toggle("hide");  
 }
