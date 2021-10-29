@@ -463,15 +463,3 @@ function createID() {
     }
   }
 }
-
-function botCard() {
-  const botdeck = document.createElement("img");
-  botdeck.src =
-    "https://lh3.googleusercontent.com/cLnkBaMVrYBjYX-xpVUdk4GThGc0JEvOrHKWmPFsPtsa-5zMd3wpU3lAQh_fTfDue1nGhaPLyqrEDEdoYIoeCDGtIrU5ngZ7RNUz7Q";
-  botdeck.width = "120";
-  botdeck.title = "MTCG";
-  botdeck.id = "MTCG";
-  botdeck.class = "botarmy";
-  botdeck.value = "1000000";
-  var BOTDECK = document.getElementById("mt").appendChild(mtcg);
-}

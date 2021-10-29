@@ -434,22 +434,4 @@ function botID() {
   if (create.id == "null") {
     alert("Something Went Wrong");
   }
-  Create.addEventListener("click", attackED);
-
-  function attackED() {
-    Create.classList.toggle("card");
-    botID();
-    battling();
-  }
-
-  function battling() {
-    Create.addEventListener("click", magic);
-
-    function magic() {
-      alert(" has no value");
-      Create.classList.toggle("hide");
-      var poof = document.getElementById("graveyard");
-      poof.classList.toggle("hide");
-    }
-  }
 }
