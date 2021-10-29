@@ -429,13 +429,205 @@ function botID() {
   if (create.id == "null") {
     alert("Something Went Wrong");
   }
-  
+
   battling();
-  Create.classList.toggle("hide");
+  
+  function battling(){
+    function battling() {
+  var MTCGid = "mtcg";
+  var DooBetterid = "doobetter";
+  var StarShatterid = "starshatter";
+  var Lokayaid = "lokaya";
+  var GameTestPlayid = "gametestplay";
+  var Cagedid = "caged";
+  var Yorizzoid = "yorizzo";
+  var Eclipseid = "eclipse";
+  var Pajuniorid = "pajunior";
+  var AlienShipid = "alienship";
+  var InvaderGamingid = "invadergaming";
+  var Grockid = "grock";
+  var ASSASSINid = "assassin";
+  var Chargedid = "charged";
+  var FreedomFighterVictorid = "freedomfightervictor";
+  var ChristNatid = "christnat";
+  var ChrisDooGoodid = "chrisdoogood";
+  var ThrifteGamingid = "thriftegaming";
+  var SatoriDid = "satorid";
+  var LuCoinid = "lucoin";
+  var Prettyid = "pretty";
+  var NOIDid = "noid";
+  var TETNid = "tetn";
+  var PINNid = "pinn";
+  var MaximumUnderDriveid = "maximumunderdrive";
+  var JesusToken = "jesustoken";
+
+  var Selectid = [
+    MTCGid,
+    DooBetterid,
+    StarShatterid,
+    Lokayaid,
+    GameTestPlayid,
+    Cagedid,
+    Yorizzoid,
+    Eclipseid,
+    Pajuniorid,
+    AlienShipid,
+    InvaderGamingid,
+    Grockid,
+    ASSASSINid,
+    Chargedid,
+    FreedomFighterVictorid,
+    ChristNatid,
+    ChrisDooGoodid,
+    ThrifteGamingid,
+    SatoriDid,
+    LuCoinid,
+    Prettyid,
+    NOIDid,
+    TETNid,
+    PINNid,
+    MaximumUnderDriveid
+  ];
+
+  if (create.id == "mtcg") {
+    /* MTCG */
+    alert(" has no value");
+  }
+  if (create.id == "doobetter") {
+    /* DooBetter */
+    alert(" has no value");
+  }
+  if (create.id == "starshatter") {
+    alert(" has no value");
+  }
+
+  if (create.id == "lokaya") {
+    /* Lokaya */
+    alert(" has no value");
+  }
+
+  if (create.id == "gametestplay") {
+    /* GameTestPlay */
+    alert(" has no value");
+  }
+
+  if (create.id == "ottman") {
+    /* Ottman */
+    alert(" has no value");
+  }
+
+  if (create.id == "caged") {
+    /* Caged */
+    alert(" has no value");
+  }
+
+  if (create.id == "yorizzo") {
+    alert(" has no value");
+  }
+
+  if (create.id == "bndr") {
+    alert(" has no value");
+  }
+  if (create.id == "eclipse") {
+    /* Eclipse */
+    alert(" has no value");
+  }
+
+  if (create.id == "pinn") {
+    /* PINN */
+    alert(" has no value");
+  }
+
+  if (create.id == "voxix") {
+    /* Voxix */
+    alert(" has no value");
+  }
+
+  if (create.id == "mindsbulb") {
+    /* MindsBulb */
+    alert(" has no value");
+  }
+  if (create.id == "pajunior") {
+    /* PaJunior */
+    alert(" has no value");
+  }
+
+  if (create.id == "alienship") {
+    /* AlienShip */
+    const alienship = document.createElement("img");
+    alert(" has no value");
+  }
+  if (create.id == "invadergaming") {
+    /* InvaderGaming */
+    alert(" has no value");
+  }
+
+  if (create.id == "grock") {
+    /* GROCK */
+    alert(" has no value");
+  }
+
+  if (create.id == "assassin") {
+    /* ASSASSIN */
+    alert(" has no value");
+  }
+
+  if (create.id == "charged") {
+    alert(" has no value");
+  }
+
+  if (create.id == "freedomfightervictor") {
+    alert(" has no value");
+  }
+
+  if (create.id == "christnat") {
+    alert(" has no value");
+  }
+
+  if (create.id == "chrisdoogood") {
+    alert(" has no value");
+  }
+
+  if (create.id == "thriftegaming") {
+    alert(" has no value");
+  }
+
+  if (create.id == "satorid") {
+    alert(" has no value");
+  }
+
+  if (create.id == "maximumunderdrive") {
+    /* maximumunderdrive */
+    alert(" has no value");
+  }
+
+  if (create.id == "pretty") {
+    /* pretty */
+    alert(" has no value");
+  }
+  if (create.id == "lucoin") {
+    /* LuCoin */
+    alert(" has no value");
+  }
+  if (create.id == "noid") {
+    alert(" has no value");
+  }
+
+  if (create.id == "tetn") {
+    alert(" has no value");
+  }
+  if (create.id == "jesustoken") {
+    /* JesusToken */
+    alert(" has no value");
+  }
+
+  if (create.id == "null") {
+    alert("Something Went Wrong");
+  }
+    Create.classList.toggle("hide");
+
 }
 
-function battling() {
-  
-  alert(" has no value")
-  
+  }
 }
+
