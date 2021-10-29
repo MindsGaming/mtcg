@@ -430,8 +430,7 @@ function botID() {
     jesustoken.style = "cursor: pointer;";
     var JesusToken = document.getElementById("tetn").appendChild(tetn);
   }
-
-  if (create.id == "null") {
-    alert("Something Went Wrong");
-  }
 }
+
+}
+ 
