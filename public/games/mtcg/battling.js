@@ -1,46 +1,108 @@
 function battling() {
-  var MTCG = document.getElementId("MTCG");
-  var DooBetter = document.getElementId("DooBetter");
-  var StarShatter = document.getElementId("StarShatter");
-  var Lokaya = document.getElementId("Lokaya");
-  var GameTestPlay = document.getElementId("GameTestPlay");
-  var Caged = document.getElementId("Caged");
-  var Yorizzo = document.getElementId("Yorizzo");
-  var Eclipse = document.getElementId("Eclipse");
-  var Pajunior = document.getElementId("Pajunior");
-  var AlienShip = document.getElementId("AlienShip");
-  var InvaderGaming = document.getElementId("mtcg");
-  var Grock = document.getElementId("InvaderGaming");
-  var ASSASSIN = document.getElementId("ASSASSIN");
-  var Charged = document.getElementId("Charged");
-  var FreedomFighterVictor = document.getElementId("FreedomFighterVictor");
-  var ChristNat = document.getElementId("ChritNat");
-  var ChrisDooGood = document.getElementId("ChrisDooGood");
-  var ThrifteGaming = document.getElementId("ThrifteGaming");
-  var SatoriD = document.getElementId("SatoriD");
-  var LuCoin = document.getElementId("LuCoin");
-  var Pretty = document.getElementId("Pretty");
-  var NOID = document.getElementId("NOID");
-  var TETN = document.getElementId("TETN");
+  var MTCGid = "mtcg";
+  var DooBetterid = "doobetter";
+  var StarShatterid = "starshatter";
+  var Lokayaid = "lokaya";
+  var GameTestPlayid = "gametestplay";
+  var Cagedid = "caged";
+  var Yorizzoid = "yorizzo";
+  var Eclipseid = "eclipse";
+  var Pajuniorid = "pajunior";
+  var AlienShipid = "alienship";
+  var InvaderGamingid = "invadergaming";
+  var Grockid = "grock";
+  var ASSASSINid = "assassin";
+  var Chargedid = "charged";
+  var FreedomFighterVictorid = "freedomfightervictor";
+  var ChristNatid = "christnat";
+  var ChrisDooGoodid = "chrisdoogood";
+  var ThrifteGamingid = "thriftegaming";
+  var SatoriDid = "satorid";
+  var LuCoinid = "lucoin";
+  var Prettyid = "pretty";
+  var NOIDid = "noid";
+  var TETNid = "tetn";
   var PINNid = "pinn";
-  var JesusToken = "jesustoken"
+  var MaximumUnderDriveid = "maximumunderdrive";
+  var JesusToken = "jesustoken";
+
+  var Selectid = [
+    MTCGid,
+    DooBetterid,
+    StarShatterid,
+    Lokayaid,
+    GameTestPlayid,
+    Cagedid,
+    Yorizzoid,
+    Eclipseid,
+    Pajuniorid,
+    AlienShipid,
+    InvaderGamingid,
+    Grockid,
+    ASSASSINid,
+    Chargedid,
+    FreedomFighterVictorid,
+    ChristNatid,
+    ChrisDooGoodid,
+    ThrifteGamingid,
+    SatoriDid,
+    LuCoinid,
+    Prettyid,
+    NOIDid,
+    TETNid,
+    PINNid,
+    MaximumUnderDriveid
+  ];
+  var magic = SelectId;
   
+  
+ 
   if (create.id == "mtcg") {
     /* MTCG */
-    alert("this is a spell")
+    const mtcg = document.createElement("img");
+    mtcg.src =
+      "https://lh3.googleusercontent.com/cLnkBaMVrYBjYX-xpVUdk4GThGc0JEvOrHKWmPFsPtsa-5zMd3wpU3lAQh_fTfDue1nGhaPLyqrEDEdoYIoeCDGtIrU5ngZ7RNUz7Q";
+    mtcg.width = "120";
+    mtcg.title = "MTCG";
+    mtcg.id = "MTCG";
+    mtcg.style = "cursor:pointer";
+    var MTCG = document.getElementById("mtcg").appendChild(mtcg);
   }
   if (create.id == "doobetter") {
     /* DooBetter */
-   alert("DooBetter has No Attack Value")
+    const doobetter = document.createElement("img");
+    doobetter.src =
+      "https://lh3.googleusercontent.com/OhMKHby2FsaHEPrrYfI6U3OjSckqycY8UVMRNLeLgxZxQkvCFJnV2nMpFf0o4pCKBK-QPED4Z-1RacuFtrGnJy6_HUiIxOPqGYX8=w301";
+    doobetter.width = "120";
+    doobetter.title = "DooBetter";
+    doobetter.id = "DooBetter";
+    doobetter.style = "cursor: pointer";
+    var DooBetter = document.getElementById("doobetter").appendChild(doobetter);
   }
   if (create.id == "starshatter") {
-       alert("StarShatter has No Attack Value")
-
+    /* StarShatter */
+    const starshatter = document.createElement("img");
+    starshatter.src =
+      "https://lh3.googleusercontent.com/8cCsKn7ayobQ7gS2uIadh-UkNGLiAe_UimRtYFkheZDiDpiNNyvZSADBZaMWvA13syAB3Aw5NnFE34rTr0aP5ILU92nisT8z4EISA7A=w301";
+    starshatter.width = "120";
+    starshatter.title = "StarShatter";
+    starshatter.id = "StarShatter";
+    starshatter.style = "cursor: pointer";
+    var StarShatter = document
+      .getElementById("starshatter")
+      .appendChild(starshatter);
   }
 
   if (create.id == "lokaya") {
-     alert(" has No Attack Value")
-
+    /* Lokaya */
+    const lokaya = document.createElement("img");
+    lokaya.src =
+      "https://lh3.googleusercontent.com/COU6psI3QgRoL_7pWfmEG0lz-pSvR7moF-unVNJgYnbqkeZCkYOIu3GhcQJr1DXdjC47eIsLOFUrzhAqZBm20UyjqVscEG5Jh2DlcFs=w301";
+    lokaya.width = "120";
+    lokaya.title = "Lokaya";
+    lokaya.id = "Lokaya";
+    lokaya.style = "cursor: pointer";
+    var Lokaya = document.getElementById("lokaya").appendChild(lokaya);
   }
 
   if (create.id == "gametestplay") {
