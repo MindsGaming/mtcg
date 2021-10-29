@@ -449,7 +449,6 @@ function createID() {
   function attackED() {
     Create.classList.toggle("card");
     botID();
-    battling();
   }
 
   function battling() {

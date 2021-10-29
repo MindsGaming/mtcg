@@ -12,6 +12,7 @@ card {
   left: 0;
   margin-top: 15%;
   margin-left: 30%;
+  cursor: not-allowed;
   z-index: 3;
 }
 .botcard {
@@ -87,4 +88,12 @@ card {
 
 .hide {
   dispay: none;
+}
+
+.battle {
+  position: relative;
+  margin-top: 10%;
+  margin-left: 30%;
+  width: 6%;
+  background-color: red;
 }
