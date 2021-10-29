@@ -90,13 +90,14 @@ card {
   dispay: none;
 }
 
-.battle {
+.battles {
   position: relative;
   margin-top: 30%;
-  margin-left: 43%;
+  margin-left: 36%;
   text-align: center;
-  width: 6%;
+  width: 19%;
   background-color: red;
   border-style: groove;
-  border-color
+  border-color: black;
+  
 }

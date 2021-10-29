@@ -448,7 +448,13 @@ function createID() {
 
   function attackED() {
     Create.classList.toggle("card");
+    fight();
     botID();
+  }
+
+  function fight() {
+    var poof = document.getElementById("battles");
+    poof.classList.toggle("battles");
   }
 
   function battling() {
