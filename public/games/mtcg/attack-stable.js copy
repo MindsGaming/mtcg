@@ -10,18 +10,6 @@ var PlayDeck = document.getElementById("playdeck").appendChild(playdeck);
 /* id crerator */
 
 function createID() {
-  var botids = 
-  
-  /* PlayDeck */
-  var blankcard = document.createElement("img");
-  blankcard.src =
-    "https://lh3.googleusercontent.com/wXCSrw63MDFpFOYtqFHaIyKwYaQbBU4dMln5PZKKpcmQajwbiHMPGRepko1FSzeGbbButgpi8PNiTppf5eWm3KHsVfuFEP9D-q71WPg=w301";
-  blankcard.width = "120";
-  blankcard.title = "Bot Card";
-  blankcard.id = BotCard;
-  var BlankCard = document.getElementById("botarmy").appendChild(blankcard);
-
-  
   var MTCGid = "mtcg";
   var DooBetterid = "doobetter";
   var StarShatterid = "starshatter";
