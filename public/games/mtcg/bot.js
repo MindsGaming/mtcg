@@ -1,5 +1,3 @@
-/* id crerator */
-
 function botID() {
   var MTCGid = "mtcg";
   var DooBetterid = "doobetter";
@@ -430,7 +428,27 @@ function botID() {
     jesustoken.style = "cursor: pointer;";
     var JesusToken = document.getElementById("tetn").appendChild(tetn);
   }
-}
 
+  if (create.id == "null") {
+    alert("Something Went Wrong");
+  }
+
+  Create.addEventListener("click", attackED);
+
+  function attackED() {
+    Create.classList.toggle("card");
+    botID();
+    battling();
+  }
+
+  function battling() {
+    Create.addEventListener("click", magic);
+
+    function magic() {
+      alert(" has no value");
+      Create.classList.toggle("hide");
+      var poof = document.getElementById("botcard");
+      poof.innerHTML = "";
+    }
+  }
 }
- 
