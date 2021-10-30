@@ -7,11 +7,12 @@ playdeck.title = "PlayDeck";
 playdeck.id = "PlayedDeck";
 var PlayDeck = document.getElementById("playdeck").appendChild(playdeck);
 
-/* id crerator */
+/* id crerator */ 
+var botids = 0 + ;
+var Botids = +1;
+var BotCard = "BotCard" + botids + Botids;
 
 function createID() {
-  var botids = 
-  
   /* PlayDeck */
   var blankcard = document.createElement("img");
   blankcard.src =
@@ -21,7 +22,6 @@ function createID() {
   blankcard.id = BotCard;
   var BlankCard = document.getElementById("botarmy").appendChild(blankcard);
 
-  
   var MTCGid = "mtcg";
   var DooBetterid = "doobetter";
   var StarShatterid = "starshatter";
