@@ -40,15 +40,15 @@
   <body>
     <wrap>
       <div class="mtcgBoard">
-        <div class="botarmy" id="botarmy">
-          <div class="botcard" id="botcard"></div>
+        <div class="botarmy" id="botarmy"></div>
+        <div class="battleField" id="battleField">
+          <div class="playercard"></div>
+          <div class="botcard"></div>
         </div>
-
-        <div class="armymen">
-          <div class="hand" id="create"></div>
+        <div class="army">
+          <div class="playerarmy" id="create"></div>
         </div>
-
-        <div onclick="createID();" id="playdeck"></div>
+        <div id="playdeck" onclick="createID();"></div>
       </div>
     </wrap>
   </body>
