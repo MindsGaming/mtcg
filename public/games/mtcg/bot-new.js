@@ -432,7 +432,13 @@ function botID() {
   if (create.id == "null") {
     alert("Something Went Wrong");
   }
-  
-  
 
+  function botattackED() {
+    Create.classList.toggle("botcard");
+  }
+  Create.addEventListener("click", attackED);
+
+  function attackED() {
+    Create.classList.toggle("botcard");
+  }
 }
