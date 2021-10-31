@@ -1,4 +1,6 @@
 function moveCard() {
+  Create.classList.toggle("hide");
+
   var create = document.createElement("playercard");
 
   if (create.id == "mtcg") {

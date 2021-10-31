@@ -460,7 +460,6 @@ function createID() {
     var poof = document.getElementById("BotCard");
     poof.classList.toggle("hide");
     botID();
-    movecard();
     battling();
   }
 

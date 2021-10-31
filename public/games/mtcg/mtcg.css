@@ -15,20 +15,20 @@ card {
   cursor: not-allowed;
   z-index: 3;
 }
+.botcard {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 15%;
+  margin-right: 20%;
+  z-index: 3;
+}
 .playercard {
   position: fixed;
   top: 0;
   left: 0;
   margin-top: 15%;
-  margin-left: 50%;
-  z-index: 3;
-}
-.botcard {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-top: 15%;
-  margin-left: 10%;
+  margin-left: 20%;
   margin-right: 3%;
   z-index: 3;
 }
