@@ -1,74 +1,5 @@
-/* PlayDeck */
-var playdeck = document.createElement("img");
-playdeck.src =
-  "https://lh3.googleusercontent.com/wXCSrw63MDFpFOYtqFHaIyKwYaQbBU4dMln5PZKKpcmQajwbiHMPGRepko1FSzeGbbButgpi8PNiTppf5eWm3KHsVfuFEP9D-q71WPg=w301";
-playdeck.width = "120";
-playdeck.title = "PlayDeck";
-playdeck.id = "PlayedDeck";
-var PlayDeck = document.getElementById("playdeck").appendChild(playdeck);
-
-/* id crerator */
-
-function createID() {
-  var MTCGid = "mtcg";
-  var DooBetterid = "doobetter";
-  var StarShatterid = "starshatter";
-  var Lokayaid = "lokaya";
-  var GameTestPlayid = "gametestplay";
-  var Cagedid = "caged";
-  var Yorizzoid = "yorizzo";
-  var Eclipseid = "eclipse";
-  var Pajuniorid = "pajunior";
-  var AlienShipid = "alienship";
-  var InvaderGamingid = "invadergaming";
-  var Grockid = "grock";
-  var ASSASSINid = "assassin";
-  var Chargedid = "charged";
-  var FreedomFighterVictorid = "freedomfightervictor";
-  var ChristNatid = "christnat";
-  var ChrisDooGoodid = "chrisdoogood";
-  var ThrifteGamingid = "thriftegaming";
-  var SatoriDid = "satorid";
-  var LuCoinid = "lucoin";
-  var Prettyid = "pretty";
-  var NOIDid = "noid";
-  var TETNid = "tetn";
-  var PINNid = "pinn";
-  var MaximumUnderDriveid = "maximumunderdrive";
-  var JesusToken = "jesustoken";
-
-  var Selectid = [
-    MTCGid,
-    DooBetterid,
-    StarShatterid,
-    Lokayaid,
-    GameTestPlayid,
-    Cagedid,
-    Yorizzoid,
-    Eclipseid,
-    Pajuniorid,
-    AlienShipid,
-    InvaderGamingid,
-    Grockid,
-    ASSASSINid,
-    Chargedid,
-    FreedomFighterVictorid,
-    ChristNatid,
-    ChrisDooGoodid,
-    ThrifteGamingid,
-    SatoriDid,
-    LuCoinid,
-    Prettyid,
-    NOIDid,
-    TETNid,
-    PINNid,
-    MaximumUnderDriveid
-  ];
-
-  const random = Selectid[Math.floor(Math.random() * Selectid.length)];
-  var create = document.createElement("card");
-  create.id = random;
-  var Create = document.getElementById("create").appendChild(create);
+function moveCard() {
+  var create = document.createElement("playercard");
 
   if (create.id == "mtcg") {
     /* MTCG */
@@ -447,8 +378,11 @@ function createID() {
   Create.addEventListener("click", attackED);
 
   function attackED() {
-    Create.classList.toggle("card");
+    Create.classList.toggle("playercard");
+    var poof = document.getElementById("BotCard");
+    poof.classList.toggle("hide");
     botID();
+    movecard();
     battling();
   }
 
@@ -460,6 +394,8 @@ function createID() {
 
       var poof = document.getElementById("botcard");
       poof.innerHTML = "";
+      var poofed = document.getElementById("BotCard");
+      poofed.classList.toggle("hide");
       Create.classList.toggle("hide");
     }
   }

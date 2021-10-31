@@ -15,7 +15,7 @@ card {
   cursor: not-allowed;
   z-index: 3;
 }
-.botcard {
+.playercard {
   position: fixed;
   top: 0;
   left: 0;
@@ -23,12 +23,13 @@ card {
   margin-left: 50%;
   z-index: 3;
 }
-.playercard {
+.botcard {
   position: fixed;
   top: 0;
   left: 0;
   margin-top: 15%;
-  margin-left: 25%;
+  margin-left: 10%;
+  margin-right: 3%;
   z-index: 3;
 }
 
