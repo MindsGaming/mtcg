@@ -21,7 +21,7 @@
 }
 
 .drawcard {
-  margin-top: 32%;
+  margin-top: 34%;
   margin-left: 7%;
 }
 .botarmy {
@@ -39,7 +39,7 @@
   display: block;
   width: 120px;
   height: 120px;
-  margin-top: -150;
+  margin-top: -200px;
   margin-left: 15%;
   background-color: black;
 }
@@ -47,13 +47,14 @@
 .botcard {
   position: fixed;
   display: block;
-  width: 120px;
-  height: 120px;
   margin-top: 15%;
-  margin-left: 35%;
-  background-color: black;
+  margin-left: 45%;
 }
 
 .hide {
   dispay: none;
+}
+
+.show {
+  display: block;
 }

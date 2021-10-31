@@ -455,13 +455,11 @@ function createID() {
     alert("Something Went Wrong");
   }
 
-  botID();
   Create.addEventListener("click", attackED);
 
   function attackED() {
     Create.classList.toggle("playercard");
-    var poofed = document.getElementById("botcard");
-    poofed.classList.toggle("botcard");
+    botID();
     battling();
   }
 
@@ -617,4 +615,8 @@ function createID() {
       Create.classList.toggle("hide");
     }
   }
+  var poof = document.getElementById("botcard");
+  poof.innerHTML = "";
+  var poofed = document.getElementById("BotCard");
+  poofed.classList.toggle("hide");
 }
