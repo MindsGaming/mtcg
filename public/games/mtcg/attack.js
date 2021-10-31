@@ -458,7 +458,7 @@ function createID() {
   Create.addEventListener("click", attackED);
 
   function attackED() {
-    Create.classList.toggle("playercard");
+    Create.classList.toggle("playerPlay");
     botID();
     var poof = document.getElementById("BotCard");
     poof.classList.toggle("hide");
