@@ -7,19 +7,16 @@ playdeck.title = "PlayDeck";
 playdeck.id = "PlayedDeck";
 var PlayDeck = document.getElementById("playdeck").appendChild(playdeck);
 
-/* id crerator */ 
-var botids = 0 + ;
-var Botids = +1;
-var BotCard = "BotCard" + botids + Botids;
+/* id crerator */
 
 function createID() {
-  /* PlayDeck */
   var blankcard = document.createElement("img");
   blankcard.src =
     "https://lh3.googleusercontent.com/wXCSrw63MDFpFOYtqFHaIyKwYaQbBU4dMln5PZKKpcmQajwbiHMPGRepko1FSzeGbbButgpi8PNiTppf5eWm3KHsVfuFEP9D-q71WPg=w301";
   blankcard.width = "120";
   blankcard.title = "Bot Card";
-  blankcard.id = BotCard;
+  blankcard.id = "BotCard";
+  blankcard.style = "margin-left: 15px;";
   var BlankCard = document.getElementById("botarmy").appendChild(blankcard);
 
   var MTCGid = "mtcg";
@@ -460,6 +457,8 @@ function createID() {
 
   function attackED() {
     Create.classList.toggle("card");
+    var poof = document.getElementById("BotCard");
+    poof.classList.toggle("hide");
     botID();
     battling();
   }
@@ -472,6 +471,8 @@ function createID() {
 
       var poof = document.getElementById("botcard");
       poof.innerHTML = "";
+      var poofed = document.getElementById("BotCard");
+      poofed.classList.toggle("hide");
       Create.classList.toggle("hide");
     }
   }
