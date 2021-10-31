@@ -454,14 +454,14 @@ function createID() {
   if (create.id == "null") {
     alert("Something Went Wrong");
   }
+  botID();
 
   Create.addEventListener("click", attackED);
 
   function attackED() {
     Create.classList.toggle("playercard");
-    botID();
     var poof = document.getElementById("BotCard");
-    poof.classList.toggle("hide");
+    poof.classList.toggle("botcard");
     battling();
   }
 

@@ -20,14 +20,36 @@
   z-index: 3;
 }
 
+.drawcard {
+  margin-top: 32%;
+  margin-left: 7%;
+}
+.botarmy {
+  position: fixed;
+ display: block;
+  top: 0;
+  left: 0;
+  width:100%;
+  
+}
 
 .playercard {
   position: fixed;
   display: block;
   width: 120px;
   height: 120px;
-  margin-top: 15%;
+  margin-top: -150;
   margin-left: 15%;
+  background-color: black;
+}
+
+.botcard {
+  position: fixed;
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-top: 15%;
+  margin-left: 35%;
   background-color: black;
 }
 
