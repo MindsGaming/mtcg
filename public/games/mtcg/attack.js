@@ -458,7 +458,7 @@ function createID() {
   Create.addEventListener("click", attackED);
 
   function attackED() {
-    Create.classList.toggle("playerMove");
+    Create.classList.toggle("playercard");
     botID();
     var poof = document.getElementById("BotCard");
     poof.classList.toggle("hide");
@@ -609,7 +609,7 @@ function createID() {
       if (create.id == "jesustoken") {
         /* JesusToken */
         alert("JesusToken has no value");
-      } 
+      }
       var poof = document.getElementById("botcard");
       poof.innerHTML = "";
       var poofed = document.getElementById("BotCard");
