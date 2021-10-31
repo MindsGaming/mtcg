@@ -469,7 +469,181 @@ function createID() {
     Create.addEventListener("click", magic);
 
     function magic() {
-      alert(" has no value");
+      if (create.id == "mtcg") {
+    /* MTCG */
+   alert("MTCG has no value")
+  }
+  if (create.id == "doobetter") {
+    /* DooBetter */
+     alert("DooBetter has no value")
+
+  }
+  if (create.id == "starshatter") {
+    /* StarShatter */
+      alert("StarShatter has no value")
+
+  }
+
+  if (create.id == "lokaya") {
+    /* Lokaya */
+      alert("Lokaya has no value")
+
+  }
+
+  if (create.id == "gametestplay") {
+    /* GameTestPlay */
+      alert("GameTestPlay has no value")
+
+  }
+
+  if (create.id == "ottman") {
+    /* Ottman */
+      alert("Ottman has no value")
+
+  }
+
+  if (create.id == "caged") {
+    /* Caged */
+      alert("Caged has no value")
+
+  }
+
+  if (create.id == "yorizzo") {
+    /* Yorizzo */
+   alert("Yorizzo has no value")
+    
+  }
+
+  if (create.id == "bndr") {
+    /* BNDR */
+      alert("BNDR has no value")
+
+  }
+  if (create.id == "eclipse") {
+    /* Eclipse */
+      alert("Eclipse has no value")
+
+  }
+
+  if (create.id == "pinn") {
+    /* PINN */
+      alert("Pinn has no value")
+
+  }
+
+  if (create.id == "voxix") {
+    /* Voxix */
+       alert("Voxix has no value")
+
+  }
+
+  if (create.id == "mindsbulb") {
+    /* MindsBulb */
+       alert("MindsBulb has no value")
+
+  }
+  if (create.id == "pajunior") {
+    /* PaJunior */
+      alert("Pajunior has no value")
+
+  }
+
+  if (create.id == "alienship") {
+    /* AlienShip */
+      alert("AlienShip has no value")
+
+  }
+  if (create.id == "invadergaming") {
+    /* InvaderGaming */
+      alert("InvaderGaming has no value")
+
+  }
+
+  if (create.id == "grock") {
+    /* GROCK */
+      alert("Grock has no value")
+
+  }
+
+  if (create.id == "assassin") {
+    /* ASSASSIN */
+       alert("ASSASSIN has no value")
+
+  }
+
+  if (create.id == "charged") {
+    /* CHARGED */
+     alert("Charged has no value")
+
+  }
+
+  if (create.id == "freedomfightervictor") {
+    /* FreedomFighterVictor */
+       alert("FreedomFighterVictor has no value")
+
+  }
+
+  if (create.id == "christnat") {
+    /* ChristNat */
+      alert("ChristNat has no value")
+
+  }
+
+  if (create.id == "chrisdoogood") {
+    /* ChrisDooGood*/
+      alert("ChrisDooGood has no value")
+
+  }
+
+  if (create.id == "thriftegaming") {
+    /* thriftegaming */
+       alert("ThrifteGaming has no value")
+
+  }
+
+  if (create.id == "satorid") {
+    /* SatoriD */
+      alert("SatoriD has no value")
+
+  }
+
+  if (create.id == "maximumunderdrive") {
+    /* maximumunderdrive */
+      alert("MaximumUnderDrive has no value")
+
+  }
+
+  if (create.id == "pretty") {
+    /* pretty */
+      alert("Pretty has no value")
+
+  }
+  if (create.id == "lucoin") {
+    /* LuCoin */
+      alert("LuCoin has no value")
+
+  }
+  if (create.id == "noid") {
+    /* NOID */
+      alert("NOID has no value")
+
+  }
+
+  if (create.id == "tetn") {
+    /* TETN */
+       alert("TETN has no value")
+
+  }
+  if (create.id == "jesustoken") {
+    /* JesusToken */
+      alert("JesusToken has no value")
+
+  }
+else {
+  alert(" has no value")
+}
+      
+         
 
       var poof = document.getElementById("botcard");
       poof.innerHTML = "";
