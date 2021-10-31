@@ -35,24 +35,19 @@
     <script src="/js/mice.js" defer></script>
     <script src="/games/mtcg/attack.js" defer></script>
     <script src="/games/mtcg/bot.js" defer></script>
-        <script src="/games/mtcg/movecard.js" defer></script>
-
+    <script src="/games/mtcg/movecard.js" defer></script>
   </head>
   <body>
     <wrap>
       <div class="mtcgBoard">
-        <div class="botarmy" id="botarmy"></div>
+        <div class="botarmy" id="botarmy">
+          <div id="botcard"></div>
+        </div>
         <div class="battleField" id="battleField">
-          <div class="botcard" id="botcard"></div>
           <div class="playercard" id="playercard"></div>
         </div>
         <div class="army" id="create"></div>
-        <a
-          href="#"
-          onclick="createID(); return flase"
-          id="playdeck"
-          style="position: fixed; right: 0; bottom: 0; cursor: pointer; margin: 3px;"
-        ></a>
+        <div onclick="createID();" id="playdeck"></div>
       </div>
     </wrap>
   </body>

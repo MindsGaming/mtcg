@@ -5,6 +5,8 @@ playdeck.src =
 playdeck.width = "120";
 playdeck.title = "PlayDeck";
 playdeck.id = "PlayedDeck";
+playdeck.style =
+  "position: fixed; display:block; right: 0; bottom: 0; cursor: pointer; margin: 3px; width: 120px; height: 150px; z-index: 3;";
 var PlayDeck = document.getElementById("playdeck").appendChild(playdeck);
 
 /* id crerator */

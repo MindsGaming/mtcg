@@ -6,15 +6,6 @@ card {
   margin-bottom: 3px;
 }
 
-.card {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-top: 15%;
-  margin-left: 30%;
-  cursor: not-allowed;
-  z-index: 3;
-}
 .botcard {
   position: fixed;
   top: 0;
@@ -23,6 +14,7 @@ card {
   margin-right: 20%;
   z-index: 3;
 }
+
 .playercard {
   position: fixed;
   top: 0;
