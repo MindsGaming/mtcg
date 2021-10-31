@@ -18,7 +18,7 @@ function createID() {
   blankcard.width = "120";
   blankcard.title = "Bot Card";
   blankcard.id = "BotCard";
-  blankcard.style = "margin-left: 15px;";
+  blankcard.style = "position: relative; margin-left: 15px; z-index: 11;";
   var BlankCard = document.getElementById("botarmy").appendChild(blankcard);
 
   var MTCGid = "mtcg";
@@ -459,9 +459,9 @@ function createID() {
 
   function attackED() {
     Create.classList.toggle("playercard");
+    botID();
     var poof = document.getElementById("BotCard");
     poof.classList.toggle("hide");
-    botID();
     battling();
   }
 
