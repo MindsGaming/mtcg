@@ -459,6 +459,8 @@ function createID() {
 
   function attackED() {
     Create.classList.toggle("playercard");
+    var poof = document.getElementById("BotCard");
+    poof.classList.toggle("hide");
     botID();
     battling();
   }
@@ -615,8 +617,5 @@ function createID() {
       Create.classList.toggle("hide");
     }
   }
-  var poof = document.getElementById("botcard");
-  poof.innerHTML = "";
-  var poofed = document.getElementById("BotCard");
-  poofed.classList.toggle("hide");
+  
 }

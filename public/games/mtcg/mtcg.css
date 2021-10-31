@@ -39,7 +39,7 @@
   display: block;
   width: 120px;
   height: 120px;
-  margin-top: -200px;
+  margin-top: -215px;
   margin-left: 15%;
   background-color: black;
 }
@@ -47,8 +47,8 @@
 .botcard {
   position: fixed;
   display: block;
-  margin-top: 15%;
-  margin-left: 45%;
+  margin-top: 18%;
+  margin-left: 51%;
 }
 
 .hide {
@@ -57,4 +57,16 @@
 
 .show {
   display: block;
+}
+
+.alphaB {
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  border-style: groove;
+  border-color: silver;
+  margin: 2px;
+  opacity: 0.7;
+  z-index: 5;
 }
