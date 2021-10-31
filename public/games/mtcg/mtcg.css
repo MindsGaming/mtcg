@@ -35,13 +35,11 @@
 }
 
 .playercard {
-  position: fixed;
-  display: block;
-  width: 120px;
-  height: 120px;
-  margin-top: -27%;
-  margin-left: 18%;
-  background-color: black;
+  float: left;
+  margin-top: -10%;
+  margin-right: 25px;
+  clear: both;
+  transform: rotate(90deg);
 }
 
 .botcard {
@@ -49,6 +47,8 @@
   display: block;
   margin-top: 18%;
   margin-left: 51%;
+    transform: rotate(deg);
+
 }
 
 .hide {
