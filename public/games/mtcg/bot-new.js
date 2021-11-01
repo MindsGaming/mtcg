@@ -436,9 +436,4 @@ function botID() {
   function botattackED() {
     Create.classList.toggle("botcard");
   }
-  Create.addEventListener("click", attackED);
-
-  function attackED() {
-    Create.classList.toggle("botcard");
-  }
 }

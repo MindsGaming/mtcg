@@ -448,7 +448,9 @@ function createID() {
     jesustoken.title = "JesusToken";
     jesustoken.id = "JesusToken";
     jesustoken.style = "cursor: pointer;";
-    var JesusToken = document.getElementById("tetn").appendChild(tetn);
+    var JesusToken = document
+      .getElementById("jesustoken")
+      .appendChild(jesustoken);
   }
 
   if (create.id == "null") {
@@ -617,5 +619,4 @@ function createID() {
       Create.classList.toggle("hide");
     }
   }
-  
 }
