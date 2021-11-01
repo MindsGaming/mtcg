@@ -17,7 +17,7 @@ function cashTokens() {
   const tokenCheck = document.getElementById("tokenCheck");
 
   const tokenChecking = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
-  const tokenBoost = -"-3" + tokenChecking;
+  const tokenBoost = -"0" + tokenChecking;
   tokenBoost == tokenChecking;
   tokenCheck.value = tokenChecking;
 
