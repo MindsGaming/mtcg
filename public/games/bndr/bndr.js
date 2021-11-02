@@ -32,14 +32,14 @@ function cashTokens() {
           "-" +
           dreamInputuser.value +
           dreamInputplayer.value +
-          " Reward: "
+          " BNDR: "
       };
 
       appendNewDream(
         dreamInput.value +
           "-" +
           dreamInputuser.value +
-          " Reward: " +
+          " BNDR: " +
           dreamInputplayer.value +
           tokenCheck.value
       );
