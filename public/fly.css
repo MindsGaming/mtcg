@@ -165,7 +165,7 @@ code {
   float: left;
   display: block;
   height: 20px;
-  font-align: center;
+  text-align: center;
   margin-top: 2px;
   margin-bottom: 3px;
   margin-left: 10px;
@@ -178,7 +178,7 @@ code {
   float: left;
   display: block;
   height: 20px;
-  font-align: center;
+  text-align: center;
   margin-top: 2px;
   margin-bottom: 3px;
   margin-left: 10px;

@@ -47,6 +47,12 @@ function doobettertokens() {
   dreamInputplayer.value = "DooBetter";
 }
 
+function eclipsetokens() {
+  var dreamtokens = document.getElementById("eclipsetokens");
+  dreamtokens.classList.toggle("dreamtokens");
+  dreamInputplayer.value = "Eclipse";
+}
+
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
   .then(res => res.json())
@@ -150,7 +156,7 @@ function guest() {
 
 function socailMedia() {
   alert("You Need To Be Logged In...");
-  window.open("/social", "_self")
+  window.open("/social", "_self");
 }
 
 /* HTTPS */
