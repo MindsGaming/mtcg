@@ -1,16 +1,33 @@
- .rewads {
-        color: gold;
-        font-size: 19px;
-      }
-      .donate {
-        width: 60%;
-        display: block;
-      }
-      .donateBTN {
-        display: block;
-        margin-left: 10px;
-        border-style: groove;
-        border-color: gold;
-        background-color: white;
-        color: blue;
-      }
+.rewads {
+  color: gold;
+  font-size: 19px;
+}
+
+.donate {
+  position: relative;
+  width: 60%;
+  height: 350xpx;
+  background-color: silver;
+  border-style: groove;
+  border-color: white;
+  display: block;
+}
+
+.tokenItem {
+  width: 100%;
+  background-color: white;
+  
+}
+
+.donateBTN {
+  display: block;
+  margin-left: 10px;
+  border-style: groove;
+  border-color: gold;
+  background-color: white;
+  color: blue;
+}
+
+p {
+  max-width: 900px;
+}
