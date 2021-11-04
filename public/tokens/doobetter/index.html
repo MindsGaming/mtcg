@@ -36,6 +36,8 @@
     <!-- import the webpage's client-side javascript file -->
     <script src="https://mtcg.glitch.me/js/fly.js" defer></script>
     <script src="https://mtcg.glitch.me/js/mice.js" defer></script>
+        <script src="/token.js" defer></script>
+
 
     <style>
       .rewads {
@@ -59,7 +61,12 @@
 
   <body class="BETA" id="MGdark">
     <miner><iframe src="/miner"></iframe></miner>
-    <iframe src="https://mtcg.glitch.me/#popcorn" class="SuperSplash"> </iframe>
+    <iframe
+      id="login"
+      src="https://mtcg.glitch.me/#popcorn"
+      class="SuperSplash"
+    >
+    </iframe>
 
     <br />
     <div class="SuperLogin" id="login">
@@ -173,7 +180,7 @@
           >
             Get A Wallet</a
           >
-          <button type="submit" id="submit-dream">Login</button>
+          <button type="submit" onclick="rewardToken();">Login</button>
 
           <br />
           <div class="guest" onclick="guest();">
@@ -182,5 +189,6 @@
         </form>
       </div>
     </div>
+    <br />
   </body>
 </html>
