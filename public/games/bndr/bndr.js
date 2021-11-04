@@ -14,12 +14,12 @@ function cashTokens() {
 
   const minutesLabel = document.getElementById("minutes");
   const secondsLabel = document.getElementById("seconds");
-  const tokenCheck = document.getElementById("balance");
-
-  const tokenChecking = "-5";
-  const credits = tokenCheck.value + tokenChecking;
-  tokenCheck.value == credits;
-
+  
+  const boost = minutesLabel.innerHTML;
+const TOKENvalue = secondsLabel.innerHTML + ".4";
+const tokenCheck = boost + TOKENvalue;
+tokenCheck.value == tokenCheck;
+  
   if (minutesLabel.innerHTML == "00") {
     alert("You Need A Full Token TO Cash Out!");
   } else {
