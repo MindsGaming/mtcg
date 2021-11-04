@@ -1,3 +1,16 @@
-.Eco {
-  display: block;
-}
+ .rewads {
+        color: gold;
+        font-size: 19px;
+      }
+      .donate {
+        width: 60%;
+        display: block;
+      }
+      .donateBTN {
+        display: block;
+        margin-left: 10px;
+        border-style: groove;
+        border-color: gold;
+        background-color: white;
+        color: blue;
+      }

