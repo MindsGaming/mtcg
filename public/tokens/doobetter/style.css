@@ -10,10 +10,12 @@ h1 {
   position: relative;
   width: 60%;
   height: 350xpx;
+  font-size: 20px;
   background-color: silver;
   border-style: groove;
   border-color: white;
   display: block;
+ padding: 3px;
 }
 
 .tokenItem {
@@ -28,6 +30,6 @@ p {
 }
 
 p.tiny {
-  margin-right: 50px;
-  font-size: 13px;
+  margin-right: 60%;
+  font-size: 10px;
 }
