@@ -15,15 +15,16 @@ h1 {
   border-style: groove;
   border-color: white;
   display: block;
- padding: 3px;
+  padding: 3px;
 }
 
 .tokenItem {
   width: 100%;
   background-color: white;
-  
 }
-a {margin: 3px;}
+a {
+  margin: 3px;
+}
 
 p {
   max-width: 900px;
@@ -32,4 +33,8 @@ p {
 p.tiny {
   margin-right: 60%;
   font-size: 10px;
+}
+p.eco {
+  font-size: 10px;
+  margin-left: 30%;
 }
