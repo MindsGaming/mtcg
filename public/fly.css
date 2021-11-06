@@ -200,3 +200,7 @@ code {
 miner {
   display: none;
 }
+
+.minds-share-button {
+  height: 20px;
+}
