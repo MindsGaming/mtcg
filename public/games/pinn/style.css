@@ -1,0 +1,26 @@
+wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 95%;
+  overflow: scroll;
+}
+
+.gameofLife {
+  display: block;
+  margin: 20px;
+  padding: 2px;
+}
+
+.block {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.life {
+  background-color: red;
+}
