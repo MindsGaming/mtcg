@@ -1,7 +1,17 @@
 function startGamed() {
   var start = document.getElementById("startGame");
-  start.innerHTML = "Countiue Universe";
-  start.style = "background-color: blue; color: gold;";
+  var startNew = [
+    "Countiue Univers",
+    "Keep Trying",
+    "Still No Life?",
+    "Exand More?",
+    1.7976931348623157e10308
+  ];
+  const startnew = startNew[Math.floor(Math.random() * startNew.length)];
+  var startID = startnew;
+
+  start.innerHTML = startID;
+  start.style = "background-color: blue; color: gold; z-index: 2;";
 
   var cashout = document.getElementById("cashOut");
   cashout.style =
