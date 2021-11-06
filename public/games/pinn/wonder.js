@@ -1,11 +1,11 @@
 function startGamed() {
   var start = document.getElementById("startGame");
   var startNew = [
-    "Countiue Univers",
-    "Keep Trying",
+    "Countiue Universe?",
+    "Keep Trying?",
     "Still No Life?",
-    "Exand More?",
-    1.7976931348623157e10308
+    "Expand More?",
+    1.7976931348623157e10308 + "?"
   ];
   const startnew = startNew[Math.floor(Math.random() * startNew.length)];
   var startID = startnew;
@@ -15,7 +15,7 @@ function startGamed() {
 
   var cashout = document.getElementById("cashOut");
   cashout.style =
-    "position: fixed; display: block; right: 0; top: 0;  width: 50px; background-color: white; border-style: groove; border-color: gold; padding: 1px; margin: 25px; color: red; cursor:pointer;";
+    "position: fixed; display: block; right: 0; top: 0;  width: 50px; background-color: white; border-style: groove; border-color: gold; padding: 1px; margin: 25px; color: red; cursor:pointer; opacity: .7;";
 
   var spoof = ["1", "2", "3", "4", 1.7976931348623157e10308];
   const random = spoof[Math.floor(Math.random() * spoof.length)];
