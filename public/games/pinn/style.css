@@ -70,8 +70,8 @@ wrap {
   opacity: 0.7;
 }
 
-miner {
-  display: block;
+meter {
+  display: none;
 }
 
 .cashOut {
