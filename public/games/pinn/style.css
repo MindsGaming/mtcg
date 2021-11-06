@@ -3,8 +3,29 @@ wrap {
   left: 0;
   top: 0;
   width: 100%;
-  height: 95%;
+  height: 100%;
   overflow: scroll;
+  background-image: url("https://cdn.glitch.me/e9149c5c-8560-499e-8b8d-7c35737e37e8%2Fstars.jpg");
+  background-size: cover;
+}
+
+.startGame {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  border-style: groove;
+  border-color: red;
+  border-radius: 30px 45px 30px 45px;
+  font-size: 34px;
+  font-align: center;
+  cursor: pointer;
+  color: gold;
+}
+
+.hide {
+  display: none;
 }
 
 .gameofLife {
@@ -17,10 +38,64 @@ wrap {
   float: left;
   width: 40px;
   height: 40px;
-  border-style: solid;
-  cursor: pointer;
+  border-style: none;
 }
 
 .life {
-  background-color: red;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url("https://cdn.glitch.me/e9149c5c-8560-499e-8b8d-7c35737e37e8%2Fearth2.webp");
+  background-size: contain;
+  opacity: 0.7;
+}
+
+.earth {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url("https://cdn.glitch.me/e9149c5c-8560-499e-8b8d-7c35737e37e8%2Fearth.webp");
+  background-size: contain;
+  opacity: 0.7;
+}
+.Token {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url("https://cdn.minds.com/icon/568132636652875781/medium/1630521552");
+  background-size: contain;
+  opacity: 0.7;
+}
+
+meter {
+  display: none;
+}
+
+.cashOut {
+  position: fixed;
+  display: none;
+  right: 0;
+  top: 0;
+  width: 50px;
+  border-style: groove;
+  border-color: gold;
+  padding: 1px;
+  margin: 45px;
+  color: red;
+}
+
+.show {
+  position: fixed;
+  display: block;
+  right: 0;
+  top: 0;
+  width: 50px;
+  border-style: groove;
+  border-color: gold;
+  padding: 1px;
+  margin: 45px;
+  color: red;
 }
