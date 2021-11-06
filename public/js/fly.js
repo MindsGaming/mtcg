@@ -67,6 +67,7 @@ const appendNewDream = dream => {
   const newListItem = document.createElement("li");
   newListItem.innerText = dream;
   dreamsList.appendChild(newListItem);
+  LOTTO();
 };
 
 // listen for the form to be submitted and add a new dream when it is
