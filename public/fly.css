@@ -204,3 +204,15 @@ miner {
 .minds-share-button {
   height: 20px;
 }
+
+.bubble {
+  float: left;
+  margin: 7%;
+  border-style: groove;
+  border-color: silver;
+  border-radius: 45px 15px 45px 15px;
+  padding: 5px;
+  color: grey;
+  opacity: .8;
+  
+}
