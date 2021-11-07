@@ -1,10 +1,10 @@
 function startGamed() {
   var start = document.getElementById("startGame");
   var startNew = [
-    "Countiue Univers",
+    "Countiue Universe",
     "Keep Trying",
     "Still No Life?",
-    "Exand More?",
+    "Expand More?",
     1.7976931348623157e10308
   ];
   const startnew = startNew[Math.floor(Math.random() * startNew.length)];
