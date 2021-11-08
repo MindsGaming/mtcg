@@ -120,6 +120,7 @@ code {
   display: block;
   border-style: solid;
   border-color: grey;
+  cursor: pointer;
 }
 
 .cashout {
