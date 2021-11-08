@@ -1,12 +1,19 @@
 const referral = document.getElementById("referral");
+const userReferral = dreamsForm.elements["userReferral"];
 
 const txt = "Referral";
-function playGamer() {
-  dreamInputplayer.value == "GAMER";
-  window.open("/games/gamer", "_self");
+function getReferral() {
+  referral.classList.toggle("show");
 }
 
-function playDoobetter() {
-  dreamInputplayer.value == "DooBetter";
-  window.open("/games/doobetter", "_blank");
+function getuserReferral() {
+  const data = {
+    dream: userReferral.value
+  };
+
+  appendNewDream(userReferral.value);
+
+  var minutesLabel = document.getElementById("minutes");
+
+  minutesLabel.innerHTML = "5";
 }
