@@ -13,7 +13,8 @@ function createPinn() {
   var addReward = document.getElementById("total");
 
   if (addReward.innerHTML == "100") {
-    document.getElementById("rewards").innerHTML = +5;
+    var base = document.getElementById("rewards").innerHTML;
+    document.getElementById("rewards").innerHTML = base + 1;
     document.getElementById("total").innerHTML = "0";
     document.getElementById("tackCount").value = "1";
   }
