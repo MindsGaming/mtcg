@@ -13,14 +13,8 @@ function createPinn() {
   var addReward = document.getElementById("total");
 
   if (addReward.innerHTML == "100") {
-    
-    var rewards = document.getElementById("rewards");
-    var total = document.getElementById("total");
-    var pinn = document.getElementById("PINN");
-    pinn.classList.toggle("hide");
-      document.getElementById("re").innerHTML = tackCount;
-
-    
-    
+    document.getElementById("rewards").innerHTML = +5;
+    document.getElementById("total").innerHTML = "0";
+    document.getElementById("tackCount").value = "1";
   }
 }
