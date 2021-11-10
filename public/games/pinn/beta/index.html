@@ -68,9 +68,11 @@
       .tack {
         float: left;
         display: block;
-        width: 30px;
-        height: 25px;
+        width: 55px;
+        height: 45px;
         margin: 2%;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fthumtack.png");
+        background-size: contain;
         border-style: groove;
         border-radius: 6px 9px 6px 9px;
         color: white;
@@ -78,17 +80,9 @@
         text-align: center;
         font-size: 20px;
       }
-      .total {
-        position: fixed;
-        top: 0;
-        display: block;
-        left: 0;
-        margin: 20px;
-        border-style: dotted;
-        color: gold;
-      }
+     
     </style>
-    <script src="./pinn.js" defer></script>
+    <script src="/games/pinn/pinn.js" defer></script>
   </head>
   <body>
     <wrap>
@@ -102,11 +96,21 @@
               max="100"
               low="10"
               high="80"
+              style=" display: none;"
             ></meter>
           </div>
           <div id="tack" class="tacks"></div>
-          <div id="total" class="total">
-            0
+          
+          <div class="footer">
+            
+          <div class="total">
+            Tacks:
+            <div id="total">
+              0
+            </div>
+          </div>
+          <div id="Rewards" class="">
+            Reward 0
           </div>
         </div>
       </center>
