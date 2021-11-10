@@ -9,12 +9,18 @@ function createPinn() {
   document.getElementById("tackCount").value = tackcount;
 
   document.getElementById("total").innerHTML = tackCount;
-  
-  
+
   var addReward = document.getElementById("total");
-  
-if (addReward== "100"){
-  var reward = document.getElementById("reward")
-}
-  
+
+  if (addReward.innerHTML == "100") {
+    
+    var rewards = document.getElementById("rewards");
+    var total = document.getElementById("total");
+    var pinn = document.getElementById("PINN");
+    pinn.classList.toggle("hide");
+      document.getElementById("re").innerHTML = tackCount;
+
+    
+    
+  }
 }
