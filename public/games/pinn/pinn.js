@@ -16,7 +16,9 @@ function createPinn() {
     var rewards = document.getElementById("rewards").value;
     var rewardscount = rewards + 1;
     document.getElementById("rewards").value = rewardscount;
-    document.getElementById("rewardstotal").innerHTML = rewardscount;
+    var rewardstotal = document.getElementById("rewardstotal");
+    rewardstotal.innerHTML = rewardscount;
+    document.getElementById("total").innerHTML = "00";
     document.getElementById("tackCount").value = "1";
   }
 }
