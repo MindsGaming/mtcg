@@ -63,6 +63,7 @@
       .tacks {
         width: 80%;
         height: 80%;
+        overflow: scroll;
       }
 
       .tack {
@@ -80,7 +81,24 @@
         text-align: center;
         font-size: 20px;
       }
-     
+      .footer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 10%;
+        height: 100%;
+        background-color: transparent;
+      }
+      .total {
+        margin: 3%;
+        color: gold;
+        border-style: dotted;
+      }
+      .rewards {
+        margin: 3%;
+        color: gold;
+        border-style: solid;
+      }
     </style>
     <script src="/games/pinn/pinn.js" defer></script>
   </head>
@@ -100,17 +118,19 @@
             ></meter>
           </div>
           <div id="tack" class="tacks"></div>
-          
-          <div class="footer">
-            
+        </div>
+        <div class="footer">
           <div class="total">
             Tacks:
             <div id="total">
               0
             </div>
           </div>
-          <div id="Rewards" class="">
-            Reward 0
+          <div class="rewards">
+            Rewards:
+            <div id="rewards">
+              0
+            </div>
           </div>
         </div>
       </center>
