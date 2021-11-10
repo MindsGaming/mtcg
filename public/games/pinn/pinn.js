@@ -8,7 +8,6 @@ function createPinn() {
   var tackcount = tackCount + 1;
   document.getElementById("tackCount").value = tackcount;
 
-  var displayCount = document.getElementByID("total");
-  displayCount.innerHTML = tackcount;
-  displayCount.value = tackcount;
+   document.getElementById("total").innerHTML = tackcount;
+
 }
