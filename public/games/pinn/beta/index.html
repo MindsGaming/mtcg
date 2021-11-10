@@ -88,6 +88,7 @@
         width: 10%;
         height: 100%;
         background-color: transparent;
+        z-index: 2;
       }
       .total {
         margin: 3%;
@@ -95,7 +96,8 @@
         border-style: dotted;
       }
       .rewards {
-        margin: 3%;
+        margin-top: 3%;
+        margin-bottom: 5%;
         color: gold;
         border-style: solid;
       }
@@ -103,7 +105,8 @@
         margin: 3%;
         color: gold;
         border-style: solid;
-        
+        cursor: pointer;
+        z-index: 2;
       }
     </style>
     <script src="/games/pinn/pinn.js" defer></script>
@@ -139,17 +142,7 @@
             ></meter>
           </div>
 
-          <div class="rewards">
-            Pie Timer:
-            <label id="minutes" value="0">00</label>.<label
-              id="seconds"
-              value="0"
-              >00</label
-            >
-          </div>
-          <div class="cashout" onclick="cashOut();">
-            Cashout
-          </div>
+          <div class="cashout" onclick="cashOut();">Cashout</div>
         </div>
       </center>
     </wrap>
