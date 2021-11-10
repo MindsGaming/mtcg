@@ -99,6 +99,12 @@
         color: gold;
         border-style: solid;
       }
+      .cashout {
+        margin: 3%;
+        color: gold;
+        border-style: solid;
+        
+      }
     </style>
     <script src="/games/pinn/pinn.js" defer></script>
   </head>
@@ -123,16 +129,26 @@
             Rewards:<label id="rewardstotal">0</label>.<label id="total"
               >00</label
             >
-            <meter value="0" id="rewards" max="100" low="10" high="80"></meter>
+            <meter
+              value="0"
+              id="rewards"
+              max="100"
+              low="10"
+              high="80"
+              style="display:none;"
+            ></meter>
           </div>
 
           <div class="rewards">
-            IN
+            Pie Timer:
             <label id="minutes" value="0">00</label>.<label
               id="seconds"
               value="0"
               >00</label
             >
+          </div>
+          <div class="cashout" onclick="cashOut();">
+            Cashout
           </div>
         </div>
       </center>
