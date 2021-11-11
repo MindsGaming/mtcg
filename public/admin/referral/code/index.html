@@ -1,0 +1,83 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A cool thing made with Glitch" />
+
+    <title>Welcome to Glitch!</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/code/code.js" defer></script>
+
+    <style>
+      .hide {
+        display: none;
+      }
+
+      p {
+        max-width: 100%;
+        color: black;
+        font-size: 9.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <p>
+        Enter Your Wallet ID For Rewards <br />A Valid Refferral Code <br />
+        Both You And The Reffer Will Get <b>50</b> Reward Tokens
+      </p>
+      <form>
+        <input
+          name="username"
+          aria-label="a new dream"
+          type="hidden"
+          maxlength="100"
+          placeholder="Token Name"
+        />
+
+        <input
+          name="code"
+          aria-label="a new dream"
+          type="text"
+          maxlength="100"
+          placeholder="code"
+          required
+        />
+        <input
+          name="dream"
+          aria-label="a new dream"
+          type="text"
+          maxlength="100"
+          placeholder="Wallet ID"
+          required
+        />
+        <div onclick="check();">
+          <button type="submit" id="submit-dream">Submit</button>
+        </div>
+      </form>
+      <div class="hide">
+        <section class="dreams">
+          <ul id="dreams"></ul>
+          <!--
+      <button id="clear-dreams">
+        Clear Dreams
+      </button> -->
+        </section>
+      </div>
+    </center>
+  </body>
+</html>
