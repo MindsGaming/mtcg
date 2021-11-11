@@ -24,6 +24,7 @@
 
     <style>
       .article {
+        position: relative;
         width: 80%;
         border-style: groove;
         border-color: silver;
@@ -31,6 +32,7 @@
         color: blue;
         margin: 2%;
         padding: 3px;
+        z-index: 3;
       }
       h1 {
         font-size: 35px;
@@ -51,9 +53,13 @@
       }
       .back {
         position: fixed;
-        top: right
-        text-decoration: none;
+        top: 0;
+        right: 0;
         margin: 20px;
+        text-decoration: none;
+        border-style: solid;
+        border-color: silver;
+        opacity:.5;
       }
     </style>
   </head>
@@ -168,7 +174,7 @@
           Docs
         </h2>
         <p>
-          <a href="https://mindsgaming.glitch.me/docs"> -Docs</a>
+          <a href="http://mindsgaming.glitch.me/mtcg/docs"> -Docs</a>
         </p>
       </div>
     </center>
