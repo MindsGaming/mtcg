@@ -13,38 +13,42 @@ function foodImage() {
   var addReward = document.getElementById("makefood");
 
   if (addReward.innerHTML == "100") {
+    platedImage();
     document.getElementById("makefood").innerHTML = "00";
     document.getElementById("makeFood").value = "1";
 
     var plateButton = document.getElementById("plateButton");
     plateButton.classList.toggle("buttonReady");
     var readyButton = document.getElementById("foodButton");
-    readyButton.classList.toggle("button");
-    platedImage();
+    readyButton.classList.toggle("hide");
   }
 }
 
 function platedImage() {
-  
-  
-  var tack = document.createElement("div");
-  tack.className = "platedfood";
-  tack.id = "Plated Food";
-  var TACK = document.getElementById("platedImage").appendChild(tack);
+  var check = document.getElementById("makefood");
 
-  var tackCount = document.getElementById("platedFood").value;
-  var tackcount = tackCount + 1;
-  document.getElementById("platedFood").value = tackcount;
+  if (check.innerHTML == "100") {
+    var tack = document.createElement("div");
+    tack.className = "platedfood";
+    tack.id = "Plated Food";
+    var TACK = document.getElementById("platedImage").appendChild(tack);
 
-  document.getElementById("platedfood").innerHTML = tackCount;
+    var tackCount = document.getElementById("platedFood").value;
+    var tackcount = tackCount + 1;
+    document.getElementById("platedFood").value = tackcount;
 
-  var addReward = document.getElementById("platedfood");
+    document.getElementById("platedfood").innerHTML = tackCount;
 
-  if (addReward.innerHTML == "100") {
-    document.getElementById("platedfood").innerHTML = "00";
-    document.getElementById("platedFood").value = "1";
+    var addReward = document.getElementById("platedfood");
 
-    var plateButton = document.getElementById("plateButton");
-    plateButton.classList.toggle("buttonReady");
+    if (addReward.innerHTML == "100") {
+      document.getElementById("platedfood").innerHTML = "00";
+      document.getElementById("platedFood").value = "1";
+
+      var plateButton = document.getElementById("foodButton");
+      plateButton.classList.toggle("buttonReady");
+    }
+  } else {
+    alert("Make Some More Food");
   }
 }
