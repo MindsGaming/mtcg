@@ -1,12 +1,3 @@
-const madefood = document.getElementById("madefood");
-const madeFood = document.getElementById("madeFood");
-const platedfood = document.getElementById("platedfood");
-const platedFood = document.getElementById("madefood");
-const servedfood = document.getElementById("servedfood");
-const servedFood = document.getElementById("servedFood");
-const rewards = document.getElementById("rewards");
-const Rewards = document.getElementById("Rewards");
-
 function foodImage() {
   var tack = document.createElement("div");
   tack.className = "makefood";
@@ -27,10 +18,10 @@ function foodImage() {
 
     var plateButton = document.getElementById("plateButton");
     plateButton.classList.toggle("buttonReady");
-    plateImage();
   }
 }
-function plateImage() {
+
+function platedImage() {
   var tack = document.createElement("div");
   tack.className = "platedfood";
   tack.id = "Plated Food";
@@ -45,10 +36,10 @@ function plateImage() {
   var addReward = document.getElementById("platedfood");
 
   if (addReward.innerHTML == "100") {
-    document.getElementById("platedFood").innerHTML = "+1";
+    document.getElementById("platedfood").innerHTML = "00";
     document.getElementById("platedFood").value = "1";
 
-    var serveButton = document.getElementById("serveButton");
-    serveButton.classList.toggle("buttonReady");
+    var plateButton = document.getElementById("plateButton");
+    plateButton.classList.toggle("buttonReady");
   }
 }
