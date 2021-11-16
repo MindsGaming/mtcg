@@ -13,8 +13,7 @@ function foodImage() {
   var addReward = document.getElementById("makefood");
 
   if (addReward.innerHTML == "100") {
-    platedImage();
-    document.getElementById("makefood").innerHTML = "00";
+    document.getElementById("makefood").innerHTML = "100";
     document.getElementById("makeFood").value = "1";
 
     var plateButton = document.getElementById("plateButton");
@@ -28,6 +27,7 @@ function platedImage() {
   var check = document.getElementById("makefood");
 
   if (check.innerHTML == "100") {
+    check.innerHTML = "0";
     var tack = document.createElement("div");
     tack.className = "platedfood";
     tack.id = "Plated Food";
@@ -41,12 +41,9 @@ function platedImage() {
 
     var addReward = document.getElementById("platedfood");
 
-    if (addReward.innerHTML == "100") {
-      document.getElementById("platedfood").innerHTML = "00";
-      document.getElementById("platedFood").value = "1";
-
-      var plateButton = document.getElementById("foodButton");
-      plateButton.classList.toggle("buttonReady");
+    if (addReward.innerHTML == "1") {
+      var foodButton = document.getElementById("foodButton");
+      foodButton.classList.toggle("buttonReady");
     }
   } else {
     alert("Make Some More Food");
