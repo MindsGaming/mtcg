@@ -32,25 +32,23 @@ function foodImage() {
 }
 function plateImage() {
   var tack = document.createElement("div");
-  tack.className = "platefood";
+  tack.className = "platedfood";
   tack.id = "Plated Food";
-  var TACK = document.getElementById("plateImage").appendChild(tack);
+  var TACK = document.getElementById("platedImage").appendChild(tack);
 
-  var tackCount = document.getElementById("plateFood").value;
+  var tackCount = document.getElementById("platedFood").value;
   var tackcount = tackCount + 1;
-  document.getElementById("plateFood").value = tackcount;
+  document.getElementById("platedFood").value = tackcount;
 
-  document.getElementById("platefood").innerHTML = tackCount;
+  document.getElementById("platedfood").innerHTML = tackCount;
 
-  var addReward = document.getElementById("platefood");
+  var addReward = document.getElementById("platedfood");
 
-  if (addReward.innerHTML == "1") {
-    document.getElementById("makeImage").innerHTML = "00";
-    document.getElementById("makeFood").value = "1";
+  if (addReward.innerHTML == "100") {
+    document.getElementById("platedFood").innerHTML = "+1";
+    document.getElementById("platedFood").value = "1";
 
-    var plateButton = document.getElementById("plateButton");
-    plateButton.classList.toggle("buttonReady");
-    plateImage();
+    var serveButton = document.getElementById("serveButton");
+    serveButton.classList.toggle("buttonReady");
   }
 }
-
