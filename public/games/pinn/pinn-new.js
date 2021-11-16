@@ -17,21 +17,15 @@ function foodImage() {
   var tackcount = tackCount + 1;
   document.getElementById("makeFood").value = tackcount;
 
-  (document.getElementById("makefood").innerHTML = tackCount);
+  document.getElementById("makefood").innerHTML = tackCount;
 
   var addReward = document.getElementById("makefood");
 
   if (addReward.innerHTML == "100") {
-    var rewards = document.getElementById("platedFood").value;
-    var rewardscount = rewards + 1;
-    document.getElementById("PlatedFood").value = rewardscount;
-    var rewardstotal = document.getElementById("platedfood");
-    rewardstotal.innerHTML = rewardscount;
     document.getElementById("makefood").innerHTML = "00";
     document.getElementById("makeFood").value = "1";
 
     var plateButton = document.getElementById("plateButton");
     plateButton.classList.toggle("buttonReady");
   }
-
 }

@@ -63,6 +63,7 @@
         position: relative;
         display: block;
         border-style: groove;
+        background-color: silver;
         text-align: center;
         font-size: 20px;
         color: green;
@@ -81,16 +82,23 @@
         margin-left: 15%;
         margin-bottom: 15px;
       }
+      
+      .items {
+        width: 85%;
+        height: 60%;
+      }
+      
       .makefood {
-        position: relative;
+        position: fixed;
         display: block;
         width: 200px;
         height: 150px;
+        margin: 5%;
         background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fburgers.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-color: transparent;
-        opacity: 0.8;
+        opacity: 0.01;
       }
 
       .hide {
@@ -116,13 +124,11 @@
             Cashout
           </div>
         </dish>
-
         <div class="items">
           <div id="foodImage"></div>
           <div id="plateImage"></div>
           <div id="servedImage"></div>
         </div>
-
         <footer>
           <div class="button2">
             Food Made:
