@@ -17,7 +17,7 @@ function foodImage() {
   var tackcount = tackCount + 1;
   document.getElementById("makeFood").value = tackcount;
 
-  document.getElementById("makefood").innerHTML = tackCount;
+  (document.getElementById("makefood").innerHTML = tackCount);
 
   var addReward = document.getElementById("makefood");
 
@@ -33,4 +33,5 @@ function foodImage() {
     var plateButton = document.getElementById("plateButton");
     plateButton.classList.toggle("buttonReady");
   }
+
 }

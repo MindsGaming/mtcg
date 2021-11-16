@@ -84,10 +84,17 @@
       .makefood {
         position: relative;
         display: block;
-        width: 120px;
+        width: 200px;
         height: 150px;
-        background-image: url("");
-        background-color: blue;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fburgers.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        opacity: 0.8;
+      }
+
+      .hide {
+        display: none;
       }
     </style>
     <script src="/games/pinn/pinn-new.js" defer></script>
@@ -118,20 +125,33 @@
 
         <footer>
           <div class="button2">
-            Served Dishes:
-            <div id="madefood">
+            Food Made:
+            <div id="makefood">
               0
             </div>
-            <meter value="0" id="madeFood" max="100" low="10" high="80"></meter>
+            <meter value="1" id="makeFood" max="100" low="10" high="80"></meter>
           </div>
           <div class="button2">
-            Plated Food:
+            Food Plated
             <div id="platedfood">
               0
             </div>
             <meter
               value="0"
               id="platedFood"
+              max="100"
+              low="10"
+              high="80"
+            ></meter>
+          </div>
+          <div class="button2">
+            Food Served
+            <div id="servedfood">
+              0
+            </div>
+            <meter
+              value="0"
+              id="servedFood"
               max="100"
               low="10"
               high="80"
