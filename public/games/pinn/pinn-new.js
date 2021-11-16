@@ -39,12 +39,8 @@ function platedImage() {
 
     document.getElementById("platedfood").innerHTML = tackCount;
 
-    var addReward = document.getElementById("platedfood");
-
-    if (addReward.innerHTML == "1") {
-      var foodButton = document.getElementById("foodButton");
-      foodButton.classList.toggle("buttonReady");
-    }
+    var foodButton = document.getElementById("foodButton");
+    foodButton.className = "buttonReady";
   } else {
     alert("Make Some More Food");
   }
