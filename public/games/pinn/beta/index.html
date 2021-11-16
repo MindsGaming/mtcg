@@ -58,6 +58,19 @@
         width: 120px;
         margin: 5%;
       }
+
+      .buttonReady {
+        position: relative;
+        display: block;
+        border-style: groove;
+        text-align: center;
+        font-size: 20px;
+        color: green;
+        width: 120px;
+        cursor: pointer;
+        margin: 5%;
+      }
+
       .button2 {
         float: left;
         display: block;
@@ -68,7 +81,6 @@
         margin-left: 15%;
         margin-bottom: 15px;
       }
-      
     </style>
     <script src="/games/pinn/pinn-new.js" defer></script>
   </head>
@@ -76,7 +88,7 @@
     <wrap>
       <center>
         <dish>
-          <div class="button" id="makeFood">
+          <div class="buttonReady" id="makeFood">
             Make Food
           </div>
           <div class="button" id="plateFood">
@@ -85,16 +97,52 @@
           <div class="button" id="serveFood">
             Serve Food
           </div>
+          <div class="button" id="cashOut">
+            Cashout
+          </div>
         </dish>
         <footer>
-          <div class="button2" id="makeFood">
+          <div class="button2">
             Served Dishes:
+            <div id="makefood">
+              0
+            </div>
+            <meter
+              value="0"
+              id="makeFood"
+              max="100"
+              low="10"
+              high="80"
+              style="display:none;"
+            ></meter>
           </div>
-          <div class="button2" id="plateFood">
+          <div class="button2">
             Plated Food:
+            <div id="platedfood">
+              0
+            </div>
+            <meter
+              value="0"
+              id="platedFood"
+              max="100"
+              low="10"
+              high="80"
+              style="display:none;"
+            ></meter>
           </div>
-          <div class="button2" id="serveFood">
+          <div class="button2">
             Rewards:
+            <div id="rewards">
+              0
+            </div>
+            <meter
+              value="0"
+              id="Rewards"
+              max="100"
+              low="10"
+              high="80"
+              style="display:none;"
+            ></meter>
           </div>
         </footer>
       </center>
