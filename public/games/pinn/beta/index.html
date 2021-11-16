@@ -81,6 +81,14 @@
         margin-left: 15%;
         margin-bottom: 15px;
       }
+      .makefood {
+        position: relative;
+        display: block;
+        width: 120px;
+        height: 150px;
+        background-image: url("");
+        background-color: blue;
+      }
     </style>
     <script src="/games/pinn/pinn-new.js" defer></script>
   </head>
@@ -91,30 +99,30 @@
           <div class="buttonReady" onclick="foodImage();">
             Make Food
           </div>
-          <div class="button">
+          <div class="button" id="plateButton">
             Plate Food
           </div>
-          <div class="button">
+          <div class="button" id="serveButton">
             Serve Food
           </div>
           <div class="buttonReady" onclikc="cashOut();">
             Cashout
           </div>
         </dish>
+
+        <div class="items">
+          <div id="foodImage"></div>
+          <div id="plateImage"></div>
+          <div id="servedImage"></div>
+        </div>
+
         <footer>
           <div class="button2">
             Served Dishes:
             <div id="madefood">
               0
             </div>
-            <meter
-              value="0"
-              id="madeFood"
-              max="100"
-              low="10"
-              high="80"
-              style="display:none;"
-            ></meter>
+            <meter value="0" id="madeFood" max="100" low="10" high="80"></meter>
           </div>
           <div class="button2">
             Plated Food:
@@ -127,7 +135,6 @@
               max="100"
               low="10"
               high="80"
-              style="display:none;"
             ></meter>
           </div>
           <div class="button2">
@@ -135,14 +142,7 @@
             <div id="rewards">
               0
             </div>
-            <meter
-              value="0"
-              id="Rewards"
-              max="100"
-              low="10"
-              high="80"
-              style="display:none;"
-            ></meter>
+            <meter value="0" id="Rewards" max="100" low="10" high="80"></meter>
           </div>
         </footer>
       </center>
