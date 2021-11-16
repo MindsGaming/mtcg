@@ -20,10 +20,13 @@ function foodImage() {
     plateButton.classList.toggle("buttonReady");
     var readyButton = document.getElementById("foodButton");
     readyButton.classList.toggle("button");
+    platedImage();
   }
 }
 
 function platedImage() {
+  
+  
   var tack = document.createElement("div");
   tack.className = "platedfood";
   tack.id = "Plated Food";
