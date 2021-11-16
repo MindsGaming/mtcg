@@ -18,6 +18,8 @@ function foodImage() {
 
     var plateButton = document.getElementById("plateButton");
     plateButton.classList.toggle("buttonReady");
+    var readyButton = document.getElementById("foodButton");
+    readyButton.classList.toggle("button");
   }
 }
 
