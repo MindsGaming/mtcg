@@ -1,14 +1,34 @@
-const makefood = document.getElementByID("makefood");
 const makeFood = document.getElementByID("makeFood");
-const makefood = document.getElementByID("makefood");
+const plateFood = document.getElementByID("plateFood");
+const serveFood = document.getElementByID("serveFood");
 
 
+function tackCount()
 
 
+function foodImage() {
+  var tack = document.createElement("div");
+  tack.className = "makefood";
+  tack.id = "Food";
+  var TACK = document.getElementById("foodimage").appendChild(tack);
+}
+
+function plateImage() {
+  var tack = document.createElement("div");
+  tack.className = "platefood";
+  tack.id = "PlatedFood";
+  var TACK = document.getElementById("platedimage").appendChild(tack);
+}
+
+function servedImage() {
+  var tack = document.createElement("div");
+  tack.className = "servedfood";
+  tack.id = "ServedFood";
+  var TACK = document.getElementById("servedimage").appendChild(tack);
+}
 
 function cashOut() {
   var rewards = document.getElementById("rewards");
-  var total = document.getElementById("total");
 
   if (rewards.innerHTML == "0") {
     alert("You Need A Full Token TO Cash Out!");
@@ -31,8 +51,7 @@ function cashOut() {
           dreamInputuser.value +
           " Reward: " +
           dreamInputplayer.value +
-          rewards.value +
-          total.innerHTML
+          rewards.value
       );
       window.open("./");
     } else txt = "You pressed Cancel!";
