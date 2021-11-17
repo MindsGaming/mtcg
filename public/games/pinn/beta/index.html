@@ -88,7 +88,7 @@
         color: green;
         margin-left: 15%;
         margin-bottom: 15px;
-        opacity: .8;
+        opacity: 0.8;
       }
 
       .items {
@@ -154,7 +154,7 @@
           <div class="button" id="serveButton" onclick="serveImage();">
             Serve Food
           </div>
-          <div class="button" id="cashOut" onclikc="cashOut();">
+          <div class="button" id="cashOut" onclick="cashOut();">
             Cashout
           </div>
         </dish>
@@ -172,7 +172,14 @@
               0%
             </div>
 
-            <meter value="1" id="makeFood" max="100" low="10" high="80" class="hide"></meter>
+            <meter
+              value="1"
+              id="makeFood"
+              max="100"
+              low="10"
+              high="80"
+              class="hide"
+            ></meter>
           </div>
           <div class="button2">
             Food Plated
