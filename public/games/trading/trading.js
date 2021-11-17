@@ -18,3 +18,11 @@ function openMenu() {
   var openmenu = document.getElementById("imagineMenu");
   openmenu.classList.toggle("showMenu");
 }
+
+function walletMenu() {
+  var hide = document.getElementById("home");
+  hide.classList.toggle("hide");
+   var wallet = document.getElementById("walletTab");
+  wallet.classList.toggle("hide");
+  openMenu();
+}
