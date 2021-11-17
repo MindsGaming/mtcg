@@ -50,19 +50,13 @@ function platedImage() {
 }
 
 function serveImage() {
-  var check = document.getElementById("platedfood");
-  var check2 = document.getElementById("makefood");
+  var check = document.getElementById("food");
 
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
     var negitiveCount = document.getElementById("platedFood").value;
     var negitivecount = negitiveCount - 1;
     document.getElementById("platedFood").value = negitivecount;
     check.innerHTML = negitivecount;
-
-    if ((check.innerHTML = "0")) {
-      var hide = document.getElementById("serveButton");
-      hide.className = "hide";
-    }
 
     var tackCount = document.getElementById("servedFood").value;
     var tackcount = tackCount + 1;
@@ -94,25 +88,18 @@ function cashOut() {
   document.getElementById("Rewards").value = negitivecount;
   document.getElementById("servedFood").value = -negitivecount;
 
-  const data = {
-    dream:
+  var txt;
+  var r = confirm("Quit Already?");
+  if (r == true) {
+    appendNewDream(
       dreamInput.value +
-      "-" +
-      dreamInputuser.value +
-      dreamInputplayer.value +
-      " Reward: "
-  };
-
-  appendNewDream(
-    dreamInput.value +
-      "-" +
-      dreamInputuser.value +
-      " Reward: " +
-      dreamInputplayer.value +
-      rewards.innerHTML +
-      ".00"
-  );
-
-  if ((Rewards.value = "-1")) {
-  }
+        "-" +
+        dreamInputuser.value +
+        " Reward: " +
+        dreamInputplayer.value +
+        rewards.value +
+        ".00"
+    );
+    window.open("./");
+  } else txt = "You pressed Cancel!";
 }
