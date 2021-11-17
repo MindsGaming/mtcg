@@ -179,6 +179,14 @@
         margin: 1rem;
         font-size: 6px;
       }
+      .line {
+        position: relative;
+        display: block;
+        width: 99rem;
+        height: 0.1rem;
+        background-color: black;
+        margin-top: 2rem;
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -226,7 +234,7 @@
         <!--- trading game -->
 
         <div class="imagineMenu">
-          <div class="imageLogo"></div>
+          <div class="imageLogo" onclick="logoTick();"></div>
           <div id="menuTab" class="openmenu" onclick="openMenu();">
             <hr />
             <hr />
@@ -272,9 +280,15 @@
             </p>
           </div>
           <br />
-          <br>
-          <br>
-          <hr>
+          <br />
+          <div class="line"></div>
+          <br />
+          <div class="walletTokens" id="walletTokens">
+            <li>Imagination Tokens: <di id="imaginationToken">0</di></li>
+            <li>Imagination GAMER: <di id="imaginationToken">0</di></li>
+            <li>Imagination DooBetter: <di id="imaginationToken">0</di></li>
+            <li>Imagination ECLIPSE: <di id="imaginationToken">0</di></li>
+          </div>
         </div>
       </center>
     </wrap>
