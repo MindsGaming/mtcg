@@ -89,35 +89,11 @@ function rewardCheck() {
 
 function cashOut() {
   var rewards = document.getElementById("rewards");
+  
+  if (rewards.innerHTML == "1", "2", "3",){}
 
-  if ((rewards.innerHTML == "1", "2", "3", "4", "5")) {
-    var negitiveCount = rewards.innerHTML;
-    var negitivecount = negitiveCount - 1;
-    document.getElementById("rewards").innerHTML = negitivecount;
-
-    const data = {
-      dream:
-        dreamInput.value +
-        "-" +
-        dreamInputuser.value +
-        dreamInputplayer.value +
-        " Reward: "
-    };
-
-    appendNewDream(
-      dreamInput.value +
-        "-" +
-        dreamInputuser.value +
-        " Reward: " +
-        dreamInputplayer.value +
-        rewards.innerHTML +
-        ".00"
-    );
-  }
-  if (rewards.innerHTML == "0") {
-    var cashOut = document.getElementById("cashOut");
-    cashOut.className = "button";
-  } else {
-    alert("Make Some More Food");
-  }
+  var negitiveCount = rewards.innerHTML;
+  var negitivecount = negitiveCount - 1;
+  document.getElementById("rewards").innerHTML = negitivecount;
+  
 }
