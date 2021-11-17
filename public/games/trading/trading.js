@@ -15,8 +15,6 @@ function justPlay() {
 }
 
 function openMenu() {
-  var menutab = document.getElementById("menuTab");
   var openmenu = document.getElementById("imagineMenu");
-  menutab.className = "hide";
-  openmenu.className = "showMenu";
+  openmenu.classList.toggle("showMenu");
 }
