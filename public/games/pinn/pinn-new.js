@@ -17,7 +17,7 @@ function foodImage() {
     document.getElementById("makeFood").value = "1";
 
     var plateButton = document.getElementById("plateButton");
-    plateButton.classList.toggle("buttonReady");
+    plateButton.className = "buttonReady";
     var readyButton = document.getElementById("foodButton");
     readyButton.classList.toggle("hide");
   }
@@ -25,8 +25,6 @@ function foodImage() {
 
 function platedImage() {
   var check = document.getElementById("makefood");
-
- 
 
   if (check.innerHTML == "100%") {
     check.innerHTML = "0%";
@@ -52,14 +50,17 @@ function platedImage() {
 
 function serveImage() {
   var check = document.getElementById("platedfood");
-  var rewards = document.getElementById("rewards");
-  var Rewards = document.getElementById("Rewards");
 
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
     var negitiveCount = document.getElementById("platedFood").value;
     var negitivecount = negitiveCount - 1;
     document.getElementById("platedFood").value = negitivecount;
     check.innerHTML = negitivecount;
+
+    if ((check.innerHTML = "0")) {
+      var hide = document.getElementById("serveButton");
+      hide.className = "hide";
+    }
 
     var tackCount = document.getElementById("servedFood").value;
     var tackcount = tackCount + 1;
@@ -69,11 +70,8 @@ function serveImage() {
 
     var cashOut = document.getElementById("cashOut");
     cashOut.className = "buttonReady";
-
-    
   } else {
     alert("Make Some More Food");
   }
-  Rewards.value = tackCount;
-    rewards.innerHTML = Rewards.value;
+  var rewards = (document.getElementById("rewards").innerHTML = tackCount);
 }
