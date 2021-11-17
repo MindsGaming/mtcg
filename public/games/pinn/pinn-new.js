@@ -56,11 +56,15 @@ function servedImage() {
     var tackcount = tackCount + 1;
     document.getElementById("servedFood").value = tackcount;
     document.getElementById("servedfood").innerHTML = tackCount;
+    document.getElementById("Rewards").value = tackcount;
+    document.getElementById("rewards").innerHTML = tackCount;
 
     var tackCount2 = document.getElementById("platedFood").value;
     var tackcount2 = tackCount2 - 1;
     document.getElementById("platedFood").value = tackcount2;
-    document.getElementById("platedfood").innerHTML = tackCount2;
+    document.getElementById("platedfood").innerHTML = document.getElementById(
+      "platedFood"
+    ).value;
 
     if (check.innerHTML == "0") {
       var serveButton = document.getElementById("serveButton");
@@ -69,6 +73,7 @@ function servedImage() {
   } else {
     alert("Make Some More Food");
   }
+  rewardCheck();
 }
 function rewardCheck() {
   var check = document.getElementById("servedfood");
@@ -99,6 +104,6 @@ function cashOut() {
         rewards.value +
         ".00"
     );
-    window.open("./");
+    window.open("./", "_self");
   } else txt = "You pressed Cancel!";
 }
