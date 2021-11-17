@@ -64,10 +64,10 @@ function servedImage() {
     document.getElementById("platedFood").value = tackcount2;
     document.getElementById("platedfood").innerHTML = tackcount2;
 
-    rewardCheck();
     if (check.innerHTML == "0") {
       var serveButton = document.getElementById("serveButton");
       serveButton.className = "hide";
+      rewardCheck();
     }
   } else {
     alert("Make Some More Food");
