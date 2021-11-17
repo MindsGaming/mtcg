@@ -64,6 +64,7 @@ function servedImage() {
     document.getElementById("platedFood").value = tackcount2;
     document.getElementById("platedfood").innerHTML = tackcount2;
 
+    rewardCheck();
     if (check.innerHTML == "0") {
       var serveButton = document.getElementById("serveButton");
       serveButton.className = "hide";
@@ -71,18 +72,16 @@ function servedImage() {
   } else {
     alert("Make Some More Food");
   }
-  rewardCheck();
 }
 function rewardCheck() {
   var check = document.getElementById("servedfood");
+  var cashOut = document.getElementById("cashOut");
+  cashOut.className = "buttonReady";
 
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
     var rewards = document.getElementById("rewards");
     rewards.innerHTML = check.innerHTML;
     document.getElementById("Rewards").value = check.value;
-
-    var cashOut = document.getElementById("cashOut");
-    cashOut.className == "buttonReady";
   }
 }
 
@@ -103,7 +102,7 @@ function cashOut() {
     Rewards.value = "0";
     servedFood.value = "1";
     platedFood.value = "1";
-    makeFood.value = "30";
+    makeFood.value = "30%";
     servedfood.innerHTML = "1";
     platedfood.innerHTML = "1";
     makefood.innerHTML = "30";
