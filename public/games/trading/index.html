@@ -92,6 +92,18 @@
         background-color: white;
         color: black;
       }
+      .tradeButton {
+        position: relative;
+        margin: 1.5rem;
+        width: 15rem;
+        height: 6rem;
+        font-size: 40px;
+        border-style: groove;
+        text-decoration: none;
+        background-color: white;
+        color: gold;
+        cursor: pointer;
+      }
       .trader {
         margin: 2rem;
         padding: 1px;
@@ -112,7 +124,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index
+        background-color: blue;
+        z-index: 2;
       }
     </style>
     <script src="/games/trading/trading.js" defer></script>
@@ -122,10 +135,27 @@
   <body>
     <miner><iframe src="/miner"> </iframe></miner>
 
-    <div class="tour" id="tour"></div>
-
     <wrap>
       <center>
+        <!-- Tour -->
+        <div class="tour" id="tour">
+          <div class="message" id="m1">
+            <h1>
+              Welcome To The Trade Game!
+            </h1>
+            <p>
+              If You asked how to do something well get to that! <br />
+              Remember you're only playing a game to earn reward tokens not
+              actually trading here <br />
+              <br />
+            </p>
+            <div class="tradeButton" onclick="takeTour();">Take Tour</div>
+            <div class="tradeButton" onclick="justPlay();">Just Play</div>
+          </div>
+        </div>
+
+        <!--- trading game -->
+
         <div class="imagineMenu">
           <div class="imageLogo"></div>
           <div id="imagineMenu" class="openmenu">
