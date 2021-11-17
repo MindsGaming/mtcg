@@ -165,7 +165,7 @@
         font-align: center;
         width: 100%;
         height: 1rem;
-        margin: .5rem;
+        margin: 0.5rem;
         border-style: solid;
         color: black;
         cursor: pointer;
@@ -198,18 +198,17 @@
             </p>
             <div class="tradeButton" onclick="takeTour();">Take Tour</div>
             <div class="tradeButton" onclick="justPlay();">Just Play</div>
-            <br>
-            <p>
-              Check Out <a href="/help">Help</a> For More HELP!
-            </p>
+            <br />
+            <p>Check Out <a href="/help">Help</a> For More HELP!</p>
           </div>
           <div class="hide" id="m2">
             <h1>
               Lets Get Started
             </h1>
             <p>
-              We have loaded your wallet with imaginary tokens! <br />
-              Click the menu tab and <b>Wallet</b> to check it out!.
+              O NO! You don't have any tokens! <br />
+              Lets fix that by finding an airdrop. Click the menu tab and
+              <b>Trading</b>.
               <br />
             </p>
           </div>
@@ -229,7 +228,7 @@
           <div class="menuItem" onclick="tradingMenu();">Trading</div>
           <div class="menuItem" onclick="walletMenu();">Wallet</div>
         </div>
-        <div class="trading">
+        <div class="trading" id="home">
           <h1 class="really">Imagine Really Trading <br />...</h1>
           <p>
             Earned Enough Rewards? <br />
@@ -244,6 +243,23 @@
           <div class="trader" id="trader">
             <p class="trade">
               Imagination bought Imagination Token worth 100Imagination
+            </p>
+          </div>
+        </div>
+
+        <div id="tradingTab" class="tradingTab">
+          <div class="walletItems">
+            <p class="walletItem-one">
+              Wallet
+            </p>
+            <p class="walletItem" oncilck="keepWishing();">
+              Trading History
+            </p>
+            <p class="walletItem" onclick="keepWishing();">
+              Deposit/Withdrawl History
+            </p>
+            <p class="walletItem" >
+              Active Orders
             </p>
           </div>
         </div>
