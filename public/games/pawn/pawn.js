@@ -64,55 +64,10 @@ function servedImage() {
     var OFFER = offer[Math.floor(Math.random() * offer.length)];
     var txt;
     var r = confirm(OFFER);
+
     if (OFFER == "I'll Buy For 1?") {
-      var tackCount = document.getElementById("servedFood").value;
-      var tackcount = tackCount - 1;
-      document.getElementById("servedFood").value = tackcount;
-      document.getElementById("servedfood").innerHTML = tackCount;
-      document.getElementById("Rewards").value = tackcount;
-      document.getElementById("rewards").innerHTML = tackCount;
-
-      var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 - 1;
-      document.getElementById("platedFood").value = tackcount2;
-      document.getElementById("platedfood").innerHTML = tackcount2;
-
-      if (check.innerHTML == "0") {
-        var serveButton = document.getElementById("serveButton");
-        serveButton.className = "hide";
-        rewardCheck();
-      }
-    }
-
-    if (OFFER == "I'll Buy For 2?") {
-      var tackCount = document.getElementById("servedFood").value;
-      var tackChecker = document.getElementById("servedFood");
-
-      if (((tackChecker.value = "2"), "3", "4", "5")) {
-        var tackcount = tackCount - 2;
-        document.getElementById("servedFood").value = tackcount;
-        document.getElementById("servedfood").innerHTML = tackCount;
-        document.getElementById("Rewards").value = tackcount;
-        document.getElementById("rewards").innerHTML = tackCount;
-
-        var tackCount2 = document.getElementById("platedFood").value;
-        var tackcount2 = tackCount2 - 1;
-        document.getElementById("platedFood").value = tackcount2;
-        document.getElementById("platedfood").innerHTML = tackcount2;
-      }
-      else {alert("Not enough Goods")}
-      if (check.innerHTML == "0") {
-        var serveButton = document.getElementById("serveButton");
-        serveButton.className = "hide";
-        rewardCheck();
-      }
-    } else {
-    }
-    if (OFFER == "Sell For 1?") {
-      var tackCount = document.getElementById("servedFood").value;
+      var tackCount = document.getElementById("Rewards").value;
       var tackcount = tackCount + 1;
-      document.getElementById("servedFood").value = tackcount;
-      document.getElementById("servedfood").innerHTML = tackCount;
       document.getElementById("Rewards").value = tackcount;
       document.getElementById("rewards").innerHTML = tackCount;
 
@@ -121,17 +76,21 @@ function servedImage() {
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
+      var tackCount3 = document.getElementById("servedFood").value;
+      var tackcount3 = tackCount3 - 1;
+      document.getElementById("servedFood").value = tackcount3;
+      document.getElementById("servedfood").innerHTML = tackCount3;
+
       if (check.innerHTML == "0") {
         var serveButton = document.getElementById("serveButton");
         serveButton.className = "hide";
         rewardCheck();
       }
     }
-    if (OFFER == "Sell For 2?") {
-      var tackCount = document.getElementById("servedFood").value;
-      var tackcount = tackCount + 2;
-      document.getElementById("servedFood").value = tackcount;
-      document.getElementById("servedfood").innerHTML = tackCount;
+
+    if (OFFER == "I'll Buy For 1?") {
+      var tackCount = document.getElementById("Rewards").value;
+      var tackcount = tackCount + 1;
       document.getElementById("Rewards").value = tackcount;
       document.getElementById("rewards").innerHTML = tackCount;
 
@@ -140,14 +99,17 @@ function servedImage() {
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
+      var tackCount3 = document.getElementById("servedFood").value;
+      var tackcount3 = tackCount3 - 1;
+      document.getElementById("servedFood").value = tackcount3;
+      document.getElementById("servedfood").innerHTML = tackCount3;
+
       if (check.innerHTML == "0") {
         var serveButton = document.getElementById("serveButton");
         serveButton.className = "hide";
         rewardCheck();
       }
     }
-  } else {
-    alert("Waiting On Offers");
   }
 }
 function rewardCheck() {
