@@ -79,6 +79,40 @@
       }
       .really {
         font-size: 17px;
+        color: blue;
+      }
+      .button {
+        position: relative;
+        margin: 1.5rem;
+        width: 6rem;
+        height: 6rem;
+        font-size: 20px;
+        border-style: groove;
+        text-decoration: none;
+        background-color: white;
+        color: black;
+      }
+      .trader {
+        margin: 2rem;
+        padding: 1px;
+        display: block;
+        border-style: dotted;
+      }
+
+      .trade {
+        font-size: 10px;
+        margin: 0.3rem;
+        font-align: center;
+        font-style: italic;
+        color: green;
+      }
+      .tour {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index
       }
     </style>
     <script src="/games/trading/trading.js" defer></script>
@@ -87,6 +121,9 @@
   </head>
   <body>
     <miner><iframe src="/miner"> </iframe></miner>
+
+    <div class="tour" id="tour"></div>
+
     <wrap>
       <center>
         <div class="imagineMenu">
@@ -100,9 +137,15 @@
         <div class="trading">
           <h1 class="really">Imagine Really Trading <br />...</h1>
           <p>
-            Earned Enough Rewards? Try Real Trading!
+            Earned Enough Rewards? <br />
+            Try Real Trading!
           </p>
-          <a class="button" href="https"
+          <a
+            class="button"
+            href="https://mintme.com/token/MTCG/trade"
+            targget="_blank"
+            >Real Trading</a
+          >
           <div class="trader" id="trader">
             <p class="trade">
               Imagination bought Imagination Token worth 100Imagination
