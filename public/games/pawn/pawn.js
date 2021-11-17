@@ -70,7 +70,7 @@ function servedImage() {
       document.getElementById("rewards").innerHTML = tackCount;
 
       var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 + 1;
+      var tackcount2 = tackCount2 - 1;
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
@@ -90,7 +90,7 @@ function servedImage() {
       document.getElementById("rewards").innerHTML = tackCount;
 
       var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 + 2;
+      var tackcount2 = tackCount2 - 1;
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
@@ -102,7 +102,7 @@ function servedImage() {
     }
     if (OFFER == "Sell For 1?") {
       var tackCount = document.getElementById("servedFood").value;
-      var tackcount = tackCount - 1;
+      var tackcount = tackCount + 1;
       document.getElementById("servedFood").value = tackcount;
       document.getElementById("servedfood").innerHTML = tackCount;
       document.getElementById("Rewards").value = tackcount;
@@ -128,7 +128,7 @@ function servedImage() {
       document.getElementById("rewards").innerHTML = tackCount;
 
       var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 - 2;
+      var tackcount2 = tackCount2 - 1;
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
