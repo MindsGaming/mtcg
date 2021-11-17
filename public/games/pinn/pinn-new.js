@@ -93,7 +93,7 @@ function cashOut() {
   var Rewards = document.getElementById("Rewards");
 
   var txt;
-  var r = confirm("Quit Already?");
+  var r = confirm("CashOut?");
   if (r == true) {
     appendNewDream(
       dreamInput.value +
@@ -101,9 +101,10 @@ function cashOut() {
         dreamInputuser.value +
         " Reward: " +
         dreamInputplayer.value +
-        rewards.value +
+        Rewards.value +
         ".00"
     );
-    window.open("./", "_self");
+    rewards.innerHTML = "0";
+    Rewards.value = "0";
   } else txt = "You pressed Cancel!";
 }
