@@ -67,11 +67,21 @@ function serveImage() {
     document.getElementById("servedFood").value = tackcount;
 
     document.getElementById("servedfood").innerHTML = tackCount;
-
-    var cashOut = document.getElementById("cashOut");
-    cashOut.className = "buttonReady";
   } else {
     alert("Make Some More Food");
   }
-  var rewards = (document.getElementById("rewards").innerHTML = tackCount);
+  rewardCheck();
+}
+
+function rewardCheck() {
+  var check = document.getElementById("servedfood");
+
+  if ((check.innerHTML == "1", "2", "3", "4", "5")) {
+    var rewards = document.getElementById("rewards");
+
+    rewards.innerHTML = check.innerHTML;
+
+    var cashOut = document.getElementById("cashOut");
+    cashOut.className = "buttonReady";
+  }
 }

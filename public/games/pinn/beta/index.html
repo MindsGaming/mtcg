@@ -82,11 +82,13 @@
         float: left;
         display: block;
         border-style: groove;
+        background-color: silver;
         text-align: center;
         font-size: 20px;
         color: green;
         margin-left: 15%;
         margin-bottom: 15px;
+        opacity: .8;
       }
 
       .items {
@@ -152,7 +154,7 @@
           <div class="button" id="serveButton" onclick="serveImage();">
             Serve Food
           </div>
-          <div class="buttonReady" onclikc="cashOut();">
+          <div class="button" id="cashOut" onclikc="cashOut();">
             Cashout
           </div>
         </dish>
@@ -183,6 +185,7 @@
               max="100"
               low="10"
               high="80"
+              class="hide"
             ></meter>
           </div>
           <div class="button2">
@@ -196,6 +199,7 @@
               max="100"
               low="10"
               high="80"
+              class="hide"
             ></meter>
           </div>
           <div class="button2">
