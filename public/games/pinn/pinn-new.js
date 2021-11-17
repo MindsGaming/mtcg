@@ -37,7 +37,6 @@ function platedImage() {
     var tackCount = document.getElementById("platedFood").value;
     var tackcount = tackCount + 1;
     document.getElementById("platedFood").value = tackcount;
-
     document.getElementById("platedfood").innerHTML = tackCount;
 
     var foodButton = document.getElementById("foodButton");
@@ -58,7 +57,7 @@ function serveImage() {
     document.getElementById("platedFood").value = negitivecount;
     check.innerHTML = negitivecount;
 
-    var tackCount = document.getElementById("platedFood").value;
+    var tackCount = document.getElementById("servedFood").value;
     var tackcount = tackCount + 1;
     document.getElementById("servedfood").innerHTML = tackCount;
     document.getElementById("servedFood").value = tackCount;
