@@ -46,16 +46,40 @@
       miner {
         display: none;
       }
-      
+
       .imagineMenu {
         position: fixed;
-        top:0;
-        left:0;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 43rem;
+        height: 3rem;
         background-color: yellow;
       }
-      
+
+      .imageLogo {
+        float: left;
+        display: block;
+        margin: 2px;
+        padding: 1px;
+        width: 2rem;
+        height: 2rem;
+        border-style: groove;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fthumtack.png");
+        background-size: contain;
+      }
+      .openmenu {
+        float: right;
+        margin: 2px;
+        padding: 1px;
+        width: 2rem;
+        height: 2.5;
+      }
+      .trading {
+        margin: 5rem;
+      }
+      .really {
+        font-size: 17px;
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -66,14 +90,19 @@
     <wrap>
       <center>
         <div class="imagineMenu">
+          <div class="imageLogo"></div>
           <div id="imagineMenu" class="openmenu">
-            Menu
+            <hr />
+            <hr />
+            <hr />
           </div>
         </div>
         <div class="trading">
-          <h1>
-            Imagine Really Trading...
-          </h1>
+          <h1 class="really">Imagine Really Trading <br />...</h1>
+          <p>
+            Earned Enough Rewards? Try Real Trading!
+          </p>
+          <a class="button" href="https"
           <div class="trader" id="trader">
             <p class="trade">
               Imagination bought Imagination Token worth 100Imagination
