@@ -50,7 +50,7 @@ function platedImage() {
 }
 
 function serveImage() {
-  var check = document.getElementById("food");
+  var check = document.getElementById("platedfood");
 
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
     var negitiveCount = document.getElementById("platedFood").value;
@@ -58,9 +58,10 @@ function serveImage() {
     document.getElementById("platedFood").value = negitivecount;
     check.innerHTML = negitivecount;
 
-    var tackCount = document.getElementById("servedFood").value;
+    var tackCount = document.getElementById("platedFood").value;
     var tackcount = tackCount + 1;
     document.getElementById("servedfood").innerHTML = tackCount;
+    document.getElementById("servedFood").value = tackCount;
   } else {
     alert("Make Some More Food");
   }
@@ -73,6 +74,7 @@ function rewardCheck() {
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
     var rewards = document.getElementById("rewards");
     rewards.innerHTML = check.innerHTML;
+    document.getElementById("Rewards").value = check.innerHTML;
 
     var cashOut = document.getElementById("cashOut");
     cashOut.className = "buttonReady";
@@ -80,13 +82,8 @@ function rewardCheck() {
 }
 
 function cashOut() {
-  var rewards = document.getElementById("servedFood");
+  var rewards = document.getElementById("rewards");
   var Rewards = document.getElementById("Rewards");
-  var negitiveCount = rewards.innerHTML;
-  var negitivecount = negitiveCount - 1;
-  document.getElementById("rewards").innerHTML = "0";
-  document.getElementById("Rewards").value = negitivecount;
-  document.getElementById("servedFood").value = -negitivecount;
 
   var txt;
   var r = confirm("Quit Already?");
