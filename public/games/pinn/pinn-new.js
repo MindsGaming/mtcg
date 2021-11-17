@@ -21,6 +21,7 @@ function foodImage() {
     var readyButton = document.getElementById("foodButton");
     readyButton.classList.toggle("hide");
   }
+  TACK.className = "makefood";
 }
 
 function platedImage() {
@@ -50,7 +51,8 @@ function platedImage() {
 
 function serveImage() {
   var check = document.getElementById("platedfood");
-  
+  var check2 = document.getElementById("makefood");
+
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
     var negitiveCount = document.getElementById("platedFood").value;
     var negitivecount = negitiveCount - 1;
@@ -62,6 +64,11 @@ function serveImage() {
       hide.className = "hide";
       var hide2 = document.getElementById("platedImage");
       hide2.className = "hide";
+    }
+
+    if ((check2.innerHTML = "0%")) {
+      var hide = document.getElementById("foodImage");
+      hide.classList.toggle("hide");
     }
 
     var tackCount = document.getElementById("servedFood").value;
