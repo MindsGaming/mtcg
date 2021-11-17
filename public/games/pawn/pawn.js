@@ -22,6 +22,7 @@ function foodImage() {
     readyButton.classList.toggle("hide");
   }
   TACK.className = "makefood";
+  rewardCheck();
 }
 
 function platedImage() {
@@ -63,7 +64,7 @@ function servedImage() {
     var r = confirm(OFFER);
     if (OFFER == "I'll Buy For 1?") {
       var tackCount = document.getElementById("servedFood").value;
-      var tackcount = tackCount + 1;
+      var tackcount = tackCount - 1;
       document.getElementById("servedFood").value = tackcount;
       document.getElementById("servedfood").innerHTML = tackCount;
       document.getElementById("Rewards").value = tackcount;
@@ -83,7 +84,7 @@ function servedImage() {
 
     if (OFFER == "I'll Buy For 2?") {
       var tackCount = document.getElementById("servedFood").value;
-      var tackcount = tackCount + 2;
+      var tackcount = tackCount - 2;
       document.getElementById("servedFood").value = tackcount;
       document.getElementById("servedfood").innerHTML = tackCount;
       document.getElementById("Rewards").value = tackcount;
@@ -102,7 +103,7 @@ function servedImage() {
     }
     if (OFFER == "Sell For 1?") {
       var tackCount = document.getElementById("servedFood").value;
-      var tackcount = tackCount - 1;
+      var tackcount = tackCount + 1;
       document.getElementById("servedFood").value = tackcount;
       document.getElementById("servedfood").innerHTML = tackCount;
       document.getElementById("Rewards").value = tackcount;
@@ -121,7 +122,7 @@ function servedImage() {
     }
     if (OFFER == "Sell For 2?") {
       var tackCount = document.getElementById("servedFood").value;
-      var tackcount = tackCount - 2;
+      var tackcount = tackCount + 2;
       document.getElementById("servedFood").value = tackcount;
       document.getElementById("servedfood").innerHTML = tackCount;
       document.getElementById("Rewards").value = tackcount;
