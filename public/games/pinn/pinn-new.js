@@ -66,8 +66,6 @@ function serveImage() {
 
     var tackCount = document.getElementById("servedFood").value;
     var tackcount = tackCount + 1;
-    document.getElementById("servedFood").value = tackcount;
-
     document.getElementById("servedfood").innerHTML = tackCount;
   } else {
     alert("Make Some More Food");
@@ -90,6 +88,11 @@ function rewardCheck() {
 function cashOut() {
   var rewards = document.getElementById("servedFood");
   var Rewards = document.getElementById("Rewards");
+  var negitiveCount = rewards.innerHTML;
+  var negitivecount = negitiveCount - 1;
+  document.getElementById("rewards").innerHTML = "0";
+  document.getElementById("Rewards").value = negitivecount;
+  document.getElementById("servedFood").value = -negitivecount;
 
   const data = {
     dream:
@@ -109,11 +112,7 @@ function cashOut() {
       rewards.innerHTML +
       ".00"
   );
-  var negitiveCount = rewards.innerHTML;
-  var negitivecount = negitiveCount - 1;
-  document.getElementById("rewards").innerHTML = "0";
-  document.getElementById("Rewards").value = negitivecount;
-  document.getElementById("servedFood").value = -negitivecount;
+
   if ((Rewards.value = "-1")) {
   }
 }
