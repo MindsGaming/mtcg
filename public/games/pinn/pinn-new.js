@@ -43,12 +43,6 @@ function platedImage() {
     foodButton.className = "buttonReady";
     var serveButton = document.getElementById("serveButton");
     serveButton.className = "buttonReady";
-  }
-  if ((check.innerHTML = "0%")) {
-    var hide = document.getElementById("platedButton");
-    hide.className = "hide";
-    var hide2 = document.getElementById("foodImage");
-    hide2.className = "hide";
   } else {
     alert("Make Some More Food");
   }
@@ -56,7 +50,7 @@ function platedImage() {
 
 function serveImage() {
   var check = document.getElementById("platedfood");
-
+  
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
     var negitiveCount = document.getElementById("platedFood").value;
     var negitivecount = negitiveCount - 1;
