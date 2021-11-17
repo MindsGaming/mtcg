@@ -91,12 +91,29 @@ function cashOut() {
   var rewards = document.getElementById("servedFood");
   var Rewards = document.getElementById("Rewards");
 
+  const data = {
+    dream:
+      dreamInput.value +
+      "-" +
+      dreamInputuser.value +
+      dreamInputplayer.value +
+      " Reward: "
+  };
+
+  appendNewDream(
+    dreamInput.value +
+      "-" +
+      dreamInputuser.value +
+      " Reward: " +
+      dreamInputplayer.value +
+      rewards.innerHTML +
+      ".00"
+  );
   var negitiveCount = rewards.innerHTML;
   var negitivecount = negitiveCount - 1;
   document.getElementById("rewards").innerHTML = "0";
   document.getElementById("Rewards").value = negitivecount;
   document.getElementById("servedFood").value = -negitivecount;
-
   if ((Rewards.value = "-1")) {
   }
 }
