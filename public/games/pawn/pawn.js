@@ -90,7 +90,7 @@ function servedImage() {
       document.getElementById("rewards").innerHTML = tackCount;
 
       var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 - 1;
+      var tackcount2 = tackCount2 - 2;
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
@@ -109,7 +109,7 @@ function servedImage() {
       document.getElementById("rewards").innerHTML = tackCount;
 
       var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 - 1;
+      var tackcount2 = tackCount2 + 1;
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
@@ -128,7 +128,7 @@ function servedImage() {
       document.getElementById("rewards").innerHTML = tackCount;
 
       var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 - 1;
+      var tackcount2 = tackCount2 + 2;
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
@@ -136,7 +136,7 @@ function servedImage() {
         var serveButton = document.getElementById("serveButton");
         serveButton.className = "hide";
         rewardCheck();
-      }
+      } 
     }
   } else {
     alert("Waiting On Offers");
