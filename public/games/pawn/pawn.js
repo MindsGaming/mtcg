@@ -44,7 +44,7 @@ function platedImage() {
     var serveButton = document.getElementById("serveButton");
     serveButton.className = "buttonReady";
   } else {
-    alert("Make Some More Food");
+    alert("The store is to dirty for customers");
   }
 }
 
@@ -52,14 +52,76 @@ function servedImage() {
   var check = document.getElementById("platedfood");
 
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
-    
-    var OFFER = "Ho"
-    
+    var offer = [
+      "I'll Buy For 1?",
+      "I'll Buy For 2?",
+      "Sell For 1?",
+      "Sell For 2?"
+    ];
+    var OFFER = offer[Math.floor(Math.random() * offer.length)];
     var txt;
     var r = confirm(OFFER);
-    if (r == true) {
+    if (OFFER == "I'll Buy For 1?") {
       var tackCount = document.getElementById("servedFood").value;
       var tackcount = tackCount + 1;
+      document.getElementById("servedFood").value = tackcount;
+      document.getElementById("servedfood").innerHTML = tackCount;
+      document.getElementById("Rewards").value = tackcount;
+      document.getElementById("rewards").innerHTML = tackCount;
+
+      var tackCount2 = document.getElementById("platedFood").value;
+      var tackcount2 = tackCount2 - 1;
+      document.getElementById("platedFood").value = tackcount2;
+      document.getElementById("platedfood").innerHTML = tackcount2;
+
+      if (check.innerHTML == "0") {
+        var serveButton = document.getElementById("serveButton");
+        serveButton.className = "hide";
+        rewardCheck();
+      }
+    }
+
+    if (OFFER == "I'll Buy For 2?") {
+      var tackCount = document.getElementById("servedFood").value;
+      var tackcount = tackCount + 2;
+      document.getElementById("servedFood").value = tackcount;
+      document.getElementById("servedfood").innerHTML = tackCount;
+      document.getElementById("Rewards").value = tackcount;
+      document.getElementById("rewards").innerHTML = tackCount;
+
+      var tackCount2 = document.getElementById("platedFood").value;
+      var tackcount2 = tackCount2 - 1;
+      document.getElementById("platedFood").value = tackcount2;
+      document.getElementById("platedfood").innerHTML = tackcount2;
+
+      if (check.innerHTML == "0") {
+        var serveButton = document.getElementById("serveButton");
+        serveButton.className = "hide";
+        rewardCheck();
+      }
+    }
+    if (OFFER == "Sell For 1?") {
+      var tackCount = document.getElementById("servedFood").value;
+      var tackcount = tackCount - 1;
+      document.getElementById("servedFood").value = tackcount;
+      document.getElementById("servedfood").innerHTML = tackCount;
+      document.getElementById("Rewards").value = tackcount;
+      document.getElementById("rewards").innerHTML = tackCount;
+
+      var tackCount2 = document.getElementById("platedFood").value;
+      var tackcount2 = tackCount2 - 1;
+      document.getElementById("platedFood").value = tackcount2;
+      document.getElementById("platedfood").innerHTML = tackcount2;
+
+      if (check.innerHTML == "0") {
+        var serveButton = document.getElementById("serveButton");
+        serveButton.className = "hide";
+        rewardCheck();
+      }
+    }
+    if (OFFER == "Sell For 2?") {
+      var tackCount = document.getElementById("servedFood").value;
+      var tackcount = tackCount - 2;
       document.getElementById("servedFood").value = tackcount;
       document.getElementById("servedfood").innerHTML = tackCount;
       document.getElementById("Rewards").value = tackcount;
