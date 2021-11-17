@@ -85,30 +85,27 @@ function servedImage() {
 
     if (OFFER == "I'll Buy For 1?") {
       var itemCheck = document.getElementByID("platedfood");
+      var tackCount = document.getElementById("Rewards").value;
+      var tackcount = tackCount + 1;
+      document.getElementById("Rewards").value = tackcount;
+      document.getElementById("rewards").innerHTML = tackcount;
 
-      if ((itemCheck == "1", "2", "3", "4", "5")) {
-        var tackCount = document.getElementById("Rewards").value;
-        var tackcount = tackCount + 1;
-        document.getElementById("Rewards").value = tackcount;
-        document.getElementById("rewards").innerHTML = tackCount;
+      var tackCount2 = document.getElementById("platedFood").value;
+      var tackcount2 = tackCount2 - 1;
+      document.getElementById("platedFood").value = tackcount2;
+      document.getElementById("platedfood").innerHTML = tackcount2;
 
-        var tackCount2 = document.getElementById("platedFood").value;
-        var tackcount2 = tackCount2 - 1;
-        document.getElementById("platedFood").value = tackcount2;
-        document.getElementById("platedfood").innerHTML = tackcount2;
-
-        var tackCount3 = document.getElementById("servedFood").value;
-        var tackcount3 = tackCount3 + 1;
-        document.getElementById("servedFood").value = tackcount3;
-        document.getElementById("servedfood").innerHTML = tackCount3;
-      } else {
-        alert("No Items In Store");
-      }
+      var tackCount3 = document.getElementById("servedFood").value;
+      var tackcount3 = tackCount3 - 1;
+      document.getElementById("servedFood").value = tackcount3;
+      document.getElementById("servedfood").innerHTML = tackCount3;
 
       if (check.innerHTML == "0") {
+        alert("No Items In Store");
         var serveButton = document.getElementById("serveButton");
         serveButton.className = "hide";
         rewardCheck();
+      } else {
       }
     }
   }
@@ -117,6 +114,15 @@ function servedImage() {
 function rewardCheck() {
   document.getElementById("Rewards").value = document.getElementById(
     "rewards"
+  ).innerHTML;
+  document.getElementById("platedFood").value = document.getElementById(
+    "platedfood"
+  ).innerHTML;
+  document.getElementById("makeFood").value = document.getElementById(
+    "makefood"
+  ).innerHTML;
+  document.getElementById("servedFood").value = document.getElementById(
+    "servedfood"
   ).innerHTML;
 }
 
