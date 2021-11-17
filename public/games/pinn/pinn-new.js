@@ -26,6 +26,8 @@ function foodImage() {
 function platedImage() {
   var check = document.getElementById("makefood");
 
+ 
+
   if (check.innerHTML == "100%") {
     check.innerHTML = "0%";
     var tack = document.createElement("div");
@@ -53,13 +55,11 @@ function serveImage() {
   var rewards = document.getElementById("rewards");
   var Rewards = document.getElementById("Rewards");
 
-  if (check.innerHTML == "1", "2", "3") {
+  if ((check.innerHTML == "1", "2", "3", "4", "5")) {
     var negitiveCount = document.getElementById("platedFood").value;
     var negitivecount = negitiveCount - 1;
     document.getElementById("platedFood").value = negitivecount;
     check.innerHTML = negitivecount;
-    rewards.value = tackCount;
-    rewards.innerHTML = tackCount;
 
     var tackCount = document.getElementById("servedFood").value;
     var tackcount = tackCount + 1;
@@ -69,7 +69,11 @@ function serveImage() {
 
     var cashOut = document.getElementById("cashOut");
     cashOut.className = "buttonReady";
+
+    
   } else {
     alert("Make Some More Food");
   }
+  Rewards.value = tackCount;
+    rewards.innerHTML = Rewards.value;
 }
