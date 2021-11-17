@@ -48,29 +48,18 @@ function platedImage() {
   }
 }
 
-function serveImage() {
+function servedImage() {
   var check = document.getElementById("platedfood");
 
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
-    document.getElementById("platedFood").value = -1;
-    var negitivecount = document.getElementById("platedFood").value;
-    check.innerHTML = negitivecount;
-
     var tackCount = document.getElementById("servedFood").value;
     var tackcount = tackCount + 1;
-    document.getElementById("servedFood").value = tackCount;
+    document.getElementById("servedFood").value = tackcount;
     document.getElementById("servedfood").innerHTML = tackCount;
-    
-     var platedButton = document.getElementById("platedButton");
-    platedButton.className = "buttonReady";
-    
-    
   } else {
     alert("Make Some More Food");
   }
-  rewardCheck();
 }
-
 function rewardCheck() {
   var check = document.getElementById("servedfood");
 
