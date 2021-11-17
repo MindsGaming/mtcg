@@ -11,7 +11,7 @@ function takeTour() {
 
 function justPlay() {
   var hide = document.getElementById("tour");
-  hide.classList.toggle("hide");
+  hide.className = "hide";
 }
 
 function openMenu() {
@@ -22,7 +22,15 @@ function openMenu() {
 function walletMenu() {
   var hide = document.getElementById("home");
   hide.classList.toggle("hide");
-   var wallet = document.getElementById("walletTab");
+  var wallet = document.getElementById("walletTab");
   wallet.classList.toggle("hide");
   openMenu();
+}
+
+function logoTick() {
+  justPlay();
+  var hide = document.getElementById("home");
+  hide.classList.toggle("trading");
+  var wallet = document.getElementById("walletTab");
+  wallet.classname = "hide";
 }
