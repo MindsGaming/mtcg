@@ -52,15 +52,19 @@ function serveImage() {
   var check = document.getElementById("platedfood");
 
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
-    var negitiveCount = document.getElementById("platedFood").value;
-    var negitivecount = negitiveCount - 1;
-    document.getElementById("platedFood").value = negitivecount;
+    document.getElementById("platedFood").value = -1;
+    var negitivecount = document.getElementById("platedFood").value;
     check.innerHTML = negitivecount;
 
     var tackCount = document.getElementById("servedFood").value;
     var tackcount = tackCount + 1;
-    document.getElementById("servedfood").innerHTML = tackCount;
     document.getElementById("servedFood").value = tackCount;
+    document.getElementById("servedfood").innerHTML = tackCount;
+    
+     var platedButton = document.getElementById("platedButton");
+    platedButton.className = "buttonReady";
+    
+    
   } else {
     alert("Make Some More Food");
   }
