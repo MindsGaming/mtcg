@@ -82,7 +82,7 @@ function rewardCheck() {
     document.getElementById("Rewards").value = check.value;
 
     var cashOut = document.getElementById("cashOut");
-    cashOut.className = "buttonReady";
+    cashOut.className == "buttonReady";
   }
 }
 
@@ -121,6 +121,9 @@ function cashOut() {
 }
 
 function quit() {
-  alert("Quit Your Job?");
-  window.open("/", "_self");
+  var txt;
+  var r = confirm("Quit Your Job?");
+  if (r == true) {
+    window.open("/", "_self");
+  } else txt = "Get back to work";
 }
