@@ -54,6 +54,7 @@
         width: 100%;
         height: 3rem;
         background-color: yellow;
+        z-index: 2;
       }
 
       .imageLogo {
@@ -147,14 +148,24 @@
       a {
         color: red;
       }
-      
+
       .showMenu {
         position: fixed;
+        display: block;
+        right: 0;
         top: 0;
-        left: 0;
+        width: 5rem;
+        height: 15rem;
         background-color: yellow;
-        width: 6rem;
-        height
+        z-index: 3;
+      }
+      .menuItem {
+        font-align: center;
+        width: 100%;
+        height: 1rem;
+        margin: .5rem;
+        border-style: solid;
+        color: black;
       }
     </style>
     <script src="/games/trading/trading.js" defer></script>
@@ -206,10 +217,10 @@
             <hr />
             <hr />
           </div>
-          <div id="imagineMenu" class="showMenu">
-            <div class="menuItem" onclick="tradingMenu();">Trading</div>
-            <div class="menuItem" onclick="walletMenu();">Wallet</div>
-          </div>
+        </div>
+        <div id="imagineMenu" class="hide">
+          <div class="menuItem" onclick="tradingMenu();">Trading</div>
+          <div class="menuItem" onclick="walletMenu();">Wallet</div>
         </div>
         <div class="trading">
           <h1 class="really">Imagine Really Trading <br />...</h1>
