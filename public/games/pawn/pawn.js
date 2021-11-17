@@ -63,14 +63,14 @@ function servedImage() {
     var r = confirm(OFFER);
     if (OFFER == "I'll Buy For 1?") {
       var tackCount = document.getElementById("servedFood").value;
-      var tackcount = tackCount + 1;
+      var tackcount = tackCount - 1;
       document.getElementById("servedFood").value = tackcount;
       document.getElementById("servedfood").innerHTML = tackCount;
       document.getElementById("Rewards").value = tackcount;
       document.getElementById("rewards").innerHTML = tackCount;
 
       var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 - 1;
+      var tackcount2 = tackCount2 + 1;
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
@@ -83,14 +83,14 @@ function servedImage() {
 
     if (OFFER == "I'll Buy For 2?") {
       var tackCount = document.getElementById("servedFood").value;
-      var tackcount = tackCount + 2;
+      var tackcount = tackCount - 2;
       document.getElementById("servedFood").value = tackcount;
       document.getElementById("servedfood").innerHTML = tackCount;
       document.getElementById("Rewards").value = tackcount;
       document.getElementById("rewards").innerHTML = tackCount;
 
       var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 - 2;
+      var tackcount2 = tackCount2 + 2;
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
@@ -109,7 +109,7 @@ function servedImage() {
       document.getElementById("rewards").innerHTML = tackCount;
 
       var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 + 1;
+      var tackcount2 = tackCount2 - 1;
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
@@ -121,14 +121,14 @@ function servedImage() {
     }
     if (OFFER == "Sell For 2?") {
       var tackCount = document.getElementById("servedFood").value;
-      var tackcount = tackCount - 2;
+      var tackcount = tackCount + 2;
       document.getElementById("servedFood").value = tackcount;
       document.getElementById("servedfood").innerHTML = tackCount;
       document.getElementById("Rewards").value = tackcount;
       document.getElementById("rewards").innerHTML = tackCount;
 
       var tackCount2 = document.getElementById("platedFood").value;
-      var tackcount2 = tackCount2 + 2;
+      var tackcount2 = tackCount2 - 2;
       document.getElementById("platedFood").value = tackcount2;
       document.getElementById("platedfood").innerHTML = tackcount2;
 
@@ -136,7 +136,7 @@ function servedImage() {
         var serveButton = document.getElementById("serveButton");
         serveButton.className = "hide";
         rewardCheck();
-      } 
+      }
     }
   } else {
     alert("Waiting On Offers");
@@ -151,6 +151,11 @@ function rewardCheck() {
     var rewards = document.getElementById("rewards");
     rewards.innerHTML = check.innerHTML;
     document.getElementById("Rewards").value = check.value;
+  }
+  var offerCheck = document.getElementByID("platedfood");
+  if (offerCheck.innerHTML == "0");
+  {
+    offerCheck.className = "hide";
   }
 }
 
