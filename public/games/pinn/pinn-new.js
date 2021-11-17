@@ -81,7 +81,7 @@ function rewardCheck() {
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
     var rewards = document.getElementById("rewards");
     rewards.innerHTML = check.innerHTML;
-    document.getElementById("Rewards").value = check.innerHTML;
+    document.getElementById("Rewards").value = check.value;
 
     var cashOut = document.getElementById("cashOut");
     cashOut.className = "buttonReady";
@@ -91,12 +91,21 @@ function rewardCheck() {
 function cashOut() {
   var rewards = document.getElementById("rewards");
   var Rewards = document.getElementById("Rewards");
+  var servedFood = document.getElementById("servedFood");
+  var servedfood = document.getElementById("servedfood");
+  var platedfood = document.getElementById("platedfood");
+  var platedFood = document.getElementById("platedFood");
+
 
   var txt;
-  var r = confirm("CashOut?");
+  var r = confirm("Start A New Shift?");
   if (r == true) {
     rewards.innerHTML = "0";
     Rewards.value = "0";
+    servedFood.value = "1";
+    servedfood.html = "0";
+    
+    
     appendNewDream(
       dreamInput.value +
         "-" +
