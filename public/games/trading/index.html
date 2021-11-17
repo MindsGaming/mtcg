@@ -73,6 +73,7 @@
         padding: 1px;
         width: 2rem;
         height: 2.5;
+        cursor: pointer;
       }
       .trading {
         margin: 5rem;
@@ -138,10 +139,23 @@
       }
       .messageBlock {
         float: left;
+        width: 21rem;
+        height: 21rem;
         display: block;
         background-color: white;
       }
-      a{ color: red;}
+      a {
+        color: red;
+      }
+      
+      .showMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: yellow;
+        width: 6rem;
+        height
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -173,14 +187,13 @@
           </div>
           <div class="hide" id="m2">
             <h1>
-            Lets Get Started
+              Lets Get Started
             </h1>
             <p>
-            We have loaded your wallet with imaginary tokens!
+              We have loaded your wallet with imaginary tokens! <br />
+              Click the menu tab and <b>Wallet</b> to check it out!.
               <br />
             </p>
-            <div class="tradeButton" onclick="takeTour();">Take Tour</div>
-            <div class="tradeButton" onclick="justPlay();">Just Play</div>
           </div>
         </div>
 
@@ -188,10 +201,14 @@
 
         <div class="imagineMenu">
           <div class="imageLogo"></div>
-          <div id="imagineMenu" class="openmenu">
+          <div id="menuTab" class="openmenu" onclick="openMenu();">
             <hr />
             <hr />
             <hr />
+          </div>
+          <div id="imagineMenu" class="showMenu">
+            <div class="menuItem" onclick="tradingMenu();">Trading</div>
+            <div class="menuItem" onclick="walletMenu();">Wallet</div>
           </div>
         </div>
         <div class="trading">
