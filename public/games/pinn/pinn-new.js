@@ -37,7 +37,8 @@ function platedImage() {
     var tackCount = document.getElementById("platedFood").value;
     var tackcount = tackCount + 1;
     document.getElementById("platedFood").value = tackcount;
-    document.getElementById("platedfood").innerHTML = tackCount;
+    document.getElementById("platedfood").innerHTML =  tackcount;
+    
 
     var foodButton = document.getElementById("foodButton");
     foodButton.className = "buttonReady";
@@ -92,10 +93,8 @@ function cashOut() {
   var rewards = document.getElementById("rewards");
   var Rewards = document.getElementById("Rewards");
   var servedFood = document.getElementById("servedFood");
-  var servedfood = document.getElementById("servedfood");
-  var platedfood = document.getElementById("platedfood");
   var platedFood = document.getElementById("platedFood");
-
+  var makeFood = document.getElementById("makeFood");
 
   var txt;
   var r = confirm("Start A New Shift?");
@@ -103,9 +102,9 @@ function cashOut() {
     rewards.innerHTML = "0";
     Rewards.value = "0";
     servedFood.value = "1";
-    servedfood.html = "0";
-    
-    
+    platedFood.value = "1";
+    makeFood.value = "1";
+
     appendNewDream(
       dreamInput.value +
         "-" +
