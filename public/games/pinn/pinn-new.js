@@ -85,3 +85,11 @@ function rewardCheck() {
     cashOut.className = "buttonReady";
   }
 }
+
+function cashOut() {
+  var rewards = document.getElementById("rewards");
+
+  if ((rewards.innerHTML == "1", "2", "3", "4", "5")) {
+    window.open("#", "_self");
+  }
+}
