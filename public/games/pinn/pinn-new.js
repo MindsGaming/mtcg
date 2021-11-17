@@ -78,7 +78,6 @@ function rewardCheck() {
 
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
     var rewards = document.getElementById("rewards");
-
     rewards.innerHTML = check.innerHTML;
 
     var cashOut = document.getElementById("cashOut");
@@ -90,6 +89,16 @@ function cashOut() {
   var rewards = document.getElementById("rewards");
 
   if ((rewards.innerHTML == "1", "2", "3", "4", "5")) {
-    window.open("#", "_self");
+    var negitiveCount = rewards.innerHTML;
+    var negitivecount = negitiveCount - 1;
+    document.getElementById("rewards").innerHTML = negitivecount;
+
+    window.open("./", "_self");
+  }
+  if (rewards.innerHTML == "0") {
+    var cashOut = document.getElementById("cashOut");
+    cashOut.className = "button";
+  } else {
+    alert("Make Some More Food");
   }
 }
