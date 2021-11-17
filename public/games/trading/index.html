@@ -170,6 +170,15 @@
         color: black;
         cursor: pointer;
       }
+      .walletItems {
+        width: 15rem;
+        margin-left: -3rem;
+      }
+      .walletItem {
+        float: left;
+        margin: 1rem;
+        font-size: 6px;
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -247,9 +256,10 @@
           </div>
         </div>
 
-        <div id="tradingTab" class="tradingTab">
+        <hr />
+        <div id="tradingTab" class="trading">
           <div class="walletItems">
-            <p class="walletItem-one">
+            <p class="walletItem">
               Wallet
             </p>
             <p class="walletItem" oncilck="keepWishing();">
@@ -258,11 +268,13 @@
             <p class="walletItem" onclick="keepWishing();">
               Deposit/Withdrawl History
             </p>
-            <p class="walletItem" >
+            <p class="walletItem" onclick="keepWishing();">
               Active Orders
             </p>
           </div>
+          <br />
         </div>
+        <hr />
       </center>
     </wrap>
   </body>
