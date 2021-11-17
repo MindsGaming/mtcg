@@ -93,12 +93,10 @@ function cashOut() {
 
   var negitiveCount = rewards.innerHTML;
   var negitivecount = negitiveCount - 1;
-  document.getElementById("rewards").innerHTML = negitivecount;
+  document.getElementById("rewards").innerHTML = "0";
   document.getElementById("Rewards").value = negitivecount;
   document.getElementById("servedFood").value = -negitivecount;
 
   if ((Rewards.value = "-1")) {
-    alert("Something Went Wrong");
-    window.open("./", "_self");
   }
 }
