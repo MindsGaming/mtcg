@@ -105,7 +105,7 @@ function cashOut() {
     makeFood.value = "30%";
     servedfood.innerHTML = "1";
     platedfood.innerHTML = "1";
-    makefood.innerHTML = "30";
+    makefood.innerHTML = "30%";
 
     appendNewDream(
       dreamInput.value +
