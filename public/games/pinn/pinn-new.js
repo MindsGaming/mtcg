@@ -37,8 +37,7 @@ function platedImage() {
     var tackCount = document.getElementById("platedFood").value;
     var tackcount = tackCount + 1;
     document.getElementById("platedFood").value = tackcount;
-    document.getElementById("platedfood").innerHTML =  tackcount;
-    
+    document.getElementById("platedfood").innerHTML = tackcount;
 
     var foodButton = document.getElementById("foodButton");
     foodButton.className = "buttonReady";
@@ -93,6 +92,9 @@ function cashOut() {
   var servedFood = document.getElementById("servedFood");
   var platedFood = document.getElementById("platedFood");
   var makeFood = document.getElementById("makeFood");
+  var servedfood = document.getElementById("servedfood");
+  var platedfood = document.getElementById("platedfood");
+  var makefood = document.getElementById("makefood");
 
   var txt;
   var r = confirm("Start A New Shift?");
@@ -101,7 +103,10 @@ function cashOut() {
     Rewards.value = "0";
     servedFood.value = "1";
     platedFood.value = "1";
-    makeFood.value = "1";
+    makeFood.value = "30";
+    servedfood.innerHTML = "1";
+    platedfood.innerHTML = "1";
+    makefood.innerHTML = "30";
 
     appendNewDream(
       dreamInput.value +
@@ -113,4 +118,9 @@ function cashOut() {
         ".00"
     );
   } else txt = "You pressed Cancel!";
+}
+
+function quit() {
+  alert("Quit Your Job?");
+  window.open("/", "_self");
 }
