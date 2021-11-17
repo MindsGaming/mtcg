@@ -56,6 +56,16 @@ function servedImage() {
     var tackcount = tackCount + 1;
     document.getElementById("servedFood").value = tackcount;
     document.getElementById("servedfood").innerHTML = tackCount;
+
+    var tackCount2 = document.getElementById("platedFood").value;
+    var tackcount2 = tackCount2 - 1;
+    document.getElementById("platedFood").value = tackcount2;
+    document.getElementById("platedfood").innerHTML = tackCount2;
+
+    if (check.innerHTML == "0") {
+      var serveButton = document.getElementById("serveButton");
+      serveButton.className = "hide";
+    }
   } else {
     alert("Make Some More Food");
   }
