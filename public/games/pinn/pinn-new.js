@@ -95,6 +95,8 @@ function cashOut() {
   var txt;
   var r = confirm("CashOut?");
   if (r == true) {
+    rewards.innerHTML = "0";
+    Rewards.value = "0";
     appendNewDream(
       dreamInput.value +
         "-" +
@@ -104,7 +106,5 @@ function cashOut() {
         Rewards.value +
         ".00"
     );
-    rewards.innerHTML = "0";
-    Rewards.value = "0";
   } else txt = "You pressed Cancel!";
 }
