@@ -52,25 +52,32 @@ function servedImage() {
   var check = document.getElementById("platedfood");
 
   if ((check.innerHTML == "1", "2", "3", "4", "5")) {
-    var tackCount = document.getElementById("servedFood").value;
-    var tackcount = tackCount + 1;
-    document.getElementById("servedFood").value = tackcount;
-    document.getElementById("servedfood").innerHTML = tackCount;
-    document.getElementById("Rewards").value = tackcount;
-    document.getElementById("rewards").innerHTML = tackCount;
+    
+    var OFFER = "Ho"
+    
+    var txt;
+    var r = confirm(OFFER);
+    if (r == true) {
+      var tackCount = document.getElementById("servedFood").value;
+      var tackcount = tackCount + 1;
+      document.getElementById("servedFood").value = tackcount;
+      document.getElementById("servedfood").innerHTML = tackCount;
+      document.getElementById("Rewards").value = tackcount;
+      document.getElementById("rewards").innerHTML = tackCount;
 
-    var tackCount2 = document.getElementById("platedFood").value;
-    var tackcount2 = tackCount2 - 1;
-    document.getElementById("platedFood").value = tackcount2;
-    document.getElementById("platedfood").innerHTML = tackcount2;
+      var tackCount2 = document.getElementById("platedFood").value;
+      var tackcount2 = tackCount2 - 1;
+      document.getElementById("platedFood").value = tackcount2;
+      document.getElementById("platedfood").innerHTML = tackcount2;
 
-    if (check.innerHTML == "0") {
-      var serveButton = document.getElementById("serveButton");
-      serveButton.className = "hide";
-      rewardCheck();
+      if (check.innerHTML == "0") {
+        var serveButton = document.getElementById("serveButton");
+        serveButton.className = "hide";
+        rewardCheck();
+      }
     }
   } else {
-    alert("Make Some More Food");
+    alert("Waiting On Offers");
   }
 }
 function rewardCheck() {
