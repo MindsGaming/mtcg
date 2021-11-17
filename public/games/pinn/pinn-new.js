@@ -88,12 +88,17 @@ function rewardCheck() {
 }
 
 function cashOut() {
-  var rewards = document.getElementById("rewards");
-  
-  if (rewards.innerHTML == "1", "2", "3",){}
+  var rewards = document.getElementById("servedFood");
+  var Rewards = document.getElementById("Rewards");
 
   var negitiveCount = rewards.innerHTML;
   var negitivecount = negitiveCount - 1;
   document.getElementById("rewards").innerHTML = negitivecount;
-  
+  document.getElementById("Rewards").value = negitivecount;
+  document.getElementById("servedFood").value = -negitivecount;
+
+  if ((Rewards.value = "-1")) {
+    alert("Something Went Wrong");
+    window.open("./", "_self");
+  }
 }
