@@ -62,13 +62,6 @@ function serveImage() {
     if ((check.innerHTML = "0")) {
       var hide = document.getElementById("serveButton");
       hide.className = "hide";
-      var hide2 = document.getElementById("platedImage");
-      hide2.className = "hide";
-    }
-
-    if ((check2.innerHTML = "0%")) {
-      var hide = document.getElementById("foodImage");
-      hide.classList.toggle("hide");
     }
 
     var tackCount = document.getElementById("servedFood").value;
