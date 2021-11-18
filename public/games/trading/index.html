@@ -222,6 +222,14 @@
         margin-top: -2rem;
         font-size: 12px;
       }
+      .m3 {
+        float: left;
+        width: 21rem;
+        height: 21rem;
+        display: block;
+        background-color: white;
+        margin-top: 5rem;
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -262,42 +270,57 @@
               Lets fix that by finding an airdrop. Click the menu tab and
               <b>Trading</b>.
               <br />
+              <div class="button" onclick="m3();"
+            </p>
+          </div>
+          <div class="hide" id="m3">
+            <h1>
+              Lets Get Started
+            </h1>
+            <p>
+              O NO! You don't have any tokens! <br />
+              Lets fix that by finding an airdrop. Click the menu tab and
+              <b>Trading</b>.
+              <br />
             </p>
           </div>
         </div>
 
-        <!--- trading game -->
-
-        <div class="imagineMenu">
-          <div class="imageLogo" onclick="logoTick();"></div>
-          <div id="menuTab" class="openmenu" onclick="openMenu();">
-            <hr />
-            <hr />
-            <hr />
+        <!--- HOME page -->
+        <div id="home" class="hide">
+          <div class="imagineMenu">
+            <div class="imageLogo" onclick="logoTick();"></div>
+            <div id="menuTab" class="openmenu" onclick="openMenu();">
+              <hr />
+              <hr />
+              <hr />
+            </div>
           </div>
-        </div>
-        <div id="imagineMenu" class="hide">
-          <div class="menuItem" onclick="tradingMenu();">Trading</div>
-          <div class="menuItem" onclick="walletMenu();">Wallet</div>
-        </div>
-        <div class="trading" id="home">
-          <h1 class="really">Imagine Really Trading <br />...</h1>
-          <p>
-            Earned Enough Rewards? <br />
-            Try Real Trading!
-          </p>
-          <a
-            class="button"
-            href="https://mintme.com/token/MTCG/trade"
-            targget="_blank"
-            >Real Trading</a
-          >
-          <div class="trader" id="trader">
-            <p class="trade">
-              Imagination bought Imagination Token worth 100Imagination
+          <div id="imagineMenu" class="trading">
+            <div class="menuItem" onclick="tradingMenu();">Trading</div>
+            <div class="menuItem" onclick="walletMenu();">Wallet</div>
+          </div>
+          <div class="trading">
+            <h1 class="really">Imagine Really Trading <br />...</h1>
+            <p>
+              Earned Enough Rewards? <br />
+              Try Real Trading!
             </p>
+            <a
+              class="button"
+              href="https://mintme.com/token/MTCG/trade"
+              targget="_blank"
+              >Real Trading</a
+            >
+            <div class="trader" id="trader">
+              <p class="trade">
+                Imagination bought Imagination Token worth 100Imagination
+              </p>
+            </div>
           </div>
         </div>
+
+        <!-- Trading page -->
 
         <div id="tradingTab" class="hide">
           <div class="marketTokens" id="walletTokens">
@@ -305,14 +328,13 @@
             <h1 class="listTokens">
               Markets
             </h1>
-            <div class="line">
-              
-            </div>
+            <div class="line"></div>
           </div>
           <div class="marketTokens" id="rewardTokens">
             <br /><br /><br />
             <h1 class="listTokens">
-              Tokens   <div class="greyButton" onclick="listTokens();">
+              Tokens
+              <div class="greyButton" onclick="listTokens();">
                 Lost In Imagination
               </div>
             </h1>
