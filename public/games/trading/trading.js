@@ -46,6 +46,10 @@ function logoTick() {
   wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
+  var imagineTab = document.getElementById("createTab");
+  imagineTab.className = "hide";
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "hide";
 }
 
 function justPlay() {
@@ -158,24 +162,25 @@ function createMenu() {
   openMenu();
 }
 
-function create() {
-  var create = document.getElementById("imagineName");
-  var intro = document.getElementById("imagineIntro");
-  var userstoken = document.getElementById("usersToken");
-  userstoken.innerHTML = create.value;
-  var usersintro = document.getElementById("usersIntro");
-  usersintro.innerHTML = intro.value;
-  
-  var imagineTab = document.getElementById("createTab")
-  imagine.className = "hide"
-  var imagine = document.getElementById("usersImagine")
-  imagine.className = "trading"
-  var newcreate = document.getElementById("createTab");
-  newcreate.className = "hide";
+function creating() {
+  var imagineTab = document.getElementById("createTab");
+  imagineTab.className = "hide";
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "trading";
+  var create = document.getElementById("createTab");
+  create.className = "hide";
   var home = document.getElementById("home");
   home.className = "hide";
   var wallet = document.getElementById("walletTab");
   wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
+  var button = document.getElementById("CREATE");
+  button.className = "hide";
+  var create = document.getElementById("imagineName").value;
+  var intro = document.getElementById("imagineIntro").value;
+  var userstoken = document.getElementById("usersToken");
+  userstoken.innerHTML = create;
+  var usersintro = document.getElementById("usersIntro");
+  usersintro.innerHTML = intro;
 }
