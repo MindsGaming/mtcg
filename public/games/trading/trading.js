@@ -52,5 +52,7 @@ function m3() {
 }
 
 function justPlay() {
+  var hide = document.getElementById("tour");
+  hide.className = "hide";
   
 }
