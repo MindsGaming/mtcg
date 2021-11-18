@@ -116,3 +116,9 @@ function checkReward() {
 
   drop.innerHTML === Drop.value;
 }
+function m7() {
+  var m6 = document.getElementById("m6");
+  m6.className = "hide";
+  var m7 = document.getElementById("m7");
+  m7.className = "marketTokens";
+}
