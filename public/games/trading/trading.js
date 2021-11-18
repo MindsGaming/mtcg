@@ -20,26 +20,31 @@ function openMenu() {
 }
 
 function walletMenu() {
-  var hide = document.getElementById("home");
-  hide.classList.toggle("hide");
   var wallet = document.getElementById("walletTab");
   wallet.classList.toggle("hide");
+  var trading = document.getElementById("tradingTab");
+  trading.className = "hide";
+  var hide = document.getElementById("home");
+  hide.className = "hide";
   openMenu();
 }
 
 function tradingMenu() {
+  var trading = document.getElementById("tradingTab");
+  trading.classList.toggle("hide");
+  var wallet = document.getElementById("walletTab");
+  wallet.className = "hide";
   var hide = document.getElementById("home");
-  hide.classList.toggle("hide");
-  var wallet = document.getElementById("tradingTab");
-  wallet.classList.toggle("hide");
+  hide.className = "hide";
   openMenu();
 }
 
 function logoTick() {
   justPlay();
   var hide = document.getElementById("home");
-  hide.classList.toggle("trading");
+  hide.classname == "trading";
   var wallet = document.getElementById("walletTab");
-  wallet.classname = "hide";
-  
+  wallet.classname == "hide";
+  var trader = document.getElementById("tradingTab");
+  trader.classname == "hide";
 }
