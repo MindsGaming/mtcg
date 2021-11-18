@@ -173,8 +173,6 @@ function creating() {
   imagineTab.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
   usersImagine.className = "trading";
-  var create = document.getElementById("createTab");
-  create.className = "hide";
   var home = document.getElementById("home");
   home.className = "hide";
   var wallet = document.getElementById("walletTab");
@@ -189,6 +187,8 @@ function creating() {
   userstoken.innerHTML = create;
   var usersintro = document.getElementById("usersIntro");
   usersintro.innerHTML = intro;
+  var myIdea = document.getElementById("IDEA");
+  myIdea.className = "menuItem";
 }
 
 function m10ok() {
@@ -225,4 +225,18 @@ function m14ok() {
   );
   var m13 = document.getElementById("m13");
   m13.className = "hide";
+}
+
+function usersIdea() {
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "trading";
+  var home = document.getElementById("home");
+  home.className = "hide";
+  var wallet = document.getElementById("walletTab");
+  wallet.className = "hide";
+  var trading = document.getElementById("tradingTab");
+  trading.className = "hide";
+  var button = document.getElementById("CREATE");
+  button.className = "hide";
+  openMenu();
 }
