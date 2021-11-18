@@ -231,6 +231,14 @@
       .imagineAir {
         cursor: pointer;
       }
+      
+      .imaginename{
+        width: 5rem;
+      }
+      .imagineintro{
+        width: 5rem;
+        hieght: 
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -490,13 +498,15 @@
 
         <!-- creator page -->
 
-        <div id="createTab" class="trading">
+        <div id="createTab" class="hide">
           <div class="trading">
-            <p class="walletItem">
+            <div class="createtoken">
               Imagination Name:
-            </p>
-            <p class="walletItem" oncilck="keepWishing();">
+              <input class="imaginename" id="imagineName" type="text" />
+            </div>
+            <p class="createtoken" oncilck="keepWishing();">
               Imagination Intro:
+              <input class="imagineintro" id="imagineIntro" type="text" />
             </p>
           </div>
           <br />

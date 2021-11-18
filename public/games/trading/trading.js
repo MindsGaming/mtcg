@@ -149,13 +149,11 @@ function m9ok() {
 function createMenu() {
   var create = document.getElementById("createTab");
   create.className = "trading";
-  var trading = document.getElementById("tradingTab");
-  trading.className = "hide";
-  var wallet = document.getElementById("walletTab");
-  wallet.className = "hide";
   var home = document.getElementById("home");
   home.className = "hide";
-  var home = document.getElementById("createTab");
-  home.className = "hide";
+  var wallet = document.getElementById("walletTab");
+  wallet.className = "hide";
+  var trading = document.getElementById("tradingTab");
+  trading.className = "hide";
   openMenu();
 }
