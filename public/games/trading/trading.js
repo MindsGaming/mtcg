@@ -53,14 +53,25 @@ function listTokens() {
   list.className = "greyButton";
 }
 
-function airDrops(){
-  var airdrop = document.getElementById("airdr")
+function airDrops() {
+  var airdrop = document.getElementById("airdrops");
+  airdrop.className = "marketTokens";
+  var airdrops = document.getElementById("lostImagination");
+  airdrops.className = "hide";
 }
 
 function m3() {
-  justPlay()
+  justPlay();
   var m2 = document.getElementById("m2");
   m2.className = "hide";
   var m3 = document.getElementById("m3");
   m3.className = "marketTokens";
+}
+
+function m4() {
+  justPlay();
+  var m3 = document.getElementById("m3");
+  m3.className = "hide";
+  var m4 = document.getElementById("m4");
+  m4.className = "marketTokens";
 }
