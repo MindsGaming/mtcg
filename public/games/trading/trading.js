@@ -1,5 +1,3 @@
-var trading = "0.00001";
-
 function takeTour() {
   var hide = document.getElementById("m1");
   hide.classList.toggle("hide");
@@ -20,21 +18,25 @@ function openMenu() {
 
 function walletMenu() {
   var wallet = document.getElementById("walletTab");
-  wallet.classList.toggle("hide");
+  wallet.className = "trading";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
   var hide = document.getElementById("home");
   hide.className = "hide";
+  var create = document.getElementById("createTab");
+  create.className = "hide";
   openMenu();
 }
 
 function tradingMenu() {
   var trading = document.getElementById("tradingTab");
-  trading.classList.toggle("hide");
+  trading.className = "trading";
   var wallet = document.getElementById("walletTab");
   wallet.className = "hide";
   var hide = document.getElementById("home");
   hide.className = "hide";
+  var create = document.getElementById("createTab");
+  create.className = "hide";
   openMenu();
 }
 
@@ -47,8 +49,6 @@ function logoTick() {
   trading.className = "hide";
   var imagineTab = document.getElementById("createTab");
   imagineTab.className = "hide";
-  var usersImagine = document.getElementById("usersImagine");
-  usersImagine.className = "hide";
 }
 
 function justPlay() {
@@ -86,14 +86,14 @@ function m4() {
 
 function imagineAirs() {
   var tackCount = document.getElementById("imaginationToken").value;
-  if (tackCount == "0"){
-  var tackcount = tackCount + 1;
-  document.getElementById("imaginationToken").value = tackcount;
-  document.getElementById("imaginationtoken").innerHTML = tackcount;
-  alert("Claimed");
-  fakeTokens();}
-  else{
-    alert("Already Claimed")
+  if (tackCount == "0") {
+    var tackcount = tackCount + 1;
+    document.getElementById("imaginationToken").value = tackcount;
+    document.getElementById("imaginationtoken").innerHTML = tackcount;
+    alert("Claimed");
+    fakeTokens();
+  } else {
+    alert("Already Claimed");
     fakeTokens();
   }
 }
