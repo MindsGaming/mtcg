@@ -25,6 +25,8 @@ function walletMenu() {
   hide.className = "hide";
   var create = document.getElementById("createTab");
   create.className = "hide";
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "hide";
   openMenu();
 }
 
@@ -37,6 +39,8 @@ function tradingMenu() {
   hide.className = "hide";
   var create = document.getElementById("createTab");
   create.className = "hide";
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "hide";
   openMenu();
 }
 
@@ -49,6 +53,8 @@ function logoTick() {
   trading.className = "hide";
   var imagineTab = document.getElementById("createTab");
   imagineTab.className = "hide";
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "hide";
 }
 
 function justPlay() {
@@ -165,6 +171,8 @@ function createMenu() {
   wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "hide";
   openMenu();
 }
 
