@@ -208,14 +208,14 @@ function m11ok() {
 function m12ok() {
   var m11 = document.getElementById("m11");
   m11.className = "hide";
-  var m12 = document.getElementById("m13");
-  m11.className = "marketTokens";
+  var m12 = document.getElementById("m12");
+  m12.className = "marketTokens";
 }
 
 function m13ok() {
-  var m12 = document.getElementById("m13");
+  var m12 = document.getElementById("m12");
   m12.className = "hide";
-  var m13 = document.getElementById("m14");
+  var m13 = document.getElementById("m13");
   m13.className = "marketTokens";
 }
 
@@ -223,4 +223,6 @@ function m14ok() {
   alert(
     "We are working on more tips click around some and find more fun things to do for now!"
   );
+  var m13 = document.getElementById("m13");
+  m13.className = "hide";
 }
