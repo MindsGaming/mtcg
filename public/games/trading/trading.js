@@ -95,7 +95,6 @@ function fakeTokens() {
 }
 
 function m5() {
-
   var m3 = document.getElementById("m4");
   m3.className = "hide";
   var m4 = document.getElementById("m5");
