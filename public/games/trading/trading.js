@@ -190,3 +190,8 @@ function creating() {
   var usersintro = document.getElementById("usersIntro");
   usersintro.innerHTML = intro;
 }
+
+function m10ok() {
+  var m10 = document.getElementById("m10");
+  m10.className = "marketTokens";
+}
