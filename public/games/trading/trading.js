@@ -9,6 +9,10 @@ function takeTour() {
   tour.className = "touring";
 }
 
+function openTour() {
+  var hide = document.getElementById("tour");
+  hide.className = "tour";
+}
 function openMenu() {
   var openmenu = document.getElementById("imagineMenu");
   openmenu.classList.toggle("showMenu");

@@ -92,8 +92,8 @@
       .button {
         position: relative;
         margin: 1.5rem;
-        width: 6rem;
-        height: 6rem;
+        width: 6.5rem;
+        height: 2.1rem;
         font-size: 20px;
         border-style: groove;
         text-decoration: none;
@@ -242,7 +242,7 @@
     <wrap>
       <center>
         <!-- Tour -->
-        <div class="tour" id="tour">
+        <div class="hide" id="tour">
           <div class="message" id="m1">
             <h1>
               Welcome To The Trade Game!
@@ -258,7 +258,7 @@
               <br />
             </p>
             <div class="tradeButton" onclick="takeTour();">Take Tour</div>
-            <div class="tradeButton" onclick="justPlay();">Just Play</div>
+            <div class="tradeButton" onclick="justPlay();">Nevermind</div>
             <br />
             <p>Check Out <a href="/help">Help</a> For More HELP!</p>
           </div>
@@ -292,17 +292,12 @@
           <div class="menuItem" onclick="walletMenu();">Wallet</div>
         </div>
         <div class="trading" id="home">
-          <h1 class="really">Imagine Really Trading <br />...</h1>
+          <h1 class="really">Imagine More Rewards <br />...</h1>
           <p>
-            Earned Enough Rewards? <br />
-            Try Real Trading!
+            Need Help? <br />
+            Take The Tour!
           </p>
-          <a
-            class="button"
-            href="https://mintme.com/token/MTCG/trade"
-            targget="_blank"
-            >Real Trading</a
-          >
+          <div class="button" onclick="openTour();">Take Tour</div>
           <div class="trader" id="trader">
             <p class="trade">
               Imagination bought Imagination Token worth 100Imagination
