@@ -129,10 +129,18 @@ function m8() {
   var m8 = document.getElementById("m8");
   m8.className = "marketTokens";
 }
+function m8ok(){
+  var m8 = document.getElementById("m8");
+  m8.className = "";
+}
 
 function m9() {
   var m7 = document.getElementById("m7");
   m7.className = "hide";
   var m9 = document.getElementById("m9");
   m9.className = "marketTokens";
+}
+
+function m10(){
+  
 }
