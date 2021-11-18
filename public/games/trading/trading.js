@@ -86,8 +86,8 @@ function m4() {
 }
 
 function imagineAir() {
-  var tackCount = document.getElementById("imaginationToken").value;
-  var tackcount = tackCount + 1;
+  var tackCount = document.getElementById("imaginationToken");
+  var tackcount = tackCount.value + 1;
   document.getElementById("imaginationToken").value = tackcount;
   document.getElementById("imaginationtoken").innerHTML = tackcount;
   alert("Claimed");
@@ -118,7 +118,7 @@ function checkReward() {
   var Drop = document.getElementById("imaginationToken");
   var drop = document.getElementById("imaginationtoken");
 
-  drop.innerHTML === Drop.value;
+  drop.innerHTML = Drop.value;
 }
 function m7() {
   var m6 = document.getElementById("m6");
