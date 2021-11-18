@@ -77,8 +77,27 @@ function m4() {
 }
 
 function imagineAir() {
-  var Drop = document.getElementById("imaginationToken");
+  var Drop = document.getElementById("imaginationToken").value;
   var drop = document.getElementById("imaginationtoken");
-  Drop.value = +1;
-  drop.innerHTML = drop.value;
+  var buffer = +1;
+  var total = Drop + 1;
+  Drop.value = buffer;
+  drop.innerHTML = total;
+  alert("Claimed");
+  fakeTokens();
+}
+
+function fakeTokens() {
+  var airdrop = document.getElementById("airdrops");
+  airdrop.className = "hide";
+  var airdrops = document.getElementById("lostImagination");
+  airdrops.className = "marketTokens";
+}
+
+function m5() {
+
+  var m3 = document.getElementById("m4");
+  m3.className = "hide";
+  var m4 = document.getElementById("m5");
+  m4.className = "marketTokens";
 }
