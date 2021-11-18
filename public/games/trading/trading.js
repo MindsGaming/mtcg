@@ -27,10 +27,19 @@ function walletMenu() {
   openMenu();
 }
 
+function tradingMenu() {
+  var hide = document.getElementById("home");
+  hide.classList.toggle("hide");
+  var wallet = document.getElementById("tradingTab");
+  wallet.classList.toggle("hide");
+  openMenu();
+}
+
 function logoTick() {
   justPlay();
   var hide = document.getElementById("home");
   hide.classList.toggle("trading");
   var wallet = document.getElementById("walletTab");
   wallet.classname = "hide";
+  
 }
