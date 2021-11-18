@@ -140,6 +140,8 @@ function m8() {
 function m8ok() {
   var m8 = document.getElementById("m8");
   m8.className = "hide";
+  var m10 = document.getElementById("m10");
+  m10.className = "marketTokens";
 }
 
 function m9() {
