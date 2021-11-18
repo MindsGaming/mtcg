@@ -26,7 +26,6 @@ function walletMenu() {
   var hide = document.getElementById("home");
   hide.className = "hide";
   openMenu();
-  checkReward();
 }
 
 function tradingMenu() {
@@ -85,11 +84,12 @@ function m4() {
   m4.className = "marketTokens";
 }
 
-function imagineAir() {
-  var tackCount = document.getElementById("imaginationToken");
-  var tackcount = tackCount.value + 1;
+function imagineAirs() {
+  var tackCount = document.getElementById("imaginationToken").value;
+  var tackcount = tackCount + 1;
   document.getElementById("imaginationToken").value = tackcount;
   document.getElementById("imaginationtoken").innerHTML = tackcount;
+
   alert("Claimed");
   fakeTokens();
 }
