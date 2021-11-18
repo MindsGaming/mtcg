@@ -86,12 +86,16 @@ function m4() {
 
 function imagineAirs() {
   var tackCount = document.getElementById("imaginationToken").value;
+  if (tackCount == "0"){
   var tackcount = tackCount + 1;
   document.getElementById("imaginationToken").value = tackcount;
   document.getElementById("imaginationtoken").innerHTML = tackcount;
-
   alert("Claimed");
-  fakeTokens();
+  fakeTokens();}
+  else{
+    alert("Already Claimed")
+    fakeTokens();
+  }
 }
 
 function fakeTokens() {
