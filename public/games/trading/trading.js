@@ -9,7 +9,6 @@ function takeTour() {
   tour.className = "touring";
 }
 
-
 function openMenu() {
   var openmenu = document.getElementById("imagineMenu");
   openmenu.classList.toggle("showMenu");
@@ -44,15 +43,19 @@ function logoTick() {
   trading.className = "hide";
 }
 
+function justPlay() {
+  var hide = document.getElementById("tour");
+  hide.className = "hide";
+}
+
+function listTokens() {
+  var list = document.getElementById("airdrip");
+  list.className = "greyButton";
+}
+
 function m3() {
   var m2 = document.getElementById("m2");
   m2.className = "hide";
   var m3 = document.getElementById("m3");
   m3.className = "m3";
-}
-
-function justPlay() {
-  var hide = document.getElementById("tour");
-  hide.className = "hide";
-  
 }
