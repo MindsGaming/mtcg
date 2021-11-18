@@ -9,12 +9,6 @@ function takeTour() {
   tour.className = "touring";
 }
 
-function justPlay() {
-  var hide = document.getElementById("tour");
-  hide.className = "hide";
-  var home = document.getElementById("home");
-  home.className = "trading";
-}
 
 function openMenu() {
   var openmenu = document.getElementById("imagineMenu");
@@ -48,7 +42,6 @@ function logoTick() {
   wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
-  justPlay();
 }
 
 function m3() {
@@ -56,4 +49,8 @@ function m3() {
   m2.className = "hide";
   var m3 = document.getElementById("m3");
   m3.className = "m3";
+}
+
+function justPlay() {
+  
 }
