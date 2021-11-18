@@ -53,9 +53,14 @@ function listTokens() {
   list.className = "greyButton";
 }
 
+function airDrops(){
+  var airdrop = document.getElementById("airdr")
+}
+
 function m3() {
+  justPlay()
   var m2 = document.getElementById("m2");
   m2.className = "hide";
   var m3 = document.getElementById("m3");
-  m3.className = "m3";
+  m3.className = "marketTokens";
 }
