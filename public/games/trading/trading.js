@@ -193,5 +193,20 @@ function creating() {
 
 function m10ok() {
   var m10 = document.getElementById("m10");
-  m10.className = "marketTokens";
+  m10.className = "hide";
+  var m11 = document.getElementById("m11");
+  m11.className = "marketTokens";
+}
+
+function m11ok() {
+  var m10 = document.getElementById("m11");
+  m10.className = "hide";
+  var m11 = document.getElementById("m12");
+  m11.className = "marketTokens";
+}
+function m12ok() {
+  var m11 = document.getElementById("m12");
+  m11.className = "hide";
+  var m12 = document.getElementById("m13");
+  m11.className = "marketTokens";
 }
