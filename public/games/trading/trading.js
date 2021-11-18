@@ -22,6 +22,7 @@ function walletMenu() {
   var hide = document.getElementById("home");
   hide.className = "hide";
   openMenu();
+  checkReward();
 }
 
 function tradingMenu() {
@@ -81,7 +82,7 @@ function imagineAir() {
   var drop = document.getElementById("imaginationtoken");
   var buffer = +1;
   var total = Drop + 1;
-  Drop.value = buffer;
+  Drop.value = total;
   drop.innerHTML = total;
   alert("Claimed");
   fakeTokens();
@@ -95,8 +96,14 @@ function fakeTokens() {
 }
 
 function m5() {
-  var m3 = document.getElementById("m4");
-  m3.className = "hide";
-  var m4 = document.getElementById("m5");
-  m4.className = "marketTokens";
+  var m4 = document.getElementById("m4");
+  m4.className = "hide";
+  var m5 = document.getElementById("m5");
+  m5.className = "marketTokens";
+}
+function m6() {
+  var m5 = document.getElementById("m5");
+  m5.className = "hide";
+  var m6 = document.getElementById("m6");
+  m6.className = "marketTokens";
 }
