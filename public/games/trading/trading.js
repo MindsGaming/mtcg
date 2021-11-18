@@ -75,3 +75,10 @@ function m4() {
   var m4 = document.getElementById("m4");
   m4.className = "marketTokens";
 }
+
+function imagineAir() {
+  var Drop = document.getElementById("imaginationToken");
+  var drop = document.getElementById("imaginationtoken");
+  Drop.value = +1;
+  drop.innerHTML = drop.value;
+}

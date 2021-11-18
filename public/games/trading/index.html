@@ -228,6 +228,9 @@
         margin-top: 23rem;
         cursor: pointer;
       }
+      .imagineAir {
+        cursor: pointer;
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -273,7 +276,6 @@
               </a>
             </p>
           </div>
-          
         </div>
 
         <!--- HOME page -->
@@ -333,7 +335,9 @@
               <p>Gamer <br /></p>
             </h1>
             <h1 class="hide" id="airdrops">
-              <p>Imagine Tokens <br /></p>
+              <div id="imagineAir" class="imagineAir" onclick="imagineAir();">
+                <p>Imagine Tokens</p>
+              </div>
             </h1>
           </div>
           <div class="hide" id="m3">
@@ -349,9 +353,21 @@
               </a>
             </p>
           </div>
-          <br>
-          <br>
-          <br>
+            <div class="hide" id="m4">
+            <h1>
+            Did You Claim it?
+            </h1>
+            <p>
+             Claim The Airdrop By Clicking The Token
+              <br />
+              <a class="button" onclick="m5();">
+                Next
+              </a>
+            </p>
+          </div>
+          <br />
+          <br />
+          <br />
         </div>
 
         <div id="walletTab" class="hide">
@@ -376,16 +392,16 @@
           <div class="walletTokens" id="walletTokens">
             <ul>
               <li class="trade">
-                Imagination Tokens: <di id="imaginationToken">0</di>
+                Imagination Tokens: <div id="imaginationtoken">0</div>
               </li>
               <li class="trade">
-                Imagination GAMER: <di id="imaginationToken">0</di>
+                Imagination GAMER: <div id="imaginationGamer">0</div>
               </li>
               <li class="trade">
-                Imagination DooBetter: <di id="imaginationToken">0</di>
+                Imagination DooBetter: <div id="imaginationDoobetter">0</div>
               </li>
               <li class="trade">
-                Imagination ECLIPSE: <di id="imaginationToken">0</di>
+                Imagination ECLIPSE: <div id="imaginationEclipse">0</div>
               </li>
             </ul>
           </div>
