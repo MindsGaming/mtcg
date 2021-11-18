@@ -206,9 +206,15 @@
         font-size: 10px;
         cursor: pointer;
       }
-      
-      .walletTokens{
-        background-colot: y
+
+      .marketTokens {
+        background-color: grey;
+        width: 30rem;
+        margin-top: 5rem;
+      }
+      .listTokens {
+        float: left;
+        font-size: 12px;
       }
     </style>
     <script src="/games/trading/trading.js" defer></script>
@@ -290,23 +296,15 @@
         <div id="tradingTab" class="hide">
           <div class="marketTokens" id="walletTokens">
             <br /><br /><br />
-            <h1>
+            <h1 class="listTokens">
               Markets
             </h1>
-            <ul>
-              <li class="trade">
-                Imagination Tokens: <di id="imaginationToken">0</di>
-              </li>
-              <li class="trade">
-                Imagination GAMER: <di id="imaginationToken">0</di>
-              </li>
-              <li class="trade">
-                Imagination DooBetter: <di id="imaginationToken">0</di>
-              </li>
-              <li class="trade">
-                Imagination ECLIPSE: <di id="imaginationToken">0</di>
-              </li>
-            </ul>
+          </div>
+          <div class="marketTokens" id="rewardTokens">
+            <br /><br /><br />
+            <h1 class="listTokens">
+              Tokens
+            </h1>
           </div>
         </div>
 

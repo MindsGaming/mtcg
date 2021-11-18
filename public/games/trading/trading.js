@@ -41,7 +41,7 @@ function tradingMenu() {
 
 function logoTick() {
   var home = document.getElementById("home");
-  home.classList.toggle("trading");
+  home.className = "trading";
   var wallet = document.getElementById("walletTab");
   wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
