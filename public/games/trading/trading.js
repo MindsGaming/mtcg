@@ -40,11 +40,11 @@ function tradingMenu() {
 }
 
 function logoTick() {
-  justPlay();
-  var hide = document.getElementById("home");
-  hide.classname == "trading";
+  var home = document.getElementById("home");
+  home.classList.toggle("trading");
   var wallet = document.getElementById("walletTab");
-  wallet.classname == "hide";
-  var trader = document.getElementById("tradingTab");
-  trader.classname == "hide";
+  wallet.className = "hide";
+  var trading = document.getElementById("tradingTab");
+  trading.className = "hide";
+  justPlay();
 }
