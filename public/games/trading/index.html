@@ -83,10 +83,10 @@
         font-size: 17px;
         color: blue;
       }
-       .reallyTwo {
+      .reallyTwo {
         font-size: 20px;
         color: blue;
-         background-color: yellow;
+        background-color: yellow;
       }
       .button {
         position: relative;
@@ -206,6 +206,10 @@
         font-size: 10px;
         cursor: pointer;
       }
+      
+      .walletTokens{
+        background-colot: y
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -284,35 +288,12 @@
         </div>
 
         <div id="tradingTab" class="hide">
-          <div class="trading">
-            <h1 class="really">
+          <div class="marketTokens" id="walletTokens">
+            <br /><br /><br />
+            <h1>
               Markets
             </h1>
-            <div class="tradingItem">
-              Rewards
-              <div class="hide" id="dropTokens">
-                <ul>
-                  <li>GAMER</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <br />
-          <br />
-          <br />
-          <div class="walletTokens" id="tradingTokens">
             <ul>
-              <h1 class="reallyTwo">
-                Tokens
-                <div class="greyButton" onclick="dropTokens();">
-                 Lost in Imagination
-                  <hr>
-                  <hr>
-                </div>
-              </h1>
-              <div class="tradingMenu">
-                Reward Tokens
-              </div>
               <li class="trade">
                 Imagination Tokens: <di id="imaginationToken">0</di>
               </li>
