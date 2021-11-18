@@ -78,13 +78,11 @@ function m4() {
 }
 
 function imagineAir() {
-  var Drop = document.getElementById("imaginationToken").value;
-  var drop = document.getElementById("imaginationtoken");
-  var buffer = +1;
-  var total = Drop + 1;
-  Drop.value = total;
-  drop.innerHTML = total;
-  alert("Claimed");
+  var tackCount = document.getElementById("imaginationToken").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("imaginationToken").value = tackcount;
+  document.getElementById("imaginationtoken").innerHTML = tackcount;
+  alert("Claimed")
   fakeTokens();
 }
 
@@ -106,4 +104,11 @@ function m6() {
   m5.className = "hide";
   var m6 = document.getElementById("m6");
   m6.className = "marketTokens";
+}
+
+function checkReward() {
+  var Drop = document.getElementById("imaginationToken");
+  var drop = document.getElementById("imaginationtoken");
+
+  drop.innerHTML === Drop.value;
 }
