@@ -86,7 +86,7 @@ function imagineAir() {
   var tackcount = tackCount + 1;
   document.getElementById("imaginationToken").value = tackcount;
   document.getElementById("imaginationtoken").innerHTML = tackcount;
-  alert("Claimed")
+  alert("Claimed");
   fakeTokens();
 }
 
@@ -121,4 +121,18 @@ function m7() {
   m6.className = "hide";
   var m7 = document.getElementById("m7");
   m7.className = "marketTokens";
+}
+
+function m8() {
+  var m7 = document.getElementById("m7");
+  m7.className = "hide";
+  var m8 = document.getElementById("m8");
+  m8.className = "marketTokens";
+}
+
+function m9() {
+  var m7 = document.getElementById("m7");
+  m7.className = "hide";
+  var m9 = document.getElementById("m9");
+  m9.className = "marketTokens";
 }
