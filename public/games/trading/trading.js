@@ -129,9 +129,9 @@ function m8() {
   var m8 = document.getElementById("m8");
   m8.className = "marketTokens";
 }
-function m8ok(){
+function m8ok() {
   var m8 = document.getElementById("m8");
-  m8.className = "";
+  m8.className = "hide";
 }
 
 function m9() {
@@ -141,6 +141,21 @@ function m9() {
   m9.className = "marketTokens";
 }
 
-function m10(){
-  
+function m9ok() {
+  var m9 = document.getElementById("m9");
+  m9.className = "hide";
+}
+
+function createMenu() {
+  var create = document.getElementById("createTab");
+  create.className = "trading";
+  var trading = document.getElementById("tradingTab");
+  trading.className = "hide";
+  var wallet = document.getElementById("walletTab");
+  wallet.className = "hide";
+  var home = document.getElementById("home");
+  home.className = "hide";
+  var home = document.getElementById("createTab");
+  home.className = "hide";
+  openMenu();
 }
