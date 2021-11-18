@@ -157,3 +157,25 @@ function createMenu() {
   trading.className = "hide";
   openMenu();
 }
+
+function create() {
+  var create = document.getElementById("imagineName");
+  var intro = document.getElementById("imagineIntro");
+  var userstoken = document.getElementById("usersToken");
+  userstoken.innerHTML = create.value;
+  var usersintro = document.getElementById("usersIntro");
+  usersintro.innerHTML = intro.value;
+  
+  var imagineTab = document.getElementById("createTab")
+  imagine.className = "hide"
+  var imagine = document.getElementById("usersImagine")
+  imagine.className = "trading"
+  var newcreate = document.getElementById("createTab");
+  newcreate.className = "hide";
+  var home = document.getElementById("home");
+  home.className = "hide";
+  var wallet = document.getElementById("walletTab");
+  wallet.className = "hide";
+  var trading = document.getElementById("tradingTab");
+  trading.className = "hide";
+}

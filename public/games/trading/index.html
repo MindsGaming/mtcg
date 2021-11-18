@@ -298,7 +298,7 @@
         <div id="imagineMenu" class="hide">
           <div class="menuItem" onclick="tradingMenu();">Trading</div>
           <div class="menuItem" onclick="walletMenu();">Wallet</div>
-          <div class="menuItem" onclick="createMenu();">Create</div>
+          <div id="CREATE" class="menuItem" onclick="createMenu();">Create</div>
         </div>
         <div class="trading" id="home">
           <h1 class="really">Imagine More Rewards <br />...</h1>
@@ -504,7 +504,7 @@
               Imagination Name:
               <input class="imaginename" id="imagineName" type="text" />
             </div>
-            <p class="createtoken" oncilck="keepWishing();">
+            <p class="createtoken">
               Imagination Intro: <br />
               <input class="imagineintro" id="imagineIntro" type="text" />
             </p>
@@ -517,12 +517,10 @@
 
         <div id="usersImagine" class="hide">
           <div class="trading">
-            <div class="userstoken">
+            <div class="userstoken" id="usersToken">
               Imagination Name:
             </div>
-            <p class="u">
-              Imagination Intro: <br />
-            </p>
+            <p class="usersintro" id="usersIntro">Imagination Intro: <br /></p>
           </div>
           <br />
         </div>
