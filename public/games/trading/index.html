@@ -294,22 +294,21 @@
 
       .orders {
         position: relative;
+        display: block;
+        border-style: groove;
+        border-color: black;
         width: 25rem;
         background-color: green;
         margin: 5rem;
       }
-      
-      .buyorder{
-        float: left;
-        margin-top: 5rem;
-        
+
+      .buyorder {
+        position: relative;
       }
-      
+
       label {
-        float: left;
-        margin-right: .3rem;
+        margin-right: 1.7rem;
       }
-      
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -650,15 +649,16 @@
               <h2 style="float: left;">
                 Buy Orders
               </h2>
-              <br>
+              <br />
               <div class="line"></div>
-              <br>
+              <br />
               <h3>
                 Price | Amount | Sum
+                <div class="buyorder">
+<label id="p1">1</label><label id="a1"></label>
+                
+                </div>
               </h3>
-              <div class="buyorder">
-                <label id="a1" />100|<label id="s1" />50|<label id="p1" />1|
-              </div>
             </div>
 
             <br />
