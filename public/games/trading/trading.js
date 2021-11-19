@@ -190,7 +190,7 @@ function creating() {
   var imagineTab = document.getElementById("createTab");
   imagineTab.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
-  usersImagine.className = "userbracket";
+  usersImagine.className = "userpage";
   var home = document.getElementById("home");
   home.className = "hide";
   var wallet = document.getElementById("walletTab");

@@ -250,6 +250,13 @@
         cursor: pointer;
       }
 
+      .userpage {
+        position: relative;
+        display: block;
+        width: 45rem;
+        background-color: gold;
+        margin-top: 5rem;
+      }
       .userbracket {
         position: relative;
         display: block;
@@ -263,9 +270,9 @@
       .userbracketname {
         float: left;
         margin-top: 0.1rem;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
         margin-top: -3.5rem;
-        color: gold;
+        color: white;
         font-style: bold;
       }
       .userintro {
@@ -576,24 +583,29 @@
         <!-- users page -->
 
         <div id="usersImagine" class="hide">
-          <div class="trading">
+          <div class="userpage">
             <div class="userbracketname" id="usersToken">
               Imagination Name:
             </div>
             <p class="userintro" id="usersIntro">Imagination Intro: <br /></p>
-            <br>
-            <br>
+            <br />
+            <br />
+            <div class="userbracket">
+              <div class="userbracketname">
+                Sell Idea
+              </div>
+              <idea>Amount | Ideas | Cost</idea>
+            </div>
+            <br />
+            <br />
             <div class="userbracket">
               <div class="userbracketname">
                 Buy Idea
               </div>
+              <idea>Amount | Ideas | Cost</idea>
             </div>
           </div>
-          
-          
-          
-          
-          
+
           <br />
           <div class="hide" id="m11">
             <h1>
