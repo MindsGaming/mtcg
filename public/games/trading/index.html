@@ -319,13 +319,24 @@
         color: grey;
         cursor: pointer;
       }
-      
+
       .sellidea {
-        float: right;
         font-size: 10px;
-        width: 9rem;
+        color: white;
+        width: 100%;
       }
-      .sellButton{}
+      .sellButton {
+        float: right;
+        display: block;
+        background-color: white;
+        border-style: groove;
+        border-color: black;
+        width: 4rem;
+        color: red;
+      }
+      .saleprice {
+        width: 4rem;
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -671,11 +682,16 @@
                 Buy Offers
                 <div id="usersToken"></div>
                 <div class="sellidea">
-                Amount Of Tokens
-                  <input class="saleprice" id="salePrice" placeholder="0" type="text">
+                  Amount Of Tokens
+                  <input
+                    class="saleprice"
+                    id="salePrice"
+                    placeholder="0"
+                    type="text"
+                  /><br>
                   Value In Ideas
                   <label class="saleprice" id="valuePrice">0</label>
-                  <br>
+                  <br />
                   <div class="sellButton" onclick="SELLTOKEN();">
                     Sell Token
                   </div>
