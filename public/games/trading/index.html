@@ -258,14 +258,6 @@
         margin-top: 5rem;
       }
 
-      .userbracket {
-        float: left;
-        display: block;
-        background-color: green;
-        width: 100%;
-        margin-top: 5rem;
-        overflow: hidden;
-      }
       .holder {
         float: left;
         display: block;
@@ -278,7 +270,7 @@
         float: left;
         margin-top: 1rem;
         margin-left: 0.5rem;
-        margin-top: -3.5rem;
+        margin-top: -2.5rem;
         margin-bottom: -20px;
         color: black;
         font-style: bold;
@@ -286,30 +278,10 @@
       }
       .userintro {
         float: left;
-        margin-top: 3rem;
+        margin-top: 0.3rem;
         color: white;
+        max-width: 50rem;
         font-style: italic;
-      }
-
-      .amounts {
-        float: left;
-        display: block;
-        font-size: 16px;
-        margin-top: 10px;
-        border-style: soild;
-        border-color: black;
-      }
-
-      .offer {
-        float: left;
-        font-size: 16px;
-        margin-top: 3px;
-        margin-left: -3px;
-        border-style: solid;
-        width: 100%;
-        border-color: black;
-        color: white;
-        text-align: left;
       }
       .claimreward {
         position: relative;
@@ -320,23 +292,11 @@
         cursor: pointer;
       }
 
-      .sellidea {
-        font-size: 10px;
-        color: white;
-        width: 100%;
-      }
-      .sellButton {
-        float: right;
-        display: block;
-        background-color: white;
-        border-style: groove;
-        border-color: black;
-        width: 4rem;
-        color: red;
-        cursor: pointer;
-      }
-      .saleprice {
-        width: 4rem;
+      .orders {
+        position: relative;
+        width: 25rem;
+        background-color: green;
+        margin: 5rem;
       }
     </style>
     <script src="/games/trading/trading.js" defer></script>
@@ -370,7 +330,7 @@
             <p>Check Out <a href="/help">Help</a> For More HELP!</p>
           </div>
           <div class="hide" id="m2">
-            <h1>
+            <h1 >
               Lets Get Started
             </h1>
             <p>
@@ -674,63 +634,62 @@
             </div>
             <p class="userintro" id="usersIntro">Imagination Intro: <br /></p>
 
-            <div class="userbracket">
-              <div class="userbracketname">
-                <h2>
-                  Buy Offers
-                </h2>
-              </div>
-</div
-              <br />
-              <div class="hide" id="m11">
-                <h1>
-                  Great Idea!
-                </h1>
-                <p>
-                  You have created an Idea! <br />
-                  Lets learn some trading by selling your idea.
-                  <br />
+            <div class="orders">
+              <h2 style="float: left;">
+                Buy Orders
+              </h2>
+              <div class="line"
+            </div>
 
-                  <a class="button" onclick="m12ok();">
-                    Ok
-                  </a>
-                </p>
-              </div>
-              <div class="hide" id="m12">
-                <h1>
-                  Sell Your Idea!
-                </h1>
-                <p>
-                  Earn some rewards by selling your idea. <br />
-                  Click the top <b>buy offers amount</b>. <br />
-                  Then click <b>Sell Idea</b> <br />
-                  <br />
+            <br />
+            <div class="hide" id="m11">
+              <h1>
+                Great Idea!
+              </h1>
+              <p>
+                You have created an Idea! <br />
+                Lets learn some trading by selling your idea.
+                <br />
 
-                  <a class="button" onclick="m13ok();">
-                    Ok
-                  </a>
-                </p>
-              </div>
+                <a class="button" onclick="m12ok();">
+                  Ok
+                </a>
+              </p>
+            </div>
+            <div class="hide" id="m12">
+              <h1>
+                Sell Your Idea!
+              </h1>
+              <p>
+                Earn some rewards by selling your idea. <br />
+                Click the top <b>buy offers amount</b>. <br />
+                Then click <b>Sell Idea</b> <br />
+                <br />
 
-              <div class="hide" id="m13">
-                <h1>
-                  Great Sale!
-                </h1>
-                <p>
-                  You made a great sale! Now you have more reward tokens! <br />
-                  You now have enough rewards to buy other ideas, and make more
-                  reward tokens. <br />
+                <a class="button" onclick="m13ok();">
+                  Ok
+                </a>
+              </p>
+            </div>
 
-                  Making trades on ideas will suffle all idea prices, <br />
-                  so make the best trade avalible to make the most rewards!
-                  <br />
-                  Buy ideas with the <b>Buy Ideas Icon</b>
-                  <br />
-                  <a class="button" onclick="m14ok();">
-                    Learn More
-                  </a>
-                </p>
-              </div>
+            <div class="hide" id="m13">
+              <h1>
+                Great Sale!
+              </h1>
+              <p>
+                You made a great sale! Now you have more reward tokens! <br />
+                You now have enough rewards to buy other ideas, and make more
+                reward tokens. <br />
+
+                Making trades on ideas will suffle all idea prices, <br />
+                so make the best trade avalible to make the most rewards!
+                <br />
+                Buy ideas with the <b>Buy Ideas Icon</b>
+                <br />
+                <a class="button" onclick="m14ok();">
+                  Learn More
+                </a>
+              </p>
             </div>
           </div>
         </div>
