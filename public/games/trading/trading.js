@@ -190,7 +190,7 @@ function creating() {
   var imagineTab = document.getElementById("createTab");
   imagineTab.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
-  usersImagine.className = "trading";
+  usersImagine.className = "userbracket";
   var home = document.getElementById("home");
   home.className = "hide";
   var wallet = document.getElementById("walletTab");
@@ -247,7 +247,7 @@ function m14ok() {
 
 function usersIdea() {
   var usersImagine = document.getElementById("usersImagine");
-  usersImagine.className = "trading";
+  usersImagine.className = "userbracket";
   var home = document.getElementById("home");
   home.className = "hide";
   var wallet = document.getElementById("walletTab");
