@@ -291,9 +291,9 @@
         font-size: 16px;
         margin-top: 10px;
         border-style: soild;
-        border-color: black; 
+        border-color: black;
       }
-      
+
       .offer {
         float: left;
         font-size: 16px;
@@ -375,9 +375,7 @@
           </p>
           <div class="button" onclick="openTour();">Take Tour</div>
           <div class="trader" id="trader">
-            <p class="trade">
-              Imagination bought Imagination Token worth 100Imagination
-            </p>
+            <p class="trade">Ideas Bought <b>Imagination</b> For 1000Ideas</p>
           </div>
         </div>
 
@@ -576,11 +574,11 @@
         <div id="createTab" class="hide">
           <div class="trading">
             <div class="createtoken">
-              Imagination Name:
+              Idea Name:
               <input class="imaginename" id="imagineName" type="text" />
             </div>
             <p class="createtoken">
-              Imagination Intro: <br />
+              Idea Intro: <br />
               <input class="imagineintro" id="imagineIntro" type="text" />
             </p>
             <div class="button" onclick="creating();">Create</div>
@@ -625,8 +623,14 @@
               </div>
               <div class="line"></div>
               <idea class="amounts">Price | Amount | Sum | Trader</idea>
-                <div class="offer" id="buyOne">
-                 01.00 | 10000 | 10000 | Imagination 
+              <div class="offer" id="buyOne">
+                01.00 | 10000 | 10000 | Imagination
+              </div>
+              <div class="offer" id="buyTwo">
+                00.10 | 1000. | 1000. | Imagination
+              </div>
+              <div class="offer" id="buyThree">
+                00.01 | 100.0 | 100.0 | Imagination
               </div>
             </div>
             <br />
@@ -640,14 +644,20 @@
                 <div id="usersToken"></div>
               </div>
               <div class="line"></div>
-              <idea class="amounts">Price   | Amount | Sum | Trader
-              <div class="offer" id="sellOne">
-                1      | 1000 | 1000| Imagination
+              <idea class="amounts">Price | Amount | Sum | Trader</idea>
+              <div class="offer" id="buyOne">
+                01.10 | 10000 | 10000 | Imagination
               </div>
-              </idea>
-    
-              
+              <div class="offer" id="buyTwo">
+                02.10 | 1000. | 1000. | Imagination
+              </div>
+              <div class="offer" id="buyThree">
+                03.01 | 100.0 | 100.0 | Imagination
+              </div>
             </div>
+            <br>
+            <br>
+            <br>
           </div>
 
           <br />
