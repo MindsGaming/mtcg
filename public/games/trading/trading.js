@@ -182,11 +182,17 @@ function createMenu() {
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
-  usersImagine.className = "hide";  
+  usersImagine.className = "hide";
   openMenu();
 }
 
 function creating() {
+  var create = document.getElementById("imagineName").value;
+  var intro = document.getElementById("imagineIntro").value;
+  var userstoken = document.getElementById("usersToken");
+  userstoken.innerHTML = create;
+  var usersintro = document.getElementById("usersIntro");
+  usersintro.innerHTML = intro; 
   var imagineTab = document.getElementById("createTab");
   imagineTab.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
@@ -199,16 +205,15 @@ function creating() {
   trading.className = "hide";
   var button = document.getElementById("CREATE");
   button.className = "hide";
-  var create = document.getElementById("imagineName").value;
-  var intro = document.getElementById("imagineIntro").value;
-  var userstoken = document.getElementById("usersToken");
-  userstoken.innerHTML = create;
-  var usersintro = document.getElementById("usersIntro");
-  usersintro.innerHTML = intro;
   var myIdea = document.getElementById("IDEA");
   myIdea.className = "menuItem";
-  var usersImagine = document.getElementById("youridea");
-  usersImagine.className = "trade";
+  var youridea = document.getElementById("youridea");
+  youridea.className = "trade";
+  var yourIdea = document.getElementById("YOURIDEA");
+  usersImagine.innerHTML = create;
+  var yourImagination = document.getElementById("yourImagination");
+  yourImagination.value = "100000";
+  yourImagination.innerHTML = "100000";
 }
 
 function m10ok() {
