@@ -207,13 +207,10 @@ function creating() {
   button.className = "hide";
   var myIdea = document.getElementById("IDEA");
   myIdea.className = "menuItem";
+  var YOURIDEA = document.getElementById("YOURIDEA");
+  YOURIDEA.innerHTML = create;
   var youridea = document.getElementById("youridea");
-  youridea.className = "trade";
-  var yourIdea = document.getElementById("YOURIDEA");
-  usersImagine.innerHTML = create;
-  var yourImagination = document.getElementById("yourImagination");
-  yourImagination.value = "100000";
-  yourImagination.innerHTML = "100000";
+  youridea.className = "trade";  
 }
 
 function m10ok() {
