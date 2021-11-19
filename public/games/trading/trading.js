@@ -182,7 +182,7 @@ function createMenu() {
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
-  usersImagine.className = "hide";
+  usersImagine.className = "hide";  
   openMenu();
 }
 
@@ -207,6 +207,8 @@ function creating() {
   usersintro.innerHTML = intro;
   var myIdea = document.getElementById("IDEA");
   myIdea.className = "menuItem";
+  var usersImagine = document.getElementById("youridea");
+  usersImagine.className = "trade";
 }
 
 function m10ok() {
