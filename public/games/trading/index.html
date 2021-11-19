@@ -79,7 +79,7 @@
       }
       .trading {
         margin-top: 5rem;
-        margin-left: .1rem;
+        margin-left: 0.1rem;
       }
       .really {
         font-size: 17px;
@@ -241,12 +241,13 @@
         width: 10rem;
         height: 9rem;
       }
-      
+
       .idealisting {
         float: left;
-        font-size: 10px;
+        font-size: 13px;
         color: green;
         font-style: italic;
+        cursor: pointer;
       }
     </style>
     <script src="/games/trading/trading.js" defer></script>
@@ -333,10 +334,10 @@
               Markets
             </h1>
             <div class="line"></div>
-            <br>
-            <p class="idealisting">
+            <br />
+            <div class="idealisting" onclick="keepDreaming();">
               Rewards/Ideas
-            </p>
+            </div>
           </div>
           <div class="marketTokens" id="rewardTokens">
             <br /><br /><br />
@@ -350,14 +351,15 @@
               </div>
             </h1>
             <h1 class="markertTokens" id="lostImagination">
-              <p>Gamer <br /></p>
-            </h1>
-            <h1 class="hide" id="airdrops">
-              <div id="imagineAir" class="imagineAir" onclick="imagineAirs();">
-                <p>Imagination</p>
+              <div class="idealisting" onclick="keepDreaming();">
+                Idea GAMER
               </div>
             </h1>
+            <h1 class="hide" id="airdrops">
+              <div class="idealisting" onclick="imagineAirs();">Imaginaton</div>
+            </h1>
           </div>
+
           <div class="hide" id="m3">
             <h1>
               Great!

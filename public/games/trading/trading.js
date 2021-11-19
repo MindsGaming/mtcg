@@ -1,3 +1,7 @@
+function keepDreaming() {
+  alert("This functions hasn't been built, Keep Dreaming");
+}
+
 function takeTour() {
   var hide = document.getElementById("m1");
   hide.classList.toggle("hide");
@@ -112,11 +116,17 @@ function fakeTokens() {
 }
 
 function m5() {
-  var m4 = document.getElementById("m4");
-  m4.className = "hide";
-  var m5 = document.getElementById("m5");
-  m5.className = "marketTokens";
+  var tackCount = document.getElementById("imaginationToken").value;
+  if (tackCount == "0") {
+    alert("Claim The Airdrop To Countiue");
+  } else {
+    var m4 = document.getElementById("m4");
+    m4.className = "hide";
+    var m5 = document.getElementById("m5");
+    m5.className = "marketTokens";
+  }
 }
+
 function m6() {
   var m5 = document.getElementById("m5");
   m5.className = "hide";
