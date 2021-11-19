@@ -259,14 +259,20 @@
       }
 
       .userbracket {
-        position: relative;
+        float: left;
         display: block;
-        width: 45rem;
-        height: 15rem;
         background-color: green;
-        overflow: scroll;
+        width: 100%;
         margin-top: 5rem;
-        margin-bottom: -5rem;
+        overflow: hidden;
+      }
+       .holder {
+        float: left;
+        display: block;
+        background-color: green;
+        width: 100%;
+        margin-top: 5rem;
+        overflow: hidden;
       }
       .userbracketname {
         float: left;
@@ -655,9 +661,7 @@
                 03.01 | 100.0 | 100.0 | Imagination
               </div>
             </div>
-            <br>
-            <br>
-            <br>
+            <div class="holder"></div>
           </div>
 
           <br />
