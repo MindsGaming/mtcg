@@ -192,7 +192,7 @@ function creating() {
   var userstoken = document.getElementById("usersToken");
   userstoken.innerHTML = create;
   var usersintro = document.getElementById("usersIntro");
-  usersintro.innerHTML = intro; 
+  usersintro.innerHTML = intro;
   var imagineTab = document.getElementById("createTab");
   imagineTab.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
@@ -210,7 +210,16 @@ function creating() {
   var YOURIDEA = document.getElementById("YOURIDEA");
   YOURIDEA.innerHTML = create;
   var youridea = document.getElementById("youridea");
-  youridea.className = "trade";  
+  youridea.className = "trade";
+  var yourImagination = document.getElementById("yourImagination");
+  yourImagination.value = +100000;
+  var yourimagination = document.getElementById("yourimagination");
+  yourimagination.innerHTML = "100000";
+  
+  if (YOURIDEA.innerHTML == ""){
+    YOURIDEA.innerHTML = "Undefined"
+  }
+  
 }
 
 function m10ok() {
