@@ -208,18 +208,17 @@ function creating() {
   var myIdea = document.getElementById("IDEA");
   myIdea.className = "menuItem";
   var YOURIDEA = document.getElementById("YOURIDEA");
-  YOURIDEA.innerHTML = create;
+  YOURIDEA.innerHTML = create + " Idea:";
   var youridea = document.getElementById("youridea");
   youridea.className = "trade";
   var yourImagination = document.getElementById("yourImagination");
   yourImagination.value = +100000;
   var yourimagination = document.getElementById("yourimagination");
   yourimagination.innerHTML = "100000";
-  
-  if (YOURIDEA.innerHTML == ""){
-    YOURIDEA.innerHTML = "Undefined"
+
+  if (YOURIDEA.innerHTML == "") {
+    YOURIDEA.innerHTML = "Undefined Idea";
   }
-  
 }
 
 function m10ok() {
