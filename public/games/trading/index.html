@@ -253,15 +253,26 @@
       .userbracket {
         position: relative;
         display: block;
-        width: 15rem;
+        width: 45rem;
+        height: 15rem;
         background-color: green;
+        overflow: scroll;
+        margin-top: 5rem;
       }
 
       .userbracketname {
         float: left;
-        margin: 0.1rem;
+        margin-top: 0.1rem;
+        margin-left: .5rem;
+        margin-top: -3.5rem;
         color: gold;
         font-style: bold;
+      }
+      .userintro {
+        float: left;
+        margin-top: 3rem;
+        color: white;
+        font-style: italic;
       }
     </style>
     <script src="/games/trading/trading.js" defer></script>
@@ -566,11 +577,23 @@
 
         <div id="usersImagine" class="hide">
           <div class="trading">
-            <div class="usersbracketname" id="usersToken">
+            <div class="userbracketname" id="usersToken">
               Imagination Name:
             </div>
-            <p class="usersintro" id="usersIntro">Imagination Intro: <br /></p>
+            <p class="userintro" id="usersIntro">Imagination Intro: <br /></p>
+            <br>
+            <br>
+            <div class="userbracket">
+              <div class="userbracketname">
+                Buy Idea
+              </div>
+            </div>
           </div>
+          
+          
+          
+          
+          
           <br />
           <div class="hide" id="m11">
             <h1>
