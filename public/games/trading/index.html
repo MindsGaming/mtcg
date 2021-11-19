@@ -306,10 +306,20 @@
         position: relative;
         border-style: solid;
         border-color: black;
+        margin-bottom: 1rem;
       }
 
       label {
-        margin-left: .5rem;
+        margin-left: 0.5rem;
+      }
+
+      .sellButton {
+        float: right;
+        margin: 0.05rem;
+        background-color: white;
+        border-style: groove;
+        border-color: silver;
+        color: red;
       }
     </style>
     <script src="/games/trading/trading.js" defer></script>
@@ -654,13 +664,24 @@
               <br />
               <div class="line"></div>
               <br />
-              <h3>
+              <h3 >
                 Price | Amount | Sum
                 <div class="buyorder">
                   <label id="p1">1.00 </label><label id="a1"> | 100.00</label
                   ><label id="s1">| 100.00 </label>
+                  <div class="sellButton">
+                    Sell Idea
+                  </div>
+                </div>
+                  <div class="buyorder">
+                  <label id="p1">.90 </label><label id="a1"> | 90.00</label
+                  ><label id="s1">| 90.00 </label>
+                  <div class="sellButton">
+                    Sell Idea
+                  </div>
                 </div>
               </h3>
+              <br />
             </div>
 
             <br />
