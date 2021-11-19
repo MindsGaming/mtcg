@@ -257,7 +257,7 @@
         background-color: gold;
         margin-top: 5rem;
       }
-      
+
       .userbracket {
         position: relative;
         display: block;
@@ -273,7 +273,8 @@
         margin-top: 1rem;
         margin-left: 0.5rem;
         margin-top: -3.5rem;
-        color: red;
+        margin-bottom: -20px;
+        color: black;
         font-style: bold;
         font-size: 25px;
       }
@@ -282,6 +283,12 @@
         margin-top: 3rem;
         color: white;
         font-style: italic;
+      }
+
+      .amounts {
+        float: left;
+        font-size: 16px;
+        margin-top: 10px;
       }
     </style>
     <script src="/games/trading/trading.js" defer></script>
@@ -586,7 +593,7 @@
 
         <div id="usersImagine" class="hide">
           <div class="userpage">
-            <br>
+            <br />
             <div class="userbracketname" id="usersToken">
               Imagination Name:
             </div>
@@ -594,18 +601,26 @@
             <br />
             <br />
             <div class="userbracket">
+              <br />
+              <br />
+              <br />
               <div class="userbracketname">
-                Sell Idea
+                Buy Offers
               </div>
-              <idea>Amount | Ideas | Cost</idea>
+              <div class="line"></div>
+              <idea class="amounts">Amount | Ideas | Cost</idea>
             </div>
             <br />
             <br />
             <div class="userbracket">
+              <br>
+              <br>
+              <br>
               <div class="userbracketname">
-                Buy Idea
+                Sell Offers
               </div>
-              <idea>Amount | Ideas | Cost</idea>
+              <div class="line"></div>
+              <idea class="amounts">Amount | Ideas | Cost</idea>
             </div>
           </div>
 

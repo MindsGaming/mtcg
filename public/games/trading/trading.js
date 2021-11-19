@@ -247,7 +247,7 @@ function m14ok() {
 
 function usersIdea() {
   var usersImagine = document.getElementById("usersImagine");
-  usersImagine.className = "userbracket";
+  usersImagine.className = "userpage";
   var home = document.getElementById("home");
   home.className = "hide";
   var wallet = document.getElementById("walletTab");
