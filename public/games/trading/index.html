@@ -311,6 +311,13 @@
         color: white;
         text-align: left;
       }
+      .claimreward {
+        position: relative;
+        border-style: groove;
+        width: 3rem;
+        margin: 2rem;
+        color: grey;
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -488,6 +495,24 @@
             <ul>
               <li class="trade">
                 Rewards:
+                <div id="rewardtoken">0</div>
+
+                <div
+                  class="claimreward"
+                  id="claimReward"
+                  onclick="keepDreaming();"
+                >
+                  Claim Reward
+                </div>
+                <meter
+                  class="hide"
+                  id="rewardToken"
+                  value="0"
+                  max="1000"
+                ></meter>
+              </li>
+              <li class="trade">
+                Ideas:
                 <meter
                   class="hide"
                   id="imaginationToken"
@@ -497,18 +522,18 @@
 
                 <div id="imaginationtoken">0</div>
               </li>
-              <li class="trade">
+              <li class="trade" onclick="keepDreaming();">
                 GAMER Idea:
                 <meter class="hide" id="imginationGamer" value="0"></meter>
 
                 <div id="imaginationgamer">0</div>
               </li>
-              <li class="trade">
+              <li class="trade" onclick="keepDreraming();">
                 <meter class="hide" id="ImaginationDoobetter" value="0"></meter>
                 DooBetter Idea:
                 <div id="imaginationdoobetter">0</div>
               </li>
-              <li class="trade">
+              <li class="trade" onclick="keepDreaming">
                 <meter class="hide" id="imaginationEclipse" value="0"></meter>
                 ECLIPSE Idea:
                 <div id="imaginationeclipse">0</div>
