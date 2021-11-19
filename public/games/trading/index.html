@@ -290,6 +290,16 @@
         font-size: 16px;
         margin-top: 10px;
       }
+      
+      .offer {
+        float: left;
+        font-size: 16px;
+        margin-top: 50px;
+        border-style: solid;
+        width: 100%;
+        border-color: black;
+        color: white;
+      }
     </style>
     <script src="/games/trading/trading.js" defer></script>
     <script src="/js/fly.js" defer></script>
@@ -610,6 +620,9 @@
               </div>
               <div class="line"></div>
               <idea class="amounts">Amount | Ideas | Cost</idea>
+                <div class="offer" id="buyOne">
+                1 | 1000 | 1000| Imagination
+              </div>
             </div>
             <br />
             <br />
@@ -622,7 +635,10 @@
                 <div id="usersToken"></div>
               </div>
               <div class="line"></div>
-              <idea class="amounts">Amount | Ideas | Cost</idea>
+              <idea class="amounts">Price | Amount | Sum | Trader</idea>
+              <div class="offer" id="sellOne">
+                1 | 1000 | 1000| Imagination
+              </div>
             </div>
           </div>
 
