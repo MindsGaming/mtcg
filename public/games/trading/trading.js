@@ -779,33 +779,6 @@ function buyFour() {
   walletCheck();
 }
 
-function walletCheck() {
-  var ideaToken = document.getElementById("yourImagination").value;
-  var ideatoken = document.getElementById("yourimagination").innerHTML;
-  var imaginationToken = document.getElementById("imaginationToken").value;
-  var imaginationtoken = document.getElementById("imaginationtoken").innerHTML;
-  var eclipseToken = document.getElementById("eclipseImagination").value;
-  var eclipsetoken = document.getElementById("eclipseimagination").innerHTML;
-  var doobetterToken = document.getElementById("doobetterImagination").value;
-  var doobettertoken = document.getElementById("doobetterImagination")
-    .innerHTML;
-  var gamerToken = document.getElementById("gamerImagination").value;
-  var gamertoken = document.getElementById("gamerimagination").innerHTML;
-  var rewardtoken = document.getElementById("rewardtoken").innerHTML;
-  var rewardToken = document.getElementById("rewardtoken").value;
-
-  ideatoken = ideaToken;
-  imaginationtoken = imaginationToken;
-  eclipsetoken = eclipseToken;
-  doobettertoken = doobetterToken;
-  gamertoken = gamerToken;
-  rewardtoken = rewardToken;
-
-  if (rewardToken == "1000") {
-    alert("You have maxed out your rewards, claim them!");
-  }
-}
-
 function rewardIdea() {
   var usersImagine = document.getElementById("usersImagine");
   usersImagine.className = "hide";
@@ -825,7 +798,7 @@ function rewardIdea() {
   rewardImagine.className = "userpage";
 }
 
-function buyFive() {
+function blockReward() {
   var check = document.getElementById("imaginationToken");
 
   if (check.value == "0") {
@@ -846,11 +819,11 @@ function buyFive() {
     a1.innerHTML = AMOUNT + " |";
     s1.innerHTML = SUM + " |";
 
-    var ideaToken = document.getElementById("rewardsToken").value;
+    var ideaToken = document.getElementById("blockRewards").value;
     var boost = ideaToken + AMOUNT;
-    var ideatoken = document.getElementById("rewardstoken");
+    var ideatoken = document.getElementById("blockrewards");
     ideatoken.innerHTML = boost;
-    document.getElementById("rewardsToken").value = ideatoken.innerHTML;
+    document.getElementById("rewardsTokens").value = ideatoken.innerHTML;
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken - SUM;
@@ -861,4 +834,31 @@ function buyFive() {
     walletCheck();
   }
   walletCheck();
+}
+
+function walletCheck() {
+  var ideaToken = document.getElementById("yourImagination").value;
+  var ideatoken = document.getElementById("yourimagination").innerHTML;
+  var imaginationToken = document.getElementById("imaginationToken").value;
+  var imaginationtoken = document.getElementById("imaginationtoken").innerHTML;
+  var eclipseToken = document.getElementById("eclipseImagination").value;
+  var eclipsetoken = document.getElementById("eclipseimagination").innerHTML;
+  var doobetterToken = document.getElementById("doobetterImagination").value;
+  var doobettertoken = document.getElementById("doobetterimagination")
+    .innerHTML;
+  var gamerToken = document.getElementById("gamerImagination").value;
+  var gamertoken = document.getElementById("gamerimagination").innerHTML;
+  var rewardtoken = document.getElementById("blockreward").innerHTML;
+  var rewardToken = document.getElementById("blockReward").value;
+
+  ideatoken = ideaToken;
+  imaginationtoken = imaginationToken;
+  eclipsetoken = eclipseToken;
+  doobettertoken = doobetterToken;
+  gamertoken = gamerToken;
+  rewardtoken = rewardToken;
+
+  if (rewardToken == "1000") {
+    alert("You have maxed out your rewards, claim them!");
+  }
 }
