@@ -831,7 +831,7 @@ function rewardIdea() {
 }
 
 function buyFive() {
-  var check = document.getElementById("imaginationToken");
+  var check = document.getElementById("imaginationtoken");
 
   if (check.innerHTML == "0") {
     alert("Not Enough, Try Other Trading ideas");
@@ -840,7 +840,9 @@ function buyFive() {
     var a1 = document.getElementById("a10");
     var s1 = document.getElementById("s10");
 
-    var PRICE = +0.5;
+    var PRICES = ["5", "10", "20", "1"]
+    
+    var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
     var SUM = PRICE * AMOUNT;
@@ -848,11 +850,11 @@ function buyFive() {
     a1.innerHTML = AMOUNT + " |";
     s1.innerHTML = SUM + " |";
 
-    var ideaToken = document.getElementById("eclipseImagination").value;
+    var ideaToken = document.getElementById("rewardsToken").value;
     var boost = ideaToken + AMOUNT;
-    var ideatoken = document.getElementById("eclipseimagination");
+    var ideatoken = document.getElementById("rewardstoken");
     ideatoken.innerHTML = boost;
-    document.getElementById("eclipseImagination").value = ideatoken.innerHTML;
+    document.getElementById("rewardsToken").value = ideatoken.innerHTML;
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken - SUM;
