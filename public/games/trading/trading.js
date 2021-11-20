@@ -778,19 +778,17 @@ function walletCheck() {
     .innerHTML;
   var gamerToken = document.getElementById("gamerImagination").value;
   var gamertoken = document.getElementById("gamerimagination").innerHTML;
+  var rewardtoken = document.getElementById("rewardtoken").innerHTML;
+  var rewardToken = document.getElementById("rewardtoken").value;
 
   ideatoken = ideaToken;
   imaginationtoken = imaginationToken;
   eclipsetoken = eclipseToken;
   doobettertoken = doobetterToken;
   gamertoken = gamerToken;
+  rewardtoken = rewardToken;
 
-  var check = {
-    ideatoken,
-    imaginationtoken,
-    eclipsetoken,
-    doobettertoken,
-    gamertoken
-  };
-
+  if ((rewardToken = "1000")) {
+    alert("You have maxed out your rewards, claim them!");
+  }
 }
