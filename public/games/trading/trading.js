@@ -747,6 +747,117 @@ function buyThree() {
 }
 
 
+// DooBettter/Ideas //
+function sellFour() {
+  walletCheck();
+  var check = document.getElementById("doobetterImagination");
+
+  if (check.value == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("G1");
+
+    var ideaToken = document.getElementById("doobetterImagination").value;
+    var boost = ideaToken - A1.value;
+    var ideatoken = document.getElementById("doobetterimagination");
+    ideatoken.innerHTML = boost;
+    ideatoken.value = ideatoken.innerHTML;
+
+    var B1 = document.getElementById("H1");
+
+    var imaginationToken = document.getElementById("imaginationToken").value;
+    var booster = imaginationToken + B1.value;
+    var imaginationtoken = document.getElementById("imaginationtoken");
+    imaginationtoken.innerHTML = booster;
+    imaginationToken.value = imaginationtoken.innerHTML;
+
+    var p1 = document.getElementById("p7");
+    var a1 = document.getElementById("a7");
+    var s1 = document.getElementById("s7");
+
+    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+
+    var SUM = PRICE * AMOUNT;
+    p1.innerHTML = PRICE + " |";
+    a1.innerHTML = AMOUNT + " |";
+    s1.innerHTML = SUM + " |";
+
+    A1.value = AMOUNT;
+    B1.value = SUM;
+
+    var p2 = document.getElementById("p8");
+    var a2 = document.getElementById("a8");
+    var s2 = document.getElementById("s8");
+
+    p2.innerHTML = PRICE * 1.3 + " |";
+    a2.innerHTML = AMOUNT * 1.3 + " |";
+    s2.innerHTML = SUM * 1.3 + " |";
+
+    var C1 = document.getElementById("G2");
+    var D1 = document.getElementById("H2");
+
+    C1.value = AMOUNT;
+    D1.value = SUM;
+  }
+}
+
+function buyFour() {
+  walletCheck();
+  var check = document.getElementById("imaginationToken");
+
+  if (check.value == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("F1");
+
+    var ideaToken = document.getElementById("doobetterImagination").value;
+    var boost = ideaToken + A1.value;
+    var ideatoken = document.getElementById("doobetterimagination");
+    ideatoken.innerHTML = boost;
+    ideatoken.value = ideatoken.innerHTML;
+
+    var B1 = document.getElementById("G1");
+
+    var imaginationToken = document.getElementById("imaginationToken").value;
+    var booster = imaginationToken - B1.value;
+    var imaginationtoken = document.getElementById("imaginationtoken");
+    imaginationtoken.innerHTML = booster;
+    imaginationToken.value = imaginationtoken.innerHTML;
+
+    var p1 = document.getElementById("p8");
+    var a1 = document.getElementById("a8");
+    var s1 = document.getElementById("s8");
+
+    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+
+    var SUM = PRICE * AMOUNT;
+    p1.innerHTML = PRICE + " |";
+    a1.innerHTML = AMOUNT + " |";
+    s1.innerHTML = SUM + " |";
+
+    A1.value = AMOUNT;
+    B1.value = SUM;
+
+    var p2 = document.getElementById("p7");
+    var a2 = document.getElementById("a7");
+    var s2 = document.getElementById("s7");
+
+    p2.innerHTML = PRICE * 1.3 + " |";
+    a2.innerHTML = AMOUNT * 1.3 + " |";
+    s2.innerHTML = SUM * 1.3 + " |";
+
+    var C1 = document.getElementById("E2");
+    var D1 = document.getElementById("F2");
+
+    C1.value = AMOUNT;
+    D1.value = SUM;
+  }
+}
+
+
+
 function walletCheck() {
   var imaginationToken = document.getElementById("imaginationToken");
   var rewardToken = document.getElementById("rewardBlock");
