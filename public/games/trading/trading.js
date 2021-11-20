@@ -426,7 +426,7 @@ function rewardIdea() {
   rewardImagine.className = "userpage";
 }
 
-function getOffer() {
+function getSell() {
   var PRICE = price[Math.floor(Math.random() * price.length)];
   var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
   var SUM = PRICE * AMOUNT;
@@ -459,48 +459,135 @@ function getOffer() {
   var s8 = document.getElementById("s8");
 
   var p10 = document.getElementById("p10");
-  var p10 = document.getElementById("a10");
-  var p10 = document.getElementById("s10");
+  var a10 = document.getElementById("a10");
+  var s10 = document.getElementById("s10");
   var p11 = document.getElementById("p11");
-  var p11 = document.getElementById("a11");
+  var a11 = document.getElementById("a11");
   var s11 = document.getElementById("s11");
-  
-  
-  var p1 ;
-  var a1 ;
-  var s1 ;
-  var p2 ;
-  var a2 ;
-  var s2 ;
 
-  var p3 ;
-  var a3 ;
-  var s3;
-  var p4 ;
-  var a4 ;
-  var s4 ;
+  p1.innerHTML = PRICE + " |";
+  a1.innerHTML = AMOUNT + " |";
+  s1.innerHTML = SUM + " |";
+  p2.innerHTML = PRICE + "0.05" + " |";
+  a2.innerHTML = AMOUNT + "0.05" + " |";
+  s2.innerHTML = SUM + "0.05" + " |";
 
-  var p5 ;
-  var a5 ;
-  var s5 ;
-  var p6 ;
-  var a6 ;
-  var s6 ;
+  p3.innerHTML = PRICE + " |";
+  a3.innerHTML = AMOUNT + " |";
+  s3.innerHTML = SUM + " |";
+  p4.innerHTML = PRICE + "0.05" + " |";
+  a4.innerHTML = AMOUNT + "0.05" + " |";
+  s4.innerHTML = SUM + "0.05" + " |";
 
-  var p7 ;
-  var a7 ;
-  var s7 ;
-  var p8 ;
-  var a8 ;
-  var ;
+  p3.innerHTML = PRICE + " |";
+  a3.innerHTML = AMOUNT + " |";
+  s3.innerHTML = SUM + " |";
+  p4.innerHTML = PRICE + "0.05" + " |";
+  a4.innerHTML = AMOUNT + "0.05" + " |";
+  s4.innerHTML = SUM + "0.05" + " |";
+
+  p5.innerHTML = PRICE + " |";
+  a5.innerHTML = AMOUNT + " |";
+  s5.innerHTML = SUM + " |";
+  p6.innerHTML = PRICE + "0.05" + " |";
+  a6.innerHTML = AMOUNT + "0.05" + " |";
+  s6.innerHTML = SUM + "0.05" + " |";
+
+  p7.innerHTML = PRICE + " |";
+  a7.innerHTML = AMOUNT + " |";
+  s7.innerHTML = SUM + " |";
+  p8.innerHTML = PRICE + "0.05" + " |";
+  a8.innerHTML = AMOUNT + "0.05" + " |";
+  s8.innerHTML = SUM + "0.05" + " |";
+
+  p10.innerHTML = PRICE + " |";
+  a10.innerHTML = AMOUNT + " |";
+  s10.innerHTML = SUM + " |";
+  p11.innerHTML = PRICE + "0.05" + " |";
+  a11.innerHTML = AMOUNT + "0.05" + " |";
+  s11.innerHTML = SUM + "0.05" + " |";
+}
+
+function getBuy() {
+  var PRICE = price[Math.floor(Math.random() * price.length)];
+  var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+  var SUM = PRICE * AMOUNT;
+  var p1 = document.getElementById("p1");
+  var a1 = document.getElementById("a1");
+  var s1 = document.getElementById("s1");
+  var p2 = document.getElementById("p2");
+  var a2 = document.getElementById("a2");
+  var s2 = document.getElementById("s2");
+
+  var p3 = document.getElementById("p3");
+  var a3 = document.getElementById("a3");
+  var s3 = document.getElementById("s3");
+  var p4 = document.getElementById("p4");
+  var a4 = document.getElementById("a4");
+  var s4 = document.getElementById("s4");
+
+  var p5 = document.getElementById("p5");
+  var a5 = document.getElementById("a5");
+  var s5 = document.getElementById("s5");
+  var p6 = document.getElementById("p6");
+  var a6 = document.getElementById("a6");
+  var s6 = document.getElementById("s6");
+
+  var p7 = document.getElementById("p7");
+  var a7 = document.getElementById("a7");
+  var s7 = document.getElementById("s7");
+  var p8 = document.getElementById("p8");
+  var a8 = document.getElementById("a8");
+  var s8 = document.getElementById("s8");
 
   var p10 = document.getElementById("p10");
-  var p10 = document.getElementById("a10");
-  var p10 = document.getElementById("s10");
+  var a10 = document.getElementById("a10");
+  var s10 = document.getElementById("s10");
   var p11 = document.getElementById("p11");
-  var p11 = document.getElementById("a11");
+  var a11 = document.getElementById("a11");
   var s11 = document.getElementById("s11");
-  
+
+  p1.innerHTML = PRICE + " |";
+  a1.innerHTML = AMOUNT + " |";
+  s1.innerHTML = SUM + " |";
+  p2.innerHTML = PRICE - "0.05" + " |";
+  a2.innerHTML = AMOUNT - "0.05" + " |";
+  s2.innerHTML = SUM - "0.05" + " |";
+
+  p3.innerHTML = PRICE + " |";
+  a3.innerHTML = AMOUNT + " |";
+  s3.innerHTML = SUM + " |";
+  p4.innerHTML = PRICE - "0.05" + " |";
+  a4.innerHTML = AMOUNT - "0.05" + " |";
+  s4.innerHTML = SUM - "0.05" + " |";
+
+  p3.innerHTML = PRICE + " |";
+  a3.innerHTML = AMOUNT + " |";
+  s3.innerHTML = SUM + " |";
+  p4.innerHTML = PRICE - "0.05" + " |";
+  a4.innerHTML = AMOUNT - "0.05" + " |";
+  s4.innerHTML = SUM - "0.05" + " |";
+
+  p5.innerHTML = PRICE + " |";
+  a5.innerHTML = AMOUNT + " |";
+  s5.innerHTML = SUM + " |";
+  p6.innerHTML = PRICE - "0.05" + " |";
+  a6.innerHTML = AMOUNT - "0.05" + " |";
+  s6.innerHTML = SUM - "0.05" + " |";
+
+  p7.innerHTML = PRICE + " |";
+  a7.innerHTML = AMOUNT + " |";
+  s7.innerHTML = SUM + " |";
+  p8.innerHTML = PRICE - "0.05" + " |";
+  a8.innerHTML = AMOUNT - "0.05" + " |";
+  s8.innerHTML = SUM - "0.05" + " |";
+
+  p10.innerHTML = PRICE + " |";
+  a10.innerHTML = AMOUNT + " |";
+  s10.innerHTML = SUM + " |";
+  p11.innerHTML = PRICE - "0.05" + " |";
+  a11.innerHTML = AMOUNT - "0.05" + " |";
+  s11.innerHTML = SUM - "0.05" + " |";
 }
 
 function sellOne() {
