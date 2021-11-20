@@ -224,7 +224,7 @@ function creating() {
   var create = document.getElementById("imagineName").value;
   var intro = document.getElementById("imagineIntro").value;
   var userstoken = document.getElementById("usersToken");
-  userstoken.innerHTML = create + " Idea:";
+  userstoken.innerHTML = create + "/Ideas:";
   var usersintro = document.getElementById("usersIntro");
   usersintro.innerHTML = intro;
   var imagineTab = document.getElementById("createTab");
