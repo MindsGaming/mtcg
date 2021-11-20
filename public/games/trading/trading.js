@@ -821,7 +821,7 @@ function blockReward() {
     s1.innerHTML = SUM + " |";
 
     var ideaToken = document.getElementById("rewardBlock").value;
-    var boost = ideaToken + AMOUNT;
+    var boost = ideaToken + SUM;
     var ideatoken = document.getElementById("rewardblock");
     ideatoken.innerHTML = boost;
     document.getElementById("rewardBlock").value = ideatoken.innerHTML;
@@ -839,4 +839,16 @@ function blockReward() {
 
 function walletCheck() {
   var check;
+      var ideaToken = document.getElementById("rewardBlock").value;
+      var imaginationToken = document.getElementById("imaginationToken").value;
+  if (imaginationToken.value == "0"){
+          var ideatoken = document.getElementById("rewardblock").innerHTML;
+      var imaginationtoken = document.getElementById("imaginationtoken").innerHTML;
+    check = ideatoken - imaginationtoken;
+    
+    
+    
+
+  }  
+
 }
