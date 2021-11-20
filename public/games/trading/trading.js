@@ -271,21 +271,8 @@ function usersIdea() {
   openMenu();
 }
 
-var price = [ "1.00", "2.00", "3.00", "4.00"];
-var amount = "100.00";
-
-function HOLDERme() {
-  var p1 = document.getElementByID("p1");
-  var a1 = document.getElementById("a1");
-  var s1 = document.getElementById("s1");
-
-  var PRICE = price[Math.floor(Math.random() * price.length)];
-  var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
-
-  var SUM = PRICE * AMOUNT;
-
-  alert(PRICE);
-}
+var price = ["1.00", "2.00", "3.00", "4.00"];
+var amount = ["100.00", "200.00"];
 
 function sellOne() {
   var p1 = document.getElementById("p1");
@@ -299,4 +286,14 @@ function sellOne() {
   p1.innerHTML = PRICE + " |";
   a1.innerHTML = AMOUNT + " |";
   s1.innerHTML = SUM + " |";
+
+  var ideaToken = document.getElementById("yourImagination").value;
+  var boost = ideaToken - AMOUNT;
+  var ideatoken = document.getElementById("yourimagination");
+  ideatoken.innerHTML = boost;
+
+  var imaginationToken = document.getElementById("imaginationToken").value;
+  var booster = ideaToken - AMOUNT;
+  var imaginationtoken = document.getElementById("imaginationToken");
+  imaginationtoken.innerHTML = booster;
 }
