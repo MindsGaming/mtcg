@@ -439,35 +439,34 @@ function sellOne() {
     imaginationtoken.innerHTML = booster;
     imaginationToken.value = imaginationtoken.innerHTML;
 
+    var A1 = document.getElementById("A1");
+    var A2 = document.getElementById("A2");
+    var A3 = document.getElementById("A3");
+    var A4 = document.getElementById("A4");
+
+    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+    var SUM = PRICE * AMOUNT;
+
+    A1.value = PRICE;
+    A2.value = SUM;
+
     var p1 = document.getElementById("p1");
     var a1 = document.getElementById("a1");
     var s1 = document.getElementById("s1");
-    var A1 = document.getElementById("A1");
-    var A2 = document.getElementById("A2");
+    p1.innerHTML = PRICE + " |";
+    a1.innerHTML = AMOUNT + " |";
+    s1.innerHTML = SUM + " |";
 
     var p2 = document.getElementById("p2");
     var a2 = document.getElementById("a2");
     var s2 = document.getElementById("s2");
-    var A3 = document.getElementById("A3");
-    var A4 = document.getElementById("A4");
-    
-    var AMOUNT = A1.value
-    var SUM = A2.value;
-    
-    var amount = A3.value;
-    var sum = A4.value;
-    
-    
-    ar PRICE = price[Math.floor(Math.random() * price.length)];
-      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-      var SUM = PRICE * AMOUNT;
-      p1.innerHTML = PRICE + " |";
-      a1.innerHTML = AMOUNT + " |";
-      s1.innerHTML = SUM + " |";
+    p2.innerHTML = PRICE * 1.3 + " |";
+    a2.innerHTML = AMOUNT * 1.3 + " |";
+    s2.innerHTML = SUM * 1.3 + " |";
     
-    
-    
+    A3.value
   }
 }
 
