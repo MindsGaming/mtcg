@@ -271,8 +271,31 @@ function usersIdea() {
   openMenu();
 }
 
-var price = ["1.00", "2.00", "3.00", "4.00", "5.00", "6.00", "7.00", "8.00", "9.00", "10.00", "11.00", "12.00", "13.00", "14.00"];
-var amount = ["100.00", "200.00", "300.00", "400.00", "500.00", "600.00", "1000"];
+var price = [
+  "1.00",
+  "2.00",
+  "3.00",
+  "4.00",
+  "5.00",
+  "6.00",
+  "7.00",
+  "8.00",
+  "9.00",
+  "10.00",
+  "11.00",
+  "12.00",
+  "13.00",
+  "14.00"
+];
+var amount = [
+  "100.00",
+  "200.00",
+  "300.00",
+  "400.00",
+  "500.00",
+  "600.00",
+  "1000"
+];
 
 function sellOne() {
   var check = document.getElementById("yourimagination");
@@ -315,7 +338,10 @@ function sellOne() {
     p2.innerHTML = BUYprice + " |";
     a2.innerHTML = BUYamount + " |";
     s3.innerHTML = BUYsum + " |";
+
+    walletCheck();
   }
+  walletCheck();
 }
 
 function buyOne() {
@@ -359,5 +385,18 @@ function buyOne() {
     p2.innerHTML = BUYprice + " |";
     a2.innerHTML = BUYamount + " |";
     s3.innerHTML = BUYsum + " |";
+
+    walletCheck();
   }
+  walletCheck;
+}
+
+function walletCheck() {
+  var ideaToken = document.getElementById("yourImagination");
+  var ideatoken = document.getElementById("yourimagination");
+  var imaginationToken = document.getElementById("imaginationToken");
+  var imaginationtoken = document.getElementById("imaginationtoken");
+
+  ideatoken.innerHTML = ideaToken.value;
+  imaginationtoken.innerHTML = imaginationToken.value;
 }
