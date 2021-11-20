@@ -987,18 +987,5 @@ function walletCheck() {
     document.getElementById("rewardblock").innerHTML = sub;
     document.getElementById("rewardBlock").value = sub;
   }
-
-  
-  function superman() {
-  var A1 = document.getElementById("A1"),
-  var A2 = document.getElementById("B1"),
-  var A3 = document.getElementById("A2"),
-  var A4 = document.getElementById("B2")
-  
-  var C1 = document.getElementById("A1"),
-  var A2 = document.getElementById("B1"),
-  var A3 = document.getElementById("A2"),
-  var A4 = document.getElementById("B2")
-  }
   
 }
