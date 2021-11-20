@@ -47,14 +47,13 @@ function tradingMenu() {
   create.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
   usersImagine.className = "hide";
-  var gamerImagine = document.getElementById("gamerImagine");
-  gamerImagine.className = "hide";
   var eclipseImagine = document.getElementById("eclipseImagine");
-  gamerImagine.className = "hide";
+  eclipseImagine.className = "hide";
   var doobetterImagine = document.getElementById("doobetterImagine");
-  gamerImagine.className = "hide";
+  doobetterImagine.className = "hide";
   var rewardImagine = document.getElementById("rewardsImagine");
-  rewardImagine.className = "hide";
+  rewardImagine.className = "gide";
+  
   openMenu();
 }
 
@@ -69,14 +68,13 @@ function logoTick() {
   imagineTab.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
   usersImagine.className = "hide";
-  var gamerImagine = document.getElementById("gamerImagine");
-  gamerImagine.className = "hide";
-  var eclipseImagine = document.getElementById("eclipseImagine");
-  gamerImagine.className = "hide";
+ var eclipseImagine = document.getElementById("eclipseImagine");
+  eclipseImagine.className = "hide";
   var doobetterImagine = document.getElementById("doobetterImagine");
-  gamerImagine.className = "hide";
+  doobetterImagine.className = "hide";
   var rewardImagine = document.getElementById("rewardsImagine");
   rewardImagine.className = "hide";
+  
 }
 
 function justPlay() {
@@ -201,14 +199,13 @@ function createMenu() {
   trading.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
   usersImagine.className = "hide";
-  var gamerImagine = document.getElementById("gamerImagine");
-  gamerImagine.className = "hide";
-  var eclipseImagine = document.getElementById("eclipseImagine");
-  gamerImagine.className = "hide";
+ var eclipseImagine = document.getElementById("eclipseImagine");
+  eclipseImagine.className = "hide";
   var doobetterImagine = document.getElementById("doobetterImagine");
-  gamerImagine.className = "hide";
+  doobetterImagine.className = "hide";
   var rewardImagine = document.getElementById("rewardsImagine");
   rewardImagine.className = "hide";
+  
   openMenu();
 }
 
@@ -298,14 +295,10 @@ function usersIdea() {
   wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
-  var button = document.getElementById("CREATE");
-  button.className = "hide";
-  var gamerImagine = document.getElementById("gamerImagine");
-  gamerImagine.className = "hide";
-  var eclipseImagine = document.getElementById("eclipseImagine");
-  gamerImagine.className = "hide";
+var eclipseImagine = document.getElementById("eclipseImagine");
+  eclipseImagine.className = "hide";
   var doobetterImagine = document.getElementById("doobetterImagine");
-  gamerImagine.className = "hide";
+  doobetterImagine.className = "hide";
   var rewardImagine = document.getElementById("rewardsImagine");
   rewardImagine.className = "hide";
   openMenu();
@@ -440,8 +433,6 @@ function gamerIdea() {
   wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
-  var button = document.getElementById("CREATE");
-  button.className = "hide";
   var eclipseImagine = document.getElementById("eclipseImagine");
   eclipseImagine.className = "hide";
   var doobetterImagine = document.getElementById("doobetterImagine");
@@ -463,8 +454,6 @@ function eclipseIdea() {
   wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
-  var button = document.getElementById("CREATE");
-  button.className = "hide";
   var gamerImagine = document.getElementById("gamerImagine");
   gamerImagine.className = "hide";
   var doobetterImagine = document.getElementById("doobetterImagine");
@@ -486,14 +475,10 @@ function doobetterIdea() {
   wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
-  var button = document.getElementById("CREATE");
-  button.className = "hide";
   var gamerImagine = document.getElementById("gamerImagine");
   gamerImagine.className = "hide";
   var eclipseImagine = document.getElementById("eclipseImagine");
   eclipseImagine.className = "hide";
-  var rewardImagine = document.getElementById("REWARDTOKEN");
-  doobetterImagine.className = "hide";
   var doobetterImagine = document.getElementById("doobetterImagine");
   doobetterImagine.className = "userpage";
   var rewardImagine = document.getElementById("REWARDTOKEN");
@@ -548,7 +533,7 @@ function sellTwo() {
 }
 
 function buyTwo() {
-  var check = document.getElementById("imaginationToken");
+  var check = document.getElementById("imaginationtoken");
 
   if (check.innerHTML == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
@@ -642,7 +627,7 @@ function sellThree() {
 }
 
 function buyThree() {
-  var check = document.getElementById("imaginationToken");
+  var check = document.getElementById("imaginationtoken");
 
   if (check.innerHTML == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
@@ -736,7 +721,7 @@ function sellFour() {
 }
 
 function buyFour() {
-  var check = document.getElementById("imaginationToken");
+  var check = document.getElementById("imaginationtoken");
 
   if (check.innerHTML == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
@@ -818,8 +803,6 @@ function rewardIdea() {
   wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
-  var button = document.getElementById("CREATE");
-  button.className = "hide";
   var gamerImagine = document.getElementById("gamerImagine");
   gamerImagine.className = "hide";
   var eclipseImagine = document.getElementById("eclipseImagine");
@@ -828,6 +811,7 @@ function rewardIdea() {
   doobetterImagine.className = "hide";
   var rewardImagine = document.getElementById("rewardsImagine");
   rewardImagine.className = "userpage";
+  
 }
 
 function buyFive() {
