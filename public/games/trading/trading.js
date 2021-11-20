@@ -522,8 +522,6 @@ function sellTwo() {
 
     walletCheck();
     sellOne();
-    sellThree();
-    sellFour();
   }
   walletCheck();
 }
@@ -547,13 +545,13 @@ function buyTwo() {
     s1.innerHTML = SUM + " |";
 
     var ideaToken = document.getElementById("gamerImagination").value;
-    var boost = ideaToken - AMOUNT;
+    var boost = ideaToken + AMOUNT;
     var ideatoken = document.getElementById("gamerimagination");
     ideatoken.innerHTML = boost;
     document.getElementById("yourImagination").value = ideatoken.innerHTML;
 
     var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + SUM;
+    var booster = imaginationToken - SUM;
     var imaginationtoken = document.getElementById("imaginationtoken");
     imaginationtoken.innerHTML = booster;
     document.getElementById("imaginationToken").value =
@@ -572,8 +570,6 @@ function buyTwo() {
 
     walletCheck();
     buyOne();
-    buyThree();
-    buyFour();
   }
   walletCheck();
 }
@@ -597,13 +593,13 @@ function sellThree() {
     s1.innerHTML = SUM + " |";
 
     var ideaToken = document.getElementById("doobetterImagination").value;
-    var boost = ideaToken - AMOUNT;
+    var boost = ideaToken + AMOUNT;
     var ideatoken = document.getElementById("doobetterimagination");
     ideatoken.innerHTML = boost;
     document.getElementById("doobetterImagination").value = ideatoken.innerHTML;
 
     var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + SUM;
+    var booster = imaginationToken - SUM;
     var imaginationtoken = document.getElementById("imaginationtoken");
     imaginationtoken.innerHTML = booster;
     document.getElementById("imaginationToken").value =
@@ -622,8 +618,6 @@ function sellThree() {
 
     walletCheck();
     sellOne();
-    sellTwo();
-    sellFour();
   }
   walletCheck();
 }
@@ -647,13 +641,13 @@ function buyThree() {
     s1.innerHTML = SUM + " |";
 
     var ideaToken = document.getElementById("doobetterImagination").value;
-    var boost = ideaToken - AMOUNT;
+    var boost = ideaToken + AMOUNT;
     var ideatoken = document.getElementById("doobetterimagination");
     ideatoken.innerHTML = boost;
     document.getElementById("doobetterImagination").value = ideatoken.innerHTML;
 
     var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + SUM;
+    var booster = imaginationToken - SUM;
     var imaginationtoken = document.getElementById("imaginationtoken");
     imaginationtoken.innerHTML = booster;
     document.getElementById("imaginationToken").value =
@@ -672,8 +666,6 @@ function buyThree() {
 
     walletCheck();
     buyOne();
-    buyTwo();
-    buyFour();
   }
   walletCheck();
 }
@@ -722,8 +714,6 @@ function sellFour() {
 
     walletCheck();
     sellOne();
-    sellTwo();
-    sellThree();
   }
   walletCheck();
 }
@@ -747,13 +737,13 @@ function buyFour() {
     s1.innerHTML = SUM + " |";
 
     var ideaToken = document.getElementById("eclipseImagination").value;
-    var boost = ideaToken - AMOUNT;
+    var boost = ideaToken + AMOUNT;
     var ideatoken = document.getElementById("eclipseimagination");
     ideatoken.innerHTML = boost;
     document.getElementById("eclipseImagination").value = ideatoken.innerHTML;
 
     var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + SUM;
+    var booster = imaginationToken - SUM;
     var imaginationtoken = document.getElementById("imaginationtoken");
     imaginationtoken.innerHTML = booster;
     document.getElementById("imaginationToken").value =
@@ -772,8 +762,6 @@ function buyFour() {
 
     walletCheck();
     buyOne();
-    buyTwo();
-    buyThree();
   }
   walletCheck();
 }
@@ -796,4 +784,13 @@ function walletCheck() {
   eclipsetoken = eclipseToken;
   doobettertoken = doobetterToken;
   gamertoken = gamerToken;
+
+  var check = {
+    ideatoken,
+    imaginationtoken,
+    eclipsetoken,
+    doobettertoken,
+    gamertoken
+  };
+
 }
