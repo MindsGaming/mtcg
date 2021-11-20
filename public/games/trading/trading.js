@@ -475,10 +475,11 @@ function sellOne() {
   }
 }
 function buyOne() {
-  var check = document.getElementById("yourImagination");
+  var check = document.getElementById("imaginationToken");
 
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
+    document.getElementById("imaginationtokens").innerHTML = check.value;
   } else {
     var A1 = document.getElementById("C1");
 
@@ -494,7 +495,7 @@ function buyOne() {
     var booster = imaginationToken - B1.value;
     var imaginationtoken = document.getElementById("imaginationtoken");
     imaginationtoken.innerHTML = booster;
-    imaginationToken.value = imaginationtoken.innerHTML;
+    imaginationtoken.innerHTML = imaginationToken.value;
 
     var p1 = document.getElementById("p2");
     var a1 = document.getElementById("a2");
@@ -515,14 +516,14 @@ function buyOne() {
     var a2 = document.getElementById("a1");
     var s2 = document.getElementById("s1");
 
-    p2.innerHTML = (PRICE - 1.3) + " |";
-    a2.innerHTML = (AMOUNT - 1.3) + " |";
-    s2.innerHTML = (SUM - 1.3) + " |";
+    p2.innerHTML = PRICE - 1.3 + " |";
+    a2.innerHTML = AMOUNT - 1.3 + " |";
+    s2.innerHTML = SUM - 1.3 + " |";
 
     var C1 = document.getElementById("C1");
     var D1 = document.getElementById("D1");
 
-    C1.value = AMOUNT -1.3;
+    C1.value = AMOUNT - 1.3;
     D1.value = SUM - 1.3;
   }
 }
