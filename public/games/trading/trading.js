@@ -428,39 +428,22 @@ function sellOne() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var P1 = document.getElementById("P1").value;
-    var A1 = document.getElementById("A1").value;
-    var S1 = document.getElementById("S1").value;
-    var p1 = document.getElementById("p1");
-    var a1 = document.getElementById("a1");
-    var s1 = document.getElementById("s1");
+    var A1 = document.getElementById("A1");
 
     var ideaToken = document.getElementById("yourImagination").value;
-    var boost = ideaToken - A1;
+    var boost = ideaToken - A1.value;
     var ideatoken = document.getElementById("yourimagination");
     ideatoken.innerHTML = boost;
-    document.getElementById("yourImagination").value = ideatoken.innerHTML;
+    ideatoken.value = ideatoken.innerHTML;
+
+        var S1 = document.getElementById("S1");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + S1;
+    var booster = imaginationToken + S1.value;
     var imaginationtoken = document.getElementById("imaginationtoken");
     imaginationtoken.innerHTML = booster;
-    document.getElementById("imaginationToken").value =
-      imaginationtoken.innerHTML;
+    imaginationToken.value = imaginationtoken.innerHTML;
   }
-
-  var PRICE = price[Math.floor(Math.random() * price.length)];
-  var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
-
-  var SUM = PRICE * AMOUNT;
-
-  P1.value = PRICE;
-  A1.value = AMOUNT;
-  S1.value = SUM;
-
-  p1.innerHTML = P1 + " |";
-  a1.innerHTML = A1 + " |";
-  s1.innerHTML = S1 + " |";
 }
 
 function holder() {
