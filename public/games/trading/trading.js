@@ -521,7 +521,6 @@ function sellTwo() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
-    sellOne();
   }
   walletCheck();
 }
@@ -569,7 +568,6 @@ function buyTwo() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
-    buyOne();
   }
   walletCheck();
 }
@@ -617,7 +615,6 @@ function sellThree() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
-    sellOne();
   }
   walletCheck();
 }
@@ -665,7 +662,6 @@ function buyThree() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
-    buyOne();
   }
   walletCheck();
 }
@@ -713,7 +709,6 @@ function sellFour() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
-    sellOne();
   }
   walletCheck();
 }
@@ -761,7 +756,6 @@ function buyFour() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
-    buyOne();
   }
   walletCheck();
 }
@@ -788,7 +782,7 @@ function walletCheck() {
   gamertoken = gamerToken;
   rewardtoken = rewardToken;
 
-  if ((rewardToken = "1000")) {
+  if (rewardToken == "1000") {
     alert("You have maxed out your rewards, claim them!");
   }
 }
