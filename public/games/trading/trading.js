@@ -511,13 +511,13 @@ function buyOne() {
     A1.value = AMOUNT;
     B1.value = SUM;
 
-    var p2 = document.getElementById("p2");
-    var a2 = document.getElementById("a2");
-    var s2 = document.getElementById("s2");
+    var p2 = document.getElementById("p1");
+    var a2 = document.getElementById("a1");
+    var s2 = document.getElementById("s1");
 
-    p2.innerHTML = PRICE * 1.3 + " |";
-    a2.innerHTML = AMOUNT * 1.3 + " |";
-    s2.innerHTML = SUM * 1.3 + " |";
+    p2.innerHTML = PRICE - 0.03 + " |";
+    a2.innerHTML = AMOUNT - 0.03 + " |";
+    s2.innerHTML = SUM - 0.03 + " |";
 
     var C1 = document.getElementById("A2");
     var D1 = document.getElementById("B2");
@@ -623,9 +623,9 @@ function buyTwo() {
     var a2 = document.getElementById("a3");
     var s2 = document.getElementById("s3");
 
-    p2.innerHTML = PRICE * 1.3 + " |";
-    a2.innerHTML = AMOUNT * 1.3 + " |";
-    s2.innerHTML = SUM * 1.3 + " |";
+    p2.innerHTML = PRICE - 0.03 + " |";
+    a2.innerHTML = AMOUNT - 0.03 + " |";
+    s2.innerHTML = SUM - 0.03 + " |";
 
     var C1 = document.getElementById("C3");
     var D1 = document.getElementById("C4");
@@ -678,9 +678,9 @@ function sellThree() {
     var a2 = document.getElementById("a6");
     var s2 = document.getElementById("s6");
 
-    p2.innerHTML = PRICE * 1.3 + " |";
-    a2.innerHTML = AMOUNT * 1.3 + " |";
-    s2.innerHTML = SUM * 1.3 + " |";
+    p2.innerHTML = PRICE * 0.03 + " |";
+    a2.innerHTML = AMOUNT * 0.03 + " |";
+    s2.innerHTML = SUM * 0.03 + " |";
 
     var C1 = document.getElementById("D3");
     var D1 = document.getElementById("D4");
@@ -731,9 +731,9 @@ function buyThree() {
     var a2 = document.getElementById("a5");
     var s2 = document.getElementById("s5");
 
-    p2.innerHTML = PRICE * 1.3 + " |";
-    a2.innerHTML = AMOUNT * 1.3 + " |";
-    s2.innerHTML = SUM * 1.3 + " |";
+    p2.innerHTML = PRICE - 0.03 + " |";
+    a2.innerHTML = AMOUNT - 0.03 + " |";
+    s2.innerHTML = SUM - 0.03 + " |";
 
     var C1 = document.getElementById("D3");
     var D1 = document.getElementById("D4");
@@ -840,9 +840,9 @@ function buyFour() {
     var a2 = document.getElementById("a7");
     var s2 = document.getElementById("s7");
 
-    p2.innerHTML = PRICE * 1.3 + " |";
-    a2.innerHTML = AMOUNT * 1.3 + " |";
-    s2.innerHTML = SUM * 1.3 + " |";
+    p2.innerHTML = PRICE - 0.03 + " |";
+    a2.innerHTML = AMOUNT - 0.03 + " |";
+    s2.innerHTML = SUM - 0.03 + " |";
 
     var C1 = document.getElementById("E3");
     var D1 = document.getElementById("E4");
