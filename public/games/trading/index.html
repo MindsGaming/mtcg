@@ -697,7 +697,7 @@
                   <label id="p1">1.00 </label><label id="a1"> | 100.00</label
                   ><label value="0" max="100000" id="s1">| 100.00 </label>
                   <div class="sellButton" onclick="sellOne();">
-                    Sell Idea
+                    Sell
                   </div>
                   <meter
                     class="hide"
@@ -730,7 +730,7 @@
                   <label id="p2">5.00 </label><label id="a2"> | 100.00</label
                   ><label id="s2">| 500.00 </label>
                   <div class="sellButton" onclick="buyOne();">
-                    Buy Idea
+                    Buyback
                   </div>
                   <meter
                     class="hide"
@@ -824,7 +824,7 @@
                   <label id="p3">1.00 </label><label id="a3"> | 100.00</label
                   ><label id="s3">| 100.00 </label>
                   <div class="sellButton" onclick="sellTwo();">
-                    Sell Idea
+                    Sell
                   </div>
                   <meter
                     class="hide"
@@ -857,7 +857,7 @@
                   <label id="p4">1.50 </label><label id="a4"> | 100.00</label
                   ><label id="s4">| 150.00 </label>
                   <div class="sellButton" onclick="buyTwo();">
-                    Buy Idea
+                    Buy
                   </div>
                   <meter
                     class="hide"
@@ -1063,6 +1063,39 @@
                   <meter
                     class="hide"
                     id="sellBlock2"
+                    value="100"
+                    max="10000"
+                    min="0"
+                  ></meter>
+                </div>
+              </h3>
+              <br />
+            </div>
+            <div class="orders">
+              <h2 style="float: left;">
+                BUY Orders
+              </h2>
+              <br />
+              <div class="line"></div>
+              <br />
+              <h3>
+                Price | Amount | Sum
+                <div class="buyorder">
+                  <label id="p11">1.50 </label><label id="a11"> | 100.00</label
+                  ><label id="s11">| 150.00 </label>
+                  <div class="sellButton" onclick="buyBlock();">
+                    Sell Ideas
+                  </div>
+                  <meter
+                    class="hide"
+                    id="sellBlock3"
+                    value="100"
+                    max="10000"
+                    min="0"
+                  ></meter>
+                  <meter
+                    class="hide"
+                    id="sellBlock4"
                     value="100"
                     max="10000"
                     min="0"
