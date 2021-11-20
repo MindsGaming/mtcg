@@ -799,31 +799,29 @@ function rewardIdea() {
 }
 
 function blockReward() {
-  var check = document.getElementById("imaginationToken");
+  var check = document.getElementById("imaginationtoken");
 
-  if (check.value == "0") {
-    alert("Not Enough, Try Other Trading ideas");
+  if (check.innerHTML == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
   } else {
     var p1 = document.getElementById("p10");
     var a1 = document.getElementById("a10");
     var s1 = document.getElementById("s10");
 
-    var PRICES = ["5", "10", "20", "1"];
-
+    var PRICES = ["1.6", "2", "5", "10", "20", "50"];
     var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
     var SUM = PRICE * AMOUNT;
-
     p1.innerHTML = PRICE + " |";
     a1.innerHTML = AMOUNT + " |";
     s1.innerHTML = SUM + " |";
 
-    var ideaToken = document.getElementById("blockRewards").value;
+    var ideaToken = document.getElementById("blockReward").value;
     var boost = ideaToken + AMOUNT;
-    var ideatoken = document.getElementById("blockrewards");
+    var ideatoken = document.getElementById("blockreward");
     ideatoken.innerHTML = boost;
-    document.getElementById("rewardsTokens").value = ideatoken.innerHTML;
+    document.getElementById("blockReward").value = ideatoken.innerHTML;
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken - SUM;
@@ -831,6 +829,7 @@ function blockReward() {
     imaginationtoken.innerHTML = booster;
     document.getElementById("imaginationToken").value =
       imaginationtoken.innerHTML;
+
     walletCheck();
   }
   walletCheck();
