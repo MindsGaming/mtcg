@@ -420,8 +420,6 @@ function rewardIdea() {
   rewardImagine.className = "userpage";
 }
 
-
-function monker() {
 function sellOne() {
   walletCheck();
   var check = document.getElementById("yourImagination");
@@ -429,18 +427,14 @@ function sellOne() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("A1");
-
     var ideaToken = document.getElementById("yourImagination").value;
     var boost = ideaToken - A1.value;
     var ideatoken = document.getElementById("yourimagination");
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("B1");
-
     var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + B1.value;
+    var booster = imaginationToken + A2.value;
     var imaginationtoken = document.getElementById("imaginationtoken");
     imaginationtoken.innerHTML = booster;
     imaginationToken.value = imaginationtoken.innerHTML;
@@ -448,522 +442,578 @@ function sellOne() {
     var p1 = document.getElementById("p1");
     var a1 = document.getElementById("a1");
     var s1 = document.getElementById("s1");
-
-    var PRICE = price[Math.floor(Math.random() * price.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
-
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
-
-    A1.value = AMOUNT;
-    B1.value = SUM;
+    var A1 = document.getElementById("A1");
+    var A2 = document.getElementById("A2");
 
     var p2 = document.getElementById("p2");
     var a2 = document.getElementById("a2");
     var s2 = document.getElementById("s2");
+    var A3 = document.getElementById("A3");
+    var A4 = document.getElementById("A4");
+    
+    var AMOUNT = A1.value
+    var SUM = A2.value;
+    
+    var amount = A3.value;
+    var sum = A4.value;
+    
+    
+    ar PRICE = price[Math.floor(Math.random() * price.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-    p2.innerHTML = PRICE * 1.3 + " |";
-    a2.innerHTML = AMOUNT * 1.3 + " |";
-    s2.innerHTML = SUM * 1.3 + " |";
-
-    var C1 = document.getElementById("A2");
-    var D1 = document.getElementById("B2");
-
-    C1.value = AMOUNT;
-    D1.value = SUM;
-  }
-}
-function buyOne() {
-  walletCheck();
-  var check = document.getElementById("imaginationToken");
-
-  if (check.value == "0") {
-    alert("Not Enough, Try Other Trades Or Cashout");
-  } else {
-    var A1 = document.getElementById("A2");
-
-    var ideaToken = document.getElementById("yourImagination").value;
-    var boost = ideaToken + A1.value;
-    var ideatoken = document.getElementById("yourimagination");
-    ideatoken.innerHTML = boost;
-    ideatoken.value = ideatoken.innerHTML;
-
-    var B1 = document.getElementById("B2");
-
-    var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken - B1.value;
-    var imaginationtoken = document.getElementById("imaginationtoken");
-    imaginationtoken.innerHTML = booster;
-    imaginationToken.value = imaginationtoken.innerHTML;
-
-    var p1 = document.getElementById("p2");
-    var a1 = document.getElementById("a2");
-    var s1 = document.getElementById("s2");
-
-    var PRICE = price[Math.floor(Math.random() * price.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
-
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
-
-    A1.value = AMOUNT;
-    B1.value = SUM;
-
-    var p2 = document.getElementById("p1");
-    var a2 = document.getElementById("a1");
-    var s2 = document.getElementById("s1");
-
-    p2.innerHTML = PRICE - 0.03 + " |";
-    a2.innerHTML = AMOUNT - 0.03 + " |";
-    s2.innerHTML = SUM - 0.03 + " |";
-
-    var C1 = document.getElementById("A1");
-    var D1 = document.getElementById("B1");
-
-    C1.value = AMOUNT;
-    D1.value = SUM;
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
+    
+    
+    
   }
 }
 
-// Gamer/Ideas //
-function sellTwo() {
-  walletCheck();
-  var check = document.getElementById("gamerImagination");
+function monker() {
+  function sellOne() {
+    walletCheck();
+    var check = document.getElementById("yourImagination");
 
-  if (check.value == "0") {
-    alert("Not Enough, Try Other Trades Or Cashout");
-  } else {
-    var A1 = document.getElementById("C1");
+    if (check.value == "0") {
+      alert("Not Enough, Try Other Trades Or Cashout");
+    } else {
+      var A1 = document.getElementById("A1");
 
-    var ideaToken = document.getElementById("gamerImagination").value;
-    var boost = ideaToken - A1.value;
-    var ideatoken = document.getElementById("gamerimagination");
-    ideatoken.innerHTML = boost;
-    ideatoken.value = ideatoken.innerHTML;
+      var ideaToken = document.getElementById("yourImagination").value;
+      var boost = ideaToken - A1.value;
+      var ideatoken = document.getElementById("yourimagination");
+      ideatoken.innerHTML = boost;
+      ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("C2");
+      var B1 = document.getElementById("B1");
 
-    var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + B1.value;
-    var imaginationtoken = document.getElementById("imaginationtoken");
-    imaginationtoken.innerHTML = booster;
-    imaginationToken.value = imaginationtoken.innerHTML;
+      var imaginationToken = document.getElementById("imaginationToken").value;
+      var booster = imaginationToken + B1.value;
+      var imaginationtoken = document.getElementById("imaginationtoken");
+      imaginationtoken.innerHTML = booster;
+      imaginationToken.value = imaginationtoken.innerHTML;
 
-    var p1 = document.getElementById("p3");
-    var a1 = document.getElementById("a3");
-    var s1 = document.getElementById("s3");
+      var p1 = document.getElementById("p1");
+      var a1 = document.getElementById("a1");
+      var s1 = document.getElementById("s1");
 
-    var PRICE = price[Math.floor(Math.random() * price.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+      var PRICE = price[Math.floor(Math.random() * price.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
 
-    A1.value = AMOUNT;
-    B1.value = SUM;
+      A1.value = AMOUNT;
+      B1.value = SUM;
 
-    var p2 = document.getElementById("p4");
-    var a2 = document.getElementById("a4");
-    var s2 = document.getElementById("s4");
+      var p2 = document.getElementById("p2");
+      var a2 = document.getElementById("a2");
+      var s2 = document.getElementById("s2");
 
-    p2.innerHTML = PRICE * 1.3 + " |";
-    a2.innerHTML = AMOUNT * 1.3 + " |";
-    s2.innerHTML = SUM * 1.3 + " |";
+      p2.innerHTML = PRICE * 1.3 + " |";
+      a2.innerHTML = AMOUNT * 1.3 + " |";
+      s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("C3");
-    var D1 = document.getElementById("C4");
+      var C1 = document.getElementById("A2");
+      var D1 = document.getElementById("B2");
 
-    C1.value = AMOUNT;
-    D1.value = SUM;
+      C1.value = AMOUNT;
+      D1.value = SUM;
+    }
   }
-}
-function buyTwo() {
-  walletCheck();
-  var check = document.getElementById("imaginationToken");
+  function buyOne() {
+    walletCheck();
+    var check = document.getElementById("imaginationToken");
 
-  if (check.value == "0") {
-    alert("Not Enough, Try Other Trades Or Cashout");
-  } else {
-    var A1 = document.getElementById("C1");
+    if (check.value == "0") {
+      alert("Not Enough, Try Other Trades Or Cashout");
+    } else {
+      var A1 = document.getElementById("A2");
 
-    var ideaToken = document.getElementById("gamerImagination").value;
-    var boost = ideaToken + A1.value;
-    var ideatoken = document.getElementById("gamerimagination");
-    ideatoken.innerHTML = boost;
-    ideatoken.value = ideatoken.innerHTML;
+      var ideaToken = document.getElementById("yourImagination").value;
+      var boost = ideaToken + A1.value;
+      var ideatoken = document.getElementById("yourimagination");
+      ideatoken.innerHTML = boost;
+      ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("C2");
+      var B1 = document.getElementById("B2");
 
-    var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken - B1.value;
-    var imaginationtoken = document.getElementById("imaginationtoken");
-    imaginationtoken.innerHTML = booster;
-    imaginationToken.value = imaginationtoken.innerHTML;
+      var imaginationToken = document.getElementById("imaginationToken").value;
+      var booster = imaginationToken - B1.value;
+      var imaginationtoken = document.getElementById("imaginationtoken");
+      imaginationtoken.innerHTML = booster;
+      imaginationToken.value = imaginationtoken.innerHTML;
 
-    var p1 = document.getElementById("p4");
-    var a1 = document.getElementById("a4");
-    var s1 = document.getElementById("s4");
+      var p1 = document.getElementById("p2");
+      var a1 = document.getElementById("a2");
+      var s1 = document.getElementById("s2");
 
-    var PRICE = price[Math.floor(Math.random() * price.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+      var PRICE = price[Math.floor(Math.random() * price.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
 
-    A1.value = AMOUNT;
-    B1.value = SUM;
+      A1.value = AMOUNT;
+      B1.value = SUM;
 
-    var p2 = document.getElementById("p3");
-    var a2 = document.getElementById("a3");
-    var s2 = document.getElementById("s3");
+      var p2 = document.getElementById("p1");
+      var a2 = document.getElementById("a1");
+      var s2 = document.getElementById("s1");
 
-    p2.innerHTML = PRICE - 0.03 + " |";
-    a2.innerHTML = AMOUNT - 0.03 + " |";
-    s2.innerHTML = SUM - 0.03 + " |";
+      p2.innerHTML = PRICE - 0.03 + " |";
+      a2.innerHTML = AMOUNT - 0.03 + " |";
+      s2.innerHTML = SUM - 0.03 + " |";
 
-    var C1 = document.getElementById("C3");
-    var D1 = document.getElementById("C4");
+      var C1 = document.getElementById("A1");
+      var D1 = document.getElementById("B1");
 
-    C1.value = AMOUNT;
-    D1.value = SUM;
+      C1.value = AMOUNT;
+      D1.value = SUM;
+    }
   }
-}
 
-// ECLIPSE/Ideas //
-function sellThree() {
-  walletCheck();
-  var check = document.getElementById("eclipseImagination");
+  // Gamer/Ideas //
+  function sellTwo() {
+    walletCheck();
+    var check = document.getElementById("gamerImagination");
 
-  if (check.value == "0") {
-    alert("Not Enough, Try Other Trades Or Cashout");
-  } else {
-    var A1 = document.getElementById("D1");
+    if (check.value == "0") {
+      alert("Not Enough, Try Other Trades Or Cashout");
+    } else {
+      var A1 = document.getElementById("C1");
 
-    var ideaToken = document.getElementById("eclipseImagination").value;
-    var boost = ideaToken - A1.value;
-    var ideatoken = document.getElementById("eclipseimagination");
-    ideatoken.innerHTML = boost;
-    ideatoken.value = ideatoken.innerHTML;
+      var ideaToken = document.getElementById("gamerImagination").value;
+      var boost = ideaToken - A1.value;
+      var ideatoken = document.getElementById("gamerimagination");
+      ideatoken.innerHTML = boost;
+      ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("D2");
+      var B1 = document.getElementById("C2");
 
-    var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + B1.value;
-    var imaginationtoken = document.getElementById("imaginationtoken");
-    imaginationtoken.innerHTML = booster;
-    imaginationToken.value = imaginationtoken.innerHTML;
+      var imaginationToken = document.getElementById("imaginationToken").value;
+      var booster = imaginationToken + B1.value;
+      var imaginationtoken = document.getElementById("imaginationtoken");
+      imaginationtoken.innerHTML = booster;
+      imaginationToken.value = imaginationtoken.innerHTML;
 
-    var p1 = document.getElementById("p5");
-    var a1 = document.getElementById("a5");
-    var s1 = document.getElementById("s5");
+      var p1 = document.getElementById("p3");
+      var a1 = document.getElementById("a3");
+      var s1 = document.getElementById("s3");
 
-    var PRICE = price[Math.floor(Math.random() * price.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+      var PRICE = price[Math.floor(Math.random() * price.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
 
-    A1.value = AMOUNT;
-    B1.value = SUM;
+      A1.value = AMOUNT;
+      B1.value = SUM;
 
-    var p2 = document.getElementById("p6");
-    var a2 = document.getElementById("a6");
-    var s2 = document.getElementById("s6");
+      var p2 = document.getElementById("p4");
+      var a2 = document.getElementById("a4");
+      var s2 = document.getElementById("s4");
 
-    p2.innerHTML = PRICE * 0.03 + " |";
-    a2.innerHTML = AMOUNT * 0.03 + " |";
-    s2.innerHTML = SUM * 0.03 + " |";
+      p2.innerHTML = PRICE * 1.3 + " |";
+      a2.innerHTML = AMOUNT * 1.3 + " |";
+      s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("D3");
-    var D1 = document.getElementById("D4");
+      var C1 = document.getElementById("C3");
+      var D1 = document.getElementById("C4");
 
-    C1.value = AMOUNT;
-    D1.value = SUM;
+      C1.value = AMOUNT;
+      D1.value = SUM;
+    }
   }
-}
-function buyThree() {
-  walletCheck();
-  var check = document.getElementById("imaginationToken");
+  function buyTwo() {
+    walletCheck();
+    var check = document.getElementById("imaginationToken");
 
-  if (check.value == "0") {
-    alert("Not Enough, Try Other Trades Or Cashout");
-  } else {
-    var A1 = document.getElementById("D1");
+    if (check.value == "0") {
+      alert("Not Enough, Try Other Trades Or Cashout");
+    } else {
+      var A1 = document.getElementById("C1");
 
-    var ideaToken = document.getElementById("eclipseImagination").value;
-    var boost = ideaToken + A1.value;
-    var ideatoken = document.getElementById("eclipseimagination");
-    ideatoken.innerHTML = boost;
-    ideatoken.value = ideatoken.innerHTML;
+      var ideaToken = document.getElementById("gamerImagination").value;
+      var boost = ideaToken + A1.value;
+      var ideatoken = document.getElementById("gamerimagination");
+      ideatoken.innerHTML = boost;
+      ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("D2");
+      var B1 = document.getElementById("C2");
 
-    var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken - B1.value;
-    var imaginationtoken = document.getElementById("imaginationtoken");
-    imaginationtoken.innerHTML = booster;
-    imaginationToken.value = imaginationtoken.innerHTML;
+      var imaginationToken = document.getElementById("imaginationToken").value;
+      var booster = imaginationToken - B1.value;
+      var imaginationtoken = document.getElementById("imaginationtoken");
+      imaginationtoken.innerHTML = booster;
+      imaginationToken.value = imaginationtoken.innerHTML;
 
-    var p1 = document.getElementById("p6");
-    var a1 = document.getElementById("a6");
-    var s1 = document.getElementById("s6");
+      var p1 = document.getElementById("p4");
+      var a1 = document.getElementById("a4");
+      var s1 = document.getElementById("s4");
 
-    var PRICE = price[Math.floor(Math.random() * price.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+      var PRICE = price[Math.floor(Math.random() * price.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
 
-    A1.value = AMOUNT;
-    B1.value = SUM;
+      A1.value = AMOUNT;
+      B1.value = SUM;
 
-    var p2 = document.getElementById("p5");
-    var a2 = document.getElementById("a5");
-    var s2 = document.getElementById("s5");
+      var p2 = document.getElementById("p3");
+      var a2 = document.getElementById("a3");
+      var s2 = document.getElementById("s3");
 
-    p2.innerHTML = PRICE - 0.03 + " |";
-    a2.innerHTML = AMOUNT - 0.03 + " |";
-    s2.innerHTML = SUM - 0.03 + " |";
+      p2.innerHTML = PRICE - 0.03 + " |";
+      a2.innerHTML = AMOUNT - 0.03 + " |";
+      s2.innerHTML = SUM - 0.03 + " |";
 
-    var C1 = document.getElementById("D3");
-    var D1 = document.getElementById("D4");
+      var C1 = document.getElementById("C3");
+      var D1 = document.getElementById("C4");
 
-    C1.value = AMOUNT;
-    D1.value = SUM;
+      C1.value = AMOUNT;
+      D1.value = SUM;
+    }
   }
-}
 
-// DooBettter/Ideas //
-function sellFour() {
-  walletCheck();
-  var check = document.getElementById("doobetterImagination");
+  // ECLIPSE/Ideas //
+  function sellThree() {
+    walletCheck();
+    var check = document.getElementById("eclipseImagination");
 
-  if (check.value == "0") {
-    alert("Not Enough, Try Other Trades Or Cashout");
-  } else {
-    var A1 = document.getElementById("E1");
+    if (check.value == "0") {
+      alert("Not Enough, Try Other Trades Or Cashout");
+    } else {
+      var A1 = document.getElementById("D1");
 
-    var ideaToken = document.getElementById("doobetterImagination").value;
-    var boost = ideaToken - A1.value;
-    var ideatoken = document.getElementById("doobetterimagination");
-    ideatoken.innerHTML = boost;
-    ideatoken.value = ideatoken.innerHTML;
+      var ideaToken = document.getElementById("eclipseImagination").value;
+      var boost = ideaToken - A1.value;
+      var ideatoken = document.getElementById("eclipseimagination");
+      ideatoken.innerHTML = boost;
+      ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("E2");
+      var B1 = document.getElementById("D2");
 
-    var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + B1.value;
-    var imaginationtoken = document.getElementById("imaginationtoken");
-    imaginationtoken.innerHTML = booster;
-    imaginationToken.value = imaginationtoken.innerHTML;
+      var imaginationToken = document.getElementById("imaginationToken").value;
+      var booster = imaginationToken + B1.value;
+      var imaginationtoken = document.getElementById("imaginationtoken");
+      imaginationtoken.innerHTML = booster;
+      imaginationToken.value = imaginationtoken.innerHTML;
 
-    var p1 = document.getElementById("p7");
-    var a1 = document.getElementById("a7");
-    var s1 = document.getElementById("s7");
+      var p1 = document.getElementById("p5");
+      var a1 = document.getElementById("a5");
+      var s1 = document.getElementById("s5");
 
-    var PRICE = price[Math.floor(Math.random() * price.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+      var PRICE = price[Math.floor(Math.random() * price.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
 
-    A1.value = AMOUNT;
-    B1.value = SUM;
+      A1.value = AMOUNT;
+      B1.value = SUM;
 
-    var p2 = document.getElementById("p8");
-    var a2 = document.getElementById("a8");
-    var s2 = document.getElementById("s8");
+      var p2 = document.getElementById("p6");
+      var a2 = document.getElementById("a6");
+      var s2 = document.getElementById("s6");
 
-    p2.innerHTML = PRICE * 1.3 + " |";
-    a2.innerHTML = AMOUNT * 1.3 + " |";
-    s2.innerHTML = SUM * 1.3 + " |";
+      p2.innerHTML = PRICE * 0.03 + " |";
+      a2.innerHTML = AMOUNT * 0.03 + " |";
+      s2.innerHTML = SUM * 0.03 + " |";
 
-    var C1 = document.getElementById("E3");
-    var D1 = document.getElementById("E4");
+      var C1 = document.getElementById("D3");
+      var D1 = document.getElementById("D4");
 
-    C1.value = AMOUNT;
-    D1.value = SUM;
+      C1.value = AMOUNT;
+      D1.value = SUM;
+    }
   }
-}
+  function buyThree() {
+    walletCheck();
+    var check = document.getElementById("imaginationToken");
 
-function buyFour() {
-  walletCheck();
-  var check = document.getElementById("imaginationToken");
+    if (check.value == "0") {
+      alert("Not Enough, Try Other Trades Or Cashout");
+    } else {
+      var A1 = document.getElementById("D1");
 
-  if (check.value == "0") {
-    alert("Not Enough, Try Other Trades Or Cashout");
-  } else {
-    var A1 = document.getElementById("E1");
+      var ideaToken = document.getElementById("eclipseImagination").value;
+      var boost = ideaToken + A1.value;
+      var ideatoken = document.getElementById("eclipseimagination");
+      ideatoken.innerHTML = boost;
+      ideatoken.value = ideatoken.innerHTML;
 
-    var ideaToken = document.getElementById("doobetterImagination").value;
-    var boost = ideaToken + A1.value;
-    var ideatoken = document.getElementById("doobetterimagination");
-    ideatoken.innerHTML = boost;
-    ideatoken.value = ideatoken.innerHTML;
+      var B1 = document.getElementById("D2");
 
-    var B1 = document.getElementById("E2");
+      var imaginationToken = document.getElementById("imaginationToken").value;
+      var booster = imaginationToken - B1.value;
+      var imaginationtoken = document.getElementById("imaginationtoken");
+      imaginationtoken.innerHTML = booster;
+      imaginationToken.value = imaginationtoken.innerHTML;
 
-    var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken - B1.value;
-    var imaginationtoken = document.getElementById("imaginationtoken");
-    imaginationtoken.innerHTML = booster;
-    imaginationToken.value = imaginationtoken.innerHTML;
+      var p1 = document.getElementById("p6");
+      var a1 = document.getElementById("a6");
+      var s1 = document.getElementById("s6");
 
-    var p1 = document.getElementById("p8");
-    var a1 = document.getElementById("a8");
-    var s1 = document.getElementById("s8");
+      var PRICE = price[Math.floor(Math.random() * price.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-    var PRICE = price[Math.floor(Math.random() * price.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
 
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
+      A1.value = AMOUNT;
+      B1.value = SUM;
 
-    A1.value = AMOUNT;
-    B1.value = SUM;
+      var p2 = document.getElementById("p5");
+      var a2 = document.getElementById("a5");
+      var s2 = document.getElementById("s5");
 
-    var p2 = document.getElementById("p7");
-    var a2 = document.getElementById("a7");
-    var s2 = document.getElementById("s7");
+      p2.innerHTML = PRICE - 0.03 + " |";
+      a2.innerHTML = AMOUNT - 0.03 + " |";
+      s2.innerHTML = SUM - 0.03 + " |";
 
-    p2.innerHTML = PRICE - 0.03 + " |";
-    a2.innerHTML = AMOUNT - 0.03 + " |";
-    s2.innerHTML = SUM - 0.03 + " |";
+      var C1 = document.getElementById("D3");
+      var D1 = document.getElementById("D4");
 
-    var C1 = document.getElementById("E3");
-    var D1 = document.getElementById("E4");
-
-    C1.value = AMOUNT;
-    D1.value = SUM;
+      C1.value = AMOUNT;
+      D1.value = SUM;
+    }
   }
-}
 
-// Ideas/REWARDS //
-function sellBlock() {
-  walletCheck();
-  var check = document.getElementById("imaginationToken");
+  // DooBettter/Ideas //
+  function sellFour() {
+    walletCheck();
+    var check = document.getElementById("doobetterImagination");
 
-  if (check.value == "0") {
-    alert("Not Enough, Try Other Trades Or Cashout");
-  } else {
-    var A1 = document.getElementById("R1");
+    if (check.value == "0") {
+      alert("Not Enough, Try Other Trades Or Cashout");
+    } else {
+      var A1 = document.getElementById("E1");
 
-    var ideaToken = document.getElementById("imaginationToken").value;
-    var boost = ideaToken - A1.value;
-    var ideatoken = document.getElementById("imaginationtoken");
-    ideatoken.innerHTML = boost;
-    ideatoken.value = ideatoken.innerHTML;
+      var ideaToken = document.getElementById("doobetterImagination").value;
+      var boost = ideaToken - A1.value;
+      var ideatoken = document.getElementById("doobetterimagination");
+      ideatoken.innerHTML = boost;
+      ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("R2");
+      var B1 = document.getElementById("E2");
 
-    var imaginationToken = document.getElementById("rewardBlock").value;
-    var booster = imaginationToken + B1.value;
-    var imaginationtoken = document.getElementById("rewardblock");
-    imaginationtoken.innerHTML = booster;
-    imaginationToken.value = imaginationtoken.innerHTML;
+      var imaginationToken = document.getElementById("imaginationToken").value;
+      var booster = imaginationToken + B1.value;
+      var imaginationtoken = document.getElementById("imaginationtoken");
+      imaginationtoken.innerHTML = booster;
+      imaginationToken.value = imaginationtoken.innerHTML;
 
-    var p1 = document.getElementById("p10");
-    var a1 = document.getElementById("a10");
-    var s1 = document.getElementById("s10");
+      var p1 = document.getElementById("p7");
+      var a1 = document.getElementById("a7");
+      var s1 = document.getElementById("s7");
 
-    var PRICES = ["0.001", ".002", "0.003", "0.004", "0.005"];
-    var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+      var PRICE = price[Math.floor(Math.random() * price.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
 
-    A1.value = AMOUNT;
-    B1.value = SUM;
+      A1.value = AMOUNT;
+      B1.value = SUM;
 
-    var p2 = document.getElementById("p11");
-    var a2 = document.getElementById("a11");
-    var s2 = document.getElementById("s11");
+      var p2 = document.getElementById("p8");
+      var a2 = document.getElementById("a8");
+      var s2 = document.getElementById("s8");
 
-    p2.innerHTML = PRICE * 1.3 + " |";
-    a2.innerHTML = AMOUNT * 1.3 + " |";
-    s2.innerHTML = SUM * 1.3 + " |";
+      p2.innerHTML = PRICE * 1.3 + " |";
+      a2.innerHTML = AMOUNT * 1.3 + " |";
+      s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("R3");
-    var D1 = document.getElementById("R4");
+      var C1 = document.getElementById("E3");
+      var D1 = document.getElementById("E4");
 
-    C1.value = AMOUNT;
-    D1.value = SUM;
+      C1.value = AMOUNT;
+      D1.value = SUM;
+    }
   }
-}
 
-function buyBlock() {
-  walletCheck();
-  var check = document.getElementById("rewardBlock");
+  function buyFour() {
+    walletCheck();
+    var check = document.getElementById("imaginationToken");
 
-  if (check.value == "0") {
-    alert("Not Enough, Try Other Trades Or Cashout");
-  } else {
-    var A1 = document.getElementById("R1");
+    if (check.value == "0") {
+      alert("Not Enough, Try Other Trades Or Cashout");
+    } else {
+      var A1 = document.getElementById("E1");
 
-    var ideaToken = document.getElementById("imaginationToken").value;
-    var boost = ideaToken + A1.value;
-    var ideatoken = document.getElementById("imaginationtoken");
-    ideatoken.innerHTML = boost;
-    ideatoken.value = ideatoken.innerHTML;
+      var ideaToken = document.getElementById("doobetterImagination").value;
+      var boost = ideaToken + A1.value;
+      var ideatoken = document.getElementById("doobetterimagination");
+      ideatoken.innerHTML = boost;
+      ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("R2");
+      var B1 = document.getElementById("E2");
 
-    var imaginationToken = document.getElementById("rewardBlock").value;
-    var booster = imaginationToken - B1.value;
-    var imaginationtoken = document.getElementById("rewardblock");
-    imaginationtoken.innerHTML = booster;
-    imaginationToken.value = imaginationtoken.innerHTML;
+      var imaginationToken = document.getElementById("imaginationToken").value;
+      var booster = imaginationToken - B1.value;
+      var imaginationtoken = document.getElementById("imaginationtoken");
+      imaginationtoken.innerHTML = booster;
+      imaginationToken.value = imaginationtoken.innerHTML;
 
-    var p1 = document.getElementById("p11");
-    var a1 = document.getElementById("a11");
-    var s1 = document.getElementById("s11");
+      var p1 = document.getElementById("p8");
+      var a1 = document.getElementById("a8");
+      var s1 = document.getElementById("s8");
 
-    var PRICES = ["0.01", ".02", "0.03", "0.04", "0.005"];
-    var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+      var PRICE = price[Math.floor(Math.random() * price.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
 
-    A1.value = AMOUNT;
-    B1.value = SUM;
+      A1.value = AMOUNT;
+      B1.value = SUM;
 
-    var p2 = document.getElementById("p10");
-    var a2 = document.getElementById("a10");
-    var s2 = document.getElementById("s10");
+      var p2 = document.getElementById("p7");
+      var a2 = document.getElementById("a7");
+      var s2 = document.getElementById("s7");
 
-    p2.innerHTML = PRICE - 0.003 + " |";
-    a2.innerHTML = AMOUNT - 0.003 + " |";
-    s2.innerHTML = SUM - 0.003 + " |";
+      p2.innerHTML = PRICE - 0.03 + " |";
+      a2.innerHTML = AMOUNT - 0.03 + " |";
+      s2.innerHTML = SUM - 0.03 + " |";
 
-    var C1 = document.getElementById("R3");
-    var D1 = document.getElementById("R4");
+      var C1 = document.getElementById("E3");
+      var D1 = document.getElementById("E4");
 
-    C1.value = AMOUNT;
-    D1.value = SUM;
+      C1.value = AMOUNT;
+      D1.value = SUM;
+    }
   }
-}
+
+  // Ideas/REWARDS //
+  function sellBlock() {
+    walletCheck();
+    var check = document.getElementById("imaginationToken");
+
+    if (check.value == "0") {
+      alert("Not Enough, Try Other Trades Or Cashout");
+    } else {
+      var A1 = document.getElementById("R1");
+
+      var ideaToken = document.getElementById("imaginationToken").value;
+      var boost = ideaToken - A1.value;
+      var ideatoken = document.getElementById("imaginationtoken");
+      ideatoken.innerHTML = boost;
+      ideatoken.value = ideatoken.innerHTML;
+
+      var B1 = document.getElementById("R2");
+
+      var imaginationToken = document.getElementById("rewardBlock").value;
+      var booster = imaginationToken + B1.value;
+      var imaginationtoken = document.getElementById("rewardblock");
+      imaginationtoken.innerHTML = booster;
+      imaginationToken.value = imaginationtoken.innerHTML;
+
+      var p1 = document.getElementById("p10");
+      var a1 = document.getElementById("a10");
+      var s1 = document.getElementById("s10");
+
+      var PRICES = ["0.001", ".002", "0.003", "0.004", "0.005"];
+      var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
+
+      A1.value = AMOUNT;
+      B1.value = SUM;
+
+      var p2 = document.getElementById("p11");
+      var a2 = document.getElementById("a11");
+      var s2 = document.getElementById("s11");
+
+      p2.innerHTML = PRICE * 1.3 + " |";
+      a2.innerHTML = AMOUNT * 1.3 + " |";
+      s2.innerHTML = SUM * 1.3 + " |";
+
+      var C1 = document.getElementById("R3");
+      var D1 = document.getElementById("R4");
+
+      C1.value = AMOUNT;
+      D1.value = SUM;
+    }
+  }
+
+  function buyBlock() {
+    walletCheck();
+    var check = document.getElementById("rewardBlock");
+
+    if (check.value == "0") {
+      alert("Not Enough, Try Other Trades Or Cashout");
+    } else {
+      var A1 = document.getElementById("R1");
+
+      var ideaToken = document.getElementById("imaginationToken").value;
+      var boost = ideaToken + A1.value;
+      var ideatoken = document.getElementById("imaginationtoken");
+      ideatoken.innerHTML = boost;
+      ideatoken.value = ideatoken.innerHTML;
+
+      var B1 = document.getElementById("R2");
+
+      var imaginationToken = document.getElementById("rewardBlock").value;
+      var booster = imaginationToken - B1.value;
+      var imaginationtoken = document.getElementById("rewardblock");
+      imaginationtoken.innerHTML = booster;
+      imaginationToken.value = imaginationtoken.innerHTML;
+
+      var p1 = document.getElementById("p11");
+      var a1 = document.getElementById("a11");
+      var s1 = document.getElementById("s11");
+
+      var PRICES = ["0.01", ".02", "0.03", "0.04", "0.005"];
+      var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
+      var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+
+      var SUM = PRICE * AMOUNT;
+      p1.innerHTML = PRICE + " |";
+      a1.innerHTML = AMOUNT + " |";
+      s1.innerHTML = SUM + " |";
+
+      A1.value = AMOUNT;
+      B1.value = SUM;
+
+      var p2 = document.getElementById("p10");
+      var a2 = document.getElementById("a10");
+      var s2 = document.getElementById("s10");
+
+      p2.innerHTML = PRICE - 0.003 + " |";
+      a2.innerHTML = AMOUNT - 0.003 + " |";
+      s2.innerHTML = SUM - 0.003 + " |";
+
+      var C1 = document.getElementById("R3");
+      var D1 = document.getElementById("R4");
+
+      C1.value = AMOUNT;
+      D1.value = SUM;
+    }
+  }
 }
 function walletCheck() {
   var imaginationToken = document.getElementById("imaginationToken");
@@ -989,5 +1039,4 @@ function walletCheck() {
     document.getElementById("rewardblock").innerHTML = sub;
     document.getElementById("rewardBlock").value = sub;
   }
-  
 }
