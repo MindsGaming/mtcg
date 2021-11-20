@@ -275,36 +275,42 @@ var price = ["1.00", "2.00", "3.00", "4.00"];
 var amount = ["100.00", "200.00"];
 
 function sellOne() {
-  
   var check = document.getElementById("yourimagination");
-  
-  if (check.innerHTML == "0"){
-    alert("You Have No Ideas Left Buy Some Back")
-  }
-  else {
-  
-  var p1 = document.getElementById("p1");
-  var a1 = document.getElementById("a1");
-  var s1 = document.getElementById("s1");
 
-  var PRICE = price[Math.floor(Math.random() * price.length)];
-  var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+  if (check.innerHTML == "0") {
+    alert("You Have No Ideas Left Buy Some Back");
+  } else {
+    var p1 = document.getElementById("p1");
+    var a1 = document.getElementById("a1");
+    var s1 = document.getElementById("s1");
 
-  var SUM = PRICE * AMOUNT;
-  p1.innerHTML = PRICE + " |";
-  a1.innerHTML = AMOUNT + " |";
-  s1.innerHTML = SUM + " |";
+    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
-  var ideaToken = document.getElementById("yourImagination").value;
-  var boost = ideaToken - AMOUNT;
-  var ideatoken = document.getElementById("yourimagination");
-  ideatoken.innerHTML = boost;
-  document.getElementById("yourImagination").value = ideatoken.innerHTML;
+    var SUM = PRICE * AMOUNT;
+    p1.innerHTML = PRICE + " |";
+    a1.innerHTML = AMOUNT + " |";
+    s1.innerHTML = SUM + " |";
 
-  var imaginationToken = document.getElementById("imaginationToken").value;
-  var booster = imaginationToken + SUM;
-  var imaginationtoken = document.getElementById("imaginationtoken");
-  imaginationtoken.innerHTML = booster;
-  document.getElementById("imaginationToken").value = imaginationtoken.innerHTML;
+    var ideaToken = document.getElementById("yourImagination").value;
+    var boost = ideaToken - AMOUNT;
+    var ideatoken = document.getElementById("yourimagination");
+    ideatoken.innerHTML = boost;
+    document.getElementById("yourImagination").value = ideatoken.innerHTML;
+
+    var imaginationToken = document.getElementById("imaginationToken").value;
+    var booster = imaginationToken + SUM;
+    var imaginationtoken = document.getElementById("imaginationtoken");
+    imaginationtoken.innerHTML = booster;
+    document.getElementById("imaginationToken").value =
+      imaginationtoken.innerHTML;
+
+    var BUY = +5;
+    var p2 = document.getElementById("p2");
+    var a2 = document.getElementById("a2");
+    var s3 = document.getElementById("s2");
+    
+    p
+
   }
 }
