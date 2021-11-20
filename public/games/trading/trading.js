@@ -764,7 +764,6 @@ function buyFour() {
     var a1 = document.getElementById("a8");
     var s1 = document.getElementById("s8");
 
-    var current = document.getElementById("p8").innerHTML;
 
     var PRICE = price[Math.floor(Math.random() * price.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
@@ -775,7 +774,7 @@ function buyFour() {
     s1.innerHTML = SUM + " |";
 
     var ideaToken = document.getElementById("eclipseImagination").value;
-    var boost = ideaToken + current;
+    var boost = ideaToken;
     var ideatoken = document.getElementById("eclipseimagination");
     ideatoken.innerHTML = boost;
     document.getElementById("eclipseImagination").value = ideatoken.innerHTML;
