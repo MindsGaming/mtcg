@@ -543,7 +543,7 @@ function sellTwo() {
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("D1");
+    var B1 = document.getElementById("C2");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken + B1.value;
@@ -574,8 +574,8 @@ function sellTwo() {
     a2.innerHTML = AMOUNT * 1.3 + " |";
     s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("C2");
-    var D1 = document.getElementById("D2");
+    var C1 = document.getElementById("C3");
+    var D1 = document.getElementById("C4");
 
     C1.value = AMOUNT;
     D1.value = SUM;
@@ -596,7 +596,7 @@ function buyTwo() {
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("D1");
+    var B1 = document.getElementById("C2");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken - B1.value;
@@ -627,8 +627,8 @@ function buyTwo() {
     a2.innerHTML = AMOUNT * 1.3 + " |";
     s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("C1");
-    var D1 = document.getElementById("D1");
+    var C1 = document.getElementById("C3");
+    var D1 = document.getElementById("C4");
 
     C1.value = AMOUNT;
     D1.value = SUM;
@@ -643,7 +643,7 @@ function sellThree() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("E1");
+    var A1 = document.getElementById("D1");
 
     var ideaToken = document.getElementById("eclipseImagination").value;
     var boost = ideaToken - A1.value;
@@ -651,7 +651,7 @@ function sellThree() {
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("F1");
+    var B1 = document.getElementById("D2");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken + B1.value;
@@ -682,8 +682,8 @@ function sellThree() {
     a2.innerHTML = AMOUNT * 1.3 + " |";
     s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("E2");
-    var D1 = document.getElementById("F2");
+    var C1 = document.getElementById("D3");
+    var D1 = document.getElementById("D4");
 
     C1.value = AMOUNT;
     D1.value = SUM;
@@ -696,7 +696,7 @@ function buyThree() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("E1");
+    var A1 = document.getElementById("D1");
 
     var ideaToken = document.getElementById("eclipseImagination").value;
     var boost = ideaToken + A1.value;
@@ -704,7 +704,7 @@ function buyThree() {
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("F1");
+    var B1 = document.getElementById("D2");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken - B1.value;
@@ -735,8 +735,8 @@ function buyThree() {
     a2.innerHTML = AMOUNT * 1.3 + " |";
     s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("E1");
-    var D1 = document.getElementById("F1");
+    var C1 = document.getElementById("D3");
+    var D1 = document.getElementById("D4");
 
     C1.value = AMOUNT;
     D1.value = SUM;
@@ -751,7 +751,7 @@ function sellFour() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("G1");
+    var A1 = document.getElementById("E1");
 
     var ideaToken = document.getElementById("doobetterImagination").value;
     var boost = ideaToken - A1.value;
@@ -759,7 +759,7 @@ function sellFour() {
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("H1");
+    var B1 = document.getElementById("E2");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken + B1.value;
@@ -790,8 +790,8 @@ function sellFour() {
     a2.innerHTML = AMOUNT * 1.3 + " |";
     s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("G2");
-    var D1 = document.getElementById("H2");
+    var C1 = document.getElementById("E3");
+    var D1 = document.getElementById("E4");
 
     C1.value = AMOUNT;
     D1.value = SUM;
@@ -805,7 +805,7 @@ function buyFour() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("F1");
+    var A1 = document.getElementById("E1");
 
     var ideaToken = document.getElementById("doobetterImagination").value;
     var boost = ideaToken + A1.value;
@@ -813,7 +813,7 @@ function buyFour() {
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("G1");
+    var B1 = document.getElementById("E2");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken - B1.value;
@@ -844,8 +844,8 @@ function buyFour() {
     a2.innerHTML = AMOUNT * 1.3 + " |";
     s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("E2");
-    var D1 = document.getElementById("F2");
+    var C1 = document.getElementById("E3");
+    var D1 = document.getElementById("E4");
 
     C1.value = AMOUNT;
     D1.value = SUM;
@@ -860,7 +860,7 @@ function sellBlock() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("sellBlockone");
+    var A1 = document.getElementById("R1");
 
     var ideaToken = document.getElementById("imaginationToken").value;
     var boost = ideaToken - A1.value;
@@ -868,7 +868,7 @@ function sellBlock() {
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("sellBlocktwo");
+    var B1 = document.getElementById("R2");
 
     var imaginationToken = document.getElementById("rewardBlock").value;
     var booster = imaginationToken + B1.value;
@@ -899,8 +899,8 @@ function sellBlock() {
     a2.innerHTML = AMOUNT * 1.3 + " |";
     s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("sellBlockthree");
-    var D1 = document.getElementById("sellBlockfour");
+    var C1 = document.getElementById("R3");
+    var D1 = document.getElementById("R4");
 
     C1.value = AMOUNT;
     D1.value = SUM;
