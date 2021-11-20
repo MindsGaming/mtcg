@@ -253,7 +253,7 @@ function creating() {
   var yourImagination = document.getElementById("yourImagination");
   yourImagination.value = +100000;
   var yourimagination = document.getElementById("yourimagination");
-  yourimagination.innerHTML = "100000";
+  yourimagination.innerHTML = "10000";
 
   if (YOURIDEA.innerHTML == "") {
     YOURIDEA.innerHTML = "Undefined Idea";
@@ -811,7 +811,7 @@ function blockReward() {
     var a1 = document.getElementById("a10");
     var s1 = document.getElementById("s10");
 
-    var PRICES = ["2", "3", "5", "10", "20", "30", "40", "50", "1.6"];
+    var PRICES = ["400", "500", "600", "700", "800", "900", "1000"];
     var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
@@ -821,7 +821,7 @@ function blockReward() {
     s1.innerHTML = SUM + " |";
 
     var ideaToken = document.getElementById("rewardBlock").value;
-    var boost = ideaToken + SUM;
+    var boost = ideaToken + AMOUNT;
     var ideatoken = document.getElementById("rewardblock");
     ideatoken.innerHTML = boost;
     document.getElementById("rewardBlock").value = ideatoken.innerHTML;
@@ -844,12 +844,22 @@ function walletCheck() {
   var doobetterToken = document.getElementById("doobetterImagination");
   var gamerToken = document.getElementById("gamerImagination");
 
-  
   var imaginationtoken = document.getElementById("imaginationtoken");
-  var rewadToken = document.getElementById("rewardBlock");
-  var eclipseToken = document.getElementById("eclipseImagination");
-  var doobetterToken = document.getElementById("doobetterImagination");
-  var gamerToken = document.getElementById("gamerImagination");
-  
-  imagination
+  var rewardtoken = document.getElementById("rewardblock");
+  var eclipsetoken = document.getElementById("eclipseimagination");
+  var doobettertoken = document.getElementById("doobetterimagination");
+  var gamertoken = document.getElementById("gamerimagination");
+
+  imaginationtoken.innerHTML = imaginationToken.value;
+  rewardtoken.innerHTLM = rewardToken.value;
+  eclipsetoken.innerHTML = eclipseToken.value;
+  doobettertoken.innerHTML = doobetterToken.value;
+  gamertoken.innerHTML = gamerToken.value;
+
+  if (imaginationToken.value == "0") {
+    var sub = rewardtoken.innerHTML - imaginationtoken.innerHTML;
+    document.getElementById("rewardblock").innerHTML = sub;
+    document.getElementById("rewardBlock").value = sub;
+
+  }
 }
