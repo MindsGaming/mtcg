@@ -480,7 +480,7 @@ function buyOne() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("C1");
+    var A1 = document.getElementById("A2");
 
     var ideaToken = document.getElementById("yourImagination").value;
     var boost = ideaToken + A1.value;
@@ -488,7 +488,7 @@ function buyOne() {
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("D1");
+    var B1 = document.getElementById("B2");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken - B1.value;
@@ -519,8 +519,8 @@ function buyOne() {
     a2.innerHTML = AMOUNT - 0.03 + " |";
     s2.innerHTML = SUM - 0.03 + " |";
 
-    var C1 = document.getElementById("A2");
-    var D1 = document.getElementById("B2");
+    var C1 = document.getElementById("A1");
+    var D1 = document.getElementById("B1");
 
     C1.value = AMOUNT;
     D1.value = SUM;
