@@ -190,7 +190,7 @@ function creating() {
   var create = document.getElementById("imagineName").value;
   var intro = document.getElementById("imagineIntro").value;
   var userstoken = document.getElementById("usersToken");
-  userstoken.innerHTML = create;
+  userstoken.innerHTML = create + " Idea:";
   var usersintro = document.getElementById("usersIntro");
   usersintro.innerHTML = intro;
   var imagineTab = document.getElementById("createTab");
@@ -399,4 +399,20 @@ function walletCheck() {
 
   ideatoken.innerHTML = ideaToken.value;
   imaginationtoken.innerHTML = imaginationToken.value;
+}
+
+
+function gamerIdea() {
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "hide";
+  var home = document.getElementById("home");
+  home.className = "hide";
+  var wallet = document.getElementById("walletTab");
+  wallet.className = "hide";
+  var trading = document.getElementById("tradingTab");
+  trading.className = "hide";
+  var button = document.getElementById("CREATE");
+  button.className = "hide";
+  var gamerImagine = document.getElementById("gamerImagine");
+  gamerImagine.className = "userpage"
 }
