@@ -157,7 +157,7 @@ function openMenu() {
 function walletMenu() {
   var wallet = document.getElementById("walletTab");
   wallet.className = "trading";
-   var openmenu = document.getElementById("imagineMenu");
+  var openmenu = document.getElementById("imagineMenu");
   openmenu.classList.toggle("showMenu");
   var usersImagine = document.getElementById("usersImagine");
   usersImagine.className = "hide";
@@ -180,7 +180,7 @@ function tradingMenu() {
   trading.className = "trading";
   var wallet = document.getElementById("walletTab");
   wallet.className = "hide";
-   var openmenu = document.getElementById("imagineMenu");
+  var openmenu = document.getElementById("imagineMenu");
   openmenu.classList.toggle("showMenu");
   var usersImagine = document.getElementById("usersImagine");
   usersImagine.className = "hide";
@@ -203,7 +203,7 @@ function logoTick() {
   trading.className = "trading";
   var wallet = document.getElementById("walletTab");
   wallet.className = "hide";
-   var openmenu = document.getElementById("imagineMenu");
+  var openmenu = document.getElementById("imagineMenu");
   openmenu.classList.toggle("showMenu");
   var usersImagine = document.getElementById("usersImagine");
   usersImagine.className = "hide";
@@ -880,7 +880,8 @@ function sellBlock() {
     var a1 = document.getElementById("a10");
     var s1 = document.getElementById("s10");
 
-    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var PRICES = ["0.001", ".002", "0.003", "0.004", "0.005"];
+    var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
     var SUM = PRICE * AMOUNT;
@@ -907,6 +908,60 @@ function sellBlock() {
   }
 }
 
+function buyBlock() {
+  walletCheck();
+  var check = document.getElementById("rewardBlock");
+
+  if (check.value == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("R1");
+
+    var ideaToken = document.getElementById("imaginationToken").value;
+    var boost = ideaToken + A1.value;
+    var ideatoken = document.getElementById("imaginationtoken");
+    ideatoken.innerHTML = boost;
+    ideatoken.value = ideatoken.innerHTML;
+
+    var B1 = document.getElementById("R2");
+
+    var imaginationToken = document.getElementById("rewardBlock").value;
+    var booster = imaginationToken - B1.value;
+    var imaginationtoken = document.getElementById("rewardblock");
+    imaginationtoken.innerHTML = booster;
+    imaginationToken.value = imaginationtoken.innerHTML;
+
+    var p1 = document.getElementById("p11");
+    var a1 = document.getElementById("a11");
+    var s1 = document.getElementById("s11");
+
+    var PRICES = ["0.01", ".02", "0.03", "0.04", "0.005"];
+    var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
+    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+
+    var SUM = PRICE * AMOUNT;
+    p1.innerHTML = PRICE + " |";
+    a1.innerHTML = AMOUNT + " |";
+    s1.innerHTML = SUM + " |";
+
+    A1.value = AMOUNT;
+    B1.value = SUM;
+
+    var p2 = document.getElementById("p10");
+    var a2 = document.getElementById("a10");
+    var s2 = document.getElementById("s10");
+
+    p2.innerHTML = PRICE - 0.003 + " |";
+    a2.innerHTML = AMOUNT - 0.003 + " |";
+    s2.innerHTML = SUM - 0.003 + " |";
+
+    var C1 = document.getElementById("R3");
+    var D1 = document.getElementById("R4");
+
+    C1.value = AMOUNT;
+    D1.value = SUM;
+  }
+}
 
 function walletCheck() {
   var imaginationToken = document.getElementById("imaginationToken");
