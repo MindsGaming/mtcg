@@ -515,6 +515,7 @@
                   id="rewardToken"
                   value="0"
                   max="1000"
+                  min="0"
                 ></meter>
               </li>
               <li class="trade">
@@ -524,6 +525,7 @@
                   id="imaginationToken"
                   value="0"
                   max="10000"
+                  min="0"
                 ></meter>
                 <div id="imaginationtoken">0</div>
               </li>
@@ -543,7 +545,7 @@
                 GAMER Idea:
                 <meter class="hide" id="imginationGamer" value="0"></meter>
 
-                <div id="imaginationgamer" >0</div>
+                <div id="imaginationgamer">0</div>
               </li>
               <li class="trade" onclick="keepDreraming();">
                 <meter class="hide" id="ImaginationDoobetter" value="0"></meter>
@@ -676,11 +678,23 @@
                     Sell Idea
                   </div>
                 </div>
+              </h3>
+              <br />
+            </div>
+             <div class="orders">
+              <h2 style="float: left;">
+                Sell Orders
+              </h2>
+              <br />
+              <div class="line"></div>
+              <br />
+              <h3>
+                Price | Amount | Sum
                 <div class="buyorder">
-                  <label id="p1">.90 </label><label id="a1"> | 90.00</label
-                  ><label id="s1">| 90.00 </label>
-                  <div class="sellButton" onclick="sellTwo();">
-                    Sell Idea
+                  <label id="p1">5.00 </label><label id="a1"> | 100.00</label
+                  ><label id="s1">| 500.00 </label>
+                  <div class="sellButton" onclick="sellOne();">
+                    Buy Idea
                   </div>
                 </div>
               </h3>

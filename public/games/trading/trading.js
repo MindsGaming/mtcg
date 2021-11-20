@@ -275,6 +275,14 @@ var price = ["1.00", "2.00", "3.00", "4.00"];
 var amount = ["100.00", "200.00"];
 
 function sellOne() {
+  
+  var check = document.getElementById("yourimagination");
+  
+  if (check.innerHTML == "0"){
+    alert("You Have No Ideas Left Buy Some Back")
+  }
+  else {
+  
   var p1 = document.getElementById("p1");
   var a1 = document.getElementById("a1");
   var s1 = document.getElementById("s1");
@@ -288,7 +296,7 @@ function sellOne() {
   s1.innerHTML = SUM + " |";
 
   var ideaToken = document.getElementById("yourImagination").value;
-  var boost = ideaToken - SUM;
+  var boost = ideaToken - AMOUNT;
   var ideatoken = document.getElementById("yourimagination");
   ideatoken.innerHTML = boost;
   document.getElementById("yourImagination").value = ideatoken.innerHTML;
@@ -298,4 +306,5 @@ function sellOne() {
   var imaginationtoken = document.getElementById("imaginationtoken");
   imaginationtoken.innerHTML = booster;
   document.getElementById("imaginationToken").value = imaginationtoken.innerHTML;
+  }
 }
