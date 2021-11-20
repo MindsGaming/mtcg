@@ -801,4 +801,42 @@ function buyFour() {
   walletCheck;
 }
 
-function walletCheck() {}
+function blockRewards() {
+  var check = document.getElementById("imaginationToken");
+
+  if (check.value == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var p1 = document.getElementById("p10");
+    var a1 = document.getElementById("a10");
+    var s1 = document.getElementById("s10");
+
+    var PRICES = ["2", "3", "5", "10", "20", "30", "40", "50", "1.6"];
+    var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
+    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+
+    var SUM = PRICE * AMOUNT;
+    p1.innerHTML = PRICE + " |";
+    a1.innerHTML = AMOUNT + " |";
+    s1.innerHTML = SUM + " |";
+
+    var ideaToken = document.getElementById("blockReward").value;
+    var boost = ideaToken + AMOUNT;
+    var ideatoken = document.getElementById("blockreward");
+    ideatoken.innerHTML = boost;
+    document.getElementById("blockReward").value = ideatoken.innerHTML;
+
+    var imaginationToken = document.getElementById("imaginationToken").value;
+    var booster = imaginationToken - SUM;
+    var imaginationtoken = document.getElementById("imaginationtoken");
+    imaginationtoken.innerHTML = booster;
+    document.getElementById("imaginationToken").value =
+      imaginationtoken.innerHTML;
+    walletCheck();
+  }
+  walletCheck();
+}
+
+function walletCheck() {
+  var check;
+}
