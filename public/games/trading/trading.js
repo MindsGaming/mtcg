@@ -463,12 +463,12 @@ function sellOne() {
     var a2 = document.getElementById("a2");
     var s2 = document.getElementById("s2");
 
-    p2.innerHTML = PRICE *1.3 + " |";
-    a2.innerHTML = AMOUNT *1.3 + " |";
-    s2.innerHTML = SUM *1.3 + " |";
+    p2.innerHTML = PRICE * 1.3 + " |";
+    a2.innerHTML = AMOUNT * 1.3 + " |";
+    s2.innerHTML = SUM * 1.3 + " |";
 
-  var C1 = document.getElementById("C1");
-  var D1 = document.getElementById("D1");
+    var C1 = document.getElementById("C1");
+    var D1 = document.getElementById("D1");
 
     C1.value = AMOUNT;
     D1.value = SUM;
@@ -480,25 +480,25 @@ function buyOne() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("A1");
+    var A1 = document.getElementById("C1");
 
     var ideaToken = document.getElementById("yourImagination").value;
-    var boost = ideaToken - B1.value;
+    var boost = ideaToken + A1.value;
     var ideatoken = document.getElementById("yourimagination");
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("B1");
+    var B1 = document.getElementById("D1");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + A1.value;
+    var booster = imaginationToken - B1.value;
     var imaginationtoken = document.getElementById("imaginationtoken");
     imaginationtoken.innerHTML = booster;
     imaginationToken.value = imaginationtoken.innerHTML;
 
-    var p1 = document.getElementById("p1");
-    var a1 = document.getElementById("a1");
-    var s1 = document.getElementById("s1");
+    var p1 = document.getElementById("p2");
+    var a1 = document.getElementById("a2");
+    var s1 = document.getElementById("s2");
 
     var PRICE = price[Math.floor(Math.random() * price.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
@@ -510,9 +510,22 @@ function buyOne() {
 
     A1.value = AMOUNT;
     B1.value = SUM;
+
+    var p2 = document.getElementById("p1");
+    var a2 = document.getElementById("a1");
+    var s2 = document.getElementById("s1");
+
+    p2.innerHTML = (PRICE - 1.3) + " |";
+    a2.innerHTML = (AMOUNT - 1.3) + " |";
+    s2.innerHTML = (SUM - 1.3) + " |";
+
+    var C1 = document.getElementById("C1");
+    var D1 = document.getElementById("D1");
+
+    C1.value = AMOUNT -1.3;
+    D1.value = SUM - 1.3;
   }
 }
-
 function holder() {
   function sellOne() {
     var check = document.getElementById("yourimagination");
