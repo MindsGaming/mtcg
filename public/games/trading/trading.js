@@ -423,50 +423,15 @@ function rewardIdea() {
 }
 
 function sellOne() {
-  var check = document.getElementById("yourimagination");
+  var check = document.getElementById("yourImagination");
 
-  if (check.innerHTML == "0") {
+  if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
     var p1 = document.getElementById("p1");
-    var a1 = document.getElementById("a1");
-    var s1 = document.getElementById("s1");
-
-    var aOne = a1.innerHTML;
-
-    var ideaToken = document.getElementById("yourImagination").value;
-    var boost = ideaToken - aOne;
-    var ideatoken = document.getElementById("yourimagination");
-    ideatoken.innerHTML = boost;
-    document.getElementById("yourImagination").value = ideatoken.innerHTML;
-
-    var sOne = s1.innerHTML;
-
-    var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + sOne;
-    var imaginationtoken = document.getElementById("imaginationtoken");
-    imaginationtoken.innerHTML = booster;
-    document.getElementById("imaginationToken").value =
-      imaginationtoken.innerHTML;
-
-    var PRICE = price[Math.floor(Math.random() * price.length)];
-    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
-
-    var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE;
-    let aOne = AMOUNT;
-    s1.innerHTML = SUM;
-
-    var BUYprice = PRICE * 1.5;
-    var BUYamount = AMOUNT * 1.5;
-    var BUYsum = SUM * 1.5;
-    var p2 = document.getElementById("p2");
-    var a2 = document.getElementById("a2");
-    var s3 = document.getElementById("s2");
-
-    p2.innerHTML = BUYprice + " |";
-    a2.innerHTML = BUYamount + " |";
-    s3.innerHTML = BUYsum + " |";
+    var a1 = document.getElementById("A1").value;
+    var s1 = document.getElementById("S1").value;
+alert(a1 + s1)
   }
 }
 

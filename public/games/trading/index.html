@@ -694,11 +694,33 @@
               <h3>
                 Price | Amount | Sum
                 <div class="buyorder">
-                  <label id="p1">1.00 </label><label id="a1"> | 100.00</label
-                  ><label id="s1">| 100.00 </label>
+                  <label id="p1">1.00 </label
+                  ><label id="a1"> | 100.00</label
+                  ><label value="0" max="100000" id="s1">| 100.00 </label>
                   <div class="sellButton" onclick="sellOne();">
                     Sell Idea
                   </div>
+                   <meter
+                  class="hide"
+                  id="P1"
+                  value="0"
+                  max="1000"
+                  min="0"
+                ></meter>
+                    <meter
+                  class="hide"
+                  id="A1"
+                  value="0"
+                  max="1000"
+                  min="0"
+                ></meter>
+                   <meter
+                  class="hide"
+                  id="S1"
+                  value="0"
+                  max="1000"
+                  min="0"
+                ></meter>
                 </div>
               </h3>
               <br />
@@ -718,6 +740,7 @@
                   <div class="sellButton" onclick="buyOne();">
                     Buy Idea
                   </div>
+                    
                 </div>
               </h3>
               <br />
