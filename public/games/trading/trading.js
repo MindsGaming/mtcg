@@ -271,8 +271,8 @@ function usersIdea() {
   openMenu();
 }
 
-var price = ["1.00", "2.00", "3.00", "4.00"];
-var amount = ["100.00", "200.00"];
+var price = ["1.00", "2.00", "3.00", "4.00", "5.00", "6.00", "7.00", "8.00", "9.00", "10.00", "11.00", "12.00", "13.00", "14.00"];
+var amount = ["100.00", "200.00", "300.00", "400.00", "500.00", "600.00", "1000"];
 
 function sellOne() {
   var check = document.getElementById("yourimagination");
@@ -319,9 +319,9 @@ function sellOne() {
 }
 
 function buyOne() {
-  var check = document.getElementById("imaginationtoken");
+  var check = document.getElementById("imaginationToken");
 
-  if (check.innerHTML == "0") {
+  if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
     var p1 = document.getElementById("p2");
@@ -349,7 +349,7 @@ function buyOne() {
     document.getElementById("imaginationToken").value =
       imaginationtoken.innerHTML;
 
-    var BUYprice = PRICE % 1.5;
+    var BUYprice = PRICE % 1.3;
     var BUYamount = AMOUNT % 1.5;
     var BUYsum = SUM % 1.5;
     var p2 = document.getElementById("p1");
