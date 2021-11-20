@@ -320,6 +320,7 @@
         border-style: groove;
         border-color: silver;
         color: red;
+        cursor: pointer;
       }
     </style>
     <script src="/games/trading/trading.js" defer></script>
@@ -669,14 +670,14 @@
                 <div class="buyorder">
                   <label id="p1">1.00 </label><label id="a1"> | 100.00</label
                   ><label id="s1">| 100.00 </label>
-                  <div class="sellButton">
+                  <div class="sellButton"onclick="sellOne();" >
                     Sell Idea
                   </div>
                 </div>
                   <div class="buyorder">
                   <label id="p1">.90 </label><label id="a1"> | 90.00</label
                   ><label id="s1">| 90.00 </label>
-                  <div class="sellButton">
+                  <div class="sellButton" onclick="sellTwo();" >
                     Sell Idea
                   </div>
                 </div>
