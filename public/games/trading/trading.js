@@ -420,6 +420,8 @@ function rewardIdea() {
   rewardImagine.className = "userpage";
 }
 
+
+function monker() {
 function sellOne() {
   walletCheck();
   var check = document.getElementById("yourImagination");
@@ -962,7 +964,7 @@ function buyBlock() {
     D1.value = SUM;
   }
 }
-
+}
 function walletCheck() {
   var imaginationToken = document.getElementById("imaginationToken");
   var rewardToken = document.getElementById("rewardBlock");
