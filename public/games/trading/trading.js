@@ -171,18 +171,50 @@ function walletMenu() {
   eclipseImagine.className = "hide";
   var doobetterImagine = document.getElementById("doobetterImagine");
   doobetterImagine.className = "hide";
-  var rewardImagine = document.getElementById("REWARDTOKEN");
+  var rewardImagine = document.getElementById("rewardsImagine");
   rewardImagine.className = "hide";
 }
 
 function tradingMenu() {
   var trading = document.getElementById("tradingTab");
   trading.className = "trading";
+  var wallet = document.getElementById("walletTab");
+  wallet.className = "hide";
+   var openmenu = document.getElementById("imagineMenu");
+  openmenu.classList.toggle("showMenu");
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "hide";
+  var home = document.getElementById("home");
+  home.className = "hide";
+  var gamerImagine = document.getElementById("gamerImagine");
+  gamerImagine.className = "hide";
+  var eclipseImagine = document.getElementById("eclipseImagine");
+  eclipseImagine.className = "hide";
+  var doobetterImagine = document.getElementById("doobetterImagine");
+  doobetterImagine.className = "hide";
+  var rewardImagine = document.getElementById("rewardsImagine");
+  rewardImagine.className = "hide";
 }
 
 function logoTick() {
   var home = document.getElementById("home");
   home.className = "trading";
+  var trading = document.getElementById("tradingTab");
+  trading.className = "trading";
+  var wallet = document.getElementById("walletTab");
+  wallet.className = "hide";
+   var openmenu = document.getElementById("imagineMenu");
+  openmenu.classList.toggle("showMenu");
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "hide";
+  var gamerImagine = document.getElementById("gamerImagine");
+  gamerImagine.className = "hide";
+  var eclipseImagine = document.getElementById("eclipseImagine");
+  eclipseImagine.className = "hide";
+  var doobetterImagine = document.getElementById("doobetterImagine");
+  doobetterImagine.className = "hide";
+  var rewardImagine = document.getElementById("rewardsImagine");
+  rewardImagine.className = "hide";
 }
 
 function creating() {
@@ -365,7 +397,7 @@ function doobetterIdea() {
   eclipseImagine.className = "hide";
   var doobetterImagine = document.getElementById("doobetterImagine");
   doobetterImagine.className = "userpage";
-  var rewardImagine = document.getElementById("REWARDTOKEN");
+  var rewardImagine = document.getElementById("rewardsImagine");
   rewardImagine.className = "hide";
 }
 
@@ -828,7 +860,7 @@ function sellBlock() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("sellBlock1");
+    var A1 = document.getElementById("sellBlockone");
 
     var ideaToken = document.getElementById("imaginationToken").value;
     var boost = ideaToken - A1.value;
@@ -836,7 +868,7 @@ function sellBlock() {
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("sellBlock2");
+    var B1 = document.getElementById("sellBlocktwo");
 
     var imaginationToken = document.getElementById("rewardToken").value;
     var booster = imaginationToken + B1.value;
@@ -867,8 +899,8 @@ function sellBlock() {
     a2.innerHTML = AMOUNT * 1.3 + " |";
     s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("G2");
-    var D1 = document.getElementById("H2");
+    var C1 = document.getElementById("sellBlockthree");
+    var D1 = document.getElementById("sellBlockfour");
 
     C1.value = AMOUNT;
     D1.value = SUM;
