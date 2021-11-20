@@ -521,6 +521,9 @@ function sellTwo() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
+    sellOne();
+    sellThree();
+    sellFour();
   }
   walletCheck();
 }
@@ -568,6 +571,9 @@ function buyTwo() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
+    buyOne();
+    buyThree();
+    buyFour();
   }
   walletCheck();
 }
@@ -615,6 +621,9 @@ function sellThree() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
+    sellOne();
+    sellTwo();
+    sellFour();
   }
   walletCheck();
 }
@@ -662,6 +671,9 @@ function buyThree() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
+    buyOne();
+    buyTwo();
+    buyFour();
   }
   walletCheck();
 }
@@ -709,6 +721,9 @@ function sellFour() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
+    sellOne();
+    sellTwo();
+    sellThree();
   }
   walletCheck();
 }
@@ -756,6 +771,9 @@ function buyFour() {
     s3.innerHTML = BUYsum + " |";
 
     walletCheck();
+    buyOne();
+    buyTwo();
+    buyThree();
   }
   walletCheck();
 }
@@ -765,9 +783,17 @@ function walletCheck() {
   var ideatoken = document.getElementById("yourimagination").innerHTML;
   var imaginationToken = document.getElementById("imaginationToken").value;
   var imaginationtoken = document.getElementById("imaginationtoken").innerHTML;
-  var eclipseToken = document.getElementById("eclipseImagination");
-  var eclipsetoken = document.getElementById("eclipseimagination");
+  var eclipseToken = document.getElementById("eclipseImagination").value;
+  var eclipsetoken = document.getElementById("eclipseimagination").innerHTML;
+  var doobetterToken = document.getElementById("doobetterImagination").value;
+  var doobettertoken = document.getElementById("doobetterImagination")
+    .innerHTML;
+  var gamerToken = document.getElementById("gamerImagination").value;
+  var gamertoken = document.getElementById("gamerimagination").innerHTML;
 
-  ideatoken.innerHTML = ideaToken.value;
-  imaginationtoken.innerHTML = imaginationToken.value;
+  ideatoken = ideaToken;
+  imaginationtoken = imaginationToken;
+  eclipsetoken = eclipseToken;
+  doobettertoken = doobetterToken;
+  gamertoken = gamerToken;
 }
