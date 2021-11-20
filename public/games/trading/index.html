@@ -287,7 +287,7 @@
       .claimreward {
         position: relative;
         border-style: groove;
-        width: 3rem;
+        width: 5rem;
         margin: 2rem;
         color: grey;
         cursor: pointer;
@@ -501,17 +501,9 @@
           <br />
           <div class="walletTokens" id="walletTokens">
             <ul>
-              <li class="trade">
+              <li class="trade" onclick="rewardIdea();">
                 Rewards:
                 <div id="rewardtoken">0</div>
-
-                <div
-                  class="claimreward"
-                  id="claimReward"
-                  onclick="keepDreaming();"
-                >
-                  Claim Reward
-                </div>
                 <meter
                   class="hide"
                   id="rewardToken"
@@ -520,6 +512,14 @@
                   min="0"
                 ></meter>
               </li>
+                <div
+                  class="claimreward"
+                  id="claimReward"
+                  onclick="keepDreaming();"
+                >
+                  Claim Reward
+                </div>
+              <br>
               <li class="trade">
                 Ideas:
                 <meter
