@@ -718,9 +718,9 @@ function sellFour() {
   if (check.innerHTML == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var p1 = document.getElementById("p1");
-    var a1 = document.getElementById("a1");
-    var s1 = document.getElementById("s1");
+    var p1 = document.getElementById("p7");
+    var a1 = document.getElementById("a7");
+    var s1 = document.getElementById("s7");
 
     var PRICE = price[Math.floor(Math.random() * price.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
@@ -746,9 +746,9 @@ function sellFour() {
     var BUYprice = PRICE * 1.5;
     var BUYamount = AMOUNT * 1.5;
     var BUYsum = SUM * 1.5;
-    var p2 = document.getElementById("p2");
-    var a2 = document.getElementById("a2");
-    var s3 = document.getElementById("s2");
+    var p2 = document.getElementById("p8");
+    var a2 = document.getElementById("a8");
+    var s3 = document.getElementById("s8");
 
     p2.innerHTML = BUYprice + " |";
     a2.innerHTML = BUYamount + " |";
@@ -765,9 +765,9 @@ function buyFour() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var p1 = document.getElementById("p2");
-    var a1 = document.getElementById("a2");
-    var s1 = document.getElementById("s2");
+    var p1 = document.getElementById("p8");
+    var a1 = document.getElementById("a8");
+    var s1 = document.getElementById("s8");
 
     var PRICE = price[Math.floor(Math.random() * price.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
@@ -793,9 +793,9 @@ function buyFour() {
     var BUYprice = PRICE % 1.3;
     var BUYamount = AMOUNT % 1.5;
     var BUYsum = SUM % 1.5;
-    var p2 = document.getElementById("p1");
-    var a2 = document.getElementById("a1");
-    var s3 = document.getElementById("s1");
+    var p2 = document.getElementById("p7");
+    var a2 = document.getElementById("a7");
+    var s3 = document.getElementById("s7");
 
     p2.innerHTML = BUYprice + " |";
     a2.innerHTML = BUYamount + " |";
