@@ -23,24 +23,22 @@ function openMenu() {
 function walletMenu() {
   var wallet = document.getElementById("walletTab");
   wallet.className = "trading";
+ var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "hide";
+  var home = document.getElementById("home");
+  home.className = "hide";
+  var wallet = document.getElementById("walletTab");
+  wallet.className = "hide";
   var trading = document.getElementById("tradingTab");
   trading.className = "hide";
-  var hide = document.getElementById("home");
-  hide.className = "hide";
-  var create = document.getElementById("createTab");
-  create.className = "hide";
-  var usersImagine = document.getElementById("usersImagine");
-  usersImagine.className = "hide";
+  var gamerImagine = document.getElementById("gamerImagine");
+  gamerImagine.className = "hide";
   var eclipseImagine = document.getElementById("eclipseImagine");
   eclipseImagine.className = "hide";
   var doobetterImagine = document.getElementById("doobetterImagine");
   doobetterImagine.className = "hide";
-  var rewardImagine = document.getElementById("rewardsImagine");
+  var rewardImagine = document.getElementById("REWARDTOKEN");
   rewardImagine.className = "hide";
-  var gamerImagine = document.getElementById("gamerImagine");
-  gamerImagine.className = "hide";
-  openMenu();
-  walletCheck();
 }
 
 function tradingMenu() {
@@ -62,7 +60,6 @@ function tradingMenu() {
   rewardImagine.className = "hide";
   var gamerImagine = document.getElementById("gamerImagine");
   gamerImagine.className = "hide";
-
   openMenu();
 }
 
