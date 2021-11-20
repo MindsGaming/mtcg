@@ -288,12 +288,14 @@ function sellOne() {
   s1.innerHTML = SUM + " |";
 
   var ideaToken = document.getElementById("yourImagination").value;
-  var boost = ideaToken - AMOUNT;
+  var boost = ideaToken - SUM;
   var ideatoken = document.getElementById("yourimagination");
   ideatoken.innerHTML = boost;
+  document.getElementById("yourImagination").value = ideatoken.innerHTML;
 
   var imaginationToken = document.getElementById("imaginationToken").value;
-  var booster = ideaToken - AMOUNT;
-  var imaginationtoken = document.getElementById("imaginationToken");
+  var booster = imaginationToken + SUM;
+  var imaginationtoken = document.getElementById("imaginationtoken");
   imaginationtoken.innerHTML = booster;
+  document.getElementById("imaginationToken").value = imaginationtoken.innerHTML;
 }
