@@ -838,17 +838,18 @@ function blockReward() {
 }
 
 function walletCheck() {
-  var check;
-      var ideaToken = document.getElementById("rewardBlock").value;
-      var imaginationToken = document.getElementById("imaginationToken").value;
-  if (imaginationToken.value == "0"){
-          var ideatoken = document.getElementById("rewardblock").innerHTML;
-      var imaginationtoken = document.getElementById("imaginationtoken").innerHTML;
-    check = ideatoken - imaginationtoken;
-    
-    
-    
+  var imaginationToken = document.getElementById("imaginationToken");
+  var rewardToken = document.getElementById("rewardBlock");
+  var eclipseToken = document.getElementById("eclipseImagination");
+  var doobetterToken = document.getElementById("doobetterImagination");
+  var gamerToken = document.getElementById("gamerImagination");
 
-  }  
-
+  
+  var imaginationtoken = document.getElementById("imaginationtoken");
+  var rewadToken = document.getElementById("rewardBlock");
+  var eclipseToken = document.getElementById("eclipseImagination");
+  var doobetterToken = document.getElementById("doobetterImagination");
+  var gamerToken = document.getElementById("gamerImagination");
+  
+  imagination
 }
