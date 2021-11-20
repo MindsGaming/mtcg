@@ -764,16 +764,18 @@ function buyFour() {
     var a1 = document.getElementById("a8");
     var s1 = document.getElementById("s8");
 
+    var current = document.getElementById("p8").innerHTML;
+
     var PRICE = price[Math.floor(Math.random() * price.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
     var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
+    p1.innerHTML = PRICE;
     a1.innerHTML = AMOUNT + " |";
     s1.innerHTML = SUM + " |";
 
     var ideaToken = document.getElementById("eclipseImagination").value;
-    var boost = ideaToken + AMOUNT;
+    var boost = ideaToken + current;
     var ideatoken = document.getElementById("eclipseimagination");
     ideatoken.innerHTML = boost;
     document.getElementById("eclipseImagination").value = ideatoken.innerHTML;
@@ -811,6 +813,7 @@ function blockReward() {
     var a1 = document.getElementById("a10");
     var s1 = document.getElementById("s10");
 
+        var current = document.getElementById("p8").innerHTML;
     var PRICES = ["400", "500", "600", "700", "800", "900", "1000"];
     var PRICE = PRICES[Math.floor(Math.random() * PRICES.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
