@@ -699,7 +699,7 @@ function buyThree() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("C1");
+    var A1 = document.getElementById("E1");
 
     var ideaToken = document.getElementById("eclipseImagination").value;
     var boost = ideaToken + A1.value;
@@ -707,7 +707,7 @@ function buyThree() {
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var B1 = document.getElementById("D1");
+    var B1 = document.getElementById("F1");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken - B1.value;
@@ -715,9 +715,9 @@ function buyThree() {
     imaginationtoken.innerHTML = booster;
     imaginationToken.value = imaginationtoken.innerHTML;
 
-    var p1 = document.getElementById("p4");
-    var a1 = document.getElementById("a4");
-    var s1 = document.getElementById("s4");
+    var p1 = document.getElementById("p6");
+    var a1 = document.getElementById("a6");
+    var s1 = document.getElementById("s6");
 
     var PRICE = price[Math.floor(Math.random() * price.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
@@ -730,16 +730,16 @@ function buyThree() {
     A1.value = AMOUNT;
     B1.value = SUM;
 
-    var p2 = document.getElementById("p3");
-    var a2 = document.getElementById("a3");
-    var s2 = document.getElementById("s3");
+    var p2 = document.getElementById("p5");
+    var a2 = document.getElementById("a5");
+    var s2 = document.getElementById("s5");
 
     p2.innerHTML = PRICE * 1.3 + " |";
     a2.innerHTML = AMOUNT * 1.3 + " |";
     s2.innerHTML = SUM * 1.3 + " |";
 
-    var C1 = document.getElementById("C1");
-    var D1 = document.getElementById("D1");
+    var C1 = document.getElementById("E1");
+    var D1 = document.getElementById("F1");
 
     C1.value = AMOUNT;
     D1.value = SUM;
