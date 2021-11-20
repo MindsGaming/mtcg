@@ -278,7 +278,7 @@ function sellOne() {
   var check = document.getElementById("yourimagination");
 
   if (check.innerHTML == "0") {
-    alert("You Have No Ideas Left Buy Some Back");
+    alert("Not Enough, Try Other Trades Or Cashout");
   } else {
     var p1 = document.getElementById("p1");
     var a1 = document.getElementById("a1");
@@ -305,12 +305,59 @@ function sellOne() {
     document.getElementById("imaginationToken").value =
       imaginationtoken.innerHTML;
 
-    var BUY = +5;
+    var BUYprice = PRICE * 1.5;
+    var BUYamount = AMOUNT * 1.5;
+    var BUYsum = SUM * 1.5;
     var p2 = document.getElementById("p2");
     var a2 = document.getElementById("a2");
     var s3 = document.getElementById("s2");
-    
-    p
 
+    p2.innerHTML = BUYprice + " |";
+    a2.innerHTML = BUYamount + " |";
+    s3.innerHTML = BUYsum + " |";
+  }
+}
+
+function buyOne() {
+  var check = document.getElementById("imaginationtoken");
+
+  if (check.innerHTML == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var p1 = document.getElementById("p2");
+    var a1 = document.getElementById("a2");
+    var s1 = document.getElementById("s2");
+
+    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+
+    var SUM = PRICE * AMOUNT;
+    p1.innerHTML = PRICE + " |";
+    a1.innerHTML = AMOUNT + " |";
+    s1.innerHTML = SUM + " |";
+
+    var ideaToken = document.getElementById("yourImagination").value;
+    var boost = ideaToken + AMOUNT;
+    var ideatoken = document.getElementById("yourimagination");
+    ideatoken.innerHTML = boost;
+    document.getElementById("yourImagination").value = ideatoken.innerHTML;
+
+    var imaginationToken = document.getElementById("imaginationToken").value;
+    var booster = imaginationToken - SUM;
+    var imaginationtoken = document.getElementById("imaginationtoken");
+    imaginationtoken.innerHTML = booster;
+    document.getElementById("imaginationToken").value =
+      imaginationtoken.innerHTML;
+
+    var BUYprice = PRICE % 1.5;
+    var BUYamount = AMOUNT % 1.5;
+    var BUYsum = SUM % 1.5;
+    var p2 = document.getElementById("p1");
+    var a2 = document.getElementById("a1");
+    var s3 = document.getElementById("s1");
+
+    p2.innerHTML = BUYprice + " |";
+    a2.innerHTML = BUYamount + " |";
+    s3.innerHTML = BUYsum + " |";
   }
 }
