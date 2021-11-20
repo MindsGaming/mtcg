@@ -801,7 +801,7 @@ function buyFour() {
   walletCheck;
 }
 
-function blockRewards() {
+function blockReward() {
   var check = document.getElementById("imaginationToken");
 
   if (check.value == "0") {
@@ -820,11 +820,11 @@ function blockRewards() {
     a1.innerHTML = AMOUNT + " |";
     s1.innerHTML = SUM + " |";
 
-    var ideaToken = document.getElementById("blockReward").value;
+    var ideaToken = document.getElementById("rewardBlock").value;
     var boost = ideaToken + AMOUNT;
-    var ideatoken = document.getElementById("blockreward");
+    var ideatoken = document.getElementById("rewardblock");
     ideatoken.innerHTML = boost;
-    document.getElementById("blockReward").value = ideatoken.innerHTML;
+    document.getElementById("rewardBlock").value = ideatoken.innerHTML;
 
     var imaginationToken = document.getElementById("imaginationToken").value;
     var booster = imaginationToken - SUM;
