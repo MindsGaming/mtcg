@@ -420,16 +420,17 @@ function rewardIdea() {
 
 function sellOne() {
   var A1 = document.getElementById("A1").value;
+  var A2 = document.getElementById("A2").value;
 
   var tackCount = document.getElementById("yourImagination").value;
   var tackcount = tackCount - A1;
   document.getElementById("yourImagination").value = tackcount;
   document.getElementById("yourimagination").innerHTML = tackcount;
-  
-  var tackCount2 = document.getElementById("imagination").value;
-  var tackcount = tackCount - A1;
-  document.getElementById("yourImagination").value = tackcount;
-  document.getElementById("yourimagination").innerHTML = tackcount;
+
+  var tackCount2 = document.getElementById("imaginationToken").value;
+  var tackcount2 = tackCount2 + A2;
+  document.getElementById("imaginationToken").value = tackcount2;
+  document.getElementById("imaginationtoken").innerHTML = tackcount2;
 
   var price = [
     "0.001",
@@ -467,7 +468,10 @@ function sellOne() {
   var AMOUNT2 = AMOUNT - 0.05;
   var SUM2 = PRICE2 * AMOUNT2;
 
-  document.getElementById("p2").innerHTML = PRICE;
-  document.getElementById("a2").innerHTML = AMOUNT;
-  document.getElementById("s2").innerHTML = SUM;
+  document.getElementById("p2").innerHTML = PRICE2;
+  document.getElementById("a2").innerHTML = AMOUNT2;
+  document.getElementById("s2").innerHTML = SUM2;
+
+  document.getElementById("A3").innerHTML = AMOUNT2;
+  document.getElementById("A4").innerHTML = SUM2;
 }
