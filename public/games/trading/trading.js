@@ -890,25 +890,19 @@ function buyBlock() {
 }
 
 function claimReward() {
-  var checkReward = document.getElementById("rewardBlock").value;
-  
-  
-  if (checkRew)
-  
-  
-  var checkReward = document.getElementById("rewardblock").innerHTML;
-  var checkImagine = document.getElementById("imaginationtoken").innerHTML;
+  var checkRewards = document.getElementById("rewardBlock").value;
 
-  var checkDoobetter = document.getElementById("doobetterimagination")
-    .innerHTML;
-  var checkEclipse = document.getElementById("eclipseimagination").innerHTML;
-  var checkGamer = document.getElementById("gamerimagination").innerHTML;
-  var checkYou = document.getElementById("yourimagination").innerHTML;
+  if (checkRewards == "0") {
+    alert("No Rewards Found, Sell Some Ideas?");
+  } else {
+    var checkYou = document.getElementById("yourImagination").value;
 
-  var superman = checkDoobetter + checkEclipse + checkGamer + checkYou;
-  var imagination = superman - checkImagine;
+    if (checkYou == "0") {
+      alert("You Can't Cash Out Without Owing Some Of Your Ideas");
+    } else {
+      var checkReward = document.getElementById("rewardblock").innerHTML;
 
-  var REWARD =  checkReward - imagination;
-
-  alert(REWARD);
+      alert(checkReward);
+    }
+  }
 }
