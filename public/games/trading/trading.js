@@ -456,6 +456,13 @@ var amounts = [
 ];
 
 function sellOne() {
+  
+    var check = document.getElementById("yourImagination").value;
+
+  if (check = "0"){
+    alert("Not Enough, Try Other Trades Or Cashout")
+  }
+  
   var A1 = document.getElementById("A1").value;
   var A2 = document.getElementById("A2").value;
 
