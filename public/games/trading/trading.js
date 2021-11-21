@@ -613,18 +613,95 @@ function buyTwo() {
   }
 }
 
-function superSale() {
-  var A1 = document.getElementById("A1").value;
-  var C1 = document.getElementById("C1").value;
-  var check1 = C1 - A1;
-  
-var CHECK1 = document.getElementById("CHECK");
-CHECK1.value = check1;
+// ECLIPSE/Ideas //
 
-  var CHECK2 = document.getElementById("CHECK");
-  CHECK2.value = check2;
-  
-  
-  
-  
+function sellThree() {
+  var check = document.getElementById("eclipseImagination").value;
+
+  if (check == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("D1").value;
+    var A2 = document.getElementById("D2").value;
+
+    var tackCount = document.getElementById("eclipseImagination").value;
+    var tackcount = tackCount - A1;
+    document.getElementById("eclipseImagination").value = tackcount;
+    document.getElementById("eclipseimagination").innerHTML = tackcount;
+
+    var tackCount2 = document.getElementById("imaginationToken").value;
+    var tackcount2 = tackCount2 + A2;
+    document.getElementById("imaginationToken").value = tackcount2;
+    document.getElementById("imaginationtoken").innerHTML = tackcount2;
+
+    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUM = PRICE * AMOUNT;
+
+    document.getElementById("p5").innerHTML = PRICE;
+    document.getElementById("a5").innerHTML = AMOUNT;
+    document.getElementById("s5").innerHTML = SUM;
+
+    document.getElementById("D1").value = AMOUNT;
+    document.getElementById("D2").value = SUM;
+
+    var PRICES = prices[Math.floor(Math.random() * prices.length)];
+    var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUMS = PRICES * AMOUNTS;
+
+    document.getElementById("p6").innerHTML = PRICES;
+    document.getElementById("a6").innerHTML = AMOUNTS;
+    document.getElementById("s6").innerHTML = SUMS;
+
+    document.getElementById("D3").value = AMOUNTS;
+    document.getElementById("D4").value = SUMS;
+  }
 }
+
+function buyThree() {
+  var check = document.getElementById("imaginationToken").value;
+
+  if (check == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("D3").value;
+    var A2 = document.getElementById("D4").value;
+
+    var tackCount = document.getElementById("eclipseImagination").value;
+    var tackcount = tackCount + A1;
+    document.getElementById("eclipseImagination").value = tackcount;
+    document.getElementById("eclipseimagination").innerHTML = tackcount;
+
+    var tackCount2 = document.getElementById("imaginationToken").value;
+    var tackcount2 = tackCount2 - A2;
+    document.getElementById("imaginationToken").value = tackcount2;
+    document.getElementById("imaginationtoken").innerHTML = tackcount2;
+
+    var PRICE = prices[Math.floor(Math.random() * prices.length)];
+    var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUM = PRICE * AMOUNT;
+
+    document.getElementById("p4").innerHTML = PRICE;
+    document.getElementById("a4").innerHTML = AMOUNT;
+    document.getElementById("s4").innerHTML = SUM;
+
+    document.getElementById("C3").value = AMOUNT;
+    document.getElementById("C4").value = SUM;
+
+    var PRICES = price[Math.floor(Math.random() * price.length)];
+    var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUMS = PRICES * AMOUNTS;
+
+    document.getElementById("p3").innerHTML = PRICES;
+    document.getElementById("a3").innerHTML = AMOUNTS;
+    document.getElementById("s3").innerHTML = SUMS;
+
+    document.getElementById("C1").value = AMOUNTS;
+    document.getElementById("C2").value = SUMS;
+  }
+}
+
