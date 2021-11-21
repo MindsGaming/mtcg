@@ -976,15 +976,18 @@ function walletCheck() {
   var doobettertoken = document.getElementById("doobetterimagination");
   var gamertoken = document.getElementById("gamerimagination");
 
-  imaginationToken.value = imaginationtoken.innerHTML;
-  rewardToken.value = rewardtoken.innerHTML;
-  eclipseToken.value = eclipsetoken.innerHTML;
-  doobetterToken.value = doobettertoken.innerHTML;
-  gamerToken.value = gamertoken.innerHTML;
+  imaginationtoken.innerHTML = imaginationToken.value;
+  rewardtoken.innerHTML = rewardToken.value;
+  eclipsetoken.innerHTML = eclipseToken.value;
+  doobettertoken.innerHTML = doobetterToken.value;
+  gamertoken.innerHTML = gamerToken.value;
 
   if (imaginationToken.value == "0") {
-    var sub = rewardtoken.innerHTML - imaginationtoken.innerHTML;
-    document.getElementById("rewardblock").innerHTML = sub;
-    document.getElementById("rewardBlock").value = sub;
+    var sub = imaginationToken.value - imaginationtoken.innerHTML;
+    var sub2 = rewardToken.value - rewardtoken.innerHTML;
+    var total = sub - sub2;
+
+    document.getElementById("rewardblock").innerHTML = total;
+    document.getElementById("rewardBlock").value = total;
   }
 }
