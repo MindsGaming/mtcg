@@ -469,8 +469,8 @@ function sellOne() {
   document.getElementById("A1").value = AMOUNT;
   document.getElementById("A2").value = SUM;
 
-  var PRICE2 = PRICE + 99;
-  var AMOUNT2 = AMOUNT + 99;
+  var PRICE2 = PRICE + 1;
+  var AMOUNT2 = AMOUNT + 1;
   var SUM2 = PRICE2 * AMOUNT2;
 
   document.getElementById("p2").innerHTML = PRICE2;
@@ -507,8 +507,8 @@ function buyOne() {
   document.getElementById("A3").value = AMOUNT;
   document.getElementById("A4").value = SUM;
 
-  var PRICE2 = PRICE - 99;
-  var AMOUNT2 = AMOUNT - 99;
+  var PRICE2 = PRICE - .1;
+  var AMOUNT2 = AMOUNT - .1;
   var SUM2 = PRICE2 * AMOUNT2;
 
   document.getElementById("p1").innerHTML = PRICE2;
@@ -540,36 +540,36 @@ function sellTwo() {
 
   var SUM = PRICE * AMOUNT;
 
-  document.getElementById("p2").innerHTML = PRICE;
-  document.getElementById("a2").innerHTML = AMOUNT;
-  document.getElementById("s2").innerHTML = SUM;
+  document.getElementById("p3").innerHTML = PRICE;
+  document.getElementById("a3").innerHTML = AMOUNT;
+  document.getElementById("s3").innerHTML = SUM;
 
   document.getElementById("C3").value = AMOUNT;
   document.getElementById("C4").value = SUM;
 
-  var PRICE2 = PRICE + 99;
-  var AMOUNT2 = AMOUNT + 99;
+  var PRICE2 = PRICE + 1;
+  var AMOUNT2 = AMOUNT + 1;
   var SUM2 = PRICE2 * AMOUNT2;
 
-  document.getElementById("p3").innerHTML = PRICE2;
-  document.getElementById("a3").innerHTML = AMOUNT2;
+  document.getElementById("p4").innerHTML = PRICE2;
+  document.getElementById("a4").innerHTML = AMOUNT2;
   document.getElementById("s4").innerHTML = SUM2;
 
   document.getElementById("C1").value = AMOUNT2;
-  document.getElementById("C4").value = SUM2;
+  document.getElementById("C2").value = SUM2;
 }
 
-function buyTWO() {
+function buyTwo() {
   var A1 = document.getElementById("C3").value;
   var A2 = document.getElementById("C4").value;
 
-  var tackCount = document.getElementById("yourImagination").value;
-  var tackcount = tackCount + A1;
-  document.getElementById("yourImagination").value = tackcount;
-  document.getElementById("yourimagination").innerHTML = tackcount;
+  var tackCount = document.getElementById("gamerImagination").value;
+  var tackcount = tackCount - A1;
+  document.getElementById("gamerImagination").value = tackcount;
+  document.getElementById("gamerimagination").innerHTML = tackcount;
 
   var tackCount2 = document.getElementById("imaginationToken").value;
-  var tackcount2 = tackCount2 - A2;
+  var tackcount2 = tackCount2 + A2;
   document.getElementById("imaginationToken").value = tackcount2;
   document.getElementById("imaginationtoken").innerHTML = tackcount2;
 
@@ -578,21 +578,21 @@ function buyTWO() {
 
   var SUM = PRICE * AMOUNT;
 
-  document.getElementById("p3").innerHTML = PRICE;
-  document.getElementById("a3").innerHTML = AMOUNT;
-  document.getElementById("s3").innerHTML = SUM;
+  document.getElementById("p4").innerHTML = PRICE;
+  document.getElementById("a4").innerHTML = AMOUNT;
+  document.getElementById("s4").innerHTML = SUM;
 
-  document.getElementById("C3").value = AMOUNT;
-  document.getElementById("C4").value = SUM;
+  document.getElementById("C1").value = AMOUNT;
+  document.getElementById("C2").value = SUM;
 
-  var PRICE2 = PRICE - 99;
-  var AMOUNT2 = AMOUNT - 99;
+  var PRICE2 = PRICE - 1;
+  var AMOUNT2 = AMOUNT - 1;
   var SUM2 = PRICE2 * AMOUNT2;
 
-  document.getElementById("p2").innerHTML = PRICE2;
-  document.getElementById("a2").innerHTML = AMOUNT2;
-  document.getElementById("s2").innerHTML = SUM2;
+  document.getElementById("p4").innerHTML = PRICE2;
+  document.getElementById("a4").innerHTML = AMOUNT2;
+  document.getElementById("s4").innerHTML = SUM2;
 
   document.getElementById("C1").value = AMOUNT2;
-  document.getElementById("C2").value = SUM2;
+  document.getElementById("C4").value = SUM2;
 }
