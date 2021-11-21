@@ -890,11 +890,25 @@ function buyBlock() {
 }
 
 function claimReward() {
-  var checkReweard = document.getElementById("rewardblock").innerHTML;
-  var checkImagine = document.getElementById("imaginationtoken").innerHTML;
-var checkDoobetter = document.getElementById("doobetterimagination").innerHTML;
-    var checkEclipse = document.getElementById("eclipseImagination").innerHTML;
-    var checkGamer = document.getElementById("gamerImagination").innerHTML;
-
+  var checkReward = document.getElementById("rewardBlock").value;
   
+  
+  if (checkRew)
+  
+  
+  var checkReward = document.getElementById("rewardblock").innerHTML;
+  var checkImagine = document.getElementById("imaginationtoken").innerHTML;
+
+  var checkDoobetter = document.getElementById("doobetterimagination")
+    .innerHTML;
+  var checkEclipse = document.getElementById("eclipseimagination").innerHTML;
+  var checkGamer = document.getElementById("gamerimagination").innerHTML;
+  var checkYou = document.getElementById("yourimagination").innerHTML;
+
+  var superman = checkDoobetter + checkEclipse + checkGamer + checkYou;
+  var imagination = superman - checkImagine;
+
+  var REWARD =  checkReward - imagination;
+
+  alert(REWARD);
 }
