@@ -426,7 +426,7 @@ function rewardIdea() {
   rewardImagine.className = "userpage";
 }
 
-// Gamer/Ideas //
+// User/Ideas //
 function sellOne() {
   walletCheck();
   var check = document.getElementById("yourImagination");
@@ -434,50 +434,104 @@ function sellOne() {
   if (check.value == "0") {
     alert("Not Enough, Try Other Trades Or Cashout");
   } else {
-    var A1 = document.getElementById("A1").value;
+    var A1 = document.getElementById("A1");
 
-    var ideaToken = document.getElementById("gamerImagination").value;
-    var boost = ideaToken - A1;
-    var ideatoken = document.getElementById("gamerimagination");
+    var ideaToken = document.getElementById("yourImagination").value;
+    var boost = ideaToken - A1.value;
+    var ideatoken = document.getElementById("yourimagination");
     ideatoken.innerHTML = boost;
     ideatoken.value = ideatoken.innerHTML;
 
-    var A2 = document.getElementById("A2").value;
+    var B1 = document.getElementById("A2");
 
     var imaginationToken = document.getElementById("imaginationToken").value;
-    var booster = imaginationToken + A2;
+    var booster = imaginationToken + B1.value;
     var imaginationtoken = document.getElementById("imaginationtoken");
     imaginationtoken.innerHTML = booster;
     imaginationToken.value = imaginationtoken.innerHTML;
 
-    var p1 = document.getElementById("p3");
-    var a1 = document.getElementById("a3");
-    var s1 = document.getElementById("s3");
+    var p1 = document.getElementById("p1");
+    var a1 = document.getElementById("a1");
+    var s1 = document.getElementById("s1");
 
     var PRICE = price[Math.floor(Math.random() * price.length)];
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
     var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE;
-    a1.innerHTML = AMOUNT;
-    s1.innerHTML = SUM;
+    p1.innerHTML = PRICE + " |";
+    a1.innerHTML = AMOUNT + " |";
+    s1.innerHTML = SUM + " |";
 
-    A1.value = p1.innerHTMl;
-    A2.value = s1.innerHTML;
+    A1.value = AMOUNT;
+    B1.value = SUM;
 
-    var p2 = document.getElementById("p4");
-    var a2 = document.getElementById("a4");
-    var s2 = document.getElementById("s4");
+    var p2 = document.getElementById("p2");
+    var a2 = document.getElementById("a2");
+    var s2 = document.getElementById("s2");
 
     p2.innerHTML = PRICE * 1.3 + " |";
     a2.innerHTML = AMOUNT * 1.3 + " |";
     s2.innerHTML = SUM * 1.3 + " |";
 
-    var A3 = document.getElementById("A3");
-    var A4 = document.getElementById("A4");
+    var C1 = document.getElementById("A3");
+    var D1 = document.getElementById("A4");
 
-    A3.value = p2.innerHTML;
-    A4.value = s2.innerHTML;
+    C1.value = AMOUNT;
+    D1.value = SUM;
+  }
+}
+
+function buyOne() {
+  walletCheck();
+  var check = document.getElementById("imaginationToken");
+
+  if (check.value == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("A3");
+
+    var ideaToken = document.getElementById("yourImagination").value;
+    var boost = ideaToken - A1.value;
+    var ideatoken = document.getElementById("yourimagination");
+    ideatoken.innerHTML = boost;
+    ideatoken.value = ideatoken.innerHTML;
+
+    var B1 = document.getElementById("A4");
+
+    var imaginationToken = document.getElementById("imaginationToken").value;
+    var booster = imaginationToken + B1.value;
+    var imaginationtoken = document.getElementById("imaginationtoken");
+    imaginationtoken.innerHTML = booster;
+    imaginationToken.value = imaginationtoken.innerHTML;
+
+    var p1 = document.getElementById("p2");
+    var a1 = document.getElementById("a2");
+    var s1 = document.getElementById("s2");
+
+    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
+
+    var SUM = PRICE * AMOUNT;
+    p1.innerHTML = PRICE + " |";
+    a1.innerHTML = AMOUNT + " |";
+    s1.innerHTML = SUM + " |";
+
+    A1.value = AMOUNT;
+    B1.value = SUM;
+
+    var p2 = document.getElementById("p1");
+    var a2 = document.getElementById("a1");
+    var s2 = document.getElementById("s1");
+
+    p2.innerHTML = PRICE - 0.03 + " |";
+    a2.innerHTML = AMOUNT - 0.03 + " |";
+    s2.innerHTML = SUM - 0.03 + " |";
+
+    var C1 = document.getElementById("A1");
+    var D1 = document.getElementById("A2");
+
+    C1.value = AMOUNT;
+    D1.value = SUM;
   }
 }
 
