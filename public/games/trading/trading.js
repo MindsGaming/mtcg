@@ -202,11 +202,11 @@ function logoTick() {
   var home = document.getElementById("home");
   home.className = "trading";
   var trading = document.getElementById("tradingTab");
-  trading.className = "trading";
+  trading.className = "hide";
   var wallet = document.getElementById("walletTab");
   wallet.className = "hide";
   var openmenu = document.getElementById("imagineMenu");
-  openmenu.classList.toggle("showMenu");
+  openmenu.className = "hide";
   var usersImagine = document.getElementById("usersImagine");
   usersImagine.className = "hide";
   var gamerImagine = document.getElementById("gamerImagine");
