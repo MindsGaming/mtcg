@@ -419,16 +419,28 @@ function rewardIdea() {
 }
 
 var price = [
-  "0.01",
-  "0.02",
-  "0.03",
-  "0.04",
-  "0.05",
-  "0.06",
-  "0.07",
-  "0.08",
-  "0.09",
-  "0.10"
+  "0.1",
+  "0.2",
+  "0.3",
+  "0.4",
+  "0.5",
+  "0.6",
+  "0.7",
+  "0.8",
+  "0.9",
+  "1"
+];
+var prices = [
+  "1.15",
+  "1.25",
+  "1.35",
+  "1.45",
+  "1.55",
+  "1.65",
+  "1.75",
+  "1.85",
+  "1.95",
+  "2"
 ];
 
 var amounts = [
@@ -469,16 +481,17 @@ function sellOne() {
   document.getElementById("A1").value = AMOUNT;
   document.getElementById("A2").value = SUM;
 
-  var PRICE2 = PRICE * 2.5;
-  var AMOUNT2 = AMOUNT * 2.5;
-  var SUM2 = PRICE2 * AMOUNT2;
+  var PRICES = prices[Math.floor(Math.random() * prices.length)];
+  var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
 
-  document.getElementById("p2").innerHTML = PRICE2;
-  document.getElementById("a2").innerHTML = AMOUNT2;
-  document.getElementById("s2").innerHTML = SUM2;
+  var SUMS = PRICES * AMOUNTS;
 
-  document.getElementById("A3").value = AMOUNT2;
-  document.getElementById("A4").value = SUM2;
+  document.getElementById("p2").innerHTML = PRICES;
+  document.getElementById("a2").innerHTML = AMOUNTS;
+  document.getElementById("s2").innerHTML = SUMS;
+
+  document.getElementById("A3").value = AMOUNTS;
+  document.getElementById("A4").value = SUMS;
 }
 
 function buyOne() {
@@ -495,7 +508,7 @@ function buyOne() {
   document.getElementById("imaginationToken").value = tackcount2;
   document.getElementById("imaginationtoken").innerHTML = tackcount2;
 
-  var PRICE = price[Math.floor(Math.random() * price.length)];
+  var PRICE = prices[Math.floor(Math.random() * prices.length)];
   var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
 
   var SUM = PRICE * AMOUNT;
@@ -507,92 +520,15 @@ function buyOne() {
   document.getElementById("A3").value = AMOUNT;
   document.getElementById("A4").value = SUM;
 
-  var PRICE2 = PRICE % 1.5;
-  var AMOUNT2 = AMOUNT % 1.5;
-  var SUM2 = PRICE2 * AMOUNT2;
+  var PRICES = price[Math.floor(Math.random() * price.length)];
+  var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
 
-  document.getElementById("p1").innerHTML = PRICE2;
-  document.getElementById("a1").innerHTML = AMOUNT2;
-  document.getElementById("s1").innerHTML = SUM2;
+  var SUMS = PRICES * AMOUNTS;
 
-  document.getElementById("A1").value = AMOUNT2;
-  document.getElementById("A2").value = SUM2;
-}
+  document.getElementById("p1").innerHTML = PRICES;
+  document.getElementById("a1").innerHTML = AMOUNTS;
+  document.getElementById("s1").innerHTML = SUMS;
 
-// GAMER/IDEAS //
-
-function sellTwo() {
-  var A1 = document.getElementById("C1").value;
-  var A2 = document.getElementById("C2").value;
-
-  var tackCount = document.getElementById("gamerImagination").value;
-  var tackcount = tackCount - A1;
-  document.getElementById("gamerImagination").value = tackcount;
-  document.getElementById("gamerimagination").innerHTML = tackcount;
-
-  var tackCount2 = document.getElementById("imaginationToken").value;
-  var tackcount2 = tackCount2 + A2;
-  document.getElementById("imaginationToken").value = tackcount2;
-  document.getElementById("imaginationtoken").innerHTML = tackcount2;
-
-  var PRICE = price[Math.floor(Math.random() * price.length)];
-  var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
-
-  var SUM = PRICE * AMOUNT;
-
-  document.getElementById("p3").innerHTML = PRICE;
-  document.getElementById("a3").innerHTML = AMOUNT;
-  document.getElementById("s3").innerHTML = SUM;
-
-  document.getElementById("C1").value = AMOUNT;
-  document.getElementById("C2").value = SUM;
-
-  var PRICE2 = PRICE + 0.1;
-  var AMOUNT2 = AMOUNT + 0.1;
-  var SUM2 = PRICE2 * AMOUNT2;
-
-  document.getElementById("p4").innerHTML = PRICE2;
-  document.getElementById("a4").innerHTML = AMOUNT2;
-  document.getElementById("s4").innerHTML = SUM2;
-
-  document.getElementById("C3").value = AMOUNT2;
-  document.getElementById("C4").value = SUM2;
-}
-
-function buyTwo() {
-  var A1 = document.getElementById("C3").value;
-  var A2 = document.getElementById("C4").value;
-
-  var tackCount = document.getElementById("gamerImagination").value;
-  var tackcount = tackCount - A1;
-  document.getElementById("gamerImagination").value = tackcount;
-  document.getElementById("gamerimagination").innerHTML = tackcount;
-
-  var tackCount2 = document.getElementById("imaginationToken").value;
-  var tackcount2 = tackCount2 + A2;
-  document.getElementById("imaginationToken").value = tackcount2;
-  document.getElementById("imaginationtoken").innerHTML = tackcount2;
-
-  var PRICE = price[Math.floor(Math.random() * price.length)];
-  var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
-
-  var SUM = PRICE * AMOUNT;
-
-  document.getElementById("p4").innerHTML = PRICE;
-  document.getElementById("a4").innerHTML = AMOUNT;
-  document.getElementById("s4").innerHTML = SUM;
-
-  document.getElementById("C3").value = AMOUNT;
-  document.getElementById("C4").value = SUM;
-
-  var PRICE2 = PRICE - 0.1;
-  var AMOUNT2 = AMOUNT - 0.1;
-  var SUM2 = PRICE2 * AMOUNT2;
-
-  document.getElementById("p4").innerHTML = PRICE2;
-  document.getElementById("a4").innerHTML = AMOUNT2;
-  document.getElementById("s4").innerHTML = SUM2;
-
-  document.getElementById("C1").value = AMOUNT2;
-  document.getElementById("C4").value = SUM2;
+  document.getElementById("A1").value = AMOUNTS;
+  document.getElementById("A2").value = SUMS;
 }
