@@ -28,7 +28,7 @@ function listTokens() {
 
 function airDrops() {
   var airdrop = document.getElementById("airdrops");
-  airdrop.className = "marketTokens";
+  airdrop.className = "idealisting";
   var airdrops = document.getElementById("lostImagination");
   airdrops.className = "hide";
 }
