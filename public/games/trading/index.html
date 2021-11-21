@@ -252,31 +252,16 @@
       }
 
       .userpage {
-       display: block;
+        display: block;
       }
 
-      .holder {
-        float: left;
-        display: block;
-        background-color: transparent;
-        width: 100%;
-        margin-top: 5rem;
-        overflow: hidden;
-      }
       .userbracketname {
         float: left;
-        margin: 3rem;
-        
-        font-style: italic;
-        
+        display: block;
+        margin: 2rem;
+        color: bla
       }
-      .userintro {
-        float: left;
-        margin-top: 0.3rem;
-        color: white;
-        max-width: 50rem;
-        font-style: italic;
-      }
+
       .claimreward {
         position: relative;
         border-style: groove;
@@ -287,7 +272,7 @@
       }
 
       .orders {
-        margin-top: 25px;
+        margin-top: 6rem;
         background-color: green;
       }
 
@@ -680,10 +665,10 @@
         <div id="usersImagine" class="hide">
           <div class="userpage">
             <br />
-            <div class="userbracketname" id="usersToken">
-              Imagination Name:
+            <div class="userbracketname">
+              <label id="usersToken">Imagination Name: </label><br />
+              <p class="userintro" id="usersIntro">Imagination Intro:</p>
             </div>
-            <p class="userintro" id="usersIntro">Imagination Intro: <br /></p>
             <meter
               class="hide"
               id="CHECK"
@@ -773,13 +758,11 @@
                 Get more <b>Ideas</b> by selling your idea. <br />
                 <b>Sell Idea</b>
                 <br />
-
                 <a class="button" onclick="m13ok();">
                   Ok
                 </a>
               </p>
             </div>
-
             <div class="hide" id="m13">
               <h1>
                 Great Sale!
@@ -804,11 +787,11 @@
           <div class="userpage">
             <br />
             <div class="userbracketname" id="gamerTokens">
-              Ideas/GAMER:
+              Ideas/GAMER:<br />
+              <p class="userintro" id="usersIntro">
+                Community Reward Token <br />
+              </p>
             </div>
-            <p class="userintro" id="usersIntro">
-              Community Reward Token <br />
-            </p>
 
             <div class="orders">
               <h2 style="float: left;">
@@ -885,12 +868,11 @@
           <div class="userpage">
             <br />
             <div class="userbracketname">
-              Ideas/ECLIPSE:
+              Ideas/ECLIPSE:<br />
+              <p class="userintro" id="usersIntro">
+                Community Reward Token <br />
+              </p>
             </div>
-            <p class="userintro" id="usersIntro">
-              Community Reward Token <br />
-            </p>
-
             <div class="orders">
               <h2 style="float: left;">
                 Buy Orders
@@ -966,12 +948,11 @@
           <div class="userpage">
             <br />
             <div class="userbracketname">
-              Ideas/DooBetter:
+              Ideas/DooBetter: <br />
+              <p class="userintro" id="usersIntro">
+                Community Reward Token <br />
+              </p>
             </div>
-            <p class="userintro" id="usersIntro">
-              Community Reward Token <br />
-            </p>
-
             <div class="orders">
               <h2 style="float: left;">
                 Buy Orders
@@ -1047,12 +1028,11 @@
           <div class="userpage">
             <br />
             <div class="userbracketname">
-              REWARDS/Ideas:
+              REWARDS/Ideas: <br />
+              <p class="userintro" id="usersIntro">
+                Community BlockChain Reward Market <br />
+              </p>
             </div>
-            <p class="userintro" id="usersIntro">
-              Community BlockChain Reward Market <br />
-            </p>
-
             <div class="orders">
               <h2 style="float: left;">
                 Buy Orders
