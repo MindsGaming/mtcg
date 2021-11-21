@@ -816,7 +816,7 @@ function sellBlock() {
     var tackCount2 = document.getElementById("rewardBlock").value;
     var tackcount2 = tackCount2 + A2;
     document.getElementById("rewardBlock").value = tackcount2;
-    document.getElementById("rewardBlock").innerHTML = tackcount2;
+    document.getElementById("rewardblock").innerHTML = tackcount2;
 
     var PRICE = price[Math.floor(Math.random() * price.length)];
     var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
@@ -861,7 +861,7 @@ function buyBlock() {
     var tackCount2 = document.getElementById("rewardBlock").value;
     var tackcount2 = tackCount2 - A2;
     document.getElementById("rewardBlock").value = tackcount2;
-    document.getElementById("rewardBlock").innerHTML = tackcount2;
+    document.getElementById("rewardblock").innerHTML = tackcount2;
 
     var PRICE = prices[Math.floor(Math.random() * prices.length)];
     var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
@@ -887,4 +887,14 @@ function buyBlock() {
     document.getElementById("R1").value = AMOUNTS;
     document.getElementById("R2").value = SUMS;
   }
+}
+
+function claimReward() {
+  var checkReweard = document.getElementById("rewardblock").innerHTML;
+  var checkImagine = document.getElementById("imaginationtoken").innerHTML;
+var checkDoobetter = document.getElementById("doobetterimagination").innerHTML;
+    var checkEclipse = document.getElementById("eclipseImagination").innerHTML;
+    var checkGamer = document.getElementById("gamerImagination").innerHTML;
+
+  
 }
