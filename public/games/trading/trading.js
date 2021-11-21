@@ -22,15 +22,17 @@ function justPlay() {
 }
 
 function listTokens() {
-  var list = document.getElementById("airdrip");
-  list.className = "greyButton";
+  var airdrop = document.getElementById("airdrip");
+  airdrop.className = "greyButton";
+  var airdrops = document.getElementById("lostImagination");
+  airdrops.className = "hide";
 }
 
 function airDrops() {
   var airdrop = document.getElementById("airdrops");
   airdrop.className = "idealisting";
   var airdrops = document.getElementById("lostImagination");
-  airdrops.className = "hide";
+  airdrops.className = "marketTokens";
 }
 
 function m3() {
