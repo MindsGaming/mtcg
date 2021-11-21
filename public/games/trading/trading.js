@@ -175,6 +175,7 @@ function walletMenu() {
   doobetterImagine.className = "hide";
   var rewardImagine = document.getElementById("rewardsImagine");
   rewardImagine.className = "hide";
+  walletCheck();
 }
 
 function tradingMenu() {
@@ -904,7 +905,7 @@ function buyBlock() {
 function walletCheck() {
   var check = document.getElementById("rewardBlock").value;
 
-  if (check == "500") {
+  if (check.max ) {
     var checking = document.getElementById("rewardblock").innerHTML;
     var max = +"MAXED OUT!";
     checking.innerHTML = max;
