@@ -818,7 +818,8 @@ function sellBlock() {
     document.getElementById("rewardBlock").value = tackcount2;
     document.getElementById("rewardblock").innerHTML = tackcount2;
 
-    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var priced = ["0.0002", "0.0003", "0.0004", "0.0005", "0.0006", "0.00007", "0.0008"]
+    var PRICE = priced[Math.floor(Math.random() * priced.length)];
     var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
 
     var SUM = PRICE * AMOUNT;
