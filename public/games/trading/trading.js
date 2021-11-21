@@ -684,24 +684,208 @@ function buyThree() {
 
     var SUM = PRICE * AMOUNT;
 
-    document.getElementById("p4").innerHTML = PRICE;
-    document.getElementById("a4").innerHTML = AMOUNT;
-    document.getElementById("s4").innerHTML = SUM;
+    document.getElementById("p6").innerHTML = PRICE;
+    document.getElementById("a6").innerHTML = AMOUNT;
+    document.getElementById("s6").innerHTML = SUM;
 
-    document.getElementById("C3").value = AMOUNT;
-    document.getElementById("C4").value = SUM;
+    document.getElementById("D3").value = AMOUNT;
+    document.getElementById("D4").value = SUM;
 
     var PRICES = price[Math.floor(Math.random() * price.length)];
     var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
 
     var SUMS = PRICES * AMOUNTS;
 
-    document.getElementById("p3").innerHTML = PRICES;
-    document.getElementById("a3").innerHTML = AMOUNTS;
-    document.getElementById("s3").innerHTML = SUMS;
+    document.getElementById("p5").innerHTML = PRICES;
+    document.getElementById("a5").innerHTML = AMOUNTS;
+    document.getElementById("s5").innerHTML = SUMS;
 
-    document.getElementById("C1").value = AMOUNTS;
-    document.getElementById("C2").value = SUMS;
+    document.getElementById("D1").value = AMOUNTS;
+    document.getElementById("D2").value = SUMS;
   }
 }
 
+// DooBetter/Ideas //
+
+function sellFour() {
+  var check = document.getElementById("doobetterImagination").value;
+
+  if (check == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("E1").value;
+    var A2 = document.getElementById("E2").value;
+
+    var tackCount = document.getElementById("doobetterImagination").value;
+    var tackcount = tackCount - A1;
+    document.getElementById("doobetterImagination").value = tackcount;
+    document.getElementById("doobetterimagination").innerHTML = tackcount;
+
+    var tackCount2 = document.getElementById("imaginationToken").value;
+    var tackcount2 = tackCount2 + A2;
+    document.getElementById("imaginationToken").value = tackcount2;
+    document.getElementById("imaginationtoken").innerHTML = tackcount2;
+
+    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUM = PRICE * AMOUNT;
+
+    document.getElementById("p7").innerHTML = PRICE;
+    document.getElementById("a7").innerHTML = AMOUNT;
+    document.getElementById("s7").innerHTML = SUM;
+
+    document.getElementById("E1").value = AMOUNT;
+    document.getElementById("E2").value = SUM;
+
+    var PRICES = prices[Math.floor(Math.random() * prices.length)];
+    var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUMS = PRICES * AMOUNTS;
+
+    document.getElementById("p8").innerHTML = PRICES;
+    document.getElementById("a8").innerHTML = AMOUNTS;
+    document.getElementById("s8").innerHTML = SUMS;
+
+    document.getElementById("E3").value = AMOUNTS;
+    document.getElementById("E4").value = SUMS;
+  }
+}
+
+function buyFour() {
+  var check = document.getElementById("imaginationToken").value;
+
+  if (check == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("E3").value;
+    var A2 = document.getElementById("E4").value;
+
+    var tackCount = document.getElementById("doobetterImagination").value;
+    var tackcount = tackCount + A1;
+    document.getElementById("doobetterImagination").value = tackcount;
+    document.getElementById("doobetterimagination").innerHTML = tackcount;
+
+    var tackCount2 = document.getElementById("imaginationToken").value;
+    var tackcount2 = tackCount2 - A2;
+    document.getElementById("imaginationToken").value = tackcount2;
+    document.getElementById("imaginationtoken").innerHTML = tackcount2;
+
+    var PRICE = prices[Math.floor(Math.random() * prices.length)];
+    var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUM = PRICE * AMOUNT;
+
+    document.getElementById("p8").innerHTML = PRICE;
+    document.getElementById("a8").innerHTML = AMOUNT;
+    document.getElementById("s8").innerHTML = SUM;
+
+    document.getElementById("E3").value = AMOUNT;
+    document.getElementById("E4").value = SUM;
+
+    var PRICES = price[Math.floor(Math.random() * price.length)];
+    var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUMS = PRICES * AMOUNTS;
+
+    document.getElementById("p7").innerHTML = PRICES;
+    document.getElementById("a7").innerHTML = AMOUNTS;
+    document.getElementById("s7").innerHTML = SUMS;
+
+    document.getElementById("E1").value = AMOUNTS;
+    document.getElementById("E2").value = SUMS;
+  }
+}
+
+
+// Ideas/ReWards //
+
+function sellBlock() {
+  var check = document.getElementById("imaginationToken").value;
+
+  if (check == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("R1").value;
+    var A2 = document.getElementById("R2").value;
+
+    var tackCount = document.getElementById("imaginationToken").value;
+    var tackcount = tackCount - A1;
+    document.getElementById("imaginationToken").value = tackcount;
+    document.getElementById("imaginationtoken").innerHTML = tackcount;
+
+    var tackCount2 = document.getElementById("blockReward").value;
+    var tackcount2 = tackCount2 + A2;
+    document.getElementById("blockReward").value = tackcount2;
+    document.getElementById("").innerHTML = tackcount2;
+
+    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUM = PRICE * AMOUNT;
+
+    document.getElementById("p7").innerHTML = PRICE;
+    document.getElementById("a7").innerHTML = AMOUNT;
+    document.getElementById("s7").innerHTML = SUM;
+
+    document.getElementById("E1").value = AMOUNT;
+    document.getElementById("E2").value = SUM;
+
+    var PRICES = prices[Math.floor(Math.random() * prices.length)];
+    var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUMS = PRICES * AMOUNTS;
+
+    document.getElementById("p8").innerHTML = PRICES;
+    document.getElementById("a8").innerHTML = AMOUNTS;
+    document.getElementById("s8").innerHTML = SUMS;
+
+    document.getElementById("E3").value = AMOUNTS;
+    document.getElementById("E4").value = SUMS;
+  }
+}
+
+function buyFour() {
+  var check = document.getElementById("imaginationToken").value;
+
+  if (check == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("E3").value;
+    var A2 = document.getElementById("E4").value;
+
+    var tackCount = document.getElementById("doobetterImagination").value;
+    var tackcount = tackCount + A1;
+    document.getElementById("doobetterImagination").value = tackcount;
+    document.getElementById("doobetterimagination").innerHTML = tackcount;
+
+    var tackCount2 = document.getElementById("imaginationToken").value;
+    var tackcount2 = tackCount2 - A2;
+    document.getElementById("imaginationToken").value = tackcount2;
+    document.getElementById("imaginationtoken").innerHTML = tackcount2;
+
+    var PRICE = prices[Math.floor(Math.random() * prices.length)];
+    var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUM = PRICE * AMOUNT;
+
+    document.getElementById("p8").innerHTML = PRICE;
+    document.getElementById("a8").innerHTML = AMOUNT;
+    document.getElementById("s8").innerHTML = SUM;
+
+    document.getElementById("E3").value = AMOUNT;
+    document.getElementById("E4").value = SUM;
+
+    var PRICES = price[Math.floor(Math.random() * price.length)];
+    var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUMS = PRICES * AMOUNTS;
+
+    document.getElementById("p7").innerHTML = PRICES;
+    document.getElementById("a7").innerHTML = AMOUNTS;
+    document.getElementById("s7").innerHTML = SUMS;
+
+    document.getElementById("E1").value = AMOUNTS;
+    document.getElementById("E2").value = SUMS;
+  }
+}
