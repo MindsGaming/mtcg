@@ -469,8 +469,8 @@ function sellOne() {
   document.getElementById("A1").value = AMOUNT;
   document.getElementById("A2").value = SUM;
 
-  var PRICE2 = PRICE + 1;
-  var AMOUNT2 = AMOUNT + 1;
+  var PRICE2 = PRICE * 2.5;
+  var AMOUNT2 = AMOUNT * 2.5;
   var SUM2 = PRICE2 * AMOUNT2;
 
   document.getElementById("p2").innerHTML = PRICE2;
@@ -507,8 +507,8 @@ function buyOne() {
   document.getElementById("A3").value = AMOUNT;
   document.getElementById("A4").value = SUM;
 
-  var PRICE2 = PRICE - .1;
-  var AMOUNT2 = AMOUNT - .1;
+  var PRICE2 = PRICE % 1.5;
+  var AMOUNT2 = AMOUNT % 1.5;
   var SUM2 = PRICE2 * AMOUNT2;
 
   document.getElementById("p1").innerHTML = PRICE2;
@@ -544,19 +544,19 @@ function sellTwo() {
   document.getElementById("a3").innerHTML = AMOUNT;
   document.getElementById("s3").innerHTML = SUM;
 
-  document.getElementById("C3").value = AMOUNT;
-  document.getElementById("C4").value = SUM;
+  document.getElementById("C1").value = AMOUNT;
+  document.getElementById("C2").value = SUM;
 
-  var PRICE2 = PRICE + 1;
-  var AMOUNT2 = AMOUNT + 1;
+  var PRICE2 = PRICE + 0.1;
+  var AMOUNT2 = AMOUNT + 0.1;
   var SUM2 = PRICE2 * AMOUNT2;
 
   document.getElementById("p4").innerHTML = PRICE2;
   document.getElementById("a4").innerHTML = AMOUNT2;
   document.getElementById("s4").innerHTML = SUM2;
 
-  document.getElementById("C1").value = AMOUNT2;
-  document.getElementById("C2").value = SUM2;
+  document.getElementById("C3").value = AMOUNT2;
+  document.getElementById("C4").value = SUM2;
 }
 
 function buyTwo() {
@@ -582,11 +582,11 @@ function buyTwo() {
   document.getElementById("a4").innerHTML = AMOUNT;
   document.getElementById("s4").innerHTML = SUM;
 
-  document.getElementById("C1").value = AMOUNT;
-  document.getElementById("C2").value = SUM;
+  document.getElementById("C3").value = AMOUNT;
+  document.getElementById("C4").value = SUM;
 
-  var PRICE2 = PRICE - 1;
-  var AMOUNT2 = AMOUNT - 1;
+  var PRICE2 = PRICE - 0.1;
+  var AMOUNT2 = AMOUNT - 0.1;
   var SUM2 = PRICE2 * AMOUNT2;
 
   document.getElementById("p4").innerHTML = PRICE2;
