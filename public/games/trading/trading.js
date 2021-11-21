@@ -54,7 +54,7 @@ function m4() {
 function imagineAirs() {
   var tackCount = document.getElementById("imaginationToken").value;
   if (tackCount == "0") {
-    var tackcount = tackCount + 1;
+    var tackcount = tackCount + 1000;
     document.getElementById("imaginationToken").value = tackcount;
     document.getElementById("imaginationtoken").innerHTML = tackcount;
     alert("Claimed");
@@ -856,6 +856,7 @@ function sellBlock() {
 }
 
 function buyBlock() {
+  
   var check = document.getElementById("rewardBlock").value;
 
   if (check == "0") {
@@ -897,6 +898,16 @@ function buyBlock() {
 
     document.getElementById("R1").value = AMOUNTS;
     document.getElementById("R2").value = SUMS;
+  }
+}
+
+function walletCheck() {
+  var check = document.getElementById("rewardBlock").value;
+
+  if (check == "500") {
+    var checking = document.getElementById("rewardblock").innerHTML;
+    var max = +"MAXED OUT!";
+    checking.innerHTML = max;
   }
 }
 
