@@ -419,18 +419,55 @@ function rewardIdea() {
 }
 
 function sellOne() {
-  var p1 = document.getElementById("p1");
+  var A1 = document.getElementById("A1").value;
 
-  var price = ["0.001", "0.002", "0.003", "0.004", "0.005", "0.007", "0.008", "0.009", "0.010"]
-   var PRICE = price[Math.floor(Math.random() * price.length)];
-   var amount = ["1000", "2000", "3000", "4000", "5000", "6000", "7000", "0.009", "0.010"]
-   var AMOUNT = amount[Math.floor(Math.random() * price.length)];
-  
   var tackCount = document.getElementById("yourImagination").value;
-  var tackcount = tackCount + 1;
+  var tackcount = tackCount - A1;
   document.getElementById("yourImagination").value = tackcount;
   document.getElementById("yourimagination").innerHTML = tackcount;
   
-  
-  
+  var tackCount2 = document.getElementById("imagination").value;
+  var tackcount = tackCount - A1;
+  document.getElementById("yourImagination").value = tackcount;
+  document.getElementById("yourimagination").innerHTML = tackcount;
+
+  var price = [
+    "0.001",
+    "0.002",
+    "0.003",
+    "0.004",
+    "0.005",
+    "0.06",
+    "0.007",
+    "0.008",
+    "0.009",
+    "0.010"
+  ];
+  var PRICE = price[Math.floor(Math.random() * price.length)];
+  var amount = [
+    "1000",
+    "2000",
+    "3000",
+    "4000",
+    "5000",
+    "6000",
+    "7000",
+    "8000",
+    "9000"
+  ];
+  var AMOUNT = amount[Math.floor(Math.random() * price.length)];
+
+  var SUM = PRICE * AMOUNT;
+
+  document.getElementById("p1").innerHTML = PRICE;
+  document.getElementById("a1").innerHTML = AMOUNT;
+  document.getElementById("s1").innerHTML = SUM;
+
+  var PRICE2 = PRICE - 0.05;
+  var AMOUNT2 = AMOUNT - 0.05;
+  var SUM2 = PRICE2 * AMOUNT2;
+
+  document.getElementById("p2").innerHTML = PRICE;
+  document.getElementById("a2").innerHTML = AMOUNT;
+  document.getElementById("s2").innerHTML = SUM;
 }
