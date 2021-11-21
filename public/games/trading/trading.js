@@ -612,3 +612,19 @@ function buyTwo() {
     document.getElementById("C2").value = SUMS;
   }
 }
+
+function superSale() {
+  var A1 = document.getElementById("A1").value;
+  var C1 = document.getElementById("C1").value;
+  var check1 = C1 - A1;
+  
+var CHECK1 = document.getElementById("CHECK");
+CHECK1.value = check1;
+
+  var CHECK2 = document.getElementById("CHECK");
+  CHECK2.value = check2;
+  
+  
+  
+  
+}
