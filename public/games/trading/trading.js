@@ -419,16 +419,16 @@ function rewardIdea() {
 }
 
 var price = [
-  "0.001",
-  "0.002",
-  "0.003",
-  "0.004",
-  "0.005",
+  "0.01",
+  "0.02",
+  "0.03",
+  "0.04",
+  "0.05",
   "0.06",
-  "0.007",
-  "0.008",
-  "0.009",
-  "0.010"
+  "0.07",
+  "0.08",
+  "0.09",
+  "0.10"
 ];
 
 var amounts = [
@@ -469,8 +469,8 @@ function sellOne() {
   document.getElementById("A1").value = AMOUNT;
   document.getElementById("A2").value = SUM;
 
-  var PRICE2 = PRICE + 50;
-  var AMOUNT2 = AMOUNT + 50;
+  var PRICE2 = PRICE + 99;
+  var AMOUNT2 = AMOUNT + 99;
   var SUM2 = PRICE2 * AMOUNT2;
 
   document.getElementById("p2").innerHTML = PRICE2;
@@ -481,14 +481,54 @@ function sellOne() {
   document.getElementById("A4").value = SUM2;
 }
 
-function buyTwp() {
+function buyOne() {
   var A1 = document.getElementById("A3").value;
-  var A2 = document.getElementById("A2").value;
+  var A2 = document.getElementById("A4").value;
 
   var tackCount = document.getElementById("yourImagination").value;
-  var tackcount = tackCount - A1;
+  var tackcount = tackCount + A1;
   document.getElementById("yourImagination").value = tackcount;
   document.getElementById("yourimagination").innerHTML = tackcount;
+
+  var tackCount2 = document.getElementById("imaginationToken").value;
+  var tackcount2 = tackCount2 - A2;
+  document.getElementById("imaginationToken").value = tackcount2;
+  document.getElementById("imaginationtoken").innerHTML = tackcount2;
+
+  var PRICE = price[Math.floor(Math.random() * price.length)];
+  var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
+
+  var SUM = PRICE * AMOUNT;
+
+  document.getElementById("p2").innerHTML = PRICE;
+  document.getElementById("a2").innerHTML = AMOUNT;
+  document.getElementById("s2").innerHTML = SUM;
+
+  document.getElementById("A3").value = AMOUNT;
+  document.getElementById("A4").value = SUM;
+
+  var PRICE2 = PRICE - 99;
+  var AMOUNT2 = AMOUNT - 99;
+  var SUM2 = PRICE2 * AMOUNT2;
+
+  document.getElementById("p1").innerHTML = PRICE2;
+  document.getElementById("a1").innerHTML = AMOUNT2;
+  document.getElementById("s1").innerHTML = SUM2;
+
+  document.getElementById("A1").value = AMOUNT2;
+  document.getElementById("A2").value = SUM2;
+}
+
+// GAMER/IDEAS //
+
+function sellTwo() {
+  var A1 = document.getElementById("C1").value;
+  var A2 = document.getElementById("C2").value;
+
+  var tackCount = document.getElementById("gamerImagination").value;
+  var tackcount = tackCount - A1;
+  document.getElementById("gamerImagination").value = tackcount;
+  document.getElementById("gamerimagination").innerHTML = tackcount;
 
   var tackCount2 = document.getElementById("imaginationToken").value;
   var tackcount2 = tackCount2 + A2;
@@ -500,22 +540,59 @@ function buyTwp() {
 
   var SUM = PRICE * AMOUNT;
 
-  document.getElementById("p1").innerHTML = PRICE;
-  document.getElementById("a1").innerHTML = AMOUNT;
-  document.getElementById("s1").innerHTML = SUM;
+  document.getElementById("p2").innerHTML = PRICE;
+  document.getElementById("a2").innerHTML = AMOUNT;
+  document.getElementById("s2").innerHTML = SUM;
 
-  document.getElementById("A1").value = AMOUNT;
-  document.getElementById("A2").value = SUM;
+  document.getElementById("C3").value = AMOUNT;
+  document.getElementById("C4").value = SUM;
 
-  var PRICE2 = PRICE + 50;
-  var AMOUNT2 = AMOUNT + 50;
+  var PRICE2 = PRICE + 99;
+  var AMOUNT2 = AMOUNT + 99;
+  var SUM2 = PRICE2 * AMOUNT2;
+
+  document.getElementById("p3").innerHTML = PRICE2;
+  document.getElementById("a3").innerHTML = AMOUNT2;
+  document.getElementById("s4").innerHTML = SUM2;
+
+  document.getElementById("C1").value = AMOUNT2;
+  document.getElementById("C4").value = SUM2;
+}
+
+function buyTWO() {
+  var A1 = document.getElementById("C3").value;
+  var A2 = document.getElementById("C4").value;
+
+  var tackCount = document.getElementById("yourImagination").value;
+  var tackcount = tackCount + A1;
+  document.getElementById("yourImagination").value = tackcount;
+  document.getElementById("yourimagination").innerHTML = tackcount;
+
+  var tackCount2 = document.getElementById("imaginationToken").value;
+  var tackcount2 = tackCount2 - A2;
+  document.getElementById("imaginationToken").value = tackcount2;
+  document.getElementById("imaginationtoken").innerHTML = tackcount2;
+
+  var PRICE = price[Math.floor(Math.random() * price.length)];
+  var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
+
+  var SUM = PRICE * AMOUNT;
+
+  document.getElementById("p3").innerHTML = PRICE;
+  document.getElementById("a3").innerHTML = AMOUNT;
+  document.getElementById("s3").innerHTML = SUM;
+
+  document.getElementById("C3").value = AMOUNT;
+  document.getElementById("C4").value = SUM;
+
+  var PRICE2 = PRICE - 99;
+  var AMOUNT2 = AMOUNT - 99;
   var SUM2 = PRICE2 * AMOUNT2;
 
   document.getElementById("p2").innerHTML = PRICE2;
   document.getElementById("a2").innerHTML = AMOUNT2;
   document.getElementById("s2").innerHTML = SUM2;
 
-  document.getElementById("A3").value = AMOUNT2;
-  document.getElementById("A4").value = SUM2;
+  document.getElementById("C1").value = AMOUNT2;
+  document.getElementById("C2").value = SUM2;
 }
-
