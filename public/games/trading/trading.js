@@ -900,9 +900,15 @@ function claimReward() {
     if (checkYou == "0") {
       alert("You Can't Cash Out Without Owing Some Of Your Ideas");
     } else {
-      var checkReward = document.getElementById("rewardblock").innerHTML;
+      var checkImagine = document.getElementById("imaginationToken").value;
 
-      alert(checkReward);
+      if (checkImagine == "0") {
+        alert("You Need At Least One Idea To Claim");
+      } else {
+        var checkReward = document.getElementById("rewardblock").innerHTML;
+
+        alert(checkReward);
+      }
     }
   }
 }
