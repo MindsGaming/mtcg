@@ -249,7 +249,7 @@ function creating() {
   var youridea = document.getElementById("youridea");
   youridea.className = "trade";
   var yourImagination = document.getElementById("yourImagination");
-  yourImagination.value = +100000;
+  yourImagination.value = +10000;
   var yourimagination = document.getElementById("yourimagination");
   yourimagination.innerHTML = "10000";
 
@@ -315,36 +315,28 @@ function usersIdea() {
 }
 
 var price = [
-  "0.01",
-  "0.02",
-  "0.03",
-  "0.04",
-  "0.05",
-  "0.06",
-  "0.07",
-  "0.08",
-  "0.09",
-  "0.10",
-  "0.15",
-  "0.20",
-  "0.30",
-  "0.40",
-  "0.50",
-  "0.60",
-  "0.70",
-  "0.80",
-  "0.09",
-  "1.00"
+  "0.001",
+  "0.002",
+  "0.003",
+  "0.004",
+  "0.005",
+  "0.006",
+  "0.007",
+  "0.008",
+  "0.009",
+  "0.010",
+  "0.015",
+  "0.020",
+  "0.030",
+  "0.040",
+  "0.050",
+  "0.060",
+  "0.070",
+  "0.080",
+  "0.090",
+  "0.100"
 ];
-var amount = [
-  "1000.00",
-  "2000.00",
-  "3000.00",
-  "4000.00",
-  "5000.00",
-  "6000.00",
-  "10000"
-];
+var amount = ["1000.00", "2000.00", "3000.00", "4000.00", "5000.00"];
 
 function gamerIdea() {
   var usersImagine = document.getElementById("usersImagine");
@@ -458,9 +450,9 @@ function sellOne() {
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
     var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
+    p1.innerHTML = PRICE;
+    a1.innerHTML = AMOUNT;
+    s1.innerHTML = SUM;
 
     A1.value = AMOUNT;
     B1.value = SUM;
@@ -469,9 +461,9 @@ function sellOne() {
     var a2 = document.getElementById("a2");
     var s2 = document.getElementById("s2");
 
-    p2.innerHTML = PRICE * 1.3 + " |";
-    a2.innerHTML = AMOUNT * 1.3 + " |";
-    s2.innerHTML = SUM * 1.3 + " |";
+    p2.innerHTML = PRICE * 1.3;
+    a2.innerHTML = AMOUNT * 1.3;
+    s2.innerHTML = SUM * 1.3;
 
     var C1 = document.getElementById("A3");
     var D1 = document.getElementById("A4");
@@ -512,9 +504,9 @@ function buyOne() {
     var AMOUNT = amount[Math.floor(Math.random() * amount.length)];
 
     var SUM = PRICE * AMOUNT;
-    p1.innerHTML = PRICE + " |";
-    a1.innerHTML = AMOUNT + " |";
-    s1.innerHTML = SUM + " |";
+    p1.innerHTML = PRICE;
+    a1.innerHTML = AMOUNT;
+    s1.innerHTML = SUM;
 
     A1.value = AMOUNT;
     B1.value = SUM;
