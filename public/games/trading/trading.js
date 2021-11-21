@@ -456,86 +456,105 @@ var amounts = [
 ];
 
 function sellOne() {
-  
-    var check = document.getElementById("yourImagination").value;
+  walletCheck();
+  var check = document.getElementById("yourImagination").value;
 
-  if (check = "0"){
-    alert("Not Enough, Try Other Trades Or Cashout")
+  if (check == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("A1").value;
+    var A2 = document.getElementById("A2").value;
+
+    var tackCount = document.getElementById("yourImagination").value;
+    var tackcount = tackCount - A1;
+    document.getElementById("yourImagination").value = tackcount;
+    document.getElementById("yourimagination").innerHTML = tackcount;
+
+    var tackCount2 = document.getElementById("imaginationToken").value;
+    var tackcount2 = tackCount2 + A2;
+    document.getElementById("imaginationToken").value = tackcount2;
+    document.getElementById("imaginationtoken").innerHTML = tackcount2;
+
+    var PRICE = price[Math.floor(Math.random() * price.length)];
+    var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUM = PRICE * AMOUNT;
+
+    document.getElementById("p1").innerHTML = PRICE;
+    document.getElementById("a1").innerHTML = AMOUNT;
+    document.getElementById("s1").innerHTML = SUM;
+
+    document.getElementById("A1").value = AMOUNT;
+    document.getElementById("A2").value = SUM;
+
+    var PRICES = prices[Math.floor(Math.random() * prices.length)];
+    var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
+
+    var SUMS = PRICES * AMOUNTS;
+
+    document.getElementById("p2").innerHTML = PRICES;
+    document.getElementById("a2").innerHTML = AMOUNTS;
+    document.getElementById("s2").innerHTML = SUMS;
+
+    document.getElementById("A3").value = AMOUNTS;
+    document.getElementById("A4").value = SUMS;
   }
-  
-  var A1 = document.getElementById("A1").value;
-  var A2 = document.getElementById("A2").value;
-
-  var tackCount = document.getElementById("yourImagination").value;
-  var tackcount = tackCount - A1;
-  document.getElementById("yourImagination").value = tackcount;
-  document.getElementById("yourimagination").innerHTML = tackcount;
-
-  var tackCount2 = document.getElementById("imaginationToken").value;
-  var tackcount2 = tackCount2 + A2;
-  document.getElementById("imaginationToken").value = tackcount2;
-  document.getElementById("imaginationtoken").innerHTML = tackcount2;
-
-  var PRICE = price[Math.floor(Math.random() * price.length)];
-  var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
-
-  var SUM = PRICE * AMOUNT;
-
-  document.getElementById("p1").innerHTML = PRICE;
-  document.getElementById("a1").innerHTML = AMOUNT;
-  document.getElementById("s1").innerHTML = SUM;
-
-  document.getElementById("A1").value = AMOUNT;
-  document.getElementById("A2").value = SUM;
-
-  var PRICES = prices[Math.floor(Math.random() * prices.length)];
-  var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
-
-  var SUMS = PRICES * AMOUNTS;
-
-  document.getElementById("p2").innerHTML = PRICES;
-  document.getElementById("a2").innerHTML = AMOUNTS;
-  document.getElementById("s2").innerHTML = SUMS;
-
-  document.getElementById("A3").value = AMOUNTS;
-  document.getElementById("A4").value = SUMS;
 }
 
 function buyOne() {
-  var A1 = document.getElementById("A3").value;
-  var A2 = document.getElementById("A4").value;
+  walletCheck();
+  var check = document.getElementById("imaginationToken").value;
 
-  var tackCount = document.getElementById("yourImagination").value;
-  var tackcount = tackCount + A1;
-  document.getElementById("yourImagination").value = tackcount;
-  document.getElementById("yourimagination").innerHTML = tackcount;
+  if (check == "0") {
+    alert("Not Enough, Try Other Trades Or Cashout");
+  } else {
+    var A1 = document.getElementById("A3").value;
+    var A2 = document.getElementById("A4").value;
 
-  var tackCount2 = document.getElementById("imaginationToken").value;
-  var tackcount2 = tackCount2 - A2;
-  document.getElementById("imaginationToken").value = tackcount2;
-  document.getElementById("imaginationtoken").innerHTML = tackcount2;
+    var tackCount = document.getElementById("yourImagination").value;
+    var tackcount = tackCount + A1;
+    document.getElementById("yourImagination").value = tackcount;
+    document.getElementById("yourimagination").innerHTML = tackcount;
 
-  var PRICE = prices[Math.floor(Math.random() * prices.length)];
-  var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
+    var tackCount2 = document.getElementById("imaginationToken").value;
+    var tackcount2 = tackCount2 - A2;
+    document.getElementById("imaginationToken").value = tackcount2;
+    document.getElementById("imaginationtoken").innerHTML = tackcount2;
 
-  var SUM = PRICE * AMOUNT;
+    var PRICE = prices[Math.floor(Math.random() * prices.length)];
+    var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
 
-  document.getElementById("p2").innerHTML = PRICE;
-  document.getElementById("a2").innerHTML = AMOUNT;
-  document.getElementById("s2").innerHTML = SUM;
+    var SUM = PRICE * AMOUNT;
 
-  document.getElementById("A3").value = AMOUNT;
-  document.getElementById("A4").value = SUM;
+    document.getElementById("p2").innerHTML = PRICE;
+    document.getElementById("a2").innerHTML = AMOUNT;
+    document.getElementById("s2").innerHTML = SUM;
 
-  var PRICES = price[Math.floor(Math.random() * price.length)];
-  var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
+    document.getElementById("A3").value = AMOUNT;
+    document.getElementById("A4").value = SUM;
 
-  var SUMS = PRICES * AMOUNTS;
+    var PRICES = price[Math.floor(Math.random() * price.length)];
+    var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
 
-  document.getElementById("p1").innerHTML = PRICES;
-  document.getElementById("a1").innerHTML = AMOUNTS;
-  document.getElementById("s1").innerHTML = SUMS;
+    var SUMS = PRICES * AMOUNTS;
 
-  document.getElementById("A1").value = AMOUNTS;
-  document.getElementById("A2").value = SUMS;
+    document.getElementById("p1").innerHTML = PRICES;
+    document.getElementById("a1").innerHTML = AMOUNTS;
+    document.getElementById("s1").innerHTML = SUMS;
+
+    document.getElementById("A1").value = AMOUNTS;
+    document.getElementById("A2").value = SUMS;
+  }
+}
+
+function walletCheck() {
+  var checks = [check1, check2];
+
+  var check1 = document.getElementById("yourImagination").value;
+  var check2 = document.getElementById("imaginationToken").value;
+
+  if (checks == "0") {
+    document.getElementById("yourimagination").innerHTML = "0";
+    document.getElementById("imaginationtoken").innerHTML = "0";
+  }
 }
