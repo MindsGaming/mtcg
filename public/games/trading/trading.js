@@ -952,14 +952,28 @@ function claimReward() {
       } else {
         var checkReward = document.getElementById("rewardblock").innerHTML;
 
-        alert(checkReward);
+        const data = {
+          dream:
+            dreamInput.value +
+            "-" +
+            dreamInputuser.value +
+            dreamInputplayer.value +
+            "Reward: " +
+            checkReward
+        };
+        appendNewDream(
+          dreamInput.value +
+            "-" +
+            dreamInputuser.value +
+            "Reward: " +
+            dreamInputplayer.value +
+            checkReward
+        );
+        alert("You Eearned " + checkReward + " Rewards");
       }
     }
   }
 }
-
-
-
 
 const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
@@ -981,17 +995,15 @@ function pad(val) {
   }
 }
 
-
 function depositRewards() {
-  if (minutesLabel.innerHTML = "0"){
-    alert("You need a full reward to make deposits")
-  }
-else{
-  var clac = minutesLabel.innerHTML;
+  if ((minutesLabel.innerHTML = "0")) {
+    alert("You need a full reward to make deposits");
+  } else {
+    var clac = minutesLabel.innerHTML;
     var checkReward = document.getElementById("rewardBlock").value;
-  var deposit = checkReward + clac;
-  
-
-  document.getElementById("rewardblock").innerHTML =;
-}
+    var deposit = checkReward + clac;
+    checkReward = deposit;
+    document.getElementById("rewardblock").innerHTML = deposit;
+    minutesLabel.innerHTML = "0";
+  }
 }
