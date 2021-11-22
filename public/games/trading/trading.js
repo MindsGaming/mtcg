@@ -958,11 +958,40 @@ function claimReward() {
   }
 }
 
-function depositRewards() {
-  const minutesLabel = document.getElementById("minutes");
-  const secondsLabel = document.getElementById("seconds");
 
-  const clac = minutesLabel + "." + secondsLabel;
-  const deposit = clac;
-  document.getElementById("rewardblock").innerHTML = deposit;
+
+
+const minutesLabel = document.getElementById("minutes");
+const secondsLabel = document.getElementById("seconds");
+
+var totalSeconds = 0;
+setInterval(setTime, 3141);
+
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
+
+
+function depositRewards() {
+  if (minutesLabel.innerHTML = "0"){
+    alert("You need a full reward to make deposits")
+  }
+else{
+  var clac = minutesLabel.innerHTML;
+    var checkReward = document.getElementById("rewardBlock").value;
+  var deposit = checkReward + clac;
+  
+
+  document.getElementById("rewardblock").innerHTML =;
+}
 }
