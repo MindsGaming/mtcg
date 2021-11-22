@@ -957,3 +957,12 @@ function claimReward() {
     }
   }
 }
+
+function depositRewards() {
+  const minutesLabel = document.getElementById("minutes");
+  const secondsLabel = document.getElementById("seconds");
+
+  const clac = minutesLabel + "." + secondsLabel;
+  const deposit = clac;
+  document.getElementById("rewardblock").innerHTML = deposit;
+}
