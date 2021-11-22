@@ -166,7 +166,3 @@ if (loc.indexOf("http://") == 0) {
   window.location.href = loc.replace("http://", "https://");
 }
 
-function tradeGame() {
-  var Web = document.getElementById("tradingGame");
-  Web.classList.toggle("WebSplash");
-}

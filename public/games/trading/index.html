@@ -1119,6 +1119,68 @@
           </div>
         </div>
       </center>
+      
+      <div class="hide">
+            <form>
+          <a href="/help" class="questions" title="Learn More">?</a>
+          <input
+            name="username"
+            aria-label="a new dream"
+            type="text"
+            maxlength="100"
+            placeholder="Player Name"
+          />
+          <input
+            name="dream"
+            aria-label="a new dream"
+            type="text"
+            maxlength="100"
+            placeholder="Wallet ID"
+            required
+          />
+          <div>
+            <div class="dreamtoken" id="gamertokens" onclick="gamertokens();">
+              GAMER
+            </div>
+            <div
+              class="dreamtoken"
+              id="doobettertokens"
+              onclick="doobettertokens();"
+            >
+              DooBetter
+            </div>
+            <div
+              class="dreamtoken"
+              id="eclipsetokens"
+              onclick="eclipsetokens();"
+            >
+              ECLIPSE
+            </div>
+          </div>
+          <input
+            type="hidden"
+            list="tokens"
+            name="tokens"
+            id="token"
+            placeholder="Reward Token"
+          />
+
+          <datalist id="tokens">
+            <option value="GAMER"> </option>
+            <option value="DOOBETTER"> </option>
+            <option value="Eclipse"> </option>
+          </datalist>
+          <br />
+          <br />
+
+          <button type="submit" id="submit-dream">Login</button>
+
+          <br />
+          <div class="guest" onclick="guest();">
+            Guest
+          </div>
+        </form>
+      </div>
     </wrap>
   </body>
 </html>
