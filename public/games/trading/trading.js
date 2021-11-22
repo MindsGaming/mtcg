@@ -1,3 +1,10 @@
+
+/// Fly Trap // 
+
+
+
+/// Play Trade Game // 
+
 function keepDreaming() {
   alert("This functions hasn't been built, Keep Dreaming");
 }
@@ -946,12 +953,12 @@ function claimReward() {
       alert("You Can't Cash Out Without Owing Some Of Your Ideas");
     } else {
       var checkImagine = document.getElementById("imaginationToken").value;
-        alert("You Eearned " + checkReward + " Rewards");
+      alert("You Eearned " + checkReward + " Rewards");
 
       if (checkImagine == "0") {
         alert("You Need At Least One Idea To Claim");
       } else {
-        var checkReward = document.getElementById("rewardblock").innerHTML;
+        var checkReward = document.getElementById("rewardBlock").value;
 
         const data = {
           dream:
@@ -970,10 +977,8 @@ function claimReward() {
             dreamInputplayer.value +
             checkReward
         );
-         document.getElementById("rewardBlock").value = "0";
-                 document.getElementById("rewardblock").innerHTML = "0";
-
-
+        document.getElementById("rewardBlock").value = "0";
+        document.getElementById("rewardblock").innerHTML = "0";
       }
     }
   }
@@ -1000,7 +1005,7 @@ function pad(val) {
 }
 
 function depositRewards() {
-  if ((minutesLabel.innerHTML == "0")) {
+  if (minutesLabel.innerHTML == "0") {
     alert("You need a full reward to make deposits");
   } else {
     var clac = minutesLabel.innerHTML;
