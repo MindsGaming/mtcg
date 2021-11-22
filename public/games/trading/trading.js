@@ -790,9 +790,7 @@ function buyFour() {
     document.getElementById("imaginationToken").value = tackcount2;
     document.getElementById("imaginationtoken").innerHTML = tackcount2;
 
-    var superPrice = ["0.0002", "0.0003", "0.004", "0.005", "0.006"];
-
-    var PRICE = superPrice[Math.floor(Math.random() * superPrice.length)];
+    var PRICE = price[Math.floor(Math.random() * price.length)];
     var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
 
     var SUM = PRICE * AMOUNT;
@@ -804,9 +802,7 @@ function buyFour() {
     document.getElementById("E3").value = AMOUNT;
     document.getElementById("E4").value = SUM;
 
-    var superPriced = ["0.00061", "0.00075", "0.008", "0.009", "0.015"];
-
-    var PRICES = superPriced[Math.floor(Math.random() * superPrice.length)];
+    var PRICES = price[Math.floor(Math.random() * price.length)];
     var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
 
     var SUMS = PRICES * AMOUNTS;
@@ -841,7 +837,18 @@ function sellBlock() {
     document.getElementById("rewardBlock").value = tackcount2;
     document.getElementById("rewardblock").innerHTML = tackcount2;
 
-    var superPriced = ["0.00061", "0.00075", "0.008", "0.009", "0.015"];
+    var superPriced = ["0.00061", "0.00075", "0.0008", "0.0009", "0.001"];
+    var superPrice = [
+      "0.002",
+      "0.003",
+      "0.004",
+      "0.005",
+      "0.006",
+      "0.007",
+      "0.008",
+      "0.009",
+      "0.001"
+    ];
 
     var PRICE = superPriced[Math.floor(Math.random() * superPriced.length)];
     var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
@@ -854,8 +861,6 @@ function sellBlock() {
 
     document.getElementById("R1").value = AMOUNT;
     document.getElementById("R2").value = SUM;
-
-    var superPrice = ["0.0002", "0.0003", "0.004", "0.005", "0.006"];
 
     var PRICES = superPrice[Math.floor(Math.random() * superPrice.length)];
     var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
@@ -890,7 +895,20 @@ function buyBlock() {
     document.getElementById("rewardBlock").value = tackcount2;
     document.getElementById("rewardblock").innerHTML = tackcount2;
 
-    var PRICE = prices[Math.floor(Math.random() * prices.length)];
+    var superPriced = ["0.00061", "0.00075", "0.0008", "0.0009", "0.001"];
+    var superPrice = [
+      "0.002",
+      "0.003",
+      "0.004",
+      "0.005",
+      "0.006",
+      "0.007",
+      "0.008",
+      "0.009",
+      "0.001"
+    ];
+
+    var PRICE = superPrice[Math.floor(Math.random() * superPrice.length)];
     var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
 
     var SUM = PRICE * AMOUNT;
@@ -902,7 +920,7 @@ function buyBlock() {
     document.getElementById("R3").value = AMOUNT;
     document.getElementById("R4").value = SUM;
 
-    var PRICES = price[Math.floor(Math.random() * price.length)];
+    var PRICES = superPriced[Math.floor(Math.random() * superPriced.length)];
     var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
 
     var SUMS = PRICES * AMOUNTS;
