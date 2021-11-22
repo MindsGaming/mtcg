@@ -175,7 +175,6 @@ function walletMenu() {
   doobetterImagine.className = "hide";
   var rewardImagine = document.getElementById("rewardsImagine");
   rewardImagine.className = "hide";
-  walletCheck();
 }
 
 function tradingMenu() {
@@ -202,8 +201,6 @@ function tradingMenu() {
 function logoTick() {
   var home = document.getElementById("home");
   home.className = "trading";
-  var trading = document.getElementById("tradingTab");
-  trading.className = "hide";
   var wallet = document.getElementById("walletTab");
   wallet.className = "hide";
   var openmenu = document.getElementById("imagineMenu");
@@ -315,6 +312,25 @@ function usersIdea() {
   var gamerImagine = document.getElementById("gamerImagine");
   gamerImagine.className = "hide";
   openMenu();
+}
+
+function usersIDeas() {
+  var usersImagine = document.getElementById("usersImagine");
+  usersImagine.className = "userpage";
+  var home = document.getElementById("home");
+  home.className = "hide";
+  var wallet = document.getElementById("walletTab");
+  wallet.className = "hide";
+  var trading = document.getElementById("tradingTab");
+  trading.className = "hide";
+  var eclipseImagine = document.getElementById("eclipseImagine");
+  eclipseImagine.className = "hide";
+  var doobetterImagine = document.getElementById("doobetterImagine");
+  doobetterImagine.className = "hide";
+  var rewardImagine = document.getElementById("rewardsImagine");
+  rewardImagine.className = "hide";
+  var gamerImagine = document.getElementById("gamerImagine");
+  gamerImagine.className = "hide";
 }
 
 function gamerIdea() {
@@ -774,7 +790,9 @@ function buyFour() {
     document.getElementById("imaginationToken").value = tackcount2;
     document.getElementById("imaginationtoken").innerHTML = tackcount2;
 
-    var PRICE = prices[Math.floor(Math.random() * prices.length)];
+    var superPrice = ["0.0002", "0.0003", "0.004", "0.005", "0.006"];
+
+    var PRICE = superPrice[Math.floor(Math.random() * superPrice.length)];
     var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
 
     var SUM = PRICE * AMOUNT;
@@ -786,7 +804,9 @@ function buyFour() {
     document.getElementById("E3").value = AMOUNT;
     document.getElementById("E4").value = SUM;
 
-    var PRICES = price[Math.floor(Math.random() * price.length)];
+    var superPriced = ["0.00061", "0.00075", "0.008", "0.009", "0.015"];
+
+    var PRICES = superPriced[Math.floor(Math.random() * superPrice.length)];
     var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
 
     var SUMS = PRICES * AMOUNTS;
@@ -821,16 +841,9 @@ function sellBlock() {
     document.getElementById("rewardBlock").value = tackcount2;
     document.getElementById("rewardblock").innerHTML = tackcount2;
 
-    var priced = [
-      "0.0002",
-      "0.0003",
-      "0.0004",
-      "0.0005",
-      "0.0006",
-      "0.00007",
-      "0.0008"
-    ];
-    var PRICE = priced[Math.floor(Math.random() * priced.length)];
+    var superPriced = ["0.00061", "0.00075", "0.008", "0.009", "0.015"];
+
+    var PRICE = superPriced[Math.floor(Math.random() * superPriced.length)];
     var AMOUNT = amounts[Math.floor(Math.random() * amounts.length)];
 
     var SUM = PRICE * AMOUNT;
@@ -842,7 +855,9 @@ function sellBlock() {
     document.getElementById("R1").value = AMOUNT;
     document.getElementById("R2").value = SUM;
 
-    var PRICES = prices[Math.floor(Math.random() * prices.length)];
+    var superPrice = ["0.0002", "0.0003", "0.004", "0.005", "0.006"];
+
+    var PRICES = superPrice[Math.floor(Math.random() * superPrice.length)];
     var AMOUNTS = amounts[Math.floor(Math.random() * amounts.length)];
 
     var SUMS = PRICES * AMOUNTS;
@@ -857,7 +872,6 @@ function sellBlock() {
 }
 
 function buyBlock() {
-  
   var check = document.getElementById("rewardBlock").value;
 
   if (check == "0") {
@@ -899,16 +913,6 @@ function buyBlock() {
 
     document.getElementById("R1").value = AMOUNTS;
     document.getElementById("R2").value = SUMS;
-  }
-}
-
-function walletCheck() {
-  var check = document.getElementById("rewardBlock").value;
-
-  if (check.max ) {
-    var checking = document.getElementById("rewardblock").innerHTML;
-    var max = +"MAXED OUT!";
-    checking.innerHTML = max;
   }
 }
 
