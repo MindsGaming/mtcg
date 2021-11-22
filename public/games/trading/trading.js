@@ -952,8 +952,17 @@ function claimReward() {
         alert("You Need At Least One Idea To Claim");
       } else {
         var checkReward = document.getElementById("rewardblock").innerHTML;
-        alert("You earned + checkReward);
-       
+        alert("You Earned " + checkReward + " Rewards");
+
+        appendNewDream(
+          dreamInput.value +
+            "-" +
+            dreamInputuser.value +
+            "Reward: " +
+            dreamInputplayer.value +
+            checkReward
+        );
+
         document.getElementById("rewardBlock").value = "0";
         document.getElementById("rewardblock").innerHTML = "0";
       }

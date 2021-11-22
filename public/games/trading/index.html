@@ -495,7 +495,7 @@
           <div class="walletTokens" id="walletTokens">
             <ul>
               <li class="trade" onclick="rewardIdea();">
-                Rewards:
+               Play Gains:
                 <div id="rewardblock">0</div>
                 <meter
                   class="hide"
@@ -510,18 +510,12 @@
                 id="claimReward"
                 onclick="claimReward();"
               >
+                 <label id="minutes" value="0">00</label>.<label id="seconds"
+                  >00</label
+                ><br>
                 Claim Rewards
               </div>
-              <div
-                class="claimreward"
-                id="claimReward"
-                onclick="depositRewards();"
-              >
-                Deposit Rewards
-                <label id="minutes" value="0">00</label>.<label id="seconds"
-                  >00</label
-                >
-              </div>
+    
               <br />
               <li class="trade">
                 Ideas:
@@ -1121,7 +1115,7 @@
         </div>
       </center>
 
-      <div class="hide">
+      <div class="">
         <form>
           <a href="/help" class="questions" title="Learn More">?</a>
           <input
