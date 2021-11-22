@@ -512,14 +512,15 @@
               >
                 Claim Rewards
               </div>
-                 <div
+              <div
                 class="claimreward"
                 id="claimReward"
                 onclick="depositRewards();"
               >
                 Deposit Rewards
-            <label id="minutes" value="0">00</label>.<label id="seconds">00</label>
-                   
+                <label id="minutes" value="0">00</label>.<label id="seconds"
+                  >00</label
+                >
               </div>
               <br />
               <li class="trade">
@@ -785,8 +786,8 @@
               </h1>
               <p>
                 You made a great sale! Now you have more Ideas! <br />
-                Use your Ideas to buy more ideas from the trading page <br> or sell them for
-                <b>Reward Tokens!</b> <br />
+                Use your Ideas to buy more ideas from the trading page <br />
+                or sell them for <b>Reward Tokens!</b> <br />
                 Making trades on ideas will suffle idea prices, <br />
                 so make the best sell high and buy low to make the most rewards!
                 <br />
@@ -1119,9 +1120,9 @@
           </div>
         </div>
       </center>
-      
+
       <div class="hide">
-            <form>
+        <form>
           <a href="/help" class="questions" title="Learn More">?</a>
           <input
             name="username"
@@ -1180,6 +1181,16 @@
             Guest
           </div>
         </form>
+        <h1>
+          Pending Claims:
+          <ul id="dreams">
+            <li>Waiting For Claims..</li>
+          </ul>
+          <!--  Remove this line to clear orders 
+          <button id="clear-dreams">
+            Clear Dreams
+          </button>  -->
+        </h1>
       </div>
     </wrap>
   </body>

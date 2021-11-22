@@ -1,4 +1,3 @@
-
 /// Play Trade Game //
 
 function keepDreaming() {
@@ -949,30 +948,12 @@ function claimReward() {
       alert("You Can't Cash Out Without Owing Some Of Your Ideas");
     } else {
       var checkImagine = document.getElementById("imaginationToken").value;
-      alert("You Eearned " + checkReward + " Rewards");
-
       if (checkImagine == "0") {
         alert("You Need At Least One Idea To Claim");
       } else {
-        var checkReward = document.getElementById("rewardBlock").value;
-
-        const data = {
-          dream:
-            dreamInput.value +
-            "-" +
-            dreamInputuser.value +
-            dreamInputplayer.value +
-            "Reward: " +
-            checkReward
-        };
-        appendNewDream(
-          dreamInput.value +
-            "-" +
-            dreamInputuser.value +
-            "Reward: " +
-            dreamInputplayer.value +
-            checkReward
-        );
+        var checkReward = document.getElementById("rewardblock").innerHTML;
+        alert("You earned + checkReward);
+       
         document.getElementById("rewardBlock").value = "0";
         document.getElementById("rewardblock").innerHTML = "0";
       }
@@ -1020,7 +1001,6 @@ if (loc.indexOf("http://") == 0) {
   window.location.href = loc.replace("http://", "https://");
 }
 
-
 /// Fly Trap //
 // client-side js
 // run by the browser each time your view template referencing it is loaded
@@ -1037,26 +1017,6 @@ const dreamInputplayer = dreamsForm.elements["tokens"];
 
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
-const minutesLabel = document.getElementById("minutes");
-const secondsLabel = document.getElementById("seconds");
-
-var totalSeconds = 0;
-setInterval(setTime, 3141);
-
-function setTime() {
-  ++totalSeconds;
-  secondsLabel.innerHTML = pad(totalSeconds % 60);
-  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-}
-
-function pad(val) {
-  var valString = val + "";
-  if (valString.length < 2) {
-    return "0" + valString;
-  } else {
-    return valString;
-  }
-}
 
 function gamertokens() {
   var dreamtokens = document.getElementById("gamertokens");
@@ -1105,9 +1065,7 @@ dreamsForm.onsubmit = event => {
       dreamInputuser.value +
       dreamInputplayer.value +
       "Reward: " +
-      secondsLabel.innerHTML +
-      "." +
-      minutesLabel.innerHTML
+      checkReward
   };
 
   fetch("/addDream", {
@@ -1176,9 +1134,4 @@ function guest() {
   } else {
     txt = "Humm okkay";
   }
-}
-
-function socailMedia() {
-  alert("You Need To Be Logged In...");
-  window.open("/social", "_self");
 }
