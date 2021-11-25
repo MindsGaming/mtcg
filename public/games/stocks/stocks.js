@@ -1,17 +1,13 @@
-/// holder //
-
-const minutesLabel = document.getElementById("marketOne");
-const secondsLabel = document.getElementById("marketTwo");
+const minutesLabel = document.getElementById("minutes");
+const secondsLabel = document.getElementById("seconds");
 
 var totalSeconds = 0;
-setInterval(setTime, 1000);
+setInterval(setTime, 3141);
 
 function setTime() {
   ++totalSeconds;
   secondsLabel.innerHTML = pad(totalSeconds % 60);
   minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-  secondsLabel.value = pad(totalSeconds % 60);
-  minutesLabel.value = pad(parseInt(totalSeconds / 60));
 }
 
 function pad(val) {
@@ -22,5 +18,3 @@ function pad(val) {
     return valString;
   }
 }
-
-
