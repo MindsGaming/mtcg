@@ -18,3 +18,18 @@ function pad(val) {
     return valString;
   }
 }
+
+const stockones = document.getElementById("StockOnes");
+
+function stockOne() {
+  if (secondsLabel.innerHTML == "20") {
+    var tackCount = document.getElementById("stockOnes").innerHTML;
+    var tackcount = tackCount + 1;
+    document.getElementById("stockOnes").value = tackcount;
+    document.getElementById("stockOnes").innerHTML = tackcount;
+    
+    if(tackCount == "59"){
+      
+    }
+  }
+}
