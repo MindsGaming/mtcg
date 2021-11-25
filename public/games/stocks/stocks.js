@@ -8,6 +8,8 @@ function setTime() {
   ++totalSeconds;
   secondsLabel.innerHTML = pad(totalSeconds % 60);
   minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+
+  progress();
 }
 
 function pad(val) {
@@ -19,5 +21,16 @@ function pad(val) {
   }
 }
 
+/* Click Miner */
+function progress() {
+  var ClickMiner = document.getElementById("stocks").value;
+  var move = +1;
+  var mine = +0;
+  var buffer = move + mine;
+  progress = ClickMiner + buffer;
+  document.getElementById("stocks").value = progress;
 
-is
+  if (progress == "99") {
+    alert("testing");
+  }
+}
