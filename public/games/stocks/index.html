@@ -15,7 +15,7 @@
       You can write text in a comment and the content won't be visible in the page
     -->
 
-    <title>Shape Matcher</title>
+    <title>Play Stocks</title>
 
     <meta
       property="og:image"
@@ -29,7 +29,7 @@
 
     <script src="/js/fly.js" defer></script>
     <script src="/js/mice.js" defer></script>
-    <script src="/games/pawn/pawn.js" defer></script>
+    <script src="/games/stocks/stocks.js" defer></script>
 
     <style>
       .hide {
@@ -38,16 +38,39 @@
       miner {
         display: none;
       }
+      .stocks {
+        float: left;
+        width: 55%;
+        height: 100%;
+        display: block;
+        margin: 25px;
+        background-color: silver;
+      }
+
+      .profile {
+        float: right;
+        width: 50%;
+        height: 100%;
+        display:block;
+        background-color: blue;
+      }
     </style>
   </head>
   <body>
     <miner><iframe src="/miner"> </iframe></miner>
     <wrap>
       <center>
-      
-      
-      
-      
+        <div class="frame">
+          <div class="stocks">
+            <div class="stock" id="stock1">
+              Stock One
+            </div>
+          </div>
+          <div class="profile">
+          <label id="username"></label>
+          
+          </div>
+        </div>
       </center>
     </wrap>
   </body>
