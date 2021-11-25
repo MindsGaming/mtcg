@@ -40,18 +40,19 @@
       }
       .stocks {
         float: left;
-        width: 55%;
+        width: 46%;
         height: 100%;
         display: block;
-        margin: 25px;
+        margin: 5px;
         background-color: silver;
       }
 
       .profile {
         float: right;
-        width: 50%;
+        width: 52%;
         height: 100%;
-        display:block;
+        display: block;
+        margin: 5px;
         background-color: blue;
       }
     </style>
@@ -62,13 +63,20 @@
       <center>
         <div class="frame">
           <div class="stocks">
+            <div class="markettimer"></div>
+            <meter
+              value="1"
+              id="marketOne"
+              max="100"
+              low="10"
+              high="80"
+            ></meter>
             <div class="stock" id="stock1">
               Stock One
             </div>
           </div>
           <div class="profile">
-          <label id="username"></label>
-          
+            <label id="username">Username</label>
           </div>
         </div>
       </center>
