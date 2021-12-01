@@ -95,11 +95,7 @@ dreamsForm.onsubmit = event => {
     .then(response => {
       console.log(JSON.stringify(response));
     });
-  // get dream value and add it to the list
-  dreams.push(
-    dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
-  );
-  appendNewDream(
+ appendNewDream(
     dreamInput.value +
       "-" +
       dreamInputuser.value +
@@ -108,6 +104,7 @@ dreamsForm.onsubmit = event => {
       " Logged In"
   );
 
+  
   var txt;
   var r = confirm("Select A Miner!");
   if (r == true) {
