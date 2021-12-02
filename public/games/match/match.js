@@ -1,11 +1,19 @@
 function startBombs() {
   var matchOne = ["aOne", "aTwo", "aThree"];
-
   var matchTwo = ["bOne", "bTwo", "bThree"];
-
   var matchThree = ["cOne", "cTwo", "cThree"];
 
-  var ID = [matchOne, matchTwo, matchThree];
+  var ID = [
+    "aOne",
+    "aTwo",
+    "aThree",
+    "bOne",
+    "bTwo",
+    "bThree",
+    "cOne",
+    "cTwo",
+    "cThree"
+  ];
   const random = ID[Math.floor(Math.random() * ID.length)];
 
   const create = document.createElement("div");
@@ -24,10 +32,7 @@ function startBombs() {
     if (Create.id == matchTwo) {
       Create.className = "bomb";
     }
-    if (Create.id == matchOne) {
-      Create.className = "reward";
-    }
-    if (Create.id == ",,") {
+    if (Create.id == matchThree) {
       Create.className = "reward";
     }
   }
@@ -38,25 +43,21 @@ function startBombs() {
 }
 
 function Bombs() {
-  var matchOne = [
-    document.getElementById("aOne"),
-    document.getElementById("aTwo"),
-    document.getElementById("aThree")
-  ];
+  var matchOne = ["aOne", "aTwo", "aThree"];
+  var matchTwo = ["bOne", "bTwo", "bThree"];
+  var matchThree = ["cOne", "cTwo", "cThree"];
 
-  var matchTwo = [
-    document.getElementById("bOne"),
-    document.getElementById("bTwo"),
-    document.getElementById("bThree")
+  var ID = [
+    "aOne",
+    "aTwo",
+    "aThree",
+    "bOne",
+    "bTwo",
+    "bThree",
+    "cOne",
+    "cTwo",
+    "cThree"
   ];
-
-  var matchThree = [
-    document.getElementById("cOne"),
-    document.getElementById("cTwo"),
-    document.getElementById("cThree")
-  ];
-
-  var ID = [matchOne, matchTwo, matchThree];
   const random = ID[Math.floor(Math.random() * ID.length)];
 
   const create = document.createElement("div");
@@ -66,6 +67,19 @@ function Bombs() {
   create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
   Create.addEventListener("click", matching);
+  Create.addEventListener("click", createImage);
+
+  function createImage() {
+    if (Create.id == matchOne) {
+      Create.className = "rock";
+    }
+    if (Create.id == matchTwo) {
+      Create.className = "bomb";
+    }
+    if (Create.id == matchThree) {
+      Create.className = "reward";
+    }
+  }
 
   function matching() {}
 
