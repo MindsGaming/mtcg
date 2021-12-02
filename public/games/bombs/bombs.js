@@ -34,26 +34,26 @@ function startBombs() {
       Create.className = "rock";
     }
     if (Create.name == "bomb") {
-      var music = document.createElement("audio");
-      music.src =
-        "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2FCow-moo-sound.mp3";
-      music.volume = 0.3;
-      music.title= "playing";
-      music.autoPlay = false;
-      var Music = document.getElementById("bomb").appendChild(music);
-      played();
-      Create.addEventListener("click", played);
-
-      function played() {
-        if (create.title == "playing") {
-          music.play(), 5000;
-          create.title = "playing";
-        } else {
-          music.pause(), 5000;
-          create.title = "paused";
-        }
-      }
       Create.className = "bomb";
+    }
+  }
+  
+   var music = document.createElement("audio");
+  music.src =
+    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2FCow-moo-sound.mp3";
+  music.volume = 0.3;
+  music.autoPlay = false;
+  var Music = document.getElementById("cow").appendChild(music);
+  played();
+  Create.addEventListener("click", played);
+
+  function played() {
+    if (create.title == "playing") {
+      music.play(), 5000;
+      create.title = "playing";
+    } else {
+      music.pause(), 5000;
+      create.title = "paused";
     }
   }
 }
@@ -96,6 +96,12 @@ function Bombs() {
     }
     if (Create.name == "bomb") {
       Create.className = "bomb";
+       var music = document.createElement("audio");
+  music.src =
+    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2FCow-moo-sound.mp3";
+  music.volume = 0.3;
+  music.autoPlay = true;
+  var Music = document.getElementById("bomb").appendChild(music);
     }
   }
 }
