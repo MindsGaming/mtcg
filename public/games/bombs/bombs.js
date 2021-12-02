@@ -29,9 +29,11 @@ function startBombs() {
   function Digging() {
     if (Create.name == "token") {
       Create.className = "reward";
+      rewardSound();
     }
     if (Create.name == "rock") {
       Create.className = "rock";
+      rockSound();
     }
     if (Create.name == "bomb") {
       Create.className = "bomb";
@@ -71,9 +73,11 @@ function startBombs() {
     function Digging() {
       if (Create.name == "token") {
         Create.className = "reward";
+       rewardSound(); 
       }
       if (Create.name == "rock") {
         Create.className = "rock";
+        rockSound();
       }
       if (Create.name == "bomb") {
         Create.className = "bomb";
@@ -109,7 +113,7 @@ function bombSound() {
 function rockSound() {
   var music = document.createElement("audio");
   music.src =
-    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2FCow-moo-sound.mp3";
+    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fboing-sound-effect.mp3";
   music.volume = 0.3;
   music.autoPlay = false;
   music.title = "playing";
@@ -131,7 +135,7 @@ function rockSound() {
 function rewardSound() {
   var music = document.createElement("audio");
   music.src =
-    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2FCow-moo-sound.mp3";
+    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fcash-register-sound-effect.mp3";
   music.volume = 0.3;
   music.autoPlay = false;
   music.title = "playing";
@@ -149,4 +153,14 @@ function rewardSound() {
       Music.title = "paused";
     }
   }
+  score();
+}
+
+
+
+function score() {
+  var tackCount = document.getElementById("SCORE").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("SCORE").value = tackcount;
+  document.getElementById("score").innerHTML = tackcount;
 }
