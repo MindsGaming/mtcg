@@ -44,19 +44,46 @@
       .tool {
         cursor: pointer;
       }
-    </style>
-    
-    <script>
-    function startBombs(){
-       var bomb = document.getElementById("");
-  var create = document.createElement("div");
-  create.className = "cow";
-  create.title = "playing";
-  create.id = "cow";
-  var Create = document.getElementById("musicItem").appendChild(create);
 
-    }
-    
+      .pixel {
+        float: left;
+        margin: 0.3px;
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        border-color: black;
+        border-style: solid;
+      }
+    </style>
+
+    <script>
+      function startBombs() {
+        Bombs();
+        Bombs();
+        Bombs();
+        Bombs();
+        Bombs();
+        Bombs();
+      }
+      function Bombs() {
+        var ID = [
+          "bomb",
+          "rock",
+          "token",
+          "rock",
+          "bomb",
+          "bomb",
+          "rock",
+          "token"
+        ];
+        const random = ID[Math.floor(Math.random() * ID.length)];
+
+        var create = document.createElement("div");
+        create.className = "pixel";
+        create.title = "Dig For Rewards";
+        create.id = random;
+        var Create = document.getElementById("bombs").appendChild(create);
+      }
     </script>
   </head>
   <body>
@@ -79,9 +106,14 @@
       ></meter>
       <center>
         <div class="map">
-          <div class="bombs" id="bombs"></div>
+          <div class="bombs" id="bombs">
+          <div class="pixel">
+            
+            </div>
+          
+          </div>
           <div class="tools">
-            <div class="tool" onclikc="startBombs();">
+            <div class="tool" onclick="startBombs();">
               Start Game
             </div>
           </div>
