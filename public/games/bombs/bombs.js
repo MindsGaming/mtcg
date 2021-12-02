@@ -21,13 +21,11 @@ function startBombs() {
 
   const create = document.createElement("div");
   create.className = "pixel";
-  create.title = random;
+  create.title = "Dig For Rewards";
   create.id = random;
   create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
-  Create.addEventListener("click", rewardFound);
-
-
+  Create.addEventListener("click", Digging);
 }
 
 function Bombs() {
@@ -54,6 +52,21 @@ function Bombs() {
   create.title = random;
   create.name = random;
   create.id = random;
+  create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
+  Create.addEventListener("click", Digging);
   startBombs();
+  function Digging() {
+  if (Create.name == "token") {
+    Create.className = "reward";
+  }
+  if (Create.name == "rock") {
+    Create.className = "rock";
+  }
+  if (Create.name == "token") {
+    Create.className = "reward";
+  }
 }
+}
+
+
