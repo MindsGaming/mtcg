@@ -1,193 +1,171 @@
 function startBombs() {
-  var ID = ["aOne", "aTwo", "aThree"];
-  const random = ID[Math.floor(Math.random() * ID.length)];
-
-  const create = document.createElement("div");
-  create.className = "pixel";
-  create.title = "Match Images";
-  create.id = random;
-  create.name = random;
-  var Create = document.getElementById("bombs").appendChild(create);
-  Create.addEventListener("click", matching);
-  Create.addEventListener("click", createImage);
-
-  function createImage() {
-    if (Create.id == "aOne") {
-      Create.className = "rock";
-      var tackCount = document.getElementById("matchOne").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("matchOne").value = tackcount;
-    }
-
-    if (Create.id == "aTwo") {
-      Create.className = "bomb";
-      var tackCount = document.getElementById("matchTwo").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("matchTwo").value = tackcount;
-    }
-    if (Create.id == "aThree") {
-      Create.className = "reward";
-      var tackCount = document.getElementById("matchThree").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("matchThree").value = tackcount;
-    }
-  }
-
-  function matching() {
-    var matchOne = document.getElementById("matchOne").value;
-    var matchTwo = document.getElementById("matchTwo").value;
-    var matchThree = document.getElementById("matchThree").value;
-
-    if (matchOne == "0") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
-    }
-    if (matchTwo == "0") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
-    }
-    if (matchThree == "0") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
-    }
-    if (matchOne == "3") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
-      getScore();
-    } else {
-      document.getElementById("matchOne").value = "0";
-      document.getElementById("matchTwo").value = "0";
-      document.getElementById("matchThree").value = "0";
-      Create.className = "pixel";
-    }
-    if (matchTwo == "3") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
-      getScore();
-    } else {
-      document.getElementById("matchOne").value = "0";
-      document.getElementById("matchTwo").value = "0";
-      document.getElementById("matchThree").value = "0";
-      Create.className = "pixel";
-    }
-    if (matchThree == "3") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
-      getScore();
-    } else {
-      document.getElementById("matchOne").value = "0";
-      document.getElementById("matchTwo").value = "0";
-      document.getElementById("matchThree").value = "0";
-      Create.className = "pixel";
-    }
-  }
-
   Bombs();
-}
-
-function Bombs() {
-  var ID = ["aOne", "aTwo", "aThree"];
+  var ID = ["rock", "bomb", "token"];
   const random = ID[Math.floor(Math.random() * ID.length)];
 
   const create = document.createElement("div");
   create.className = "pixel";
-  create.title = "Match Images";
+  create.title = "Dig For Rewards";
   create.id = random;
   create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
-  Create.addEventListener("click", matching);
-  Create.addEventListener("click", createImage);
+  Create.addEventListener("click", Digging);
 
-  function createImage() {
-    if (Create.id == "aOne") {
-      Create.className = "rock";
-      var tackCount = document.getElementById("matchOne").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("matchOne").value = tackcount;
-    }
-
-    if (Create.id == "aTwo") {
-      Create.className = "bomb";
-      var tackCount = document.getElementById("matchTwo").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("matchTwo").value = tackcount;
-    }
-    if (Create.id == "aThree") {
+  function Digging() {
+    if (Create.name == "token") {
       Create.className = "reward";
-      var tackCount = document.getElementById("matchThree").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("matchThree").value = tackcount;
+      rewardSound();
+    }
+    if (Create.name == "rock") {
+      Create.className = "rock";
+      rockSound();
+    }
+    if (Create.name == "bomb") {
+      Create.className = "bomb";
+      bombSound();
     }
   }
 
-  function matching() {
-    var matchOne = document.getElementById("matchOne").value;
-    var matchTwo = document.getElementById("matchTwo").value;
-    var matchThree = document.getElementById("matchThree").value;
+  function Bombs() {
+    var ID = ["bomb", "rock", "token"];
+    const random = ID[Math.floor(Math.random() * ID.length)];
 
-    if (matchOne == "0") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
+    var create = document.createElement("div");
+    create.className = "pixel";
+    create.title = "Dig For Rewards";
+    create.name = random;
+    create.id = random;
+    create.name = random;
+    var Create = document.getElementById("bombs").appendChild(create);
+    Create.addEventListener("click", Digging);
+    startBombs();
+
+    if (create.id == "bomb") {
+      startBombs();
     }
-    if (matchTwo == "0") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
+    if (create.id == "rock") {
+      startBombs();
     }
-    if (matchThree == "0") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
+    if (create.id == "token") {
+      startBombs();
     }
-    if (matchOne == "3") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
-      getScore();
-    } else {
-      document.getElementById("matchOne").value = "0";
-      document.getElementById("matchTwo").value = "0";
-      document.getElementById("matchThree").value = "0";
-      Create.className = "pixel";
-    }
-    if (matchTwo == "3") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
-      getScore();
-    } else {
-      document.getElementById("matchOne").value = "0";
-      document.getElementById("matchTwo").value = "0";
-      document.getElementById("matchThree").value = "0";
-      Create.className = "pixel";
-    }
-    if (matchThree == "3") {
-      var tackCount = document.getElementById("SCORE").value;
-      var tackcount = tackCount + 1;
-      document.getElementById("SCORE").value = tackcount;
-      getScore();
-    } else {
-      document.getElementById("matchOne").value = "0";
-      document.getElementById("matchTwo").value = "0";
-      document.getElementById("matchThree").value = "0";
-      Create.className = "pixel";
+
+    function Digging() {
+      if (Create.name == "token") {
+        Create.className = "reward";
+        rewardSound();
+      }
+      if (Create.name == "rock") {
+        Create.className = "rock";
+        rockSound();
+      }
+      if (Create.name == "bomb") {
+        Create.className = "bomb";
+        bombSound();
+      }
     }
   }
-
-  startBombs();
 }
 
+function bombSound() {
+  var music = document.createElement("audio");
+  music.src =
+    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2FSmall-explosion-in-the-distance-sound-effect.mp3";
+  music.volume = 0.3;
+  music.autoPlay = false;
+  music.title = "playing";
+  var Music = document.getElementById("bomb").appendChild(music);
+  played();
+  var Create = document.getElementById("bomb");
+  Create.addEventListener("click", played);
 
+  function played() {
+    if (Music.title == "playing") {
+      music.play(), 5000;
+      Music.title = "playing";
+    } else {
+      music.pause(), 5000;
+      Music.title = "paused";
+    }
+  }
+  matchOne();
+}
 
-function getScore() {
-  document.getElementById("score").innerHTML = document.getElementById(
-    "SCORE"
-  ).value;
+function rockSound() {
+  var music = document.createElement("audio");
+  music.src =
+    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fboing-sound-effect.mp3";
+  music.volume = 0.3;
+  music.autoPlay = false;
+  music.title = "playing";
+  var Music = document.getElementById("rock").appendChild(music);
+  played();
+  var Create = document.getElementById("rock");
+  Create.addEventListener("click", played);
+
+  function played() {
+    if (Music.title == "playing") {
+      music.play(), 5000;
+      Music.title = "playing";
+    } else {
+      music.pause(), 5000;
+      Music.title = "paused";
+    }
+  }
+  matchTwo();
+}
+function rewardSound() {
+  var music = document.createElement("audio");
+  music.src =
+    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fcash-register-sound-effect.mp3";
+  music.volume = 0.3;
+  music.autoPlay = false;
+  music.title = "playing";
+  var Music = document.getElementById("token").appendChild(music);
+  played();
+  var Create = document.getElementById("token");
+  Create.addEventListener("click", played);
+
+  function played() {
+    if (Music.title == "playing") {
+      music.play(), 5000;
+      Music.title = "playing";
+    } else {
+      music.pause(), 5000;
+      Music.title = "paused";
+    }
+  }
+  matchThree();
+}
+
+function score() {
+  var tackCount = document.getElementById("SCORE").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("SCORE").value = tackcount;
+  document.getElementById("score").innerHTML = tackcount;
+}
+
+function matchOne() {
+  var tackCount = document.getElementById("matchOne").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("matchOne").value = tackcount;
+
+  if (tackCount == "3") {
+    score();
+    document.getElementById("matchOne").value = "0";
+    var  = document.getElementById("bomb");
+    bomb.className = "hide";
+  }
+}
+
+function matchTwo() {
+  var tackCount = document.getElementById("matchTwo").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("matchTwo").value = tackcount;
+}
+
+function matchThree() {
+  var tackCount = document.getElementById("matchThree").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("matchThree").value = tackcount;
 }
