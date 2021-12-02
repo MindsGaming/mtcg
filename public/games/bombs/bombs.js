@@ -19,18 +19,15 @@ function startBombs() {
   ];
   const random = ID[Math.floor(Math.random() * ID.length)];
 
-  var create = document.createElement("div");
+  const create = document.createElement("div");
   create.className = "pixel";
   create.title = random;
   create.id = random;
   create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
-  
-  if Create.id
-  
   Create.addEventListener("click", rewardFound);
-  
-  
+
+
 }
 
 function Bombs() {
