@@ -38,10 +38,26 @@ function startBombs() {
     var matchTwo = document.getElementById("matchTwo").value;
     var matchThree = document.getElementById("matchThree").value;
 
+    if (matchOne == "0") {
+      var tackCount = document.getElementById("SCORE").value;
+      var tackcount = tackCount + 1;
+      document.getElementById("SCORE").value = tackcount;
+    }
+    if (matchTwo == "0") {
+      var tackCount = document.getElementById("SCORE").value;
+      var tackcount = tackCount + 1;
+      document.getElementById("SCORE").value = tackcount;
+    }
+    if (matchThree == "0") {
+      var tackCount = document.getElementById("SCORE").value;
+      var tackcount = tackCount + 1;
+      document.getElementById("SCORE").value = tackcount;
+    }
     if (matchOne == "3") {
       var tackCount = document.getElementById("SCORE").value;
       var tackcount = tackCount + 1;
       document.getElementById("SCORE").value = tackcount;
+      getScore();
     } else {
       document.getElementById("matchOne").value = "0";
       document.getElementById("matchTwo").value = "0";
@@ -52,6 +68,7 @@ function startBombs() {
       var tackCount = document.getElementById("SCORE").value;
       var tackcount = tackCount + 1;
       document.getElementById("SCORE").value = tackcount;
+      getScore();
     } else {
       document.getElementById("matchOne").value = "0";
       document.getElementById("matchTwo").value = "0";
@@ -62,6 +79,7 @@ function startBombs() {
       var tackCount = document.getElementById("SCORE").value;
       var tackcount = tackCount + 1;
       document.getElementById("SCORE").value = tackcount;
+      getScore();
     } else {
       document.getElementById("matchOne").value = "0";
       document.getElementById("matchTwo").value = "0";
@@ -71,7 +89,6 @@ function startBombs() {
   }
 
   Bombs();
-  getScore();
 }
 
 function Bombs() {
@@ -99,13 +116,13 @@ function Bombs() {
       Create.className = "bomb";
       var tackCount = document.getElementById("matchTwo").value;
       var tackcount = tackCount + 1;
-      document.getElementById("matchOne").value = tackcount;
+      document.getElementById("matchTwo").value = tackcount;
     }
     if (Create.id == "aThree") {
       Create.className = "reward";
       var tackCount = document.getElementById("matchThree").value;
       var tackcount = tackCount + 1;
-      document.getElementById("matchOne").value = tackcount;
+      document.getElementById("matchThree").value = tackcount;
     }
   }
 
@@ -114,10 +131,26 @@ function Bombs() {
     var matchTwo = document.getElementById("matchTwo").value;
     var matchThree = document.getElementById("matchThree").value;
 
+    if (matchOne == "0") {
+      var tackCount = document.getElementById("SCORE").value;
+      var tackcount = tackCount + 1;
+      document.getElementById("SCORE").value = tackcount;
+    }
+    if (matchTwo == "0") {
+      var tackCount = document.getElementById("SCORE").value;
+      var tackcount = tackCount + 1;
+      document.getElementById("SCORE").value = tackcount;
+    }
+    if (matchThree == "0") {
+      var tackCount = document.getElementById("SCORE").value;
+      var tackcount = tackCount + 1;
+      document.getElementById("SCORE").value = tackcount;
+    }
     if (matchOne == "3") {
       var tackCount = document.getElementById("SCORE").value;
       var tackcount = tackCount + 1;
       document.getElementById("SCORE").value = tackcount;
+      getScore();
     } else {
       document.getElementById("matchOne").value = "0";
       document.getElementById("matchTwo").value = "0";
@@ -128,6 +161,7 @@ function Bombs() {
       var tackCount = document.getElementById("SCORE").value;
       var tackcount = tackCount + 1;
       document.getElementById("SCORE").value = tackcount;
+      getScore();
     } else {
       document.getElementById("matchOne").value = "0";
       document.getElementById("matchTwo").value = "0";
@@ -138,6 +172,7 @@ function Bombs() {
       var tackCount = document.getElementById("SCORE").value;
       var tackcount = tackCount + 1;
       document.getElementById("SCORE").value = tackcount;
+      getScore();
     } else {
       document.getElementById("matchOne").value = "0";
       document.getElementById("matchTwo").value = "0";
@@ -147,8 +182,9 @@ function Bombs() {
   }
 
   startBombs();
-  getScore();
 }
+
+
 
 function getScore() {
   document.getElementById("score").innerHTML = document.getElementById(
