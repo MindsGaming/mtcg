@@ -26,7 +26,12 @@ function startBombs() {
   Create.addEventListener("click", createImage);
 
   function createImage() {
-    if (Create.id == matchOne) {
+    if (Create.id == "aone") {
+      Create.className = "rock";
+    }
+     if (Create.id == "aone") {
+      Create.className = "rock";
+    } if (Create.id == "aone") {
       Create.className = "rock";
     }
     if (Create.id == matchTwo) {
