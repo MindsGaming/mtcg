@@ -11,11 +11,7 @@
     <!--   This is where the Phaser 2.6.2 code is brought in to the app. -->
 
     <script type="text/javascript" src="/js/fly.js" defer></script>
-    <script
-      type="text/javascript"
-      src="/games/bombs/bombs.js"
-      defer
-    ></script>
+    <script type="text/javascript" src="/games/bombs/bombs.js" defer></script>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="/fly.css" />
@@ -58,11 +54,43 @@
         background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fpixel.png");
         background-size: contain;
       }
-      
+      .rock {
+        float: left;
+        margin: 0.3px;
+        width: 55px;
+        height: 55px;
+        background-color: red;
+        border-color: black;
+        border-style: solid;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Frock.webp");
+        background-size: contain;
+      }
+      .bomb {
+        float: left;
+        margin: 0.3px;
+        width: 55px;
+        height: 55px;
+        background-color: red;
+        border-color: black;
+        border-style: solid;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fbomb.webp");
+        background-size: contain;
+      }
+      .reward {
+        float: left;
+        margin: 0.3px;
+        width: 55px;
+        height: 55px;
+        background-color: red;
+        border-color: black;
+        border-style: solid;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Freward.webp");
+        background-size: contain;
+      }
+
       .intro {
         z-index: -1;
       }
-      
     </style>
   </head>
   <body>
@@ -85,8 +113,7 @@
       ></meter>
       <center>
         <div class="map">
-          <div class="bombs" id="bombs">
-          </div>
+          <div class="bombs" id="bombs"></div>
           <div class="tools">
             <div class="tool" onclick="startBombs();">
               Start Game
