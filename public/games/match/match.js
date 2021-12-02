@@ -23,13 +23,13 @@ function startBombs() {
       Create.className = "bomb";
       var tackCount = document.getElementById("matchTwo").value;
       var tackcount = tackCount + 1;
-      document.getElementById("matchOne").value = tackcount;
+      document.getElementById("matchTwo").value = tackcount;
     }
     if (Create.id == "aThree") {
       Create.className = "reward";
       var tackCount = document.getElementById("matchThree").value;
       var tackcount = tackCount + 1;
-      document.getElementById("matchOne").value = tackcount;
+      document.getElementById("matchThree").value = tackcount;
     }
   }
 
