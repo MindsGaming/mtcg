@@ -34,6 +34,7 @@
         height: 85%;
         border-style: groove;
         border-color: silver;
+        overflow: scroll;
       }
       .tools {
         width: 65%;
@@ -48,22 +49,49 @@
       .pixel {
         float: left;
         margin: 0.3px;
-        width: 40px;
-        height: 40px;
+        width: 55px;
+        height: 55px;
         background-color: red;
         border-color: black;
         border-style: solid;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fpixel.png");
+        background-size: contain;
       }
     </style>
 
     <script>
       function startBombs() {
         Bombs();
-        Bombs();
-        Bombs();
-        Bombs();
-        Bombs();
-        Bombs();
+        var ID = [
+          "bomb",
+          "rock",
+          "token",
+          "rock",
+          "bomb",
+          "bomb",
+          "rock",
+          "token",
+          "bomb",
+          "rock",
+          "rock",
+          "bomb",
+          "bomb",
+          "rock",
+          "stop"
+        ];
+        const random = ID[Math.floor(Math.random() * ID.length)];
+
+        var create = document.createElement("div");
+        create.className = "pixel";
+        create.title = "Dig For Rewards";
+        create.id = random;
+        var Create = document.getElementById("bombs").appendChild(create);
+
+        if (Create.id == "stop") {
+          alert("Dig For Rewards");
+        } else {
+          Bombs();
+        }
       }
       function Bombs() {
         var ID = [
@@ -74,7 +102,13 @@
           "bomb",
           "bomb",
           "rock",
-          "token"
+          "token",
+          "bomb",
+          "rock",
+          "rock",
+          "bomb",
+          "bomb",
+          "rock"
         ];
         const random = ID[Math.floor(Math.random() * ID.length)];
 
@@ -83,6 +117,7 @@
         create.title = "Dig For Rewards";
         create.id = random;
         var Create = document.getElementById("bombs").appendChild(create);
+        startBombs();
       }
     </script>
   </head>
@@ -107,10 +142,7 @@
       <center>
         <div class="map">
           <div class="bombs" id="bombs">
-          <div class="pixel">
-            
-            </div>
-          
+            <div class="pixel"></div>
           </div>
           <div class="tools">
             <div class="tool" onclick="startBombs();">
