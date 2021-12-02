@@ -7,13 +7,13 @@
       type="image/x-icon"
       href="https://cdn.glitch.com/457abbe8-4602-4fcd-8eb3-78bfe5da9c06%2Fegg.ico?1547155629924"
     />
-    <title>Eclipse Sounds| Beta</title>
+    <title>Reward Digger| Beta</title>
     <!--   This is where the Phaser 2.6.2 code is brought in to the app. -->
 
     <script type="text/javascript" src="/js/fly.js" defer></script>
     <script
       type="text/javascript"
-      src="/games/eclipse/eclipse.js"
+      src="/games/bombs/bombs.js"
       defer
     ></script>
 
@@ -32,6 +32,7 @@
       .bombs {
         width: 65%;
         height: 85%;
+        margin-top: 10px;
         border-style: groove;
         border-color: silver;
         overflow: scroll;
@@ -57,69 +58,12 @@
         background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fpixel.png");
         background-size: contain;
       }
+      
+      .intro {
+        z-index: -1;
+      }
+      
     </style>
-
-    <script>
-      function startBombs() {
-        Bombs();
-        var ID = [
-          "bomb",
-          "rock",
-          "token",
-          "rock",
-          "bomb",
-          "bomb",
-          "rock",
-          "token",
-          "bomb",
-          "rock",
-          "rock",
-          "bomb",
-          "bomb",
-          "rock",
-          "stop"
-        ];
-        const random = ID[Math.floor(Math.random() * ID.length)];
-
-        var create = document.createElement("div");
-        create.className = "pixel";
-        create.title = "Dig For Rewards";
-        create.id = random;
-        var Create = document.getElementById("bombs").appendChild(create);
-
-        if (Create.id == "stop") {
-          alert("Dig For Rewards");
-        } else {
-          Bombs();
-        }
-      }
-      function Bombs() {
-        var ID = [
-          "bomb",
-          "rock",
-          "token",
-          "rock",
-          "bomb",
-          "bomb",
-          "rock",
-          "token",
-          "bomb",
-          "rock",
-          "rock",
-          "bomb",
-          "bomb",
-          "rock"
-        ];
-        const random = ID[Math.floor(Math.random() * ID.length)];
-
-        var create = document.createElement("div");
-        create.className = "pixel";
-        create.title = "Dig For Rewards";
-        create.id = random;
-        var Create = document.getElementById("bombs").appendChild(create);
-        startBombs();
-      }
-    </script>
   </head>
   <body>
     <miner><iframe src="miner.html"></iframe></miner>
@@ -142,7 +86,6 @@
       <center>
         <div class="map">
           <div class="bombs" id="bombs">
-            <div class="pixel"></div>
           </div>
           <div class="tools">
             <div class="tool" onclick="startBombs();">
