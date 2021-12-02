@@ -14,8 +14,7 @@ function startBombs() {
     "rock",
     "bomb",
     "bomb",
-    "rock",
-    "stop"
+    "rock"
   ];
   const random = ID[Math.floor(Math.random() * ID.length)];
 
@@ -57,8 +56,7 @@ function startBombs() {
       "rock",
       "bomb",
       "bomb",
-      "rock",
-      "stop"
+      "rock"
     ];
     const random = ID[Math.floor(Math.random() * ID.length)];
 
