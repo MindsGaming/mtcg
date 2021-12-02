@@ -68,7 +68,14 @@ function startBombs() {
     create.name = random;
     var Create = document.getElementById("bombs").appendChild(create);
     Create.addEventListener("click", Digging);
-    startBombs();
+    
+    if (create.id == "bomb"){
+    startBombs();}
+     if (create.id == "rock"){
+    startBombs();}
+ if (create.id == "bomb"){
+    startBombs();}
+
 
     function Digging() {
       if (Create.name == "token") {
