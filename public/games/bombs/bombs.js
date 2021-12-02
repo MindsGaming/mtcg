@@ -23,11 +23,16 @@ function startBombs() {
   create.className = "pixel";
   create.title = random;
   create.id = random;
+  create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
-
-  if (Create.id == "")
- 
+  
+  if Create.id
+  
+  Create.addEventListener("click", rewardFound);
+  
+  
 }
+
 function Bombs() {
   var ID = [
     "bomb",
@@ -49,7 +54,8 @@ function Bombs() {
 
   var create = document.createElement("div");
   create.className = "pixel";
-  create.title = "Dig For Rewards";
+  create.title = random;
+  create.name = random;
   create.id = random;
   var Create = document.getElementById("bombs").appendChild(create);
   startBombs();
