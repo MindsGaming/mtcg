@@ -61,15 +61,28 @@ function startBombs() {
     startBombs();
 
     if (create.id == "aOne") {
-      var match = 
-      
-      startBombs();
+      var matchOne = document.getElementById("aTwo");
+      var matchTwo = document.getElementById("aThree");
+      matchOne.addEventListener("click", match);
+      matchTwo.addEventListener("click", match);
+      Create.className = "rock";
     }
     if (create.id == "rock") {
       startBombs();
     }
     if (create.id == "token") {
       startBombs();
+    }
+
+    function match() {
+      var matchOne = document.getElementById("aOne");
+      var matchTwo = document.getElementById("aTwo");
+      var matchThree = document.getElementById("aThree");
+      var matchFour = document.getElementById("bOne");
+      var matchFive = document.getElementById("bTwo");
+      var matchSix = document.getElementById("bThree");
+      var matchSeven = document.getElementById("cOne");
+      var matchEight = document.getElementById("cTwo");
     }
 
     function Digging() {
