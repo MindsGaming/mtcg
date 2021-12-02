@@ -1,69 +1,46 @@
 function startBombs() {
-  Bombs();
-  var ID = ["rock", "bomb", "token"];
+  var ID = ["bomb", "rock", "token"];
   const random = ID[Math.floor(Math.random() * ID.length)];
 
   const create = document.createElement("div");
   create.className = "pixel";
   create.title = "Dig For Rewards";
   create.id = random;
-  create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
   Create.addEventListener("click", Digging);
+  Create.addEventListener("click", checkCount);
 
   function Digging() {
     if (Create.name == "token") {
       Create.className = "reward";
+      Create.title = "fliped";
       rewardSound();
+      var tackCount = document.getElementById("matchOne").value;
+      var score = document.getElementById("score").innerHTML;
+
+      var tackcount = tackCount + 1;
+      var tackcount2 = score + 1;
+
+      document.getElementById("matchOne").value = tackcount;
+      document.getElementById("score").innerHTML = tackcount2;
+      
     }
     if (Create.name == "rock") {
       Create.className = "rock";
+      Create.title = "fliped";
       rockSound();
     }
     if (Create.name == "bomb") {
       Create.className = "bomb";
+      Create.Title = "fliped";
       bombSound();
     }
   }
 
-  function Bombs() {
-    var ID = ["bomb", "rock", "token"];
-    const random = ID[Math.floor(Math.random() * ID.length)];
+  function checkCount() {
+          var matchOne = document.getElementById("matchOne").value;
 
-    var create = document.createElement("div");
-    create.className = "pixel";
-    create.title = "Dig For Rewards";
-    create.name = random;
-    create.id = random;
-    create.name = random;
-    var Create = document.getElementById("bombs").appendChild(create);
-    Create.addEventListener("click", Digging);
-    startBombs();
-
-    if (create.id == "bomb") {
-      startBombs();
-    }
-    if (create.id == "rock") {
-      startBombs();
-    }
-    if (create.id == "token") {
-      startBombs();
-    }
-
-    function Digging() {
-      if (Create.name == "token") {
-        Create.className = "reward";
-        rewardSound();
-      }
-      if (Create.name == "rock") {
-        Create.className = "rock";
-        rockSound();
-      }
-      if (Create.name == "bomb") {
-        Create.className = "bomb";
-        bombSound();
-      }
-    }
+    
   }
 }
 
@@ -88,7 +65,6 @@ function bombSound() {
       Music.title = "paused";
     }
   }
-  matchOne();
 }
 
 function rockSound() {
@@ -112,7 +88,6 @@ function rockSound() {
       Music.title = "paused";
     }
   }
-  matchTwo();
 }
 function rewardSound() {
   var music = document.createElement("audio");
@@ -135,7 +110,7 @@ function rewardSound() {
       Music.title = "paused";
     }
   }
-  matchThree();
+  score();
 }
 
 function score() {
@@ -143,29 +118,4 @@ function score() {
   var tackcount = tackCount + 1;
   document.getElementById("SCORE").value = tackcount;
   document.getElementById("score").innerHTML = tackcount;
-}
-
-function matchOne() {
-  var tackCount = document.getElementById("matchOne").value;
-  var tackcount = tackCount + 1;
-  document.getElementById("matchOne").value = tackcount;
-
-  if (tackCount == "3") {
-    score();
-    document.getElementById("matchOne").value = "0";
-    var  = document.getElementById("bomb");
-    bomb.className = "hide";
-  }
-}
-
-function matchTwo() {
-  var tackCount = document.getElementById("matchTwo").value;
-  var tackcount = tackCount + 1;
-  document.getElementById("matchTwo").value = tackcount;
-}
-
-function matchThree() {
-  var tackCount = document.getElementById("matchThree").value;
-  var tackcount = tackCount + 1;
-  document.getElementById("matchThree").value = tackcount;
 }
