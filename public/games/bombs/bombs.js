@@ -26,6 +26,7 @@ function startBombs() {
   create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
   Create.addEventListener("click", Digging);
+
   function Digging() {
     if (Create.name == "token") {
       Create.className = "reward";
@@ -56,7 +57,8 @@ function startBombs() {
       "rock",
       "bomb",
       "bomb",
-      "rock"
+      "rock",
+      "stop"
     ];
     const random = ID[Math.floor(Math.random() * ID.length)];
 
@@ -68,19 +70,22 @@ function startBombs() {
     create.name = random;
     var Create = document.getElementById("bombs").appendChild(create);
     Create.addEventListener("click", Digging);
-    
-    if (create.id == "bomb"){
-    startBombs();}
-     if (create.id == "rock"){
-    startBombs();}
- if (create.id == "bomb"){
-    startBombs();}
+    startBombs();
 
+    if (create.id == "bomb") {
+      startBombs();
+    }
+    if (create.id == "rock") {
+      startBombs();
+    }
+    if (create.id == "token") {
+      startBombs();
+    }
 
     function Digging() {
       if (Create.name == "token") {
         Create.className = "reward";
-       rewardSound(); 
+        rewardSound();
       }
       if (Create.name == "rock") {
         Create.className = "rock";
@@ -162,8 +167,6 @@ function rewardSound() {
   }
   score();
 }
-
-
 
 function score() {
   var tackCount = document.getElementById("SCORE").value;
