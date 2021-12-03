@@ -1,5 +1,4 @@
 function startBombs() {
-  Bombs();
   var ID = [
     "bomb",
     "rock",
@@ -25,14 +24,17 @@ function startBombs() {
   create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
   Create.addEventListener("click", Digging);
+  Create.addEventListener("click", checkMatch);
 
   function Digging() {
     if (Create.name == "token") {
       Create.className = "reward";
+      Create.title = "fliped";
       rewardSound();
     }
     if (Create.name == "rock") {
       Create.className = "rock";
+      Create.title = "fliped";
       rockSound();
     }
     if (Create.name == "bomb") {
@@ -41,58 +43,21 @@ function startBombs() {
     }
   }
 
-  function Bombs() {
-    var ID = [
-      "bomb",
-      "rock",
-      "token",
-      "rock",
-      "bomb",
-      "bomb",
-      "rock",
-      "token",
-      "bomb",
-      "rock",
-      "rock",
-      "bomb",
-      "bomb",
-      "rock"
-    ];
-    const random = ID[Math.floor(Math.random() * ID.length)];
+  function checkMatch() {
+    var matchOne = document.getElementById("matchOne").value;
+    var matchTwo = document.getElementById("matchTwo").value;
+    var matchThree = document.getElementById("matchThree").value;
 
-    var create = document.createElement("div");
-    create.className = "pixel";
-    create.title = "Dig For Rewards";
-    create.name = random;
-    create.id = random;
-    create.name = random;
-    var Create = document.getElementById("bombs").appendChild(create);
-    Create.addEventListener("click", Digging);
-    startBombs();
+    var ITEM = ID;
 
-    if (create.id == "bomb") {
-      startBombs();
-    }
-    if (create.id == "rock") {
-      startBombs();
-    }
-    if (create.id == "token") {
-      startBombs();
+    if (ITEM.title == "fliped") {
+      
     }
 
-    function Digging() {
-      if (Create.name == "token") {
-        Create.className = "reward";
-        rewardSound();
-      }
-      if (Create.name == "rock") {
-        Create.className = "rock";
-        rockSound();
-      }
-      if (Create.name == "bomb") {
-        Create.className = "bomb";
-        bombSound();
-      }
+    if (matchOne == "3") {
+      score();
+      document.getElementById("matchOne").value = "0";
+      var ITEM = document.getElementByID("token");
     }
   }
 }
