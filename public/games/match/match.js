@@ -1,6 +1,6 @@
 function startBombs() {
   Bombs();
-  var ID = [
+  const ID = [
     "bomb",
     "rock",
     "token",
@@ -30,14 +30,17 @@ function startBombs() {
     if (Create.name == "token") {
       Create.className = "reward";
       rewardSound();
+      matchOne();
     }
     if (Create.name == "rock") {
       Create.className = "rock";
       rockSound();
+      matchTwo();
     }
     if (Create.name == "bomb") {
       Create.className = "bomb";
       bombSound();
+      matchThree();
     }
   }
 
@@ -84,14 +87,17 @@ function startBombs() {
       if (Create.name == "token") {
         Create.className = "reward";
         rewardSound();
+        matchOne();
       }
       if (Create.name == "rock") {
         Create.className = "rock";
         rockSound();
+        matchTwo();
       }
       if (Create.name == "bomb") {
         Create.className = "bomb";
         bombSound();
+        matchThree();
       }
     }
   }
@@ -187,18 +193,31 @@ function matchTwo() {
   document.getElementById("matchOne").value = tackcount;
 }
 
-function matchthree() {
+function matchThree() {
   var tackCount = document.getElementById("matchThree").value;
   var tackcount = tackCount + 1;
   document.getElementById("matchOne").value = tackcount;
 }
 
 function checkMatch() {
+  
+  
   var tackCount1 = document.getElementById("matchThree").value;
   var tackCount2 = document.getElementById("matchTwo").value;
   var tackCount3 = document.getElementById("matchOne").value;
+    
+
+  if (tackCount1 == "3") {
+    tackCount1 = "0";
+    score();
+  }
   
-  if (tackCount1 == "3"){
+  }
+  if (tackCount2 == "3") {
+    tackCount1 = "0";
+    score();
+  }
+  if (tackCount3 == "3") {
     tackCount1 = "0";
     score();
   }
