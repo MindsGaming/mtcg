@@ -209,9 +209,9 @@ function checkMatch() {
       ITEM.className = "hide";
     }
   }
-  
+
   if (tackCount2 == "3") {
-    tackCount1 = "0";
+    tackCount2 = "0";
     score();
     var ITEM = document.getElementById("rock");
     if (ITEM.title == "flipped") {
@@ -235,7 +235,7 @@ function checkMatch() {
       ITEM.className = "pixel";
     }
   }
-  
+
   if (tackCount2 == "2") {
     tackCount2 = "0";
     var ITEM = document.getElementById("rock");
