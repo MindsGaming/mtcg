@@ -29,18 +29,18 @@ function startBombs() {
   function Digging() {
     if (Create.name == "token") {
       Create.className = "reward";
+      Create.tite = "flipped";
       rewardSound();
-      matchOne();
     }
     if (Create.name == "rock") {
       Create.className = "rock";
+      Create.tite = "flipped";
       rockSound();
-      matchTwo();
     }
     if (Create.name == "bomb") {
       Create.className = "bomb";
+      Create.tite = "flipped";
       bombSound();
-      matchThree();
     }
   }
 
@@ -86,14 +86,17 @@ function startBombs() {
     function Digging() {
       if (Create.name == "token") {
         Create.className = "reward";
+        Create.tite = "flipped";
         rewardSound();
       }
       if (Create.name == "rock") {
         Create.className = "rock";
+        Create.tite = "flipped";
         rockSound();
       }
       if (Create.name == "bomb") {
         Create.className = "bomb";
+        Create.tite = "flipped";
         bombSound();
       }
     }
@@ -198,17 +201,34 @@ function checkMatch() {
   var tackCount2 = document.getElementById("matchTwo").value;
   var tackCount3 = document.getElementById("matchOne").value;
 
-  if (tackCount1 == "4") {
+  if (tackCount1 == "3") {
+    tackCount1 = "0";
+    score();
+  }
+  if (tackCount2 == "3") {
     tackCount1 = "0";
     score();
   }
 
-  if (tackCount2 == "4") {
-    tackCount1 = "0";
+  if (tackCount3 == "3") {
+    tackCount3 = "0";
     score();
   }
-  if (tackCount3 == "4") {
+
+  if (tackCount1 == "2") {
     tackCount1 = "0";
-    score();
+        var ITEM = document.getElementById("token");
+    ITEM.className = "pixel";
+  }
+  if (tackCount2 == "2") {
+    tackCount1 = "0";
+    var ITEM = document.getElementById("rock");
+    ITEM.className = "pixel";
+  }
+  if (tackCount3 == "2") {
+    tackCount1 = "0";
+    var ITEM = document.getElementById("bomb");
+    ITEM.className = "pixel";
   }
 }
+
