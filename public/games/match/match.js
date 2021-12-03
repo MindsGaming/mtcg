@@ -25,17 +25,14 @@ function startBombs() {
   create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
   Create.addEventListener("click", Digging);
-  Create.addEventListener("click", checkMatch);
 
   function Digging() {
     if (Create.name == "token") {
       Create.className = "reward";
-      Create.title = "fliped";
       rewardSound();
     }
     if (Create.name == "rock") {
       Create.className = "rock";
-      Create.title = "fliped";
       rockSound();
     }
     if (Create.name == "bomb") {
@@ -44,57 +41,58 @@ function startBombs() {
     }
   }
 
-  function checkMatch() {
-    var matchOne = document.getElementById("matchOne").value;
-    var matchTwo = document.getElementById("matchTwo").value;
-    var matchThree = document.getElementById("matchThree").value;
+  function Bombs() {
+    var ID = [
+      "bomb",
+      "rock",
+      "token",
+      "rock",
+      "bomb",
+      "bomb",
+      "rock",
+      "token",
+      "bomb",
+      "rock",
+      "rock",
+      "bomb",
+      "bomb",
+      "rock"
+    ];
+    const random = ID[Math.floor(Math.random() * ID.length)];
 
-    var ITEM = ID;
+    var create = document.createElement("div");
+    create.className = "pixel";
+    create.title = "Dig For Rewards";
+    create.name = random;
+    create.id = random;
+    create.name = random;
+    var Create = document.getElementById("bombs").appendChild(create);
+    Create.addEventListener("click", Digging);
+    startBombs();
 
-    if (matchOne == "3") {
-      score();
-      document.getElementById("matchOne").value = "0";
-      var ITEM = document.getElementByID("token");
-    } else {
-      Create.className = "pixel";
+    if (create.id == "bomb") {
+      startBombs();
+    }
+    if (create.id == "rock") {
+      startBombs();
+    }
+    if (create.id == "token") {
+      startBombs();
     }
 
-    if (matchTwo == "3") {
-      score();
-      document.getElementById("matchOne").value = "0";
-      var ITEM = document.getElementByID("token");
-    } else {
-      Create.className = "pixel";
-    }
-    if (matchThree == "3") {
-      score();
-      document.getElementById("matchOne").value = "0";
-      var ITEM = document.getElementByID("token");
-    } else {
-      Create.className = "pixel";
-    }
-
-    if (matchOne == "0") {
-      document.getElementById("matchOne").value = "0";
-      var ITEM = document.getElementByID("token");
-    } else {
-      Create.className = "pixel";
-    }
-
-    if (matchTwo == "0") {
-      var ITEM = document.getElementById("matchTwo").value;
-      var plus = ITEM + 1;
-      document.getElementById("matchTwo").value = plus;
-    } else {
-      document.getElementById("matchTwo").value = "0";
-    }
-
-    if (matchThree == "0") {
-      var ITEM = document.getElementById("matchThree").value;
-      var plus = ITEM + 1;
-      document.getElementById("matchThree").value = plus;
-    } else {
-      document.getElementById("matchOne").value = "0";
+    function Digging() {
+      if (Create.name == "token") {
+        Create.className = "reward";
+        rewardSound();
+      }
+      if (Create.name == "rock") {
+        Create.className = "rock";
+        rockSound();
+      }
+      if (Create.name == "bomb") {
+        Create.className = "bomb";
+        bombSound();
+      }
     }
   }
 }
@@ -120,6 +118,7 @@ function bombSound() {
       Music.title = "paused";
     }
   }
+  Create.addEventListener("click", checkMatch);
 }
 
 function rockSound() {
@@ -143,6 +142,7 @@ function rockSound() {
       Music.title = "paused";
     }
   }
+  Create.addEventListener("click", checkMatch);
 }
 function rewardSound() {
   var music = document.createElement("audio");
@@ -165,7 +165,7 @@ function rewardSound() {
       Music.title = "paused";
     }
   }
-  score();
+  Create.addEventListener("click", checkMatch);
 }
 
 function score() {
@@ -173,4 +173,33 @@ function score() {
   var tackcount = tackCount + 1;
   document.getElementById("SCORE").value = tackcount;
   document.getElementById("score").innerHTML = tackcount;
+}
+
+function matchOne() {
+  var tackCount = document.getElementById("matchOne").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("matchOne").value = tackcount;
+}
+
+function matchTwo() {
+  var tackCount = document.getElementById("matchTwo").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("matchOne").value = tackcount;
+}
+
+function matchthree() {
+  var tackCount = document.getElementById("matchThree").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("matchOne").value = tackcount;
+}
+
+function checkMatch() {
+  var tackCount1 = document.getElementById("matchThree").value;
+  var tackCount2 = document.getElementById("matchTwo").value;
+  var tackCount3 = document.getElementById("matchOne").value;
+  
+  if (tackCount1 == "3"){
+    tackCount1 = "0";
+    score();
+  }
 }
