@@ -1,4 +1,5 @@
 function startBombs() {
+  Bombs();
   var ID = [
     "bomb",
     "rock",
@@ -50,14 +51,50 @@ function startBombs() {
 
     var ITEM = ID;
 
-    if (ITEM.title == "fliped") {
-      
-    }
-
     if (matchOne == "3") {
       score();
       document.getElementById("matchOne").value = "0";
       var ITEM = document.getElementByID("token");
+    } else {
+      Create.className = "pixel";
+    }
+
+    if (matchTwo == "3") {
+      score();
+      document.getElementById("matchOne").value = "0";
+      var ITEM = document.getElementByID("token");
+    } else {
+      Create.className = "pixel";
+    }
+    if (matchThree == "3") {
+      score();
+      document.getElementById("matchOne").value = "0";
+      var ITEM = document.getElementByID("token");
+    } else {
+      Create.className = "pixel";
+    }
+
+    if (matchOne == "0") {
+      document.getElementById("matchOne").value = "0";
+      var ITEM = document.getElementByID("token");
+    } else {
+      Create.className = "pixel";
+    }
+
+    if (matchTwo == "0") {
+      var ITEM = document.getElementById("matchTwo").value;
+      var plus = ITEM + 1;
+      document.getElementById("matchTwo").value = plus;
+    } else {
+      document.getElementById("matchTwo").value = "0";
+    }
+
+    if (matchThree == "0") {
+      var ITEM = document.getElementById("matchThree").value;
+      var plus = ITEM + 1;
+      document.getElementById("matchThree").value = plus;
+    } else {
+      document.getElementById("matchOne").value = "0";
     }
   }
 }
