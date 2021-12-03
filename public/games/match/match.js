@@ -204,31 +204,50 @@ function checkMatch() {
   if (tackCount1 == "3") {
     tackCount1 = "0";
     score();
+    var ITEM = document.getElementById("token");
+    if (ITEM.title == "flipped") {
+      ITEM.className = "hide";
+    }
   }
+  
   if (tackCount2 == "3") {
     tackCount1 = "0";
     score();
+    var ITEM = document.getElementById("rock");
+    if (ITEM.title == "flipped") {
+      ITEM.className = "hide";
+    }
   }
 
   if (tackCount3 == "3") {
     tackCount3 = "0";
     score();
+    var ITEM = document.getElementById("bomb");
+    if (ITEM.title == "flipped") {
+      ITEM.className = "hide";
+    }
   }
 
   if (tackCount1 == "2") {
     tackCount1 = "0";
-        var ITEM = document.getElementById("token");
-    ITEM.className = "pixel";
+    var ITEM = document.getElementById("token");
+    if (ITEM.title == "flipped") {
+      ITEM.className = "pixel";
+    }
   }
+  
   if (tackCount2 == "2") {
-    tackCount1 = "0";
+    tackCount2 = "0";
     var ITEM = document.getElementById("rock");
-    ITEM.className = "pixel";
+    if (ITEM.title == "flipped") {
+      ITEM.className = "pixel";
+    }
   }
   if (tackCount3 == "2") {
-    tackCount1 = "0";
+    tackCount3 = "0";
     var ITEM = document.getElementById("bomb");
-    ITEM.className = "pixel";
+    if (ITEM.title == "flipped") {
+      ITEM.className = "pixel";
+    }
   }
 }
-
