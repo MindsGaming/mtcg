@@ -59,7 +59,7 @@
       }
       .rock {
         float: left;
-         width: 30%;
+        width: 30%;
         height: 30%;
         margin: 3px;
         background-color: transparent;
@@ -72,7 +72,7 @@
       }
       .bomb {
         float: left;
-         width: 30%;
+        width: 30%;
         height: 30%;
         margin: 3px;
         background-color: transparent;
@@ -120,7 +120,7 @@
         high="80"
         class="hide"
       ></meter>
-       <meter
+      <meter
         value="0"
         id="matchOne"
         max="100"
@@ -137,7 +137,8 @@
         low="10"
         high="80"
         class="hide"
-      ></meter><meter
+      ></meter
+      ><meter
         value="0"
         id="matchThree"
         max="100"
@@ -148,13 +149,16 @@
       ></meter>
       <center>
         <div class="map">
-          <div class="bombs" id="bombs"></div>
-          <div class="tools">
-            <div class="tool" onclick="startBombs();">
-              Start Game
+          <div class="bombs" id="bombs">
+          <div id="item1"> </div>
+            <div id="item2">
+              
             </div>
+          <div cid
           </div>
-          <div class="tool">Score: <label id="score">0</label></div>
+          <div class="tools">
+            <div class="tool">Score: <label id="score">0</label></div>
+          </div>
         </div>
       </center>
     </wrap>
