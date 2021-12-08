@@ -23,32 +23,29 @@ function Bombs() {
   var create = document.createElement("div");
   create.className = "pixel";
   create.title = "Dig For Rewards";
-  create.name = random;
   create.id = random;
   create.name = random;
   var Create = document.getElementById("bombs").appendChild(create);
   Create.addEventListener("click", Digging);
   startBombs();
 
-  var picked = document.getElementById("picked");
-  picked.innerHTML = random;
-  var PICKED = document.getElementById("PICKED").appendChild(picked);
-
   function Digging() {
-    if (Create.name == "token") {
+    if (Create.id == "token") {
       Create.className = "reward";
+      Create.name = "flipped";
       rewardSound();
     }
-    if (Create.name == "rock") {
+    if (Create.id == "rock") {
       Create.className = "rock";
+      Create.name = "flipped";
       rockSound();
     }
-    if (Create.name == "bomb") {
+    if (Create.id == "bomb") {
       Create.className = "bomb";
+      Create.name = "flipped";
       bombSound();
     }
   }
-
 }
 
 function bombSound() {
