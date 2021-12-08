@@ -139,7 +139,96 @@ function checkMatch() {
   var tackCount3 = document.getElementById("matchThree").value;
   var tackCount2 = document.getElementById("matchTwo").value;
   var tackCount1 = document.getElementById("matchOne").value;
+  
+  if (tackCount1 == "2") {
+    if (tackCount2 == "1") {
+      tackCount2 = "0";
+    }
+    if (tackCount3 == "1") {
+      tackCount3 = "0";
+    }
+    score();
+    var item1 = document.getElementByID("rock");
+    var item2 = document.getElementByID("bomb");
+    var item3 = document.getElementByID("token");
+    
+    if (item1.title == "flipped"){
+      item1.className = "hide"
+    }
+  }
 
-  
-  
+  if (tackCount2 == "2") {
+    if (tackCount1 == "1") {
+      tackCount1 = "0";
+    }
+    if (tackCount3 == "1") {
+      tackCount3 = "0";
+    }
+    score();
+  }
+
+  if (tackCount3 == "2") {
+    if (tackCount1 == "1") {
+      tackCount1 = "0";
+    }
+    if (tackCount2 == "1") {
+      tackCount2 = "0";
+    }
+    score();
+  }
+
+  if (tackCount1 == "1") {
+    if (tackCount2 == "1") {
+      tackCount2 = "0";
+    }
+    if (tackCount3 == "1") {
+      tackCount3 = "0";
+    }
+  }
+
+  if (tackCount2 == "1") {
+    if (tackCount1 == "1") {
+      tackCount1 = "0";
+    }
+    if (tackCount3 == "1") {
+      tackCount3 = "0";
+    }
+  }
+
+  if (tackCount3 == "1") {
+    if (tackCount1 == "1") {
+      tackCount1 = "0";
+    }
+    if (tackCount2 == "1") {
+      tackCount2 = "0";
+    }
+  }
+
+  if (tackCount1 == "0") {
+    var item1 = document.getElementByID("rock");
+    var item2 = document.getElementByID("bomb");
+    var item3 = document.getElementByID("token");
+
+    item1.className = "pixel";
+    item2.className = "pixel";
+    item3.className = "pixel";
+  }
+  if (tackCount2 == "0") {
+    var item1 = document.getElementByID("rock");
+    var item2 = document.getElementByID("bomb");
+    var item3 = document.getElementByID("token");
+
+    item1.className = "pixel";
+    item2.className = "pixel";
+    item3.className = "pixel";
+  }
+  if (tackCount3 == "0") {
+    var item1 = document.getElementByID("rock");
+    var item2 = document.getElementByID("bomb");
+    var item3 = document.getElementByID("token");
+
+    item1.className = "pixel";
+    item2.className = "pixel";
+    item3.className = "pixel";
+  }
 }
