@@ -144,53 +144,8 @@ function checkMatch() {
   var tackCount2 = document.getElementById("matchTwo").value;
   var tackCount3 = document.getElementById("matchOne").value;
 
-  if (tackCount1 == "3") {
-    tackCount1 = "0";
-    score();
-    var ITEM = document.getElementById("token");
-    if (ITEM.title == "flipped") {
-      ITEM.className = "hide";
-    }
-  }
-
-  if (tackCount2 == "3") {
-    tackCount2 = "0";
-    score();
-    var ITEM = document.getElementById("rock");
-    if (ITEM.title == "flipped") {
-      ITEM.className = "hide";
-    }
-  }
-
-  if (tackCount3 == "3") {
-    tackCount3 = "0";
-    score();
-    var ITEM = document.getElementById("bomb");
-    if (ITEM.title == "flipped") {
-      ITEM.className = "hide";
-    }
-  }
-
-  if (tackCount1 == "2") {
-    tackCount1 = "0";
-    var ITEM = document.getElementById("token");
-    if (ITEM.title == "flipped") {
-      ITEM.className = "pixel";
-    }
-  }
-
-  if (tackCount2 == "2") {
-    tackCount2 = "0";
-    var ITEM = document.getElementById("rock");
-    if (ITEM.title == "flipped") {
-      ITEM.className = "pixel";
-    }
-  }
-  if (tackCount3 == "2") {
-    tackCount3 = "0";
-    var ITEM = document.getElementById("bomb");
-    if (ITEM.title == "flipped") {
-      ITEM.className = "pixel";
-    }
-  }
+  
+  if (tackCount2)
+  
+  
 }
