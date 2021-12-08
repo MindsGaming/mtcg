@@ -7,9 +7,14 @@ var item6 = document.getElementById("item6");
 var item7 = document.getElementById("item7");
 var item8 = document.getElementById("item8");
 var item9 = document.getElementById("item9");
-function items() {
-  
-  
+
+var items = ["rock", "bomb", "token"];
+var create = [item1, item2, item3, item4, item5, item6, item7, item8, item9];
+
+function match() {
+  const random = items[Math.floor(Math.random() * items.length)];
+  create.className = random;
+  create.title = "flipped";
   
   
 }
