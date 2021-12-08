@@ -32,18 +32,24 @@ function Bombs() {
   function Digging() {
     if (Create.id == "token") {
       Create.className = "reward";
-      Create.name = "flipped";
+      Create.id = "flipped";
       rewardSound();
+      Digging();
     }
     if (Create.id == "rock") {
       Create.className = "rock";
-      Create.name = "flipped";
+      Create.id = "flipped";
       rockSound();
     }
     if (Create.id == "bomb") {
       Create.className = "bomb";
-      Create.name = "flipped";
+      Create.id = "flipped";
       bombSound();
+    }
+
+    if (Create.id == "flipped") {
+      var check = document.getElementById("flipped");
+      check.className = "hide";
     }
   }
 }
@@ -121,4 +127,8 @@ function score() {
   var tackcount = tackCount + 1;
   document.getElementById("SCORE").value = tackcount;
   document.getElementById("score").innerHTML = tackcount;
+
+  var time = document.getElementById("minutes").value;
+  var boost = tackCount + time;
+  document.getElementById("minutes").value = boost;
 }
