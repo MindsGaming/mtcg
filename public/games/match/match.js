@@ -6,7 +6,6 @@ function Bombs() {
   var ID = [
     "bomb",
     "rock",
-    "token",
     "rock",
     "bomb",
     "bomb",
@@ -31,15 +30,9 @@ function Bombs() {
   Create.addEventListener("click", Digging);
   startBombs();
 
-  if (create.id == "bomb") {
-    startBombs();
-  }
-  if (create.id == "rock") {
-    startBombs();
-  }
-  if (create.id == "token") {
-    startBombs();
-  }
+  var picked = document.getElementById("picked");
+  picked.innerHTML = random;
+  var PICKED = document.getElementById("PICKED").appendChild(picked);
 
   function Digging() {
     if (Create.name == "token") {
@@ -55,8 +48,7 @@ function Bombs() {
       bombSound();
     }
   }
-  var PICKED = document.getElementById("PICKED");
-  PICKED.innerHTML = random;
+
 }
 
 function bombSound() {
@@ -132,29 +124,4 @@ function score() {
   var tackcount = tackCount + 1;
   document.getElementById("SCORE").value = tackcount;
   document.getElementById("score").innerHTML = tackcount;
-}
-
-function matchCheck(){
-  var PICKED = document.getElementById("PICKED");
-  
-  if (PICKED.innerHTML == "EMPTY"){
-    
-  }
-
-  if (Create.id == "rock"){
-    if (PICKED == "rock"){
-      score();
-    }
-  }
-    if (Create.id == "bomb"){
-    if (PICKED == "bomb"){
-      score();
-    }
-    }
-      if (Create.id == "token"){
-    if (PICKED == "token"){
-      score();
-    }
-  }
-  
 }
