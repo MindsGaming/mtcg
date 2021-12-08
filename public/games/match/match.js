@@ -1,50 +1,46 @@
 function startBombs() {
- Bombs();
   Bombs();
   Bombs();
   Bombs();
   Bombs();
-  Bombs();Bombs();
   Bombs();
   Bombs();
-  }
+  Bombs();
+  Bombs();
+  Bombs();
+}
 
-  function Bombs() {
-    var ID = [
-      "bomb",
-      "rock",
-      "token"
-    ];
-    const random = ID[Math.floor(Math.random() * ID.length)];
+function Bombs() {
+  var ID = ["bomb", "rock", "token"];
+  const random = ID[Math.floor(Math.random() * ID.length)];
 
-    var create = document.createElement("div");
-    create.className = "pixel";
-    create.title = "Dig For Rewards";
-    create.name = random;
-    create.id = random;
-    create.name = random;
-    var Create = document.getElementById("bombs").appendChild(create);
-    Create.addEventListener("click", Digging);
+  var create = document.createElement("div");
+  create.className = "pixel";
+  create.title = "Dig For Rewards";
+  create.name = random;
+  create.id = random;
+  create.name = random;
+  var Create = document.getElementById("bombs").appendChild(create);
+  Create.addEventListener("click", Digging);
 
-   
-    function Digging() {
-      if (Create.name == "token") {
-        Create.className = "reward";
-        Create.tite = "flipped";
-        rewardSound();
-      }
-      if (Create.name == "rock") {
-        Create.className = "rock";
-        Create.tite = "flipped";
-        rockSound();
-      }
-      if (Create.name == "bomb") {
-        Create.className = "bomb";
-        Create.tite = "flipped";
-        bombSound();
-      }
+  function Digging() {
+    if (Create.name == "token") {
+      Create.className = "reward";
+      Create.tite = "flipped";
+      rewardSound();
+    }
+    if (Create.name == "rock") {
+      Create.className = "rock";
+      Create.tite = "flipped";
+      rockSound();
+    }
+    if (Create.name == "bomb") {
+      Create.className = "bomb";
+      Create.tite = "flipped";
+      bombSound();
     }
   }
+}
 
 function bombSound() {
   var music = document.createElement("audio");
@@ -140,12 +136,10 @@ function matchThree() {
 }
 
 function checkMatch() {
-  var tackCount1 = document.getElementById("matchThree").value;
+  var tackCount3 = document.getElementById("matchThree").value;
   var tackCount2 = document.getElementById("matchTwo").value;
-  var tackCount3 = document.getElementById("matchOne").value;
+  var tackCount1 = document.getElementById("matchOne").value;
 
-  
-  if (tackCount2)
   
   
 }
