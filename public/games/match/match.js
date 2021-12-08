@@ -1,65 +1,19 @@
 function startBombs() {
+ Bombs();
   Bombs();
-  const ID = [
-    "bomb",
-    "rock",
-    "token",
-    "rock",
-    "bomb",
-    "bomb",
-    "rock",
-    "token",
-    "bomb",
-    "rock",
-    "rock",
-    "bomb",
-    "bomb",
-    "rock"
-  ];
-  const random = ID[Math.floor(Math.random() * ID.length)];
-
-  const create = document.createElement("div");
-  create.className = "pixel";
-  create.title = "Dig For Rewards";
-  create.id = random;
-  create.name = random;
-  var Create = document.getElementById("bombs").appendChild(create);
-  Create.addEventListener("click", Digging);
-
-  function Digging() {
-    if (Create.name == "token") {
-      Create.className = "reward";
-      Create.tite = "flipped";
-      rewardSound();
-    }
-    if (Create.name == "rock") {
-      Create.className = "rock";
-      Create.tite = "flipped";
-      rockSound();
-    }
-    if (Create.name == "bomb") {
-      Create.className = "bomb";
-      Create.tite = "flipped";
-      bombSound();
-    }
+  Bombs();
+  Bombs();
+  Bombs();
+  Bombs();Bombs();
+  Bombs();
+  Bombs();
   }
 
   function Bombs() {
     var ID = [
       "bomb",
       "rock",
-      "token",
-      "rock",
-      "bomb",
-      "bomb",
-      "rock",
-      "token",
-      "bomb",
-      "rock",
-      "rock",
-      "bomb",
-      "bomb",
-      "rock"
+      "token"
     ];
     const random = ID[Math.floor(Math.random() * ID.length)];
 
@@ -71,18 +25,8 @@ function startBombs() {
     create.name = random;
     var Create = document.getElementById("bombs").appendChild(create);
     Create.addEventListener("click", Digging);
-    startBombs();
 
-    if (create.id == "bomb") {
-      startBombs();
-    }
-    if (create.id == "rock") {
-      startBombs();
-    }
-    if (create.id == "token") {
-      startBombs();
-    }
-
+   
     function Digging() {
       if (Create.name == "token") {
         Create.className = "reward";
@@ -101,7 +45,6 @@ function startBombs() {
       }
     }
   }
-}
 
 function bombSound() {
   var music = document.createElement("audio");
