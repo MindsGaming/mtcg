@@ -43,6 +43,7 @@ function m3() {
   m2.className = "hide";
   var m3 = document.getElementById("m3");
   m3.className = "marketTokens";
+  tradingMenu();
 }
 
 function m4() {
