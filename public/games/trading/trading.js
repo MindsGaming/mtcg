@@ -92,6 +92,7 @@ function m6() {
   m5.className = "hide";
   var m6 = document.getElementById("m6");
   m6.className = "marketTokens";
+  walletMenu();
 }
 
 function checkReward() {
@@ -118,6 +119,7 @@ function m8ok() {
   m8.className = "hide";
   var m10 = document.getElementById("m10");
   m10.className = "marketTokens";
+  createMenu();
 }
 
 function m9() {
