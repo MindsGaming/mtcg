@@ -8,9 +8,13 @@ const disable = document.getElementById("submit-dream");
 disable.addEventListener("click", cleaning);
 
 function cleaning() {
-  alert("Sorry, This function is not active we maybe updating or fixing something. ");
+  alert(
+    "Sorry, This function is not active we maybe updating or fixing something."
+  );
 }
 
 function guest() {
-  alert("Claims Are Being Processed Try Again Later");
+  alert(
+    "Sorry, This function is not active we maybe updating or fixing something."
+  );
 }
