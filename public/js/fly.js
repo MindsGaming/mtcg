@@ -99,7 +99,7 @@ dreamsForm.onsubmit = event => {
   dreams.push(
     dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
   );
- appendNewDream(
+  appendNewDream(
     dreamInput.value +
       "-" +
       dreamInputuser.value +
@@ -166,8 +166,14 @@ if (loc.indexOf("http://") == 0) {
   window.location.href = loc.replace("http://", "https://");
 }
 
-
-
-function OOps(){
-  alert("")
+function OOps() {
+  var txt;
+  var r = confirm(
+    "This game is currently diabled, Would You Like To Open the Hub? (ALPHA)"
+  );
+  if (r == true) {
+    window.open("/hubs", "_self");
+  } else {
+    txt = "Okay Then";
+  }
 }
