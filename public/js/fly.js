@@ -166,3 +166,8 @@ if (loc.indexOf("http://") == 0) {
   window.location.href = loc.replace("http://", "https://");
 }
 
+
+
+function OOps(){
+  alert("")
+}
