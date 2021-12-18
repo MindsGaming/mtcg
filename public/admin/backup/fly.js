@@ -13,9 +13,30 @@ const dreamInputplayer = dreamsForm.elements["tokens"];
 
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
+const minutesLabel = document.getElementById("minutes");
+const secondsLabel = document.getElementById("seconds");
+
+var totalSeconds = 0;
+setInterval(setTime, 3141);
+
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
 
 function gamertokens() {
   var dreamtokens = document.getElementById("gamertokens");
+
   dreamtokens.classList.toggle("dreamtokens");
   dreamInputplayer.value = "GAMER";
 }
@@ -24,6 +45,12 @@ function doobettertokens() {
   var dreamtokens = document.getElementById("doobettertokens");
   dreamtokens.classList.toggle("dreamtokens");
   dreamInputplayer.value = "DooBetter";
+}
+
+function eclipsetokens() {
+  var dreamtokens = document.getElementById("eclipsetokens");
+  dreamtokens.classList.toggle("dreamtokens");
+  dreamInputplayer.value = "Eclipse";
 }
 
 // request the dreams from our app's sqlite database
@@ -49,7 +76,14 @@ dreamsForm.onsubmit = event => {
 
   const data = {
     dream:
-      dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
+      dreamInput.value +
+      "-" +
+      dreamInputuser.value +
+      dreamInputplayer.value +
+      "Reward: " +
+      secondsLabel.innerHTML +
+      "." +
+      minutesLabel.innerHTML
   };
 
   fetch("/addDream", {
@@ -65,8 +99,13 @@ dreamsForm.onsubmit = event => {
   dreams.push(
     dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
   );
-  appendNewDream(
-    dreamInput.value + "-" + dreamInputuser.value + dreamInputplayer.value
+ appendNewDream(
+    dreamInput.value +
+      "-" +
+      dreamInputuser.value +
+      "Reward: " +
+      dreamInputplayer.value +
+      " Logged In"
   );
 
   var txt;
@@ -114,3 +153,16 @@ function guest() {
     txt = "Humm okkay";
   }
 }
+
+function socailMedia() {
+  alert("You Need To Be Logged In...");
+  window.open("/social", "_self");
+}
+
+/* HTTPS */
+
+var loc = window.location.href + "";
+if (loc.indexOf("http://") == 0) {
+  window.location.href = loc.replace("http://", "https://");
+}
+
