@@ -173,6 +173,7 @@ code {
   border-style: groove;
   border-color: black;
   cursor: pointer;
+  background-color: black;
 }
 
 .dreamtokens {
@@ -187,6 +188,20 @@ code {
   border-color: black;
   cursor: pointer;
   background-color: yellow;
+}
+
+.selecttoken {
+  float: left;
+  display: block;
+  height: 20px;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  border-style: groove;
+  border-color: black;
+  cursor: pointer;
+  background-color: cyan;
 }
 
 .avatar {
