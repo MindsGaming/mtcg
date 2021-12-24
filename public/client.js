@@ -154,12 +154,3 @@ function reset() {
   document.getElementById("seconds").innerHTML = zero;
   totalSeconds = "0";
 }
-
-if (minutesLabel == "100") {
-  claimUpdate();
-  var zero = "00";
-  document.getElementById("minutes").innerHTML = zero;
-  document.getElementById("seconds").innerHTML = zero;
-  totalSeconds = "0";
-  window.open("./", "_self");
-}
