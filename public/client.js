@@ -77,10 +77,13 @@ dreamsForm.onsubmit = event => {
 
   alert("Do Not Close Or Refresh This Page Or You May Lose Your Rewards");
   var createHUB = document.createElement("iframe");
-  createHUB.src = "https://hubs.mozilla.com/8hYMRnN?embed_token=338fcf3b8fcd2312c3be7556ccf5e37e";
+  createHUB.src =
+    "https://hubs.mozilla.com/8hYMRnN?embed_token=338fcf3b8fcd2312c3be7556ccf5e37e";
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+  var openHub = document.getElementById("hubs");
+  openHub.style = "display:block";
 };
 
 clearButton.addEventListener("click", event => {
@@ -96,49 +99,53 @@ function claimUpdate() {
   if (dreamInput.value == "") {
     alert("Login To Earn Rewards");
   } else {
-    var lifeScore = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
-    var REWARDS = lifeScore;
-    const data = {
-      dream:
-        myName.value +
-        "-" +
-        dreamInput.value +
-        " " +
-        dreamToken.innerHTML +
-        ":" +
-        REWARDS
-    };
+    if (minutesLabel.innerHTML == "00") {
+      alert("You Need A Full Token To Claim Rewards");
+    } else {
+      var lifeScore = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+      var REWARDS = lifeScore;
+      const data = {
+        dream:
+          myName.value +
+          "-" +
+          dreamInput.value +
+          " " +
+          dreamToken.innerHTML +
+          ":" +
+          REWARDS
+      };
 
-    fetch("/addDream", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" }
-    })
-      .then(res => res.json())
-      .then(response => {
-        console.log(JSON.stringify(response));
-      });
-    // get dream value and add it to the list
-    dreams.push(
-      myName.value +
-        "-" +
-        dreamInput.value +
-        " " +
-        dreamToken.innerHTML +
-        ":" +
-        REWARDS
-    );
-    appendNewDream(
-      myName.value +
-        "-" +
-        dreamInput.value +
-        " " +
-        dreamToken.innerHTML +
-        ":" +
-        REWARDS
-    );
+      fetch("/addDream", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" }
+      })
+        .then(res => res.json())
+        .then(response => {
+          console.log(JSON.stringify(response));
+        });
+      // get dream value and add it to the list
+      dreams.push(
+        myName.value +
+          "-" +
+          dreamInput.value +
+          " " +
+          dreamToken.innerHTML +
+          ":" +
+          REWARDS
+      );
+      appendNewDream(
+        myName.value +
+          "-" +
+          dreamInput.value +
+          " " +
+          dreamToken.innerHTML +
+          ":" +
+          REWARDS
+      );
+    }
+    reset();
   }
-  reset();
 }
 
 function reset() {
