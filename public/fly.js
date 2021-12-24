@@ -58,7 +58,7 @@ function viewReward() {
   var a = document.getElementById("REWARDS");
 
   if (a.title == "closed") {
-    a.className = "userView";
+    a.className = "hide";
     a.title = "Rewards";
   } else {
     a.className = "hide";
@@ -66,6 +66,7 @@ function viewReward() {
   }
   var b = document.getElementById("myRewards");
   b.innerHTML = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+  claimUpdate();
 }
 
 function update() {
@@ -81,7 +82,7 @@ function guest() {
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-   var closeHub = document.getElementById("hubs");
+  var closeHub = document.getElementById("hubs");
   closeHub.style = "display:block";
 }
 

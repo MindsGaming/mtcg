@@ -263,9 +263,7 @@ miner {
   top: 0;
   right: 0;
   width: 250px;
-  height: 99.5%;
   background-color: silver;
-  overflow: scroll;
   opacity: 0.6;
   z-index: 2;
 }
