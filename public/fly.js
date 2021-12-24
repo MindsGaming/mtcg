@@ -73,12 +73,19 @@ function update() {
   x.value = "1";
 }
 
-function guest()
-{
+function guest() {
   alert("Login To Earn Rewards");
   var createHUB = document.createElement("iframe");
-  createHUB.src = "https://hubs.mozilla.com/8hYMRnN?embed_token=338fcf3b8fcd2312c3be7556ccf5e37e";
+  createHUB.src =
+    "https://hubs.mozilla.com/8hYMRnN?embed_token=338fcf3b8fcd2312c3be7556ccf5e37e";
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+   var closeHub = document.getElementById("hubs");
+  closeHub.style = "display:block";
+}
+
+function getLogin() {
+  var closeHub = document.getElementById("hubs");
+  closeHub.style = "display:none";
 }
