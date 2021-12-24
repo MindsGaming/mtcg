@@ -145,7 +145,7 @@ function claimUpdate() {
           REWARDS
       );
       reset();
-      rewardsSound();
+      rewardSound();
     }
   }
 }
