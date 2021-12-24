@@ -67,7 +67,6 @@ function viewReward() {
   var b = document.getElementById("myRewards");
   b.innerHTML = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
   claimUpdate();
-  rewardSound();
 }
 
 function update() {
@@ -96,6 +95,27 @@ function rewardSound() {
   var music = document.createElement("audio");
   music.src =
     "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fcash-register-sound-effect.mp3";
+  music.volume = 0.3;
+  music.autoPlay = false;
+  music.title = "playing";
+  var Music = document.getElementById("REWARDS").appendChild(music);
+  played();
+
+  function played() {
+    if (Music.title == "playing") {
+      music.play(), 5000;
+      Music.title = "playing";
+    } else {
+      music.pause(), 5000;
+      Music.title = "playing";
+    }
+  }
+}
+
+function otherSound() {
+  var music = document.createElement("audio");
+  music.src =
+    "https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fboing-sound-effect.mp3";
   music.volume = 0.3;
   music.autoPlay = false;
   music.title = "playing";
