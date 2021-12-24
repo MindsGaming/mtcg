@@ -77,7 +77,7 @@ dreamsForm.onsubmit = event => {
 
   alert("Do Not Close Or Refresh This Page Or You May Lose Your Rewards");
   var createHUB = document.createElement("iframe");
-  createHUB.src = "https://mtcg.glitch.me/games";
+  createHUB.src = "https://hubs.mozilla.com/8hYMRnN?embed_token=338fcf3b8fcd2312c3be7556ccf5e37e";
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
