@@ -98,8 +98,7 @@ clearButton.addEventListener("click", event => {
 function claimUpdate() {
   if (dreamInput.value == "") {
     alert("Login To Earn Rewards");
-  } 
-  else {
+  } else {
     if (minutesLabel.innerHTML == "00") {
       alert("You Need A Full Token To Claim Rewards");
     } else {
@@ -154,4 +153,13 @@ function reset() {
   document.getElementById("minutes").innerHTML = zero;
   document.getElementById("seconds").innerHTML = zero;
   totalSeconds = "0";
+}
+
+if (minutesLabel == "100") {
+  claimUpdate();
+  var zero = "00";
+  document.getElementById("minutes").innerHTML = zero;
+  document.getElementById("seconds").innerHTML = zero;
+  totalSeconds = "0";
+  window.open("./", "_self");
 }
