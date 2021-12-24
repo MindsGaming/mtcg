@@ -88,80 +88,80 @@
             Earn Blockchain Tokens By Playing Games!
           </p>
         </h2>
-        <div class="loginImage">
-          <br />
-          <br />
-          <br />
-          <div id="playername" class="form">
-            <input
-              id="username"
-              aria-label="a new dream"
-              type="text"
-              maxlength="100"
-              placeholder="Player Name"
-            />
-            <div class="button" id="playerBTN" onclick="enterWallet();">
-              A
-            </div>
-          </div>
-          <div id="rewardtoken" class="hide">
-            <h3>
-              Select Reward:
-            </h3>
-            <div class="dreamtoken" id="gamertokens" onclick="gamertokens();">
-              GAMER
-            </div>
-            <div
-              class="dreamtoken"
-              id="doobettertokens"
-              onclick="doobettertokens();"
-            >
-              DooBetter
-            </div>
-            <div
-              class="dreamtoken"
-              id="eclipsetokens"
-              onclick="eclipsetokens();"
-            >
-              ECLIPSE
-            </div>
-            <input
-              type="hidden"
-              name="tokens"
-              id="REWARDTOKEN"
-              placeholder="Reward Token"
-            />
+        <div class="wrapIMG">
+          <div class="loginImage">
             <br />
-            
-          </div>
+            <br />
+            <div id="playername" class="form">
+              <input
+                id="username"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                placeholder="Player Name"
+              />
+              <div class="button" id="playerBTN" onclick="enterWallet();">
+                A
+              </div>
+            </div>
+            <div id="rewardtoken" class="hide">
+              <h3>
+                Select Reward:
+              </h3>
+              <div class="dreamtoken" id="gamertokens" onclick="gamertokens();">
+                GAMER
+              </div>
+              <div
+                class="dreamtoken"
+                id="doobettertokens"
+                onclick="doobettertokens();"
+              >
+                DooBetter
+              </div>
+              <div
+                class="dreamtoken"
+                id="eclipsetokens"
+                onclick="eclipsetokens();"
+              >
+                ECLIPSE
+              </div>
+              <input
+                type="hidden"
+                name="tokens"
+                id="REWARDTOKEN"
+                placeholder="Reward Token"
+              />
+              <br />
+            </div>
 
-          <form class="hide" id="wallet">
-            <input
-              name="dream"
-              aria-label="a new dream"
-              type="text"
-              maxlength="100"
-              placeholder="Wallet ID"
-              required
-            />
-            <button type="submit" id="submit-dream">Submit</button>
-          </form>
-          <br>
-          <div class="button" onclick="guest();">
+            <form class="hide" id="wallet">
+              <input
+                name="dream"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                placeholder="Wallet ID"
+                required
+              />
+              <button type="submit" id="submit-dream">Submit</button>
+            </form>
+            <br />
+            <div class="button" onclick="guest();">
               Guest
             </div>
+          </div>
+          <a
+            href="https://www.mintme.com/token/MTCG/invite"
+            class="bubble"
+            target="_blank"
+          >
+            Get A Wallet</a
+          >
+          <a href="/refferal" class="bubble" target="_self"> Enter Refferal</a>
+          <a href="/help/#join" class="bubble" target="_blank">
+            Join Ecosystem</a
+          >
         </div>
-        <br />
-        <br />
-        <a
-          href="https://www.mintme.com/token/MTCG/invite"
-          class="bubble"
-          target="_blank"
-        >
-          Get A Wallet</a
-        >
-        <a href="/refferal" class="bubble" target="_self"> Enter Refferal</a>
-        <a href="/help/#join" class="bubble" target="_blank"> Join Ecosystem</a>
       </div>
     </div>
 
@@ -177,12 +177,14 @@
 
     <div title="closed" id="REWARDS" class="hide">
       <div>Player: <label id="myName">Guest</label></div>
-      <div>Wallet: <label id="myWallet" onclick="getLogin();">LOGIN</label></div>
+      <div>
+        Wallet: <label id="myWallet" onclick="getLogin();">LOGIN</label>
+      </div>
       <div>Reward Token: <label id="myToken">Random</label></div>
       <div>Earned Rewards: <label id="myRewards">00.00</label></div>
-       <div class="button" onclick="claimUpdate();">
-          Claim
-        </div>
+      <div class="button" onclick="claimUpdate();">
+        Claim
+      </div>
       <button class="hide" id="clear-dreams">
         Clear Dreams
       </button>
