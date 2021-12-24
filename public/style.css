@@ -1,0 +1,317 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  max-width: 600px;
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: transparent;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 3px;
+}
+.form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: transparent;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 3px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 68%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+.button {
+  font-size: 16px;
+  border-radius: 3px;
+  width: 17%;
+  background-color: gold;
+  color: red;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+  font-align: center;
+}
+
+.button:hover {
+  background-color: yellow;
+}
+
+.button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 20px;
+  font-style: italic;
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p.blockchain {
+  color: gold;
+  font-size: 9px;
+}
+
+.SuperLogin {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 1;
+}
+
+.LOGIN {
+  float: left;
+  display: block;
+  width: 55%;
+  height: 100%;
+  background-color: silver;
+}
+
+.backgrounds {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 45%;
+  height: 100%;
+  background-color: red;
+  overflow: scroll;
+  z-index: -1;
+}
+
+.hide {
+  display: none;
+}
+
+a {
+  color: black;
+}
+
+code {
+  color: red;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.mini {
+  position: relitive;
+  width: 50%;
+}
+
+.links {
+  width: 99%;
+  margin-top: 55px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  display: block;
+  border-style: solid;
+  border-color: grey;
+  cursor: pointer;
+}
+
+.cashout {
+  display: block;
+  border-style: groove;
+  margin: 3px;
+  padding: 1px;
+  background-color: gold;
+  color: black;
+}
+
+.questions {
+  float: right;
+  display: block;
+  font-size: 9px;
+  margin-bottom: 3px;
+  padding: 0.5px;
+  bold: bolder;
+  border-style: solid;
+  border-color: red;
+}
+
+.iframe {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  border-style: none;
+  overflow: hidden;
+}
+
+.SuperSplash {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: -1px;
+  border-style: none;
+}
+
+.dreamtoken {
+  float: left;
+  display: block;
+  height: 20px;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  border-style: groove;
+  border-color: black;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.dreamtokens {
+  float: left;
+  display: block;
+  height: 20px;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  border-style: groove;
+  border-color: black;
+  cursor: pointer;
+  background-color: yellow;
+}
+
+.avatar {
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin-top: 30%;
+  margin-left: 2%;
+  background-size: contain;
+}
+
+miner {
+  display: none;
+}
+
+.minds-share-button {
+  height: 20px;
+}
+
+.bubble {
+  float: left;
+  margin: 7%;
+  border-style: groove;
+  border-color: silver;
+  border-radius: 45px 15px 45px 15px;
+  padding: 5px;
+  color: grey;
+  opacity: 0.8;
+}
+
+.userView {
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 99.5%;
+  background-color: silver;
+  overflow: scroll;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+label {
+  color: red;
+}
+
+.rewardicon {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 2.1rem;
+  margin-right: 13rem;
+  width: 45px;
+  height: 45px;
+  background-color: gold;
+  background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Freward.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  opacity: 0.6;
+  z-index: 3;
+}
+
+.SuperSplash {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 2;
+}
+
+.loginImage {
+  position: relative;
+  display: block;
+  width: 55%;
+  height: 35%;
+  background-color: transparent;
+  background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/playgames.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
