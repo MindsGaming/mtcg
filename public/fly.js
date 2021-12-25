@@ -60,44 +60,13 @@ function viewReward() {
   if (a.title == "closed") {
     a.className = "userView";
     a.title = "Rewards";
-    showCurrent();
   } else {
     a.className = "hide";
     a.title = "closed";
-    showCurrent();
   }
-
-  function showCurrent() {
-    var b = document.getElementById("myRewards");
-    var c = document.getElementById("lifeScore");
-
-    var d = document.getElementById("minutes");
-    var e = document.getElementById("seconds");
-
-    var addS = e.innerHTML;
-    var addM = d.innerHTML;
-    var newP = addM + "." + addS;
-    b.innerHTML = newP;
-    var newLife = c.value + newP;
-    c.value = newLife;
-  }
-}
-
-function guest() {
-  alert("Login To Earn Rewards");
-  var createHUB = document.createElement("iframe");
-  createHUB.src =
-    "https://hubs.mozilla.com/8hYMRnN?embed_token=338fcf3b8fcd2312c3be7556ccf5e37e";
-  createHUB.className = "SuperSplash";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-  var closeHub = document.getElementById("hubs");
-  closeHub.style = "display:block";
-}
-
-function getLogin() {
-  var closeHub = document.getElementById("hubs");
-  closeHub.style = "display:none";
+  var b = document.getElementById("rewardicon");
+  var c =document.
+  
 }
 
 function rewardSound() {
@@ -162,4 +131,21 @@ function pendingClaims() {
     a.className = "hide";
     a.title = "closed";
   }
+}
+
+function guest() {
+  alert("Login To Earn Rewards");
+  var createHUB = document.createElement("iframe");
+  createHUB.src =
+    "https://hubs.mozilla.com/8hYMRnN?embed_token=338fcf3b8fcd2312c3be7556ccf5e37e";
+  createHUB.className = "SuperSplash";
+  createHUB.allow = "microphone; camera; vr; speaker;";
+  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+  var closeHub = document.getElementById("hubs");
+  closeHub.style = "display:block";
+}
+
+function getLogin() {
+  var closeHub = document.getElementById("hubs");
+  closeHub.style = "display:none";
 }
