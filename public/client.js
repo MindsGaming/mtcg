@@ -58,7 +58,7 @@ dreamsForm.onsubmit = event => {
   const data = {
     dream: dreamInput.value + ": Loged In"
   };
-  
+
   fetch("/addDream", {
     method: "POST",
     body: JSON.stringify(data),
@@ -85,11 +85,6 @@ dreamsForm.onsubmit = event => {
   walletChange();
 };
 
-function walletChange(){
-  myToken.innerHTML = dreamInput.value;
-
-}
-
 clearButton.addEventListener("click", event => {
   fetch("/clearDreams", {})
     .then(res => res.json())
@@ -110,14 +105,7 @@ function claimUpdate() {
       var lifeScore = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
       var REWARDS = lifeScore;
       const data = {
-        dream:
-          myName.value +
-          "-" +
-          dreamInput.value +
-          " " +
-          dreamToken.innerHTML +
-          ":" +
-          REWARDS
+        dream: dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       };
 
       fetch("/addDream", {
@@ -131,22 +119,10 @@ function claimUpdate() {
         });
       // get dream value and add it to the list
       dreams.push(
-        myName.value +
-          "-" +
-          dreamInput.value +
-          " " +
-          dreamToken.innerHTML +
-          ":" +
-          REWARDS
+        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
       appendNewDream(
-        myName.value +
-          "-" +
-          dreamInput.value +
-          " " +
-          dreamToken.innerHTML +
-          ":" +
-          REWARDS
+        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
       reset();
       rewardSound();
@@ -159,4 +135,9 @@ function reset() {
   document.getElementById("minutes").innerHTML = zero;
   document.getElementById("seconds").innerHTML = zero;
   totalSeconds = "0";
+}
+
+function walletChange(){
+  var x = document.getElementById("myWallet");
+  x.innerHTML = dreamInput.value;
 }
