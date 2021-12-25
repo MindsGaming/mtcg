@@ -121,6 +121,20 @@ function rewardSound() {
   }
 }
 
+function rewardPop() {
+  var a = document.getElementById("rewardPop");
+  a.className = "rewardPop";
+
+  var b = document.getElementById("seconds");
+  var current = b.innerHTML;
+  var remove = +2;
+  var poof = current + remove;
+
+  if (current == poof) {
+    a.className = "hide";
+  }
+}
+
 function otherSound() {
   var music = document.createElement("audio");
   music.src =

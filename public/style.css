@@ -335,3 +335,14 @@ label {
   overflow: scroll;
   max-height: 400px;
 }
+
+.rewardPop {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  right: 0;
+  margin-right: 6rem;
+  margin-bottom: 2rem;
+  backround-color: black;
+  background-image: url("3")
+}
