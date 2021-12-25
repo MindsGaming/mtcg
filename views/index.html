@@ -92,40 +92,7 @@
         <div class="wrapIMG">
           <div class="loginImage">
             <br />
-            <div id="rewardtoken" class="hide">
-              <h3>
-                Select Reward:
-              </h3>
-              <div
-                style="float: left; display: block; height: 20px; text-align: center; margin-top: 2px; margin-bottom: 3px; margin-left: 10px; border-style: groove; border-color: black; cursor: pointer; background-color: cyan;"
-                id="gamertokens"
-                onclick="gamertokens();"
-              >
-                GAMER
-              </div>
-              <div
-                style="float: left; display: block; height: 20px; text-align: center; margin-top: 2px; margin-bottom: 3px; margin-left: 10px; border-style: groove; border-color: black; cursor: pointer; background-color: cyan;"
-                id="doobettertokens"
-                onclick="doobettertokens();"
-              >
-                DooBetter
-              </div>
-              <div
-                style="float: left; display: block; height: 20px; text-align: center; margin-top: 2px; margin-bottom: 3px; margin-left: 10px; border-style: groove; border-color: black; cursor: pointer; background-color: cyan;"
-                id="eclipsetokens"
-                onclick="eclipsetokens();"
-              >
-                ECLIPSE
-              </div>
-              <input
-                type="hidden"
-                name="tokens"
-                id="REWARDTOKEN"
-                placeholder="Reward Token"
-              />
-              <br />
-            </div>
-
+            <br />
             <form class="form" id="wallet">
               <input
                 name="dream"
@@ -169,12 +136,7 @@
     </div>
     <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
     <div title="closed" id="REWARDS" class="hide">
-      <div
-        style="float: right; margin: 5px; color: black; bold: bolder; cursor: pointer"
-        onclick="viewReward();"
-      >
-        X
-      </div>
+      <div onclick="viewReward();" style="cursor:pointer; margin-left: 90%;">X</div>
       <div class="hide">Player: <label id="myName">Guest</label></div>
       <div>
         Wallet:
