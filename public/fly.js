@@ -130,14 +130,19 @@ function pendingClaims() {
   }
 }
 
-
-function selectmyToken(){
-  var a = document.getElemetById("rewardtoken");
-  var b = document.getElementBYId("tokenSelect");
-  b.innerHTML = a.innerHTML;
-  
+function selectToken() {
+  var tokens = [
+    "GAMER",
+    "DooBetter",
+    "ECLIPSE",
+    "DooBetter",
+    "ECLIPSE",
+    "GAMER"
+  ];
+  const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
+  var a = document.getElementById("myToken");
+  a.innerHTML = newtoken;
 }
-
 
 function guest() {
   alert("Login To Earn Rewards");
