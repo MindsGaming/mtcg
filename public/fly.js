@@ -64,9 +64,6 @@ function viewReward() {
     a.className = "hide";
     a.title = "closed";
   }
-  var b = document.getElementById("rewardicon");
-  var c =document.
-  
 }
 
 function rewardSound() {
