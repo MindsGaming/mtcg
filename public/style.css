@@ -268,7 +268,7 @@ miner {
 }
 
 label {
-  color: red;
+  color: ;
 }
 
 .rewardicon {
@@ -285,6 +285,7 @@ label {
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 50%;
+  color:gold; 
   opacity: 0.6;
   z-index: 3;
 }
