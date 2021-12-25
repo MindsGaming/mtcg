@@ -144,6 +144,14 @@ function selectToken() {
   a.innerHTML = newtoken;
 }
 
+function vrMode() {
+  let text;
+  if (confirm("Enter Classic Mode") == true) {
+    alert("Coming Soon!");
+  } else {
+  }
+}
+
 function guest() {
   alert("Login To Earn Rewards");
   var createHUB = document.createElement("iframe");
