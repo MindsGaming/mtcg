@@ -31,9 +31,7 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
-const myName = document.getElementById("username");
 const myToken = document.getElementById("REWARDTOKEN");
-const myReward = document.getElementById("myRewards");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -57,7 +55,7 @@ dreamsForm.onsubmit = event => {
   event.preventDefault();
 
   const data = {
-    dream: myName.value + "-" + dreamInput.value + ": Loged In"
+    dream: dreamInput.value + ": Loged In"
   };
 
   fetch("/addDream", {
