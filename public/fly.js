@@ -109,7 +109,7 @@ function rewardSound() {
   music.title = "playing";
   var Music = document.getElementById("REWARDS").appendChild(music);
   played();
-
+  rewardPop();
   function played() {
     if (Music.title == "playing") {
       music.play(), 5000;
@@ -150,7 +150,6 @@ function otherSound() {
       Music.title = "playing";
     }
   }
-  rewardPop();
 }
 
 function pendingClaims() {
