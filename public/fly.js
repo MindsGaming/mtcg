@@ -130,6 +130,15 @@ function pendingClaims() {
   }
 }
 
+
+function selectmyToken(){
+  var a = document.getElemetById("rewardtoken");
+  var b = document.getElementBYId("tokenSelect");
+  b.innerHTML = a.innerHTML;
+  
+}
+
+
 function guest() {
   alert("Login To Earn Rewards");
   var createHUB = document.createElement("iframe");

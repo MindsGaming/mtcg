@@ -194,7 +194,14 @@
           >LOGIN</label
         >
       </div>
-      <div>Reward Token: <label id="myToken">Random</label></div>
+      <div>
+        Reward Token:
+        <label id="myToken" onclick="selectmyToken();">Random</label>
+        <div id="tokenSelect">
+          
+        </div>
+      </div>
+
       <div class="button" onclick="pendingClaims();">
         View Pending
       </div>
