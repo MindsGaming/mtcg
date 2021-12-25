@@ -178,8 +178,14 @@
         >
       </center>
     </div>
-    <div class="profileicon" id="rewardicon" onclick="viewReward();"></div>
+    <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
     <div title="closed" id="REWARDS" class="hide">
+      <div
+        style="float: right; margin: 5px; color: black; bold: bolder cursor: pointer"
+        onclick="viewReward();"
+      >
+        X
+      </div>
       <div>Player: <label id="myName">Guest</label></div>
       <div>
         Wallet:
@@ -188,14 +194,23 @@
         >
       </div>
       <div>Reward Token: <label id="myToken">Random</label></div>
-      <div>Earned Rewards: <label id="myRewards">00.00</label></div>
-      <div class="button" onclick="claimUpdate();">
-        Claim
+      <div>Pending Claims: <label id="myRewards">00.00</label></div>
+      <meter
+        class="hide"
+        id="lifeScore"
+        min="0"
+        low="40"
+        high="90"
+        max="100"
+        value="0"
+      ></meter>
+      <div class="button" onclick="pendingClaims();">
+        View Pending
       </div>
       <button class="hide" id="clear-dreams">
         Clear Dreams
       </button>
-      <section class="hide">
+      <section id="pendingClaims" class="hide">
         <ul id="dreams"></ul>
       </section>
     </div>

@@ -58,20 +58,29 @@ function viewReward() {
   var a = document.getElementById("REWARDS");
 
   if (a.title == "closed") {
-    a.className = "hide";
+    a.className = "userView";
     a.title = "Rewards";
+    showCurrent();
   } else {
     a.className = "hide";
     a.title = "closed";
+    showCurrent();
   }
-  var b = document.getElementById("myRewards");
-  b.innerHTML = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
-  claimUpdate();
-}
 
-function update() {
-  var x = document.getElementBYId("life");
-  x.value = "1";
+  function showCurrent() {
+    var b = document.getElementById("myRewards");
+    var c = document.getElementById("lifeScore");
+
+    var d = document.getElementById("minutes");
+    var e = document.getElementById("seconds");
+
+    var addS = e.innerHTML;
+    var addM = d.innerHTML;
+    var newP = addM + "." + addS;
+    b.innerHTML = newP;
+    var newLife = c.value + newP;
+    c.value = newLife;
+  }
 }
 
 function guest() {
@@ -130,5 +139,17 @@ function otherSound() {
       music.pause(), 5000;
       Music.title = "playing";
     }
+  }
+}
+
+function pendingClaims() {
+  var a = document.getElementById("pendingClaims");
+
+  if (a.title == "closed") {
+    a.className = "overflow";
+    a.title = "Panel";
+  } else {
+    a.className = "hide";
+    a.title = "closed";
   }
 }

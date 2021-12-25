@@ -1,4 +1,4 @@
-body {
+bbody {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
 }
@@ -261,8 +261,8 @@ miner {
   position: fixed;
   display: block;
   top: 0;
-  right: 0;
-  width: 250px;
+  left: 0;
+  width: 200px;
   background-color: silver;
   opacity: 0.6;
   z-index: 2;
@@ -277,8 +277,8 @@ label {
   display: block;
   bottom: 0;
   right: 0;
-  margin-bottom: 2.1rem;
-  margin-right: 13rem;
+  margin-bottom: 2.27rem;
+  margin-right: 12rem;
   width: 45px;
   height: 45px;
   background-color: gold;
@@ -287,6 +287,24 @@ label {
   background-repeat: no-repeat;
   border-radius: 50%;
   opacity: 0.6;
+  z-index: 3;
+}
+
+.profileicon {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 2.27rem;
+  margin-right: 7.59rem;
+  width: 47px;
+  height: 47px;
+  background-color: gold;
+  background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/avatar.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  opacity: 1;
   z-index: 3;
 }
 
@@ -310,4 +328,8 @@ label {
   background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/playgames.png");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.overflow {
+  overflow: scroll;
 }
