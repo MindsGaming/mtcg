@@ -5,6 +5,7 @@ console.log("Welcome To #MindsGaming Blockchain Rewards");
 const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
 var dreamToken = document.getElementById("myToken");
+var dreamWallet = document.getElementById("myWallet");
 
 var totalSeconds = 0;
 setInterval(setTime, 3141);
@@ -57,7 +58,7 @@ dreamsForm.onsubmit = event => {
   const data = {
     dream: dreamInput.value + ": Loged In"
   };
-
+  
   fetch("/addDream", {
     method: "POST",
     body: JSON.stringify(data),
@@ -72,7 +73,6 @@ dreamsForm.onsubmit = event => {
   appendNewDream(dreamInput.value + ":Loged In");
 
   // reset form
-
   alert("Do Not Close Or Refresh This Page Or You May Lose Your Rewards");
   var createHUB = document.createElement("iframe");
   createHUB.src =
@@ -82,7 +82,13 @@ dreamsForm.onsubmit = event => {
   var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
   var openHub = document.getElementById("hubs");
   openHub.style = "display:block";
+  walletChange();
 };
+
+function walletChange(){
+  myToken.innerHTML = dreamInput.value;
+
+}
 
 clearButton.addEventListener("click", event => {
   fetch("/clearDreams", {})
