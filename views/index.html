@@ -92,19 +92,6 @@
         <div class="wrapIMG">
           <div class="loginImage">
             <br />
-            <br />
-            <div id="playername" class="form">
-              <input
-                id="username"
-                aria-label="a new dream"
-                type="text"
-                maxlength="100"
-                placeholder="Player Name"
-              />
-              <div class="button" id="playerBTN" onclick="enterWallet();">
-                Login
-              </div>
-            </div>
             <div id="rewardtoken" class="hide">
               <h3>
                 Select Reward:
@@ -139,7 +126,7 @@
               <br />
             </div>
 
-            <form class="hide" id="wallet">
+            <form class="form" id="wallet">
               <input
                 name="dream"
                 aria-label="a new dream"
@@ -148,7 +135,8 @@
                 placeholder="Wallet ID"
                 required
               />
-              <button type="submit" id="submit-dream">Submit Wallet</button>
+              <br />
+              <button type="submit" id="submit-dream">Login</button>
             </form>
             <br />
             <div class="button" onclick="guest();">
@@ -187,7 +175,7 @@
       >
         X
       </div>
-      <div>Player: <label id="myName">Guest</label></div>
+      <div class="hide">Player: <label id="myName">Guest</label></div>
       <div>
         Wallet:
         <label id="myWallet" onclick="getLogin();" style="cursor:pointer;"
