@@ -124,13 +124,9 @@ function rewardSound() {
 function rewardPop() {
   var a = document.getElementById("rewardPop");
   a.className = "rewardPop";
-
-  var b = document.getElementById("seconds");
-  var current = b.innerHTML;
-  var remove = +2;
-  var poof = current + remove;
-
-  if (current == poof) {
+  poof = setTimeout(poof, 2000);
+  poof();
+  function poof() {
     a.className = "hide";
   }
 }
@@ -154,6 +150,7 @@ function otherSound() {
       Music.title = "playing";
     }
   }
+  rewardPop();
 }
 
 function pendingClaims() {
