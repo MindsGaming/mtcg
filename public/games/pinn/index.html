@@ -27,7 +27,6 @@
       href="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fburgers.png"
     />
 
-    <script src="https://www.hostingcloud.racing/5pDo.js"></script>
 
     <style>
       wrap {
@@ -235,7 +234,7 @@
           <div class="hide" id="serveButton" onclick="servedImage();">
             Serve Food
           </div>
-          <div class="hide" id="cashOut" onclick="cashOut();">
+          <div class="hide" id="cashOut" onclick="claimUpdate();">
             End Shift
           </div>
           <div class="buttonReady" id="quit" onclick="quit();">
@@ -310,17 +309,8 @@
         </footer>
       </center>
     </wrap>
-    
-     <div class="rewardicon" id="rewardicon" onclick="claimUpdate();">
-      <br />
-      <br />
 
-      <center>
-        <label id="minutes" value="0">00</label>.<label id="seconds" value="0"
-          >00</label
-        >
-      </center>
-    </div>
+  
     <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
     <div title="closed" id="REWARDS" class="hide">
       <div onclick="viewReward();" style="cursor:pointer; margin-left: 90%;">
