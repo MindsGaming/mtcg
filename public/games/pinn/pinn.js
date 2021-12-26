@@ -88,9 +88,11 @@ function rewardCheck() {
 function cashOut() {
   var current = document.getElementById("seconds");
   var seconds = current.innerHTML;
-  var made = document.getElementByID("rewards");
-  var boost = seconds + made;
-  alert(boost)
+  var server = document.getElementById("rewards")
+  var food = server.innerHTML;
+  var boost = +food;
+  var total = boost + seconds;
+  current.innerHTML = total;
 }
 
 function quit() {
