@@ -87,9 +87,10 @@ function rewardCheck() {
 
 function cashOut() {
   var current = document.getElementById("seconds");
-  var boost = document.getElementById("Reward");
-  var add = current.innerHTML + boost.value;
-  current.innerHTML = add;
+  var seconds = current.innerHTML;
+  var made = document.getElementByID("rewards");
+  var boost = seconds + made;
+  alert(boost)
 }
 
 function quit() {
