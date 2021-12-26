@@ -1,24 +1,12 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="960.000000pt" height="679.000000pt" viewBox="0 0 960.000000 679.000000"
- preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.16, written by Peter Selinger 2001-2019
-</metadata>
-    <svg height="30" width="200" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <svg height="30" width="200" xmlns:xlink="http://www.w3.org/1999/xlink">
   <a xlink:href="https://www.w3schools.com/graphics/" target="_blank">
-    <text x="0" y="15" fill="white">I love SVG!</text>
-  </a> 
+    <text x="0" y="15" fill="red">I love SVG!</text>
 <g transform="translate(0.000000,679.000000) scale(0.100000,-0.100000)"
 fill="#000000" stroke="none">
- 
-  
-  <path
-      
-        
-        d="M1 5818 c1 -890 5 -1005 24 -817 2 26 9 66 15 90 6 24 12 53 14 64 1
+<path d="M1 5818 c1 -890 5 -1005 24 -817 2 26 9 66 15 90 6 24 12 53 14 64 1
 11 8 30 14 41 6 12 9 24 5 27 -3 3 -2 14 2 24 5 10 9 23 9 28 1 6 7 20 13 31
 7 12 10 24 6 27 -7 7 25 90 77 199 20 43 33 75 27 71 -5 -3 -4 4 3 16 6 12 14
 20 18 17 4 -2 12 7 19 20 8 18 8 22 0 18 -7 -4 4 10 23 32 19 21 38 40 43 42
@@ -399,12 +387,10 @@ c10 -11 16 -20 13 -20 -3 0 -13 9 -23 20 -10 11 -16 20 -13 20 3 0 13 -9 23
 <path d="M2080 412 c0 -5 10 -17 22 -28 l21 -19 -18 28 c-18 28 -25 33 -25 19z"/>
 <path d="M2190 295 c19 -19 36 -35 39 -35 3 0 -10 16 -29 35 -19 19 -36 35
 -39 35 -3 0 10 -16 29 -35z"/>
-   
 <path d="M3625 110 c-9 -10 -20 -19 -24 -18 -3 0 -9 -1 -13 -2 -5 -1 -14 -3
 -20 -4 -7 0 -14 -18 -16 -38 l-3 -37 -137 -4 -137 -3 143 -2 142 -2 2 43 1 42
 7 -45 7 -45 3 45 3 45 7 -45 7 -45 1 39 c2 28 10 48 29 68 15 15 24 28 21 28
 -3 0 -13 -9 -23 -20z"/>
-  
-</svg> 
 </g>
+  </a>
 </svg>
