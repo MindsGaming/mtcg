@@ -101,6 +101,7 @@ function claimUpdate() {
   } else {
     if (minutesLabel.innerHTML == "00") {
       alert("You Need A Full Token To Claim Rewards");
+      oopsSound();
     } else {
       var lifeScore = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
       var REWARDS = lifeScore;
@@ -137,7 +138,7 @@ function reset() {
   totalSeconds = "0";
 }
 
-function walletChange(){
+function walletChange() {
   var x = document.getElementById("myWallet");
   x.innerHTML = dreamInput.value;
 }
