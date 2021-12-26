@@ -86,37 +86,10 @@ function rewardCheck() {
 }
 
 function cashOut() {
-  var rewards = document.getElementById("rewards");
-  var Rewards = document.getElementById("Rewards");
-  var servedFood = document.getElementById("servedFood");
-  var platedFood = document.getElementById("platedFood");
-  var makeFood = document.getElementById("makeFood");
-  var servedfood = document.getElementById("servedfood");
-  var platedfood = document.getElementById("platedfood");
-  var makefood = document.getElementById("makefood");
-
-  var txt;
-  var r = confirm("Start A New Shift?");
-  if (r == true) {
-    rewards.innerHTML = "0";
-    Rewards.value = "0";
-    servedFood.value = "1";
-    platedFood.value = "1";
-    makeFood.value = "30%";
-    servedfood.innerHTML = "1";
-    platedfood.innerHTML = "1";
-    makefood.innerHTML = "30%";
-
-    appendNewDream(
-      dreamInput.value +
-        "-" +
-        dreamInputuser.value +
-        " Reward: " +
-        dreamInputplayer.value +
-        Rewards.value +
-        ".00"
-    );
-  } else txt = "You pressed Cancel!";
+  var current = document.getElementById("seconds");
+  var boost = document.getElementById("Reward");
+  var add = current.innerHTML + boost.value;
+  current.innerHTML = add;
 }
 
 function quit() {
