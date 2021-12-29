@@ -1,7 +1,7 @@
+var token = document.getElementById("myWallet");
 var wallet = document.getElementById("walletCheck");
 
-if (wallet.title == "wallet") {
-  wallet.title = "Checking...";
+if (token.innerHTML == "LOGIN") {
   poof = setTimeout(poof, 5000);
   poof();
   function poof() {
@@ -20,4 +20,12 @@ function classicLogin() {
 function classicGuest() {
   var x = document.getElementById("myWallet");
   wallet.className = "hide";
+}
+
+function pinnBurgers() {
+  var game = document.getElementById("pinnBurgers");
+  var createHUB = document.createElement("iframe");
+  createHUB.src = "/games/pinn";
+  createHUB.className = "SuperSplash";
+  var CREATEHUB = document.getElementById("pinnBurgers").appendChild(createHUB);
 }
