@@ -144,12 +144,18 @@ function checkStatus() {
 function vrMode() {
   let text;
   if (confirm("Enter Classic Mode") == true) {
+    var iconOne = document.getElementById("rewardicon");
+    var iconTwo = document.getElementById("profileicon");
+    var classic = document.getElementById("vrMode");
+    classic.innerHTML = "Classic";
+    iconOne.className = "hide";
+    iconTwo.className = "hide";
     var createHUB = document.createElement("iframe");
     createHUB.src = "/games";
     createHUB.className = "SuperSplash";
     createHUB.allow = "microphone; camera; vr; speaker;";
-    var CREATEHUB = document.getElementById("classic").appendChild(createHUB);
-    var openHub = document.getElementById("classic");
+    var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+    var openHub = document.getElementById("hubs");
     openHub.style = "display:block";
   } else {
   }
