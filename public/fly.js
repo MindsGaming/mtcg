@@ -156,15 +156,15 @@ function superTimer() {
   var token = a.innerHTML;
 
   if (token == "GAMER") {
-    setInterval(setTime, 93141);
+    setInterval(setTime, 8981);
   }
 
   if (token == "DooBetter") {
-    setInterval(setTime, 83141);
+    setInterval(setTime, 4340);
   }
 
   if (token == "ECLIPSE") {
-    setInterval(setTime, 33141);
+    setInterval(setTime, 3141);
   }
 }
 
