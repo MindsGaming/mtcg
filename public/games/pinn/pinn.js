@@ -102,10 +102,3 @@ function quit() {
     window.open("/", "_self");
   } else txt = "Get back to work";
 }
-
-var wallet = document.getElementByID("walletCheck");
-
-if (wallet.title == "wallet") {
-  alert("You need to start from the game page");
-  window.open("/game", "_self");
-}
