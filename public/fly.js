@@ -144,7 +144,13 @@ function checkStatus() {
 function vrMode() {
   let text;
   if (confirm("Enter Classic Mode") == true) {
-    alert("Coming Soon!");
+    var createHUB = document.createElement("iframe");
+    createHUB.src = "/games";
+    createHUB.className = "SuperSplash";
+    createHUB.allow = "microphone; camera; vr; speaker;";
+    var CREATEHUB = document.getElementById("classic").appendChild(createHUB);
+    var openHub = document.getElementById("classic");
+    openHub.style = "display:block";
   } else {
   }
 }

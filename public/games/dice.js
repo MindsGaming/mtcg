@@ -24,9 +24,8 @@ function classicGuest() {
 }
 
 function pinnBurgers() {
-  var game = document.getElementById("pinnBurgers");
+  var game = document.getElementById("gameWrap");
   var superGame = document.getElementById("superGame");
 
-  game.className = "hide";
-  game.className = "SuperSplash";
+  superGame.className = "SuperSplash";
 }
