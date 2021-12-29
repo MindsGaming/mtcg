@@ -11,6 +11,8 @@ if (wallet.title == "wallet") {
 
 function classicLogin() {
   var x = document.getElementById("myWallet");
+  selectToken();
+
   x.innerHTML = dreamInput.value;
   wallet.className = "hide";
 }
