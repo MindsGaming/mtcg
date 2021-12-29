@@ -12,7 +12,7 @@ function viewReward() {
 
 function rewardSound() {
   var music = document.createElement("audio");
-  music.src = "/images/coinSound.mp3";
+  music.src = "/images/coinsSound.mp3";
   music.volume = 0.3;
   music.autoPlay = false;
   music.title = "playing";
@@ -129,11 +129,4 @@ function guest() {
 function getLogin() {
   var closeHub = document.getElementById("hubs");
   closeHub.style = "display:none";
-}
-
-/* HTTPS */
-
-const loc = window.location.href + "";
-if (loc.indexOf("http://") == 0) {
-  window.location.href = loc.replace("http://", "https://");
 }

