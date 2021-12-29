@@ -6,6 +6,7 @@ if (token.innerHTML == "LOGIN") {
   poof();
   function poof() {
     wallet.className = "offline";
+    wallet.title = "LOGED";
   }
 }
 
