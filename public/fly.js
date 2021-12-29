@@ -107,33 +107,21 @@ function selectToken() {
 }
 
 function changeToken() {
-  var current = document.getElementById("minutes");
+  var a = document.getElementById("myToken");
+
   if (current.innerHTML == "00") {
     alert("You Need 1 Reward Token To Preform This Action ");
   } else {
     claimUpdate();
-    var tokens = [
-      "GAMER",
-      "DooBetter",
-      "ECLIPSE",
-      "DooBetter",
-      "ECLIPSE",
-      "GAMER"
-    ];
-    const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
-    var a = document.getElementById("myToken");
-    a.innerHTML = newtoken;
-    var a = document.getElementById("myToken");
-    var token = a.innerHTML;
 
     if (token == "GAMER") {
       setInterval(setTime, 8981);
+      a.innerHTML = "DooBetter"
     }
-
     if (token == "DooBetter") {
       setInterval(setTime, 5000);
+      a.innerHTML =
     }
-
     if (token == "ECLIPSE") {
       setInterval(setTime, 3141);
     }
