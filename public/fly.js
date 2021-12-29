@@ -108,22 +108,24 @@ function selectToken() {
 
 function changeToken() {
   var a = document.getElementById("myToken");
+  var current = document.getElementById("minutes");
 
   if (current.innerHTML == "00") {
     alert("You Need 1 Reward Token To Preform This Action ");
   } else {
     claimUpdate();
 
-    if (token == "GAMER") {
-      setInterval(setTime, 8981);
-      a.innerHTML = "DooBetter"
-    }
-    if (token == "DooBetter") {
+    if (a.innerHTML == "GAMER") {
+      a.innerHTML = "DooBetter";
       setInterval(setTime, 5000);
-      a.innerHTML =
     }
-    if (token == "ECLIPSE") {
+    if (a.innerHTML == "DooBetter") {
+      a.innerHTML = "ECLIPSE";
       setInterval(setTime, 3141);
+    }
+    if (a.innerHTML == "ECLIPSE") {
+      a.innerHTML = "GAMER";
+      setInterval(setTime, 8981);
     }
   }
 }
