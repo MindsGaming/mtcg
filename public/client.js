@@ -8,7 +8,7 @@ var dreamToken = document.getElementById("myToken");
 var dreamWallet = document.getElementById("myWallet");
 
 var totalSeconds = 0;
-setInterval(setTime, 3141);
+setInterval(setTime, 93141);
 
 function setTime() {
   ++totalSeconds;
