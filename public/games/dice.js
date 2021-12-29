@@ -14,3 +14,8 @@ function classicLogin() {
   x.innerHTML = dreamInput.value;
   wallet.className = "hide";
 }
+
+function classicGuest() {
+  var x = document.getElementById("myWallet");
+  wallet.className = "hide";
+}
