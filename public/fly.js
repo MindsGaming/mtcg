@@ -124,8 +124,8 @@ function changeToken() {
     if (a.innerHTMl == "DooBetter") {
       a.innerHTMl = "ECLIPSE";
     }
-    if (a.innerHTMl == "DooBetter") {
-      a.innerHTMl = "ECLIPSE";
+    if (a.innerHTMl == "ECLIPSE") {
+      a.innerHTMl = "GAMER";
     }
   }
 }
