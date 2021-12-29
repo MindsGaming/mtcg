@@ -121,6 +121,7 @@ function online() {
 function offline() {
   var offlineNotice = document.getElementById("offline");
   offlineNotice.className = "offline";
+  checkStatus();
 }
 
 function checkStatus() {
@@ -135,8 +136,12 @@ function checkStatus() {
   }
 
   function offline() {
-    var offlineNotice = document.getElementById("offline");
-    offlineNotice.className = "offline";
+    let text;
+    if (confirm("No Connection Found, Rewards") == true) {
+      checkStatus();
+    } else {
+      checkStatus();
+    }
   }
 }
 
