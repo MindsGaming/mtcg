@@ -140,15 +140,18 @@ function claimUpdate() {
       selectToken();
 
       if (dreamToken.innerHTML == "GAMER") {
-        setInterval(setTime, 18981);
-      }
-
-      if (dreamToken.innerHTML == "DooBetter") {
+        dreamToken.innerHTML = "DooBetter";
         setInterval(setTime, 15000);
       }
 
-      if (dreamToken.innerHTML == "ECLIPSE") {
+      if (dreamToken.innerHTML == "DooBetter") {
+        dreamToken.innerHTML = "ECLIPSE";
         setInterval(setTime, 13141);
+      }
+
+      if (dreamToken.innerHTML == "ECLIPSE") {
+        dreamToken.innerHTML = "GAMER";
+        setInterval(setTime, 18981);
       }
       rewardSound();
     }
