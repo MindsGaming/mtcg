@@ -110,6 +110,30 @@ function changeToken() {
   var a = document.getElementById("myToken");
   var current = document.getElementById("minutes");
 
+  if ((current.innerHTML = "00")) {
+    alert("You Need 1 Reward Token To Preform This Action");
+  } else {
+    if (a.innerHTMl == "Random") {
+      claimUpdate();
+      a.innerHTMl = "GAMER";
+    }
+    if (a.innerHTMl == "GAMER") {
+      claimUpdate();
+      a.innerHTMl = "DooBetter";
+    }
+    if (a.innerHTMl == "DooBetter") {
+      a.innerHTMl = "ECLIPSE";
+    }
+    if (a.innerHTMl == "DooBetter") {
+      a.innerHTMl = "ECLIPSE";
+    }
+  }
+}
+
+function holder() {
+  var a = document.getElementById("myToken");
+  var current = document.getElementById("minutes");
+
   if (current.innerHTML == "00") {
     alert("You Need 1 Reward Token To Preform This Action ");
   } else {
