@@ -92,20 +92,6 @@ function pendingClaims() {
   }
 }
 
-function selectToken() {
-  var tokens = [
-    "GAMER",
-    "DooBetter",
-    "ECLIPSE",
-    "DooBetter",
-    "ECLIPSE",
-    "GAMER"
-  ];
-  const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
-  var a = document.getElementById("myToken");
-  a.innerHTML = newtoken;
-}
-
 function changeToken() {
   var a = document.getElementById("myToken");
   var current = document.getElementById("minutes");
@@ -113,23 +99,9 @@ function changeToken() {
   if (current.innerHTML == "00") {
     alert("You Need 1 Reward Token To Preform This Action");
   } else {
-    if (a.innerHTMl == "Random") {
-      a.innerHTMl = "GAMER";
-    }
-    if (a.innerHTMl == "GAMER") {
-      claimUpdate();
-      a.innerHTMl = "DooBetter";
-    }
-    if (a.innerHTMl == "DooBetter") {
-      a.innerHTMl = "ECLIPSE";
-    }
-    if (a.innerHTMl == "ECLIPSE") {
-      claimUpdate();
-      a.innerHTMl = "GAMER";
-    }
+    claimUpdate();
   }
 }
-
 /* Online Check */
 
 const status = window.navigator.onLine;
@@ -166,25 +138,6 @@ function checkStatus() {
     } else {
       checkStatus();
     }
-  }
-}
-
-/* SuperTimer */
-
-function superTimer() {
-  var a = document.getElementById("myToken");
-  var token = a.innerHTML;
-
-  if (token == "GAMER") {
-    setInterval(setTime, 8981);
-  }
-
-  if (token == "DooBetter") {
-    setInterval(setTime, 5000);
-  }
-
-  if (token == "ECLIPSE") {
-    setInterval(setTime, 3141);
   }
 }
 

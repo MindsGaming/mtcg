@@ -6,9 +6,20 @@ const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
 var dreamToken = document.getElementById("myToken");
 var dreamWallet = document.getElementById("myWallet");
+selectToken();
 
 var totalSeconds = 0;
-setInterval(setTime, 8981);
+if (dreamToken.innerHTML == "GAMER") {
+  setInterval(setTime, 8981);
+}
+
+if (dreamToken.innerHTML == "DooBetter") {
+  setInterval(setTime, 5000);
+}
+
+if (dreamToken.innerHTML == "ECLIPSE") {
+  setInterval(setTime, 3141);
+}
 
 function setTime() {
   ++totalSeconds;
@@ -83,8 +94,6 @@ dreamsForm.onsubmit = event => {
   var openHub = document.getElementById("hubs");
   openHub.style = "display:block";
   walletChange();
-  selectToken();
-  superTimer();
 };
 
 clearButton.addEventListener("click", event => {
@@ -128,6 +137,19 @@ function claimUpdate() {
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
       reset();
+      selectToken();
+
+      if (dreamToken.innerHTML == "GAMER") {
+        setInterval(setTime, 18981);
+      }
+
+      if (dreamToken.innerHTML == "DooBetter") {
+        setInterval(setTime, 15000);
+      }
+
+      if (dreamToken.innerHTML == "ECLIPSE") {
+        setInterval(setTime, 13141);
+      }
       rewardSound();
     }
   }
@@ -143,4 +165,18 @@ function reset() {
 function walletChange() {
   var x = document.getElementById("myWallet");
   x.innerHTML = dreamInput.value;
+}
+
+function selectToken() {
+  var tokens = [
+    "GAMER",
+    "DooBetter",
+    "ECLIPSE",
+    "DooBetter",
+    "ECLIPSE",
+    "GAMER"
+  ];
+  const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
+  var a = document.getElementById("myToken");
+  a.innerHTML = newtoken;
 }
