@@ -124,10 +124,9 @@ function offline() {
   ) {
     checkStatus();
   } else {
-    if (confirm("Sorry We Couldn't Find A Connection") == true) {
-      var offlineNotice = document.getElementById("offline");
-      offlineNotice.className = "offline";
-    }
+    var offlineNotice = document.getElementById("offline");
+
+    offlineNotice.className = "offline";
   }
 }
 
@@ -137,15 +136,14 @@ function checkStatus() {
   else offline();
   window.addEventListener("online", online);
   window.addEventListener("offline", offline);
-  function online() {}
+  function online() {
+    var offlineNotice = document.getElementById("offline");
+
+    offlineNotice.className = "offline";
+  }
 
   function offline() {
-    let text;
-    if (confirm("Sorry We Couldn't Find A Connection") == true) {
-      var offlineNotice = document.getElementById("offline");
-      offlineNotice.className = "offline";
-    } else {
-    }
+    alert("No Connection Found");
   }
 }
 
