@@ -106,6 +106,17 @@ function selectToken() {
   a.innerHTML = newtoken;
 }
 
+function changeToken() {
+  var current = document.getElementById("minutes");
+  if (current.innerHTML == "0") {
+    alert("You Need 1 Reward Token To Preform This Action ");
+  } else {
+    claimUpdate();
+    selectToken();
+    superTimer();
+  }
+}
+
 /* Online Check */
 
 const status = window.navigator.onLine;
@@ -137,7 +148,7 @@ function checkStatus() {
 
   function offline() {
     let text;
-    if (confirm("No Connection Found, Rewards") == true) {
+    if (confirm("No Connection Found, Rewards Are Paused") == true) {
       checkStatus();
     } else {
       checkStatus();
