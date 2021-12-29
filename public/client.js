@@ -83,6 +83,8 @@ dreamsForm.onsubmit = event => {
   var openHub = document.getElementById("hubs");
   openHub.style = "display:block";
   walletChange();
+  selectToken();
+  superTimer();
 };
 
 clearButton.addEventListener("click", event => {

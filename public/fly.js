@@ -106,6 +106,68 @@ function selectToken() {
   a.innerHTML = newtoken;
 }
 
+/* Online Check */
+
+const status = window.navigator.onLine;
+if (status) online();
+else offline();
+window.addEventListener("online", online);
+window.addEventListener("offline", offline);
+function online() {}
+
+function offline() {
+  let text;
+  if (
+    confirm(
+      "Looks like your offline, make sure your connected to the internet!"
+    ) == true
+  ) {
+    checkStatus();
+  } else {
+    if (confirm("Sorry We Couldn't Find A Connection") == true) {
+      var offlineNotice = document.getElementById("offline");
+      offlineNotice.className = "offline";
+    }
+  }
+}
+
+function checkStatus() {
+  const status = window.navigator.onLine;
+  if (status) online();
+  else offline();
+  window.addEventListener("online", online);
+  window.addEventListener("offline", offline);
+  function online() {}
+
+  function offline() {
+    let text;
+    if (confirm("Sorry We Couldn't Find A Connection") == true) {
+      var offlineNotice = document.getElementById("offline");
+      offlineNotice.className = "offline";
+    } else {
+    }
+  }
+}
+
+/* SuperTimer */
+
+function superTimer() {
+  var a = document.getElementById("myToken");
+  var token = a.innerHTML;
+
+  if (token == "GAMER") {
+    setInterval(setTime, 93141);
+  }
+
+  if (token == "DooBetter") {
+    setInterval(setTime, 83141);
+  }
+
+  if (token == "ECLIPSE") {
+    setInterval(setTime, 33141);
+  }
+}
+
 function vrMode() {
   let text;
   if (confirm("Enter Classic Mode") == true) {
