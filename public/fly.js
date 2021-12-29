@@ -160,7 +160,7 @@ function superTimer() {
   }
 
   if (token == "DooBetter") {
-    setInterval(setTime, 4340);
+    setInterval(setTime, 5000);
   }
 
   if (token == "ECLIPSE") {
