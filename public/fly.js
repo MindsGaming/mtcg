@@ -114,7 +114,6 @@ function changeToken() {
     alert("You Need 1 Reward Token To Preform This Action");
   } else {
     if (a.innerHTMl == "Random") {
-      claimUpdate();
       a.innerHTMl = "GAMER";
     }
     if (a.innerHTMl == "GAMER") {
@@ -128,7 +127,6 @@ function changeToken() {
       claimUpdate();
       a.innerHTMl = "GAMER";
     }
-    superTimer();
   }
 }
 
