@@ -113,21 +113,14 @@ if (status) online();
 else offline();
 window.addEventListener("online", online);
 window.addEventListener("offline", offline);
-function online() {}
+function online() {
+  var offlineNotice = document.getElementById("offline");
+  offlineNotice.className = "hide";
+}
 
 function offline() {
-  let text;
-  if (
-    confirm(
-      "Looks like your offline, make sure your connected to the internet!"
-    ) == true
-  ) {
-    checkStatus();
-  } else {
-    var offlineNotice = document.getElementById("offline");
-
-    offlineNotice.className = "offline";
-  }
+  var offlineNotice = document.getElementById("offline");
+  offlineNotice.className = "offline";
 }
 
 function checkStatus() {
@@ -138,12 +131,12 @@ function checkStatus() {
   window.addEventListener("offline", offline);
   function online() {
     var offlineNotice = document.getElementById("offline");
-
-    offlineNotice.className = "offline";
+    offlineNotice.className = "hide";
   }
 
   function offline() {
-    alert("No Connection Found");
+    var offlineNotice = document.getElementById("offline");
+    offlineNotice.className = "offline";
   }
 }
 
