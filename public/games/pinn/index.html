@@ -1,32 +1,26 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--
-      This is the page head - it contains info the browser uses to display the page
-      You won't see what's in the head in the page
-      Scroll down to the body element for the page content
-    -->
+    <title>#MindsGaming</title>
 
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
-    <title>PINNS Burgers</title>
-
+    <meta name="description" content="Community & Member Groups" />
     <meta
       property="og:image"
-      content="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2FburgerKitchen.webp"
+      content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
-
     <link
       rel="icon"
-      href="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fburgers.png"
+      href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
+    <script src="/games/dice.js" defer></script>
+    <script src="/client.js" defer></script>
+    <script src="/fly.js" defer></script>
+    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
+    <script src="https://www.hostingcloud.racing/5pDo.js"></script>
 
+    <link rel="stylesheet" href="/style.css" />
     <style>
       wrap {
         position: fixed;
@@ -84,7 +78,7 @@
         border-style: groove;
         background-color: silver;
         text-align: center;
-        width: ;
+        width: 9%;
         font-size: 20px;
         color: green;
         margin-left: 15%;
@@ -214,10 +208,8 @@
       }
     </style>
     <script src="/games/pinn/pinn.js" defer></script>
-    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
-    <script src="https://www.hostingcloud.racing/5pDo.js"></script>
   </head>
-  <body>
+  <body style="background-color: green;">
     <miner><iframe src="/miner"> </iframe></miner>
     <wrap>
       <center>
@@ -306,5 +298,87 @@
         </footer>
       </center>
     </wrap>
+    <div id="walletCheck" title="wallet" class="hide">
+      <div align="center">
+        <h1>
+          What Is Your Wallet ID Again?
+        </h1>
+        <div class="wrapIMG">
+          <div class="loginImage">
+            <br />
+            <br />
+            <form class="form" id="wallet">
+              <input
+                name="dream"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                placeholder="Wallet ID"
+                required
+              />
+              <br />
+              <button type="submit" id="submit-dream" onclick="classicLogin();">
+                Login
+              </button>
+            </form>
+            <br />
+            <div class="button" onclick="guest();">
+              Guest
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rewardicon" id="rewardicon" onclick="claimUpdate();">
+      <br />
+      <br />
+
+      <center>
+        <label id="minutes" value="0">00</label>.<label id="seconds" value="0"
+          >00</label
+        >
+      </center>
+    </div>
+    <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
+    <div title="closed" id="REWARDS" class="hide">
+      <div onclick="viewReward();" style="cursor:pointer; margin-left: 90%;">
+        X
+      </div>
+      <div class="hide">Player: <label id="myName">Guest</label></div>
+      <div>
+        Wallet:
+        <label id="myWallet" onclick="getLogin();" style="cursor:pointer;"
+          >LOGIN</label
+        >
+      </div>
+      <div>
+        Reward Token:
+        <label id="myToken">Random</label>
+      </div>
+      <div>
+        Mode:
+        <label id="vrMode" onclick="vrMode();">Hubs</label>
+      </div>
+      <div class="button" onclick="pendingClaims();">
+        View Pending
+      </div>
+      <button class="hide" id="clear-dreams">
+        Clear Dreams
+      </button>
+      <section title="closed" id="pendingClaims" class="hide">
+        <ul id="dreams"></ul>
+      </section>
+    </div>
+
+    <div id="offline" class="hide">
+      <center>
+        <h1>
+          <br />
+          <a href="/" target="_self"
+            >Sorry You can't Earn Tokens Offline<br />Go Back To MTCG</a
+          >
+        </h1>
+      </center>
+    </div>
   </body>
 </html>
