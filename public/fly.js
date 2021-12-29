@@ -110,7 +110,7 @@ function changeToken() {
   var a = document.getElementById("myToken");
   var current = document.getElementById("minutes");
 
-  if ((current.innerHTML = "00")) {
+  if (current.innerHTML == "00") {
     alert("You Need 1 Reward Token To Preform This Action");
   } else {
     if (a.innerHTMl == "Random") {
@@ -125,32 +125,10 @@ function changeToken() {
       a.innerHTMl = "ECLIPSE";
     }
     if (a.innerHTMl == "ECLIPSE") {
+      claimUpdate();
       a.innerHTMl = "GAMER";
     }
-  }
-}
-
-function holder() {
-  var a = document.getElementById("myToken");
-  var current = document.getElementById("minutes");
-
-  if (current.innerHTML == "00") {
-    alert("You Need 1 Reward Token To Preform This Action ");
-  } else {
-    claimUpdate();
-
-    if (a.innerHTML == "GAMER") {
-      a.innerHTML = "DooBetter";
-      setInterval(setTime, 5000);
-    }
-    if (a.innerHTML == "DooBetter") {
-      a.innerHTML = "ECLIPSE";
-      setInterval(setTime, 3141);
-    }
-    if (a.innerHTML == "ECLIPSE") {
-      a.innerHTML = "GAMER";
-      setInterval(setTime, 8981);
-    }
+    superTimer();
   }
 }
 
