@@ -264,7 +264,7 @@ miner {
   width: 200px;
   background-color: silver;
   opacity: 0.6;
-  z-index: 2;
+  z-index: 3;
 }
 
 label {
@@ -377,5 +377,4 @@ label {
   background-image: url("images/login.png");
   background-size: contain;
   background-repeat: no-repeat;
-  
 }
