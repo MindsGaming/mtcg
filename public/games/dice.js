@@ -3,7 +3,7 @@ var superToken = token.innerHTML;
 
 function oopsLogin() {
   var x = document.getElementById("oopsLogin");
-  x.className = "superSplash";
+  x.className = "SuperSplash";
 }
 
 function classicLogin() {
