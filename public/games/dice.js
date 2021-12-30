@@ -17,6 +17,8 @@ function classicGuest() {
 }
 
 function pinnBurgers() {
+  var game = document.getElementById("pinnBurgers");
+  game.title = "Open";
   var createHUB = document.createElement("iframe");
   createHUB.src = "/games/pinn";
   createHUB.className = "SuperSplash";
@@ -25,5 +27,7 @@ function pinnBurgers() {
 }
 
 function closePINN() {
-  alert("test")
+ alert("test");
+  var game = document.getElementById("pinnBurgers");
+  game.className = "hide";
 }
