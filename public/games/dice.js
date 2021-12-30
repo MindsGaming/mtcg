@@ -1,11 +1,15 @@
 var x = document.getElementById("myWallet");
 var wallet = x.innerHTML;
 
-if (wallet == "LOGIN"){
-  var x = document.getElementById("")
-    
-    }
-
+if (wallet == "LOGIN") {
+  x.innerHTML = dreamInput.value;
+  poof = setTimeout(poof, 5000);
+  poof();
+  function poof() {
+    var x = document.getElementById("oopsLogin");
+    x.className = "SuperSplash";
+  }
+}
 
 function classicLogin() {
   selectToken();
