@@ -99,6 +99,7 @@ function quit() {
   var txt;
   var r = confirm("Quit Your Job?");
   if (r == true) {
+    closePINN();
     window.close("#");
   } else txt = "Get back to work";
 }
