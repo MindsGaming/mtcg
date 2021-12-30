@@ -185,7 +185,7 @@ function vrMode() {
     } else {
     }
   } else {
-    if (a.title == "Classic") {
+    if (a.innerHTML == "Classic") {
       if (confirm("Change To Hubs") == true) {
         viewReward();
         a.title = "Hubs";

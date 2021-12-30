@@ -1,24 +1,25 @@
-var x = document.getElementById("myWallet");
-var token = x.innerHTML;
-if (x.innerHTML == "LOGIN") {
-  x.innerHTML = dreamInput.value;
-  poof = setTimeout(poof, 5000);
-  poof();
-  function poof() {
-    if (x.innerHTML == "LOGIN") {
-      var x = document.getElementById("oopsLogin");
-      x.className = "SuperSplash";
+var token = document.getElementById("myWallet");
+if (token.innerHTML == "LOGIN") {
+  var oppsLogin = document.getElementById("oopsLogin");
+  if (token.innerHTML == "LOGIN") {
+    poof = setTimeout(poof, 5000);
+    poof();
+    function poof() {
+      if (token.innerHTML == "LOGIN") {
+        oppsLogin.className = "SuperSplash";
+      }
     }
   }
 }
 
 function classicLogin() {
   selectToken();
-  x.innerHTML = dreamInput.value;
+  token.innerHTML = dreamInput.value;
+  oppsLogin.className = "hide";
 }
 
 function classicGuest() {
-  var x = document.getElementById("myWallet");
+  oppsLogin.className = "hide";
 }
 
 function pinnBurgers() {
