@@ -1,13 +1,14 @@
 var x = document.getElementById("myWallet");
-var wallet = x.innerHTML;
-
-if (wallet == "LOGIN") {
+var token = x.innerHTML;
+if (x.innerHTML == "LOGIN") {
   x.innerHTML = dreamInput.value;
   poof = setTimeout(poof, 5000);
   poof();
   function poof() {
-    var x = document.getElementById("oopsLogin");
-    x.className = "SuperSplash";
+    if (x.innerHTML == "LOGIN") {
+      var x = document.getElementById("oopsLogin");
+      x.className = "SuperSplash";
+    }
   }
 }
 
