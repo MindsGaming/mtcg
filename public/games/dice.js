@@ -1,15 +1,9 @@
 var token = document.getElementById("myWallet");
-if (token.innerHTML == "LOGIN") {
-  var oppsLogin = document.getElementById("oopsLogin");
-  if (token.innerHTML == "LOGIN") {
-    poof = setTimeout(poof, 5000);
-    poof();
-    function poof() {
-      if (token.innerHTML == "LOGIN") {
-        oppsLogin.className = "SuperSplash";
-      }
-    }
-  }
+var superToken = token.innerHTML;
+
+function oopsLogin() {
+  var x = document.getElementById("oopsLogin");
+  x.className = "superSplash";
 }
 
 function classicLogin() {
