@@ -1,7 +1,7 @@
 var token = document.getElementById("myWallet");
 var wallet = document.getElementById("walletCheck");
 
-if (token.innerHTML == "LOGIN") {
+if (dreamWallet.value == "LOGIN") {
   poof = setTimeout(poof, 5000);
   poof();
   function poof() {
@@ -30,9 +30,10 @@ function pinnBurgers() {
   var superGame = document.getElementById("superGame");
   superGame.className = "SuperSplash";
   if (token.innerHTML == "LOGIN") {
-  poof = setTimeout(poof, 5000);
-  poof();
-  function poof() {
-   wallet.innerHTML = stick;
+    poof = setTimeout(poof, 5000);
+    poof();
+    function poof() {
+      sticker.innerHTML = stick;
+    }
   }
-  }}
+}
