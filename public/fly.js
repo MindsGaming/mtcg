@@ -145,13 +145,13 @@ function vrMode() {
   var mode = document.getElementById("vrMode");
   var walletmode = document.getElementById("myWallet");
   var sticker = dreamInput.value;
-    var iconOne = document.getElementById("rewardicon");
+  var iconOne = document.getElementById("rewardicon");
   var iconTwo = document.getElementById("profileicon");
-
 
   let text;
   if (confirm("Change Modes?") == true) {
     if (mode.title == "Hubs") {
+      viewReward();
       iconOne.className = "hide";
       iconTwo.className = "hide";
       var createHUB = document.createElement("iframe");
@@ -164,6 +164,13 @@ function vrMode() {
       mode.title = "Classic";
       mode.innerHTML = "Classic";
       walletmode.innerHTML = sticker;
+      if (token.innerHTML == "LOGIN") {
+        poof = setTimeout(poof, 5000);
+        poof();
+        function poof() {
+          sticker.innerHTML = stick;
+        }
+      }
     } else {
       if ((mode.title = "Classic")) {
         var createHUB = document.createElement("iframe");
@@ -175,7 +182,7 @@ function vrMode() {
         var openHub = document.getElementById("hubs");
         openHub.style = "display:block";
         mode.title = "Hubs";
-        mode.innerHTML = "Hubs"
+        mode.innerHTML = "Hubs";
         walletmode.innerHTML = sticker;
       }
     }

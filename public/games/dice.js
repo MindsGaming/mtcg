@@ -1,21 +1,13 @@
-var token = document.getElementById("myWallet");
-
-if (token.innerHTML == "LOGIN"){
-  alert("test")
-}
-
+var x = document.getElementById("myWallet");
+var token = x.innerHTML;
 
 function classicLogin() {
-  var x = document.getElementById("myWallet");
   selectToken();
-
   x.innerHTML = dreamInput.value;
-  wallet.className = "hide";
 }
 
 function classicGuest() {
   var x = document.getElementById("myWallet");
-  wallet.className = "hide";
 }
 
 function pinnBurgers() {
