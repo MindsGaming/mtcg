@@ -168,7 +168,7 @@ function vrMode() {
         poof = setTimeout(poof, 5000);
         poof();
         function poof() {
-          sticker.innerHTML = stick;
+          walletmode.innerHTML = token;
         }
       }
     } else {
