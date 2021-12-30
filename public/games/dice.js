@@ -26,8 +26,3 @@ function pinnBurgers() {
   var CREATEHUB = document.getElementById("pinnBurgers").appendChild(createHUB);
 }
 
-function closePINN() {
- alert("test");
-  var game = document.getElementById("pinnBurgers");
-  game.className = "hide";
-}
