@@ -99,6 +99,10 @@ function quit() {
   var txt;
   var r = confirm("Quit Your Job?");
   if (r == true) {
+    var iconOne = document.getElementById("rewardicon");
+    var iconTwo = document.getElementById("profileicon");
+    iconOne.className = "hide";
+    iconTwo.className = "hide";
     window.open("/", "_self");
   } else txt = "Get back to work";
 }
