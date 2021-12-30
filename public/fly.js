@@ -142,57 +142,19 @@ function checkStatus() {
 }
 
 function vrMode() {
-  let text;
-  if (confirm("Change Modes?") == true) {
-    var currentMode = document.getElementById("vrMode");
-    if (currentMode.title == "Hubs") {
-      currentMode.title = "Classic";
-      currentMode.innerHTML = "Classic";
-      var iconOne = document.getElementById("rewardicon");
-      var iconTwo = document.getElementById("profileicon");
-      viewReward();
-      iconOne.className = "hide";
-      iconTwo.classname = "hide";
+  var mode = document.getElementById("vrMode");
 
-      var createHUB = document.createElement("iframe");
-      createHUB.src = "/games";
-      createHUB.className = "SuperSplash";
-      createHUB.allow = "microphone; camera; vr; speaker;";
-      var CREATEHUB = document.getElementById("MTCG").appendChild(createHUB);
-      var closeHub = document.getElementById("MTCG");
-      closeHub.style = "display:block";
-      if (token.innerHTML == "LOGIN") {
-        poof = setTimeout(poof, 5000);
-        poof();
-        function poof() {
-          dreamWallet.innerHTML = dreamInput.value;
-        }
-      }
-    }
-  } else {
-    if (currentMode.title == "Classic") {
-      currentMode.title = "Hubs";
-      currentMode.innerHTML = "Hubs";
-      var iconOne = document.getElementById("rewardicon");
-      var iconTwo = document.getElementById("profileicon");
-      viewReward();
-      iconOne.className = "rewardicon";
-      iconTwo.classname = "profileicon";
-      viewReward();
-      var createHUB = document.createElement("iframe");
-      createHUB.src =
-        "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
-      createHUB.className = "SuperSplash";
-      createHUB.allow = "microphone; camera; vr; speaker;";
-      var CREATEHUB = document.getElementById("MTCG").appendChild(createHUB);
-      var closeHub = document.getElementById("MTCG");
-      closeHub.style = "display:block";
-      if (token.innerHTML == "LOGIN") {
-        poof = setTimeout(poof, 5000);
-        poof();
-        function poof() {
-          dreamWallet.innerHTML = dreamInput.value;
-        }
+  let text;
+  if (confirm("Change ") == true) {
+    if (mode.title == "Hubs") {
+      var openHub = document.getElementById("login");
+      openHub.className = "hide";
+      mode.title = "Classic";
+    } else {
+      if ((mode.title = "Classic")) {
+        var openHub = document.getElementById("login");
+        openHub.className = "block";
+        mode.title = "Hubs";
       }
     }
   }
