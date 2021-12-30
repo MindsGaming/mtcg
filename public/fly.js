@@ -142,44 +142,57 @@ function checkStatus() {
 }
 
 function vrMode() {
-  var classic = document.getElementById("vrMode");
-
-  if (classic.title == "Hubs") {
-    let text;
-    if (confirm("Enter Classic Mode") == true) {
+  let text;
+  if (confirm("Change Modes?") == true) {
+    var currentMode = document.getElementById("vrMode");
+    if (currentMode.title == "Hubs") {
+      currentMode.title = "Classic";
+      currentMode.innerHTML = "Classic";
       var iconOne = document.getElementById("rewardicon");
       var iconTwo = document.getElementById("profileicon");
-      classic.title = "Classic";
-      classic.innerHTML = "Classic";
+      viewReward();
       iconOne.className = "hide";
-      iconTwo.className = "hide";
+      iconTwo.classname = "hide";
+
       var createHUB = document.createElement("iframe");
       createHUB.src = "/games";
       createHUB.className = "SuperSplash";
       createHUB.allow = "microphone; camera; vr; speaker;";
-      var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-      var openHub = document.getElementById("hubs");
-      openHub.style = "display:block";
+      var CREATEHUB = document.getElementById("MTCG").appendChild(createHUB);
+      var closeHub = document.getElementById("MTCG");
+      closeHub.style = "display:block";
+      if (token.innerHTML == "LOGIN") {
+        poof = setTimeout(poof, 5000);
+        poof();
+        function poof() {
+          dreamWallet.innerHTML = dreamInput.value;
+        }
+      }
     }
   } else {
-    if (classic.title == "Classic") {
-      let text;
-      if (confirm("Enter Hubs Mode") == true) {
-        var iconOne = document.getElementById("rewardicon");
-        var iconTwo = document.getElementById("profileicon");
-        classic.title = "Hubs";
-        classic.innerHTML = "Hubs";
-        iconOne.className = "hide";
-        iconTwo.className = "hide";
-        var createHUB = document.createElement("iframe");
-        createHUB.src =
-          "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
-
-        createHUB.className = "SuperSplash";
-        createHUB.allow = "microphone; camera; vr; speaker;";
-        var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-        var openHub = document.getElementById("hubs");
-        openHub.style = "display:block";
+    if (currentMode.title == "Classic") {
+      currentMode.title = "Hubs";
+      currentMode.innerHTML = "Hubs";
+      var iconOne = document.getElementById("rewardicon");
+      var iconTwo = document.getElementById("profileicon");
+      viewReward();
+      iconOne.className = "rewardicon";
+      iconTwo.classname = "profileicon";
+      viewReward();
+      var createHUB = document.createElement("iframe");
+      createHUB.src =
+        "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
+      createHUB.className = "SuperSplash";
+      createHUB.allow = "microphone; camera; vr; speaker;";
+      var CREATEHUB = document.getElementById("MTCG").appendChild(createHUB);
+      var closeHub = document.getElementById("MTCG");
+      closeHub.style = "display:block";
+      if (token.innerHTML == "LOGIN") {
+        poof = setTimeout(poof, 5000);
+        poof();
+        function poof() {
+          dreamWallet.innerHTML = dreamInput.value;
+        }
       }
     }
   }
