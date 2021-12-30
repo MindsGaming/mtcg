@@ -99,13 +99,10 @@ function quit() {
   var txt;
   var r = confirm("Quit Your Job?");
   if (r == true) {
-    poof = setTimeout(poof, 3000);
-  poof();
-  function poof() {
-    window.close("#");
-  }
-window.open("/")
-  } else txt =,  "Get back to work";
+    window.open("/", "_blank");
+    window.close("");
+    closePINN();
+  } else txt = "Get back to work";
 }
 
 function claimBurgers() {

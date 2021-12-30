@@ -16,8 +16,9 @@ function classicGuest() {
   oppsLogin.className = "hide";
 }
 
-function pinnBurgers() {
   var game = document.getElementById("pinnBurgers");
+
+function pinnBurgers() {
   game.title = "Open";
   var createHUB = document.createElement("iframe");
   createHUB.src = "/games/pinn";
@@ -26,3 +27,6 @@ function pinnBurgers() {
   var CREATEHUB = document.getElementById("pinnBurgers").appendChild(createHUB);
 }
 
+function closePINN() {
+  game.className = "hide";
+}
