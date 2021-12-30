@@ -177,11 +177,9 @@ function vrMode() {
       createHUB.src = "/games";
       createHUB.className = "SuperSplash";
       createHUB.allow = "microphone; camera; vr; speaker;";
-      var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-      var openHub = document.getElementById("hubs");
+      var CREATEHUB = document.getElementById("games").appendChild(createHUB);
+      var openHub = document.getElementById("games");
       openHub.style = "display:block";
-      iconOne.className = "hide";
-      iconTwo.classname = "hide";
     } else {
     }
   } else {

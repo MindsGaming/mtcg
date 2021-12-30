@@ -16,3 +16,10 @@ function classicGuest() {
   oppsLogin.className = "hide";
 }
 
+function pinnBurgers() {
+  var createHUB = document.createElement("iframe");
+  createHUB.src = "/games/pinn";
+  createHUB.className = "SuperSplash";
+  createHUB.allow = "microphone; camera; vr; speaker;";
+  var CREATEHUB = document.getElementById("pinnBurgers").appendChild(createHUB);
+}
