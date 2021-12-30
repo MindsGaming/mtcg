@@ -1,5 +1,11 @@
 var x = document.getElementById("myWallet");
-var token = x.innerHTML;
+var wallet = x.innerHTML;
+
+if (wallet == "LOGIN"){
+  var x = document.getElementById("")
+    
+    }
+
 
 function classicLogin() {
   selectToken();
