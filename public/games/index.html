@@ -14,7 +14,6 @@
       rel="icon"
       href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
-    <script src="/games/dice.js" defer></script>
     <script src="/client.js" defer></script>
     <script src="/fly.js" defer></script>
     <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
@@ -23,6 +22,7 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/games/pinn/pinn.css" />
     <script src="/games/pinn/pinn.js" defer></script>
+    <script src="/games/dice.js" defer></script>
 
     <style>
       .gamewrap {
@@ -155,33 +155,31 @@
       </center>
     </div>
 
-    <div id="walletCheck" title="wallet" class="hide">
-      <div align="center">
-        <h1>
-          What Is Your Wallet ID Again?
-        </h1>
-        <div class="wrapIMG">
-          <div class="loginImage">
+    <div id="oopsLogin" align="center" class="hide">
+      <h1>
+        What Is Your Wallet ID Again?
+      </h1>
+      <div class="wrapIMG">
+        <div class="loginImage">
+          <br />
+          <br />
+          <form class="form" id="wallet">
+            <input
+              name="dream"
+              aria-label="a new dream"
+              type="text"
+              maxlength="100"
+              placeholder="Wallet ID"
+              required
+            />
             <br />
-            <br />
-            <form class="form" id="wallet">
-              <input
-                name="dream"
-                aria-label="a new dream"
-                type="text"
-                maxlength="100"
-                placeholder="Wallet ID"
-                required
-              />
-              <br />
-              <button type="submit" id="submit-dream" onclick="classicLogin();">
-                Login
-              </button>
-            </form>
-            <br />
-            <div class="button" onclick="classicGuest();">
-              Guest
-            </div>
+            <button type="submit" id="submit-dream" onclick="classicLogin();">
+              Login
+            </button>
+          </form>
+          <br />
+          <div class="button" onclick="classicGuest();">
+            Guest
           </div>
         </div>
       </div>
@@ -204,7 +202,11 @@
       <div class="hide">Player: <label id="myName">Guest</label></div>
       <div>
         Wallet:
-        <label id="myWallet" onclick="getLogin();" style="cursor:pointer;"
+        <label
+          id="myWallet"
+          title="wallet"
+          onclick="getLogin();"
+          style="cursor:pointer;"
           >LOGIN</label
         >
       </div>

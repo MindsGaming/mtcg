@@ -1,14 +1,9 @@
 var token = document.getElementById("myWallet");
-var wallet = document.getElementById("walletCheck");
 
-if (dreamWallet.value == "LOGIN") {
-  poof = setTimeout(poof, 5000);
-  poof();
-  function poof() {
-    wallet.className = "offline";
-    wallet.title = "LOGED";
-  }
+if (token.innerHTML == "LOGIN"){
+  alert("test")
 }
+
 
 function classicLogin() {
   var x = document.getElementById("myWallet");
