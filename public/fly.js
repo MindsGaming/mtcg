@@ -143,18 +143,40 @@ function checkStatus() {
 
 function vrMode() {
   var mode = document.getElementById("vrMode");
+  var walletmode = document.getElementById("myWallet");
+  var sticker = dreamInput.value;
+    var iconOne = document.getElementById("rewardicon");
+  var iconTwo = document.getElementById("profileicon");
+
 
   let text;
-  if (confirm("Change ") == true) {
+  if (confirm("Change Modes?") == true) {
     if (mode.title == "Hubs") {
-      var openHub = document.getElementById("login");
-      openHub.className = "hide";
+      iconOne.className = "hide";
+      iconTwo.className = "hide";
+      var createHUB = document.createElement("iframe");
+      createHUB.src = "/games";
+      createHUB.className = "SuperSplash";
+      createHUB.allow = "microphone; camera; vr; speaker;";
+      var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+      var openHub = document.getElementById("hubs");
+      openHub.style = "display:block";
       mode.title = "Classic";
+      mode.innerHTML = "Classic";
+      walletmode.innerHTML = sticker;
     } else {
       if ((mode.title = "Classic")) {
-        var openHub = document.getElementById("login");
-        openHub.className = "block";
+        var createHUB = document.createElement("iframe");
+        createHUB.src =
+          "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
+        createHUB.className = "SuperSplash";
+        createHUB.allow = "microphone; camera; vr; speaker;";
+        var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+        var openHub = document.getElementById("hubs");
+        openHub.style = "display:block";
         mode.title = "Hubs";
+        mode.innerHTML = "Hubs"
+        walletmode.innerHTML = sticker;
       }
     }
   }
