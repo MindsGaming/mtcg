@@ -102,3 +102,58 @@ function quit() {
     window.open("/", "_self");
   } else txt = "Get back to work";
 }
+
+function claimBurgers() {
+  var mywallet = document.getElementById("myWallet");
+
+  if (dreamInput.value == "") {
+    alert("Login To Earn Rewards");
+    otherSound();
+  } else {
+    if (minutesLabel.innerHTML == "00") {
+      alert("You Need A Full Token To Claim Rewards");
+      oopsSound();
+    } else {
+      var lifeScore = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+      var REWARDS = lifeScore;
+      const data = {
+        dream: mywallet.innerHTML + " " + dreamToken.innerHTML + ":" + REWARDS
+      };
+
+      fetch("/addDream", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" }
+      })
+        .then(res => res.json())
+        .then(response => {
+          console.log(JSON.stringify(response));
+        });
+      // get dream value and add it to the list
+      dreams.push(
+        mywallet.innerHTML + " " + dreamToken.innerHTML + ":" + REWARDS
+      );
+      appendNewDream(
+        mywallet.innerHTML + " " + dreamToken.innerHTML + ":" + REWARDS
+      );
+      reset();
+      selectToken();
+
+      if (dreamToken.innerHTML == "GAMER") {
+        dreamToken.innerHTML = "DooBetter";
+        setInterval(setTime, 15000);
+      }
+
+      if (dreamToken.innerHTML == "DooBetter") {
+        dreamToken.innerHTML = "ECLIPSE";
+        setInterval(setTime, 13141);
+      }
+
+      if (dreamToken.innerHTML == "ECLIPSE") {
+        dreamToken.innerHTML = "GAMER";
+        setInterval(setTime, 18981);
+      }
+      rewardSound();
+    }
+  }
+}

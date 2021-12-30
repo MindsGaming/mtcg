@@ -16,17 +16,3 @@ function classicGuest() {
   oppsLogin.className = "hide";
 }
 
-function pinnBurgers() {
-  var sticker = document.getElementById("myWallet");
-  var stick = sticker.HTML;
-  var game = document.getElementById("gameWrap");
-  var superGame = document.getElementById("superGame");
-  superGame.className = "SuperSplash";
-  if (token.innerHTML == "LOGIN") {
-    poof = setTimeout(poof, 5000);
-    poof();
-    function poof() {
-      sticker.innerHTML = stick;
-    }
-  }
-}
