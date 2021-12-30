@@ -99,65 +99,10 @@ function quit() {
   var txt;
   var r = confirm("Quit Your Job?");
   if (r == true) {
-    var iconOne = document.getElementById("rewardicon");
-    var iconTwo = document.getElementById("profileicon");
-    iconOne.className = "hide";
-    iconTwo.className = "hide";
-    window.open("/", "_self");
+    window.close("#");
   } else txt = "Get back to work";
 }
 
 function claimBurgers() {
-  var burgers = document.getElementById("Rewards");
-  var xtra = document.getElementById("XTRA");
-  var REWARDS = burgers.value + "." + xtra;
-  if (dreamInput.value == "") {
-    alert("Login To Earn Rewards");
-    otherSound();
-  } else {
-    if (minutesLabel.innerHTML == "00") {
-      alert("You Need A Full Token To Claim Rewards");
-      oopsSound();
-    } else {
-      const data = {
-        dream: dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
-      };
-
-      fetch("/addDream", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" }
-      })
-        .then(res => res.json())
-        .then(response => {
-          console.log(JSON.stringify(response));
-        });
-      // get dream value and add it to the list
-      dreams.push(
-        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
-      );
-      appendNewDream(
-        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
-      );
-      reset();
-      selectToken();
-
-      if (dreamToken.innerHTML == "GAMER") {
-        dreamToken.innerHTML = "DooBetter";
-        setInterval(setTime, 15000);
-      }
-
-      if (dreamToken.innerHTML == "DooBetter") {
-        dreamToken.innerHTML = "ECLIPSE";
-        setInterval(setTime, 13141);
-      }
-
-      if (dreamToken.innerHTML == "ECLIPSE") {
-        dreamToken.innerHTML = "GAMER";
-        setInterval(setTime, 18981);
-      }
-      rewardSound();
-    }
-  }
+  claimUpdate();
 }
-
