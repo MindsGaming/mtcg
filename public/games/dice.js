@@ -17,11 +17,7 @@ function classicGuest() {
 }
 
 function gametest() {
-  var createHUB = document.createElement("iframe");
-  createHUB.src = "/games/gametestplay";
-  createHUB.className = "SuperSplash";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("gametest").appendChild(createHUB);
+  window.open("http://gametestplay.com/ball.html", "_blank");
 }
 
 function burgersLoad() {

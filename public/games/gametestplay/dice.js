@@ -1,4 +1,3 @@
-alert("test");
 play();
 function play() {
   var game = document.getElementById("gametest");
