@@ -16,17 +16,18 @@ function classicGuest() {
   oppsLogin.className = "hide";
 }
 
-  var game = document.getElementById("pinnBurgers");
+var game = document.getElementById("pinnBurgers");
 
 function pinnBurgers() {
-  game.title = "Open";
   var createHUB = document.createElement("iframe");
   createHUB.src = "/games/pinn";
-  createHUB.className = "SuperSplash";
+  createHUB.className = "gameSplash";
+  createHUB.id = "PINN"
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("pinnBurgers").appendChild(createHUB);
+
 }
 
 function closePINN() {
-  game.className = "hide";
+  document.getElementById("PINN").className = "hide";
 }
