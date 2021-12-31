@@ -116,7 +116,6 @@ function claimUpdate() {
       alert("You Need A Full Token To Claim Rewards");
       oopsSound();
     } else {
-      selectToken();
       var lifeScore = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
       var REWARDS = lifeScore;
       const data = {
@@ -155,6 +154,7 @@ function claimUpdate() {
         dreamToken.innerHTML = "GAMER";
         setInterval(setTime, 18981);
       }
+      selectToken();
       rewardSound();
     }
   }
@@ -183,5 +183,5 @@ function selectToken() {
   ];
   const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
   var a = document.getElementById("myToken");
-  a.innerHTML = newtoken;
+  dreamToken.innerHTML = newtoken;
 }
