@@ -19,59 +19,103 @@
     <script src="/fly.js" defer></script>
     <script src="/games/dice.js" defer></script>
     <link rel="stylesheet" href="/style.css" />
-
     <style>
-      .gamewrap {
-        position: fixed;
-        display: block;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: blue;
-      }
-      .gameSplash {
-        position: fixed;
-        display: block;
-        margin: -1px;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      .gTitle {
-        margin-top: 35%;
-        font-size: 25px;
-      }
-
       .bountyHunter {
-        float: left;
+        position: relative;
         display: block;
-        margin-top: 3%;
-        margin-left: 10%;
-        background-color: white;
+        background-color: transparent;
         color: black;
-        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fpixel.png");
-        background-size: cover;
+        margin-left: 15rem;
+        background-image: url("https://cdn.minds.com/api/v2/media/proxy?size=800&src=https%3A%2F%2Fcdn.minds.com%2Ffs%2Fv1%2Fbanners%2F1323359473837805572%2F1640896437");
+        background-size: contain;
         background-repeat: no-repeat;
-        width: 15rem;
-        height: 7rem;
+        width: 100%;
+        height: 100%;
+      }
+      .bWrap {
+        margin-top: -11rem;
+      }
+      .hide {
+        display: none;
       }
     </style>
   </head>
   <body style="background-color: green;">
-    <iframe src="/miner"> </iframe>
-    <div class="gameWrap">
-      <center>
-        <br />
-        <h3>
-          Select A Game
-        </h3>
-        <div onmouseover="claimUpdate();" class="pinnBurgers">
-          <div class="gTitle" id="burgers" title="Closed">
-            Pinn Burgers
-          </div>
+    <iframe src="/miner" class="hide"> </iframe>
+    <div class="bountyHunter"></div>
+    <div class="bWrap" align="center" id="bWrap">
+      <div class="wrapIMG">
+        <div class="loginImage">
+          <br />
+          <br />
+          <form class="form" id="wallet">
+            <input
+              name="dream"
+              aria-label="a new dream"
+              type="text"
+              maxlength="100"
+              placeholder="Claim ME"
+              required
+            />
+            <br />
+            <button type="submit" onclick="claimbountyEGG();">Claim EGG</button>
+          </form>
         </div>
+      </div>
+    </div>
+
+    <div class="rewardicon" id="rewardicon" onclick="claimUpdate();">
+      <br />
+      <br />
+
+      <center>
+        <label id="minutes" value="0">00</label>.<label id="seconds" value="0"
+          >00</label
+        >
+      </center>
+    </div>
+    <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
+    <div title="closed" id="REWARDS" class="hide">
+      <div onclick="viewReward();" style="cursor:pointer; margin-left: 90%;">
+        X
+      </div>
+      <div class="hide">Player: <label id="myName">Guest</label></div>
+      <div>
+        Wallet:
+        <label id="myWallet" onclick="getLogin();" style="cursor:pointer;"
+          >LOGIN</label
+        >
+      </div>
+      <div>
+        Reward Token:
+        <label id="myToken" onclick="changeToken();">Random</label>
+      </div>
+      <div>
+        Mode:
+        <label id="vrMode" title="Hubs" onclick="vrMode();">Hubs</label>
+      </div>
+      <br />
+      <div class="button" onclick="pendingClaims();">
+        View Pending
+      </div>
+      <button class="hide" id="clear-dreams">
+        Clear Dreams
+      </button>
+      <section title="closed" id="pendingClaims" class="hide">
+        <ul id="dreams"></ul>
+      </section>
+    </div>
+
+    <div id="offline" class="hide">
+      <center>
+        <h1>
+          <br />
+          You Appear To Be Offline
+        </h1>
+        <p>
+          You can't earn rewards offline. Reconnect To Earn Rewards
+        </p>
+        <div class="offlineIMG"></div>
       </center>
     </div>
   </body>
