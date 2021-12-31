@@ -84,7 +84,9 @@ dreamsForm.onsubmit = event => {
   appendNewDream(dreamInput.value + ":Loged In");
 
   // reset form
-  alert("You're Loged In! Do Not Close Or Refresh This Page Or You May Lose Your Rewards");
+  alert(
+    "You're Loged In! Do Not Close Or Refresh This Page Or You May Lose Your Rewards"
+  );
   var createHUB = document.createElement("iframe");
   createHUB.src =
     "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
@@ -114,6 +116,7 @@ function claimUpdate() {
       alert("You Need A Full Token To Claim Rewards");
       oopsSound();
     } else {
+      selectToken();
       var lifeScore = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
       var REWARDS = lifeScore;
       const data = {
@@ -137,7 +140,6 @@ function claimUpdate() {
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
       reset();
-      selectToken();
 
       if (dreamToken.innerHTML == "GAMER") {
         dreamToken.innerHTML = "DooBetter";
