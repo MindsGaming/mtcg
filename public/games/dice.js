@@ -35,3 +35,11 @@ function soundsLoad() {
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("sounds").appendChild(createHUB);
 }
+
+function bombsLoad() {
+  var createHUB = document.createElement("iframe");
+  createHUB.src = "/games/bombs";
+  createHUB.className = "SuperSplash";
+  createHUB.allow = "microphone; camera; vr; speaker;";
+  var CREATEHUB = document.getElementById("bombs").appendChild(createHUB);
+}
