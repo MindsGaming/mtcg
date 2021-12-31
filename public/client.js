@@ -147,7 +147,11 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
+      var currentLevel = document.getElementById("levelUp");
+      var levelup = currentLevel + minutesLabel.innerHTML;
+      currentLevel.innerHTML = levelup;
       reset();
+      selectToken();
       rewardSound();
     }
   }
