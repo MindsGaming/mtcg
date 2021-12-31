@@ -178,8 +178,8 @@ function vrMode() {
       createHUB.className = "SuperSplash";
       createHUB.allow = "microphone; camera; vr; speaker;";
       var CREATEHUB = document.getElementById("games").appendChild(createHUB);
-      var openHub = document.getElementById("games");
-      openHub.style = "display:block";
+      var openHub = document.getElementById("hu");
+      openHub.className = "S";
     } else {
     }
   } else {
@@ -194,10 +194,8 @@ function vrMode() {
         createHUB.className = "SuperSplash";
         createHUB.allow = "microphone; camera; vr; speaker;";
         var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-        var openHub = document.getElementById("hubs");
-        openHub.style = "display:block";
-        iconOne.className = "rewardicon";
-        iconTwo.classname = "profileicon";
+        var openHub = document.getElementById("games");
+        openHub.className = "hide";
       } else {
       }
     }
