@@ -44,6 +44,8 @@ const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
 const myToken = document.getElementById("REWARDTOKEN");
+var dreamToken = document.getElementById("myToken");
+
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
