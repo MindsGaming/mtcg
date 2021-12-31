@@ -181,5 +181,5 @@ function selectToken() {
   ];
   const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
   var a = document.getElementById("myToken");
-  dreamToken.innerHTML = newtoken;
+  dreamToken.innerHTML = newtoken
 }
