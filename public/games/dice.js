@@ -26,3 +26,4 @@ function pinnBurgers() {
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("pinnBurgers").appendChild(createHUB);
 }
+
