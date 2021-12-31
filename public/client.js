@@ -10,7 +10,6 @@ selectToken();
 
 var totalSeconds = 0;
 if (dreamToken.innerHTML == "GAMER") {
-  
   setInterval(setTime, 8981);
 }
 
@@ -181,5 +180,6 @@ function selectToken() {
   ];
   const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
   var a = document.getElementById("myToken");
-  dreamToken.innerHTML = newtoken
+  a.innerHTML = newtoken;
+  dreamToken.innerHTML = a.innerHTML;
 }
