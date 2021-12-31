@@ -99,11 +99,8 @@ function quit() {
   var txt;
   var r = confirm("Quit Your Job?");
   if (r == true) {
-   var pinn = document.getElementById("pinnBurgers");
-    pinn.className = "hide";
-
-    window.open("/", "_blank");
-    closePINN();
+    var iconOne = document.getElementById
+    window.open("/", "_self");
   } else txt = "Get back to work";
 }
 

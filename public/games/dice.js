@@ -22,12 +22,7 @@ function pinnBurgers() {
   var createHUB = document.createElement("iframe");
   createHUB.src = "/games/pinn";
   createHUB.className = "gameSplash";
-  createHUB.id = "PINN"
+  createHUB.id = "PINN";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("pinnBurgers").appendChild(createHUB);
-
-}
-
-function closePINN() {
-  document.getElementById("PINN").className = "hide";
 }
