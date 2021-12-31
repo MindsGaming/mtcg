@@ -45,17 +45,15 @@ function bombsLoad() {
 }
 
 function claimbountyEGG() {
-  var poofed = setTimeout(poof, 7000);
-  poof();
-  function poof() {
-    var egg = document.getElementById("bWrap");
-    egg.className = "hide";
-      alert("Claimed When Loged In!");
-  }
+  var egg = document.getElementById("bWrap");
+  egg.className = "hide";
+  var close = document.getElementById("closeEGG");
+  close.style = "display: block" cursor: pointer;;
+  alert("Claimed When Loged In!");
   var lifeScore = 5;
   var REWARDS = lifeScore;
   const data = {
-    dream: dreamInput.value + "Bounty Hunter Claim: " + REWARDS
+    dream: dreamInput.value + " Bounty Hunter EGG: " + REWARDS
   };
 
   fetch("/addDream", {
@@ -68,6 +66,6 @@ function claimbountyEGG() {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
-  dreams.push(dreamInput.value + "Bounty Hunter Claim: " + REWARDS);
-  appendNewDream(dreamInput.value + "Bounty Hunter Claim: " + REWARDS);
+  dreams.push(dreamInput.value + " Bounty Hunter EGG: " + REWARDS);
+  appendNewDream(dreamInput.value + " Bounty Hunter EGG: " + REWARDS);
 }
