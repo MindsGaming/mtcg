@@ -4,20 +4,21 @@
 console.log("Welcome To #MindsGaming Blockchain Rewards");
 const minutesLabel = document.getElementById("minutes");
 const secondsLabel = document.getElementById("seconds");
+var superToken = document.getElementById("myToken");
 var dreamToken = document.getElementById("myToken");
 var dreamWallet = document.getElementById("myWallet");
 selectToken();
 
 var totalSeconds = 0;
-if (dreamToken.innerHTML == "GAMER") {
+if (superToken.innerHTML == "GAMER") {
   setInterval(setTime, 8981);
 }
 
-if (dreamToken.innerHTML == "DooBetter") {
+if (superToken.innerHTML == "DooBetter") {
   setInterval(setTime, 5000);
 }
 
-if (dreamToken.innerHTML == "ECLIPSE") {
+if (superToken.innerHTML == "ECLIPSE") {
   setInterval(setTime, 3141);
 }
 
@@ -44,8 +45,6 @@ const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
 const myToken = document.getElementById("REWARDTOKEN");
-var dreamToken = document.getElementById("myToken");
-
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -140,20 +139,21 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
+      var tokens = [
+        "GAMER",
+        "DooBetter",
+        "ECLIPSE",
+        "DooBetter",
+        "ECLIPSE",
+        "GAMER"
+      ];
+      const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
+      var a = document.getElementById("myToken");
+      a.innerHTML = newtoken;
+      dreamToken.innerHTML = a.innerHTML;
+      superToken.innerHTML = newtoken;
+
       reset();
-      selectToken();
-
-      if (dreamToken.innerHTML == "GAMER") {
-        dreamToken.innerHTML = "DooBetter";
-      }
-
-      if (dreamToken.innerHTML == "DooBetter") {
-        dreamToken.innerHTML = "ECLIPSE";
-      }
-
-      if (dreamToken.innerHTML == "ECLIPSE") {
-        dreamToken.innerHTML = "GAMER";
-      }
       rewardSound();
     }
   }
@@ -184,4 +184,5 @@ function selectToken() {
   var a = document.getElementById("myToken");
   a.innerHTML = newtoken;
   dreamToken.innerHTML = a.innerHTML;
+  superToken.innerHTML = newtoken;
 }
