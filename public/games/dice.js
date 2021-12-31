@@ -24,16 +24,24 @@ function burgersLoad() {
   createHUB.className = "gameSplash";
   createHUB.id = "PINN";
   createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("pinnBurgers").appendChild(createHUB);
+  var CREATEHUB = document.getElementById("burgers").appendChild(createHUB);
 }
 
 function soundsLoad() {
-  var game = document.getElementById("burgers");
+  var game = document.getElementById("sounds");
   var createHUB = document.createElement("iframe");
-  createHUB.src = "/games/pinn";
+  createHUB.src = "/games/eclipse";
   createHUB.className = "gameSplash";
-  createHUB.id = "PINN";
+  createHUB.id = "ECLIPSE";
   createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("pinnBurgers").appendChild(createHUB);
+  var CREATEHUB = document.getElementById("sounds").appendChild(createHUB);
 }
 
+function gametest() {
+var game = document.getElementById("gametest");
+  var createHUB = document.createElement("iframe");
+  createHUB.src = "http://gametestplay.com";
+  createHUB.className = "gameSplash";
+  createHUB.id = "GTP";
+  createHUB.allow = "microphone; camera; vr; speaker;";
+  var CREATEHUB = document.getElementById("gametest").appendChild(createHUB);}
