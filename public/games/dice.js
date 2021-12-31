@@ -45,12 +45,12 @@ function bombsLoad() {
 }
 
 function claimbountyEGG() {
-  var poofed = setTimeout(poof, 5000);
+  var poofed = setTimeout(poof, 7000);
   poof();
   function poof() {
     var egg = document.getElementById("bWrap");
     egg.className = "hide";
-    alert("Claimed!");
+      alert("Claimed When Loged In!");
   }
   var lifeScore = 5;
   var REWARDS = lifeScore;
@@ -70,5 +70,4 @@ function claimbountyEGG() {
   // get dream value and add it to the list
   dreams.push(dreamInput.value + "Bounty Hunter Claim: " + REWARDS);
   appendNewDream(dreamInput.value + "Bounty Hunter Claim: " + REWARDS);
-  window.close("#");
 }
