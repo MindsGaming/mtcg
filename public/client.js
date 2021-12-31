@@ -147,7 +147,6 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
-      selectToken();
       reset();
       rewardSound();
     }
