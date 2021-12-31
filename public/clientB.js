@@ -10,7 +10,7 @@ selectToken();
 
 var totalSeconds = 0;
 if (dreamToken.innerHTML == "GAMER") {
-  
+  var superToken = document.getElementById("myToken")
   setInterval(setTime, 8981);
 }
 
