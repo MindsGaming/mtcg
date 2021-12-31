@@ -104,7 +104,7 @@ function quit() {
 }
 
 function claimBurgers() {
-  var served = document.getElementById("Rewards");
-  var total = served.value;
+  var served = document.getElementById("rewards");
+  var total = served.innerHTML;
   alert(total);
 }

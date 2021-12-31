@@ -16,9 +16,19 @@ function classicGuest() {
   oppsLogin.className = "hide";
 }
 
-var game = document.getElementById("pinnBurgers");
 
-function pinnBurgers() {
+function burgersLoad() {
+  var game = document.getElementById("burgers");
+  var createHUB = document.createElement("iframe");
+  createHUB.src = "/games/pinn";
+  createHUB.className = "gameSplash";
+  createHUB.id = "PINN";
+  createHUB.allow = "microphone; camera; vr; speaker;";
+  var CREATEHUB = document.getElementById("pinnBurgers").appendChild(createHUB);
+}
+
+function soundsLoad() {
+  var game = document.getElementById("burgers");
   var createHUB = document.createElement("iframe");
   createHUB.src = "/games/pinn";
   createHUB.className = "gameSplash";
