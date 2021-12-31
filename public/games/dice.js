@@ -16,32 +16,29 @@ function classicGuest() {
   oppsLogin.className = "hide";
 }
 
-
 function burgersLoad() {
   var game = document.getElementById("burgers");
-  var createHUB = document.createElement("iframe");
-  createHUB.src = "/games/pinn";
-  createHUB.className = "gameSplash";
-  createHUB.id = "PINN";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("burgers").appendChild(createHUB);
+  var burgers = window.open("/games/pinn", "_self");
+  game.innerHTML = burgers;
+  game.className = "gameSplash";
+  game.id = "PINN";
+  game.allow = "microphone; camera; vr; speaker;";
 }
 
 function soundsLoad() {
   var game = document.getElementById("sounds");
-  var createHUB = document.createElement("iframe");
-  createHUB.src = "/games/eclipse";
-  createHUB.className = "gameSplash";
-  createHUB.id = "ECLIPSE";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("sounds").appendChild(createHUB);
+  var sounds = window.open("/games/eclipse", "_self");
+  game.innerHTML = sounds;
+  game.className = "gameSplash";
+  game.id = "ECLIPSE";
+  game.allow = "microphone; camera; vr; speaker;";
 }
 
 function gametest() {
-var game = document.getElementById("gametest");
-  var createHUB = document.createElement("iframe");
-  createHUB.src = "http://gametestplay.com";
-  createHUB.className = "gameSplash";
-  createHUB.id = "GTP";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("gametest").appendChild(createHUB);}
+  var game = document.getElementById("gametest");
+  var open = window.open("http://gametestplay.com/ball.html", "_blank");
+  game.innerHTML = open;
+  game.className = "gameSplash";
+  game.id = "GTM";
+  game.allow = "microphone; camera; vr; speaker;";
+}
