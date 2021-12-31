@@ -155,18 +155,15 @@ function guest() {
 
 function getLogin() {
   var closeHub = document.getElementById("hubs");
-  var iconOne = document.getElementById("rewardicon");
-  var iconTwo = document.getElementById("profileicon");
-  closeHub.style = "display:none";
-  iconOne.className = "rewardicon";
-  iconTwo.className = "profileicon";
+  var games = document.getElementById("games");
+
+  closeHub.className = "hide";
+  games.className = "hide";
 }
 
 function vrMode() {
   var a = document.getElementById("vrMode");
   var currentWallet = dreamWallet.innerHTML;
-  var iconOne = document.getElementById("rewardicon");
-  var iconTwo = document.getElementById("profileicon");
   let text;
   if (a.title == "Hubs") {
     if (confirm("Change To Classic Mode?") == true) {
@@ -178,8 +175,10 @@ function vrMode() {
       createHUB.className = "SuperSplash";
       createHUB.allow = "microphone; camera; vr; speaker;";
       var CREATEHUB = document.getElementById("games").appendChild(createHUB);
-      var openHub = document.getElementById("hu");
-      openHub.className = "S";
+      var closeHub = document.getElementById("hubs");
+      closeHub.className = "hide";
+      var games = document.getElementById("games");
+      games.className = "SuperSplash";
     } else {
     }
   } else {
@@ -194,8 +193,10 @@ function vrMode() {
         createHUB.className = "SuperSplash";
         createHUB.allow = "microphone; camera; vr; speaker;";
         var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-        var openHub = document.getElementById("games");
-        openHub.className = "hide";
+        var closeHub = document.getElementById("hubs");
+        closeHub.className = "SuperSplash";
+        var games = document.getElementById("games");
+        games.className = "hide";
       } else {
       }
     }
