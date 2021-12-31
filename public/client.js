@@ -10,15 +10,24 @@ selectToken();
 
 var totalSeconds = 0;
 if (dreamToken.innerHTML == "GAMER") {
-  setInterval(setTime, 8981);
+  var superToken = document.getElementById("myToken");
+  if (superToken.innerHTML == "GAMER") {
+    setInterval(setTime, 8981);
+  }
 }
 
 if (dreamToken.innerHTML == "DooBetter") {
-  setInterval(setTime, 5000);
+  var superToken = document.getElementById("myToken");
+  if (superToken.innerHTML == "DooBetter") {
+    setInterval(setTime, 5000);
+  }
 }
 
 if (dreamToken.innerHTML == "ECLIPSE") {
-  setInterval(setTime, 3141);
+  var superToken = document.getElementById("myToken");
+  if (superToken.innerHTML == "ECLIPSE") {
+    setInterval(setTime, 3141);
+  }
 }
 
 function setTime() {
