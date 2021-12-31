@@ -48,7 +48,7 @@ function claimbountyEGG() {
   var egg = document.getElementById("bWrap");
   egg.className = "hide";
   var close = document.getElementById("closeEGG");
-  close.style = "display: block; cursor: pointer;";
+  close.style = "display: block" cursor: pointer;;
   alert("Claimed When Loged In!");
   var lifeScore = 5;
   var REWARDS = lifeScore;
@@ -68,8 +68,4 @@ function claimbountyEGG() {
   // get dream value and add it to the list
   dreams.push(dreamInput.value + " Bounty Hunter EGG: " + REWARDS);
   appendNewDream(dreamInput.value + " Bounty Hunter EGG: " + REWARDS);
-}
-
-function closeEGG() {
-  window.close("#");
 }

@@ -10,24 +10,15 @@ selectToken();
 
 var totalSeconds = 0;
 if (dreamToken.innerHTML == "GAMER") {
-  var superToken = document.getElementById("myToken");
-  if (superToken.innerHTML == "GAMER") {
-    setInterval(setTime, 8981);
-  }
+  setInterval(setTime, 8981);
 }
 
 if (dreamToken.innerHTML == "DooBetter") {
-  var superToken = document.getElementById("myToken");
-  if (superToken.innerHTML == "DooBetter") {
-    setInterval(setTime, 5000);
-  }
+  setInterval(setTime, 5000);
 }
 
 if (dreamToken.innerHTML == "ECLIPSE") {
-  var superToken = document.getElementById("myToken");
-  if (superToken.innerHTML == "ECLIPSE") {
-    setInterval(setTime, 3141);
-  }
+  setInterval(setTime, 3141);
 }
 
 function setTime() {
@@ -93,9 +84,7 @@ dreamsForm.onsubmit = event => {
   appendNewDream(dreamInput.value + ":Loged In");
 
   // reset form
-  alert(
-    "You're Loged In! Do Not Close Or Refresh This Page Or You May Lose Your Rewards"
-  );
+  alert("You're Loged In! Do Not Close Or Refresh This Page Or You May Lose Your Rewards");
   var createHUB = document.createElement("iframe");
   createHUB.src =
     "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
@@ -147,11 +136,23 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
-      var currentLevel = document.getElementById("levelUp");
-      var levelup = currentLevel + minutesLabel.innerHTML;
-      currentLevel.innerHTML = levelup;
       reset();
       selectToken();
+
+      if (dreamToken.innerHTML == "GAMER") {
+        dreamToken.innerHTML = "DooBetter";
+        setInterval(setTime, 15000);
+      }
+
+      if (dreamToken.innerHTML == "DooBetter") {
+        dreamToken.innerHTML = "ECLIPSE";
+        setInterval(setTime, 13141);
+      }
+
+      if (dreamToken.innerHTML == "ECLIPSE") {
+        dreamToken.innerHTML = "GAMER";
+        setInterval(setTime, 18981);
+      }
       rewardSound();
     }
   }
@@ -180,5 +181,5 @@ function selectToken() {
   ];
   const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
   var a = document.getElementById("myToken");
-  dreamToken.innerHTML = newtoken;
+  a.innerHTML = newtoken;
 }
