@@ -44,28 +44,4 @@ function bombsLoad() {
   var CREATEHUB = document.getElementById("bombs").appendChild(createHUB);
 }
 
-function claimbountyEGG() {
-  var egg = document.getElementById("bWrap");
-  egg.className = "hide";
-  var close = document.getElementById("closeEGG");
-  close.style = "display: block" cursor: pointer;;
-  alert("Claimed When Loged In!");
-  var lifeScore = 5;
-  var REWARDS = lifeScore;
-  const data = {
-    dream: dreamInput.value + " Bounty Hunter EGG: " + REWARDS
-  };
 
-  fetch("/addDream", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: { "Content-Type": "application/json" }
-  })
-    .then(res => res.json())
-    .then(response => {
-      console.log(JSON.stringify(response));
-    });
-  // get dream value and add it to the list
-  dreams.push(dreamInput.value + " Bounty Hunter EGG: " + REWARDS);
-  appendNewDream(dreamInput.value + " Bounty Hunter EGG: " + REWARDS);
-}
