@@ -154,11 +154,12 @@ function guest() {
 }
 
 function getLogin() {
-  var closeHub = document.getElementById("hubs");
-  var games = document.getElementById("games");
-
-  closeHub.className = "hide";
-  games.className = "hide";
+  var login = document.getElementById("login");
+  var hubs = document.getElementById("hubs");
+  var game = document.getElementById("games");
+  login.className = "SuperSplash";
+  hubs.className = "hide";
+  game.className = "hide";
 }
 
 function vrMode() {
@@ -205,10 +206,10 @@ function vrMode() {
 
 /* Guest PAGE */
 
- var createHUB = document.createElement("iframe");
-  createHUB.src =
-    "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
-  createHUB.className = "SuperSplash";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("guest").appendChild(createHUB);
-  var openHub = document.getElementById("guest");
+var createHUB = document.createElement("iframe");
+createHUB.src =
+  "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
+createHUB.className = "SuperSplash";
+createHUB.allow = "microphone; camera; vr; speaker;";
+var CREATEHUB = document.getElementById("guest").appendChild(createHUB);
+var openHub = document.getElementById("guest");
