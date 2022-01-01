@@ -94,8 +94,8 @@ dreamsForm.onsubmit = event => {
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-  var openHub = document.getElementById("hubs");
-  openHub.style = "display:block";
+  var closeLogin = document.getElementById("login");
+  closeLogin.className = "hide";
   walletChange();
 };
 

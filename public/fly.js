@@ -149,8 +149,8 @@ function guest() {
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-  var closeHub = document.getElementById("hubs");
-  closeHub.style = "display:block";
+  var closeHub = document.getElementById("login");
+  closeHub.className = "hide";
 }
 
 function getLogin() {
