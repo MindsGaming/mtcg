@@ -25,17 +25,16 @@
         display: block;
         background-color: transparent;
         color: black;
+        margin-left: 15rem;
         background-image: url("https://cdn.minds.com/api/v2/media/proxy?size=800&src=https%3A%2F%2Fcdn.minds.com%2Ffs%2Fv1%2Fbanners%2F1323359473837805572%2F1640896437");
         background-size: contain;
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
       }
-      .claimMe{
-        float: right;
-        margin-left: 5px;
+      .bWrap {
+        margin-top: -11rem;
       }
-      
       .hide {
         display: none;
       }
@@ -43,33 +42,42 @@
   </head>
   <body style="background-color: green;">
     <iframe src="/miner" class="hide"> </iframe>
-      <center>
     <div class="bountyHunter"></div>
-      
-      <div class="claimMe" align="center">
-        <div class="wrapIMG">
-          <div class="loginImage">
+    <div class="loginImage" id="closeEGG">
+      <div onclick="closeEGG();" style="display: none;"
+    </div>
+
+    <div class="bWrap" align="center" id="bWrap">
+      <div class="wrapIMG">
+        <div class="loginImage">
+          <br />
+          <br />
+          <form class="form" id="wallet">
+            <input
+              name="dream"
+              aria-label="a new dream"
+              type="text"
+              maxlength="100"
+              placeholder="Claim ME"
+              required
+            />
             <br />
-            <br />
-            <form class="form" id="wallet">
-              <input
-                name="dream"
-                aria-label="a new dream"
-                type="text"
-                maxlength="100"
-                placeholder="Claim Me!"
-                required
-              />
-              <br />
-              <button class="button" onclick="claimbountyEGG();">Claim Reward</button>
-            </form>
-            <br />
-          </div>
+            <button type="submit" onclick="claimbountyEGG();">Claim EGG</button>
+          </form>
         </div>
       </div>
     </div>
 
-   
+    <div class="hide" id="rewardicon" onclick="claimUpdate();">
+      <br />
+      <br />
+
+      <center>
+        <label id="minutes" value="0">00</label>.<label id="seconds" value="0"
+          >00</label
+        >
+      </center>
+    </div>
     <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
     <div title="closed" id="REWARDS" class="hide">
       <div onclick="viewReward();" style="cursor:pointer; margin-left: 90%;">
@@ -114,6 +122,5 @@
         <div class="offlineIMG"></div>
       </center>
     </div>
-    </center>
   </body>
 </html>
