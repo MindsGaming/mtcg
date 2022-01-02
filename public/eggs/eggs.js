@@ -11,6 +11,8 @@ function claimEGG() {
   const dreamInput = dreamsForm.elements["dream"];
   const dreamsList = document.getElementById("dreams");
   const clearButton = document.querySelector("#clear-dreams");
+  const base = document.querySelector("base");
+  var reward = base.ID;
 
   // request the dreams from our app's sqlite database
   fetch("/getDreams", {})
@@ -33,7 +35,7 @@ function claimEGG() {
     // stop our form submission from refreshing the page
     event.preventDefault();
 
-    const data = { dream: dreamInput.value };
+    const data = { dream: dreamInput.value + "EGG Reward: " + reward };
 
     fetch("/addDream", {
       method: "POST",
@@ -45,8 +47,8 @@ function claimEGG() {
         console.log(JSON.stringify(response));
       });
     // get dream value and add it to the list
-    dreams.push(dreamInput.value + "EGG Reward: " + "5");
-    appendNewDream(dreamInput.value + "EGG Reward: " + "5");
+    dreams.push(dreamInput.value + "EGG Reward: " + reward);
+    appendNewDream(dreamInput.value + "EGG Reward: " + reward);
 
     // reset form
     dreamInput.value = "";
@@ -66,6 +68,13 @@ function claimEGG() {
   });
 }
 
-function MoMint(){
-var placholer = document.getElementById("")
+function MoMint() {
+  var placeholder = document.getElementById("EGG");
+  placeholder.placeholder = "Momint User";
+  var moMint = document.getElementById("moMint");
+  moMint.style = "display: none";
+  var btnTXT = document.getElementById("submit-dream");
+  btnTXT.innerHTML = "Claim Momint NFT";
+  var base = document.getElementById("submit-dream");
+  base.ID = "momint";
 }
