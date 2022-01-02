@@ -4,15 +4,8 @@
 console.log("#MindsGaming EGG FOUND");
 
 function claimEGG() {
-  const dreams = [];
-
-  // define variables that reference elements on our page
-  const dreamsForm = document.forms[0];
-  const dreamInput = dreamsForm.elements["dream"];
-  const dreamsList = document.getElementById("dreams");
-  const clearButton = document.querySelector("#clear-dreams");
-  const base = document.querySelector("base");
-  var reward = base.ID;
+  var base = document.getElementById("base");
+  var reward = base.title;
 
   // request the dreams from our app's sqlite database
   fetch("/getDreams", {})
@@ -57,15 +50,6 @@ function claimEGG() {
     egg.className = "hide";
     rewardSound();
   };
-
-  clearButton.addEventListener("click", event => {
-    fetch("/clearDreams", {})
-      .then(res => res.json())
-      .then(response => {
-        console.log("cleared dreams");
-      });
-    dreamsList.innerHTML = "";
-  });
 }
 
 function MoMint() {
@@ -73,8 +57,8 @@ function MoMint() {
   placeholder.placeholder = "Momint User";
   var moMint = document.getElementById("moMint");
   moMint.style = "display: none";
-  var btnTXT = document.getElementById("submit-dream");
+  var btnTXT = document.getElementById("claimEGG");
   btnTXT.innerHTML = "Claim Momint NFT";
-  var base = document.getElementById("submit-dream");
-  base.ID = "momint";
+  var base = document.getElementById("claimEGG");
+  base.title = "Momint Claim";
 }
