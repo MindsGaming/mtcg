@@ -11,7 +11,7 @@ selectToken();
 
 var totalSeconds = 0;
 if (superToken.innerHTML == "GAMER") {
-  setInterval(setTime, 11111);
+  setInterval(setTime, 15111);
 }
 
 if (superToken.innerHTML == "DooBetter") {
