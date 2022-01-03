@@ -11,15 +11,15 @@ selectToken();
 
 var totalSeconds = 0;
 if (superToken.innerHTML == "GAMER") {
-  setInterval(setTime, 8981);
+  setInterval(setTime, 11111);
 }
 
 if (superToken.innerHTML == "DooBetter") {
-  setInterval(setTime, 5000);
+  setInterval(setTime, 8111);
 }
 
 if (superToken.innerHTML == "ECLIPSE") {
-  setInterval(setTime, 3141);
+  setInterval(setTime, 6111);
 }
 
 function setTime() {
