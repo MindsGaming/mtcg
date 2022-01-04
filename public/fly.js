@@ -10,6 +10,10 @@ function viewReward() {
   }
 }
 
+function help(){
+  window.open("/help", "_self");
+}
+
 function rewardSound() {
   var music = document.createElement("audio");
   music.src = "/images/coinsSound.mp3";

@@ -261,7 +261,7 @@ miner {
   display: block;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 180px;
   background-color: silver;
   opacity: 0.6;
   z-index: 3;
@@ -380,15 +380,16 @@ label {
 }
 
 .helpIcon{
-  float: left;
+  float: lwft;
   display: block;
-  margin-left: 8.2rem;
-  margin-top: -1rem;
-  width: 20px;
-  height: 20px;
+  margin-left: 9.2rem;
+  margin-top: -1.1rem;
+  width: 15px;
+  height: 15px;
   background-image:url("https://cdn.pixabay.com/photo/2020/10/15/15/05/question-mark-5656992_960_720.png");
   background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
   
 }
