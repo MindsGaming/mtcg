@@ -378,3 +378,17 @@ label {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.helpIcon{
+  float: left;
+  display: block;
+  margin-left: 8.2rem;
+  margin-top: -1rem;
+  width: 20px;
+  height: 20px;
+  background-image:url("https://cdn.pixabay.com/photo/2020/10/15/15/05/question-mark-5656992_960_720.png");
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}

@@ -82,7 +82,7 @@ dreamsForm.onsubmit = event => {
     });
   // get dream value and add it to the list
   dreams.push(dreamInput.value + "Loged In");
-  appendNewDream(dreamInput.value + "Login In");
+  appendNewDream(dreamInput.value + "Loged In");
 
   // reset form
   alert(
