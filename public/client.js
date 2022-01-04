@@ -68,7 +68,7 @@ dreamsForm.onsubmit = event => {
   event.preventDefault();
 
   const data = {
-    dream: dreamInput.value + ": Loged In"
+    dream: dreamInput.value + ": V0.01"
   };
 
   fetch("/addDream", {
@@ -82,7 +82,7 @@ dreamsForm.onsubmit = event => {
     });
   // get dream value and add it to the list
   dreams.push(dreamInput.value + "Loged In");
-  appendNewDream(dreamInput.value + ":Loged In");
+  appendNewDream(dreamInput.value + "Login In");
 
   // reset form
   alert(
