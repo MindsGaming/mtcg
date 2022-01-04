@@ -1,3 +1,7 @@
+const version = document.getElementById("version");
+version.innerHTML = "V0.01";
+version.title = version.innerHTML;
+
 function viewReward() {
   var a = document.getElementById("REWARDS");
 
@@ -10,7 +14,7 @@ function viewReward() {
   }
 }
 
-function help(){
+function help() {
   window.open("/help", "_self");
 }
 
