@@ -48,36 +48,36 @@ const myToken = document.getElementById("REWARDTOKEN");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
-  .then(res => res.json())
-  .then(response => {
-    response.forEach(row => {
+  .then((res) => res.json())
+  .then((response) => {
+    response.forEach((row) => {
       appendNewDream(row.dream);
     });
   });
 
 // a helper function that creates a list item for a given dream
-const appendNewDream = dream => {
+const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   newListItem.innerText = dream;
   dreamsList.appendChild(newListItem);
 };
 
 // listen for the form to be submitted and add a new dream when it is
-dreamsForm.onsubmit = event => {
+dreamsForm.onsubmit = (event) => {
   // stop our form submission from refreshing the page
   event.preventDefault();
 
   const data = {
-    dream: dreamInput.value + ": V0.01"
+    dream: dreamInput.value + ": V0.02",
   };
 
   fetch("/addDream", {
     method: "POST",
     body: JSON.stringify(data),
-    headers: { "Content-Type": "application/json" }
+    headers: { "Content-Type": "application/json" },
   })
-    .then(res => res.json())
-    .then(response => {
+    .then((res) => res.json())
+    .then((response) => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
@@ -99,10 +99,10 @@ dreamsForm.onsubmit = event => {
   walletChange();
 };
 
-clearButton.addEventListener("click", event => {
+clearButton.addEventListener("click", (event) => {
   fetch("/clearDreams", {})
-    .then(res => res.json())
-    .then(response => {
+    .then((res) => res.json())
+    .then((response) => {
       console.log("cleared dreams");
     });
   dreamsList.innerHTML = "";
@@ -120,16 +120,22 @@ function claimUpdate() {
       var lifeScore = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
       var REWARDS = lifeScore;
       const data = {
-        dream: dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
+        dream:
+          dreamInput.value +
+          " " +
+          dreamToken.innerHTML +
+          ":" +
+          REWARDS +
+          "V0.02",
       };
 
       fetch("/addDream", {
         method: "POST",
         body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/json" },
       })
-        .then(res => res.json())
-        .then(response => {
+        .then((res) => res.json())
+        .then((response) => {
           console.log(JSON.stringify(response));
         });
       // get dream value and add it to the list
@@ -146,7 +152,7 @@ function claimUpdate() {
         "DooBetter",
         "ECLIPSE",
         "GAMER",
-        "Random"
+        "Random",
       ];
       const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
       dreamToken.innerHTML = newtoken;
@@ -177,7 +183,7 @@ function selectToken() {
     "ECLIPSE",
     "DooBetter",
     "ECLIPSE",
-    "GAMER"
+    "GAMER",
   ];
   const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
   var a = document.getElementById("myToken");

@@ -1,5 +1,5 @@
 const version = document.getElementById("version");
-version.innerHTML = "V0.01";
+version.innerHTML = "V0.02";
 version.title = version.innerHTML;
 
 function viewReward() {
