@@ -123,8 +123,8 @@ function claimUpdate() {
         dream:
           dreamInput.value +
           " " +
-          dreamToken.innerHTML +
           "V0.02" +
+          dreamToken.innerHTML +
           ":" +
           REWARDS,
       };
