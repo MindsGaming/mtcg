@@ -81,8 +81,8 @@ dreamsForm.onsubmit = (event) => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
-  dreams.push(dreamInput.value + "Loged In");
-  appendNewDream(dreamInput.value + "Loged In");
+  dreams.push(dreamInput.value + " :Loged In");
+  appendNewDream(dreamInput.value + " :Loged In");
 
   // reset form
   alert(
@@ -124,9 +124,9 @@ function claimUpdate() {
           dreamInput.value +
           " " +
           dreamToken.innerHTML +
+          "V0.02" +
           ":" +
-          REWARDS +
-          "V0.02",
+          REWARDS,
       };
 
       fetch("/addDream", {
