@@ -225,3 +225,4 @@ createHUB.className = "SuperSplash";
 createHUB.allow = "microphone; camera; vr; speaker;";
 var CREATEHUB = document.getElementById("guest").appendChild(createHUB);
 var openHub = document.getElementById("guest");
+

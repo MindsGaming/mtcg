@@ -397,3 +397,14 @@ label {
   font-size: 6px;
   color: black;
 }
+
+.gamerIMG {
+  display:block;
+  color: grey;
+  width: 20px;
+  height: 20px;
+  background-size: cotain;
+  background-repeat: no-repeat;
+  background-image: url("");
+  
+}
