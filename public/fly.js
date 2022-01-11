@@ -106,6 +106,11 @@ function changeToken() {
     claimUpdate();
   }
 }
+
+function holder(){
+ var a = document.getElementById("myToken");
+  var current = document.getElementById("minutes");
+}
 /* Online Check */
 
 const status = window.navigator.onLine;
