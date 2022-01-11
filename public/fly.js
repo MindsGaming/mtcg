@@ -1,7 +1,3 @@
-const version = document.getElementById("version");
-version.innerHTML = "V0.02";
-version.title = version.innerHTML;
-
 function viewReward() {
   var a = document.getElementById("REWARDS");
 

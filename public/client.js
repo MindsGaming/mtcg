@@ -1,5 +1,10 @@
-// client-side js
-// run by the browser each time your view template referencing it is loaded
+// Version
+const version = document.getElementById("version");
+version.innerHTML = "V0.03";
+version.title = version.innerHTML;
+version.id = version;
+
+/// Client & Timer
 
 console.log("Welcome To #MindsGaming Blockchain Rewards");
 const minutesLabel = document.getElementById("minutes");
@@ -10,17 +15,6 @@ var dreamWallet = document.getElementById("myWallet");
 selectToken();
 
 var totalSeconds = 0;
-if (superToken.innerHTML == "GAMER") {
-  setInterval(setTime, 15111);
-}
-
-if (superToken.innerHTML == "DooBetter") {
-  setInterval(setTime, 8111);
-}
-
-if (superToken.innerHTML == "ECLIPSE") {
-  setInterval(setTime, 6111);
-}
 
 function setTime() {
   ++totalSeconds;
@@ -68,7 +62,7 @@ dreamsForm.onsubmit = (event) => {
   event.preventDefault();
 
   const data = {
-    dream: dreamInput.value + ": V0.02",
+    dream: dreamInput.value + ":" + version.innerHTML,
   };
 
   fetch("/addDream", {
@@ -108,6 +102,8 @@ clearButton.addEventListener("click", (event) => {
   dreamsList.innerHTML = "";
 });
 
+// Claim
+
 function claimUpdate() {
   if (dreamInput.value == "") {
     alert("Login To Earn Rewards");
@@ -123,7 +119,7 @@ function claimUpdate() {
         dream:
           dreamInput.value +
           " " +
-          "V0.02" +
+          version.innerHTML +
           dreamToken.innerHTML +
           ":" +
           REWARDS,
@@ -145,20 +141,12 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
-      var tokens = [
-        "GAMER",
-        "DooBetter",
-        "ECLIPSE",
-        "DooBetter",
-        "ECLIPSE",
-        "GAMER",
-        "Random",
-      ];
+      var tokens = ["ECLIPSE"];
       const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
       dreamToken.innerHTML = newtoken;
       superToken.innerHTML = newtoken;
 
-      reset();
+      levelUp();
       rewardSound();
     }
   }
@@ -171,23 +159,58 @@ function reset() {
   totalSeconds = "0";
 }
 
+// LevelUp
+
+function levelUp() {
+  var tackCount = document.getElementById("levelUp").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("levelUp").value = tackcount;
+
+  if (tackcount == "25") {
+    dreamToken.innerHTML = "DooBetter";
+    document.getElementById("levelUp").value = "25";
+  }
+  if (tackcount == "50") {
+    dreamToken.innerHTML = "GAMER";
+    document.getElementById("levelUp").value = "0";
+  }
+  if (tackcount == "100") {
+    dreamToken.innerHTML = "ECLIPSE";
+    document.getElementById("levelUp").value = "1";
+  }
+  tokenTimer();
+  reset();
+}
+
 function walletChange() {
   var x = document.getElementById("myWallet");
   x.innerHTML = dreamInput.value;
 }
 
 function selectToken() {
-  var tokens = [
-    "GAMER",
-    "DooBetter",
-    "ECLIPSE",
-    "DooBetter",
-    "ECLIPSE",
-    "GAMER",
-  ];
+  var tokens = ["ECLIPSE"];
   const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
   var a = document.getElementById("myToken");
   a.innerHTML = newtoken;
   dreamToken.innerHTML = a.innerHTML;
   superToken.innerHTML = newtoken;
+  tokenTimer();
+}
+
+// Token Timer
+
+function tokenTimer() {
+  if (superToken.innerHTML == "ECLIPSE") {
+    if (superToken.innerHTML == "DooBetter") {
+      setInterval(setTime, 15000);
+      superToken.className = "doobetterIMG";
+    }
+    if (superToken.innerHTML == "GAMER") {
+      setInterval(setTime, 15111);
+      superToken.className = "gamerIMG";
+    } else {
+      superToken.className = "eclipseIMG";
+      setInterval(setTime, 10000);
+    }
+  }
 }
