@@ -108,19 +108,16 @@ function holder() {
 }
 
 function changeToken() {
-  var a = document.getElementById("myToken");
-  var current = document.getElementById("minutes");
-  var total = current.innerHTML - 5;
   let text;
-  if (total == "-" + "")
-    
-  
   if (confirm("Spend 5 Rewards To Toggle Token?") == true) {
-      
+    var a = document.getElementById("myToken");
+  var current = document.getElementById("minutes");
+  var currentS = document.getElementById("seconds");
+  var saved = current.innerHTML;
+  totalSeconds = 0;
   } else {
-    text = "You canceled!";
-  }
-}
+  
+}}
 /* Online Check */
 
 const status = window.navigator.onLine;
