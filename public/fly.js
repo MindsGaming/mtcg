@@ -103,26 +103,26 @@ function changeToken() {
   ) {
     var dreamLevel = document.getElementById("levelUp");
     var current = document.getElementById("minutes");
-    var spend = current.innerHTML - "50";
+    var spend = current.innerHTML - "05";
     var total = spend;
     dreamLevel.value = total;
     var tokens = ["ECLIPSE", "GAMER", "DooBetter"];
     const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
     var a = document.getElementById("myToken");
     a.innerHTML = newtoken;
-    
-    if(newtoken == "GAMER"){
-      dreamToken.className = "gamerIMG"
+
+    if (newtoken == "GAMER") {
+      dreamToken.className = "gamerIMG";
       dreamToken.innerHTML = "";
     }
-    if(newtoken == "DooBetter"){
-      dreamToken.className = "doobetterIMG"
-      dreamToken.innerHTML = "";
-    }if(newtoken == "ECLIPSE"){
-      dreamToken.className = "eclipseIMG"
+    if (newtoken == "DooBetter") {
+      dreamToken.className = "doobetterIMG";
       dreamToken.innerHTML = "";
     }
-    
+    if (newtoken == "ECLIPSE") {
+      dreamToken.className = "eclipseIMG";
+      dreamToken.innerHTML = "";
+    }
   } else {
     text = "Level Up By Claiming More Rewards!";
   }
@@ -238,4 +238,3 @@ createHUB.className = "SuperSplash";
 createHUB.allow = "microphone; camera; vr; speaker;";
 var CREATEHUB = document.getElementById("guest").appendChild(createHUB);
 var openHub = document.getElementById("guest");
-
