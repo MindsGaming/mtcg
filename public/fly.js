@@ -96,7 +96,7 @@ function pendingClaims() {
   }
 }
 
-function changeToken() {
+function holder() {
   var a = document.getElementById("myToken");
   var current = document.getElementById("minutes");
 
@@ -107,9 +107,19 @@ function changeToken() {
   }
 }
 
-function holder(){
- var a = document.getElementById("myToken");
+function changeToken() {
+  var a = document.getElementById("myToken");
   var current = document.getElementById("minutes");
+  var total = current.innerHTML - 5;
+  let text;
+  if (total == "-" + "")
+    
+  
+  if (confirm("Spend 5 Rewards To Toggle Token?") == true) {
+      
+  } else {
+    text = "You canceled!";
+  }
 }
 /* Online Check */
 
