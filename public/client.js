@@ -1,6 +1,6 @@
 // Version
 const version = document.getElementById("version");
-version.innerHTML = "V0.04";
+version.innerHTML = "V0.05";
 version.title = version.innerHTML;
 version.id = version;
 
@@ -12,6 +12,7 @@ const secondsLabel = document.getElementById("seconds");
 var superToken = document.getElementById("myToken");
 var dreamToken = document.getElementById("myToken");
 var dreamWallet = document.getElementById("myWallet");
+
 selectToken();
 
 var totalSeconds = 0;
@@ -113,7 +114,13 @@ function claimUpdate() {
       alert("You Need A Full Token To Claim Rewards");
       oopsSound();
     } else {
-      var lifeScore = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+      var level = document.getElementById("levelUp");
+      var current = document.getElementById("minutes");
+      var currentM = current.innerHTML;
+      var currentL = level.value;
+      var total = currentM - currentL;
+      var REWARD = total;
+      var lifeScore = REWARD + "." + secondsLabel.innerHTML;
       var REWARDS = lifeScore;
       const data = {
         dream:
@@ -172,12 +179,13 @@ function levelUp() {
   }
   if (tackcount == "50") {
     dreamToken.innerHTML = "GAMER";
-    document.getElementById("levelUp").value = "0";
+    document.getElementById("levelUp").value = "50";
   }
   if (tackcount == "100") {
     dreamToken.innerHTML = "ECLIPSE";
     document.getElementById("levelUp").value = "1";
   }
+
   tokenTimer();
   reset();
 }
@@ -202,15 +210,13 @@ function selectToken() {
 function tokenTimer() {
   if (superToken.innerHTML == "ECLIPSE") {
     if (superToken.innerHTML == "DooBetter") {
-      setInterval(setTime, 15000);
       superToken.className = "doobetterIMG";
     }
     if (superToken.innerHTML == "GAMER") {
-      setInterval(setTime, 15111);
       superToken.className = "gamerIMG";
     } else {
       superToken.className = "eclipseIMG";
-      setInterval(setTime, 10000);
     }
   }
+  setInterval(setTime, 10000);
 }

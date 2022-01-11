@@ -96,20 +96,20 @@ function pendingClaims() {
   }
 }
 
-
 function changeToken() {
   let text;
-  if (confirm("Spend 5 Rewards To Toggle Token?") == true) {
-    var totalSeconds = 0;
-    var current = document.getElementById("levelUp");
-    var remove = 5;
-    var rTotal = current.value - remove;
-    current.value = rTotal;
+  if (
+    confirm("Toggling Token Cost Rewards And Is Risky, Are You Sure?") == true
+  ) {
+    var dreamLevel = document.getElementById("levelUp");
+    var current = document.getElementById("minutes");
+    var spend = current.innerHTML - "50";
+    var total = spend;
+    dreamLevel.value = total;
     var tokens = ["ECLIPSE", "GAMER", "DooBetter"];
     const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
     var a = document.getElementById("myToken");
     a.innerHTML = newtoken;
-    tokenTimer();
   } else {
     text = "Level Up By Claiming More Rewards!";
   }
