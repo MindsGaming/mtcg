@@ -110,6 +110,19 @@ function changeToken() {
     const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
     var a = document.getElementById("myToken");
     a.innerHTML = newtoken;
+    
+    if(newtoken == "GAMER"){
+      dreamToken.className = "gamerIMG"
+      dreamToken.innerHTML = "";
+    }
+    if(newtoken == "DooBetter"){
+      dreamToken.className = "doobetterIMG"
+      dreamToken.innerHTML = "";
+    }if(newtoken == "ECLIPSE"){
+      dreamToken.className = "eclipseIMG"
+      dreamToken.innerHTML = "";
+    }
+    
   } else {
     text = "Level Up By Claiming More Rewards!";
   }
