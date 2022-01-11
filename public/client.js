@@ -1,6 +1,6 @@
 // Version
 const version = document.getElementById("version");
-version.innerHTML = "V0.03";
+version.innerHTML = "V0.04";
 version.title = version.innerHTML;
 version.id = version;
 

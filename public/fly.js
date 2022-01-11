@@ -96,30 +96,23 @@ function pendingClaims() {
   }
 }
 
-function holder() {
-  var a = document.getElementById("myToken");
-  var current = document.getElementById("minutes");
-
-  if (current.innerHTML == "00") {
-    alert("You Need 1 Reward Token To Preform This Action");
-  } else {
-    claimUpdate();
-  }
-}
 
 function changeToken() {
   let text;
-if (confirm("Spend 5 Rewards To Toggle Token?") == true) {
- var totalSeconds = 0;
-  var current = document.getElementById("levelUp");
-var remove = 5;
-  var rTotal = current.value - remove
- current.value = rTotal;
-alert(rTotal)  
-} else {
-  text = "Level Up By Claiming More Rewards!";
-}
-  
+  if (confirm("Spend 5 Rewards To Toggle Token?") == true) {
+    var totalSeconds = 0;
+    var current = document.getElementById("levelUp");
+    var remove = 5;
+    var rTotal = current.value - remove;
+    current.value = rTotal;
+    var tokens = ["ECLIPSE", "GAMER", "DooBetter"];
+    const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
+    var a = document.getElementById("myToken");
+    a.innerHTML = newtoken;
+    tokenTimer();
+  } else {
+    text = "Level Up By Claiming More Rewards!";
+  }
 }
 /* Online Check */
 

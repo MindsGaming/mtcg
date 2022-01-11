@@ -85,9 +85,7 @@
             />
           </a>
           MindsGaming Blockchain Rewards
-          <p class="blockchain">
-            Earn Blockchain Tokens By Playing Games!
-          </p>
+          <p class="blockchain">Earn Blockchain Tokens By Playing Games!</p>
         </h2>
         <div class="wrapIMG">
           <div class="loginImage">
@@ -106,9 +104,7 @@
               <button type="submit" id="submit-dream">Login</button>
             </form>
             <br />
-            <div class="button" onclick="guest();">
-              Guest
-            </div>
+            <div class="button" onclick="guest();">Guest</div>
           </div>
         </div>
       </div>
@@ -126,16 +122,25 @@
     </div>
     <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
     <div title="closed" id="REWARDS" class="hide">
-      <div onclick="viewReward();" style="cursor:pointer; margin-left: 90%;">
+      <div onclick="viewReward();" style="cursor: pointer; margin-left: 90%">
         X
       </div>
       <div id="help" class="helpIcon" title="Help" onclick="help();">
         <br /><label class="version" id="version"></label>
+        <meter
+          class="hide"
+          id="levelUp"
+          min="0"
+          low="40"
+          high="90"
+          max="100"
+          value="0"
+        ></meter>
       </div>
       <div class="hide">Player: <label id="myName">Guest</label></div>
       <div>
         Wallet:
-        <label id="myWallet" onclick="getLogin();" style="cursor:pointer;"
+        <label id="myWallet" onclick="getLogin();" style="cursor: pointer"
           >LOGIN</label
         >
       </div>
@@ -148,12 +153,8 @@
         <label id="vrMode" title="Hubs" onclick="vrMode();">Hubs</label>
       </div>
       <br />
-      <div class="button" onclick="pendingClaims();">
-        View Pending
-      </div>
-      <button class="hide" id="clear-dreams">
-        Clear Dreams
-      </button>
+      <div class="button" onclick="pendingClaims();">View Pending</div>
+      <button class="hide" id="clear-dreams">Clear Dreams</button>
       <section title="closed" id="pendingClaims" class="hide">
         <ul id="dreams"></ul>
       </section>
@@ -165,9 +166,7 @@
           <br />
           You Appear To Be Offline
         </h1>
-        <p>
-          You can't earn rewards offline. Reconnect To Earn Rewards
-        </p>
+        <p>You can't earn rewards offline. Reconnect To Earn Rewards</p>
         <div class="offlineIMG"></div>
       </center>
     </div>
