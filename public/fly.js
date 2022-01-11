@@ -109,15 +109,18 @@ function holder() {
 
 function changeToken() {
   let text;
-  if (confirm("Spend 5 Rewards To Toggle Token?") == true) {
-    var a = document.getElementById("myToken");
-  var current = document.getElementById("minutes");
-  var currentS = document.getElementById("seconds");
-  var saved = current.innerHTML;
-  totalSeconds = 0;
-  } else {
+if (confirm("Spend 5 Rewards To Toggle Token?") == true) {
+ var totalSeconds = 0;
+  var current = document.getElementById("levelUp");
+var remove = 5;
+  var rTotal = current.value - remove
+ current.value = rTotal;
+alert(rTotal)  
+} else {
+  text = "Level Up By Claiming More Rewards!";
+}
   
-}}
+}
 /* Online Check */
 
 const status = window.navigator.onLine;
