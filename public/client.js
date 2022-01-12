@@ -211,6 +211,7 @@ function tokenTimer() {
   if (superToken.innerHTML == "ECLIPSE") {
     if (superToken.innerHTML == "DooBetter") {
       superToken.className = "doobetterIMG";
+      superToken.id = ""
     }
     if (superToken.innerHTML == "GAMER") {
       superToken.className = "gamerIMG";
