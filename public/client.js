@@ -216,7 +216,7 @@ function tokenTimer() {
     }
     if (superToken.innerHTML == "GAMER") {
       superToken.className = "gamerIMG";
-      dreamToken.id = "GAMER";
+     superToken.id = "GAMER";
     } else {
       superToken.className = "eclipseIMG";
       dreamToken.id = "ECLIPSE";
