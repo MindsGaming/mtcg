@@ -112,16 +112,16 @@ function changeToken() {
     a.innerHTML = newtoken;
 
     if (newtoken == "GAMER") {
-      dreamToken.className = "gamerIMG";
-      dreamToken.innerHTML = "";
+      superToken.className = "gamerIMG";
+      superToken.innerHTML = "";
     }
     if (newtoken == "DooBetter") {
-      dreamToken.className = "doobetterIMG";
-      dreamToken.innerHTML = "";
+      superToken.className = "doobetterIMG";
+      superToken.innerHTML = "";
     }
     if (newtoken == "ECLIPSE") {
-      dreamToken.className = "eclipseIMG";
-      dreamToken.innerHTML = "";
+      superToken.className = "eclipseIMG";
+      superToken.innerHTML = "";
     }
   } else {
     text = "Level Up By Claiming More Rewards!";

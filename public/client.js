@@ -212,14 +212,14 @@ function tokenTimer() {
   if (superToken.innerHTML == "ECLIPSE") {
     if (superToken.innerHTML == "DooBetter") {
       superToken.className = "doobetterIMG";
-      dreamToken.id = "DooBetter";
+      superToken.id = "DooBetter";
     }
     if (superToken.innerHTML == "GAMER") {
       superToken.className = "gamerIMG";
      superToken.id = "GAMER";
     } else {
       superToken.className = "eclipseIMG";
-      dreamToken.id = "ECLIPSE";
+      superToken.id = "ECLIPSE";
     }
   }
   setInterval(setTime, 10000);
