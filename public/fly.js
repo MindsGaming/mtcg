@@ -108,23 +108,20 @@ function changeToken() {
     dreamLevel.value = total;
     var tokens = ["ECLIPSE", "GAMER", "DooBetter"];
     const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
-    var a = document.getElementById("myToken");
-    a.innerHTML = newtoken;
+    dreamToken.innerHTML = newtoken;
 
     if (newtoken == "GAMER") {
-      superToken.className = "gamerIMG";
-      superToken.innerHTML = "";
+      dreamToken.className = "gamerIMG";
+      dreamToken.id = "GAMER";
     }
     if (newtoken == "DooBetter") {
-      superToken.className = "doobetterIMG";
-      superToken.innerHTML = "";
+      dreamToken.className = "doobetterIMG";
+      dreamToken.id = "DooBetter";
     }
     if (newtoken == "ECLIPSE") {
-      superToken.className = "eclipseIMG";
-      superToken.innerHTML = "";
+      dreamToken.className = "eclipseIMG";
+      dreamToken.id = "ECLIPSE";
     }
-  } else {
-    text = "Level Up By Claiming More Rewards!";
   }
 }
 /* Online Check */

@@ -127,7 +127,7 @@ function claimUpdate() {
           dreamInput.value +
           " " +
           version.innerHTML +
-          dreamToken.id +
+          dreamToken.innerHTML +
           ":" +
           REWARDS,
       };
@@ -216,7 +216,7 @@ function tokenTimer() {
     }
     if (superToken.innerHTML == "GAMER") {
       superToken.className = "gamerIMG";
-     superToken.id = "GAMER";
+      superToken.id = "GAMER";
     } else {
       superToken.className = "eclipseIMG";
       superToken.id = "ECLIPSE";
