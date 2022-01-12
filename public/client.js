@@ -127,7 +127,7 @@ function claimUpdate() {
           dreamInput.value +
           " " +
           version.innerHTML +
-          dreamToken.innerHTML +
+          dreamToken.id +
           ":" +
           REWARDS,
       };
@@ -201,6 +201,7 @@ function selectToken() {
   var a = document.getElementById("myToken");
   a.innerHTML = newtoken;
   dreamToken.innerHTML = a.innerHTML;
+  dreamToken.id = "ECLIPSE";
   superToken.innerHTML = newtoken;
   tokenTimer();
 }
@@ -211,12 +212,14 @@ function tokenTimer() {
   if (superToken.innerHTML == "ECLIPSE") {
     if (superToken.innerHTML == "DooBetter") {
       superToken.className = "doobetterIMG";
-      superToken.id = ""
+      dreamToken.id = "DooBetter";
     }
     if (superToken.innerHTML == "GAMER") {
       superToken.className = "gamerIMG";
+      dreamToken.id = "GAMER";
     } else {
       superToken.className = "eclipseIMG";
+      dreamToken.id = "ECLIPSE";
     }
   }
   setInterval(setTime, 10000);
