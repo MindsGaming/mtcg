@@ -113,14 +113,17 @@ function changeToken() {
     if (newtoken == "GAMER") {
       dreamToken.className = "gamerIMG";
       dreamToken.id = "GAMER";
+      dreamToken.title = "GAMER";
     }
     if (newtoken == "DooBetter") {
       dreamToken.className = "doobetterIMG";
       dreamToken.id = "DooBetter";
+      dreamToken.title = "DooBetter";
     }
     if (newtoken == "ECLIPSE") {
       dreamToken.className = "eclipseIMG";
       dreamToken.id = "ECLIPSE";
+      dreamToken.title = "ECLIPSE";
     }
   }
 }
