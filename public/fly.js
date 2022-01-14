@@ -103,7 +103,7 @@ function changeToken() {
   ) {
     var dreamLevel = document.getElementById("levelUp");
     var current = document.getElementById("minutes");
-    var spend = current.innerHTML - "05";
+    var spend = current.innerHTML - "03";
     var total = spend;
     dreamLevel.value = total;
     var tokens = ["ECLIPSE", "GAMER", "DooBetter"];
