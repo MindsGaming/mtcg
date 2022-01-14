@@ -175,15 +175,15 @@ function levelUp() {
 
   if (tackcount == "25") {
     dreamToken.innerHTML = "DooBetter";
-    document.getElementById("levelUp").value = "25";
+    document.getElementById("levelUp").value = "5";
   }
   if (tackcount == "50") {
     dreamToken.innerHTML = "GAMER";
-    document.getElementById("levelUp").value = "50";
+    document.getElementById("levelUp").value = "10";
   }
   if (tackcount == "100") {
     dreamToken.innerHTML = "ECLIPSE";
-    document.getElementById("levelUp").value = "1";
+    document.getElementById("levelUp").value = "20";
   }
 
   tokenTimer();
