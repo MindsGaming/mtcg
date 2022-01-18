@@ -97,35 +97,7 @@ function pendingClaims() {
 }
 
 function changeToken() {
-  let text;
-  if (
-    confirm("Toggling Token Cost Rewards And Is Risky, Are You Sure?") == true
-  ) {
-    var dreamLevel = document.getElementById("levelUp");
-    var current = document.getElementById("minutes");
-    var spend = current.innerHTML - "03";
-    var total = spend;
-    dreamLevel.value = total;
-    var tokens = ["ECLIPSE", "GAMER", "DooBetter"];
-    const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
-    dreamToken.innerHTML = newtoken;
-
-    if (newtoken == "GAMER") {
-      dreamToken.className = "gamerIMG";
-      dreamToken.id = "GAMER";
-      dreamToken.title = "GAMER";
-    }
-    if (newtoken == "DooBetter") {
-      dreamToken.className = "doobetterIMG";
-      dreamToken.id = "DooBetter";
-      dreamToken.title = "DooBetter";
-    }
-    if (newtoken == "ECLIPSE") {
-      dreamToken.className = "eclipseIMG";
-      dreamToken.id = "ECLIPSE";
-      dreamToken.title = "ECLIPSE";
-    }
-  }
+  alert("Sorry This Function Is Being Updated :(");
 }
 /* Online Check */
 

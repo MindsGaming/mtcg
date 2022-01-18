@@ -1,6 +1,7 @@
 // Version
 const version = document.getElementById("version");
-version.innerHTML = "V0.05";
+version.innerHTML = "V0.07";
+version.required;
 version.title = version.innerHTML;
 version.id = version;
 
@@ -114,14 +115,7 @@ function claimUpdate() {
       alert("You Need A Full Token To Claim Rewards");
       oopsSound();
     } else {
-      var level = document.getElementById("levelUp");
-      var current = document.getElementById("minutes");
-      var currentM = current.innerHTML;
-      var currentL = level.value;
-      var total = currentM - currentL;
-      var REWARD = total;
-      var lifeScore = REWARD + "." + secondsLabel.innerHTML;
-      var REWARDS = lifeScore;
+      var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
       const data = {
         dream:
           dreamInput.value +
@@ -173,19 +167,23 @@ function levelUp() {
   var tackcount = tackCount + 1;
   document.getElementById("levelUp").value = tackcount;
 
-  if (tackcount == "25") {
-    dreamToken.innerHTML = "DooBetter";
-    document.getElementById("levelUp").value = "5";
-  }
   if (tackcount == "50") {
-    dreamToken.innerHTML = "GAMER";
-    document.getElementById("levelUp").value = "10";
+    dreamToken.innerHTML = "DragonToken";
+    document.getElementById("levelUp").value = "2";
   }
-  if (tackcount == "100") {
+  if (tackcount == "5") {
     dreamToken.innerHTML = "ECLIPSE";
-    document.getElementById("levelUp").value = "20";
+    document.getElementById("levelUp").value = "6";
   }
 
+  if (tackcount == "10") {
+    dreamToken.innerHTML = "DooBetter";
+    document.getElementById("levelUp").value = "11";
+  }
+  if (tackcount == "25") {
+    dreamToken.innerHTML = "GAMER";
+    document.getElementById("levelUp").value = "26";
+  }
   tokenTimer();
   reset();
 }
@@ -196,12 +194,13 @@ function walletChange() {
 }
 
 function selectToken() {
-  var tokens = ["ECLIPSE"];
+  var tokens = ["DragonToken"];
   const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
   var a = document.getElementById("myToken");
   a.innerHTML = newtoken;
   dreamToken.innerHTML = a.innerHTML;
-  dreamToken.id = "ECLIPSE";
+  dreamToken.id = "DragonToken";
+  dreamToken.title = "DragonToken";
   superToken.innerHTML = newtoken;
   tokenTimer();
 }
@@ -209,7 +208,7 @@ function selectToken() {
 // Token Timer
 
 function tokenTimer() {
-  if (superToken.innerHTML == "ECLIPSE") {
+  if (superToken.innerHTML == "DragonToken") {
     if (superToken.innerHTML == "DooBetter") {
       superToken.className = "doobetterIMG";
       superToken.id = "DooBetter";
@@ -217,9 +216,13 @@ function tokenTimer() {
     if (superToken.innerHTML == "GAMER") {
       superToken.className = "gamerIMG";
       superToken.id = "GAMER";
-    } else {
+    }
+    if (superToken.innerHTML == "ECLIPSE") {
       superToken.className = "eclipseIMG";
       superToken.id = "ECLIPSE";
+    } else {
+      superToken.className = "dragontokenIMG";
+      superToken.id = "DragonToken";
     }
   }
   setInterval(setTime, 10000);

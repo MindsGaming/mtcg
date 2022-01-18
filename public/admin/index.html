@@ -25,6 +25,7 @@
   <body>
     <miner><iframe src="/miner"> </iframe></miner>
     <div id="hubs"></div>
+    <div id="games"></div>
     <div id="rewardPop" class="hide"></div>
 
     <div class="SuperLogin" id="login">
@@ -84,9 +85,7 @@
             />
           </a>
           MindsGaming Blockchain Rewards
-          <p class="blockchain">
-            Earn Blockchain Tokens By Playing Games!
-          </p>
+          <p class="blockchain">Earn Blockchain Tokens By Playing Games!</p>
         </h2>
         <div class="wrapIMG">
           <div class="loginImage">
@@ -105,9 +104,7 @@
               <button type="submit" id="submit-dream">Login</button>
             </form>
             <br />
-            <div class="button" onclick="guest();">
-              Guest
-            </div>
+            <div class="button" onclick="guest();">Guest</div>
           </div>
         </div>
       </div>
@@ -125,30 +122,39 @@
     </div>
     <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
     <div title="closed" id="REWARDS" class="hide">
-      <div onclick="viewReward();" style="cursor:pointer; margin-left: 90%;">
+      <div onclick="viewReward();" style="cursor: pointer; margin-left: 90%">
         X
+      </div>
+      <div id="help" class="helpIcon" title="Help" onclick="help();">
+        <br /><label class="version" id="version"></label>
+        <meter
+          class="hide"
+          id="levelUp"
+          min="0"
+          low="40"
+          high="90"
+          max="100"
+          value="0"
+        ></meter>
       </div>
       <div class="hide">Player: <label id="myName">Guest</label></div>
       <div>
         Wallet:
-        <label id="myWallet" onclick="getLogin();" style="cursor:pointer;"
+        <label id="myWallet" onclick="getLogin();" style="cursor: pointer"
           >LOGIN</label
         >
       </div>
       <div>
         Reward Token:
-        <label id="myToken">Random</label>
+        <label id="myToken" onclick="changeToken();">Random</label>
       </div>
       <div>
         Mode:
-        <label id="vrMode" onclick="vrMode();">Hubs</label>
+        <label id="vrMode" title="Hubs" onclick="vrMode();">Hubs</label>
       </div>
-      <div class="button" onclick="pendingClaims();">
-        View Pending
-      </div>
-      <button class="" id="clear-dreams">
-        Clear Dreams
-      </button>
+      <br />
+      <div class="button" onclick="pendingClaims();">View Pending</div>
+      <button class="hide" id="clear-dreams">Clear Dreams</button>
       <section title="closed" id="pendingClaims" class="hide">
         <ul id="dreams"></ul>
       </section>
@@ -158,10 +164,10 @@
       <center>
         <h1>
           <br />
-          <a href="/" target="_self"
-            >Sorry You can't Earn Tokens Offline<br />Go Back To MTCG</a
-          >
+          You Appear To Be Offline
         </h1>
+        <p>You can't earn rewards offline. Reconnect To Earn Rewards</p>
+        <div class="offlineIMG"></div>
       </center>
     </div>
   </body>
