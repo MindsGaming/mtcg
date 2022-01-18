@@ -1,6 +1,6 @@
 // Version
 const version = document.getElementById("version");
-version.innerHTML = "V0.08";
+version.innerHTML = "V0.09";
 version.required;
 version.title = version.innerHTML;
 version.id = version.innerHTML;
@@ -17,6 +17,7 @@ var dreamWallet = document.getElementById("myWallet");
 selectToken();
 
 var totalSeconds = 0;
+setInterval(setTime, 10000);
 
 function setTime() {
   ++totalSeconds;
@@ -148,6 +149,7 @@ function claimUpdate() {
       superToken.innerHTML = newtoken;
 
       levelUp();
+      reset();
       rewardSound();
     }
   }
@@ -167,25 +169,31 @@ function levelUp() {
   var tackcount = tackCount + 1;
   document.getElementById("levelUp").value = tackcount;
 
-  if (tackcount == "50") {
-    dreamToken.innerHTML = "DragonToken";
-    document.getElementById("levelUp").value = "2";
-  }
   if (tackcount == "5") {
     dreamToken.innerHTML = "ECLIPSE";
-    document.getElementById("levelUp").value = "6";
+    dreamToken.title = "ECLIPSE";
+    dreamToken.className = "eclipseIMG";
+    tackCount.value = "6";
+  }
+  if (tackcount == "15") {
+    dreamToken.innerHTML = "DooBetter";
+    dreamToken.title = "DooBetter";
+    dreamToken.className = "doobetterIMG";
+    tackCount.value = "16";
   }
 
-  if (tackcount == "10") {
-    dreamToken.innerHTML = "DooBetter";
-    document.getElementById("levelUp").value = "11";
-  }
   if (tackcount == "25") {
     dreamToken.innerHTML = "GAMER";
-    document.getElementById("levelUp").value = "26";
+    dreamToken.title = "GAMER";
+    dreamToken.className = "gamerIMG";
+    tackCount.value = "26";
   }
-  tokenTimer();
-  reset();
+  if (tackcount == "50") {
+    dreamToken.innerHTML = "DragonToken";
+    dreamToken.title = "DragonToken";
+    dreamToken.className = "dragontokenIMG";
+    tackCount.value = "0";
+  }
 }
 
 function walletChange() {
@@ -200,25 +208,6 @@ function selectToken() {
   a.innerHTML = newtoken;
   dreamToken.innerHTML = a.innerHTML;
   dreamToken.title = "DragonToken";
+  dreamToken.className = "dragontokenIMG";
   dreamToken.innerHTML = newtoken;
-  tokenTimer();
-}
-
-// Token Timer
-
-function tokenTimer() {
-  if (superToken.innerHTML == "DragonToken") {
-    if (superToken.innerHTML == "DooBetter") {
-      superToken.className = "doobetterIMG";
-    }
-    if (superToken.innerHTML == "GAMER") {
-      superToken.className = "gamerIMG";
-    }
-    if (superToken.innerHTML == "ECLIPSE") {
-      superToken.className = "eclipseIMG";
-    } else {
-      superToken.className = "dragontokenIMG";
-    }
-  }
-  setInterval(setTime, 10000);
 }
