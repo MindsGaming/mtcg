@@ -1,6 +1,6 @@
 // Version
 const version = document.getElementById("version");
-version.innerHTML = "V0.09";
+version.innerHTML = "V0.10";
 version.required;
 version.title = version.innerHTML;
 version.id = version.innerHTML;
@@ -23,6 +23,13 @@ function setTime() {
   ++totalSeconds;
   secondsLabel.innerHTML = pad(totalSeconds % 60);
   minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+
+  if (minutesLabel.innerHTML == "50") {
+    if (secondsLabel.innerHTML == "01") {
+      claimUpdate();
+      alert("You Maxed Rewards, Are You Still Active?");
+    }
+  }
 }
 
 function pad(val) {
