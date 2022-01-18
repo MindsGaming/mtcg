@@ -97,8 +97,51 @@ function pendingClaims() {
 }
 
 function changeToken() {
-  alert("Sorry This Function Is Being Updated :(");
+  if (dreamInput.value == "") {
+    alert("Login To Use This Funtion");
+    otherSound();
+  } else {
+    var current = document.getElementById("minutes");
+    if (current.innerHTML == "00") {
+      alert("You Need A Full Reward Token.");
+      oopsSound();
+    } else {
+      let text;
+      if (confirm("Spend Current Rewards To Toggle Token?") == true) {
+        var newTokens = ["DragonToken", "ECLIPSE", "DooBetter", "GAMER"];
+        const newtoken =
+          newTokens[Math.floor(Math.random() * newTokens.length)];
+        dreamToken.innerHTML = newtoken;
+
+        if (newtoken == "DragonToken") {
+          dreamToken.className = "dragontokenIMG";
+          dreamToken.title = newtoken;
+        }
+
+        if (newtoken == "ECLIPSE") {
+          dreamToken.className = "eclipseIMG";
+          dreamToken.title = newtoken;
+        }
+
+        if (newtoken == "DooBetter") {
+          dreamToken.className = "doobetterIMG";
+          dreamToken.title = newtoken;
+        }
+
+        if (newtoken == "GAMER") {
+          dreamToken.className = "gamerIMG";
+          dreamToken.title = newtoken;
+        }
+        var remove = 1;
+        var math = current.innerHTML - remove;
+        reset();
+      } else {
+        text = "Try Leveling Up!";
+      }
+    }
+  }
 }
+
 /* Online Check */
 
 const status = window.navigator.onLine;

@@ -1,9 +1,9 @@
 // Version
 const version = document.getElementById("version");
-version.innerHTML = "V0.07";
+version.innerHTML = "V0.08";
 version.required;
 version.title = version.innerHTML;
-version.id = version;
+version.id = version.innerHTML;
 
 /// Client & Timer
 
@@ -199,9 +199,8 @@ function selectToken() {
   var a = document.getElementById("myToken");
   a.innerHTML = newtoken;
   dreamToken.innerHTML = a.innerHTML;
-  dreamToken.id = "DragonToken";
   dreamToken.title = "DragonToken";
-  superToken.innerHTML = newtoken;
+  dreamToken.innerHTML = newtoken;
   tokenTimer();
 }
 
@@ -211,18 +210,14 @@ function tokenTimer() {
   if (superToken.innerHTML == "DragonToken") {
     if (superToken.innerHTML == "DooBetter") {
       superToken.className = "doobetterIMG";
-      superToken.id = "DooBetter";
     }
     if (superToken.innerHTML == "GAMER") {
       superToken.className = "gamerIMG";
-      superToken.id = "GAMER";
     }
     if (superToken.innerHTML == "ECLIPSE") {
       superToken.className = "eclipseIMG";
-      superToken.id = "ECLIPSE";
     } else {
       superToken.className = "dragontokenIMG";
-      superToken.id = "DragonToken";
     }
   }
   setInterval(setTime, 10000);
