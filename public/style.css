@@ -396,6 +396,12 @@ label {
 .version {
   font-size: 6px;
   color: black;
+   width: 20px;
+  height: 20px;
+  color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/checkmark.png");
 }
 
 .gamerIMG {
