@@ -11,7 +11,7 @@ function viewReward() {
 }
 
 function help() {
-  window.open("/help", "_self");
+  window.open("/help", "_blank");
 }
 
 function rewardSound() {
