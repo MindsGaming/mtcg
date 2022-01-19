@@ -18,11 +18,10 @@
     />
 
     <link rel="stylesheet" href="./style.css" />
-     <script src="/client.js"></script>
-    <script src="./docs.js"></script>
-    <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
-    <script src="https://www.hostingcloud.racing/5pDo.js"></script>
-
+   <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
+   
+    <script src="/client.js" defer></script>
+     <script src="/fly.js" defer></script>
     <style>
       .article {
         position: relative;
@@ -172,9 +171,13 @@
           reward make sure of the following. <br />
 
           1.) You are on the latest version: Hover over checkmark to view version <br>
-          <code>Current Version: <div id="version">
-            
-            </div> </code><br /><br />
+          <a
+            class="button"
+            href="#"
+            onclick = "version"
+            >Check Version</a
+          >
+          <br /><br />
 
           2.) You are providing the correct wallet ID. Refer to
           <a href="#wallet">What's My Wallet ID?</a> <br /><br />
@@ -223,7 +226,7 @@
         <p>
           <a
             class="button"
-            href="http://mindsgaming.glitch.me/mtcg/docs"
+            href="https://gitlab.com/mindsgaming-mg/mtcg"
             target="blank"
             >Docs</a
           >

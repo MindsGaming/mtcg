@@ -254,6 +254,11 @@ function vrMode() {
   }
 }
 
+
+function versionCheck(){
+  alert("test");
+}
+
 /* Guest PAGE */
 
 var createHUB = document.createElement("iframe");
