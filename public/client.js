@@ -1,6 +1,6 @@
 // Version
 const version = document.getElementById("version");
-version.innerHTML = "V0.10";
+version.innerHTML = "V0.11";
 version.required;
 version.title = version.innerHTML;
 version.id = version.innerHTML;
@@ -150,11 +150,6 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
-      var tokens = ["ECLIPSE"];
-      const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
-      dreamToken.innerHTML = newtoken;
-      superToken.innerHTML = newtoken;
-
       levelUp();
       reset();
       rewardSound();
@@ -176,26 +171,35 @@ function levelUp() {
   var tackcount = tackCount + 1;
   document.getElementById("levelUp").value = tackcount;
 
-  if (tackcount == "5") {
+  if (tackcount == "11") {
     dreamToken.innerHTML = "ECLIPSE";
     dreamToken.title = "ECLIPSE";
     dreamToken.className = "eclipseIMG";
-    tackCount.value = "6";
+    tackCount.value = "12";
   }
-  if (tackcount == "15") {
+
+  if (tackcount == "21") {
     dreamToken.innerHTML = "DooBetter";
     dreamToken.title = "DooBetter";
     dreamToken.className = "doobetterIMG";
-    tackCount.value = "16";
+    tackCount.value = "22";
   }
 
-  if (tackcount == "25") {
+  if (tackcount == "31") {
+    dreamToken.innerHTML = "GTPC";
+    dreamToken.title = "GTPC";
+    dreamToken.className = "gtpcIMG";
+    tackCount.value = "32";
+  }
+
+  if (tackcount == "41") {
     dreamToken.innerHTML = "GAMER";
     dreamToken.title = "GAMER";
     dreamToken.className = "gamerIMG";
-    tackCount.value = "26";
+    tackCount.value = "42";
   }
-  if (tackcount == "50") {
+
+  if (tackcount == "51") {
     dreamToken.innerHTML = "DragonToken";
     dreamToken.title = "DragonToken";
     dreamToken.className = "dragontokenIMG";

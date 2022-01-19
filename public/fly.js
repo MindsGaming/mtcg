@@ -108,7 +108,13 @@ function changeToken() {
     } else {
       let text;
       if (confirm("Spend Current Rewards To Toggle Token?") == true) {
-        var newTokens = ["DragonToken", "ECLIPSE", "DooBetter", "GAMER"];
+        var newTokens = [
+          "DragonToken",
+          "ECLIPSE",
+          "DooBetter",
+          "GTPC",
+          "GAMER",
+        ];
         const newtoken =
           newTokens[Math.floor(Math.random() * newTokens.length)];
         dreamToken.innerHTML = newtoken;
@@ -125,6 +131,10 @@ function changeToken() {
 
         if (newtoken == "DooBetter") {
           dreamToken.className = "doobetterIMG";
+          dreamToken.title = newtoken;
+        }
+        if (newtoken == "GTPC") {
+          dreamToken.className = "gtpcIMG";
           dreamToken.title = newtoken;
         }
 
