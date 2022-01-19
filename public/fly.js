@@ -256,7 +256,7 @@ function vrMode() {
 
 
 function versionCheck(){
-  alert("test");
+  alert(version.innerHTML);
 }
 
 /* Guest PAGE */
