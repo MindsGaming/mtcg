@@ -18,23 +18,18 @@ You can also install MTCG on your own website you will need Node and express.
 You can use our minyminer if your just looking to host your miner script.
 https://glitch.com/~minymine
 
-## Base
+## Building (Remix)
 
-**hello-sqlite**
+- Edit
+  The two main items you will need to edit is **client.js** & **public/hubs**
 
-A starter that has a database
+- client.js
+  **/// Client & Timer**
+  Under **//reset** in client & timer change the **createHUB.src** to **/hubs**
 
-- This app uses sqlite but you can power your apps with [a number of other storage options](https://glitch.com/storage)
-- `sqlite.db` is created and put into the `.data` folder, a hidden directory whose contents aren’t copied when a project is remixed. You can see the contents of `.data` in the console under "Logs"
-- To save to the database, remix this app!
+- public/hubs
+  Edit the **body** of **index.html**
 
-**On the front-end,**
+- Customization
+  You can now start custimizing your miner scripts, images and branding in the glitch editor to your liking!
 
-- Edit `views/index.html`, `public/style.css`, and `public/client.js`
-- Drag in `assets`, like images or music, to add them to your project
-
-**On the back-end,**
-
-- Your app starts at `server.js`
-- Add frameworks and packages in `package.json`
-- Safely store app secrets in `.env` (nobody can see this but you and people you invite)
