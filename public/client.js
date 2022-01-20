@@ -1,6 +1,6 @@
 // Version
 const version = document.getElementById("version");
-version.innerHTML = "V0.13";
+version.innerHTML = "V0.14";
 version.required;
 version.title = version.innerHTML;
 version.id = version.innerHTML;
@@ -57,10 +57,10 @@ function setTime() {
     }
   }
 
-  if (minutesLabel.innerHTML == "60") {
+ if (minutesLabel.innerHTML == "61") {
+   alert("You Maxed Out Rewards, Are You Still Active?");
+   claimUpdate();
     if (secondsLabel.innerHTML == "01") {
-      claimUpdate();
-      alert("You Maxed Rewards, Are You Still Active?");
     }
   }
 }
