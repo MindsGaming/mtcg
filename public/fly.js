@@ -44,6 +44,15 @@ function rewardPop() {
   }
 }
 
+function levelupPop() {
+  var levelup = document.getElementById("rewardPop");
+  levelup.className = "levelupIMG";
+  levelup.addEventListener("click", poof);
+  function poof() {
+    levelup.className = "hide";
+  }
+}
+
 function otherSound() {
   var music = document.createElement("audio");
   music.src = "/images/loginSound.mp3";
@@ -258,8 +267,7 @@ function vrMode() {
   }
 }
 
-
-function versionCheck(){
+function versionCheck() {
   alert(version.innerHTML);
 }
 
