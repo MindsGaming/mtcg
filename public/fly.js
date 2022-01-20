@@ -106,47 +106,51 @@ function changeToken() {
       alert("You Need A Full Reward Token.");
       oopsSound();
     } else {
+      var oldToken = dreamToken.innerHTML;
       let text;
-      if (confirm("Spend Current Rewards To Toggle Token?") == true) {
-        var newTokens = [
-          "DragonToken",
-          "ECLIPSE",
-          "DooBetter",
-          "GTPC",
-          "GAMER",
-        ];
-        const newtoken =
-          newTokens[Math.floor(Math.random() * newTokens.length)];
-        dreamToken.innerHTML = newtoken;
 
-        if (newtoken == "DragonToken") {
-          dreamToken.className = "dragontokenIMG";
-          dreamToken.title = newtoken;
-        }
+      var newTokens = ["DragonToken", "ECLIPSE", "DooBetter", "GTPC", "GAMER"];
+      const newtoken = newTokens[Math.floor(Math.random() * newTokens.length)];
+      dreamToken.innerHTML = newtoken;
 
-        if (newtoken == "ECLIPSE") {
-          dreamToken.className = "eclipseIMG";
-          dreamToken.title = newtoken;
-        }
-
-        if (newtoken == "DooBetter") {
-          dreamToken.className = "doobetterIMG";
-          dreamToken.title = newtoken;
-        }
-        if (newtoken == "GTPC") {
-          dreamToken.className = "gtpcIMG";
-          dreamToken.title = newtoken;
-        }
-
-        if (newtoken == "GAMER") {
-          dreamToken.className = "gamerIMG";
-          dreamToken.title = newtoken;
-        }
-        var remove = 1;
-        var math = current.innerHTML - remove;
-        reset();
+      if (newtoken == oldToken) {
+        changeToken();
       } else {
-        text = "Try Leveling Up!";
+        if (confirm("Burn Current Rewards And Toggle Token?") == true) {
+          var levelUp = document.getElementById("levelUp");
+
+          if (newtoken == "DragonToken") {
+            dreamToken.className = "dragontokenIMG";
+            dreamToken.title = newtoken;
+            levelUp.value = "6";
+          }
+
+          if (newtoken == "ECLIPSE") {
+            dreamToken.className = "eclipseIMG";
+            dreamToken.title = newtoken;
+            levelUp.value = "15";
+          }
+
+          if (newtoken == "DooBetter") {
+            dreamToken.className = "doobetterIMG";
+            dreamToken.title = newtoken;
+            levelUp.value = "25";
+          }
+          if (newtoken == "GTPC") {
+            dreamToken.className = "gtpcIMG";
+            dreamToken.title = newtoken;
+            levelUp.value = "35";
+          }
+
+          if (newtoken == "GAMER") {
+            dreamToken.className = "gamerIMG";
+            dreamToken.title = newtoken;
+            levelUp.value = "47";
+          }
+          var remove = 1;
+          var math = current.innerHTML - remove;
+          reset();
+        }
       }
     }
   }
