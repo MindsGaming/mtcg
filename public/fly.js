@@ -237,7 +237,7 @@ function vrMode() {
     createHUB.className = "SuperSplash";
     createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-    viewReward();
+
     var classic = document.getElementById("classicMode");
     var live = document.getElementById("liveMode");
     var hub = document.getElementById("vrMode");
@@ -245,6 +245,7 @@ function vrMode() {
     classic.className = "downarrow";
     live.className = "downarrow";
     hub.className = "downarrowG";
+    viewReward();
   }
 }
 
@@ -257,7 +258,7 @@ function classicMode() {
     createHUB.className = "SuperSplash";
     createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-    viewReward();
+
     var classic = document.getElementById("classicMode");
     var live = document.getElementById("liveMode");
     var hub = document.getElementById("vrMode");
@@ -265,6 +266,7 @@ function classicMode() {
     classic.className = "downarrowG";
     live.className = "downarrow";
     hub.className = "downarrow";
+    viewReward();
   }
 }
 function liveMode() {
@@ -276,7 +278,7 @@ function liveMode() {
     createHUB.className = "SuperSplash";
     createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-    viewReward();
+
     var classic = document.getElementById("classicMode");
     var live = document.getElementById("liveMode");
     var hub = document.getElementById("vrMode");
@@ -284,6 +286,7 @@ function liveMode() {
     classic.className = "downarrow";
     live.className = "downarrowG";
     hub.className = "downarrow";
+    viewReward();
   }
 }
 
