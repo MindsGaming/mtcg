@@ -32,4 +32,3 @@ https://glitch.com/~minymine
 
 - Customization
   You can now start custimizing your miner scripts, images and branding in the glitch editor to your liking!
-
