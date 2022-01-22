@@ -149,8 +149,20 @@
         <label id="myToken" onclick="changeToken();">Random</label>
       </div>
       <div>
-        Mode:
-        <label id="vrMode" title="Hubs" onclick="vrMode();">Hubs</label>
+        Mode:<br />
+        <label id="vrMode" class="downarrowG" title="Hubs" onclick="vrMode();"
+          >Hubs</label
+        ><br />
+        <label
+          id="classic"
+          class="downarrow"
+          title="Classic"
+          onclick="classicMode();"
+          >Classic</label
+        ><br />
+        <label id="live" class="downarrow" title="Live" onclick="liveMode();"
+          >Live</label
+        >
       </div>
       <br />
       <div class="button" onclick="pendingClaims();">View Pending</div>

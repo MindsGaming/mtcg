@@ -225,45 +225,65 @@ function getLogin() {
   game.className = "hide";
 }
 
+/* Play Modes */
+
 function vrMode() {
-  var a = document.getElementById("vrMode");
-  var currentWallet = dreamWallet.innerHTML;
-  let text;
-  if (a.title == "Hubs") {
-    if (confirm("Change To Classic Mode?") == true) {
-      viewReward();
-      a.title = "Classic";
-      a.innerHTML = "Classic";
-      var createHUB = document.createElement("iframe");
-      createHUB.src = "/games";
-      createHUB.className = "SuperSplash";
-      createHUB.allow = "microphone; camera; vr; speaker;";
-      var CREATEHUB = document.getElementById("games").appendChild(createHUB);
-      var closeHub = document.getElementById("hubs");
-      closeHub.className = "hide";
-      var games = document.getElementById("games");
-      games.className = "SuperSplash";
-    } else {
-    }
+  if (dreamInput.value == "") {
+    alert("Login To Use This Function");
   } else {
-    if (a.innerHTML == "Classic") {
-      if (confirm("Change To Hubs") == true) {
-        viewReward();
-        a.title = "Hubs";
-        a.innerHTML = "Hubs";
-        var createHUB = document.createElement("iframe");
-        createHUB.src =
-          "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
-        createHUB.className = "SuperSplash";
-        createHUB.allow = "microphone; camera; vr; speaker;";
-        var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-        var closeHub = document.getElementById("hubs");
-        closeHub.className = "SuperSplash";
-        var games = document.getElementById("games");
-        games.className = "hide";
-      } else {
-      }
-    }
+    var createHUB = document.createElement("iframe");
+    createHUB.src =
+      "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
+    createHUB.className = "SuperSplash";
+    createHUB.allow = "microphone; camera; vr; speaker;";
+    var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+    viewReward();
+    var classic = document.getElementById("classicMode");
+    var live = document.getElementById("liveMode");
+    var hub = document.getElementById("vrMode");
+
+    classic.className = "downarrow";
+    live.className = "downarrow";
+    hub.className = "downarrowG";
+  }
+}
+
+function classicMode() {
+  if (dreamInput.value == "") {
+    alert("Login To Use This Function");
+  } else {
+    var createHUB = document.createElement("iframe");
+    createHUB.src = "/games";
+    createHUB.className = "SuperSplash";
+    createHUB.allow = "microphone; camera; vr; speaker;";
+    var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+    viewReward();
+    var classic = document.getElementById("classicMode");
+    var live = document.getElementById("liveMode");
+    var hub = document.getElementById("vrMode");
+
+    classic.className = "downarrowG";
+    live.className = "downarrow";
+    hub.className = "downarrow";
+  }
+}
+function liveMode() {
+  if (dreamInput.value == "") {
+    alert("Login To Use This Function");
+  } else {
+    var createHUB = document.createElement("iframe");
+    createHUB.src = "/live";
+    createHUB.className = "SuperSplash";
+    createHUB.allow = "microphone; camera; vr; speaker;";
+    var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+    viewReward();
+    var classic = document.getElementById("classicMode");
+    var live = document.getElementById("liveMode");
+    var hub = document.getElementById("vrMode");
+
+    classic.className = "downarrow";
+    live.className = "downarrowG";
+    hub.className = "downarrow";
   }
 }
 

@@ -89,7 +89,6 @@ h2 {
   color: red;
 }
 
-
 p.blockchain {
   color: gold;
   font-size: 9px;
@@ -287,7 +286,6 @@ label {
   z-index: 3;
 }
 
-
 .profileicon {
   position: fixed;
   display: block;
@@ -452,6 +450,26 @@ label {
   height: 20px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/ZomboMeme%2017012022164751.jpg);
+  background-image: url("https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/ZomboMeme%2017012022164751.jpg");
 }
 
+.downarrow {
+  display: block;
+  border-style: groove;
+  width: 60%;
+  border-radius: 0px 50px 0px 0px;
+}
+.downarrowG {
+  display: block;
+  border-style: groove;
+  width: 60%;
+  border-radius: 0px 50px 0px 0px;
+  background-color: green;
+}
+.downarrow:hover {
+  display: block;
+  border-style: groove;
+  width: 60%;
+  border-radius: 0px 50px 0px 0px;
+  background-color: gold;
+}
