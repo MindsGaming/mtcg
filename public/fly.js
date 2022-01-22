@@ -228,21 +228,6 @@ function getLogin() {
 /* Play Modes */
 
 
-
-function changeMode(){
-  if(dreamInput.value == ""){
-    alert("Login To Use This Function")
-  }
-  else {
-     var classic = document.getElementById("classicMode");
-    var live = document.getElementById("liveMode");
-    var hub = document.getElementById("vrMode");
-
-    
-    
-  }
-}
-
 function vrMode() {
   if (dreamInput.value == "") {
     alert("Login To Use This Function");
