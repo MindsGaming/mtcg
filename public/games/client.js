@@ -123,10 +123,12 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value + " :Loged In");
 
   // reset form
-  claimUpdate();
   var closeLogin = document.getElementById("getLogin");
   closeLogin.className = "hide";
+  alert("Checking For Rewards...")
   walletChange();
+claimUpdate();
+
 };
 
 clearButton.addEventListener("click", (event) => {

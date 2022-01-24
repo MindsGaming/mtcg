@@ -231,5 +231,8 @@ function claimPrize() {
      var login = document.getElementById("getLogin");
     login.className = "SuperSplash";
   }
+  else{
+    claimUpdate();
+  }
   
 }
