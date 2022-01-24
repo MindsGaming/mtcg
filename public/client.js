@@ -6,6 +6,7 @@ version.title = version.id;
 version.required;
 document.getElementById("version").title = version.innerHTML;
 
+
 /// Client & Timer
 
 console.log("Welcome To #MindsGaming Blockchain Rewards");
