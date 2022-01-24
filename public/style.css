@@ -348,7 +348,7 @@ label {
 
 .overflow {
   display: block;
-  overflow: auto;
+  overflow: scroll;
   max-height: 400px;
 }
 
