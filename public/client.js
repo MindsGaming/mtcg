@@ -1,14 +1,10 @@
 // Version
 const version = document.createElement("p");
-version.id = "V0.16";
+version.id = "V0.17";
 version.innerHTML = version.id;
 version.title = version.id;
 version.required;
-var VERSION = document.getElementById("version");
-VERSION.title = version.title;
-VERSION.innerHTML = version.innerHTML
-
-
+document.getElementById("version").title = version.innerHTML;
 
 /// Client & Timer
 
@@ -62,9 +58,9 @@ function setTime() {
     }
   }
 
- if (minutesLabel.innerHTML == "61") {
-   alert("You Maxed Out Rewards, Are You Still Active?");
-   claimUpdate();
+  if (minutesLabel.innerHTML == "61") {
+    alert("You Maxed Out Rewards, Are You Still Active?");
+    claimUpdate();
     if (secondsLabel.innerHTML == "01") {
     }
   }
@@ -162,6 +158,7 @@ function claimUpdate() {
       oopsSound();
     } else {
       var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+
       const data = {
         dream:
           dreamInput.value +
@@ -171,7 +168,6 @@ function claimUpdate() {
           ":" +
           REWARDS,
       };
-
       fetch("/addDream", {
         method: "POST",
         body: JSON.stringify(data),
@@ -188,17 +184,15 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
-      
-        var versionChecker = document.getElementById("version")
-      if (version.id == versionChecker.innerHTML){
-        
-      }
-      else {
-        dreamInput.value = "EXPIRED";
-      }
-      
       levelUp();
       reset();
+
+      var versionChecker = document.getElementById("version");
+      if (version.id == versionChecker.innerHTML) {
+      } else {
+        dreamInput.value = "EXPIRED";
+      }
+
       rewardSound();
     }
   }
