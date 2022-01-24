@@ -1,3 +1,5 @@
+startBombs();
+
 function startBombs() {
   
   Bombs();
@@ -183,7 +185,14 @@ function score() {
     document.getElementById("SCORE").value = 0;
   document.getElementById("score").innerHTML = 0;
   }
-  
+    if(tackCount == "100"){
+    var winPrize = document.getElementById("PRIZE").value;
+    var prizeCount = winPrize + 1;
+    document.getElementById("PRIZE").value = prizeCount;
+  document.getElementById("prize").innerHTML = prizeCount;
+    document.getElementById("SCORE").value = 1;
+  document.getElementById("score").innerHTML = 1;
+  }
 }
 
 var timeM = document.getElementById("timeM");
@@ -192,6 +201,7 @@ var timeM = document.getElementById("timeM");
 var timeS = document.getElementById("timeS");
 var CREDITS = document.getElementById("SCORE");
 var credits = document.getElementById("score");
+var PRIZE = document.getElementById("prize");
 
 
 var totalSeconds = 0;
@@ -218,13 +228,15 @@ function loadRewards() {
     alert("You Need A Full Reward");
   } else {
     var currents = timeS.innerHTML;
-        var currentm = timeS.innerHTML;
-
+    var currentm = timeM.innerHTML;
+    var credm = PRIZE.innerHTML;
     var cred = CREDITS.value;
     var total = currents + cred;
-    CREDITS.value = total;
+    var totalp = currentm + credm;
+    CREDITS.value = total + "." + totalp;
     credits.innerHTML = CREDITS.value;
-    reset();
+    PRIZE.innerHTML = totalp;
+      reset();
   }
 }
 
