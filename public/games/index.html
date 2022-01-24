@@ -28,6 +28,7 @@
         width: 100%;
         height: 100%;
         background-color: blue;
+        overflow: scroll;
       }
       .gameSplash {
         position: fixed;
@@ -135,16 +136,15 @@
           <div class="gTitle" id="bombs" title="Closed">
             Bombs
           </div></div>
+        
           <div onclick="slotsLoad();" class="slots">
           <div class="gTitle" id="slots" title="Closed">
-            <div id="quitGame" style="hide" title="Quit Game" onclick="slotsLoad();">
+            <div id="quitGame" style="display: none;" title="Quit Game" onclick="slotsLoad();">
             X
           </div>
             Slots
           </div>
-        </div>
-          
-      
+        </div>      
       </center>
     </div>
     <div id="offline" class="hide">

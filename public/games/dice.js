@@ -48,8 +48,9 @@ function bombsLoad() {
 function slotsLoad() {
   var slotGame = document.getElementById("slots");
   if (slotGame.title == "Closed"){
+    var quitGame = document.getElementById("quitGame");
+    quitGame.style = "position: fixed; top:0; right: 0;  margin-right: 30px; border-style: solid; width: 20px; cursor: pointer; z-index: 5;"
   slotGame.title = "Open"
-  
   var createHUB = document.createElement("iframe");
   createHUB.src = "/games/slots";
   createHUB.className = "SuperSplash";
@@ -57,7 +58,7 @@ function slotsLoad() {
   var CREATEHUB = document.getElementById("slots").appendChild(createHUB);
   }
   else {
-    slotGame.className = "hide;"
+    slotGame.style = "display: none;"
   }
   
 }
