@@ -171,4 +171,13 @@ function score() {
   var tackcount = tackCount + 1;
   document.getElementById("SCORE").value = tackcount;
   document.getElementById("score").innerHTML = tackcount;
+  
+  if(tackCount == "100"){
+    var winPrize = document.getElementById("PRIZE").value;
+    var prizeCount = winPrize + 1;
+    document.getElementById("PRIZE").value = prizeCount;
+  document.getElementById("prize").innerHTML = prizeCount;
+  }
+  
+  
 }

@@ -125,9 +125,103 @@
               Start Game
             </div>
           </div>
-          <div class="tool">Score: <label id="score">0</label></div>
+          <div class="tool">Score:<label id="prize">0</label>.<label id="score">0</label></div>
+          <meter
+        value="0"
+        id="PRIZE"
+        max="100"
+        min="0"
+        low="10"
+        high="80"
+        class="hide"
+      ></meter>
         </div>
       </center>
     </wrap>
+ 
+    <div id="getLogin" class="hide">
+      <div class="loginImage">
+        <br />
+        <br />
+        <form class="form" id="wallet">
+          <input
+            name="dream"
+            aria-label="a new dream"
+            type="text"
+            maxlength="100"
+            placeholder="Verify Wallet"
+            required
+          />
+          <br />
+          <button type="submit" id="submit-dream">Login</button>
+        </form>
+        <br />
+      </div>
+    </div>
+
+    <div class="hide" id="rewardicon" onclick="claimUpdate();">
+      <br />
+      <br />
+      <center>
+        <label id="minutes" value="0">00</label>.<label id="seconds" value="0"
+          >00</label
+        >
+      </center>
+    </div>
+    <div class="hide" id="profileicon" onclick="viewReward();"></div>
+    <div title="closed" id="REWARDS" class="hide">
+      <div onclick="viewReward();" style="cursor: pointer; margin-left: 90%">
+        X
+      </div>
+      <div id="help" class="helpIcon" title="Help" onclick="help();">
+        <br /><label class="version" id="version"></label>
+        <meter
+          class="hide"
+          id="levelUp"
+          min="0"
+          low="40"
+          high="90"
+          max="100"
+          value="0"
+        ></meter>
+      </div>
+      <div class="hide">Player: <label id="myName">Guest</label></div>
+      <div>
+        Wallet:
+        <label id="myWallet" onclick="getLogin();" style="cursor: pointer"
+          >LOGIN</label
+        >
+      </div>
+      <div>
+        Reward Token:
+        <label id="myToken" onclick="changeToken();">Random</label>
+      </div>
+      <div>
+        Mode:<br />
+        <label id="vrMode" class="downarrowG" title="Hubs" onclick="vrMode();"
+          >Hubs</label
+        ><br />
+        <label
+          id="classicMode"
+          class="downarrow"
+          title="Classic"
+          onclick="classicMode();"
+          >Classic</label
+        ><br />
+        <label
+          id="liveMode"
+          class="downarrow"
+          title="Live"
+          onclick="liveMode();"
+          >Live</label
+        >
+      </div>
+      <br />
+      <div class="button" onclick="pendingClaims();">View Pending</div>
+      <button class="hide" id="clear-dreams">Clear Dreams</button>
+      <section title="closed" id="pendingClaims" class="hide">
+        <ul id="dreams"></ul>
+      </section>
+    </div>
   </body>
 </html>
