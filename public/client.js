@@ -4,7 +4,7 @@ version.id = "V0.17";
 version.innerHTML = version.id;
 version.title = version.id;
 version.required;
-document.getElementById("version").title = version.innerHTML;
+document.getElementById("version").innerHTML = version.innerHTML;
 
 
 /// Client & Timer
