@@ -205,6 +205,11 @@ function checkStatus() {
 }
 
 function guest() {
+var modes = document.getElementById("modes")
+  var closeHub = document.getElementById("login");
+
+if (modes.title == "modes"){
+  
   alert("Login To Earn Rewards");
   var createHUB = document.createElement("iframe");
   createHUB.src =
@@ -212,8 +217,11 @@ function guest() {
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-  var closeHub = document.getElementById("login");
   closeHub.className = "hide";
+}
+  else{
+  closeHub.className = "hide";
+  }
 }
 
 function getLogin() {
@@ -227,52 +235,46 @@ function getLogin() {
 
 /* Play Modes */
 
-
 function vrMode() {
-  if (dreamInput.value == "") {
-    alert("Login To Use This Function");
-  } else {
-    var createHUB = document.createElement("iframe");
-    createHUB.src =
-      "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
-    createHUB.className = "SuperSplash";
-    createHUB.allow = "microphone; camera; vr; speaker;";
-    var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+  var createHUB = document.createElement("iframe");
+  createHUB.src =
+    "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
+  createHUB.className = "SuperSplash";
+  createHUB.allow = "microphone; camera; vr; speaker;";
+  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
 
-    var classic = document.getElementById("classicMode");
-    var live = document.getElementById("liveMode");
-    var hub = document.getElementById("vrMode");
+  var classic = document.getElementById("classicMode");
+  var live = document.getElementById("liveMode");
+  var hub = document.getElementById("vrMode");
 
-    classic.className = "downarrow";
-    live.className = "downarrow";
-    hub.className = "downarrowG";
-    viewReward();
-  }
+  classic.className = "downarrow";
+  live.className = "downarrow";
+  hub.className = "downarrowG";
+  viewReward();
 }
 
 function classicMode() {
-  if (dreamInput.value == "") {
-    alert("Login To Use This Function");
-  } else {
-    var createHUB = document.createElement("iframe");
-    createHUB.src = "/games";
-    createHUB.className = "SuperSplash";
-    createHUB.allow = "microphone; camera; vr; speaker;";
-    var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+  var createHUB = document.createElement("iframe");
+  createHUB.src = "/games";
+  createHUB.className = "SuperSplash";
+  createHUB.allow = "microphone; camera; vr; speaker;";
+  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
 
-    var classic = document.getElementById("classicMode");
-    var live = document.getElementById("liveMode");
-    var hub = document.getElementById("vrMode");
-    var rewardIcon = document.getElementById("rewardicon");
-    var profileIcon = document.getElementById("profileicon");
+  var classic = document.getElementById("classicMode");
+  var live = document.getElementById("liveMode");
+  var hub = document.getElementById("vrMode");
+  var rewardIcon = document.getElementById("rewardicon");
+  var profileIcon = document.getElementById("profileicon");
+    var modes = document.getElementById("modes");
 
-    classic.className = "downarrowG";
-    live.className = "downarrow";
-    hub.className = "downarrow";
-    rewardIcon.className = "hide";
-    profileIcon.className = "hide";
-    viewReward();
-  }
+
+  classic.className = "downarrowG";
+  live.className = "downarrow";
+  hub.className = "downarrow";
+  rewardIcon.className = "hide";
+  profileIcon.className = "hide";
+  modes.title = "classic"
+  viewReward();
 }
 
 function liveMode() {
