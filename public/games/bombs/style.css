@@ -23,6 +23,7 @@
 }
 .tool {
   cursor: pointer;
+  color: red;
 }
 
 .pixel {
@@ -83,6 +84,7 @@
 
 .button {
   float: left;
+  width: 8rem;
   margin: 2px;
   display: block;
   border-style: groove;
@@ -93,7 +95,6 @@
 
 .button:hover {
   float: left;
-  width: 8rem;
   margin: 2px;
   display: block;
   border-style: groove;
@@ -105,7 +106,7 @@
 
 .button-right {
   float: right;
-  width: 8rem;
+  width: 6rem;
   display: block;
   margin-top: -1rem;
   border-style: groove;
@@ -116,7 +117,7 @@
 
 .button-right:hover {
   float: right;
-  width: 8rem;
+  width: 6rem;
   display: block;
   margin-top: -1rem;
   border-style: groove;

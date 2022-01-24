@@ -217,9 +217,11 @@ function loadRewards() {
   if (timeM.innerHTML == "00") {
     alert("You Need A Full Reward");
   } else {
-    var current = timeM.innerHTML;
+    var currents = timeS.innerHTML;
+        var currentm = timeS.innerHTML;
+
     var cred = CREDITS.value;
-    var total = current + cred;
+    var total = currents + cred;
     CREDITS.value = total;
     credits.innerHTML = CREDITS.value;
     reset();
