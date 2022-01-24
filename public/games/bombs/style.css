@@ -132,6 +132,9 @@
   border-style: solid;
   border-color: gold;
 }
+form {
+  margin-left: 5rem;
+}
 
 .hide {
   display: none;
