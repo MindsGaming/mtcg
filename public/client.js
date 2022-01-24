@@ -5,7 +5,7 @@ version.innerHTML = version.id;
 version.title = version.id;
 version.required;
 document.getElementById("version").innerHTML = version.innerHTML;
-var versionChecker = document.getElementById("version");
+const versionChecker = document.getElementById("version");
 
 
 
