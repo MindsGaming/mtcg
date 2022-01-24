@@ -28,6 +28,9 @@
     <wrap>
       <center>
         <div class="slots">
+          <div style="float:right; cursor:pointer;" onclick="window.close('#')">
+            X
+          </div>
           <div class="slot">
             <div class="ticker">
               <label id="timeM" value="0">00</label>.<label id="timeS" value="0"
@@ -37,7 +40,6 @@
             <label id="spinOne" title="spinOne" class=""></label
             ><label id="spinTwo" title="spinTwo" class=""></label
             ><label id="spinThree" title="spinThree" class=""></label>
-            <br />
             <div id="spinMe" class="button-right" onclick="spin();">Spin</div>
           </div>
 
@@ -70,6 +72,8 @@
             </div>
             <div class="button-right" onclick="claimPrize();">Claim Prize</div>
         </div>
+          <br>
+          <br>
         </div>
       </center>
     </wrap>
