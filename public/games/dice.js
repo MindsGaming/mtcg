@@ -46,9 +46,18 @@ function bombsLoad() {
 
 
 function slotsLoad() {
+  var slotGame = document.getElementById("slots");
+  if (slotGame.title == "Closed"){
+  slotGame.title = "Open"
+  
   var createHUB = document.createElement("iframe");
   createHUB.src = "/games/slots";
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("slots").appendChild(createHUB);
+  }
+  else {
+    slotGame.className = "hide;"
+  }
+  
 }
