@@ -1,9 +1,14 @@
 // Version
-const version = document.getElementById("version");
-version.innerHTML = "V0.16";
+const version = document.createElement("p");
+version.id = "V0.16";
+version.innerHTML = version.id;
+version.title = version.id;
 version.required;
-version.title = version.innerHTML;
-version.id = version.innerHTML;
+var VERSION = document.getElementById("version");
+VERSION.title = version.title;
+VERSION.innerHTML = version.innerHTML
+
+
 
 /// Client & Timer
 
@@ -183,6 +188,15 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
+      
+        var versionChecker = document.getElementById("version")
+      if (version.id == versionChecker.innerHTML){
+        
+      }
+      else {
+        dreamInput.value = "EXPIRED";
+      }
+      
       levelUp();
       reset();
       rewardSound();
