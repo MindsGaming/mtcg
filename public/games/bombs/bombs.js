@@ -1,5 +1,7 @@
 function startBombs() {
+  
   Bombs();
+
   var ID = [
     "bomb",
     "rock",
@@ -95,6 +97,7 @@ function startBombs() {
       }
     }
   }
+  
 }
 
 function bombSound() {

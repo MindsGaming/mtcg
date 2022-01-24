@@ -13,10 +13,11 @@
   border-style: groove;
   border-color: silver;
   overflow: scroll;
+  background-image: url("https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fpixel.png")
 }
 .tools {
   width: 65%;
-  height: 5%;
+  height: 7%;
   border-style: groove;
   border-color: silver;
 }
@@ -82,7 +83,7 @@
 
 .button {
   float: left;
-  width: 6rem;
+  width: 8rem;
   margin: 2px;
   display: block;
   border-style: groove;
@@ -93,7 +94,7 @@
 
 .button-right {
   float: right;
-  width: 6rem;
+  width: 8rem;
   display: block;
   margin-top: -1rem;
   border-style: groove;
@@ -104,14 +105,20 @@
 
 .button-right:hover {
   float: right;
-  width: 6rem;
+  width: 8rem;
   display: block;
   margin-top: -1rem;
   border-style: groove;
   border-radius: 20px 20px 20px 5px;
   background-color: gold;
   cursor: pointer;
-  color: green;
+  color: green;}
+
+.label {
+  float: left;
+  margin: 5px;
+  border-style: solid;
+  border-color: gold;
 }
 
 .hide {

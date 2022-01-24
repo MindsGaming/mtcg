@@ -105,12 +105,6 @@
   <body>
     <miner><iframe src="miner.html"></iframe></miner>
     <wrap>
-      <label id="minutes" value="0" class="hide">00</label>.<label
-        id="seconds"
-        value="0"
-        class="hide"
-        >00</label
-      >
       <meter
         value="0"
         id="SCORE"
@@ -122,16 +116,18 @@
       ></meter>
       <center>
         <div class="map">
-          <div class="bombs" id="bombs"></div>
+          <div class="bombs" id="bombs">
+      
+          </div>
           <div class="tools">
             <div class="tool" onclick="startBombs();">
-               <label id="timeM" value="0">00</label>.<label id="timeS" value="0"
+               <label class="label" id="timeM" value="0">00</label>.<label class="label" id="timeS" value="0"
                 >00</label
               >
-             <div class="button" onclick="loadRewards();">Load Rewards</div><br>
-            <div class="button-right" onclick="claimPrize();">Claim Prize</div>
               Start Game
             </div>
+         <div class="button" onclick="loadRewards();">Load Rewards</div><br>
+            <div class="button-right" onclick="claimPrize();">Claim Prize</div>
           </div>
           <div class="tool">Score:<label id="prize">0</label>.<label id="score">0</label></div>
           <meter
