@@ -37,18 +37,27 @@ function soundsLoad() {
 }
 
 function bombsLoad() {
+  var bombsGame = document.getElementById("bombs");
+  if (bombsGame.title == "Closed"){
+     var quitGame = document.getElementById("quitgameBombs");
+    quitGame.style = "position: fixed; top:0; right: 0;  margin-right: 30px; border-style: solid; width: 20px; cursor: pointer; z-index: 5;"
+  bombsGame.title = "Open"
   var createHUB = document.createElement("iframe");
   createHUB.src = "/games/bombs";
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("bombs").appendChild(createHUB);
+  }
+  else {
+    bombsGame.style = "display: none"
+  }
 }
 
 
 function slotsLoad() {
   var slotGame = document.getElementById("slots");
   if (slotGame.title == "Closed"){
-    var quitGame = document.getElementById("quitGame");
+    var quitGame = document.getElementById("quitgameSlots");
     quitGame.style = "position: fixed; top:0; right: 0;  margin-right: 30px; border-style: solid; width: 20px; cursor: pointer; z-index: 5;"
   slotGame.title = "Open"
   var createHUB = document.createElement("iframe");
