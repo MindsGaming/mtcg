@@ -3,12 +3,10 @@ const version = document.createElement("p");
 version.id = "V0.17";
 version.innerHTML = version.id;
 version.title = version.id;
-version.required;
 const VERSION = document.getElementById("version");
 VERSION.innerHTML = version.id;
-VERSION.
-
-
+VERSION.title = version.id;
+version.required;
 
 /// Client & Timer
 
@@ -188,6 +186,8 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
+      
+      
       levelUp();
       reset();
       rewardSound();
