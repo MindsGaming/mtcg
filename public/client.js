@@ -5,6 +5,8 @@ version.innerHTML = version.id;
 version.title = version.id;
 version.required;
 document.getElementById("version").innerHTML = version.innerHTML;
+var versionChecker = document.getElementById("version");
+
 
 
 /// Client & Timer
@@ -188,12 +190,10 @@ function claimUpdate() {
       levelUp();
       reset();
 
-      var versionChecker = document.getElementById("version");
       if (version.id == versionChecker.innerHTML) {
       } else {
         dreamInput.value = "EXPIRED";
       }
-
       rewardSound();
     }
   }
