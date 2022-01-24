@@ -92,6 +92,18 @@
   color: gold;
 }
 
+.button:hover {
+  float: left;
+  width: 8rem;
+  margin: 2px;
+  display: block;
+  border-style: groove;
+  border-radius: 20px 20px 20px 5px;
+  background-color: gold;
+  color: green;
+  cursor: pointer;
+}
+
 .button-right {
   float: right;
   width: 8rem;

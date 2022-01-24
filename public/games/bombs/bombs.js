@@ -184,5 +184,53 @@ function score() {
   document.getElementById("score").innerHTML = 0;
   }
   
-  
+}
+
+var timeM = document.getElementById("timeM");
+var timeS = document.getElementById("timeS");
+var timeM = document.getElementById("timeM");
+var timeS = document.getElementById("timeS");
+var CREDITS = document.getElementById("SCORE");
+var credits = document.getElementById("score");
+
+
+var totalSeconds = 0;
+
+function setTime() {
+  ++totalSeconds;
+  timeS.innerHTML = pad(totalSeconds % 60);
+  timeM.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
+
+var boost = setInterval(setTime, 1000);
+
+function loadRewards() {
+  if (timeM.innerHTML == "00") {
+    alert("You Need A Full Reward");
+  } else {
+    var current = timeM.innerHTML;
+    var cred = CREDITS.value;
+    var total = current + cred;
+    CREDITS.value = total;
+    credits.innerHTML = CREDITS.value;
+    reset();
+  }
+}
+
+function claimPrize() {
+  if (dreamInput.value == "") {
+    var login = document.getElementById("getLogin");
+    login.className = "SuperSplash";
+  } else {
+    claimUpdate();
+  }
 }
