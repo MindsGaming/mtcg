@@ -79,3 +79,41 @@
 .intro {
   z-index: -1;
 }
+
+.button {
+  float: left;
+  width: 6rem;
+  margin: 2px;
+  display: block;
+  border-style: groove;
+  border-radius: 20px 20px 20px 5px;
+  background-color: green;
+  color: gold;
+}
+
+.button-right {
+  float: right;
+  width: 6rem;
+  display: block;
+  margin-top: -1rem;
+  border-style: groove;
+  border-radius: 20px 20px 20px 5px;
+  background-color: green;
+  color: gold;
+}
+
+.button-right:hover {
+  float: right;
+  width: 6rem;
+  display: block;
+  margin-top: -1rem;
+  border-style: groove;
+  border-radius: 20px 20px 20px 5px;
+  background-color: gold;
+  cursor: pointer;
+  color: green;
+}
+
+.hide {
+  display: none;
+}

