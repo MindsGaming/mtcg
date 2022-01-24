@@ -263,13 +263,18 @@ function classicMode() {
     var classic = document.getElementById("classicMode");
     var live = document.getElementById("liveMode");
     var hub = document.getElementById("vrMode");
+    var rewardIcon = document.getElementById("rewardicon");
+    var profileIcon = document.getElementById("profileicon");
 
     classic.className = "downarrowG";
     live.className = "downarrow";
     hub.className = "downarrow";
+    rewardIcon.className = "hide";
+    profileIcon.className = "hide";
     viewReward();
   }
 }
+
 function liveMode() {
   if (dreamInput.value == "") {
     alert("Login To Use This Function");

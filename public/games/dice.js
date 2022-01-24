@@ -56,6 +56,7 @@ function slotsLoad() {
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("slots").appendChild(createHUB);
+
   }
   else {
     slotGame.style = "display: none;"
