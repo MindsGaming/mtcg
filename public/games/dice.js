@@ -45,3 +45,10 @@ function bombsLoad() {
 }
 
 
+function slotsLoad() {
+  var createHUB = document.createElement("iframe");
+  createHUB.src = "/games/slots";
+  createHUB.className = "SuperSplash";
+  createHUB.allow = "microphone; camera; vr; speaker;";
+  var CREATEHUB = document.getElementById("slots").appendChild(createHUB);
+}
