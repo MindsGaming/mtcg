@@ -228,9 +228,8 @@ function loadRewards() {
 
 function claimPrize() {
   if (dreamInput.value == "") {
-    var login = document.getElementById("getLogin");
+     var login = document.getElementById("getLogin");
     login.className = "SuperSplash";
-  } else {
-    claimUpdate();
   }
+  
 }
