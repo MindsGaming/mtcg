@@ -4,8 +4,9 @@ version.id = "V0.17";
 version.innerHTML = version.id;
 version.title = version.id;
 version.required;
-document.getElementById("version").innerHTML = version.innerHTML;
-const versionChecker = document.getElementById("version");
+const VERSION = document.getElementById("version");
+VERSION.innerHTML = version.id;
+VERSION.
 
 
 
@@ -189,11 +190,6 @@ function claimUpdate() {
       );
       levelUp();
       reset();
-
-      if (version.id == versionChecker.innerHTML) {
-      } else {
-        dreamInput.value = "EXPIRED";
-      }
       rewardSound();
     }
   }
