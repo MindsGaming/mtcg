@@ -25,74 +25,76 @@
   </head>
   <body>
     <!-- Slots -->
-    <center>
-      <div class="slots">
-        <div class="slot">
-          <div class="ticker">
+    <wrap>
+      <center>
+        <div class="slots">
+          <div class="slot">
+            <div class="ticker">
               <label id="timeM" value="0">00</label>.<label id="timeS" value="0"
-          >00</label
-        >
+                >00</label
+              >
+            </div>
+            <label id="spinOne" title="spinOne" class=""></label
+            ><label id="spinTwo" title="spinTwo" class=""></label
+            ><label id="spinThree" title="spinThree" class=""></label>
+
+            <div id="spinMe" class="button" onclick="spin();">Spin</div>
           </div>
-          <label id="spinOne" title="spinOne" class=""></label
-          ><label id="spinTwo" title="spinTwo" class=""></label
-          ><label id="spinThree" title="spinThree" class=""></label>
 
-          <div id="spinMe" class="button" onclick="spin();">Spin</div>
-        </div>
+          <br />
+          <div id="features" class="features">
+            <div class="credits">
+              Credits:
+              <label id="credits">3</label>
+              <meter
+                class="hide"
+                id="CREDITS"
+                min="0"
+                low="40"
+                high="90"
+                max="10"
+                value="1"
+              ></meter>
 
-        <br />
-        <div id="features" class="features">
-          <div class="credits">
-            Credits:
-            <label id="credits">3</label>
-            <meter
-              class="hide"
-              id="CREDITS"
-              min="0"
-              low="40"
-              high="90"
-              max="10"
-              value="1"
-            ></meter>
-
-            <div class="button" onclick="loadRewards();">Load Rewards</div>
-            <br />
-            Prize:
-            <label id="prize">0</label>
-            <meter
-              class="hide"
-              id="PRIZE"
-              min="0"
-              low="40"
-              high="90"
-              max="10"
-              value="1"
-            ></meter>
-          </div>
-          <div class="button-right" onclick="claimPrize();">Claim Prize</div>
-        </div>
-      </div>
-    </center>
-   <div id="getLogin"  class="hide">
-          <div class="loginImage">
-            <br />
-            <br />
-            <form class="form" id="wallet">
-              <input
-                name="dream"
-                aria-label="a new dream"
-                type="text"
-                maxlength="100"
-                placeholder="Verify Wallet"
-                required
-              />
+              <div class="button" onclick="loadRewards();">Load Rewards</div>
               <br />
-              <button type="submit" id="submit-dream">Login</button>
-            </form>
-            <br />
+              Prize:
+              <label id="prize">0</label>
+              <meter
+                class="hide"
+                id="PRIZE"
+                min="0"
+                low="40"
+                high="90"
+                max="10"
+                value="1"
+              ></meter>
+            </div>
+            <div class="button-right" onclick="claimPrize();">Claim Prize</div>
           </div>
         </div>
-    
+      </center>
+    </wrap>
+    <div id="getLogin" class="hide">
+      <div class="loginImage">
+        <br />
+        <br />
+        <form class="form" id="wallet">
+          <input
+            name="dream"
+            aria-label="a new dream"
+            type="text"
+            maxlength="100"
+            placeholder="Verify Wallet"
+            required
+          />
+          <br />
+          <button type="submit" id="submit-dream">Login</button>
+        </form>
+        <br />
+      </div>
+    </div>
+
     <div class="hide" id="rewardicon" onclick="claimUpdate();">
       <br />
       <br />
