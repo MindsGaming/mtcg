@@ -272,7 +272,7 @@ function classicMode() {
   live.className = "downarrow";
   hub.className = "downarrow";
   rewardIcon.className = "hide";
-  profileIcon.className = "hide";
+  profileIcon.className = "profileicon";
   modes.title = "classic"
   viewReward();
 }
