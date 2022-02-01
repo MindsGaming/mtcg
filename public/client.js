@@ -1,6 +1,6 @@
 // Version
 const version = document.createElement("p");
-version.id = "V0.19";
+version.id = "V0.17";
 version.innerHTML = version.id;
 version.title = version.id;
 const VERSION = document.getElementById("version");
@@ -135,8 +135,6 @@ dreamsForm.onsubmit = (event) => {
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
   var closeLogin = document.getElementById("login");
-  var HUBS = document.getElementById("hubs");
-  HUBS.title = "HUBS";
   closeLogin.className = "hide";
   walletChange();
 };
@@ -188,7 +186,8 @@ function claimUpdate() {
       appendNewDream(
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
-
+      
+      
       levelUp();
       reset();
       rewardSound();
