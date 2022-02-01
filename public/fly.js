@@ -205,20 +205,22 @@ function checkStatus() {
 }
 
 function guest() {
-  var modes = document.getElementById("modes");
+var modes = document.getElementById("modes")
   var closeHub = document.getElementById("login");
 
-  if (modes.title == "modes") {
-    alert("Login To Earn Rewards");
-    var createHUB = document.createElement("iframe");
-    createHUB.src =
-      "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
-    createHUB.className = "SuperSplash";
-    createHUB.allow = "microphone; camera; vr; speaker;";
-    var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-    closeHub.className = "hide";
-  } else {
-    closeHub.className = "hide";
+if (modes.title == "modes"){
+  
+  alert("Login To Earn Rewards");
+  var createHUB = document.createElement("iframe");
+  createHUB.src =
+    "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
+  createHUB.className = "SuperSplash";
+  createHUB.allow = "microphone; camera; vr; speaker;";
+  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+  closeHub.className = "hide";
+}
+  else{
+  closeHub.className = "hide";
   }
 }
 
@@ -263,14 +265,15 @@ function classicMode() {
   var hub = document.getElementById("vrMode");
   var rewardIcon = document.getElementById("rewardicon");
   var profileIcon = document.getElementById("profileicon");
-  var modes = document.getElementById("modes");
+    var modes = document.getElementById("modes");
+
 
   classic.className = "downarrowG";
   live.className = "downarrow";
   hub.className = "downarrow";
   rewardIcon.className = "hide";
   profileIcon.className = "profileicon";
-  modes.title = "classic";
+  modes.title = "classic"
   viewReward();
 }
 
