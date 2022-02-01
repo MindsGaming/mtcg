@@ -80,12 +80,10 @@ function spin() {
   if (credits.innerHTML == "0") {
     alert("Load Rewards");
   } else {
-    var remove = 5;
-    var total = credits.innerHTML - remove;
-    var prizetotal = credits.innerHTML - remove;
+    var remove = 2;
+    var current = credits.innerHTML;
+    var total = current - remove;
     credits.innerHTML = total;
-    prize.innerHTML = prizetotal;
-    prize.value = prizetotal;
     anamation();
 
     if (BASEIMAGE.title == BASEIMAGETWO.title) {
@@ -158,18 +156,19 @@ function checkRewards() {
 }
 
 function makeRewards() {
-  var boost = 1;
+  var boost = 3;
   var total = boost + CREDITS.value;
-  var prizetotal = boost + PRIZE.value;
+  var prizevalue = PRIZE.value;
+  var prizetotal = boost + prizevalue;
   CREDITS.value = total;
   credits.innerHTML = total;
-  prize.innerHTML = prizetotal;
 
-  if (credits.innerHTML == "6") {
-    var boost = 6;
-    var total = CREDITS.value - boost;
-    CREDITS.value = total;
-    credits.innerHTML = total;
+  if (credits.innerHTML == "9") {
+    var boost = 1;
+    var current = PRIZE.value;
+    var math = boost + PRIZE.value;
+    PRIZE.value = math;
+    PRIZE.innerHTML = math; 
   }
 }
 
