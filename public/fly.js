@@ -223,12 +223,7 @@ function guest() {
 }
 
 function getLogin() {
-  var login = document.getElementById("login");
-  var hubs = document.getElementById("hubs");
-  var game = document.getElementById("games");
-  login.className = "SuperSplash";
-  hubs.className = "hide";
-  game.className = "hide";
+ window.open("/", "_self")
 }
 
 /* Play Modes */
