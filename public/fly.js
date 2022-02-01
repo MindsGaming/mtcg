@@ -205,22 +205,17 @@ function checkStatus() {
 }
 
 function guest() {
-var modes = document.getElementById("modes")
-  var closeHub = document.getElementById("login");
+  var login = document.getElementById("login");
+  login.className = "hide";
 
-if (modes.title == "modes"){
-  
-  alert("Login To Earn Rewards");
-  var createHUB = document.createElement("iframe");
-  createHUB.src =
-    "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
-  createHUB.className = "SuperSplash";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-  closeHub.className = "hide";
-}
-  else{
-  closeHub.className = "hide";
+  var HUBS = document.getElementById("hubs");
+
+  if (HUBS.title == "HUBS") {
+    window.open("/guest", "_self");
+  }
+
+  if (HUBS.title == "CLASSIC") {
+    HUBS.className = "";
   }
 }
 
@@ -241,12 +236,15 @@ function vrMode() {
     "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
   createHUB.className = "SuperSplash";
   createHUB.allow = "microphone; camera; vr; speaker;";
+  createHUB.ID = "HUBS";
   var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
 
   var classic = document.getElementById("classicMode");
   var live = document.getElementById("liveMode");
   var hub = document.getElementById("vrMode");
+  var HUB = document.getElementById("hubs");
 
+  HUB.title = "HUBS";
   classic.className = "downarrow";
   live.className = "downarrow";
   hub.className = "downarrowG";
@@ -254,47 +252,19 @@ function vrMode() {
 }
 
 function classicMode() {
-  var createHUB = document.createElement("iframe");
-  createHUB.src = "/games";
-  createHUB.className = "SuperSplash";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+  var CLASSIC = document.getElementById("hubs");
 
-  var classic = document.getElementById("classicMode");
-  var live = document.getElementById("liveMode");
-  var hub = document.getElementById("vrMode");
-  var rewardIcon = document.getElementById("rewardicon");
-  var profileIcon = document.getElementById("profileicon");
-    var modes = document.getElementById("modes");
-
-
-  classic.className = "downarrowG";
-  live.className = "downarrow";
-  hub.className = "downarrow";
-  rewardIcon.className = "hide";
-  profileIcon.className = "profileicon";
-  modes.title = "classic"
-  viewReward();
-}
-
-function liveMode() {
-  if (dreamInput.value == "") {
-    alert("Login To Use This Function");
-  } else {
-    var createHUB = document.createElement("iframe");
-    createHUB.src = "/live";
-    createHUB.className = "SuperSplash";
-    createHUB.allow = "microphone; camera; vr; speaker;";
-    var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-
+  if (CLASSIC.title == "HUBS") {
+    CLASSIC.title = "CLASSIC";
     var classic = document.getElementById("classicMode");
-    var live = document.getElementById("liveMode");
     var hub = document.getElementById("vrMode");
 
-    classic.className = "downarrow";
-    live.className = "downarrowG";
+    classic.className = "downarrowG";
     hub.className = "downarrow";
     viewReward();
+    if (dreamInput.value == "") {
+      alert("Mode Changed");
+    }
   }
 }
 
