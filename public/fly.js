@@ -205,89 +205,67 @@ function checkStatus() {
 }
 
 function guest() {
-  var modes = document.getElementById("modes");
-  var closeHub = document.getElementById("login");
+  var login = document.getElementById("login");
+  var hubs = document.getElementById("hubs");
+  var games = document.getElementById("games");
 
-  if (modes.title == "modes") {
-    alert("Login To Earn Rewards");
+  if (hubs.title == "HUBS") {
+    vrMode();
+  }
+  if (games.title == "GAMES") {
+    classicMode();
+  }
+  login.className = "hide";
+  viewReward();
+}
+
+function getLogin() {
+  window.open("/", "_self");
+}
+
+/* Play Modes */
+
+function vrMode() {
+  var hubs = document.getElementById("hubs");
+  if (hubs.title == "HUBS") {
+    hubs.title = "HUBS";
+    hubs.className = "SuperSplash";
+    var games = document.getElementById("games");
+    games.className = "hide";
+    games.title = "CLOSED";
     var createHUB = document.createElement("iframe");
     createHUB.src =
       "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
     createHUB.className = "SuperSplash";
     createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-    closeHub.className = "hide";
-  } else {
-    closeHub.className = "hide";
+    var classic = document.getElementById("classicMode");
+    var VR = document.getElementById("vrMode");
+
+    classic.className = "downarrow";
+    VR.className = "downarrowG";
+    viewReward();
   }
-}
-
-function getLogin() {
- window.open("/", "_self")
-}
-
-/* Play Modes */
-
-function vrMode() {
-  var createHUB = document.createElement("iframe");
-  createHUB.src =
-    "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
-  createHUB.className = "SuperSplash";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-
-  var classic = document.getElementById("classicMode");
-  var live = document.getElementById("liveMode");
-  var hub = document.getElementById("vrMode");
-
-  classic.className = "downarrow";
-  live.className = "downarrow";
-  hub.className = "downarrowG";
-  viewReward();
+  if (hubs.title == "CLOSED") {
+    hubs.title = "HUBS";
+    vrMode();
+  }
 }
 
 function classicMode() {
-  var createHUB = document.createElement("iframe");
-  createHUB.src = "/games";
-  createHUB.className = "SuperSplash";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-
+  var games = document.getElementById("games");
+  games.className = "";
+  games.title = "GAMES";
   var classic = document.getElementById("classicMode");
-  var live = document.getElementById("liveMode");
-  var hub = document.getElementById("vrMode");
-  var rewardIcon = document.getElementById("rewardicon");
-  var profileIcon = document.getElementById("profileicon");
-  var modes = document.getElementById("modes");
+  var VR = document.getElementById("vrMode");
+  var hubs = document.getElementById("hubs");
 
+  hubs.className = "hide";
+  hubs.innerHTML = "";
+  hubs.title = "CLOSED";
   classic.className = "downarrowG";
-  live.className = "downarrow";
-  hub.className = "downarrow";
-  rewardIcon.className = "hide";
-  profileIcon.className = "profileicon";
-  modes.title = "classic";
+  VR.className = "downarrow";
   viewReward();
-}
-
-function liveMode() {
-  if (dreamInput.value == "") {
-    alert("Login To Use This Function");
-  } else {
-    var createHUB = document.createElement("iframe");
-    createHUB.src = "/live";
-    createHUB.className = "SuperSplash";
-    createHUB.allow = "microphone; camera; vr; speaker;";
-    var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-
-    var classic = document.getElementById("classicMode");
-    var live = document.getElementById("liveMode");
-    var hub = document.getElementById("vrMode");
-
-    classic.className = "downarrow";
-    live.className = "downarrowG";
-    hub.className = "downarrow";
-    viewReward();
-  }
 }
 
 function versionCheck() {
