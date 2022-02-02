@@ -21,6 +21,8 @@
     <script src="/client.js" defer></script>
     <script src="/fly.js" defer></script>
     <script src="/games/dice.js" defer></script>
+        <script src="creator.js" defer></script>
+
 
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/games/style.css" defer />
@@ -28,7 +30,28 @@
   <body>
     <miner><iframe src="/miner"> </iframe></miner>
    
-    <firm
+   <center>
+    <h4>
+      Card Creator
+     </h4>
+     <p>
+    Use images you own to create a card.
+     <br>
+     <b>
+     Cards Are Given Random Values And Powers
+     </b>
+     </p>
+      <input
+                name="url"
+                id="url"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                placeholder="IMAGE URL"
+                required
+              />
+     <div id="newcard"></div>
+    </center>
     
     
     
