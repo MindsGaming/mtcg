@@ -118,7 +118,8 @@ function changeToken() {
       var oldToken = dreamToken.innerHTML;
       let text;
 
-      var newTokens = ["DragonToken", "ECLIPSE", "DooBetter", "GTPC", "GAMER", "DragonToken", "ECLIPSE", "DooBetter"];
+     var extralist = ["DragonToken", "ECLIPSE", "DooBetter", "GTPC",]
+      var newTokens = ["DragonToken", "ECLIPSE", "DooBetter", "GTPC", "GAMER", extralist];
       const newtoken = newTokens[Math.floor(Math.random() * newTokens.length)];
       dreamToken.innerHTML = newtoken;
 
