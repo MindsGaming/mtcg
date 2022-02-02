@@ -60,7 +60,6 @@ var imageThree = document.createElement("img");
 imageThree.src =
   "https://cdn.minds.com/icon/944965270747750406/medium/1627757450";
 imageThree.className = "spined";
-imageThree.title= "ImageThree"
 
 var imageFour = document.createElement("img");
 imageFour.src =
@@ -158,6 +157,7 @@ function checkRewards() {
     }
   }
 }
+
 
 function makeRewards() {
   var boost = 3;
