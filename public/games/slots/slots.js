@@ -49,6 +49,7 @@ var imageOne = document.createElement("img");
 imageOne.src =
   "https://cdn.glitch.me/76239ef0-e5c6-4e29-9830-26d4ec2dfc0b%2FGAMER.jpeg";
 imageOne.className = "spined";
+imageOne.title = "GAMER";
 
 var imageTwo = document.createElement("img");
 imageTwo.src =
@@ -59,16 +60,19 @@ var imageThree = document.createElement("img");
 imageThree.src =
   "https://cdn.minds.com/icon/944965270747750406/medium/1627757450";
 imageThree.className = "spined";
+imageThree.title= "ImageThree"
 
 var imageFour = document.createElement("img");
 imageFour.src =
   "https://cdn.minds.com/icon/822733901683236867/medium/1621185080";
 imageFour.className = "spined";
+imageFour.title = "ImageFour"
 
 var imageFive = document.createElement("img");
 imageFive.src =
   "https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/ZomboMeme%2017012022164751.jpg";
 imageFive.className = "spined";
+imageFive.title = "DragonToken"
 
 var spinme = document.getElementById("spinMe");
 var credits = document.getElementById("credits");
