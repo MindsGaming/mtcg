@@ -73,11 +73,12 @@ function slotsLoad() {
     createHUB.className = "SuperSplash";
     createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document.getElementById("slots").appendChild(createHUB);
-    
-     imageOne.className = "hide";
+
+    imageOne.className = "hide";
     imageTwo.className = "hide";
   } else {
     slotGame.style = "display: none;";
-    
+    imageOne.className = "rewardicon";
+    imageTwo.className = "profileicon";
   }
 }
