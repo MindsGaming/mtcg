@@ -1,6 +1,10 @@
 function background() {
   let inputVal = document.getElementById("url").value;
-  var div = document.createElement("img");
+ 
+  
+  if(inputVal == ""){
+  }else {
+     var div = document.createElement("img");
   div.src = inputVal;
   div.style = "width: 40%; height: 70%; display:block; margin:3px; opacity:.8;";
   div.id = "MTCG";
@@ -12,4 +16,7 @@ function background() {
   div2.style = "width: 40%; height: 70%; display:block;";
   div2.id = "background";
   document.getElementById("MTCG").appendChild(div2);
+  
+    
+  }
 }
