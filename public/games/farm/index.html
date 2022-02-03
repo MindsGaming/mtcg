@@ -10,7 +10,7 @@
     <title>Reward Digger| Beta</title>
     <!--   This is where the Phaser 2.6.2 code is brought in to the app. -->
 
-    <script type="text/javascript" src="bombs.js" defer></script>
+    <script type="text/javascript" src="farm.js" defer></script>
     <script src="/games/client.js" defer></script>
     <link rel="stylesheet" href="/style.css" defer />
     <link rel="stylesheet" href="style.css" />
@@ -20,7 +20,15 @@
     <miner><iframe src="/miner"></iframe></miner>
     
     <div id="farm">
-      
+      <meter
+        value="0"
+        id="blocks"
+        max="100"
+        min="0"
+        low="10"
+        high="80"
+        class="hide"
+      ></meter>
     </div>
     
     <div id="tools">
