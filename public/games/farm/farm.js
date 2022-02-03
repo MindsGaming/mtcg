@@ -1,23 +1,16 @@
-var farm = document.createElement("div");
-farm.className = "pixel";
-farm.ID = "1";
-var FARM = document.getElementById("farm").appendChild(farm);
+var farm = document.getElementById("farm");
 
-function blocks(){
+block();
+
+function block(){
+if (farm.title == "111"){
   
-  if (farm.ID == "100"){
+}
+  else{
+      var createFarm = document.createElement("div");
+    createFarm.className = "pixel"
+    createFarm.id = +1
+
     
   }
-  else {
-    var boost = 1;
-    var BLOCKS =document.getElementById("blocks");
-    var currentBlocks = BLOCKS.value;
-    var total = 
-    var farm = document.createElement("div");
-farm.className = "pixel";
-farm.ID = "1";
-var FARM = document.getElementById("farm").appendChild(farm);
-    
-  }
-  
 }
