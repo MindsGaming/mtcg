@@ -14,12 +14,20 @@ function addFarm() {
     createFarm.id = moreFarms;
     createFarm.title = moreFarms;
     var FARM = document.getElementById("farm").appendChild(createFarm);
-    createFarm.addEventListener("click", item);
     addFarm();
   }
 }
 
 function item(){
   var salt = document.getElementById("salt");
+  
+  if (salt.title == "salt"){
+  var fun = document.getElementByTag("div");
+  var newID = fun.id;
+  
+    createFa
   createFarm.className  = "salt"
+  
+  }
+  
 }
