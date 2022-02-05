@@ -1,4 +1,3 @@
-
 .farm {
   position: relative;
   width: 80%;
@@ -12,16 +11,19 @@
 }
 
 .pixel {
-  float:left;
+  float: left;
   width: 80px;
   height: 50px;
   margin: 5px;
   background-color: green;
-  
 }
 
 .salt {
-  background-color:black;
+float: left;
+  width: 80px;
+  height: 50px;
+  margin: 5px;
+  background-color: black;
 }
 
 .hide {
