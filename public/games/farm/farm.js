@@ -1,18 +1,19 @@
-var farm = document.getElementById("farm");
-addFarm();
+var farm = document.getElementById("FARM");
 
 function addFarm() {
-  if (farm.id == "100") {
+  if (farm.value == "10") {
   } else {
+    
+    
+    var moreFarm = document.getElementById("FARM").value;
+    var moreFarms = moreFarm + 1;
+    document.getElementById("FARM").value = moreFarms;
+    
     var createFarm = document.createElement("div");
     createFarm.className = "pixel";
     createFarm.ID = farm.id;
     var FARM = document.getElementById("farm").appendChild(createFarm);
-
-    var tackCount = document.getElementById("FARM").value;
-    var tackcount = tackCount + 1;
-    document.getElementById("FARM").value = tackcount;
-    createFarm.id = tackcount;
     addFarm();
+
   }
 }
