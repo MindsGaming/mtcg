@@ -1,7 +1,7 @@
 var farm = document.getElementById("FARM");
-
+addFarm();
 function addFarm() {
-  if (farm.value == "10") {
+  if (farm.value == "90") {
   } else {
     
     
@@ -11,7 +11,8 @@ function addFarm() {
     
     var createFarm = document.createElement("div");
     createFarm.className = "pixel";
-    createFarm.ID = farm.id;
+    createFarm.id = moreFarms;
+    createFarm.title = moreFarms;
     var FARM = document.getElementById("farm").appendChild(createFarm);
     addFarm();
 
