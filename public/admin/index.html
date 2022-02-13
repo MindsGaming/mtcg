@@ -98,13 +98,14 @@
                 type="text"
                 maxlength="100"
                 placeholder="Wallet ID"
+                pattern=".{11,43}"
                 required
+                title="Wallet IDs Are 43 Characters"
               />
               <br />
               <button type="submit" id="submit-dream">Login</button>
             </form>
             <br />
-            <div class="button" onclick="guest();">Guest</div>
           </div>
         </div>
       </div>
@@ -149,7 +150,7 @@
         <label id="myToken" onclick="changeToken();">Random</label>
       </div>
       <div>
-      <b>AdMIN</b>
+        <b>AdMIN</b>
       </div>
       <br />
       <div class="button" onclick="pendingClaims();">View Pending</div>
