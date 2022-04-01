@@ -118,8 +118,15 @@ function changeToken() {
       var oldToken = dreamToken.innerHTML;
       let text;
 
-     var extralist = ["DragonToken", "ECLIPSE", "DooBetter", "GTPC",]
-      var newTokens = ["DragonToken", "ECLIPSE", "DooBetter", "GTPC", "GAMER", extralist];
+      var extralist = ["DragonToken", "ECLIPSE", "DooBetter", "GTPC"];
+      var newTokens = [
+        "DragonToken",
+        "ECLIPSE",
+        "DooBetter",
+        "GTPC",
+        "GAMER",
+        extralist,
+      ];
       const newtoken = newTokens[Math.floor(Math.random() * newTokens.length)];
       dreamToken.innerHTML = newtoken;
 
@@ -267,6 +274,10 @@ function classicMode() {
   classic.className = "downarrowG";
   VR.className = "downarrow";
   viewReward();
+}
+
+function alphaChat() {
+  window.open("/chat", "_self");
 }
 
 function versionCheck() {
