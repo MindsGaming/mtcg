@@ -6,6 +6,7 @@
   height: 100%;
   margin: -1px;
   background-color: blue;
+  z-index: 0;
 }
 
 miner {
