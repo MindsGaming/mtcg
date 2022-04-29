@@ -292,5 +292,4 @@ createHUB.src =
   "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
 createHUB.className = "SuperSplash";
 createHUB.allow = "microphone; camera; vr; speaker;";
-var CREATEHUB = document.getElementById("guest").appendChild(createHUB);
-var openHub = document.getElementById("guest");
+var CREATEHUB = document.getElementById("HUBS");

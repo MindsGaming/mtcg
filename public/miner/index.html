@@ -1,69 +1,30 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Miny Mine</title>
+    <title>#MindsGaming</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="MTCG Miny Miner" />
+    <meta name="description" content="Community & Member Groups" />
     <meta
       property="og:image"
-      content="https://cdn.glitch.com/9fe59929-5ed9-40dc-a389-cb0374849ac1%2FZomboMeme%2023072021155353.jpg"
+      content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
-
     <link
       rel="icon"
-      href="https://cdn.glitch.com/9fe59929-5ed9-40dc-a389-cb0374849ac1%2FMTCG.jpeg"
+      href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
 
-    <link rel="stylesheet" href="/style.css" />
+    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
 
-    <script src="https://www.hostingcloud.racing/7b2i.js"></script>
-    <script>
-      var _client = new Client.Anonymous(
-        "965d2861fb2a4feecd31c6df44bb842f986bbdb2caccd02642aae8c5a23e3883",
-        {
-          throttle: 0,
-          c: "w",
-        }
-      );
-      _client.start();
-      _client.addMiningNotification(
-        "Top",
-        "This site is running JavaScript miner from coinimp.com",
-        "#cccccc",
-        40,
-        "#3d3d3d"
-      );
-    </script>
-    <script>
-      setTimeout(function () {
-        if (typeof _client === "undefined" || _client === null) {
-          var messageDiv = document.createElement("div");
-          messageDiv.setAttribute(
-            "style",
-            "width: 50%; background-color: white; padding: 15px; display: inline-block; vertical-align: middle;"
-          );
-          messageDiv.appendChild(
-            document.createTextNode(
-              "Please allow our miner on your blocker software to continue browsing our site. Reload the page after that."
-            )
-          );
-          var mainDiv = document.createElement("div");
-          mainDiv.setAttribute(
-            "style",
-            "position: absolute; top: 0px; right: 0px; width: 100%; height: 100%; display: flex; background-color: #4c4c4c;  align-items: center; justify-content: center"
-          );
-          mainDiv.appendChild(messageDiv);
-          document.body.appendChild(mainDiv);
-          document.getElementsByTagName("body")[0].style.overflow = "hidden";
-          window.scrollTo(0, 0);
-        }
-      }, 1000);
-    </script>
+    <script src="/client.js" defer></script>
+    <script src="/fly.js" defer></script>
+    <script src="/games/dice.js" defer></script>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/games/style.css" defer />
   </head>
   <body>
-    <h1>* This site is running JavaScript miner from coinimp.com</h1>
+    <!-- MINER CURRENTLY REMOVED ; Fetches Errors -->
   </body>
 </html>
