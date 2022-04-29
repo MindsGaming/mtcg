@@ -120,6 +120,7 @@ function changeToken() {
 
       var extralist = ["DragonToken", "ECLIPSE", "DooBetter", "GTPC"];
       var newTokens = [
+        "DarkMark",
         "DragonToken",
         "ECLIPSE",
         "DooBetter",

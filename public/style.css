@@ -453,6 +453,16 @@ label {
   background-image: url("https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/ZomboMeme%2017012022164751.jpg");
 }
 
+.darkmarkIMG {
+  display: block;
+  color: transparent;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://momintdev.blob.core.windows.net/uploads/449891fa-8ccc-4bcf-851a-d54b3a3cf7eb.jpg");
+}
+
 .downarrow {
   display: block;
   border-style: groove;

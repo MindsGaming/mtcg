@@ -1,6 +1,6 @@
 // Version
 const version = document.createElement("p");
-version.id = "V0.22";
+version.id = "V0.23";
 version.innerHTML = version.id;
 version.title = version.id;
 const VERSION = document.getElementById("version");
@@ -20,7 +20,7 @@ var dreamWallet = document.getElementById("myWallet");
 selectToken();
 
 var totalSeconds = 0;
-setInterval(setTime, 10000);
+setInterval(setTime, 9865);
 
 function setTime() {
   ++totalSeconds;
@@ -61,6 +61,13 @@ function setTime() {
   }
 
   if (minutesLabel.innerHTML == "61") {
+    if (secondsLabel.innerHTML == "01") {
+      levelups.value = "60";
+      levelupPop();
+    }
+  }
+
+  if (minutesLabel.innerHTML == "71") {
     alert("You Maxed Out Rewards, Are You Still Active?");
     claimUpdate();
     if (secondsLabel.innerHTML == "01") {
@@ -220,37 +227,44 @@ function levelUp() {
   document.getElementById("levelUp").value = tackcount;
 
   if (tackcount == "11") {
-    dreamToken.innerHTML = "ECLIPSE";
-    dreamToken.title = "ECLIPSE";
-    dreamToken.className = "eclipseIMG";
+    dreamToken.innerHTML = "DragonToken";
+    dreamToken.title = "DragonToken";
+    dreamToken.className = "dragontokenIMG";
     tackCount.value = "12";
   }
 
   if (tackcount == "21") {
-    dreamToken.innerHTML = "DooBetter";
-    dreamToken.title = "DooBetter";
-    dreamToken.className = "doobetterIMG";
+    dreamToken.innerHTML = "ECLIPSE";
+    dreamToken.title = "ECLIPSE";
+    dreamToken.className = "eclipseIMG";
     tackCount.value = "22";
   }
 
   if (tackcount == "31") {
-    dreamToken.innerHTML = "GTPC";
-    dreamToken.title = "GTPC";
-    dreamToken.className = "gtpcIMG";
+    dreamToken.innerHTML = "DooBetter";
+    dreamToken.title = "DooBetter";
+    dreamToken.className = "doobetterIMG";
     tackCount.value = "32";
   }
 
   if (tackcount == "41") {
-    dreamToken.innerHTML = "GAMER";
-    dreamToken.title = "GAMER";
-    dreamToken.className = "gamerIMG";
+    dreamToken.innerHTML = "GTPC";
+    dreamToken.title = "GTPC";
+    dreamToken.className = "gtpcIMG";
     tackCount.value = "42";
   }
 
   if (tackcount == "51") {
-    dreamToken.innerHTML = "DragonToken";
-    dreamToken.title = "DragonToken";
-    dreamToken.className = "dragontokenIMG";
+    dreamToken.innerHTML = "GAMER";
+    dreamToken.title = "GAMER";
+    dreamToken.className = "gamerIMG";
+    tackCount.value = "52";
+  }
+
+  if (tackcount == "61") {
+    dreamToken.innerHTML = "DarkMark";
+    dreamToken.title = "DarkMark";
+    dreamToken.className = "darkmarkIMG";
     tackCount.value = "0";
   }
 }
@@ -261,12 +275,12 @@ function walletChange() {
 }
 
 function selectToken() {
-  var tokens = ["DragonToken"];
+  var tokens = ["Darkmark"];
   const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
   var a = document.getElementById("myToken");
   a.innerHTML = newtoken;
   dreamToken.innerHTML = a.innerHTML;
-  dreamToken.title = "DragonToken";
-  dreamToken.className = "dragontokenIMG";
+  dreamToken.title = "DarkMark";
+  dreamToken.className = "darkmarkIMG";
   dreamToken.innerHTML = newtoken;
 }
