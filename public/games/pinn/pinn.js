@@ -99,7 +99,7 @@ function quit() {
   var txt;
   var r = confirm("Quit Your Job?");
   if (r == true) {
-    window.open("/games", "_self");
+    window.open("#", "_self");
   } else txt = "Get back to work";
 }
 
