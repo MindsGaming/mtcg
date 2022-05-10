@@ -1,7 +1,3 @@
-const page = "https://mtcg.glitch.me"
-
-
-
 // server.js
 // where your node app starts
 
@@ -69,7 +65,7 @@ app.post("/addDream", (request, response) => {
   // so they can write to the database
   if (!process.env.DISALLOW_WRITE) {
     const cleansedDream = cleanseString(request.body.dream);
-    db.run(`INSERT INTO Dreams (dream) VALUES (?)`, cleansedDream, error => {
+    db.run(`INSERT INTO Dreams (dream) VALUES (?)`, cleansedDream, (error) => {
       if (error) {
         response.send({ message: "error!" });
       } else {
@@ -87,13 +83,13 @@ app.get("/clearDreams", (request, response) => {
       "SELECT * from Dreams",
       (err, row) => {
         console.log("row", row);
-        db.run(`DELETE FROM Dreams WHERE ID=?`, row.id, error => {
+        db.run(`DELETE FROM Dreams WHERE ID=?`, row.id, (error) => {
           if (row) {
             console.log(`deleted row ${row.id}`);
           }
         });
       },
-      err => {
+      (err) => {
         if (err) {
           response.send({ message: "error!" });
         } else {
@@ -105,7 +101,7 @@ app.get("/clearDreams", (request, response) => {
 });
 
 // helper function that prevents html/css/script malice
-const cleanseString = function(string) {
+const cleanseString = function (string) {
   return string.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 };
 

@@ -277,10 +277,6 @@ function classicMode() {
   viewReward();
 }
 
-function alphaChat() {
-  window.open("/chat", "_self");
-}
-
 function versionCheck() {
   alert(version.innerHTML);
 }
