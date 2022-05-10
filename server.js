@@ -1,3 +1,7 @@
+const page = "https://mtcg.glitch.me"
+
+
+
 // server.js
 // where your node app starts
 
