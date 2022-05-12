@@ -265,10 +265,10 @@ function classicMode() {
   var games = document.getElementById("games");
   games.className = "";
   games.title = "GAMES";
+  games.innerHTML = "Something Went Wrong ";
   var classic = document.getElementById("classicMode");
   var VR = document.getElementById("vrMode");
-  var hubs = document.getElementById("hubs");
-
+  var hubs = document.getElementById("hubs");  
   hubs.className = "hide";
   hubs.innerHTML = "";
   hubs.title = "CLOSED";
