@@ -82,3 +82,9 @@ function slotsLoad() {
     imageTwo.className = "profileicon";
   }
 }
+
+
+function emojiLoad() {
+ var notice = document.getElementById("NOTICE")
+ notice.
+}

@@ -491,3 +491,14 @@ label {
   left: 0;
   background-color: white;
 }
+
+.game {
+  float: left;
+  display: block;
+  margin: 3%;
+}
+
+.gameicon {
+  width: 250px;
+  height: 150px;
+}
