@@ -329,7 +329,7 @@ label {
   background-image: url("/images/confetti.png");
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 3;
+  z-index: 2003;
 }
 .levelupIMG {
   position: fixed;
