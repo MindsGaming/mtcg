@@ -4,8 +4,8 @@ function emojiworld() {
   getNOTICE.className = "notice";
   var rewardicon = document.getElementById("rewardicon");
   var newrewardicon = document.getElementById("newrewardicon");
-  
-  var moveicon = 
-
+  rewardicon.className = "rewardiconL";
+  newrewardicon = rewardicon;
   thisGame.innerHTML = " 'Emoji World'";
+  window.open("https://emjoi-world.glitch.me/");
 }

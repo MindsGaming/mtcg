@@ -289,9 +289,10 @@ label {
 .rewardiconL {
   position: relative;
   display: block;
-  margin-top: 3%;
-  width: 245px;
-  height: 245px;
+  margin-top: 6%;
+  margin-left: 40%;
+  width: 235px;
+  height: 235px;
   background-color: gold;
   background-image: url("/images/coinsTwo.png");
   background-size: contain;
