@@ -83,8 +83,15 @@ function slotsLoad() {
   }
 }
 
-
 function emojiLoad() {
- var notice = document.getElementById("NOTICE")
- notice.
+  alert("test")
+  var notice = document.getElementById("NOTICE");
+  notice.align = "center";
+  notice.style =
+    "diplay: block; width: 60%; height: 60%; background-color: grey; z-index:2000";
+  var myNotcie = "Playing 'Emoji World'"
+  
+  var rewardicon = document.getElementById("rewardicon");
+  rewardicon.className = "LARGEICON"
+  
 }
