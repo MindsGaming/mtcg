@@ -1,5 +1,4 @@
 function emojiworld() {
-  alert("test");
   var notice = document.createElement("h1");
   notice.align = "center";
   notice.style =
