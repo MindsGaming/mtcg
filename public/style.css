@@ -521,3 +521,10 @@ label {
   width: 250px;
   height: 150px;
 }
+
+.notice {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: grey;
+}
