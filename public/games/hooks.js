@@ -3,10 +3,12 @@ function emojiworld() {
   var notice = document.createElement("h1");
   notice.align = "center";
   notice.style =
-    "diplay: block; width: 60%; height: 60%; background-color: grey; z-index:2000";
-  var myNotcie = "Playing 'Emoji World'";
-  notice.innerHTML = notice + rewardicon
-
+    "diplay: block; width: 60%; height: 60%; background-color: grey; color: red;";
   var rewardicon = document.getElementById("rewardicon");
-  rewardicon.className = "LARGEICON";
+  rewardicon.className = "rewardiconL";
+  var myNotice = "Playing 'Emoji World'";
+
+  var getemojiworld = document.getElementById("emojiworld");
+  getemojiworld.innerHTML = myNotice;
+  window.open("https://emjoi-world.glitch.me/")
 }

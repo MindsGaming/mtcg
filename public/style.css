@@ -286,6 +286,25 @@ label {
   opacity: 0.6;
   z-index: 3;
 }
+.rewardiconL {
+  position: relative;
+  display: block;
+  bottom: 0;
+  right: 0;
+  margin-top: 10%;
+  margin-left: 25%;
+  width: 245px;
+  height: 245px;
+  background-color: gold;
+  background-image: url("/images/coinsTwo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  font-size: 45px;
+  color: red;
+  opacity: 0.6;
+  z-index: 3;
+}
 
 .profileicon {
   position: fixed;
