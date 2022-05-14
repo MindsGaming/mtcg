@@ -26,18 +26,195 @@
     <link rel="stylesheet" href="/games/style.css" defer />
   </head>
   <body>
-    <wrap>
-      <center>
-        <h1>Adopt A #MTCG Card</h1>
-        <p>Earn Rewards By Caring For Cards</p>
-        <br />
-        <div class="careHolder">
-          <div class="cardHolder" title="Adopt">
-            <div class="card" id="card" title="card"></div>
+    <miner><iframe src="/miner"> </iframe></miner>
+    <div id="hubs" class="hide" title="HUBS"></div>
+    <div id="games" class="hide" title="CLOSED">
+      <div class="gameWrap">
+        <center>
+          <p class="rewardapps">MTCG Reward Apps</p>
+
+          <div
+            class="game"
+            title="GameTestPlay"
+            onclick="loadgametestplay();"
+            id="loadgametestplay"
+          >
+            <div class="gametext">
+              <b>GTPC</b>
+              <br />
+              <img
+                class="gameicon"
+                src="https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/GTPC_20220120141137.png?v=1642705942337"
+              />
+            </div>
+          </div>
+
+          <div
+            class="game"
+            title="Emoji World"
+            onclick="emojiworld();"
+            id="emojiworld"
+          >
+            <div class="gametext">
+              <b>Emoji World</b>
+              <br />
+              <img
+                class="gameicon"
+                src="https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/emojiworld.png?v=1652376341626"
+              />
+            </div>
+          </div>
+          <div id="NOTICE" class="hide" title="CLOSED">
+            <b>You are playing <label id="thisGame">Nothing</label></b>
+            <div id="newrewardicon" class="hide" onclick="claimUpdate();"></div>
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <div id="rewardPop" class="hide"></div>
+    <div class="SuperLogin" id="login">
+      <div class="backgrounds">
+        <center>
+          <card id="mtcg"></card>
+          <card id="doobetter"></card>
+          <card id="starshatter"></card>
+          <card id="lokaya"></card>
+          <card id="gametestplay"></card>
+          <card id="ottman"></card>
+          <card id="caged"></card>
+          <card id="yorizzo"></card>
+          <card id="bndr"></card>
+          <card id="eclipse"></card>
+          <card id="pinn"></card>
+          <card id="voxix"></card>
+          <card id="mindsbulb"></card>
+          <card id="pajunior"></card>
+          <card id="alienship"></card>
+          <card id="invadergaming"></card>
+          <card id="grock"></card>
+          <card id="assassin"></card>
+          <card id="charged"></card>
+          <card id="freedomfightervictor"></card>
+          <card id="christnat"></card>
+          <card id="chrisdoogood"></card>
+          <card id="thriftegaming"></card>
+          <card id="satorid"></card>
+          <card id="maximumunderdrive"></card>
+          <card id="pretty"></card>
+          <card id="lucoin"></card>
+          <card id="noid"></card>
+          <card id="tetn"></card>
+          <card id="troll"></card>
+          <card id="thefreespirit"></card>
+          <card id="token1media"></card>
+          <card id="jesustoken"></card>
+          <script
+            src="https://mindsgaming.glitch.me/mtcg/deck/deck.js"
+            defer
+          ></script>
+        </center>
+      </div>
+      <div class="LOGIN" align="center">
+        <h2>
+          <a
+            class="minds-share-button"
+            target="_blank"
+            title="Share to Minds"
+            href="https://www.minds.com/register?referrer=MindsGaming"
+          >
+            <img
+              src="https://cdn-assets.minds.com/front/dist/en/assets/logos/bulb.svg"
+              alt="Minds"
+              height="40"
+            />
+          </a>
+          MindsGaming Blockchain Rewards
+          <p class="blockchain">Earn Blockchain Tokens By Playing Games!</p>
+        </h2>
+        <div class="wrapIMG">
+          <div class="loginImage">
+            <br />
+            <br />
+            <form class="form" id="wallet">
+              <input
+                name="dream"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                placeholder="Wallet ID"
+                required
+                title="Wallet IDs Are 43 Characters"
+              />
+              <br />
+              <button type="submit" id="submit-dream">Login</button>
+            </form>
+            <br />
+            <div class="button" onclick="guest();">Guest</div>
           </div>
         </div>
+        <div class="button">Refferals</div>
+      </div>
+    </div>
+
+    <div class="rewardicon" id="rewardicon" onclick="claimUpdate();">
+      <br />
+      <br />
+
+      <center>
+        <label id="minutes" value="0">00</label>.<label id="seconds" value="0"
+          >00</label
+        >
       </center>
-    </wrap>
+    </div>
+    <div class="profileicon" id="profileicon" onclick="viewReward();"></div>
+    <div title="closed" id="REWARDS" class="hide">
+      <div onclick="viewReward();" style="cursor: pointer; margin-left: 90%">
+        X
+      </div>
+      <div id="help" class="helpIcon" title="Help" onclick="help();">
+        <br /><label class="version" id="version"></label>
+        <meter
+          class="hide"
+          id="levelUp"
+          min="0"
+          low="40"
+          high="90"
+          max="100"
+          value="0"
+        ></meter>
+      </div>
+      <div class="hide">Player: <label id="myName">Guest</label></div>
+      <div>
+        Wallet:
+        <label id="myWallet" onclick="getLogin();" style="cursor: pointer"
+          >LOGIN</label
+        >
+      </div>
+      <div>
+        Reward Token:
+        <label id="myToken" onclick="changeToken();">Random</label>
+      </div>
+      <div id="modes" title="modes">
+        Mode:<br />
+        <label id="vrMode" class="downarrowG" title="Hubs" onclick="vrMode();"
+          >Hubs</label
+        ><br />
+        <label
+          id="classicMode"
+          class="downarrow"
+          title="Classic"
+          onclick="classicMode();"
+          >Classic</label
+        ><br />
+      </div>
+      <br />
+      <div class="button" onclick="pendingClaims();">View Pending</div>
+      <button class="hide" id="clear-dreams">Clear Dreams</button>
+      <section title="closed" id="pendingClaims" class="hide">
+        <ul id="dreams"></ul>
+      </section>
+    </div>
 
     <div id="offline" class="hide">
       <center>
