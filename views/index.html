@@ -20,9 +20,11 @@
 
     <script src="/client.js" defer></script>
     <script src="/fly.js" defer></script>
-    <script src="/games/hooks.js" defer></script>
+    <script src="/cards.js" defer></script>
 
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/cards.css" defer />
+
     <link rel="stylesheet" href="/games/style.css" defer />
   </head>
   <body>
@@ -31,42 +33,102 @@
     <div id="games" class="hide" title="CLOSED">
       <div class="gameWrap">
         <center>
-          <p class="rewardapps">MTCG Reward Apps</p>
-
-          <div
-            class="game"
-            title="GameTestPlay"
-            onclick="loadgametestplay();"
-            id="loadgametestplay"
-          >
-            <div class="gametext">
-              <b>GTPC</b>
-              <br />
-              <img
-                class="gameicon"
-                src="https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/GTPC_20220120141137.png?v=1642705942337"
-              />
+          <h1>MTCG Card Albums</h1>
+          <div class="holder">
+            <div class="album">
+              <h1 class="albumT">Birds/Air</h1>
+              <div class="cHolder">
+                <label id="BirdsNest"></label>
+                <button class="button" title="Buy Birds Nest">Buy</button>
+              </div>
+              <div class="cHolder">
+                <label id="FlyingWisdom"></label>
+                <button class="button" title="Buy Flying Wisdom">Buy</button>
+              </div>
+              <div class="cHolder">
+                <label id="BullishFlyer"></label>
+                <button class="button" title="Buy Bullish Flyer">Buy</button>
+              </div>
+              <div class="cHolder">
+                <label id="MAYDAY"></label>
+                <button class="button" title="Buy MoonRabbit">Buy</button>
+              </div>
             </div>
-          </div>
 
-          <div
-            class="game"
-            title="Emoji World"
-            onclick="emojiworld();"
-            id="emojiworld"
-          >
-            <div class="gametext">
-              <b>Emoji World</b>
-              <br />
-              <img
-                class="gameicon"
-                src="https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/emojiworld.png?v=1652376341626"
-              />
+            <div class="album">
+              <h1 class="albumT">Art/Culture</h1>
+              <div class="cHolder">
+                <label id="MoonRabbit"></label>
+                <button class="button" title="Buy MoonRabbit">Buy</button>
+              </div>
+              <div class="cHolder">
+                <label id="Aphrodite"></label>
+                <button class="button" title="Buy Aphrodite">Buy</button>
+              </div>
+              <div class="cHolder">
+                <label id="Mayflower"></label>
+                <button class="button" title="Buy Mayflower">Buy</button>
+              </div>
             </div>
-          </div>
-          <div id="NOTICE" class="hide" title="CLOSED">
-            <b>You are playing <label id="thisGame">Nothing</label></b>
-            <div id="newrewardicon" class="hide" onclick="claimUpdate();"></div>
+
+            <div class="album">
+              <h1 class="albumT">Monsters</h1>
+              <div class="cHolder">
+                <label id="DINOMONSTER"></label>
+                <button class="button" title="Buy DINOMONSTER">Buy</button>
+              </div>
+              <div class="cHolder">
+                <label id="DinoEggs"></label>
+                <button class="button" title="Buy Dino Eggs">Buy</button>
+              </div>
+            </div>
+
+            <div class="album">
+              <h1 class="albumT">Supernatural</h1>
+              <div class="cHolder">
+                <label id="POPOLVUH"></label>
+                <button class="button" title="Buy POPOL VUH">Buy</button>
+              </div>
+              <div class="cHolder">
+                <label id="TheMayans"></label>
+                <button class="button" title="Buy The Mayans">Buy</button>
+              </div>
+            </div>
+
+            <div class="album">
+              <h1 class="albumT">Space/Aliens</h1>
+              <div class="cHolder">
+                <label id="AlienBeer"></label>
+                <button class="button" title="Buy Alien Beer">Buy</button>
+              </div>
+            </div>
+            <div class="album">
+              <h1 class="albumT">Food</h1>
+              <div class="cHolder">
+                <label id="FartGas"></label>
+                <button class="button" title="Buy Fart Gas">Buy</button>
+              </div>
+            </div>
+
+            <div class="album">
+              <h1 class="albumT">MANERGY</h1>
+              <div class="cHolder">
+                <label id="MANERGY"></label>
+                <button class="button" title="Buy MANERGY(00)">Buy</button>
+              </div>
+            </div>
+
+            <div class="album">
+              <h1 class="albumT">Music</h1>
+            </div>
+
+            <div class="album">
+              <h1 class="albumT">Gaming</h1>
+            </div>
+
+            <div class="album">
+              <h1 class="albumT">Creators</h1>
+            </div>
           </div>
         </center>
       </div>
@@ -205,7 +267,7 @@
           class="downarrow"
           title="Classic"
           onclick="classicMode();"
-          >Classic</label
+          >Cards</label
         ><br />
       </div>
       <br />

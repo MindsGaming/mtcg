@@ -1,0 +1,66 @@
+h1 {
+  color: green;
+}
+
+.holder {
+  display: block;
+  width: 80%;
+  margin: 2px;
+  padding: 1px;
+  background-color: grey;
+  border-style: groove;
+  border-color: white;
+  overflow: scroll;
+  height: 85%;
+  z-index: 1;
+}
+
+.album {
+  width: 99%;
+  overflow: scroll;
+  background-color: white;
+  border-style: solid;
+  border-color: pink;
+  margin: auto;
+  padding: 2px;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.albumT {
+  color: blue;
+  font-size: 19px;
+  border-style: solid;
+}
+
+.cHolder {
+  width: 155px;
+  float: left;
+  display: block;
+  margin: 15px;
+}
+
+.button {
+  margin: 3px;
+  width: 110px;
+  background-color: gray;
+}
+
+.card {
+  position: relative;
+  float: left;
+  display: block;
+  width: 150px;
+  height: 250px;
+  background-color: black;
+  z-index: 2;
+}
+
+.card:hover {
+  display: block;
+  width: 250px;
+  height: 350px;
+  background-color: black;
+  z-index: 3;
+  margin: 10px;
+}
