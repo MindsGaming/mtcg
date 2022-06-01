@@ -96,7 +96,10 @@ h1 {
   overflow: scroll;
 }
 
-.dropMini {
-  position: relative;
+.minyDrop {
   color: red;
+  border-style: solid;
+  margin: 15px;
+  padding: 5px;
+  background-color: white;
 }

@@ -230,6 +230,9 @@ function gameMenu() {
       dropMenu.title = "CLOSED";
     }
   }
+  var fetchRewards = document.getElementById("fetchRewards");
+  var Mrewards = document.getElementById("minutes");
+  var Srewards = document.getElementById("seconds")
 }
 
 ///  Hide POPS
