@@ -268,13 +268,14 @@ function classicMode() {
   games.title = "GAMES";
   var classic = document.getElementById("classicMode");
   var VR = document.getElementById("vrMode");
-  var hubs = document.getElementById("hubs");  
+  var hubs = document.getElementById("hubs");
   hubs.className = "hide";
   hubs.innerHTML = "";
   hubs.title = "CLOSED";
   classic.className = "downarrowG";
   VR.className = "downarrow";
   viewReward();
+  checkMODE();
 }
 
 function versionCheck() {

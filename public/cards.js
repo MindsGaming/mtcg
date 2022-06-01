@@ -241,8 +241,6 @@ function openGames() {
   alert("In Progress..");
 }
 
-
-
 ///  Hide POPS
 
 function checkMODE() {
@@ -257,12 +255,3 @@ function checkMODE() {
 }
 
 
-/// Fetch Wallet 
-
-var fetchwallet = document.getElementById("myWallet");
-
-if(fetchwallet.innerHTML == "LOGIN"){}
-else {
-  var overlap = document.getElementById("LGmenu");
-  
-}
