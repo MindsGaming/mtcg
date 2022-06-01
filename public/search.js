@@ -26,33 +26,20 @@ const MoonRabbitMANERGY = 8;
 
 const BirdsNestATK = 0;
 const BirdsNestDEF = 50;
-const BirdsnestMANERGY = 0;
+const BirdsNestMANERGY = 0;
       
       
-const BullishFlyer = document.createElement("img");
-BullishFlyer.src =
-  "https://momintdev.blob.core.windows.net/uploads/629ce241-4ba9-4e03-a109-7e65f84a9b90.jpeg";
-BullishFlyer.title = "BullishFlyer";
-BullishFlyer.className = "card";
-const BULLISHFLYER = document
-  .getElementById("BullishFlyer")
-  .appendChild(BullishFlyer);
+const BullishFlyerATK = 195;
+const BullishFlyerDEF = 300;
+const BullishFlyerMANERGY = 8;
 
-const FlyingWisdom = document.createElement("img");
-FlyingWisdom.src =
-  "https://momintdev.blob.core.windows.net/uploads/4f7e62d3-d38c-4a00-a273-f8fcf46e676d.jpeg";
-FlyingWisdom.title = "FlyingWisdom";
-FlyingWisdom.className = "card";
-const FLYINGWISDOM = document
-  .getElementById("FlyingWisdom")
-  .appendChild(FlyingWisdom);
 
-const POPOLVUH = document.createElement("img");
-POPOLVUH.src =
-  "https://momintdev.blob.core.windows.net/uploads/7af2b13d-5da5-49d3-97cf-5625f6f62a5b.jpeg";
-POPOLVUH.title = "POPOLVUH";
-POPOLVUH.className = "card";
-const popolvuh = document.getElementById("POPOLVUH").appendChild(POPOLVUH);
+const FlyingWisdomATK =130;
+const FlyingWisdomDEF = 500;
+const FlyingWisdomMANERGY = 8;
+
+const POPOLVUHATK = 735;
+const 
 
 const TheMayans = document.createElement("img");
 TheMayans.src =
