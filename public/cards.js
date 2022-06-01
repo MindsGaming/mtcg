@@ -163,12 +163,12 @@ function hideAliens() {
 
 function hideFood() {
   var FOOD = document.getElementById("FOOD");
-  if (FOOD.title == "FOOD") {
+  if (FOOD.title == "Food") {
     FOOD.className = "hide";
     FOOD.title = "CLOSED";
   } else {
     FOOD.className = "";
-    FOOD.title = "Space/Aliens";
+    FOOD.title = "Food";
   }
 }
 
