@@ -36,18 +36,28 @@
         <div class="topper">
           <div class="grid" title="Menu" onclick="gameMenu();"></div>
           <div id="dropMenu" class="hide" title="CLOSED">
-            <label class="minyDrop" title="GAMES">GAMES</label>
+            
+            <div class="minyDrop" title="GAMES" onclick="getLogin();"
+              >LOGIN</div
+            >
+            <div class="minyDrop" title="GAMES" onclick="openGames();"
+              >GAMES</div
+            >
             <div id="gameMenu" class="hide">
               <a id="GAMENAME" class="gameLink">GAME ONE</a>
             </div>
 
-            <div class="minyDrop">
-              Claim Reward
-              <div id="gameOne">
-                <label class="tiny" id="fetchRewards">0.00</label>
-              </div>
+            <div
+              class="minyDrop"
+              title="Claim Rewards"
+              onclick="claimUpdate();"
+            >
+              Claim Rewards
+              <br />
+              <label id="fetchRewards">0.00</label>
             </div>
           </div>
+
           <h1 align="center">MTCG Card Albums</h1>
         </div>
         <center>

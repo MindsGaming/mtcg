@@ -235,10 +235,13 @@ function gameMenu() {
   var Srewards = document.getElementById("seconds").innerHTML;
   var Trewards = Mrewards + "." + Srewards;
   fetchRewards.innerHTML = Trewards;
-  
-  
-  
 }
+
+function openGames() {
+  alert("In Progress..");
+}
+
+
 
 ///  Hide POPS
 
@@ -251,4 +254,15 @@ function checkMODE() {
     hiderewardpop.className = "hide";
     hideprofilepop.className = "hide";
   }
+}
+
+
+/// Fetch Wallet 
+
+var fetchwallet = document.getElementById("myWallet");
+
+if(fetchwallet.innerHTML == "LOGIN"){}
+else {
+  var overlap = document.getElementById("LGmenu");
+  
 }

@@ -100,7 +100,8 @@ h1 {
 .minyDrop {
   color: red;
   border-style: solid;
-  margin: 15px;
+  margin: 5px;
   padding: 5px;
   background-color: white;
+  cursor: pointer;
 }
