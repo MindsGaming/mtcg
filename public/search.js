@@ -6,18 +6,18 @@ const FartGasstats = document.getElementById("FartGasstats");
 const newlayout = [DINOMONSTERstats, FartGasstats];
 
 function byAttack() {
-  var clearTITLE = document.getElementById("SEARCH");
-  var clearAlbum = document.getElementById("BIRDS");
-  var refreshAlbum = clearAlbum.innerHTML;
-  
-  if (clearTITLE.title == "Birds/Air") {
-    clearAlbum.innerHTML = "";
+  const clearTITLE = document.getElementById("SEARCH");
+
+  if (clearTITLE.title == "CLOSED") {
     clearTITLE.innerHTML = "ATTACK Value";
     clearTITLE.title = "SEARCH";
-    
-    document.getElementById("BIRDS").appendChild(POPOLVUH);
-  } 
-  else {
-    clearAlbum.innerHTML = refreshAlbum;
+    clearTITLE.className = "album";
+
+    document.getElementById("getResults").appendChild(POPOLVUH);
+  } else {
+    if (clearTITLE.title == "SEARCH") {
+      clearTITLE.title = "CLOSED";
+      clearTITLE.className = "hide";
+    }
   }
 }
