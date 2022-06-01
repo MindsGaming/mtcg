@@ -103,3 +103,8 @@ MAYDAY.src =
 MAYDAY.title = "Mayflower";
 MAYDAY.className = "card";
 const Mayday = document.getElementById("MAYDAY").appendChild(MAYDAY);
+
+const windowcards = "/cards";
+if (windowcards.indexOf("http://") == windowcards) {
+  window.location.href = windowcards.replace("http://", "https://");
+}
