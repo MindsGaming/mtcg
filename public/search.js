@@ -7,17 +7,14 @@ const newlayout = [DINOMONSTERstats, FartGasstats];
 
 function byAttack() {
   const clearTITLE = document.getElementById("SEARCH");
-  const mySearch = document.getElementById("mySearch")
 
   if (clearTITLE.title == "CLOSED") {
-    clearTITLE.innerHTML = "ATTACK Value";
-    clearTITLE.title = "SEARCH";
+    clearTITLE.title == "SEARCH";
     clearTITLE.className = "album";
-
-    mySearch.appendChild(POPOLVUH);
+    document.getElementById("myResults").appendChild(POPOLVUH);
   } else {
-    if (clearTITLE.title == "SEARCH") {
-      clearTITLE.title = "CLOSED";
+    if (clearTITLE == "SEARCh") {
+      clearTITLE.title == "CLOSED";
       clearTITLE.className = "hide";
     }
   }
