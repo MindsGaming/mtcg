@@ -22,10 +22,10 @@
     <script src="/client.js" defer></script>
     <script src="/fly.js" defer></script>
     <script src="/cards.js" defer></script>
+    <script src="/search.js" defer></script>
 
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/cards.css" defer />
-
     <link rel="stylesheet" href="/games/style.css" defer />
   </head>
   <body>
@@ -36,11 +36,9 @@
         <div class="topper">
           <div class="grid" title="Menu" onclick="gameMenu();"></div>
           <div id="dropMenu" class="hide" title="CLOSED">
-            
-           
-            <div class="minyDrop" title="GAMES" onclick="openGames();"
-              >GAMES</div
-            >
+            <div class="minyDrop" title="GAMES" onclick="openGames();">
+              GAMES
+            </div>
             <div id="gameMenu" class="hide">
               <a id="GAMENAME" class="gameLink">GAME ONE</a>
             </div>
@@ -54,10 +52,14 @@
               <br />
               <label id="fetchRewards">0.00</label>
             </div>
-             <div id="LGmenu" class="minyDrop" title="LOGIN" onclick="viewReward();"
-              >User Pop</div
+            <div
+              id="LGmenu"
+              class="minyDrop"
+              title="LOGIN"
+              onclick="viewReward();"
             >
-            
+              User Pop
+            </div>
           </div>
 
           <h1 align="center">MTCG Card Albums</h1>
@@ -283,6 +285,19 @@
             </div>
           </div>
         </center>
+      </div>
+
+      <div id="METERS" class="" title="METERS">
+        <meter
+          onclick="test();"
+          id="DINOMONSTERstats"
+          min="3"
+          low="51"
+          high="60"
+          max="600"
+          value="101"
+          optimum="3"
+        ></meter>
       </div>
     </div>
 
