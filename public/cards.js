@@ -149,3 +149,36 @@ function hideSupernatural() {
     SUPERNATURAL.title = "Supernatural";
   }
 }
+
+function hideAliens() {
+  var ALIENS = document.getElementById("ALIENS");
+  if (ALIENS.title == "Space/Aliens") {
+    ALIENS.className = "hide";
+    ALIENS.title = "CLOSED";
+  } else {
+    ALIENS.className = "";
+    ALIENS.title = "Space/Aliens";
+  }
+}
+
+function hideFood() {
+  var FOOD = document.getElementById("FOOD");
+  if (FOOD.title == "FOOD") {
+    FOOD.className = "hide";
+    FOOD.title = "CLOSED";
+  } else {
+    FOOD.className = "";
+    FOOD.title = "Space/Aliens";
+  }
+}
+
+function hideManergy() {
+  var MANERGYa = document.getElementById("MANERGY");
+  if (MANERGYa.title == "MANERGY") {
+    MANERGYa.className = "hide";
+    MANERGYa.title = "CLOSED";
+  } else {
+    MANERGYa.className = "";
+    MANERGYa.title = "MANERGY";
+  }
+}
