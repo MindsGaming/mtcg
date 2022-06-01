@@ -112,7 +112,18 @@ function hideBirds() {
     BIRDS.className = "hide";
     BIRDS.title = "CLOSED";
   } else {
-    BIRDS.className = "album";
+    BIRDS.className = "";
+    BIRDS.title = "Birds/Air";
+  }
+}
+
+function hideBirds() {
+  var BIRDS = document.getElementById("BIRDS");
+  if (BIRDS.title == "Birds/Air") {
+    BIRDS.className = "hide";
+    BIRDS.title = "CLOSED";
+  } else {
+    BIRDS.className = "";
     BIRDS.title = "Birds/Air";
   }
 }
