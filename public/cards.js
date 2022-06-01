@@ -215,3 +215,9 @@ function hideCreators() {
     CREATORSa.title = "Creators";
   }
 }
+
+
+///  Hide POPS
+
+var hiderewardpop = document.getElementById("rewardicon");
+hiderewardpop.className = "hide";
