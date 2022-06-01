@@ -225,8 +225,10 @@ function gameMenu() {
     dropMenu.className = "dropmenu";
     dropMenu.title = "MENU";
   } else {
-    dropMenu.classname = "hide";
-    dropMenu.title = "CLOSED";
+    if (dropMenu.title == "MENU") {
+      dropMenu.className = "hide";
+      dropMenu.title = "CLOSED";
+    }
   }
 }
 

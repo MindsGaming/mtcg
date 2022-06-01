@@ -90,8 +90,13 @@ h1 {
 }
 
 .dropmenu {
-  margin-top: 5%;
-  width: 99%;
+  margin-top: 56px;
+  width: 150px;
   border-style: groove;
   overflow: scroll;
+}
+
+.dropMini {
+  position: relative;
+  color: red;
 }
