@@ -104,14 +104,15 @@ MAYDAY.title = "Mayflower";
 MAYDAY.className = "card";
 const Mayday = document.getElementById("MAYDAY").appendChild(MAYDAY);
 
+/// Card Tools
 
-
-
-
-
-/// Card Tools 
-
-function hideAlbum(){
-  
-  
+function hideBirds() {
+  var BIRDS = document.getElementById("BIRDS");
+  if (BIRDS.title == "Birds/Air") {
+    BIRDS.className = "hide";
+    BIRDS.title = "CLOSED";
+  } else {
+    BIRDS.className = "album";
+    BIRDS.title = "Birds/Air";
+  }
 }

@@ -58,6 +58,7 @@ h1 {
   background-color: black;
   margin: 5px;
   z-index: 2;
+  opacity: 3;
 }
 
 .card:hover {
@@ -68,4 +69,3 @@ h1 {
   z-index: 3;
   margin: 10px;
 }
-
