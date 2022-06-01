@@ -226,6 +226,7 @@ function guest() {
   }
   login.className = "hide";
   viewReward();
+  checkMODE();
 }
 
 function getLogin() {

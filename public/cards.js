@@ -216,8 +216,21 @@ function hideCreators() {
   }
 }
 
+///  Game Menu
+
+function gameMenu() {
+  alert("In Progress..");
+}
 
 ///  Hide POPS
 
-var hiderewardpop = document.getElementById("rewardicon");
-hiderewardpop.className = "hide";
+function checkMODE() {
+  var checkMODEs = document.getElementById("games");
+
+  if (checkMODEs.title == "GAMES") {
+    var hiderewardpop = document.getElementById("rewardicon");
+    var hideprofilepop = document.getElementById("profileicon");
+    hiderewardpop.className = "hide";
+    hideprofilepop.className = "hide";
+  }
+}
