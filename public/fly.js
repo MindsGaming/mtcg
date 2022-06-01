@@ -264,7 +264,7 @@ function vrMode() {
 function classicMode() {
   var games = document.getElementById("games");
   games.className = "";
-  games.title = "CARDS";
+  games.title = "GAMES";
   var classic = document.getElementById("classicMode");
   var VR = document.getElementById("vrMode");
   var hubs = document.getElementById("hubs");  
