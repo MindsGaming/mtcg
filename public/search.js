@@ -6,15 +6,16 @@ const FartGasstats = document.getElementById("FartGasstats");
 function byAttack() {
   const clearTITLE = document.getElementById("SEARCH");
 
-  if (clearTITLE.title == "CLOSED") {
-    clearTITLE.title == "SEARCH";
+  if (clearTITLE.className == "hide") {
     clearTITLE.className = "album";
-    document.getElementById("myResults").appendChild(POPOLVUH);
-  } 
-  
-  else {
-    if (clearTITLE.title == "SEARCH"){
-      
-    }
+    GETATTACKS();
+  } else {
+    clearTITLE.className = "hide";
   }
+}
+
+function GETATTACKS() {
+  document.getElementById("myResults").appendChild(POPOLVUH);
+    document.getElementById("myResults").appendChild(Mayflower);
+
 }
