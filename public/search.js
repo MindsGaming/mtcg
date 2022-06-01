@@ -6,9 +6,5 @@ const FartGasstats = document.getElementById("FartGasstats");
 const newlayout = [DINOMONSTERstats, FartGasstats];
 
 function byAttack() {
-  if (newlayout.high > newlayout.high) {
-    var pickThis = newlayout.title;
-
-    var NEWLAYOUT = document.getElementById("BIRDS").appendChild(pickThis);
-  }
+ document.getElementById("BIRDS").appendChild(POPOLVUH);
 }
