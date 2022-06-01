@@ -173,12 +173,45 @@ function hideFood() {
 }
 
 function hideManergy() {
-  var MANERGYa = document.getElementById("MANERGY");
+  var MANERGYa = document.getElementById("MANERGYa");
   if (MANERGYa.title == "MANERGY") {
     MANERGYa.className = "hide";
     MANERGYa.title = "CLOSED";
   } else {
     MANERGYa.className = "";
     MANERGYa.title = "MANERGY";
+  }
+}
+
+function hideMusic() {
+  var MUSICa = document.getElementById("MUSICa");
+  if (MUSICa.title == "Music") {
+    MUSICa.className = "hide";
+    MUSICa.title = "CLOSED";
+  } else {
+    MUSICa.className = "";
+    MUSICa.title = "Music";
+  }
+}
+
+function hideGaming() {
+  var GAMINGa = document.getElementById("GAMINGa");
+  if (GAMINGa.title == "Gaming") {
+    GAMINGa.className = "hide";
+    GAMINGa.title = "CLOSED";
+  } else {
+    GAMINGa.className = "";
+    GAMINGa.title = "Gaming";
+  }
+}
+
+function hideCreators() {
+  var CREATORSa = document.getElementById("CREATORSa");
+  if (CREATORSa.title == "Creators") {
+    CREATORSa.className = "hide";
+    CREATORSa.title = "CLOSED";
+  } else {
+    CREATORSa.className = "";
+    CREATORSa.title = "Creators";
   }
 }
