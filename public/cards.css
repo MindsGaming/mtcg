@@ -91,10 +91,11 @@ h1 {
 
 .dropmenu {
   position: fixed;
-  margin-top: 8%;
+  margin-top: 82px;
   width: 150px;
   border-style: groove;
   overflow: scroll;
+  z-index: 1;
 }
 
 .minyDrop {
