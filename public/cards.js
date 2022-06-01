@@ -117,13 +117,35 @@ function hideBirds() {
   }
 }
 
-function hideBirds() {
-  var BIRDS = document.getElementById("BIRDS");
-  if (BIRDS.title == "Birds/Air") {
-    BIRDS.className = "hide";
-    BIRDS.title = "CLOSED";
+function hideCulture() {
+  var CULTURE = document.getElementById("CULTURE");
+  if (CULTURE.title == "Art/Culture") {
+    CULTURE.className = "hide";
+    CULTURE.title = "CLOSED";
   } else {
-    BIRDS.className = "";
-    BIRDS.title = "Birds/Air";
+    CULTURE.className = "";
+    CULTURE.title = "Art/Culture";
+  }
+}
+
+function hideMonsters() {
+  var MONSTERS = document.getElementById("MONSTERS");
+  if (MONSTERS.title == "Monsters") {
+    MONSTERS.className = "hide";
+    MONSTERS.title = "CLOSED";
+  } else {
+    MONSTERS.className = "";
+    MONSTERS.title = "Monsters";
+  }
+}
+
+function hideSupernatural() {
+  var SUPERNATURAL = document.getElementById("SUPERNATURAL");
+  if (SUPERNATURAL.title == "Supernatural") {
+    SUPERNATURAL.className = "hide";
+    SUPERNATURAL.title = "CLOSED";
+  } else {
+    SUPERNATURAL.className = "";
+    SUPERNATURAL.title = "Supernatural";
   }
 }
