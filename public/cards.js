@@ -219,7 +219,15 @@ function hideCreators() {
 ///  Game Menu
 
 function gameMenu() {
-  alert("In Progress..");
+  var dropMenu = document.getElementById("dropMenu");
+
+  if (dropMenu.title == "CLOSED") {
+    dropMenu.className = "dropmenu";
+    dropMenu.title = "MENU";
+  } else {
+    dropMenu.classname = "hide";
+    dropMenu.title = "CLOSED";
+  }
 }
 
 ///  Hide POPS

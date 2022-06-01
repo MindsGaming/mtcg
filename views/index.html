@@ -34,7 +34,22 @@
     <div id="games" class="hide" title="CLOSED">
       <div class="gameWrap">
         <div class="topper">
-          <div class="grid" title="Menu" onclick="gameMenu();"></div>
+          <div class="grid" title="Menu" onclick="gameMenu();">
+            <div id="dropMenu" class="hide" title="CLOSED">
+              <div class="miny">
+                GAMES
+                <div id="gameMenu">
+                  <label class="tiny">Game One</label>
+                </div>
+              </div>
+              <div class="miny">
+                Claim Reward
+                <div id="gameOne">
+                  <label class="tiny" id="fetchREWARDS">0.00</label>
+                </div>
+              </div>
+            </div>
+          </div>
           <h1 align="center">MTCG Card Albums</h1>
         </div>
         <center>
