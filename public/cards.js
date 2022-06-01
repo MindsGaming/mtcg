@@ -103,3 +103,15 @@ MAYDAY.src =
 MAYDAY.title = "Mayflower";
 MAYDAY.className = "card";
 const Mayday = document.getElementById("MAYDAY").appendChild(MAYDAY);
+
+
+
+
+
+
+/// Card Tools 
+
+function hideAlbum(){
+  
+  
+}
