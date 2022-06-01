@@ -231,8 +231,13 @@ function gameMenu() {
     }
   }
   var fetchRewards = document.getElementById("fetchRewards");
-  var Mrewards = document.getElementById("minutes");
-  var Srewards = document.getElementById("seconds")
+  var Mrewards = document.getElementById("minutes").innerHTML;
+  var Srewards = document.getElementById("seconds").innerHTML;
+  var Trewards = Mrewards + "." + Srewards;
+  fetchRewards.innerHTML = Trewards;
+  
+  
+  
 }
 
 ///  Hide POPS
