@@ -104,6 +104,12 @@ MAYDAY.title = "Mayflower";
 MAYDAY.className = "card";
 const Mayday = document.getElementById("MAYDAY").appendChild(MAYDAY);
 
+const SheetMusic = document.createElement("img");
+SheetMusic.src = "https://momintdev.blob.core.windows.net/uploads/38e13978-41a6-443c-a7ac-4110d2e8776b.jpeg"
+SheetMusic.title = "SheetMusic";
+SheetMusic.className = "card";
+const SHEETMUSIC = document.getElementById("SheetMusic").appendChild(SheetMusic);
+
 /// Card Tools
 
 function hideBirds() {
