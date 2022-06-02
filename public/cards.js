@@ -105,10 +105,13 @@ MAYDAY.className = "card";
 const Mayday = document.getElementById("MAYDAY").appendChild(MAYDAY);
 
 const SheetMusic = document.createElement("img");
-SheetMusic.src = "https://momintdev.blob.core.windows.net/uploads/38e13978-41a6-443c-a7ac-4110d2e8776b.jpeg"
+SheetMusic.src =
+  "https://momintdev.blob.core.windows.net/uploads/38e13978-41a6-443c-a7ac-4110d2e8776b.jpeg";
 SheetMusic.title = "SheetMusic";
 SheetMusic.className = "card";
-const SHEETMUSIC = document.getElementById("SheetMusic").appendChild(SheetMusic);
+const SHEETMUSIC = document
+  .getElementById("SheetMusic")
+  .appendChild(SheetMusic);
 
 /// Card Tools
 
@@ -244,9 +247,36 @@ function gameMenu() {
 }
 
 function openGames() {
-  var minyMenu = document.getElementById("");
-  minyMenu.className = ""
+  var minyMenu = document.getElementById("gameMenu");
+
+  if (minyMenu.title == "CLOSED") {
+    minyMenu.className = "gameMenu";
+    minyMenu.title = "Games";
+  } else {
+    if (minyMenu.title == "Games") {
+      minyMenu.className = "hide";
+      minyMenu.title = "CLOSED";
+    }
+  }
 }
+
+
+function slotsActive(){
+  var linkItem = document.getElementById("Slots");
+  
+  if(linkItem.innerHTML == "Slots"){
+    linkItem.innerHTML == "ACTIVE";
+  }
+  else {
+     if(linkItem.innerHTML == "ACTIVE"){
+       
+    linkItem.innerHTML == "SLOTS";
+  }
+  }
+  
+}
+
+
 
 ///  Hide POPS
 
@@ -260,5 +290,3 @@ function checkMODE() {
     hideprofilepop.className = "hide";
   }
 }
-
-
