@@ -244,7 +244,8 @@ function gameMenu() {
 }
 
 function openGames() {
-  alert("In Progress..");
+  var minyMenu = document.getElementById("");
+  minyMenu.className = ""
 }
 
 ///  Hide POPS
