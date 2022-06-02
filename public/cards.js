@@ -260,23 +260,19 @@ function openGames() {
   }
 }
 
+function slotsActive() {
+  var linkItem = document.getElementById("SimpleSlots");
 
-function slotsActive(){
-  var linkItem = document.getElementById("Slots");
-  
-  if(linkItem.innerHTML == "Slots"){
+  if (linkItem.title == "Simple Slots") {
     linkItem.innerHTML == "ACTIVE";
+    linkItem.title = "ACTIVE";
+  } else {
+    if (linkItem.title == "ACTIVE") {
+      linkItem.innerHTML == "Simple Slots";
+      linkItem.title = "Simple Slots";
+    }
   }
-  else {
-     if(linkItem.innerHTML == "ACTIVE"){
-       
-    linkItem.innerHTML == "SLOTS";
-  }
-  }
-  
 }
-
-
 
 ///  Hide POPS
 
