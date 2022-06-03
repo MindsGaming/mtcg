@@ -17,6 +17,8 @@
     />
 
     <script src="/cards.js" defer></script>
+    <script src="/mtcg/mtcg.js" defer></script>
+
     <link rel="stylesheet" href="/mtcg/style.css" defer />
   </head>
   <body>
@@ -24,7 +26,13 @@
       <center>
         <div class="playerOne" id="playerOne">
           <center>
-            <label class="playerTotal" id="playerTotal">0</label>
+            <label
+              class="playerTotal"
+              title="0"
+              id="playerTotal"
+              onmouseover="playerMeter();"
+              >0</label
+            >
             <meter
               id="playerMeter"
               title="playerMeter"
@@ -36,6 +44,11 @@
               value="0"
               optimum="0"
             ></meter>
+            <div id="playerCards">
+            
+            </div>
+            
+            
           </center>
         </div>
       </center>
