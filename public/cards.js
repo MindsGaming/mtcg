@@ -86,7 +86,7 @@ const THEMAYANS = document.getElementById("TheMayans").appendChild(TheMayans);
 const Mayflower = document.createElement("img");
 Mayflower.src =
   "https://momintdev.blob.core.windows.net/uploads/ff1508f7-6c38-40a1-84ea-25ec9c97d1ba.jpeg";
-Mayflower.title = "TheMayans";
+Mayflower.title = "Mayflower";
 Mayflower.className = "card";
 const MAYFLOWER = document.getElementById("Mayflower").appendChild(Mayflower);
 
