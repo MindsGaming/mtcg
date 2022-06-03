@@ -119,7 +119,9 @@ function DEALCARDS() {
   ];
   var myMANERGY = getMANERGY[Math.floor(Math.random() * getMANERGY.length)];
   var placeMANERGY = document.getElementById("MANERGY");
+  var relyMANERGY = document.getElementById("manergy");
   placeMANERGY.value = myMANERGY;
+  relyMANERGY.innerHTML = myMANERGY;
 
   if (inHand.value == "5") {
   } else {
@@ -156,12 +158,20 @@ function DEALCARDS() {
     var currentStats = playerMeter.value;
     var boostStats = realStats.optimum;
 
-    if (boostStats > placeMANERGY.value) {
+    if (boostStats < playerMeter.value) {
       alert("Not Enough MANERGY");
     } else {
       var currentMANERGY = placeMANERGY.value;
       var removeMANERGY = realStats.optumum;
-      var math = currentMANERGY - re;
+      var math = currentMANERGY - removeMANERGY;
+      placeMANERGY.value = math;
+
+      var playerMETER = document.getElementById("playerMeter");
+      var currentplayerMETER = playerMETER.value;
+      var addplayerMETER = realStats.low;
+      var mathMETER = currentplayerMETER + addplayerMETER;
+      playerMETER.value = mathMETER.value;
+      relyMANERGY.innerHTML = mathMETER;
     }
   }
 }
