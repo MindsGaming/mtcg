@@ -105,21 +105,34 @@ function DEALCARDS() {
     Manergy,
     Mayflower,
     MAYDAY,
-    SheetMusic
+    SheetMusic,
   ];
 
-  var CARD1 = CARDS[Math.floor(Math.random() * CARDS.length)];
-  var CARD2 = CARDS[Math.floor(Math.random() * CARDS.length)];
-  var CARD3 = CARDS[Math.floor(Math.random() * CARDS.length)];
-  var shuffle = [CARD1, CARD2, CARD3];
+  var inHand = document.getElementById("inHand");
 
-  var CARD = shuffle[Math.floor(Math.random() * shuffle.length)];
+  if (inHand.value == "5") {
+  } else {
+    var CARD1 = CARDS[Math.floor(Math.random() * CARDS.length)];
+    var CARD2 = CARDS[Math.floor(Math.random() * CARDS.length)];
+    var CARD3 = CARDS[Math.floor(Math.random() * CARDS.length)];
+    var shuffle = [CARD1, CARD2, CARD3];
 
-  var fortuneCARD = document.createElement("img");
-  fortuneCARD.src = CARD.src;
-  fortuneCARD.title = CARD.title;
-  fortuneCARD.className = "card";
-  var NEWCARD = document.getElementById("playerCards").appendChild(fortuneCARD);
+    var CARD = shuffle[Math.floor(Math.random() * shuffle.length)];
+
+    var fortuneCARD = document.createElement("img");
+    fortuneCARD.src = CARD.src;
+    fortuneCARD.title = CARD.title;
+    fortuneCARD.className = "card";
+    var NEWCARD = document
+      .getElementById("playerCards")
+      .appendChild(fortuneCARD);
+
+    var boost = 1;
+    var current = inHand.value;
+    var math = current + boost;
+    inHand.value = math;
+    DEALCARDS();
+  }
 }
 
 /// METERS
