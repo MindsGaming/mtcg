@@ -118,6 +118,7 @@ function DEALCARDS() {
     fortuneCARD.src = CARD.src;
     fortuneCARD.title = CARD.title;
     fortuneCARD.className = "card";
+    fortuneCARD.addEventListener("click", STATS);
     var NEWCARD = document
       .getElementById("playerCards")
       .appendChild(fortuneCARD);
@@ -127,6 +128,12 @@ function DEALCARDS() {
     var math = current + boost;
     inHand.value = math;
     DEALCARDS();
+  }
+  function STATS() {
+    var cardStats = fortuneCARD.title;
+    cardStats.id = cardStats;
+
+    var realStats = document.getElementById(cardStats);
   }
 }
 
