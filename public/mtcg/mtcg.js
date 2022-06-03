@@ -1,3 +1,5 @@
+DEALCARDS();
+
 function DEALCARDS() {
   const DINOMONSTER = document.createElement("img");
   DINOMONSTER.src =
@@ -71,12 +73,6 @@ function DEALCARDS() {
   Mayflower.title = "TheMayans";
   Mayflower.className = "card";
 
-  const Manergy = document.createElement("img");
-  Manergy.src =
-    "https://momintdev.blob.core.windows.net/uploads/88dfb6d7-8cd0-43fb-9283-bb2fb6ca753d.jpeg";
-  Manergy.title = "Manergy";
-  Manergy.className = "card";
-
   const MAYDAY = document.createElement("img");
   MAYDAY.src =
     "https://momintdev.blob.core.windows.net/uploads/756eccad-c783-47f5-8466-e842119a200e.jpeg";
@@ -102,7 +98,6 @@ function DEALCARDS() {
     FlyingWisdom,
     POPOLVUH,
     TheMayans,
-    Manergy,
     Mayflower,
     MAYDAY,
     SheetMusic,
