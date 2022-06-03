@@ -134,6 +134,13 @@ function DEALCARDS() {
     cardStats.id = cardStats;
 
     var realStats = document.getElementById(cardStats);
+    var playerTotal = document.getElementById("playerTotal");
+    var playerMeter = document.getElementById("playerMeter");
+
+    var currentStats = playerMeter.value;
+    var boostStats = realStats.min;
+
+    alert(boostStats);
   }
 }
 
