@@ -164,7 +164,7 @@ function DEALCARDS() {
       var currentMANERGY = placeMANERGY.value;
       var removeMANERGY = realStats.optumum;
       var math = currentMANERGY - removeMANERGY;
-      placeMANERGY.value = math;
+      playerMeter.value = math;
 
       var playerMETER = document.getElementById("playerMeter");
       var currentplayerMETER = playerMETER.value;
