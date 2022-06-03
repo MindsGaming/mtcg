@@ -105,6 +105,22 @@ function DEALCARDS() {
 
   var inHand = document.getElementById("inHand");
 
+  var getMANERGY = [
+    "30",
+    "10",
+    "60",
+    "90",
+    "20",
+    "15",
+    "50",
+    "40",
+    "80",
+    "100",
+  ];
+  var myMANERGY = getMANERGY[Math.floor(Math.random() * getMANERGY.length)];
+  var placeMANERGY = document.getElementById("MANERGY");
+  placeMANERGY.value = myMANERGY;
+
   if (inHand.value == "5") {
   } else {
     var CARD1 = CARDS[Math.floor(Math.random() * CARDS.length)];
@@ -140,7 +156,13 @@ function DEALCARDS() {
     var currentStats = playerMeter.value;
     var boostStats = realStats.optimum;
 
-    alert(boostStats);
+    if (boostStats > placeMANERGY.value) {
+      alert("Not Enough MANERGY");
+    } else {
+      var currentMANERGY = placeMANERGY.value;
+      var removeMANERGY = realStats.optumum;
+      var math = currentMANERGY - re;
+    }
   }
 }
 
