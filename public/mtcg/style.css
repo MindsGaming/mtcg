@@ -34,3 +34,24 @@ wrap {
 .hide {
   display: none;
 }
+
+.card {
+  position: relative;
+  float: left;
+  display: block;
+  width: 150px;
+  height: 250px;
+  background-color: black;
+  margin: 5px;
+  z-index: 2;
+  opacity: 3;
+}
+
+.card:hover {
+  display: block;
+  width: 250px;
+  height: 350px;
+  background-color: black;
+  z-index: 3;
+  margin: 10px;
+}
