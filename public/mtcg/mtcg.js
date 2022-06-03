@@ -138,7 +138,7 @@ function DEALCARDS() {
     var playerMeter = document.getElementById("playerMeter");
 
     var currentStats = playerMeter.value;
-    var boostStats = realStats.min;
+    var boostStats = realStats.optimum;
 
     alert(boostStats);
   }
