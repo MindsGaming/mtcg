@@ -164,11 +164,6 @@ function DEALCARDS() {
 
     if (myMANERGY < fetchSTATS.min) {
     } else {
-      
-      
-      
-      
-      
       var subF = fetchSTATS.min;
       var subM = manergy.innerHTML;
       var mathM = subM - subF;
@@ -183,6 +178,17 @@ function DEALCARDS() {
       var pushTotal = document.getElementById("playerTotal");
       playerMeter.value = pushTotal.innerHTML;
       fortuneCARD.removeEventListener("click", STATS);
+
+      if (fortuneCARD.title == "MoonRabbit") {
+        playerMeter.value = "0";
+        playerTotal.innerHTML = "0";
+      }
+      if (fortuneCARD.title == "APHRODITE") {
+        var tackscore = playerMeter.value;
+        var tackMath = tackscore + tackscore;
+        playerTotal.innerHTML = tackMath;
+        playerMeter.value = playerTotal.innerHTML;
+      }
     }
   }
 }
