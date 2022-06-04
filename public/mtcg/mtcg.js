@@ -207,28 +207,22 @@ function DEALCARDS() {
       }
 
       var moveCARD = document.createElement("img");
-      moveCARD.className = "card";
+      moveCARD.className = "playcard";
       moveCARD.title = fortuneCARD.title;
       moveCARD.src = fortuneCARD.src;
       moveCARD.id = fortuneCARD.id;
       fortuneCARD.className = "hide";
 
-      var openspotONE = document.getElementById("CARDONE");
       var openspotTWO = document.getElementById("CARDTWO");
       var openspotTHREE = document.getElementById("CARDTHREE");
+      var moveCount = document.getElementById("moveCount");
 
-      if (openspotONE.innerHTML == "") {
-        var NEWCARD = document;
+      if (moveCount.value == "0") {
         document.getElementById("CARDONE").appendChild(moveCARD);
-      } else {
-        if (openspotTWO.innerHTML == "") {
-          var NEWCARD = document;
-          document.getElementById("CARDTWO").appendChild(moveCARD);
-        } else {
-          if (openspotTHREE.innerHTML == "") {
-            document.getElementById("CARDTWO").appendChild(moveCARD);
-          }
-        }
+        moveCount.value = "2";
+      }
+      else{
+        i
       }
     }
   }
