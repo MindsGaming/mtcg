@@ -207,16 +207,23 @@ function DEALCARDS() {
       }
 
       var moveCARD = document.createElement("img");
-      moveCARD.className = "playcard";
-      moveCARD.title = fortuneCARD.title;
-      moveCARD.src = fortuneCARD.src;
-      moveCARD.id = fortuneCARD.id;
-      fortuneCARD.className = "hide";
-
       var moveCount = document.getElementById("moveCount");
-      var addmoves = +1;
-      var totalmoves = moveCount.value + addmoves;
-      alert(totalmoves)
+
+      if (moveCount.value < 3) {
+        moveCARD.className = "playcard";
+        moveCARD.title = fortuneCARD.title;
+        moveCARD.src = fortuneCARD.src;
+        moveCARD.id = fortuneCARD.id;
+        fortuneCARD.className = "hide";
+
+        var addmoves = +1;
+        var totalmoves = moveCount.value + addmoves;
+        moveCount.value = totalmoves;
+
+        document.getElementById("moveCARD").appendChild(moveCARD);
+      } else {
+        alert("Only Play Three Cards");
+      }
     }
   }
 }
