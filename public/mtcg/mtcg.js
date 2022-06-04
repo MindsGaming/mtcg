@@ -182,7 +182,7 @@ function DEALCARDS() {
       playerMeter.value = pushTotal.innerHTML;
 
       var currentDEF = playerMeterDEF.value;
-      var addDEF = fetchSTATS.max;
+      var addDEF = fetchSTATS.high;
       var mathDEF = currentDEF + addDEF;
       var totalDEF = mathDEF;
       playerTotalDEF.innerHTML = totalDEF;
@@ -191,7 +191,9 @@ function DEALCARDS() {
       fortuneCARD.removeEventListener("click", STATS);
 
       if (fortuneCARD.title == "MoonRabbit") {
-        playerMeter.value = "0";
+        var LIFE = document.getElementById("LIFE");
+        var life = document.getElementById("life");
+        LIFE.value = "0";
         playerTotal.innerHTML = "0";
       }
       if (fortuneCARD.title == "APHRODITE") {

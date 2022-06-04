@@ -40,6 +40,7 @@ wrap {
   margin-top: -45px;
   margin-left: 100px;
 }
+
 .manergy {
   float: right;
   display: block;
@@ -50,6 +51,18 @@ wrap {
   background-color: yellow;
   margin-left: 155px;
   margin-top: -45px;
+}
+
+.life {
+  float: right;
+  display: block;
+  width: 100px;
+  border-style: groove;
+  border-color: white;
+  color: black;
+  background-color: yellow;
+  margin-left: 155px;
+  margin-top: -65px;
 }
 
 .card {
