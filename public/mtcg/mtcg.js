@@ -222,7 +222,8 @@ function DEALCARDS() {
 
         document.getElementById("moveCARD").appendChild(moveCARD);
       } else {
-        alert("Only Play Three Cards");
+        var battlebutton = document.getElementById("battleButton");
+        battlebutton.className = "battlebutton";
       }
     }
   }
