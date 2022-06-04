@@ -117,11 +117,15 @@ function DEALCARDS() {
     "80",
     "100",
   ];
-  var myMANERGY = getMANERGY[Math.floor(Math.random() * getMANERGY.length)];
+
   var placeMANERGY = document.getElementById("MANERGY");
-  var relyMANERGY = document.getElementById("manergy");
-  placeMANERGY.value = myMANERGY;
-  relyMANERGY.innerHTML = myMANERGY;
+  if (placeMANERGY.value == "0") {
+    var myMANERGY = getMANERGY[Math.floor(Math.random() * getMANERGY.length)];
+    var relyMANERGY = document.getElementById("manergy");
+    placeMANERGY.value = myMANERGY + placeMANERGY.value;
+    relyMANERGY.innerHTML = myMANERGY;
+  } else {
+  }
 
   if (inHand.value == "5") {
   } else {
@@ -160,11 +164,10 @@ function DEALCARDS() {
 
     if (myMANERGY < fetchSTATS.min) {
     } else {
-     var updateMANERGY = myMANERGY;
-     var subMANERGY = fetchSTATS.min;
-     var takeMANERGY = updateMANERGY - sub 
-      
-      
+      var subF = fetchSTATS.min;
+      var subM = myMANERGY;
+      alert(sub);
+
       var current = playerMeter.value;
       var add = fetchSTATS.low;
       var math = current + add;
