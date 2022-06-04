@@ -148,31 +148,11 @@ function DEALCARDS() {
     DEALCARDS();
   }
   function STATS() {
-    var cardStats = fortuneCARD.title;
-    cardStats.id = cardStats;
-
-    var realStats = document.getElementById(cardStats);
-    var playerTotal = document.getElementById("playerTotal");
-    var playerMeter = document.getElementById("playerMeter");
-
-    var currentStats = playerMeter.value;
-    var boostStats = realStats.optimum;
-
-    if (boostStats < playerMeter.value) {
-      alert("Not Enough MANERGY");
-    } else {
-      var currentMANERGY = placeMANERGY.value;
-      var removeMANERGY = realStats.optumum;
-      var math = currentMANERGY - removeMANERGY;
-      playerMeter.value = math;
-
-      var playerMETER = document.getElementById("playerMeter");
-      var currentplayerMETER = playerMETER.value;
-      var addplayerMETER = realStats.low;
-      var mathMETER = currentplayerMETER + addplayerMETER;
-      playerMETER.value = mathMETER.value;
-      relyMANERGY.innerHTML = mathMETER;
-    }
+    var MATH = document.getElementById("MATH");
+    var playerMeter = document.getElmentById("playerMeter");
+    var MANERGY = document.getElementById("MANERGY")
+    
+    
   }
 }
 
