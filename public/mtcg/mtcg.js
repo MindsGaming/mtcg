@@ -174,7 +174,7 @@ function DEALCARDS() {
       var add = fetchSTATS.low;
       var math = current + add;
       var total = math;
-      playerTotal.innerHTML = total;
+      playerTotal.innerHTML = "ATK: " + total;
       var pushTotal = document.getElementById("playerTotal");
       playerMeter.value = pushTotal.innerHTML;
       fortuneCARD.removeEventListener("click", STATS);
