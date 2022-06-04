@@ -167,29 +167,32 @@ function DEALCARDS() {
     if (relyMANERGY.innerHTML < 0) {
       alert("Not Enough MANERGY");
     } else {
-      var subF = fetchSTATS.min;
-      var subM = manergy.innerHTML;
-      var mathM = subM - subF;
-      manergy.innerHTML = mathM;
-      MANERGY.value = mathM;
+      var moveCount = document.getElementById("moveCount");
 
-      var declareCard = fortuneCARD;
-      var current = playerMeter.value;
-      var add = fetchSTATS.low;
-      var math = current + add;
-      var total = math;
-      playerTotal.innerHTML = total;
-      var pushTotal = document.getElementById("playerTotal");
-      playerMeter.value = pushTotal.innerHTML;
+        var subF = fetchSTATS.min;
+        var subM = manergy.innerHTML;
+        var mathM = subM - subF;
+        manergy.innerHTML = mathM;
+        MANERGY.value = mathM;
 
-      var currentDEF = playerMeterDEF.value;
-      var addDEF = fetchSTATS.high;
-      var mathDEF = currentDEF + addDEF;
-      var totalDEF = mathDEF;
-      playerTotalDEF.innerHTML = totalDEF;
-      var pushTotalDEF = document.getElementById("playerTotalDEF");
-      playerMeterDEF.value = pushTotalDEF.innerHTML;
-      fortuneCARD.removeEventListener("click", STATS);
+        var declareCard = fortuneCARD;
+        var current = playerMeter.value;
+        var add = fetchSTATS.low;
+        var math = current + add;
+        var total = math;
+        playerTotal.innerHTML = total;
+        var pushTotal = document.getElementById("playerTotal");
+        playerMeter.value = pushTotal.innerHTML;
+
+        var currentDEF = playerMeterDEF.value;
+        var addDEF = fetchSTATS.high;
+        var mathDEF = currentDEF + addDEF;
+        var totalDEF = mathDEF;
+        playerTotalDEF.innerHTML = totalDEF;
+        var pushTotalDEF = document.getElementById("playerTotalDEF");
+        playerMeterDEF.value = pushTotalDEF.innerHTML;
+        fortuneCARD.removeEventListener("click", STATS);
+      
 
       if (fortuneCARD.title == "MoonRabbit") {
         var LIFE = document.getElementById("LIFE");
@@ -207,7 +210,6 @@ function DEALCARDS() {
       }
 
       var moveCARD = document.createElement("img");
-      var moveCount = document.getElementById("moveCount");
 
       if (moveCount.value < 3) {
         moveCARD.className = "playcard";
