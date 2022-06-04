@@ -12,9 +12,8 @@ wrap {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 60%;
+  width: 100%;
   height: 155px;
-  margin-left: 20%;
   background-color: transparent;
   opacity: 0.6;
   z-index: 0;
@@ -71,9 +70,9 @@ wrap {
   width: 80px;
   height: 150px;
   background-color: black;
-  margin-right: 5px;
+  margin-right: -15%;
   margin-bottom: 15px;
-  margin-left: 10px;
+  margin-left: 20%;
   z-index: 2;
   opacity: 3;
 }

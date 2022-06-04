@@ -205,9 +205,31 @@ function DEALCARDS() {
         life.innerHTML = tackMath;
         LIFE.value = playerTotal.innerHTML;
       }
-      
-      
-      
+
+      var moveCARD = document.createElement("img");
+      moveCARD.className = "card";
+      moveCARD.title = fortuneCARD.title;
+      moveCARD.src = fortuneCARD.src;
+      moveCARD.id = fortuneCARD.id;
+      fortuneCARD.className = "hide";
+
+      var openspotONE = document.getElementById("CARDONE");
+      var openspotTWO = document.getElementById("CARDTWO");
+      var openspotTHREE = document.getElementById("CARDTHREE");
+
+      if (openspotONE.innerHTML == "") {
+        var NEWCARD = document;
+        document.getElementById("CARDONE").appendChild(moveCARD);
+      } else {
+        if (openspotTWO.innerHTML == "") {
+          var NEWCARD = document;
+          document.getElementById("CARDTWO").appendChild(moveCARD);
+        } else {
+          if (openspotTHREE.innerHTML == "") {
+            document.getElementById("CARDTWO").appendChild(moveCARD);
+          }
+        }
+      }
     }
   }
 }
