@@ -123,7 +123,7 @@ function DEALCARDS() {
     var myMANERGY = getMANERGY[Math.floor(Math.random() * getMANERGY.length)];
     var relyMANERGY = document.getElementById("manergy");
     placeMANERGY.value = myMANERGY + placeMANERGY.value;
-    relyMANERGY.innerHTML = myMANERGY;
+    relyMANERGY.innerHTML =  myMANERGY;
   } else {
   }
 
@@ -174,7 +174,7 @@ function DEALCARDS() {
       var add = fetchSTATS.low;
       var math = current + add;
       var total = math;
-      playerTotal.innerHTML = "ATK: " + total;
+      playerTotal.innerHTML = total;
       var pushTotal = document.getElementById("playerTotal");
       playerMeter.value = pushTotal.innerHTML;
       fortuneCARD.removeEventListener("click", STATS);

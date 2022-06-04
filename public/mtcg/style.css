@@ -24,25 +24,38 @@ wrap {
   float: left;
   display: block;
   border-style: groove;
-  padding: 2px;
-  width: 50px;
   border-color: white;
-  background-color: yellow;
+  color: yellow;
+  background-color: pink;
+  margin-top: -45px;
+  margin-left: 25px;
+}
+.playerTotals {
+  float: left;
+  display: block;
+  border-style: groove;
+  border-color: white;
   color: red;
-  border-radius: 20px 30px 10px 1px;
-  margin-bottom: 15px;
-  margin-top: -65px;
-  margin-right: 35px;
-  margin-left: 15px;
-  opacity: 0.7;
-  z-index: 1;
+  background-color: pink;
+  margin-top: -45px;
+  margin-left: 100px;
+}
+.manergy {
+  float: right;
+  display: block;
+  width: 100px;
+  border-style: groove;
+  border-color: white;
+  color: black;
+  background-color: yellow;
+  margin-left: 155px;
+  margin-top: -45px;
 }
 
 .card {
   float: left;
   display: block;
   width: 80px;
-  clear: top;
   height: 150px;
   background-color: black;
   margin-right: 5px;
