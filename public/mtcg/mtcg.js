@@ -164,9 +164,16 @@ function DEALCARDS() {
 
     if (myMANERGY < fetchSTATS.min) {
     } else {
+      
+      
+      
+      
+      
       var subF = fetchSTATS.min;
-      var subM = myMANERGY;
-      alert(sub);
+      var subM = manergy.innerHTML;
+      var mathM = subM - subF;
+      manergy.innerHTML = mathM;
+      MANERGY.value = mathM;
 
       var current = playerMeter.value;
       var add = fetchSTATS.low;
