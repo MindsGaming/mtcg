@@ -173,6 +173,7 @@ function DEALCARDS() {
       manergy.innerHTML = mathM;
       MANERGY.value = mathM;
 
+      var declareCard = fortuneCARD;
       var current = playerMeter.value;
       var add = fetchSTATS.low;
       var math = current + add;
@@ -204,6 +205,9 @@ function DEALCARDS() {
         life.innerHTML = tackMath;
         LIFE.value = playerTotal.innerHTML;
       }
+      
+      
+      
     }
   }
 }
