@@ -193,14 +193,16 @@ function DEALCARDS() {
       if (fortuneCARD.title == "MoonRabbit") {
         var LIFE = document.getElementById("LIFE");
         var life = document.getElementById("life");
-        LIFE.value = "0";
-        playerTotal.innerHTML = "0";
+        LIFE.value = "500";
+        life.innerHTML = "500";
       }
       if (fortuneCARD.title == "APHRODITE") {
-        var tackscore = playerMeter.value;
+        var LIFE = document.getElementById("LIFE");
+        var life = document.getElementById("life");
+        var tackscore = LIFE.value;
         var tackMath = tackscore + tackscore;
-        playerTotal.innerHTML = tackMath;
-        playerMeter.value = playerTotal.innerHTML;
+        life.innerHTML = tackMath;
+        LIFE.value = playerTotal.innerHTML;
       }
     }
   }
