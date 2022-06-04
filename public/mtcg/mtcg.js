@@ -213,20 +213,10 @@ function DEALCARDS() {
       moveCARD.id = fortuneCARD.id;
       fortuneCARD.className = "hide";
 
-      var openspotTWO = document.getElementById("CARDTWO");
-      var openspotTHREE = document.getElementById("CARDTHREE");
       var moveCount = document.getElementById("moveCount");
-
-      if (moveCount.value == "0") {
-        document.getElementById("moveCARD").appendChild(moveCARD);
-        moveCount.value = "1";
-      }
-      else{
-        if(moveCount.value == "1"){
-          document.getElementById("CARDTWO").appendChild(moveCARD);
-        moveCount.value = "1";
-        }
-      }
+      var addmoves = +1;
+      var totalmoves = moveCount.value + addmoves;
+      alert(totalmoves)
     }
   }
 }
