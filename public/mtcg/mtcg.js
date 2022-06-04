@@ -155,6 +155,8 @@ function DEALCARDS() {
     var MATH = document.getElementById("MATH");
     var playerMeter = document.getElementById("playerMeter");
     var playerTotal = document.getElementById("playerTotal");
+    var playerMeterDEF = document.getElementById("playerMeterDEF");
+    var playerTotalDEF = document.getElementById("playerTotalDEF");
 
     var MANERGY = document.getElementById("MANERGY");
     var manergy = document.getElementById("manergy");
@@ -178,6 +180,14 @@ function DEALCARDS() {
       playerTotal.innerHTML = total;
       var pushTotal = document.getElementById("playerTotal");
       playerMeter.value = pushTotal.innerHTML;
+
+      var currentDEF = playerMeterDEF.value;
+      var addDEF = fetchSTATS.max;
+      var mathDEF = currentDEF + addDEF;
+      var totalDEF = mathDEF;
+      playerTotalDEF.innerHTML = totalDEF;
+      var pushTotalDEF = document.getElementById("playerTotalDEF");
+      playerMeterDEF.value = pushTotalDEF.innerHTML;
       fortuneCARD.removeEventListener("click", STATS);
 
       if (fortuneCARD.title == "MoonRabbit") {
