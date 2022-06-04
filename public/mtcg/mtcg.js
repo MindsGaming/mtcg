@@ -123,7 +123,7 @@ function DEALCARDS() {
     var myMANERGY = getMANERGY[Math.floor(Math.random() * getMANERGY.length)];
     var relyMANERGY = document.getElementById("manergy");
     placeMANERGY.value = myMANERGY + placeMANERGY.value;
-    relyMANERGY.innerHTML =  myMANERGY;
+    relyMANERGY.innerHTML = myMANERGY;
   } else {
   }
 
@@ -162,7 +162,8 @@ function DEALCARDS() {
     cardMANERGY.id = cardMANERGY;
     var fetchSTATS = document.getElementById(cardMANERGY);
 
-    if (myMANERGY < fetchSTATS.min) {
+    if (relyMANERGY.innerHTML < 0) {
+      alert("Not Enough MANERGY");
     } else {
       var subF = fetchSTATS.min;
       var subM = manergy.innerHTML;
