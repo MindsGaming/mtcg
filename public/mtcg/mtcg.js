@@ -218,11 +218,14 @@ function DEALCARDS() {
       var moveCount = document.getElementById("moveCount");
 
       if (moveCount.value == "0") {
-        document.getElementById("CARDONE").appendChild(moveCARD);
-        moveCount.value = "2";
+        document.getElementById("moveCARD").appendChild(moveCARD);
+        moveCount.value = "1";
       }
       else{
-        i
+        if(moveCount.value == "1"){
+          document.getElementById("CARDTWO").appendChild(moveCARD);
+        moveCount.value = "1";
+        }
       }
     }
   }
