@@ -158,14 +158,22 @@ function DEALCARDS() {
     cardMANERGY.id = cardMANERGY;
     var fetchSTATS = document.getElementById(cardMANERGY);
 
-    var current = MANERGY.value;
-    var add = fetchSTATS.low;
-    var math = current + add;
-    var total = math;
-    playerTotal.innerHTML = total;
-    var pushTotal = document.getElementById("playerTotal");
-    playerMeter.value = pushTotal.innerHTML;
-    fortuneCARD.removeEventListener("click", STATS);
+    if (myMANERGY < fetchSTATS.min) {
+    } else {
+     var updateMANERGY = myMANERGY;
+     var subMANERGY = fetchSTATS.min;
+     var takeMANERGY = updateMANERGY - sub 
+      
+      
+      var current = playerMeter.value;
+      var add = fetchSTATS.low;
+      var math = current + add;
+      var total = math;
+      playerTotal.innerHTML = total;
+      var pushTotal = document.getElementById("playerTotal");
+      playerMeter.value = pushTotal.innerHTML;
+      fortuneCARD.removeEventListener("click", STATS);
+    }
   }
 }
 
