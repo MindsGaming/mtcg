@@ -546,6 +546,7 @@ label {
   color: white;
   opacity: 0.8;
   z-index: 12;
+  cursor: pointer;
 }
 
 .x {
@@ -554,4 +555,6 @@ label {
   margin: 5px;
   border-style: solid;
   font-size: 10px;
+  width: 10px;
+  cursor: pointer;
 }

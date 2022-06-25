@@ -291,3 +291,9 @@ createHUB.className = "SuperSplash";
 createHUB.allow = "microphone; camera; vr; speaker;";
 var CREATEHUB = document.getElementById("HUBS");
 
+
+
+function closePOP(){
+  var pop = document.getElementById("POP");
+  pop.className = "hide";
+}
