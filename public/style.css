@@ -537,3 +537,21 @@ label {
   background-color: grey;
 }
 
+.pop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  opacity: 0.8;
+  z-index: 12;
+}
+
+.x {
+  float: right;
+  padding: 3px;
+  margin: 5px;
+  border-style: solid;
+  font-size: 10px;
+}
