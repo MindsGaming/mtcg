@@ -113,6 +113,41 @@ const SHEETMUSIC = document
   .getElementById("SheetMusic")
   .appendChild(SheetMusic);
 
+const MusicDJ = document.createElement("img");
+MusicDJ.src =
+  "https://momintdev.blob.core.windows.net/uploads/bc70e6df-b73c-4e36-aa5c-f42b5398cfba.jpeg";
+MusicDJ.title = "MusicDJ";
+MusicDJ.className = "card";
+const MUSICDJ = document.getElementById("MusicDJ").appendChild(MusicDJ);
+
+const UnsettlingSound = document.createElement("img");
+UnsettlingSound.src =
+  "https://momintdev.blob.core.windows.net/uploads/7ce7dc01-9870-4cd9-a572-c60e958d5671.jpeg";
+UnsettlingSound.title = "UnsettlingSound";
+UnsettlingSound.className = "card";
+const UNSETTLINGSOUND = document
+  .getElementById("UnsettlingSound")
+  .appendChild(UnsettlingSound);
+
+const WitchesBroom = document.createElement("img");
+WitchesBroom.src =
+  "https://momintdev.blob.core.windows.net/uploads/2d6a76b4-224f-4316-8c96-82f34211b1b6.jpeg";
+WitchesBroom.title = "WitchesBroom";
+WitchesBroom.className = "card";
+const WITCHESBROOM = document
+  .getElementById("WitchesBroom")
+  .appendChild(WitchesBroom);
+
+
+const Thanatos = document.createElement("img");
+Thanatos.src =
+  "https://momintdev.blob.core.windows.net/uploads/2d6a76b4-224f-4316-8c96-82f34211b1b6.jpeg";
+Thanatos.title = "WitchesBroom";
+Thanatos.className = "card";
+const THANATOS = document
+  .getElementById("WitchesBroom")
+  .appendChild(WitchesBroom);
+
 /// Card Tools
 
 function hideBirds() {
