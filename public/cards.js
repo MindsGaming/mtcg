@@ -138,15 +138,30 @@ const WITCHESBROOM = document
   .getElementById("WitchesBroom")
   .appendChild(WitchesBroom);
 
-
 const Thanatos = document.createElement("img");
 Thanatos.src =
-  "https://momintdev.blob.core.windows.net/uploads/2d6a76b4-224f-4316-8c96-82f34211b1b6.jpeg";
-Thanatos.title = "WitchesBroom";
+  "https://momintdev.blob.core.windows.net/uploads/4e1b850e-fb56-4e0e-9582-4a05d9ff83de.jpeg";
+Thanatos.title = "Thanatos";
 Thanatos.className = "card";
-const THANATOS = document
-  .getElementById("WitchesBroom")
-  .appendChild(WitchesBroom);
+const THANATOS = document.getElementById("Thanatos").appendChild(Thanatos);
+
+const Mayonnaise = document.createElement("img");
+Mayonnaise.src =
+  "https://momintdev.blob.core.windows.net/uploads/4bd60782-a809-4c0e-b597-e811dc1d8cd7.jpeg";
+Mayonnaise.title = "Mayonnaise";
+Mayonnaise.className = "card";
+const MAYONNAISE = document
+  .getElementById("Mayonnaise")
+  .appendChild(Mayonnaise);
+
+const PopcornMonster = document.createElement("img");
+PopcornMonster.src =
+  "https://momintdev.blob.core.windows.net/uploads/f8562625-a837-49a4-bc17-bc6256117356.jpeg";
+PopcornMonster.title = "PopcornMonster";
+PopcornMonster.className = "card";
+const POPCORNMONSTER = document
+  .getElementById("PopcornMonster")
+  .appendChild(PopcornMonster);
 
 /// Card Tools
 
