@@ -297,3 +297,15 @@ function closePOP(){
   var pop = document.getElementById("POP");
   pop.className = "hide";
 }
+
+
+function metaHOOKS() {
+  var hubs = document.getElementById("hubs");
+  var createHUB = document.createElement("iframe");
+
+  createHUB.src =
+    "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
+  createHUB.className = "SuperSplash";
+  createHUB.allow = "microphone; camera; vr; speaker;";
+  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
+}
