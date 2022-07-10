@@ -505,8 +505,9 @@
                 type="text"
                 maxlength="100"
                 placeholder="Wallet ID"
-                required
+                pattern=".{42,43}"
                 title="Wallet IDs Are 43 Characters"
+                required
               />
               <br />
               <button type="submit" id="submit-dream">Login</button>
