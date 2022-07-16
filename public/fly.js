@@ -263,26 +263,13 @@ function vrMode() {
 }
 
 function classicMode() {
-  var games = document.getElementById("games");
-  games.className = "";
-  games.title = "GAMES";
-  var classic = document.getElementById("classicMode");
-  var VR = document.getElementById("vrMode");
-  var hubs = document.getElementById("hubs");
-  hubs.className = "hide";
-  hubs.innerHTML = "";
-  hubs.title = "CLOSED";
-  classic.className = "downarrowG";
-  VR.className = "downarrow";
   var removelogin = document.getElementById("login");
-  removelogin.className = "hide";
-  var createMTCG = document.createElement("iframe");
-  createMTCG.src = "https://mtcgverse.glitch.me/";
-  createMTCG.className = "SuperSplash";
-  var CREATEMTCG = document.getElementById("MTCGverse");
 
-  viewReward();
-  checkMODE();
+  var createMTCG = document.createElement("iframe");
+  createMTCG.src = "https://mtcgverse.glitch.me";
+  createMTCG.className = "superSplash";
+  removelogin.className = "hide";
+  var CREATEMTCG = document.getElementById("games");
 }
 
 function versionCheck() {

@@ -484,20 +484,20 @@ label {
 .downarrow {
   display: block;
   border-style: groove;
-  width: 60%;
+  width: 60.2%;
   border-radius: 0px 50px 0px 0px;
 }
 .downarrowG {
   display: block;
   border-style: groove;
-  width: 60%;
+  width: 60.2%;
   border-radius: 0px 50px 0px 0px;
   background-color: green;
 }
 .downarrow:hover {
   display: block;
   border-style: groove;
-  width: 60%;
+  width: 60%.2;
   border-radius: 0px 50px 0px 0px;
   background-color: gold;
 }
