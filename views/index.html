@@ -19,8 +19,6 @@
     <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
     <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
 
-    <script src="https://mgverse.glitch.me/metamask.js" defer></script>
-
     <script src="/client.js" defer></script>
     <script src="/fly.js" defer></script>
     <script src="/cards.js" defer></script>
@@ -34,30 +32,13 @@
     <miner><iframe src="/miner"> </iframe></miner>
     <div id="hubs" class="hide" title="HUBS"></div>
     <div id="games" class="hide" title="CLOSED">
-      <div class="gameWrap">
-        <div class="topper">
-          <div class="grid" title="Menu" onclick="gameMenu();"></div>
-          <div id="dropMenu" class="hide" title="CLOSED">
-            <div class="minyDrop" title="GAMES" onclick="openGames();">
-              GAMES
-            </div>
-            <div id="gameMenu" class="hide" title="CLOSED">
-              <center>
-                <label id="MTCGverse"></label>
-              </center>
-            </div>
-          </div>
-        </div>
-      </div>
+      <center>
+        <label id="MTCGverse"></label>
+      </center>
     </div>
+
     <div id="rewardPop" class="hide"></div>
     <div class="SuperLogin" id="login">
-      <div id="POP" class="hide" onclick="betatesting();">
-        <center>
-          V1 BETA Testing
-          <div class="x" onclick="closebetatesting();">X</div>
-        </center>
-      </div>
       <div class="backgrounds">
         <center>
           <card id="mtcg"></card>

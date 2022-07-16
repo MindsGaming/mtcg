@@ -274,6 +274,13 @@ function classicMode() {
   hubs.title = "CLOSED";
   classic.className = "downarrowG";
   VR.className = "downarrow";
+  var removelogin = document.getElementById("login");
+  removelogin.className = "hide";
+  var createMTCG = document.createElement("iframe");
+  createMTCG.src = "https://mtcgverse.glitch.me/";
+  createMTCG.className = "SuperSplash";
+  var CREATEMTCG = document.getElementById("MTCGverse");
+
   viewReward();
   checkMODE();
 }
@@ -291,13 +298,10 @@ createHUB.className = "SuperSplash";
 createHUB.allow = "microphone; camera; vr; speaker;";
 var CREATEHUB = document.getElementById("HUBS");
 
-
-
-function closePOP(){
+function closePOP() {
   var pop = document.getElementById("POP");
   pop.className = "hide";
 }
-
 
 function metaHOOKS() {
   var hubs = document.getElementById("hubs");
