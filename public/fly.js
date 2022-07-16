@@ -263,28 +263,32 @@ function vrMode() {
 }
 
 function classicMode() {
-  
-  var c
-  
-  var classic = document.getElementById("games");
-  classic.title = "games";
-  if (classic.title == "games") {
-    classic.title = "GAMES";
-    classic.className = "SuperSplash";
-    var hubs = document.getElementById("hubs");
-    hubs.className = "hide";
-    hubs.title = "CLOSED";
-    var createMTCG = document.createElement("iframe");
-    createMTCG.src = "https://mtcgverse.glitch.me/";
-    createMTCG.className = "SuperSplash";
-    var CREATEMTCG = document.getElementById("games").appendChild(createMTCG);
+  var classicMode = document.getElementById("classicMode");
+  if (classicMode.title == "Classic") {
+    classicMode.title = "OPEN";
+    var classic = document.getElementById("games");
+    classic.title = "games";
+    if (classic.title == "games") {
+      classic.title = "GAMES";
+      classic.className = "SuperSplash";
+      var hubs = document.getElementById("hubs");
+      hubs.className = "hide";
+      hubs.title = "CLOSED";
+      var createMTCG = document.createElement("iframe");
+      createMTCG.src = "https://mtcgverse.glitch.me/";
+      createMTCG.className = "SuperSplash";
+      var CREATEMTCG = document.getElementById("games").appendChild(createMTCG);
 
-    var removelogin = document.getElementById("login");
-    removelogin.className = "hide";
-    
-    
-    viewReward();
-    
+      var removelogin = document.getElementById("login");
+      removelogin.className = "hide";
+      classicMode.className = "downarrowG";
+      var VRmode = document.getElementById("vrMode");
+      VRmode.className = "downarrow";
+    }
+    var rewardpop = document.getElementById("REWARDS");
+    if (rewardpop.title == "Rewards") {
+      viewReward();
+    }
   }
 }
 
