@@ -263,6 +263,9 @@ function vrMode() {
 }
 
 function classicMode() {
+  
+  var c
+  
   var classic = document.getElementById("games");
   classic.title = "games";
   if (classic.title == "games") {
@@ -278,8 +281,10 @@ function classicMode() {
 
     var removelogin = document.getElementById("login");
     removelogin.className = "hide";
-
+    
+    
     viewReward();
+    
   }
 }
 
