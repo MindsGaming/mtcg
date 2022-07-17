@@ -87,10 +87,11 @@ var createUser = async function (publicAddress) {
 var signMessage = async function (nonce, publicAddress) {
   web3.eth.personal.sign(nonce + "", publicAddress).then(async (signed) => {
     console.log(signed);
+  var thiswalletthing 
     await authenticate(publicAddress, signed);
+  
     await greet();
     await closePOP();
-    await metaHOOKS();
   });
 };
 
@@ -369,5 +370,7 @@ function addtokens() {
   }
 }
 
-var pushmythings = document.getElementById("myToken");
-pushmythings.innerHTML = ethereum.selectedAddress;
+function closePOP() {
+  var errorpop = document.getElementById("POP");
+  errorpop.className = "hide";
+}
