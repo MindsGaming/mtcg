@@ -87,11 +87,9 @@ var createUser = async function (publicAddress) {
 var signMessage = async function (nonce, publicAddress) {
   web3.eth.personal.sign(nonce + "", publicAddress).then(async (signed) => {
     console.log(signed);
-  var thiswalletthing 
     await authenticate(publicAddress, signed);
-  
-    await greet();
     await closePOP();
+    await greet();
   });
 };
 
@@ -161,7 +159,7 @@ var greet = function () {
       // document.getElementById("response").innerHTML = JSON.stringify(json);
       if (json.user && json.user.username) {
         document.getElementById(
-          "greet"
+          "myToken"
         ).innerHTML = `<h1>Welcome ${json.user.username}</h1>`;
       }
     });
