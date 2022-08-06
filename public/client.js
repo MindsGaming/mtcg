@@ -1,6 +1,6 @@
 // Version
 const version = document.createElement("p");
-version.id = "V0.34";
+version.id = "V0.35";
 version.innerHTML = version.id;
 version.title = version.id;
 const VERSION = document.getElementById("version");
@@ -284,3 +284,4 @@ function selectToken() {
   dreamToken.className = "darkmarkIMG";
   dreamToken.innerHTML = newtoken;
 }
+
