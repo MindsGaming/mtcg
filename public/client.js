@@ -285,3 +285,13 @@ function selectToken() {
   dreamToken.innerHTML = newtoken;
 }
 
+const checkrely = document.getElementById("myWallet");
+relyME();
+
+function relyME() {
+  if (checkrely.title == "userWallet") {
+  } else {
+    var mywallet = document.getElementById("myWallet");
+    mywallet.innerHTML = checkrely.innerHTML;
+  }
+}
