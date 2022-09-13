@@ -30,7 +30,7 @@
   <body>
     <wrap>
       <center>
-        <h1>BART Balloons</h1>
+        <h1>BART Balloon</h1>
 
         <img
           id="balloon"
@@ -38,6 +38,7 @@
           height="100px"
           src="https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/balloon.png"
         />
+        <label id="pop">1</label>
 
         <button onclick="check()">EARN</button>
       </center>
@@ -52,6 +53,17 @@
       high="1000"
       max="10000"
       value="100"
+    ></meter>
+
+    <meter
+      id="POP"
+      title="POP"
+      class="hide"
+      min="0"
+      low="1"
+      high="100"
+      max="1000"
+      value="1"
     ></meter>
   </body>
 </html>

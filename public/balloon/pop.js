@@ -1,10 +1,11 @@
-const earn = [1, 2, 3, 4, 5];
+const earn = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function check() {
   var sniffwidth = document.getElementById("balloon");
   var push = document.getElementById("BALLOON");
   var width = sniffwidth.width;
   push.value = width;
+  var newpop = document.getElementById("pop");
 
   var boost = earn[Math.floor(Math.random() * earn.length)];
   var pop = earn[Math.floor(Math.random() * earn.length)];
@@ -19,15 +20,16 @@ function check() {
   if (pop == boost) {
     sniffwidth.src =
       "https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/POP.png";
+    newpop.innerHTML = "0";
+    alert("AWW :(");
+    window.open("/balloon", "_self");
   }
-  else {
-    var current = document.getElementById("POP");
-    var boostpop = boost;
-    var popmath = current.value + boost;
-    var sniffpop = document.getElementById("POP");
-    sniffpop.value = popmath;
-    
-    var pop
-    
-  }
+
+  var current = document.getElementById("POP");
+  var boostpop = boost;
+  var popmath = current.value + boost;
+  var sniffpop = document.getElementById("POP");
+  sniffpop.value = popmath;
+
+  newpop.innerHTML = popmath;
 }
