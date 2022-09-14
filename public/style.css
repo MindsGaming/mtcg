@@ -16,7 +16,9 @@ wrap {
   width: 100%;
   height: 100%;
   background-color: black;
-  filter: opacity(60%);
+  z-index: 5;
+  margin-top: -1px;
+  margin-left: -0.5;
   z-index: 1;
 }
 
@@ -28,14 +30,16 @@ h1 {
 tool {
   float: left;
   margin-right: 5px;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
 .quick {
   display: block;
-  border-style: groove;
-  width: 85%;
+  width: 30%;
   height: 50px;
-  margin-left: 10%;
+  border-style: groove;
+  margin-left: 30%;
   margin-bottom: -3%;
   margin-top: 45%;
   border-radius: 25px 25px 25px 25px;
@@ -57,6 +61,11 @@ tool {
   margin: 3px;
 }
 
+.grid {
+  position: relative;
+  margin: 3px;
+  border-radius: 50%;
+}
 .hide {
   display: none;
 }
