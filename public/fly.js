@@ -97,6 +97,11 @@ function quickhub() {
     login.className = "hide";
     login.title = "closed";
   }
+
+  if (hubs.innerHTML == "") {
+    hubs.title = "build";
+    quickhub();
+  }
 }
 
 function HOME() {

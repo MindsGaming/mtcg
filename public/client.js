@@ -134,10 +134,7 @@ clearButton.addEventListener("click", (event) => {
 // Claim
 
 function claimUpdate() {
-  var confirm = document.getElementById("confirmUSER");
-  confirm == levelups.title;
-
-  if (confirm == "LOGIN") {
+  if (dreamInput.value == "") {
     alert("Login To Earn Rewards");
   } else {
     if (minutesLabel.innerHTML == "00") {
@@ -166,6 +163,7 @@ function claimUpdate() {
       );
 
       reset();
+      levelUp();
     }
   }
 }
@@ -175,4 +173,78 @@ function reset() {
   document.getElementById("minutes").innerHTML = zero;
   document.getElementById("seconds").innerHTML = zero;
   totalSeconds = "0";
+}
+
+// LevelUp
+
+function levelUp() {
+  var tackCount = document.getElementById("levelUp").value;
+  var tackcount = tackCount + 1;
+  document.getElementById("levelUp").value = tackcount;
+
+  if (tackcount == "11") {
+    dreamToken.innerHTML = "DragonToken";
+    dreamToken.title = "DragonToken";
+    dreamToken.className = "dragontokenIMG";
+    tackCount.value = "12";
+  }
+
+  if (tackcount == "21") {
+    dreamToken.innerHTML = "ECLIPSE";
+    dreamToken.title = "ECLIPSE";
+    dreamToken.className = "eclipseIMG";
+    tackCount.value = "22";
+  }
+
+  if (tackcount == "31") {
+    dreamToken.innerHTML = "DooBetter";
+    dreamToken.title = "DooBetter";
+    dreamToken.className = "doobetterIMG";
+    tackCount.value = "32";
+  }
+
+  if (tackcount == "41") {
+    dreamToken.innerHTML = "GTPC";
+    dreamToken.title = "GTPC";
+    dreamToken.className = "gtpcIMG";
+    tackCount.value = "42";
+  }
+
+  if (tackcount == "51") {
+    dreamToken.innerHTML = "GAMER";
+    dreamToken.title = "GAMER";
+    dreamToken.className = "gamerIMG";
+    tackCount.value = "52";
+  }
+
+  if (tackcount == "61") {
+    dreamToken.innerHTML = "DarkMark";
+    dreamToken.title = "DarkMark";
+    dreamToken.className = "darkmarkIMG";
+    tackCount.value = "0";
+  }
+}
+
+
+
+function selectToken() {
+  var tokens = ["Darkmark"];
+  const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
+  var a = document.getElementById("myToken");
+  a.innerHTML = newtoken;
+  dreamToken.innerHTML = a.innerHTML;
+  dreamToken.title = "DarkMark";
+  dreamToken.className = "darkmarkIMG";
+  dreamToken.innerHTML = newtoken;
+}
+
+const checkrely = document.getElementById("myWallet");
+relyME();
+
+function relyME() {
+  if (checkrely.title == "userWallet") {
+  } else {
+    var mywallet = document.getElementById("myWallet");
+    mywallet.innerHTML = checkrely.innerHTML;
+  }
 }
