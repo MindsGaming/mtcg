@@ -20,6 +20,7 @@ wrap {
   margin-top: -1px;
   margin-left: -0.5;
   z-index: 1;
+  opacity: 2;
 }
 
 h1 {
@@ -45,12 +46,11 @@ tool {
   border-style: groove;
   border-radius: 20px 0px 00px 20px;
   background-color: blue;
-  opacity: 0.62;
   cursor: pointer;
   background-image: url("https://ipack.glitch.me/ogsmile.png");
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 1;
+  z-index: 2;
 }
 
 .quicker {
@@ -60,11 +60,12 @@ tool {
   right: 0;
   margin: 3px;
   width: 30%;
+  height: 45px;
   border-style: groove;
   border-radius: 20px 0px 00px 20px;
   background-color: blue;
   background-repeat: no-repeat;
-  z-index: 1;
+  z-index: 2;
 }
 
 .home {

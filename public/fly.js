@@ -17,13 +17,13 @@ function displayTools() {
   var quicktools = document.getElementById("quickTools");
 
   if (tools.title == "TOOLS") {
-    tools.className = "display";
-    quicktools.className = "quicker";
+    tools.className = "hide";
+    quicktools.className = "quick";
     tools.title = "tools";
   } else {
     if (tools.title == "tools") {
-      tools.className = "hide";
-      quicktools.className = "quick";
+      tools.className = "display";
+      quicktools.className = "quicker";
       tools.title = "TOOLS";
     }
   }
