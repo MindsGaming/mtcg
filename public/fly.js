@@ -4,6 +4,7 @@ const games = document.getElementById("GAMES");
 const login = document.getElementById("LOGIN");
 const loginform = document.getElementById("login-form");
 
+
 changeToken();
 
 function changeToken() {

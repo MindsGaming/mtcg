@@ -115,8 +115,11 @@ dreamsForm.onsubmit = (event) => {
 
   // reset form
   var loginform = document.getElementById("login-form");
+  var levelups = document.getElementById("levelUp");
+  levelups.title = dreamInput.value;
   myWallet.innerHTML = dreamInput.value;
   loginform.className = "hide";
+  dreamInput.value = "";
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -131,24 +134,18 @@ clearButton.addEventListener("click", (event) => {
 // Claim
 
 function claimUpdate() {
-  if (dreamInput.value == "") {
+  var levelups = document.getElementById("levelUp");
+
+  if (levelups.TITLE == "LOGIN") {
     alert("Login To Earn Rewards");
-    otherSound();
   } else {
     if (minutesLabel.innerHTML == "00") {
       alert("You Need A Full Token To Claim Rewards");
-      oopsSound();
     } else {
       var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
 
       const data = {
-        dream:
-          dreamInput.value +
-          " " +
-          version.innerHTML +
-          dreamToken.innerHTML +
-          ":" +
-          REWARDS,
+        dream: dreamInput.value + dreamToken.innerHTML + ":" + REWARDS,
       };
       fetch("/addDream", {
         method: "POST",
