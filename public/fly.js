@@ -1,8 +1,7 @@
 const hubs = document.getElementById("HUBS");
 const app = document.getElementById("APP");
-const 
-  var login = document.getElementById("LOGIN");
-
+const games = document.getElementById("GAMES");
+const login = document.getElementById("LOGIN");
 
 function quickhub() {
   if (hubs.title == "build") {
@@ -20,6 +19,7 @@ function quickhub() {
     hubs.title = "HUBS";
     hubs.className = "display";
     app.title = "HUBS";
+    login.className = "hide";
   }
 }
 
@@ -60,6 +60,8 @@ function HOME() {
       hubs.className = "hide";
       app.title = "HOME";
       app.className = "display";
+      login.className = "hide";
+      login.title = "closed";
     }
   }
 }
@@ -67,6 +69,21 @@ function HOME() {
 function justexplore() {
   displayTools();
   quickhub();
+}
+
+function checklogin() {
+  var myWallet = document.getElementById("myWallet");
+
+  if (myWallet.innerHTML == "LOGIN") {
+    userview();
+  } else {
+    let text;
+    if (confirm("You Are Already Loged In View Your Wallet??") == true) {
+      userview();
+    } else {
+      text = "You canceled!";
+    }
+  }
 }
 
 function userview() {
