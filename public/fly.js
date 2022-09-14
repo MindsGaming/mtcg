@@ -71,21 +71,6 @@ function justexplore() {
   quickhub();
 }
 
-function checklogin() {
-  var myWallet = document.getElementById("myWallet");
-
-  if (myWallet.innerHTML == "LOGIN") {
-    userview();
-  } else {
-    let text;
-    if (confirm("You Are Already Loged In View Your Wallet??") == true) {
-      userview();
-    } else {
-      text = "You canceled!";
-    }
-  }
-}
-
 function userview() {
   if (login.title == "closed") {
     hubs.className = "hide";
@@ -95,5 +80,12 @@ function userview() {
     app.className = "hide";
     login.className = "display";
     login.title = "REWARDS";
+  }
+
+  var myWallet = document.getElementById("myWallet");
+  var loginform = document.getElementById("login-form");
+  if (myWallet.innerHTML == "LOGIN") {
+  } else {
+    loginform.className = "hide";
   }
 }

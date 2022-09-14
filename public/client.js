@@ -27,7 +27,7 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
-var myWallet = document.getElementById("myWallet")
+var myWallet = document.getElementById("myWallet");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -70,6 +70,7 @@ dreamsForm.onsubmit = (event) => {
   // reset form
   myWallet.id = dreamInput.value;
   myWallet.innerHTML = dreamInput.value;
+  myWallet.title = dreamInput.value;
   alert("DONE");
 };
 
