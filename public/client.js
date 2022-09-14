@@ -1,6 +1,16 @@
+const dreams = [];
+
+// define variables that reference elements on our page
+const dreamsForm = document.forms[0];
+const dreamInput = dreamsForm.elements["dream"];
+const dreamsList = document.getElementById("dreams");
+const clearButton = document.querySelector("#clear-dreams");
+const myWallet = document.getElemntById("myWallet");
 const secondsLabel = document.getElementById("seconds");
 const minutesLabel = document.getElementById("minutes");
 const dreamToken = document.getElementById("myToken");
+const myToken = dreamToken.innerHTML;
+
 var totalSeconds = 0;
 setInterval(setTime, 6000);
 
@@ -14,38 +24,32 @@ function setTime() {
   if (minutesLabel.innerHTML == "11") {
     if (secondsLabel.innerHTML == "01") {
       levelups.value = "10";
-      levelupPop();
     }
   }
   if (minutesLabel.innerHTML == "21") {
     if (secondsLabel.innerHTML == "01") {
       levelups.value = "20";
-      levelupPop();
     }
   }
   if (minutesLabel.innerHTML == "31") {
     if (secondsLabel.innerHTML == "01") {
       levelups.value = "30";
-      levelupPop();
     }
   }
   if (minutesLabel.innerHTML == "41") {
     if (secondsLabel.innerHTML == "01") {
       levelups.value = "40";
-      levelupPop();
     }
   }
   if (minutesLabel.innerHTML == "51") {
     if (secondsLabel.innerHTML == "01") {
       levelups.value = "50";
-      levelupPop();
     }
   }
 
   if (minutesLabel.innerHTML == "61") {
     if (secondsLabel.innerHTML == "01") {
       levelups.value = "60";
-      levelupPop();
     }
   }
 }
@@ -57,73 +61,6 @@ function pad(val) {
     return valString;
   }
 }
-
-changeToken();
-
-function changeToken() {
-  var oldToken = dreamToken.innerHTML;
-
-  var extralist = ["DragonToken", "DarkMark", "ECLIPSE", "DooBetter", "GTPC"];
-  var newTokens = [
-    "DarkMark",
-    "DragonToken",
-    "ECLIPSE",
-    "DooBetter",
-    "GTPC",
-    "GAMER",
-    extralist,
-  ];
-  const newtoken = newTokens[Math.floor(Math.random() * newTokens.length)];
-  dreamToken.innerHTML = newtoken;
-
-  if (newtoken == oldToken) {
-    changeToken();
-  } else {
-    var levelUp = document.getElementById("levelUp");
-
-    if (newtoken == "DragonToken") {
-      dreamToken.className = "dragontokenIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "6";
-    }
-
-    if (newtoken == "ECLIPSE") {
-      dreamToken.className = "eclipseIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "15";
-    }
-
-    if (newtoken == "DooBetter") {
-      dreamToken.className = "doobetterIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "25";
-    }
-    if (newtoken == "GTPC") {
-      dreamToken.className = "gtpcIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "35";
-    }
-
-    if (newtoken == "GAMER") {
-      dreamToken.className = "gamerIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "47";
-    }
-    var current = levelUp.value;
-    var remove = 1;
-    var math = current.innerHTML - remove;
-    reset();
-  }
-}
-
-const dreams = [];
-
-// define variables that reference elements on our page
-const dreamsForm = document.forms[0];
-const dreamInput = dreamsForm.elements["dream"];
-const dreamsList = document.getElementById("dreams");
-const clearButton = document.querySelector("#clear-dreams");
-const myWallet = document.getElementById("mywallet");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -160,8 +97,8 @@ dreamsForm.onsubmit = (event) => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
-  dreams.push(dreamInput.value + " :Loged In");
-  appendNewDream(dreamInput.value + " :Loged In");
+  dreams.push(dreamInput.value);
+  appendNewDream(dreamInput.value);
 
   // reset form
   myWallet.id = dreamInput.value;
@@ -183,11 +120,9 @@ clearButton.addEventListener("click", (event) => {
 function claimUpdate() {
   if (dreamInput.value == "") {
     alert("Login To Earn Rewards");
-    otherSound();
   } else {
     if (minutesLabel.innerHTML == "00") {
       alert("You Need A Full Token To Claim Rewards");
-      oopsSound();
     } else {
       var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
 
@@ -211,9 +146,7 @@ function claimUpdate() {
         dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
       );
 
-      levelUp();
       reset();
-      rewardSound();
     }
   }
 }

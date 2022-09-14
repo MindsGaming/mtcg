@@ -4,6 +4,64 @@ const games = document.getElementById("GAMES");
 const login = document.getElementById("LOGIN");
 const loginform = document.getElementById("login-form");
 
+changeToken();
+
+function changeToken() {
+  var oldToken = dreamToken.innerHTML;
+
+  var extralist = ["DragonToken", "DarkMark", "ECLIPSE", "DooBetter", "GTPC"];
+  var newTokens = [
+    "DarkMark",
+    "DragonToken",
+    "ECLIPSE",
+    "DooBetter",
+    "GTPC",
+    "GAMER",
+    extralist,
+  ];
+  const newtoken = newTokens[Math.floor(Math.random() * newTokens.length)];
+  dreamToken.innerHTML = newtoken;
+
+  if (newtoken == oldToken) {
+    changeToken();
+  } else {
+    var levelUp = document.getElementById("levelUp");
+
+    if (newtoken == "DragonToken") {
+      dreamToken.className = "dragontokenIMG";
+      dreamToken.title = newtoken;
+      levelUp.value = "6";
+    }
+
+    if (newtoken == "ECLIPSE") {
+      dreamToken.className = "eclipseIMG";
+      dreamToken.title = newtoken;
+      levelUp.value = "15";
+    }
+
+    if (newtoken == "DooBetter") {
+      dreamToken.className = "doobetterIMG";
+      dreamToken.title = newtoken;
+      levelUp.value = "25";
+    }
+    if (newtoken == "GTPC") {
+      dreamToken.className = "gtpcIMG";
+      dreamToken.title = newtoken;
+      levelUp.value = "35";
+    }
+
+    if (newtoken == "GAMER") {
+      dreamToken.className = "gamerIMG";
+      dreamToken.title = newtoken;
+      levelUp.value = "47";
+    }
+    var current = levelUp.value;
+    var remove = 1;
+    var math = current.innerHTML - remove;
+    reset();
+  }
+}
+
 function displayTools() {
   var tools = document.getElementById("TOOLS");
   var quicktools = document.getElementById("quickTools");
