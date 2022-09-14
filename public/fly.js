@@ -11,3 +11,11 @@ function quickhub() {
   createHUB.allow = "microphone; camera; vr; speaker;";
   var CREATEHUB = document.getElementById("HUBS").appendChild(createHUB);
 }
+
+function displayTools() {
+  var tools = document.getElementById("TOOLS");
+  var quicktools = document.getElementById("quickTools");
+
+  tools.className = "display";
+  quicktools.className = "quicker";
+}
