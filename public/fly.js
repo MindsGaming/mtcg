@@ -91,11 +91,14 @@ function quickhub() {
     createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document.getElementById("HUBS").appendChild(createHUB);
   } else {
-    hubs.title = "HUBS";
-    hubs.className = "display";
-    app.title = "HUBS";
-    login.className = "hide";
-    login.title = "closed";
+    if (hubs.title == "closed") {
+      hubs.title = "HUBS";
+      hubs.className = "display";
+      app.title = "HUBS";
+      app.className = "hide";
+      login.className = "hide";
+      login.title = "closed";
+    }
   }
 
   if (hubs.innerHTML == "") {
@@ -114,7 +117,7 @@ function HOME() {
     }
   } else {
     if (hubs.title == "HUBS") {
-      hubs.title = "HUBS";
+      hubs.title = "closed";
       hubs.className = "hide";
       app.title = "HOME";
       app.className = "display";
