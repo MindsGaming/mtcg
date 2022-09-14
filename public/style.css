@@ -35,6 +35,25 @@ tool {
   margin-left: 5px;
 }
 
+article {
+  position: relative;
+  display: block;
+  margin-bottom: .5rem;
+  margin-top: 5rem;
+  padding 2px;
+  border-style: groove;
+  border-radius: 25px 25px 25px 25px;
+  width: 80%; 
+}
+
+button {
+  
+}
+
+.white {
+  color: white
+}
+
 .quick {
   position: fixed;
   display: block;

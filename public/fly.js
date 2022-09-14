@@ -53,6 +53,7 @@ function HOME() {
       hubs.title = "HUBS";
       hubs.className = "hide";
       app.title = "HOME";
+      app.className = "display";
     }
   }
 }
