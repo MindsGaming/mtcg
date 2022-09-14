@@ -121,6 +121,7 @@ dreamsForm.onsubmit = (event) => {
   var loginform = document.getElementById("login-form");
   myWallet.innerHTML = dreamInput.value;
   loginform.className = "hide";
+  selectToken();
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -225,8 +226,6 @@ function levelUp() {
   }
 }
 
-
-
 function selectToken() {
   var tokens = ["Darkmark"];
   const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
@@ -236,15 +235,4 @@ function selectToken() {
   dreamToken.title = "DarkMark";
   dreamToken.className = "darkmarkIMG";
   dreamToken.innerHTML = newtoken;
-}
-
-const checkrely = document.getElementById("myWallet");
-relyME();
-
-function relyME() {
-  if (checkrely.title == "userWallet") {
-  } else {
-    var mywallet = document.getElementById("myWallet");
-    mywallet.innerHTML = checkrely.innerHTML;
-  }
 }
