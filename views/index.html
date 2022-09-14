@@ -28,7 +28,8 @@
     <link rel="stylesheet" href="/games/style.css" defer />
   </head>
   <body>
-    <wrap>
+    <div class="hide" id="HUBS"></div>
+    <wrap class="" id="WRAP">
       <header>
         <div class="info">
           <h1 id="icon">MTCG</h1>
@@ -37,16 +38,23 @@
 
       <div id="quickTool" class="quick">
         <tool>
-        <div id="home" class="home"></div>
+          <a href="/" target="_self">
+            <div id="home" class="home" title="HOME"></div
+          ></a>
         </tool>
-         <tool>
-        <div id="hub" class="browser"></div>
+        <tool>
+          <div
+            onclick="quickhub();"
+            id="hub"
+            class="browser"
+            title="HUBS"
+          ></div>
         </tool>
-         <tool>
-        <div id="games" class="gamepad"></div>
+        <tool>
+          <div id="games" class="gamepad" title="GAMES"></div>
         </tool>
-         <tool>
-        <div id="wallet" class="lightning"></div>
+        <tool>
+          <div id="wallet" class="lightning" title="REWARDS"></div>
         </tool>
       </div>
     </wrap>
