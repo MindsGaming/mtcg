@@ -72,7 +72,7 @@
         </tool>
       </div>
 
-      <div class="hide" id="HUBS" title="closed"></div>
+      <div class="hide" id="HUBS" title="build"></div>
       <div class="hide" id="LOGIN" title="closed">
         <center>
           <h1 class="rewards-intro">
@@ -87,7 +87,6 @@
                 type="text"
                 maxlength="100"
                 placeholder="Wallet ID"
-                
                 title="Wallet IDs Are 43 Characters"
               />
               <br />
@@ -105,7 +104,17 @@
             </div>
 
             <button class="hide" id="clear-dreams">Clear Dreams</button>
-            <section title="closed" id="pendingClaims" class="hide">
+            <section title="closed" id="pendingClaims" class="">
+              Pending
+              <hr />
+
+              <center>
+                <label id="minutes" value="0">00</label>.<label
+                  id="seconds"
+                  value="0"
+                  >00</label
+                >
+              </center>
               <ul id="dreams"></ul>
             </section>
           </article>

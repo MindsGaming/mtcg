@@ -132,28 +132,7 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value + " :Loged In");
 
   // reset form
-  alert(
-    "You're Loged In! Do Not Close Or Refresh This Page Or You May Lose Your Rewards"
-  );
-  var hubs = document.getElementById("hubs");
-  var login = document.getElementById("login");
-  login.className = "hide";
-  hubs.title = "HUBS";
-  hubs.className = "SuperSplash";
-  var games = document.getElementById("games");
-  games.className = "hide";
-  games.title = "CLOSED";
-  var createHUB = document.createElement("iframe");
-  createHUB.src =
-    "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
-  createHUB.className = "SuperSplash";
-  createHUB.allow = "microphone; camera; vr; speaker;";
-  var CREATEHUB = document.getElementById("hubs").appendChild(createHUB);
-  var classic = document.getElementById("classicMode");
-  var VR = document.getElementById("vrMode");
 
-  classic.className = "downarrow";
-  VR.className = "downarrowG";
   walletChange();
 };
 

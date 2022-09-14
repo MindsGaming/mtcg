@@ -1,8 +1,11 @@
-function quickhub() {
-  var hubs = document.getElementById("HUBS");
-  var app = document.getElementById("APP");
+const hubs = document.getElementById("HUBS");
+const app = document.getElementById("APP");
+const 
+  var login = document.getElementById("LOGIN");
 
-  if (hubs.title == "closed") {
+
+function quickhub() {
+  if (hubs.title == "build") {
     app.className = "hide";
     hubs.title = "HUBS";
     hubs.className = "wrap";
@@ -38,9 +41,6 @@ function displayTools() {
 }
 
 function HOME() {
-  var app = document.getElementById("APP");
-  var hubs = document.getElementById("HUBS");
-
   if (app.title == "HOME") {
     let text;
     if (confirm("Are You Sure You Want To Refresh The Home Page?") == true) {
@@ -55,6 +55,12 @@ function HOME() {
       app.title = "HOME";
       app.className = "display";
     }
+    if (app.title == "REWARDS") {
+      hubs.title = "closed";
+      hubs.className = "hide";
+      app.title = "HOME";
+      app.className = "display";
+    }
   }
 }
 
@@ -64,11 +70,13 @@ function justexplore() {
 }
 
 function userview() {
-  var hubs = document.getElementById("HUBS");
-  var app = document.getElementById("APP");
-  hubs.className = "hide";
-  app.className = "hide";
-
-  var login = document.getElementById("LOGIN");
-  login.className = "display";
+  if (login.title == "closed") {
+    hubs.className = "hide";
+    hubs.title = "closed";
+    hubs.className = "hide";
+    app.title = "REWARDS";
+    app.className = "hide";
+    login.className = "display";
+    login.title = "REWARDS";
+  }
 }
