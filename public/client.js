@@ -27,7 +27,7 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
-var myWallet = document.getElementById("myWallet");
+const myWallet = document.getElementById("mywallet");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -71,7 +71,8 @@ dreamsForm.onsubmit = (event) => {
   myWallet.id = dreamInput.value;
   myWallet.innerHTML = dreamInput.value;
   myWallet.title = dreamInput.value;
-  alert("DONE");
+  var loginform = document.getElementById("login-form");
+  loginform.className = "hide";
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -82,3 +83,55 @@ clearButton.addEventListener("click", (event) => {
     });
   dreamsList.innerHTML = "";
 });
+
+
+function claimUpdate() {
+  if (dreamInput.value == "") {
+    alert("Login To Earn Rewards");
+    otherSound();
+  } else {
+    if (minutesLabel.innerHTML == "00") {
+      alert("You Need A Full Token To Claim Rewards");
+      oopsSound();
+    } else {
+      var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+
+      const data = {
+        dream:
+          dreamInput.value +
+          " " +
+          version.innerHTML +
+          dreamToken.innerHTML +
+          ":" +
+          REWARDS,
+      };
+      fetch("/addDream", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          console.log(JSON.stringify(response));
+        });
+      // get dream value and add it to the list
+      dreams.push(
+        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
+      );
+      appendNewDream(
+        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
+      );
+
+      levelUp();
+      reset();
+      rewardSound();
+    }
+  }
+}
+
+function reset() {
+  var zero = "00";
+  document.getElementById("minutes").innerHTML = zero;
+  document.getElementById("seconds").innerHTML = zero;
+  totalSeconds = "0";
+}

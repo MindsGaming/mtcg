@@ -2,6 +2,24 @@ const hubs = document.getElementById("HUBS");
 const app = document.getElementById("APP");
 const games = document.getElementById("GAMES");
 const login = document.getElementById("LOGIN");
+const loginform = document.getElementById("login-form");
+
+function displayTools() {
+  var tools = document.getElementById("TOOLS");
+  var quicktools = document.getElementById("quickTools");
+
+  if (tools.title == "TOOLS") {
+    tools.className = "hide";
+    quicktools.className = "quick";
+    tools.title = "tools";
+  } else {
+    if (tools.title == "tools") {
+      tools.className = "display";
+      quicktools.className = "quicker";
+      tools.title = "TOOLS";
+    }
+  }
+}
 
 function quickhub() {
   if (hubs.title == "build") {
@@ -20,23 +38,7 @@ function quickhub() {
     hubs.className = "display";
     app.title = "HUBS";
     login.className = "hide";
-  }
-}
-
-function displayTools() {
-  var tools = document.getElementById("TOOLS");
-  var quicktools = document.getElementById("quickTools");
-
-  if (tools.title == "TOOLS") {
-    tools.className = "hide";
-    quicktools.className = "quick";
-    tools.title = "tools";
-  } else {
-    if (tools.title == "tools") {
-      tools.className = "display";
-      quicktools.className = "quicker";
-      tools.title = "TOOLS";
-    }
+    login.title = "closed";
   }
 }
 
@@ -75,15 +77,12 @@ function userview() {
   if (login.title == "closed") {
     hubs.className = "hide";
     hubs.title = "closed";
-    hubs.className = "hide";
     app.title = "REWARDS";
     app.className = "hide";
     login.className = "display";
     login.title = "REWARDS";
   }
 
-  var myWallet = document.getElementById("myWallet");
-  var loginform = document.getElementById("login-form");
   if (myWallet.innerHTML == "LOGIN") {
   } else {
     loginform.className = "hide";
