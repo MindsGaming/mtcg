@@ -57,3 +57,8 @@ function HOME() {
     }
   }
 }
+
+function justexplore() {
+  displayTools();
+  quickhub();
+}
