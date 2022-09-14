@@ -16,6 +16,15 @@ function displayTools() {
   var tools = document.getElementById("TOOLS");
   var quicktools = document.getElementById("quickTools");
 
-  tools.className = "display";
-  quicktools.className = "quicker";
+  if (tools.title == "TOOLS") {
+    tools.className = "display";
+    quicktools.className = "quicker";
+    tools.title = "tools";
+  } else {
+    if (tools.title == "tools") {
+      tools.className = "hide";
+      quicktools.className = "quick";
+      tools.title = "TOOLS";
+    }
+  }
 }
