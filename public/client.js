@@ -1,3 +1,70 @@
+/// Client & Timer
+
+console.log("Welcome To #MindsGaming Blockchain Rewards");
+const minutesLabel = document.getElementById("minutes");
+const secondsLabel = document.getElementById("seconds");
+var superToken = document.getElementById("myToken");
+var dreamToken = document.getElementById("myToken");
+var dreamWallet = document.getElementById("myWallet");
+
+var totalSeconds = 0;
+setInterval(setTime, 50);
+
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+
+  var levelups = document.getElementById("levelUp");
+
+  if (minutesLabel.innerHTML == "11") {
+    if (secondsLabel.innerHTML == "01") {
+      levelups.value = "10";
+    }
+  }
+  if (minutesLabel.innerHTML == "21") {
+    if (secondsLabel.innerHTML == "01") {
+      levelups.value = "20";
+    }
+  }
+  if (minutesLabel.innerHTML == "31") {
+    if (secondsLabel.innerHTML == "01") {
+      levelups.value = "30";
+    }
+  }
+  if (minutesLabel.innerHTML == "41") {
+    if (secondsLabel.innerHTML == "01") {
+      levelups.value = "40";
+    }
+  }
+  if (minutesLabel.innerHTML == "51") {
+    if (secondsLabel.innerHTML == "01") {
+      levelups.value = "50";
+    }
+  }
+
+  if (minutesLabel.innerHTML == "61") {
+    if (secondsLabel.innerHTML == "01") {
+      levelups.value = "60";
+    }
+  }
+
+  if (minutesLabel.innerHTML == "71") {
+    alert("You Maxed Out Rewards, Are You Still Active?");
+    claimUpdate();
+    if (secondsLabel.innerHTML == "01") {
+    }
+  }
+}
+
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
 
 const dreams = [];
 
@@ -6,7 +73,7 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
-const myWallet = document.getElementById("myWallet");
+const myWallet = document.getElementById("mywallet");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -30,7 +97,7 @@ dreamsForm.onsubmit = (event) => {
   event.preventDefault();
 
   const data = {
-    dream: dreamInput.value
+    dream: dreamInput.value,
   };
 
   fetch("/addDream", {
@@ -47,8 +114,9 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value);
 
   // reset form
-  myWallet.innerHTML = dreamInput.innerHTM
- 
+  var loginform = document.getElementById("login-form");
+  myWallet.innerHTML = dreamInput.value;
+  loginform.className = "hide";
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -59,3 +127,54 @@ clearButton.addEventListener("click", (event) => {
     });
   dreamsList.innerHTML = "";
 });
+
+// Claim
+
+function claimUpdate() {
+  if (dreamInput.value == "") {
+    alert("Login To Earn Rewards");
+    otherSound();
+  } else {
+    if (minutesLabel.innerHTML == "00") {
+      alert("You Need A Full Token To Claim Rewards");
+      oopsSound();
+    } else {
+      var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+
+      const data = {
+        dream:
+          dreamInput.value +
+          " " +
+          version.innerHTML +
+          dreamToken.innerHTML +
+          ":" +
+          REWARDS,
+      };
+      fetch("/addDream", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          console.log(JSON.stringify(response));
+        });
+      // get dream value and add it to the list
+      dreams.push(
+        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
+      );
+      appendNewDream(
+        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
+      );
+
+      reset();
+    }
+  }
+}
+
+function reset() {
+  var zero = "00";
+  document.getElementById("minutes").innerHTML = zero;
+  document.getElementById("seconds").innerHTML = zero;
+  totalSeconds = "0";
+}
