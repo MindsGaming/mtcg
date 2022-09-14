@@ -84,10 +84,14 @@ fetch("/getDreams", {})
     });
   });
 
+var levelups = document.getElementById("levelUp");
+levelups.title = dreamInput.value;
+
 // a helper function that creates a list item for a given dream
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   newListItem.innerText = dream;
+  newListItem.id = levelups.title;
   dreamsList.appendChild(newListItem);
 };
 
@@ -115,8 +119,6 @@ dreamsForm.onsubmit = (event) => {
 
   // reset form
   var loginform = document.getElementById("login-form");
-  var levelups = document.getElementById("levelUp");
-  levelups.title = dreamInput.value;
   myWallet.innerHTML = dreamInput.value;
   loginform.className = "hide";
   dreamInput.value = "";
@@ -128,7 +130,6 @@ clearButton.addEventListener("click", (event) => {
     .then((response) => {
       console.log("cleared dreams");
     });
-  dreamsList.innerHTML = "";
 });
 
 // Claim
@@ -136,7 +137,7 @@ clearButton.addEventListener("click", (event) => {
 function claimUpdate() {
   var levelups = document.getElementById("levelUp");
 
-  if (levelups.TITLE == "LOGIN") {
+  if (levelups.title == "LOGIN") {
     alert("Login To Earn Rewards");
   } else {
     if (minutesLabel.innerHTML == "00") {
@@ -145,7 +146,7 @@ function claimUpdate() {
       var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
 
       const data = {
-        dream: dreamInput.value + dreamToken.innerHTML + ":" + REWARDS,
+        dream: levelups.title + dreamToken.innerHTML + ":" + REWARDS,
       };
       fetch("/addDream", {
         method: "POST",
@@ -157,11 +158,9 @@ function claimUpdate() {
           console.log(JSON.stringify(response));
         });
       // get dream value and add it to the list
-      dreams.push(
-        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
-      );
+      dreams.push(levelups.title + " " + dreamToken.innerHTML + ":" + REWARDS);
       appendNewDream(
-        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
+        levelups.title + " " + dreamToken.innerHTML + ":" + REWARDS
       );
 
       reset();

@@ -4,7 +4,6 @@ const games = document.getElementById("GAMES");
 const login = document.getElementById("LOGIN");
 const loginform = document.getElementById("login-form");
 
-
 changeToken();
 
 function changeToken() {
@@ -18,7 +17,6 @@ function changeToken() {
     "DooBetter",
     "GTPC",
     "GAMER",
-    extralist,
   ];
   const newtoken = newTokens[Math.floor(Math.random() * newTokens.length)];
   dreamToken.innerHTML = newtoken;
