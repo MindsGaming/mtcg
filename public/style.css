@@ -59,8 +59,8 @@ tool {
   top: 0;
   right: 0;
   margin: 3px;
-  width: 30%;
-  height: 45px;
+  width: 15rem;
+  height: 36px;
   border-style: groove;
   border-radius: 20px 0px 00px 20px;
   background-color: blue;
@@ -70,23 +70,36 @@ tool {
 
 .home {
   position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+}
+.gamepad {
+  position: relative;
+  width: 30px;
+  height: 30px;
   margin: 3px;
 }
 
 .lightning {
   position: relative;
+  width: 30px;
+  height: 30px;
   margin: 3px;
 }
 
 .browser {
   position: relative;
+  width: 30px;
+  height: 30px;
   margin: 3px;
 }
 
 .grid {
   position: relative;
+  width: 30px;
+  height: 30px;
   margin: 3px;
-  border-radius: 50%;
 }
 .hide {
   display: none;
