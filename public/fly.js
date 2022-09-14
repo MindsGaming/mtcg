@@ -82,4 +82,9 @@ function userview() {
     login.className = "display";
     login.title = "REWARDS";
   }
+
+  if (myWallet.innerHTML == "LOGIN") {
+  } else {
+    loginform.className = "hide";
+  }
 }
