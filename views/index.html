@@ -38,7 +38,7 @@
             </p>
 
             <button onclick="justexplore();">Just Explore</button>
-            <button onclick="quickhub();">Earn Rewards</button>
+            <button onclick="checklogin();">Earn Rewards</button>
           </article>
         </center>
       </app>
@@ -74,27 +74,41 @@
 
       <div class="hide" id="HUBS" title="closed"></div>
       <div class="hide" id="LOGIN" title="closed">
-        <h1>
-          <label id="rewards-intro">
-          Just copy and paste your metamask or web wallet receiver address 
-          </label>
-        </h1>
-        
         <center>
-        <form class="form" id="wallet">
-          <input
-            name="dream"
-            aria-label="a new dream"
-            type="text"
-            maxlength="100"
-            placeholder="Wallet ID"
-            pattern=".{42,43}"
-            required
-            title="Wallet IDs Are 43 Characters"
-          />
-          <br />
-          <button type="submit" id="submit-dream">Login</button>
-        </form>
+          <h1 class="rewards-intro">
+            <label id="rewards-intro">
+              Just copy and paste your metamask or web wallet receiver address
+              to start earning rewards!
+            </label>
+            <form class="form" id="wallet">
+              <input
+                name="dream"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                placeholder="Wallet ID"
+                
+                title="Wallet IDs Are 43 Characters"
+              />
+              <br />
+              <button type="submit" id="submit-dream">Login</button>
+            </form>
+          </h1>
+          <article class="white">
+            <div>
+              Wallet:
+              <label id="myWallet" style="cursor: pointer">LOGIN</label>
+            </div>
+            <div>
+              Reward Token:
+              <label id="myToken" onclick="changeToken();">Random</label>
+            </div>
+
+            <button class="hide" id="clear-dreams">Clear Dreams</button>
+            <section title="closed" id="pendingClaims" class="hide">
+              <ul id="dreams"></ul>
+            </section>
+          </article>
         </center>
       </div>
     </wrap>
