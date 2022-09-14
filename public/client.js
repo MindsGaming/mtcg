@@ -1,3 +1,4 @@
+
 const dreams = [];
 
 // define variables that reference elements on our page
@@ -5,62 +6,7 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
-const myWallet = document.getElemntById("myWallet");
-const secondsLabel = document.getElementById("seconds");
-const minutesLabel = document.getElementById("minutes");
-const dreamToken = document.getElementById("myToken");
-const myToken = dreamToken.innerHTML;
-
-var totalSeconds = 0;
-setInterval(setTime, 6000);
-
-function setTime() {
-  ++totalSeconds;
-  secondsLabel.innerHTML = pad(totalSeconds % 60);
-  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-
-  var levelups = document.getElementById("levelUp");
-
-  if (minutesLabel.innerHTML == "11") {
-    if (secondsLabel.innerHTML == "01") {
-      levelups.value = "10";
-    }
-  }
-  if (minutesLabel.innerHTML == "21") {
-    if (secondsLabel.innerHTML == "01") {
-      levelups.value = "20";
-    }
-  }
-  if (minutesLabel.innerHTML == "31") {
-    if (secondsLabel.innerHTML == "01") {
-      levelups.value = "30";
-    }
-  }
-  if (minutesLabel.innerHTML == "41") {
-    if (secondsLabel.innerHTML == "01") {
-      levelups.value = "40";
-    }
-  }
-  if (minutesLabel.innerHTML == "51") {
-    if (secondsLabel.innerHTML == "01") {
-      levelups.value = "50";
-    }
-  }
-
-  if (minutesLabel.innerHTML == "61") {
-    if (secondsLabel.innerHTML == "01") {
-      levelups.value = "60";
-    }
-  }
-}
-function pad(val) {
-  var valString = val + "";
-  if (valString.length < 2) {
-    return "0" + valString;
-  } else {
-    return valString;
-  }
-}
+const myWallet = document.getElementById("myWallet");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -84,7 +30,7 @@ dreamsForm.onsubmit = (event) => {
   event.preventDefault();
 
   const data = {
-    dream: dreamInput.value,
+    dream: dreamInput.value
   };
 
   fetch("/addDream", {
@@ -101,11 +47,8 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value);
 
   // reset form
-  myWallet.id = dreamInput.value;
-  myWallet.innerHTML = dreamInput.value;
-  myWallet.title = dreamInput.value;
-  var loginform = document.getElementById("login-form");
-  loginform.className = "hide";
+  myWallet.innerHTML = dreamInput.innerHTM
+ 
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -116,44 +59,3 @@ clearButton.addEventListener("click", (event) => {
     });
   dreamsList.innerHTML = "";
 });
-
-function claimUpdate() {
-  if (dreamInput.value == "") {
-    alert("Login To Earn Rewards");
-  } else {
-    if (minutesLabel.innerHTML == "00") {
-      alert("You Need A Full Token To Claim Rewards");
-    } else {
-      var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
-
-      const data = {
-        dream: dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS,
-      };
-      fetch("/addDream", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" },
-      })
-        .then((res) => res.json())
-        .then((response) => {
-          console.log(JSON.stringify(response));
-        });
-      // get dream value and add it to the list
-      dreams.push(
-        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
-      );
-      appendNewDream(
-        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
-      );
-
-      reset();
-    }
-  }
-}
-
-function reset() {
-  var zero = "00";
-  document.getElementById("minutes").innerHTML = zero;
-  document.getElementById("seconds").innerHTML = zero;
-  totalSeconds = "0";
-}
