@@ -1,5 +1,6 @@
 const secondsLabel = document.getElementById("seconds");
 const minutesLabel = document.getElementById("minutes");
+const dreamToken = document.getElementById("myToken");
 var totalSeconds = 0;
 setInterval(setTime, 6000);
 
@@ -17,6 +18,65 @@ function pad(val) {
     return "0" + valString;
   } else {
     return valString;
+  }
+}
+
+changeToken();
+
+function changeToken() {
+  var oldToken = dreamToken.innerHTML;
+
+  var extralist = ["DragonToken", "DarkMark", "ECLIPSE", "DooBetter", "GTPC"];
+  var newTokens = [
+    "DarkMark",
+    "DragonToken",
+    "ECLIPSE",
+    "DooBetter",
+    "GTPC",
+    "GAMER",
+    extralist,
+  ];
+  const newtoken = newTokens[Math.floor(Math.random() * newTokens.length)];
+  dreamToken.innerHTML = newtoken;
+
+  if (newtoken == oldToken) {
+    changeToken();
+  } else {
+    if (confirm("Burn Current Rewards And Toggle Token?") == true) {
+      var levelUp = document.getElementById("levelUp");
+
+      if (newtoken == "DragonToken") {
+        dreamToken.className = "dragontokenIMG";
+        dreamToken.title = newtoken;
+        levelUp.value = "6";
+      }
+
+      if (newtoken == "ECLIPSE") {
+        dreamToken.className = "eclipseIMG";
+        dreamToken.title = newtoken;
+        levelUp.value = "15";
+      }
+
+      if (newtoken == "DooBetter") {
+        dreamToken.className = "doobetterIMG";
+        dreamToken.title = newtoken;
+        levelUp.value = "25";
+      }
+      if (newtoken == "GTPC") {
+        dreamToken.className = "gtpcIMG";
+        dreamToken.title = newtoken;
+        levelUp.value = "35";
+      }
+
+      if (newtoken == "GAMER") {
+        dreamToken.className = "gamerIMG";
+        dreamToken.title = newtoken;
+        levelUp.value = "47";
+      }
+      var remove = 1;
+      var math = current.innerHTML - remove;
+      reset();
+    }
   }
 }
 
@@ -84,7 +144,6 @@ clearButton.addEventListener("click", (event) => {
   dreamsList.innerHTML = "";
 });
 
-
 function claimUpdate() {
   if (dreamInput.value == "") {
     alert("Login To Earn Rewards");
@@ -97,13 +156,7 @@ function claimUpdate() {
       var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
 
       const data = {
-        dream:
-          dreamInput.value +
-          " " +
-          version.innerHTML +
-          dreamToken.innerHTML +
-          ":" +
-          REWARDS,
+        dream: dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS,
       };
       fetch("/addDream", {
         method: "POST",
