@@ -35,15 +35,23 @@ tool {
 }
 
 .quick {
+  position: fixed;
   display: block;
-  width: 30%;
+  top: 0;
+  right: 0;
+  margin-top: 3px;
+  width: 80px;
   height: 50px;
   border-style: groove;
-  margin-left: 30%;
-  margin-bottom: -3%;
-  margin-top: 45%;
-  border-radius: 25px 25px 25px 25px;
-  border-color: black;
+  border-radius: 15px 1px 30px 30px;
+}
+
+.quicker {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 3px;
+  width: 30%;
 }
 
 .home {

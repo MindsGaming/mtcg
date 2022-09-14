@@ -28,36 +28,34 @@
     <link rel="stylesheet" href="/games/style.css" defer />
   </head>
   <body>
-    <div class="hide" id="HUBS"></div>
-    <wrap class="" id="WRAP">
-      <header>
-        <div class="info">
-          <h1 id="icon">MTCG</h1>
-        </div>
-      </header>
+    <wrap>
+      <div class="hide" id="HUBS"></div>
 
+      <app id="APP"></app>
       <div id="quickTool" class="quick">
-        <tool>
-          <a href="/" target="_self">
-            <div id="home" class="home" title="HOME"></div
-          ></a>
-        </tool>
-        <tool>
-          <div
-            onclick="quickhub();"
-            id="hub"
-            class="browser"
-            title="Hang-Out"
-          ></div>
-        </tool>
-        <tool>
-          <div id="games" class="gamepad" title="Games"></div>
-        </tool>
-        <tool>
-          <div id="wallet" class="lightning" title="Rewards"></div>
-        </tool>
-        <tool>
-          <div id="collection" class="grid" title="Collection"></div>
+        <tool class="hide" id="TOOLS">
+          <tool>
+            <a href="/" target="_self">
+              <div id="home" class="home" title="HOME"></div
+            ></a>
+          </tool>
+          <tool>
+            <div
+              onclick="quickhub();"
+              id="hub"
+              class="browser"
+              title="Hang-Out"
+            ></div>
+          </tool>
+          <tool>
+            <div id="games" class="gamepad" title="Games"></div>
+          </tool>
+          <tool>
+            <div id="wallet" class="lightning" title="Rewards"></div>
+          </tool>
+          <tool>
+            <div id="collection" class="grid" title="Collection"></div>
+          </tool>
         </tool>
       </div>
     </wrap>

@@ -1,6 +1,6 @@
 function quickhub() {
   var hubs = document.getElementById("HUBS");
-  var wrap = document.getElementById("WRAP");
+  var wrap = document.getElementById("APP");
   wrap.className = "hide";
   hubs.title = "HUBS";
   hubs.className = "wrap";
