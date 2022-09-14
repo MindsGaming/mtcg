@@ -69,7 +69,7 @@ button:hover {
 }
 
 .quick {
-  position: fixed;
+  position: absolute;
   display: block;
   top: 0;
   right: 0;
@@ -87,7 +87,7 @@ button:hover {
 }
 
 .quicker {
-  position: fixed;
+  position: absolute;
   display: block;
   top: 0;
   right: 0;
