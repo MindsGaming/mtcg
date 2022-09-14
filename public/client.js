@@ -91,7 +91,7 @@ levelups.title = dreamInput.value;
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   newListItem.innerText = dream;
-  newListItem.id = levelups.title;
+  newListItem.id = dreamInput.value;
   dreamsList.appendChild(newListItem);
 };
 
@@ -121,7 +121,6 @@ dreamsForm.onsubmit = (event) => {
   var loginform = document.getElementById("login-form");
   myWallet.innerHTML = dreamInput.value;
   loginform.className = "hide";
-  dreamInput.value = "";
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -135,9 +134,10 @@ clearButton.addEventListener("click", (event) => {
 // Claim
 
 function claimUpdate() {
-  var levelups = document.getElementById("levelUp");
+  var confirm = document.getElementById("confirmUSER");
+  confirm == levelups.title;
 
-  if (levelups.title == "LOGIN") {
+  if (confirm == "LOGIN") {
     alert("Login To Earn Rewards");
   } else {
     if (minutesLabel.innerHTML == "00") {
@@ -146,7 +146,7 @@ function claimUpdate() {
       var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
 
       const data = {
-        dream: levelups.title + dreamToken.innerHTML + ":" + REWARDS,
+        dream: dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS,
       };
       fetch("/addDream", {
         method: "POST",
@@ -158,9 +158,11 @@ function claimUpdate() {
           console.log(JSON.stringify(response));
         });
       // get dream value and add it to the list
-      dreams.push(levelups.title + " " + dreamToken.innerHTML + ":" + REWARDS);
+      dreams.push(
+        dreamInput.value + "  " + dreamToken.innerHTML + ":" + REWARDS
+      );
       appendNewDream(
-        levelups.title + " " + dreamToken.innerHTML + ":" + REWARDS
+        dreamInput.value + "  " + dreamToken.innerHTML + ":" + REWARDS
       );
 
       reset();

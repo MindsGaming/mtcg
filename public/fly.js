@@ -140,7 +140,7 @@ function userview() {
     login.title = "REWARDS";
   }
 
-  if (myWallet.innerHTML == "LOGIN") {
+  if (dreamInput.value == "") {
   } else {
     loginform.className = "hide";
   }
