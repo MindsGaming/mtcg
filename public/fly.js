@@ -62,3 +62,13 @@ function justexplore() {
   displayTools();
   quickhub();
 }
+
+function userview() {
+  var hubs = document.getElementById("HUBS");
+  var app = document.getElementById("APP");
+  hubs.className = "hide";
+  app.className = "hide";
+
+  var login = document.getElementById("LOGIN");
+  login.className = "display";
+}

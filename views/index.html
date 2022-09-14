@@ -59,7 +59,12 @@
             <div id="games" class="gamepad" title="Games"></div>
           </tool>
           <tool>
-            <div id="wallet" class="lightning" title="Rewards"></div>
+            <div
+              onclick="userview();"
+              id="userview"
+              class="lightning"
+              title="Rewards"
+            ></div>
           </tool>
           <tool>
             <div id="collection" class="grid" title="Collection"></div>
@@ -68,6 +73,30 @@
       </div>
 
       <div class="hide" id="HUBS" title="closed"></div>
+      <div class="hide" id="LOGIN" title="closed">
+        <h1>
+          <label id="rewards-intro">
+          Just copy and paste your metamask or web wallet receiver address 
+          </label>
+        </h1>
+        
+        <center>
+        <form class="form" id="wallet">
+          <input
+            name="dream"
+            aria-label="a new dream"
+            type="text"
+            maxlength="100"
+            placeholder="Wallet ID"
+            pattern=".{42,43}"
+            required
+            title="Wallet IDs Are 43 Characters"
+          />
+          <br />
+          <button type="submit" id="submit-dream">Login</button>
+        </form>
+        </center>
+      </div>
     </wrap>
   </body>
 </html>
