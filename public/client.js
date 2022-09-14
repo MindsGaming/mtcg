@@ -138,6 +138,7 @@ fetch("/getDreams", {})
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   newListItem.innerText = dream;
+  newListItem.id = dream;
   dreamsList.appendChild(newListItem);
 };
 
@@ -179,48 +180,3 @@ clearButton.addEventListener("click", (event) => {
     });
   dreamsList.innerHTML = "";
 });
-
-function claimUpdate() {
-  if (dreamInput.value == "") {
-    alert("Login To Earn Rewards");
-    otherSound();
-  } else {
-    if (minutesLabel.innerHTML == "00") {
-      alert("You Need A Full Token To Claim Rewards");
-      oopsSound();
-    } else {
-      var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
-
-      const data = {
-        dream: dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS,
-      };
-      fetch("/addDream", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" },
-      })
-        .then((res) => res.json())
-        .then((response) => {
-          console.log(JSON.stringify(response));
-        });
-      // get dream value and add it to the list
-      dreams.push(
-        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
-      );
-      appendNewDream(
-        dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS
-      );
-
-      levelUp();
-      reset();
-      rewardSound();
-    }
-  }
-}
-
-function reset() {
-  var zero = "00";
-  document.getElementById("minutes").innerHTML = zero;
-  document.getElementById("seconds").innerHTML = zero;
-  totalSeconds = "0";
-}
