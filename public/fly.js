@@ -148,5 +148,7 @@ function userview() {
   if (dreamInput.value == "") {
   } else {
     loginform.className = "hide";
+    myWallet.innerHTML = dreamInput.value;
+    myWallet.title = dreamInput.value;
   }
 }
