@@ -14,7 +14,9 @@ function quickhub() {
     createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document.getElementById("HUBS").appendChild(createHUB);
   } else {
-    
+    hubs.title = "HUBS";
+    hubs.className = "display";
+    app.title = "HUBS";
   }
 }
 
