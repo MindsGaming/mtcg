@@ -50,23 +50,23 @@ function setTime() {
   }
 
   if (minutesLabel.innerHTML == "71") {
+    if (secondsLabel.innerHTML == "01") {
+      if (dreamInput.value == "") {
+        let text;
+        if (confirm("Reaching Max Rewards, Login And Claim Them!") == true) {
+          userview();
+        } else {
+          text = "You canceled!";
+        }
+      }
+    }
+  }
+  if (minutesLabel.innerHTML == "100") {
     if (dreamInput.value == "") {
-      let text;
-      if (confirm("Maxed Rewards Reached, Login And Claim Them!") == true) {
-        minutesLabel.innerHTML = "65";
-        userview();
-      } else {
-        text = "You canceled!";
-      }
+      alert("MAXED REACHED, No Login Found, Refersing Page!");
+      window.open("/", "_self");
     } else {
-      let text;
-      if (confirm("Maxed Rewards Reached, Claim Rewards?") == true) {
-        claimUpdate();
-      } else {
-        text = "You canceled!";
-      }
-      if (secondsLabel.innerHTML == "01") {
-      }
+      alert("MAX");
     }
   }
 }
