@@ -69,3 +69,40 @@ function RPS() {
     var CREATEHUB = document.getElementById("rps-build").appendChild(createHUB);
   }
 }
+
+function WACK() {
+  var game = document.getElementById("wack-build");
+  var title = document.getElementById("wack-title");
+  var info = document.getElementById("wack-info");
+  var button = document.getElementById("wack-btn");
+
+  if (game.title == "closed") {
+    title.className = "white";
+    info.className = "white";
+    game.title = "OPEN";
+    button.className = "float-right";
+    game.className = "splash";
+  } else {
+    if (game.title == "OPEN") {
+      title.className = "white";
+      info.className = "white";
+      game.title = "closed";
+      button.className = "hide";
+      game.className = "hide";
+    }
+  }
+
+  if (game.title == "build") {
+    title.className = "hide";
+    info.className = "hide";
+    game.title = "OPEN";
+    button.className = "float-right";
+    game.className = "splash";
+    var createHUB = document.createElement("iframe");
+    createHUB.src = "https://wack-me.glitch.me/";
+    createHUB.className = "wrap";
+    var CREATEHUB = document
+      .getElementById("wack-build")
+      .appendChild(createHUB);
+  }
+}
