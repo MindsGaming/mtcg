@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>#MindsGaming</title>
@@ -15,192 +14,84 @@
       rel="icon"
       href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
-
-    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
-
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
-
-    <script src="/client.js" defer></script>
-    <script src="/fly.js" defer></script>
+    <script src="/tokens/metamask.js" defer></script>
+    <script src="https://mtcgverse.glitch.me/MTCGverse.js" defer></script>
+    <script src="/cards.js" defer></script>
+    <script src="/tokens/tokens.js" defer></script>
 
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/games/style.css" defer />
+    <link rel="stylesheet" href="/cards.css" defer />
+    <style>
+      .title {
+        position: relative;
+        cursor: pointer;
+        z-index: 6;
+      }
+    </style>
   </head>
   <body>
-    <html lang="en">
-      <head>
-        <title>#MindsGaming</title>
+    <wrap id="WRAP">
+      <div class="y" onclick="HOME();">X</div>
+      <div id="POP" class="hide">
+        <center id="POPtxt">
+          Please connect your Metamask.
+          <div class="x" onclick="closePOP();">X</div>
+        </center>
+      </div>
+      <div id="TOKENINFO" title="TOKENPAGE" onclick="addtokens();"></div>
+      <button class="tokenbutton" id="connect">Connect Network</button>
 
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Community & Member Groups" />
-        <meta
-          property="og:image"
-          content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
-        />
-        <link
-          rel="icon"
-          href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-        <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
-        <script src="./metamask.js" defer></script>
-        <script src="https://mtcgverse.glitch.me/MTCGverse.js" defer></script>
-        <script src="https://mtcgverse.glitch.me/cards.js" defer></script>
-        <script
-          src="https://mtcgverse.glitch.me/tokens/tokens.js"
-          defer
-        ></script>
+      <center id="tokenPAGE" title="Tokens">
+        <h1 class="title" id="A1">
+          <label onclick="goBack();">Ecosystem Tokens Information</label>
+        </h1>
+        <br />
+       <article class="white">
+        <div class="article" id="T2" onclick="GAMERinfo();">
+          <h3 class="atitle">GAMER (Token)</h3>
+          <p>GAMER Token Information</p>
+          <div class="hide" id="GAMERinfo" title="CLOSED"></div>
+        </div>
+        </article>
+        
+        <article class="white">
+        <div class="article" id="T3" onclick="ECLIPSEinfo();">
+          <h3 class="atitle">ECLIPSE (Token)</h3>
+          <p>ECLIPSE Token Information</p>
+          <div class="hide" id="ECLIPSEinfo" title="CLOSED"></div>
+        </div>
+        </article>
 
-        <link rel="stylesheet" href="https://mtcgverse.glitch.me/style.css" />
-        <link
-          rel="stylesheet"
-          href="https://mtcgverse.glitch.me/cards.css"
-          defer
-        />
-        <style>
-          .title {
-            position: relative;
-            cursor: pointer;
-            z-index: 6;
-          }
-        </style>
-      </head>
-      <body>
-        <wrap id="WRAP">
-          <div id="POP" class="hide">
-            <center id="POPtxt">
-              Metamask Connected
-              <div class="x" onclick="closePOP();">X</div>
-            </center>
-          </div>
-          <div id="TOKENINFO" title="TOKENPAGE" onclick="addtokens();"></div>
-          <button class="tokenbutton" id="connect">Connect Network</button>
+        <article class="white">
+        <div class="article" id="T4" onclick="DooBetterinfo();">
+          <h3 class="atitle">DooBetter (Token)</h3>
+          <p>DooBetter Token Information</p>
+          <div class="hide" id="DooBetterinfo" title="CLOSED"></div>
+        </div>
+        </article>
 
-          <center id="tokenPAGE" title="Tokens">
-            <h1 class="title" id="A1">
-              <label onclick="goBack();">Ecosystem Tokens Information</label>
-            </h1>
-            <br />
-            <div class="article" id="T1" onclick="MTCGinfo();">
-              <h3 class="atitle">MTCG (Token)</h3>
-              <p>MTCG Token Information</p>
-              <div class="hide" id="MTCGinfo" title="CLOSED"></div>
-            </div>
+        <div class="article" id="T5" onclick="GTPCinfo();">
+          <h3 class="atitle">GTPC (Token)</h3>
+          <p>GTPC Token Information</p>
+          <div class="hide" id="GTPCinfo" title="CLOSED"></div>
+        </div>
 
-            <div class="article" id="T2" onclick="GAMERinfo();">
-              <h3 class="atitle">GAMER (Token)</h3>
-              <p>GAMER Token Information</p>
-              <div class="hide" id="GAMERinfo" title="CLOSED"></div>
-            </div>
+        <div class="article" id="T6" onclick="DragonTokeninfo();">
+          <h3 class="atitle">DragonToken (Token)</h3>
+          <p>DragonToken Token Information</p>
+          <div class="hide" id="DragonTokeninfo" title="CLOSED"></div>
+        </div>
 
-            <div class="article" id="T3" onclick="ECLIPSEinfo();">
-              <h3 class="atitle">ECLIPSE (Token)</h3>
-              <p>ECLIPSE Token Information</p>
-              <div class="hide" id="ECLIPSEinfo" title="CLOSED"></div>
-            </div>
-
-            <div class="article" id="T4" onclick="DooBetterinfo();">
-              <h3 class="atitle">DooBetter (Token)</h3>
-              <p>DooBetter Token Information</p>
-              <div class="hide" id="DooBetterinfo" title="CLOSED"></div>
-            </div>
-
-            <div class="article" id="T5" onclick="GTPCinfo();">
-              <h3 class="atitle">GTPC (Token)</h3>
-              <p>GTPC Token Information</p>
-              <div class="hide" id="GTPCinfo" title="CLOSED"></div>
-            </div>
-
-            <div class="article" id="T6" onclick="DragonTokeninfo();">
-              <h3 class="atitle">DragonToken (Token)</h3>
-              <p>DragonToken Token Information</p>
-              <div class="hide" id="DragonTokeninfo" title="CLOSED"></div>
-            </div>
-
-            <div class="article" id="T7" onclick="DarkMarkinfo();">
-              <h3 class="atitle">DarkMark (Token)</h3>
-              <p>DarkMark Token Information</p>
-              <div class="hide" id="DarkMarkinfo" title="CLOSED"></div>
-            </div>
-          </center>
-          <label class="footer">@MindsGaming 2022</label>
-
-          <div class="rewardicon" id="rewardicon" onclick="claimUpdate();">
-            <br />
-            <br />
-
-            <center>
-              <label id="minutes" value="0">00</label>.<label
-                id="seconds"
-                value="0"
-                >00</label
-              >
-            </center>
-          </div>
-          <div
-            class="profileicon"
-            id="profileicon"
-            onclick="viewReward();"
-          ></div>
-          <div title="closed" id="REWARDS" class="hide">
-            <div
-              onclick="viewReward();"
-              style="cursor: pointer; margin-left: 90%"
-            >
-              X
-            </div>
-            <div id="help" class="helpIcon" title="Help" onclick="help();">
-              <br /><label class="version" id="version"></label>
-              <meter
-                class="hide"
-                id="levelUp"
-                min="0"
-                low="40"
-                high="90"
-                max="100"
-                value="0"
-              ></meter>
-            </div>
-            <div class="hide">Player: <label id="myName">Guest</label></div>
-            <div>
-              Wallet:
-              <label id="myWallet" onclick="getLogin();" style="cursor: pointer"
-                >LOGIN</label
-              >
-            </div>
-            <div>
-              Reward Token:
-              <label id="myToken" onclick="changeToken();">Random</label>
-            </div>
-            <div id="modes" title="modes">
-              Mode:<br />
-              <label
-                id="vrMode"
-                class="downarrowG"
-                title="Hubs"
-                onclick="vrMode();"
-                >Hubs</label
-              ><br />
-              <label
-                id="classicMode"
-                class="downarrow"
-                title="Classic"
-                onclick="classicMode();"
-                >Cards/Trader</label
-              ><br />
-            </div>
-            <br />
-            <div class="button" onclick="pendingClaims();">View Pending</div>
-            <button class="hide" id="clear-dreams">Clear Dreams</button>
-            <section title="closed" id="pendingClaims" class="hide">
-              <ul id="dreams"></ul>
-            </section>
-          </div>
-        </wrap>
-        <label id="hubs" class="hide"></label>
-      </body>
-    </html>
+        <div class="article" id="T7" onclick="DarkMarkinfo();">
+          <h3 class="atitle">DarkMark (Token)</h3>
+          <p>DarkMark Token Information</p>
+          <div class="hide" id="DarkMarkinfo" title="CLOSED"></div>
+        </div>
+      </center>
+      <label class="footer">@MindsGaming 2022</label>
+    </wrap>
   </body>
 </html>
