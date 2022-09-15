@@ -1,6 +1,8 @@
 const hubs = document.getElementById("HUBS");
 const app = document.getElementById("APP");
 const games = document.getElementById("GAMES");
+const collection = document.getElementById("COLLECTION");
+
 const login = document.getElementById("LOGIN");
 const loginform = document.getElementById("login-form");
 
@@ -153,5 +155,37 @@ function userview() {
     loginform.className = "hide";
     myWallet.innerHTML = dreamInput.value;
     myWallet.title = dreamInput.value;
+  }
+}
+
+function viewcollection() {
+  if (collection.title == "build") {
+    app.className = "hide";
+    hubs.title = "closed";
+    hubs.className = "hide";
+    app.title = "COLLECTION";
+    collection.title = "COLLECTION";
+    var createHUB = document.createElement("iframe");
+    createHUB.src = "/cards";
+    createHUB.className = "wrap";
+    createHUB.allow = "microphone; camera; vr; speaker;";
+    var CREATEHUB = document
+      .getElementById("COLLECTION")
+      .appendChild(createHUB);
+  } else {
+    if (collection.title == "closed") {
+      hubs.title = "closed";
+      hubs.className = "hide";
+      app.title = "COLLECTION";
+      app.className = "hide";
+      login.className = "hide";
+      login.title = "closed";
+      collection.title = "COLLECTION";
+    }
+  }
+
+  if (collection.innerHTML == "") {
+    collection.title = "build";
+    viewcollection();
   }
 }

@@ -25,7 +25,6 @@
     <script src="/fly.js" defer></script>
 
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/games/style.css" defer />
   </head>
   <body>
     <wrap>
@@ -95,7 +94,10 @@
             <a href="https://mintme.com/token/DarkMark/trade" target="_blank">
               <button>DarkMark</button></a
             >
-            <a href="https://mintme.com/token/DragonToken/trade" target="_blank">
+            <a
+              href="https://mintme.com/token/DragonToken/trade"
+              target="_blank"
+            >
               <button>DragonToken</button></a
             >
           </article>
@@ -193,12 +195,19 @@
             ></div>
           </tool>
           <tool>
-            <div onclick="viewcollection" id="collection" class="grid" title="Cards"></div>
+            <div
+              onclick="viewcollection();"
+              id="collection"
+              class="grid"
+              title="Cards"
+            ></div>
           </tool>
         </tool>
       </div>
 
       <div class="hide" id="HUBS" title="build"></div>
+      <div class="hide" id="COLLECTION" title="build"></div>
+
       <div class="hide" id="LOGIN" title="closed">
         <center>
           <h1 class="rewards-intro" id="login-form">
