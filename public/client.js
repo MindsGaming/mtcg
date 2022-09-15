@@ -134,8 +134,10 @@ dreamsForm.onsubmit = (event) => {
 
   // reset form
   var loginform = document.getElementById("login-form");
+  var walletlinks = document.getElementById("wallet-links");
   myWallet.innerHTML = dreamInput.value;
   loginform.className = "hide";
+  walletlinks.className = "display";
   selectToken();
 };
 

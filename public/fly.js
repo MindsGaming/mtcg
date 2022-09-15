@@ -200,6 +200,8 @@ function userview() {
     loginform.className = "hide";
     myWallet.innerHTML = dreamInput.value;
     myWallet.title = dreamInput.value;
+    var walletlinks = document.getElementById("wallet-links");
+    walletlinks.className = "display";
   }
 }
 
@@ -330,5 +332,19 @@ function importTokens() {
   if (importtokens.innerHTML == "") {
     importtokens.title = "build";
     importTokens();
+  }
+}
+
+function manualInfo() {
+  var manual = document.getElementById("manualInfo");
+
+  if (manual.title == "closed") {
+    manual.className = "display";
+    manual.title = "manual";
+  } else {
+    if (manual.title == "manual") {
+      manual.className = "hide";
+      manual.title = "closed";
+    }
   }
 }

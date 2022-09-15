@@ -20,6 +20,7 @@
     <script src="https://mtcgverse.glitch.me/metamask.js"></script>
 
     <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
+    <script src="https://mtcgverse.glitch.me/MTCGverse.js" defer></script>
 
     <script src="/client.js" defer></script>
     <script src="/fly.js" defer></script>
@@ -220,6 +221,7 @@
       <div class="hide" id="HUBS" title="build"></div>
       <div class="hide" id="GAMES" title="build"></div>
       <div class="hide" id="COLLECTION" title="build"></div>
+      <div class="hide" id="IMPORTTOKENS" title="build"></div>
 
       <div class="hide" id="LOGIN" title="closed">
         <center>
@@ -331,12 +333,16 @@
               <button onclick="importTokens();">Import Tokens</button>
               <button onclick="manualInfo();">Manual Information</button>
 
-             <div class="hide" id="manualInfo">
-               
+              <div class="hide" id="manualInfo">
+                <center>
+                  Network name = MINTME <br />
+                  New RPC URL = https://node1.mintme.com <br />
+                  ChainID = 24734 <br />Symbol = MINTME <br />
+                  Block Explorer URL = https://www.mintme.com/explorer
+                </center>
               </div>
             </article>
           </div>
-          <div class="hide" id="IMPORTTOKENS" title="build"></div>
         </center>
       </div>
     </wrap>
