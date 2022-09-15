@@ -100,6 +100,8 @@ function quickhub() {
       app.className = "hide";
       login.className = "hide";
       login.title = "closed";
+      collection.title = "COLLECTION";
+      collection.className = "hide";
     }
   }
 
@@ -132,6 +134,16 @@ function HOME() {
       login.className = "hide";
       login.title = "closed";
     }
+    if (app.title == "COLLECTION") {
+      hubs.title = "closed";
+      hubs.className = "hide";
+      app.title = "HOME";
+      app.className = "display";
+      login.className = "hide";
+      login.title = "closed";
+      collection.className = "hide";
+      collection.title = "closed";
+    }
   }
 }
 
@@ -148,6 +160,8 @@ function userview() {
     app.className = "hide";
     login.className = "display";
     login.title = "REWARDS";
+    collection.title = "COLLECTION";
+    collection.className = "hide";
   }
 
   if (dreamInput.value == "") {
@@ -161,10 +175,11 @@ function userview() {
 function viewcollection() {
   if (collection.title == "build") {
     app.className = "hide";
+    app.title = "COLLECTION";
     hubs.title = "closed";
     hubs.className = "hide";
-    app.title = "COLLECTION";
     collection.title = "COLLECTION";
+    collection.className = "display";
     var createHUB = document.createElement("iframe");
     createHUB.src = "/cards";
     createHUB.className = "wrap";
@@ -181,6 +196,7 @@ function viewcollection() {
       login.className = "hide";
       login.title = "closed";
       collection.title = "COLLECTION";
+      collection.className = "display";
     }
   }
 
