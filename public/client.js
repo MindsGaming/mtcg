@@ -8,7 +8,7 @@ var dreamToken = document.getElementById("myToken");
 var dreamWallet = document.getElementById("myWallet");
 
 var totalSeconds = 0;
-setInterval(setTime, 50);
+setInterval(setTime, 5);
 
 function setTime() {
   ++totalSeconds;
@@ -50,9 +50,23 @@ function setTime() {
   }
 
   if (minutesLabel.innerHTML == "71") {
-    alert("You Maxed Out Rewards, Are You Still Active?");
-    claimUpdate();
-    if (secondsLabel.innerHTML == "01") {
+    if (dreamInput.value == "") {
+      let text;
+      if (confirm("Maxed Rewards Reached, Login And Claim Them!") == true) {
+        minutesLabel.innerHTML = "65";
+        userview();
+      } else {
+        text = "You canceled!";
+      }
+    } else {
+      let text;
+      if (confirm("Maxed Rewards Reached, Claim Rewards?") == true) {
+        claimUpdate();
+      } else {
+        text = "You canceled!";
+      }
+      if (secondsLabel.innerHTML == "01") {
+      }
     }
   }
 }
