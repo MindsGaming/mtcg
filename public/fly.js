@@ -125,6 +125,8 @@ function HOME() {
       hubs.className = "hide";
       app.title = "HOME";
       app.className = "display";
+      games.className = "hide";
+      games.title = "closed";
     }
     if (app.title == "REWARDS") {
       hubs.title = "closed";
@@ -133,6 +135,8 @@ function HOME() {
       app.className = "display";
       login.className = "hide";
       login.title = "closed";
+      games.className = "hide";
+      games.title = "closed";
     }
     if (app.title == "COLLECTION") {
       hubs.title = "closed";
@@ -143,6 +147,20 @@ function HOME() {
       login.title = "closed";
       collection.className = "hide";
       collection.title = "closed";
+      games.className = "hide";
+      games.title = "closed";
+    }
+    if (app.title == "GAMES") {
+      hubs.title = "closed";
+      hubs.className = "hide";
+      app.title = "HOME";
+      app.className = "display";
+      login.className = "hide";
+      login.title = "closed";
+      collection.className = "hide";
+      collection.title = "closed";
+      games.className = "hide";
+      games.title = "closed";
     }
   }
 }
@@ -162,6 +180,8 @@ function userview() {
     login.title = "REWARDS";
     collection.title = "closed";
     collection.className = "hide";
+    games.className = "hide";
+    games.title = "closed";
   }
 
   if (dreamInput.value == "") {
@@ -187,6 +207,8 @@ function viewcollection() {
     app.className = "hide";
     login.className = "hide";
     login.title = "closed";
+    games.className = "hide";
+    games.title = "closed";
     collection.title = "COLLECTION";
     collection.className = "display";
   } else {
@@ -197,6 +219,8 @@ function viewcollection() {
       app.className = "hide";
       login.className = "hide";
       login.title = "closed";
+      games.className = "hide";
+      games.title = "closed";
       collection.title = "COLLECTION";
       collection.className = "display";
     }
@@ -214,9 +238,7 @@ function viewgames() {
     createHUB.src = "/games";
     createHUB.className = "wrap";
     createHUB.allow = "microphone; camera; vr; speaker;";
-    var CREATEHUB = document
-      .getElementById("GAMES")
-      .appendChild(createHUB);
+    var CREATEHUB = document.getElementById("GAMES").appendChild(createHUB);
     hubs.title = "closed";
     hubs.className = "hide";
     app.title = "GAMES";
@@ -228,7 +250,7 @@ function viewgames() {
     games.className = "display";
     games.title = "GAMES";
   } else {
-    if (collection.title == "closed") {
+    if (games.title == "closed") {
       hubs.title = "closed";
       hubs.className = "hide";
       app.title = "GAMES";
