@@ -244,7 +244,7 @@ function levelUp() {
 }
 
 function selectToken() {
-  var tokens = ["Darkmark"];
+  var tokens = ["DarkMark"];
   const newtoken = tokens[Math.floor(Math.random() * tokens.length)];
   var a = document.getElementById("myToken");
   a.innerHTML = newtoken;

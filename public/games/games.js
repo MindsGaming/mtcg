@@ -10,6 +10,7 @@ function theStock() {
     game.title = "OPEN";
     button.className = "float-left";
     game.className = "splash";
+    window.open("#/build-stock", "_self");
   } else {
     if (game.title == "OPEN") {
       title.className = "white";
@@ -32,6 +33,7 @@ function theStock() {
     var CREATEHUB = document
       .getElementById("build-stock")
       .appendChild(createHUB);
+    window.open("#/build-stock", "_self");
   }
 }
 
