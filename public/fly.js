@@ -100,7 +100,7 @@ function quickhub() {
       app.className = "hide";
       login.className = "hide";
       login.title = "closed";
-      collection.title = "COLLECTION";
+      collection.title = "closed";
       collection.className = "hide";
     }
   }
@@ -160,7 +160,7 @@ function userview() {
     app.className = "hide";
     login.className = "display";
     login.title = "REWARDS";
-    collection.title = "COLLECTION";
+    collection.title = "closed";
     collection.className = "hide";
   }
 
@@ -174,12 +174,6 @@ function userview() {
 
 function viewcollection() {
   if (collection.title == "build") {
-    app.className = "hide";
-    app.title = "COLLECTION";
-    hubs.title = "closed";
-    hubs.className = "hide";
-    collection.title = "COLLECTION";
-    collection.className = "display";
     var createHUB = document.createElement("iframe");
     createHUB.src = "/cards";
     createHUB.className = "wrap";
@@ -187,6 +181,14 @@ function viewcollection() {
     var CREATEHUB = document
       .getElementById("COLLECTION")
       .appendChild(createHUB);
+    hubs.title = "closed";
+    hubs.className = "hide";
+    app.title = "COLLECTION";
+    app.className = "hide";
+    login.className = "hide";
+    login.title = "closed";
+    collection.title = "COLLECTION";
+    collection.className = "display";
   } else {
     if (collection.title == "closed") {
       hubs.title = "closed";
