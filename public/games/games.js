@@ -4,6 +4,22 @@ function theStock() {
   var info = document.getElementById("stock-info");
   var button = document.getElementById("stock-btn");
 
+  if (game.title == "closed") {
+    title.className = "white";
+    info.className = "white";
+    game.title = "OPEN";
+    button.className = "float-right";
+    game.className = "splash";
+  } else {
+    if (game.title == "OPEN") {
+      title.className = "white";
+      info.className = "white";
+      game.title = "closed";
+      button.className = "hide";
+      game.className = "hide";
+    }
+  }
+
   if (game.title == "build") {
     title.className = "hide";
     info.className = "hide";
@@ -16,23 +32,5 @@ function theStock() {
     var CREATEHUB = document
       .getElementById("build-stock")
       .appendChild(createHUB);
-  }
-  
-  else {
-    if (game.title == "OPEN") {
-      title.className = "white";
-      info.className = "white";
-      game.title = "closed";
-      button.className = "hide";
-      game.className = "hide";
-    }
-  }
-
-  if (game.title == "closed") {
-    title.className = "white";
-    info.className = "white";
-    game.title = "OPEN";
-    button.className = "float-right";
-    game.className = "splash";
   }
 }
