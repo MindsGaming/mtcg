@@ -209,5 +209,41 @@ function viewcollection() {
 }
 
 function viewgames() {
-  alert("Builing New Layout");
+  if (games.title == "build") {
+    var createHUB = document.createElement("iframe");
+    createHUB.src = "/games";
+    createHUB.className = "wrap";
+    createHUB.allow = "microphone; camera; vr; speaker;";
+    var CREATEHUB = document
+      .getElementById("COLLECTION")
+      .appendChild(createHUB);
+    hubs.title = "closed";
+    hubs.className = "hide";
+    app.title = "GAMES";
+    app.className = "hide";
+    login.className = "hide";
+    login.title = "closed";
+    collection.title = "closed";
+    collection.className = "hide";
+    games.title = "GAMES";
+    games.className = "display";
+  } else {
+    if (collection.title == "closed") {
+      hubs.title = "closed";
+      hubs.className = "hide";
+      app.title = "GAMES";
+      app.className = "hide";
+      login.className = "hide";
+      login.title = "closed";
+      collection.title = "closed";
+      collection.className = "hide";
+      games.title = "GAMES";
+      games.className = "display";
+    }
+  }
+
+  if (games.innerHTML == "") {
+    games.title = "build";
+    viewgames();
+  }
 }
