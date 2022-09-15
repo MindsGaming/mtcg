@@ -327,23 +327,16 @@
                 add the network and import tokens, if you are on desktop you can
                 connect the network and add tokens from this site!
               </p>
-              <button class="tokenbutton" id="connect">Connect Network</button>
-              <button class="tokenbutton" id="connect">Connect Network</button>
+              <button id="connect">Connect Network</button>
+              <button onclick="importTokens();">Import Tokens</button>
+              <button onclick="manualInfo();">Manual Information</button>
 
-            
-
-              <a
-                href="https://mintme.com/token/DooBetter/trade"
-                target="_blank"
-              >
-                <button>Manual Info</button></a
-              >
-
-              <a href="https://mintme.com/token/GTPC/trade" target="_blank">
-                <button>GTPC</button></a
-              >
+             <div class="hide" id="manualInfo">
+               
+              </div>
             </article>
           </div>
+          <div class="hide" id="IMPORTTOKENS" title="build"></div>
         </center>
       </div>
     </wrap>

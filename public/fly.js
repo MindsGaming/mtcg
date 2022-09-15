@@ -2,6 +2,7 @@ const hubs = document.getElementById("HUBS");
 const app = document.getElementById("APP");
 const games = document.getElementById("GAMES");
 const collection = document.getElementById("COLLECTION");
+const importtokens = document.getElementById("IMPORTTOKENS");
 
 const login = document.getElementById("LOGIN");
 const loginform = document.getElementById("login-form");
@@ -127,6 +128,8 @@ function HOME() {
       app.className = "display";
       games.className = "hide";
       games.title = "closed";
+      importtokens.className = "hide";
+      importtokens.title = "closed";
     }
     if (app.title == "REWARDS") {
       hubs.title = "closed";
@@ -137,6 +140,8 @@ function HOME() {
       login.title = "closed";
       games.className = "hide";
       games.title = "closed";
+      importtokens.className = "hide";
+      importtokens.title = "closed";
     }
     if (app.title == "COLLECTION") {
       hubs.title = "closed";
@@ -149,6 +154,8 @@ function HOME() {
       collection.title = "closed";
       games.className = "hide";
       games.title = "closed";
+      importtokens.className = "hide";
+      importtokens.title = "closed";
     }
     if (app.title == "GAMES") {
       hubs.title = "closed";
@@ -161,6 +168,8 @@ function HOME() {
       collection.title = "closed";
       games.className = "hide";
       games.title = "closed";
+      importtokens.className = "hide";
+      importtokens.title = "closed";
     }
   }
 }
@@ -182,6 +191,8 @@ function userview() {
     collection.className = "hide";
     games.className = "hide";
     games.title = "closed";
+    importtokens.className = "hide";
+    importtokens.title = "closed";
   }
 
   if (dreamInput.value == "") {
@@ -209,6 +220,8 @@ function viewcollection() {
     login.title = "closed";
     games.className = "hide";
     games.title = "closed";
+    importtokens.className = "hide";
+    importtokens.title = "closed";
     collection.title = "COLLECTION";
     collection.className = "display";
   } else {
@@ -221,6 +234,8 @@ function viewcollection() {
       login.title = "closed";
       games.className = "hide";
       games.title = "closed";
+      importtokens.className = "hide";
+      importtokens.title = "closed";
       collection.title = "COLLECTION";
       collection.className = "display";
     }
@@ -247,6 +262,8 @@ function viewgames() {
     login.title = "closed";
     collection.title = "closed";
     collection.className = "hide";
+    importtokens.className = "hide";
+    importtokens.title = "closed";
     games.className = "display";
     games.title = "GAMES";
   } else {
@@ -259,6 +276,8 @@ function viewgames() {
       login.title = "closed";
       collection.title = "closed";
       collection.className = "hide";
+      importtokens.className = "hide";
+      importtokens.title = "closed";
       games.className = "display";
       games.title = "GAMES";
     }
@@ -267,5 +286,49 @@ function viewgames() {
   if (games.innerHTML == "") {
     games.title = "build";
     viewgames();
+  }
+}
+
+function importTokens() {
+  if (importtokens.title == "build") {
+    var createHUB = document.createElement("iframe");
+    createHUB.src = "/tokens";
+    createHUB.className = "wrap";
+    createHUB.allow = "microphone; camera; vr; speaker;";
+    var CREATEHUB = document
+      .getElementById("IMPORTTOKENS")
+      .appendChild(createHUB);
+    hubs.title = "closed";
+    hubs.className = "hide";
+    app.title = "IMPORTING";
+    app.className = "hide";
+    login.className = "hide";
+    login.title = "closed";
+    collection.title = "closed";
+    collection.className = "hide";
+    games.className = "hide";
+    games.title = "closed";
+    importtokens.title = "IMPORTING";
+    importtokens.className = "display";
+  } else {
+    if (importtokens.title == "closed") {
+      hubs.title = "closed";
+      hubs.className = "hide";
+      app.title = "IMPORTING";
+      app.className = "hide";
+      login.className = "hide";
+      login.title = "closed";
+      collection.title = "closed";
+      collection.className = "hide";
+      games.className = "hide";
+      games.title = "closed";
+      importtokens.className = "display";
+      importtokens.title = "IMPORTING";
+    }
+  }
+
+  if (importtokens.innerHTML == "") {
+    importtokens.title = "build";
+    importTokens();
   }
 }
