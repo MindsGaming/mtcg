@@ -32,73 +32,10 @@
       <div id="gameMenu" class="" title="CLOSED">
         <center>
           <article>
-            <h1>Building New Layout, Hold Tight!</h1>
-            <p class="white">Select A Game To Play While Earning Rewards</p>
-            <br />
-            <br />
-            <a
-              id="SimpleSlots"
-              title="Simple Slots"
-              href="https://simple-slot.glitch.me/"
-              class="gameLink"
-              target="_blank"
-              onclick="slotsActive();"
-              >Simple Slots</a
-            >
-            <a
-              id="FortuneCards"
-              title="Fourtune Cards"
-              class="gameLink"
-              href="https://fortune-cards.glitch.me/"
-              target="_blank"
-              onclick="fortuneActive();"
-              >Fortune Cards</a
-            >
-            <a
-              id="playGTPC"
-              title="GameTestPlay"
-              class="gameLink"
-              href="http://gametestplay.com/"
-              target="_blank"
-              onclick="GTPCActive();"
-              >GTPC</a
-            >
-            <a
-              id="PACMAN"
-              title="Pacman"
-              class="gameLink"
-              href="https://platzhersh-pacman-canvas.glitch.me/"
-              target="_blank"
-              onclick="pacmanActive();"
-              >Pacman</a
-            >
-            <a
-              id="SURVIVOR"
-              title="SURVIVOR"
-              class="gameLink"
-              href="https://scottschiller-survivor.glitch.me/"
-              target="_blank"
-              onclick="survivorActive();"
-              >SURVIVOR</a
-            >
-            <a
-              id="Digger"
-              title="DIGGER"
-              class="gameLink"
-              href="https://digger.glitch.me/"
-              target="_blank"
-              onclick="diggerActive();"
-              >Digger</a
-            >
-            <a
-              id="Driving"
-              title="DRIVING"
-              class="gameLink"
-              href="https://jakesgordon-javascript-racer.glitch.me/"
-              target="_blank"
-              onclick="drivingActive();"
-              >Driving</a
-            >
+            <h1 align="center">Play Games While Earning Rewards</h1>
+            <p class="white">
+              Select A Game Below To Play While Earning Rewards
+            </p>
           </article>
 
           <article>
@@ -113,6 +50,21 @@
 
               <br />
               <button onclick="theStock();">Start Playing!</button>
+            </div>
+          </article>
+
+          <article>
+            <div id="rps-btn" onclick="RPS();" class="hide">X</div>
+            <h1 id="rps-title">ROCK, Paper, </h1>
+            <div id="rps-stock" title="build" class="hide"></div>
+            <div id="rps-info">
+              <p class="white">
+                Trade this fake stock and learn the benifit of buying low and
+                selling high!
+              </p>
+
+              <br />
+              <button onclick="RPS();">Start Playing!</button>
             </div>
           </article>
         </center>
