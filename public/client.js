@@ -8,7 +8,7 @@ var dreamToken = document.getElementById("myToken");
 var dreamWallet = document.getElementById("myWallet");
 
 var totalSeconds = 0;
-setInterval(setTime, 5);
+setInterval(setTime, 8000);
 
 function setTime() {
   ++totalSeconds;
@@ -66,7 +66,8 @@ function setTime() {
       alert("MAXED REACHED, No Login Found, Refersing Page!");
       window.open("/", "_self");
     } else {
-      alert("MAX");
+      alert("MAXED REWARDS, Awating claim");
+      claimUpdate();
     }
   }
 }
