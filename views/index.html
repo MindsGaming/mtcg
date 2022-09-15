@@ -15,13 +15,12 @@
       rel="icon"
       href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
-
-    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
-    <script src="https://mtcgverse.glitch.me/metamask.js"></script>
-
     <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
-    <script src="https://mtcgverse.glitch.me/MTCGverse.js" defer></script>
 
+    <script src="/tokens/metamask.js" defer></script>
+    <script src="https://mtcgverse.glitch.me/MTCGverse.js" defer></script>
+    <script src="/tokens/tokens.js" defer></script>
+    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
     <script src="/client.js" defer></script>
     <script src="/fly.js" defer></script>
 
@@ -333,12 +332,36 @@
               <button onclick="importTokens();">Import Tokens</button>
               <button onclick="manualInfo();">Manual Information</button>
 
-              <div class="hide" id="manualInfo">
-                <center>
+              <div class="hide" id="manualInfo" title="closed">
+                <center class="white">
+                  <code>
                   Network name = MINTME <br />
                   New RPC URL = https://node1.mintme.com <br />
                   ChainID = 24734 <br />Symbol = MINTME <br />
                   Block Explorer URL = https://www.mintme.com/explorer
+                    <br>
+                  </code>
+                </center>
+              </div>
+            </article>
+             <article>
+              <h1>Webwallet Help</h1>
+              <p class="white">
+                Web wallets can be obtained on MINTME by creating an account. Once you have an account 
+              </p>
+              <button id="connect">Connect Network</button>
+              <button onclick="importTokens();">Import Tokens</button>
+              <button onclick="manualInfo();">Manual Information</button>
+
+              <div class="hide" id="manualInfo" title="closed">
+                <center class="white">
+                  <code>
+                  Network name = MINTME <br />
+                  New RPC URL = https://node1.mintme.com <br />
+                  ChainID = 24734 <br />Symbol = MINTME <br />
+                  Block Explorer URL = https://www.mintme.com/explorer
+                    <br>
+                  </code>
                 </center>
               </div>
             </article>

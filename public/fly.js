@@ -171,6 +171,20 @@ function HOME() {
       importtokens.className = "hide";
       importtokens.title = "closed";
     }
+    if (app.title == "IMPORTING") {
+      hubs.title = "closed";
+      hubs.className = "hide";
+      app.title = "HOME";
+      app.className = "display";
+      login.className = "hide";
+      login.title = "closed";
+      collection.className = "hide";
+      collection.title = "closed";
+      games.className = "hide";
+      games.title = "closed";
+      importtokens.className = "hide";
+      importtokens.title = "closed";
+    }
   }
 }
 
