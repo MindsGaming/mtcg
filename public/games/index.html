@@ -28,90 +28,110 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <div id="thestock" class="hide" title="closed"></div>
-
-    <div id="gameMenu" class="" title="CLOSED">
-      <center>
-        <article>
-          <h1>Building New Layout, Hold Tight!</h1>
-          <p class="white">Select A Game To Play While Earning Rewards</p>
-          <br />
-          <br />
-          <a
-            id="SimpleSlots"
-            title="Simple Slots"
-            href="https://simple-slot.glitch.me/"
-            class="gameLink"
-            target="_blank"
-            onclick="slotsActive();"
-            >Simple Slots</a
-          >
-          <a
-            id="FortuneCards"
-            title="Fourtune Cards"
-            class="gameLink"
-            href="https://fortune-cards.glitch.me/"
-            target="_blank"
-            onclick="fortuneActive();"
-            >Fortune Cards</a
-          >
-          <a
-            id="playGTPC"
-            title="GameTestPlay"
-            class="gameLink"
-            href="http://gametestplay.com/"
-            target="_blank"
-            onclick="GTPCActive();"
-            >GTPC</a
-          >
-          <a
-            id="PACMAN"
-            title="Pacman"
-            class="gameLink"
-            href="https://platzhersh-pacman-canvas.glitch.me/"
-            target="_blank"
-            onclick="pacmanActive();"
-            >Pacman</a
-          >
-          <a
-            id="SURVIVOR"
-            title="SURVIVOR"
-            class="gameLink"
-            href="https://scottschiller-survivor.glitch.me/"
-            target="_blank"
-            onclick="survivorActive();"
-            >SURVIVOR</a
-          >
-          <a
-            id="Digger"
-            title="DIGGER"
-            class="gameLink"
-            href="https://digger.glitch.me/"
-            target="_blank"
-            onclick="diggerActive();"
-            >Digger</a
-          >
-          <a
-            id="Driving"
-            title="DRIVING"
-            class="gameLink"
-            href="https://jakesgordon-javascript-racer.glitch.me/"
-            target="_blank"
-            onclick="drivingActive();"
-            >Driving</a
-          >
-        </article>
-        <div class="hide">
+    <wrap>
+      <div id="gameMenu" class="" title="CLOSED">
+        <center>
           <article>
-            <h1>The Stock</h1>
-            <p class="white">The Stock</p>
-            Trade this fake stock and learn the benifit of buying low and
-            selling high!
-            <br />
-            <button onclick="theStock();">Play</button>
+            <h1 align="center">Play Games While Earning Rewards</h1>
+            <p class="white">
+              Select A Game Below To Play While Earning Rewards
+            </p>
           </article>
-        </div>
-      </center>
-    </div>
+
+          <article>
+            <div id="gtpc-btn" onclick="theStock();" class="hide">X</div>
+            <h1 id="gtpc-title">GTPC</h1>
+            <div id="gtpc-build" title="build" class="hide"></div>
+            <div id="gtpc-info">
+              <p class="white">
+                No mistake GTPC has thier own game, website and rewards make
+                sure to check them out!
+              </p>
+
+              <br />
+              <a href="http://gametestplay.com/" target="_blank">
+                <button>Explore GTPC!</button></a
+              >
+            </div>
+          </article>
+
+          <article>
+            <div id="stock-btn" onclick="theStock();" class="hide">X</div>
+            <h1 id="stock-title">The Stock</h1>
+            <div id="build-stock" title="build" class="hide"></div>
+            <div id="stock-info">
+              <p class="white">
+                Trade this fake stock and learn the benifit of buying low and
+                selling high!
+              </p>
+
+              <br />
+              <button onclick="theStock();">Start Playing!</button>
+            </div>
+          </article>
+
+          <article>
+            <div id="rps-btn" onclick="RPS();" class="hide">X</div>
+            <h1 id="rps-title">Rock, Paper, Scissors</h1>
+            <div id="rps-build" title="build" class="hide"></div>
+            <div id="rps-info">
+              <p class="white">Play Rock, Paper, Scissors Verse Our Bot</p>
+
+              <br />
+              <button onclick="RPS();">Start Playing!</button>
+            </div>
+          </article>
+
+          <article>
+            <div id="wack-btn" onclick="WACK();" class="hide">X</div>
+            <h1 id="wack-title">Wack Me</h1>
+            <div id="wack-build" title="build" class="hide"></div>
+            <div id="wack-info">
+              <p class="white">
+                Wack Me is a wackamole style game, give it a try
+              </p>
+
+              <br />
+              <button onclick="WACK();">Start Playing!</button>
+            </div>
+          </article>
+
+          <article class="hide">
+            <div id="bart-btn" onclick="BART();" class="hide">X</div>
+            <h1 id="bart-title">BART Ballons</h1>
+            <div id="bart-build" title="build" class="hide"></div>
+            <div id="bart-info">
+              <p class="white">
+                Game or test? The Balloon Analogue Risk Task (BART)
+              </p>
+
+              <br />
+              <button onclick="BART();">Start Playing!</button>
+            </div>
+          </article>
+
+          <article>
+            <div id="soon" class="hide">X</div>
+            <h1 id="soon-title">New Games On The Way!</h1>
+            <div id="soon-build" title="build" class="hide"></div>
+            <div id="soon-info">
+              <p class="white">
+                We are always changing and adding new games to try out and play,
+                some of them are created by users in our community! If you build
+                or want to submit your game here drop by our chat room!
+              </p>
+
+              <br />
+              <a
+                href="https://chat.minds.com/#/room/#BendersCasino:minds.com"
+                target="_blank"
+              >
+                <button onclick="WACK();">Start Chatting!</button></a
+              >
+            </div>
+          </article>
+        </center>
+      </div>
+    </wrap>
   </body>
 </html>

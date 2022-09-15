@@ -8,7 +8,7 @@ function theStock() {
     title.className = "white";
     info.className = "white";
     game.title = "OPEN";
-    button.className = "float-right";
+    button.className = "float-left";
     game.className = "splash";
   } else {
     if (game.title == "OPEN") {
@@ -24,7 +24,7 @@ function theStock() {
     title.className = "hide";
     info.className = "hide";
     game.title = "OPEN";
-    button.className = "float-right";
+    button.className = "float-left";
     game.className = "splash";
     var createHUB = document.createElement("iframe");
     createHUB.src = "/games/the-stock";
@@ -45,7 +45,7 @@ function RPS() {
     title.className = "white";
     info.className = "white";
     game.title = "OPEN";
-    button.className = "float-right";
+    button.className = "float-left";
     game.className = "splash";
   } else {
     if (game.title == "OPEN") {
@@ -61,7 +61,7 @@ function RPS() {
     title.className = "hide";
     info.className = "hide";
     game.title = "OPEN";
-    button.className = "float-right";
+    button.className = "float-left";
     game.className = "splash";
     var createHUB = document.createElement("iframe");
     createHUB.src = "/games/rpsbot";
@@ -80,7 +80,7 @@ function WACK() {
     title.className = "white";
     info.className = "white";
     game.title = "OPEN";
-    button.className = "float-right";
+    button.className = "float-left";
     game.className = "splash";
   } else {
     if (game.title == "OPEN") {
@@ -96,7 +96,7 @@ function WACK() {
     title.className = "hide";
     info.className = "hide";
     game.title = "OPEN";
-    button.className = "float-right";
+    button.className = "float-left";
     game.className = "splash";
     var createHUB = document.createElement("iframe");
     createHUB.src = "https://wack-me.glitch.me/";
