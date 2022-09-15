@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <div id="thestock" class="hide" title="closed"></div>
-
     <div id="gameMenu" class="" title="CLOSED">
       <center>
         <article>
@@ -101,16 +99,20 @@
             >Driving</a
           >
         </article>
-        <div class="hide">
-          <article>
-            <h1>The Stock</h1>
+        <article>
+          <h1 id="stock-title">The Stock</h1>
+          <div id="thestock" class="preview" title="closed">
+            <iframe src="/games/the-stock" width= "50%" height="50%">
+            </iframe>
+          </div>
+          <div id="stock-info">
             <p class="white">The Stock</p>
             Trade this fake stock and learn the benifit of buying low and
             selling high!
             <br />
-            <button onclick="theStock();">Play</button>
-          </article>
-        </div>
+            <button onclick="theStock();">Start Playing!</button>
+          </div>
+        </article>
       </center>
     </div>
   </body>
