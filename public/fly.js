@@ -362,3 +362,10 @@ function manualInfo() {
     }
   }
 }
+
+function walletTools() {
+  var walletlinks = document.getElementById("wallet-links");
+
+  walletlinks.className = "display";
+  window.open("#wallet-links", "_self");
+}

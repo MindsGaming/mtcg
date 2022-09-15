@@ -265,6 +265,8 @@
                 >
               </center>
               <button onclick="claimUpdate();">Grab These Rewards!</button>
+              <div class="helper" onclick="walletTools()">HELP</div>
+
               <hr />
               Pending
               <meter
@@ -335,35 +337,36 @@
               <div class="hide" id="manualInfo" title="closed">
                 <center class="white">
                   <code>
-                  Network name = MINTME <br />
-                  New RPC URL = https://node1.mintme.com <br />
-                  ChainID = 24734 <br />Symbol = MINTME <br />
-                  Block Explorer URL = https://www.mintme.com/explorer
-                    <br>
+                    Network name = MINTME <br />
+                    New RPC URL = https://node1.mintme.com <br />
+                    ChainID = 24734 <br />Symbol = MINTME <br />
+                    Block Explorer URL = https://www.mintme.com/explorer
+                    <br />
                   </code>
                 </center>
               </div>
             </article>
-             <article>
+            <article>
               <h1>Webwallet Help</h1>
               <p class="white">
-                Web wallets can be obtained on MINTME by creating an account. Once you have an account 
+                Web wallets can be obtained on MINTME by creating an account.
+                Once you have an account travel to your
+                <code>/wallet</code> page and select deposit on a rewards token
+                in our ecosystem. If you don't see any tokens in your wallet
+                grab an airdrop!
               </p>
-              <button id="connect">Connect Network</button>
-              <button onclick="importTokens();">Import Tokens</button>
-              <button onclick="manualInfo();">Manual Information</button>
-
-              <div class="hide" id="manualInfo" title="closed">
-                <center class="white">
-                  <code>
-                  Network name = MINTME <br />
-                  New RPC URL = https://node1.mintme.com <br />
-                  ChainID = 24734 <br />Symbol = MINTME <br />
-                  Block Explorer URL = https://www.mintme.com/explorer
-                    <br>
-                  </code>
-                </center>
-              </div>
+              <a
+                href="https://www.mintme.com/token/MTCG/invite"
+                target="_blank"
+              >
+                <button>MINTME (Create A Wallet)</button></a
+              >
+              <a
+                href="https://www.mintme.com/token/gamer/intro/airdrop"
+                target="_blank"
+              >
+                <button>Air-Drop</button></a
+              >
             </article>
           </div>
         </center>

@@ -183,3 +183,13 @@ button:hover {
 .overflow {
   overflow: scroll;
 }
+
+.helper {
+  margin-top: 5%;
+  margin-left: 85%;
+  width: 30px;
+  height: 30px;
+  color: red;
+  font-size: 15px;
+  cursor: pointer;
+}
