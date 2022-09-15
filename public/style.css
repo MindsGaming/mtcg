@@ -154,3 +154,7 @@ button:hover {
   display: block;
   overflow: scroll;
 }
+
+.overflow {
+  overflow: scroll;
+}
