@@ -207,7 +207,3 @@ function viewcollection() {
     viewcollection();
   }
 }
-
-function viewgames() {
-  alert("Builing New Layout");
-}
