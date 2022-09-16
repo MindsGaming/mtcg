@@ -373,3 +373,43 @@ function walletTools() {
   walletlinks.className = "display";
   window.open("#wallet-links", "_self");
 }
+
+
+/* Online Check */
+
+const status = window.navigator.onLine;
+if (status) online();
+else offline();
+window.addEventListener("online", online);
+window.addEventListener("offline", offline);
+function online() {
+  var offlineNotice = document.getElementById("offline");
+  offlineNotice.className = "hide";
+}
+
+function offline() {
+  var offlineNotice = document.getElementById("offline");
+  offlineNotice.className = "offline";
+  checkStatus();
+}
+
+function checkStatus() {
+  const status = window.navigator.onLine;
+  if (status) online();
+  else offline();
+  window.addEventListener("online", online);
+  window.addEventListener("offline", offline);
+  function online() {
+    var offlineNotice = document.getElementById("offline");
+    offlineNotice.className = "hide";
+  }
+
+  function offline() {
+    let text;
+    if (confirm("No Connection Found, Rewards Are Paused") == true) {
+      checkStatus();
+    } else {
+      checkStatus();
+    }
+  }
+}
