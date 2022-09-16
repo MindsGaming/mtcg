@@ -374,7 +374,6 @@ function walletTools() {
   window.open("#wallet-links", "_self");
 }
 
-
 /* Online Check */
 
 const status = window.navigator.onLine;
