@@ -1,11 +1,12 @@
 function buildBlock() {
-  const dreamsLists = document.getElementById("");
+  const dreamsLists = document.getElementById("hold-blocks");
+  const blocks = document.getElementById("BLOCKS");
   const build = document.getElementById("build-blocks");
   build.className = "block";
-  
-  if ()
-  
-  
+  const boost = 1;
+  const math = blocks.value + boost;
+  var spoofblocks = document.getElementById("BLOCKS");
+  spoofblocks.value = math;
 
   fetch("/getDreams", {})
     .then((res) => res.json())
@@ -19,9 +20,10 @@ function buildBlock() {
   const appendNewDream = (dream) => {
     const newListItems = document.createElement("li");
     newListItems.innerText = dream;
-    newListItems.id = dreamInput.value;
+    newListItems.id = math;
     newListItems.className = "hide";
-    dreamsLists.appendChild(newListItem);
+    newListItems.onclick = "test();";
+    dreamsLists.appendChild(newListItems);
   };
 
   // listen for the form to be submitted and add a new dream when it is
@@ -30,7 +32,7 @@ function buildBlock() {
     event.preventDefault();
 
     const data = {
-      dream: dreamInput.value,
+      dream: dreamInput.value + "OWNS " + math,
     };
 
     fetch("/addDream", {
@@ -47,12 +49,6 @@ function buildBlock() {
     appendNewDream(dreamInput.value);
 
     // reset form
-    var loginform = document.getElementById("login-form");
-    var walletlinks = document.getElementById("wallet-links");
-    myWallet.innerHTML = dreamInput.value;
-    loginform.className = "hide";
-    walletlinks.className = "display";
-    selectToken();
   };
 
   clearButton.addEventListener("click", (event) => {
@@ -64,46 +60,8 @@ function buildBlock() {
   });
 }
 
-// Claim
-
-function claimUpdate() {
+function buyBlock() {
   if (dreamInput.value == "") {
-    alert("Login To Earn Rewards");
-  } else {
-    if (minutesLabel.innerHTML == "00") {
-      alert("You Need A Full Token To Claim Rewards");
-    } else {
-      var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
-
-      const data = {
-        dream: dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS,
-      };
-      fetch("/addDream", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" },
-      })
-        .then((res) => res.json())
-        .then((response) => {
-          console.log(JSON.stringify(response));
-        });
-      // get dream value and add it to the list
-      dreams.push(
-        dreamInput.value + "  " + dreamToken.innerHTML + ":" + REWARDS
-      );
-      appendNewDream(
-        dreamInput.value + "  " + dreamToken.innerHTML + ":" + REWARDS
-      );
-
-      reset();
-      levelUp();
-    }
+    alert("LOGIN");
   }
-}
-
-function reset() {
-  var zero = "00";
-  document.getElementById("minutes").innerHTML = zero;
-  document.getElementById("seconds").innerHTML = zero;
-  totalSeconds = "0";
 }

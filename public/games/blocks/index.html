@@ -22,6 +22,7 @@
     <script src="/tokens/tokens.js" defer></script>
     <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
     <script src="/games/blocks/client.js" defer></script>
+    <script src="/client.js" defer></script>
     <script src="/fly.js" defer></script>
 
     <link rel="stylesheet" href="/style.css" />
@@ -42,11 +43,10 @@
     <wrap>
       <outline>
         <inline>
-          <div id="build-blocks">
-          
-          </div>
+          <div id="build-blocks"></div>
         </inline>
       </outline>
+      <div class="block" id="hold-blocks" onclick="buyBlock();"></div>
     </wrap>
   </body>
 </html>
