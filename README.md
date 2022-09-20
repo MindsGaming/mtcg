@@ -21,11 +21,10 @@ https://glitch.com/~minymine
 ## Building (Remix)
 
 - Edit
-  The two main items you will need to edit is **client.js** & **public/hubs**
 
-- client.js
+- fly.js
   **/// Client & Timer**
-  Under **//reset** in client & timer change the **createHUB.src** to **/hubs**
+  Under **quickhubs** in client & timer change the **createHUB.src** to your hub url
 
 - public/hubs
   Edit the **body** of **index.html**
