@@ -29,49 +29,9 @@ function startSlots() {
 
 function spinME() {
   const highlight = slotItems[Math.floor(Math.random() * slotItems.length)];
-  const highlightME = document.getElementById(highlight);
-  const selectOne = document.getElementById("ONE");
-  const selectTwo = document.getElementById("TWO");
-  const selectThree = document.getElementById("THREE");
-  var randomThing = slotItems[Math.floor(Math.random() * slotItems.length)];
+  const randomThing = slotItems[Math.floor(Math.random() * slotItems.length)];
 
-  if (randomThing == highlight) {
-    highlightME.className = "highlight";
-    if (selectOne.title == "select") {
-      selectOne.title = highlightME.innerHTML;
-      selectOne.innerHTML = highlightME.innerHTML;
-      spinME();
-    } else {
-      if (selectTwo.title == "select") {
-        selectTwo.title = highlightME.innerHTML;
-        selectTwo.innerHTML = highlightME.innerHTML;
-        spinME();
-      } else {
-        if (selectThree.title == "select") {
-          selectThree.title = highlightME.innerHTML;
-          selectThree.innerHTML = highlightME.innerHTML;
-          WINcheck();
-        }
-      }
-    }
-  } else {
-    spinME();
-  }
-}
-
-function WINcheck() {
-  const selectOne = document.getElementById("ONE");
-  const selectTwo = document.getElementById("TWO");
-  const selectThree = document.getElementById("THREE");
-
-  if (selectOne.title == selectTwo.title) {
-    if (selectTwo.title == selectThree.title) {
-      alert("WINNER");
-      window.open("#", "_self");
-    }
-  } else {
-    alert("Sorry Not A Winner");
-
-    window.open("#", "_self");
-  }
+  const collection = document.getElementsByClassName("highlight");
+  
+  
 }
