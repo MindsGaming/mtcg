@@ -1,0 +1,24 @@
+slot {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  
+}
+.slot-base {
+  position: fixed;
+  display: block;
+  border-style: solid;
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+  border-color: gold;
+}
+
+.wheel-item {
+  float: left;
+  display: block;
+  border-style: groove;
+  width: 10%;
+  
+}
