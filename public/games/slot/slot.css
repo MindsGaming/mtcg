@@ -1,0 +1,22 @@
+.slot {
+  position: relative;
+  margin: 50px;
+  display: block;
+  width: 40rem;
+  height: 30rem;
+  border-style: solid;
+  border-color: black;
+}
+
+.slotitem {
+  float: left;
+  margin: -1.2px;
+  padding: .5px;
+  display: block;
+  border-style: groove;
+  width: 6.666rem;
+  height: 5rem;
+  
+}
+  
+}
