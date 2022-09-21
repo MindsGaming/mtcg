@@ -20,15 +20,32 @@ function startSlots() {
       var nameItem = slotNames[Math.floor(Math.random() * slotNames.length)];
       getItem.title = nameItem;
       getItem.innerHTML = nameItem;
+      sniffitems.value = "0";
       startSlots();
     }
-  } 
+  }
 }
 
+function spinME() {
+  var highlight = slotItems[Math.floor(Math.random() * slotItems.length)];
+  var highlightME = document.getElementById("highlight");
 
-function spinME(){
-  
-  var highlight =     slotNames[Math.floor(Math.random() * slotNames.length)];
+  if (highlightME.title == highlightME.innerHTML) {
+    highlightME.className = "highlight";
+    highlightME.title == "HIGHLIGHTED";
+  }
 
-  
+  if (highlightME.title == "HIGHLIGHTED") {
+    highlightME.title = "SELECTED";
+
+    var selectOne = document.getElementById("ONE");
+    var selectTwo = document.getElementById("TWO");
+    var selectThree = document.getElementById("THREE");
+
+    if (selectOne.title == "select") {
+      selectOne.innerHTML = highlightME.innerHTML;
+            selectOne.innerHTML = highlightME.innerHTML;
+
+    }
+  }
 }
