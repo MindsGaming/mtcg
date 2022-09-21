@@ -84,7 +84,7 @@ button:hover {
   background-image: url("https://ipack.glitch.me/ogsmile.png");
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 2;
+  z-index: 3;
 }
 
 .quicker {
@@ -99,7 +99,7 @@ button:hover {
   border-radius: 20px 0px 00px 20px;
   background-color: blue;
   background-repeat: no-repeat;
-  z-index: 2;
+  z-index: 3;
 }
 
 .home {
@@ -235,4 +235,18 @@ button:hover {
   overflow: scroll;
   z-index: 2;
   opacity: 2;
+  background-color: black;
+  filter: opacity(60%);
+}
+
+.splashapp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 2;
+  opacity: 2;
+  background-color: green;
 }

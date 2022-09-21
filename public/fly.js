@@ -268,44 +268,34 @@ function viewcollection() {
 }
 
 function viewgames() {
-  if (games.title == "build") {
-    var createHUB = document.createElement("iframe");
-    createHUB.src = "/games";
-    createHUB.className = "wrap";
-    createHUB.allow = "microphone; camera; vr; speaker;";
-    var CREATEHUB = document.getElementById("GAMES").appendChild(createHUB);
+  if (games.title == "closed") {
     hubs.title = "closed";
     hubs.className = "hide";
     app.title = "GAMES";
     app.className = "hide";
     login.className = "hide";
     login.title = "closed";
-    collection.title = "closed";
-    collection.className = "hide";
     importtokens.className = "hide";
     importtokens.title = "closed";
-    games.className = "display";
+    collection.title = "closed";
+    collection.className = "hide";
+    games.className = "splash";
     games.title = "GAMES";
   } else {
-    if (games.title == "closed") {
+    if (games.title == "open") {
       hubs.title = "closed";
       hubs.className = "hide";
-      app.title = "GAMES";
-      app.className = "hide";
+      app.title = "HOME";
+      app.className = "display";
       login.className = "hide";
       login.title = "closed";
-      collection.title = "closed";
-      collection.className = "hide";
+      games.className = "hide";
+      games.title = "closed";
       importtokens.className = "hide";
       importtokens.title = "closed";
-      games.className = "display";
-      games.title = "GAMES";
+      collection.title = "closed";
+      collection.className = "hide";
     }
-  }
-
-  if (games.innerHTML == "") {
-    games.title = "build";
-    viewgames();
   }
 }
 

@@ -109,4 +109,25 @@ function WACK() {
   }
 }
 
+function BART() {
+  var game = document.getElementById("bart-build");
+  var title = document.getElementById("bart-title");
+  var info = document.getElementById("bart-info");
+  var button = document.getElementById("bart-btn");
 
+  if (game.title == "closed") {
+    title.className = "white";
+    info.className = "white";
+    game.title = "OPEN";
+    button.className = "float-left";
+    game.className = "splashapp";
+  } else {
+    if (game.title == "OPEN") {
+      title.className = "white";
+      info.className = "white";
+      game.title = "closed";
+      button.className = "hide";
+      game.className = "hide";
+    }
+  }
+}

@@ -22,6 +22,8 @@
     <script src="/tokens/tokens.js" defer></script>
     <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
     <script src="/client.js" defer></script>
+    <script src="/games/games.js" defer></script>
+
     <script src="/fly.js" defer></script>
 
     <link rel="stylesheet" href="/style.css" />
@@ -216,9 +218,162 @@
           </tool>
         </tool>
       </div>
-
+      <!-- HUBS in script -->
       <div class="hide" id="HUBS" title="build"></div>
-      <div class="hide" id="GAMES" title="build"></div>
+
+      <!-- GAMES Built In -->
+
+      <div class="hide" id="GAMES" title="closed">
+        <div id="gameMenu" class="" title="CLOSED">
+          <center>
+            <article>
+              <h1 align="center">Play Games While Earning Rewards</h1>
+              <p class="white">
+                Select A Game Below To Play While Earning Rewards
+              </p>
+            </article>
+
+            <article>
+              <div id="gtpc-btn" onclick="theStock();" class="hide">X</div>
+              <h1 id="gtpc-title">GTPC</h1>
+              <div id="gtpc-build" title="build" class="hide"></div>
+              <div id="gtpc-info">
+                <p class="white">
+                  No mistake GTPC has thier own game, website and rewards make
+                  sure to check them out!
+                </p>
+
+                <br />
+                <a href="http://gametestplay.com/" target="_blank">
+                  <button>Explore GTPC!</button></a
+                >
+              </div>
+            </article>
+
+            <article>
+              <div id="stock-btn" onclick="theStock();" class="hide">X</div>
+              <h1 id="stock-title">The Stock</h1>
+              <div id="build-stock" title="build" class="hide"></div>
+              <div id="stock-info">
+                <p class="white">
+                  Trade this fake stock and learn the benifit of buying low and
+                  selling high!
+                </p>
+
+                <br />
+                <button onclick="theStock();">Start Playing!</button>
+              </div>
+            </article>
+
+            <article>
+              <div id="rps-btn" onclick="RPS();" class="hide">X</div>
+              <h1 id="rps-title">Rock, Paper, Scissors</h1>
+              <div id="rps-build" title="build" class="hide"></div>
+              <div id="rps-info">
+                <p class="white">Play Rock, Paper, Scissors Verse Our Bot</p>
+
+                <br />
+                <button onclick="RPS();">Start Playing!</button>
+              </div>
+            </article>
+
+            <article>
+              <div id="wack-btn" onclick="WACK();" class="hide">X</div>
+              <h1 id="wack-title">Wack Me</h1>
+              <div id="wack-build" title="build" class="hide"></div>
+              <div id="wack-info">
+                <p class="white">
+                  Wack Me is a wackamole style game, give it a try
+                </p>
+
+                <br />
+                <button onclick="WACK();">Start Playing!</button>
+              </div>
+            </article>
+
+            <article>
+              <div id="bart-btn" onclick="BART();" class="hide">X</div>
+              <h1 id="bart-title">BART Ballons</h1>
+              <div id="bart-build" title="closed" class="hide">
+                <div id="BARTSBALLONS">
+                  <script src="/games/balloon/pop.js" defer></script>
+                  <wrap>
+                    <center>
+                      <h1>BART Balloon</h1>
+                      <p>What Will You Do?</p>
+                      <img
+                        id="balloon"
+                        title="balloon"
+                        width="100px"
+                        height="100px"
+                        src="https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/balloon.png"
+                      /><br /><br />
+                      <label class="white">
+                        <label id="balloon-text">Rewards In Balloon:</label
+                        ><label id="pop">1</label></label
+                      >
+
+                      <br />
+                      <button onclick="popBalloon();">Add Air</button>
+
+                      <button onclick="grabBalloon();">Grab</button>
+                    </center>
+                  </wrap>
+                  <meter
+                    id="BALLOON"
+                    title="BALLON"
+                    class="hide"
+                    min="80"
+                    low="100"
+                    high="1000"
+                    max="10000"
+                    value="100"
+                  ></meter>
+                  <meter
+                    id="POP"
+                    title="POP"
+                    class="hide"
+                    min="0"
+                    low="1"
+                    high="100"
+                    max="1000"
+                    value="1"
+                  ></meter>
+                </div>
+              </div>
+              <div id="bart-info">
+                <p class="white">
+                  Game or test? The Balloon Analogue Risk Task (BART)
+                </p>
+                <br />
+                <button onclick="BART();">Start Playing!</button>
+              </div>
+            </article>
+
+            <article>
+              <div id="soon" class="hide">X</div>
+              <h1 id="soon-title">New Games On The Way!</h1>
+              <div id="soon-build" title="build" class="hide"></div>
+              <div id="soon-info">
+                <p class="white">
+                  We are always changing and adding new games to try out and
+                  play, some of them are created by users in our community! If
+                  you build or want to submit your game here drop by our chat
+                  room!
+                </p>
+
+                <br />
+                <a
+                  href="https://chat.minds.com/#/room/#BendersCasino:minds.com"
+                  target="_blank"
+                >
+                  <button onclick="WACK();">Start Chatting!</button></a
+                >
+              </div>
+            </article>
+          </center>
+        </div>
+      </div>
       <div class="hide" id="COLLECTION" title="build"></div>
       <div class="hide" id="IMPORTTOKENS" title="build"></div>
 
