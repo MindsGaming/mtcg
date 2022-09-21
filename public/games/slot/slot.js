@@ -3,20 +3,32 @@ const slotItems = [
 ];
 const slotNames = ["GOLD", "Silver", "7", "MTCG", "WAM", "Lucky", "Bust"];
 
+startSlots();
+
 function startSlots() {
   var items = document.getElementById("ITEMS");
   var boost = 1;
   var math = items.value + boost;
   var sniffitems = document.getElementById("ITEMS");
   sniffitems.value = math;
-      var getItem = slotNames[Math.floor(Math.random() * slotNames.length)];
 
-  if (items.value < 18) {
-    
+  var getItem = document.getElementById(math);
+
+  sniffitems.value = math;
+  if (items.value < 19) {
     if (getItem.title == "blank") {
       var nameItem = slotNames[Math.floor(Math.random() * slotNames.length)];
       getItem.title = nameItem;
+      getItem.innerHTML = nameItem;
       startSlots();
     }
-  }
+  } 
+}
+
+
+function spinME(){
+  
+  var highlight =     slotNames[Math.floor(Math.random() * slotNames.length)];
+
+  
 }
