@@ -20,32 +20,32 @@ function startSlots() {
       var nameItem = slotNames[Math.floor(Math.random() * slotNames.length)];
       getItem.title = nameItem;
       getItem.innerHTML = nameItem;
-      sniffitems.value = "0";
       startSlots();
+    } else {
+      sniffitems.value = "0";
     }
   }
 }
 
 function spinME() {
-  var highlight = slotItems[Math.floor(Math.random() * slotItems.length)];
-  var highlightME = document.getElementById("highlight");
+  const highlight = slotItems[Math.floor(Math.random() * slotItems.length)];
+  const highlightME = document.getElementById(highlight);
+  const selectOne = document.getElementById("ONE");
+  const selectTwo = document.getElementById("TWO");
+  const selectThree = document.getElementById("THREE");
 
   if (highlightME.title == highlightME.innerHTML) {
     highlightME.className = "highlight";
     highlightME.title == "HIGHLIGHTED";
+    spinME();
   }
 
   if (highlightME.title == "HIGHLIGHTED") {
     highlightME.title = "SELECTED";
 
-    var selectOne = document.getElementById("ONE");
-    var selectTwo = document.getElementById("TWO");
-    var selectThree = document.getElementById("THREE");
-
     if (selectOne.title == "select") {
       selectOne.innerHTML = highlightME.innerHTML;
-            selectOne.innerHTML = highlightME.innerHTML;
-
+      selectOne.innerHTML = highlightME.innerHTML;
     }
   }
 }

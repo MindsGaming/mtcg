@@ -18,6 +18,20 @@
   height: 6.32rem;
 }
 
+
+.highlight {
+  float: left;
+  margin: -1px;
+  padding: 0.5px;
+  display: block;
+  border-style: groove;
+  width: 6.352rem;
+  height: 6.32rem;
+  background-color: yellow;
+}
+
+
+
 .spin {
   width: 20%;
   height: 3rem;
@@ -26,6 +40,4 @@
   text-align: center;
   font-size: 25px;
   cursor: pointer;
-}
-  
 }
