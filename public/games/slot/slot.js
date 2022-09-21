@@ -33,19 +33,39 @@ function spinME() {
   const selectOne = document.getElementById("ONE");
   const selectTwo = document.getElementById("TWO");
   const selectThree = document.getElementById("THREE");
+  var randomThing = slotItems[Math.floor(Math.random() * slotItems.length)];
 
-  if (highlightME.title == highlightME.innerHTML) {
+  if (randomThing == highlight) {
     highlightME.className = "highlight";
-    highlightME.title == "HIGHLIGHTED";
-    spinME();
-  }
-
-  if (highlightME.title == "HIGHLIGHTED") {
-    highlightME.title = "SELECTED";
-
     if (selectOne.title == "select") {
-      selectOne.innerHTML = highlightME.innerHTML;
-      selectOne.innerHTML = highlightME.innerHTML;
+      selectOne.title = highlightME.title;
+      selectOne.innerHTML = highlight;
+      spinME();
+    } else {
+      if (selectTwo.title == "select") {
+        selectTwo.title = highlightME.title;
+        selectTwo.innerHTML = highlight;
+        spinME();
+      } else {
+        if (selectThree.title == "select") {
+          selectThree.title = highlightMe.title;
+          selectThree.innerHTML = highlight;
+          WINcheck();
+        }
+      }
     }
   }
+}
+
+
+function wincheck(){
+   const selectOne = document.getElementById("ONE");
+  const selectTwo = document.getElementById("TWO");
+  const selectThree = document.getElementById("THREE");
+  
+  if (selcetOne.title == selectTwo.title ){
+    
+  }
+  
+  
 }
