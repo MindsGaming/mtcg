@@ -67,20 +67,11 @@ function WINcheck() {
   if (selectOne.title == selectTwo.title) {
     if (selectTwo.title == selectThree.title) {
       alert("WINNER");
-      selectOne.innerHTML = "";
-      selectTwo.innerHTML = "";
-      selectThree.innerHTML = "";
-      selectOne.title = "";
-      selectTwo.title = "";
-      selectThree.title = "";
+      window.open("#", "_self");
     }
   } else {
     alert("Sorry Not A Winner");
-    selectOne.innerHTML = "";
-    selectTwo.innerHTML = "";
-    selectThree.innerHTML = "";
-    selectOne.title = "";
-    selectTwo.title = "";
-    selectThree.title = "";
+
+    window.open("#", "_self");
   }
 }
