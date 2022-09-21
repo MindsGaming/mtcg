@@ -17,16 +17,6 @@
   width: 6.352rem;
   height: 6.32rem;
 }
-.highlight {
-  float: left;
-  margin: -1px;
-  padding: 0.5px;
-  display: block;
-  border-style: groove;
-  width: 6.352rem;
-  height: 6.32rem;
-  background-color: gold;
-}
 
 .spin {
   width: 20%;

@@ -15,14 +15,37 @@ function startSlots() {
   var getItem = document.getElementById(math);
 
   sniffitems.value = math;
-  if (math < 19) {
+  if (items.value < 19) {
     if (getItem.title == "blank") {
       var nameItem = slotNames[Math.floor(Math.random() * slotNames.length)];
       getItem.title = nameItem;
       getItem.innerHTML = nameItem;
-      startSlots();
-    } else {
       sniffitems.value = "0";
+      startSlots();
+    }
+  }
+}
+
+function spinME() {
+  var highlight = slotItems[Math.floor(Math.random() * slotItems.length)];
+  var highlightME = document.getElementById("highlight");
+
+  if (highlightME.title == highlightME.innerHTML) {
+    highlightME.className = "highlight";
+    highlightME.title == "HIGHLIGHTED";
+  }
+
+  if (highlightME.title == "HIGHLIGHTED") {
+    highlightME.title = "SELECTED";
+
+    var selectOne = document.getElementById("ONE");
+    var selectTwo = document.getElementById("TWO");
+    var selectThree = document.getElementById("THREE");
+
+    if (selectOne.title == "select") {
+      selectOne.innerHTML = highlightME.innerHTML;
+            selectOne.innerHTML = highlightME.innerHTML;
+
     }
   }
 }
