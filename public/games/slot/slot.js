@@ -38,34 +38,49 @@ function spinME() {
   if (randomThing == highlight) {
     highlightME.className = "highlight";
     if (selectOne.title == "select") {
-      selectOne.title = highlightME.title;
-      selectOne.innerHTML = highlight;
+      selectOne.title = highlightME.innerHTML;
+      selectOne.innerHTML = highlightME.innerHTML;
       spinME();
     } else {
       if (selectTwo.title == "select") {
-        selectTwo.title = highlightME.title;
-        selectTwo.innerHTML = highlight;
+        selectTwo.title = highlightME.innerHTML;
+        selectTwo.innerHTML = highlightME.innerHTML;
         spinME();
       } else {
         if (selectThree.title == "select") {
-          selectThree.title = highlightMe.title;
-          selectThree.innerHTML = highlight;
+          selectThree.title = highlightME.innerHTML;
+          selectThree.innerHTML = highlightME.innerHTML;
           WINcheck();
         }
       }
     }
+  } else {
+    spinME();
   }
 }
 
-
-function wincheck(){
-   const selectOne = document.getElementById("ONE");
+function WINcheck() {
+  const selectOne = document.getElementById("ONE");
   const selectTwo = document.getElementById("TWO");
   const selectThree = document.getElementById("THREE");
-  
-  if (selcetOne.title == selectTwo.title ){
-    
+
+  if (selectOne.title == selectTwo.title) {
+    if (selectTwo.title == selectThree.title) {
+      alert("WINNER");
+      selectOne.innerHTML = "";
+      selectTwo.innerHTML = "";
+      selectThree.innerHTML = "";
+      selectOne.title = "";
+      selectTwo.title = "";
+      selectThree.title = "";
+    }
+  } else {
+    alert("Sorry Not A Winner");
+    selectOne.innerHTML = "";
+    selectTwo.innerHTML = "";
+    selectThree.innerHTML = "";
+    selectOne.title = "";
+    selectTwo.title = "";
+    selectThree.title = "";
   }
-  
-  
 }
