@@ -28,10 +28,52 @@ function startSlots() {
 }
 
 function spinME() {
-  var highlight = slotItems[Math.floor(Math.random() * slotItems.length)];
-  var bright = document.getElementById(highlight);
-  var selectOne = document.getElementById("ONE")
-  
-  if (se)
-  
+  const highlight = slotItems[Math.floor(Math.random() * slotItems.length)];
+  const bright = document.getElementById(highlight);
+  const selectOne = document.getElementById("ONE");
+  const selectTwo = document.getElementById("TWO");
+  const selectThree = document.getElementById("THREE");
+
+  if (selectOne.title == "select") {
+    selectOne.title = bright.title;
+    selectOne.innerHTML = bright.title;
+    bright.className = "highlight";
+    spinME();
+  } else {
+    if (selectTwo.title == "select") {
+      selectTwo.title = bright.title;
+      selectTwo.innerHTML = bright.title;
+      bright.className = "highlight";
+      spinME();
+    } else {
+      if (selectThree.title == "select") {
+        selectThree.title = bright.title;
+        selectThree.innerHTML = bright.title;
+        bright.className = "highlight";
+        checkWIN();
+      }
+    }
+  }
+}
+
+function checkWIN() {
+  var superitems = document.getElementById(slotItems);
+  superitems.className = "slotitem";
+}
+var items = document.getElementById("ITEMS");
+var boost = 1;
+var math = items.value + boost;
+var sniffitems = document.getElementById("ITEMS");
+sniffitems.value = math;
+
+var getItem = document.getElementById(math);
+
+sniffitems.value = math;
+if (items.value < 19) {
+  if (getItem.title == "blank") {
+    var nameItem = slotNames[Math.floor(Math.random() * slotNames.length)];
+    getItem.title = nameItem;
+    getItem.innerHTML = nameItem;
+    startSlots();
+  }
 }
