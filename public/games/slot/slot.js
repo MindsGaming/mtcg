@@ -29,9 +29,8 @@ function startSlots() {
 
 function spinME() {
   const highlight = slotItems[Math.floor(Math.random() * slotItems.length)];
-  const randomThing = slotItems[Math.floor(Math.random() * slotItems.length)];
-
-  const collection = document.getElementsByClassName("highlight");
+  const randompick = document.getElementById(highlight);
+  
   
   
 }
