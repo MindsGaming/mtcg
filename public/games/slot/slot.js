@@ -28,9 +28,10 @@ function startSlots() {
 }
 
 function spinME() {
-  const highlight = slotItems[Math.floor(Math.random() * slotItems.length)];
-  const randompick = document.getElementById(highlight);
+  var highlight = slotItems[Math.floor(Math.random() * slotItems.length)];
+  var bright = document.getElementById(highlight);
+  var selectOne = document.getElementById("ONE")
   
-  
+  if (se)
   
 }
