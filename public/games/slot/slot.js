@@ -20,6 +20,7 @@ function startSlots() {
       var nameItem = slotNames[Math.floor(Math.random() * slotNames.length)];
       getItem.title = nameItem;
       getItem.innerHTML = nameItem;
+      getItem.className = "slotitem";
       startSlots();
     } else {
       sniffitems.value = "0";
@@ -76,13 +77,16 @@ function checkWIN() {
     } else {
       if (selectOne.title == selectTwo.title) {
         if (selectTwo.title == selectThree.title) {
+          selectOne.title = "select";
+          selectTwo.title = "select";
+          selectThree.title = "select";
           alert("YOU WIN");
         }
       } else {
         items.value = "0";
         selectOne.title = "select";
-                selectOne.title = "select";
-        selectOne.title = "select";
+        selectTwo.title = "select";
+        selectThree.title = "select";
 
         alert("Sorry Try Again");
       }
