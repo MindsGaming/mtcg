@@ -50,6 +50,8 @@ function spinME() {
         selectThree.title = bright.title;
         selectThree.innerHTML = bright.title;
         bright.className = "highlight";
+        var items = document.getElementById("ITEMS");
+        items.value = "0";
         checkWIN();
       }
     }
@@ -57,23 +59,33 @@ function spinME() {
 }
 
 function checkWIN() {
-  var superitems = document.getElementById(slotItems);
-  superitems.className = "slotitem";
-}
-var items = document.getElementById("ITEMS");
-var boost = 1;
-var math = items.value + boost;
-var sniffitems = document.getElementById("ITEMS");
-sniffitems.value = math;
+  const selectOne = document.getElementById("ONE");
+  const selectTwo = document.getElementById("TWO");
+  const selectThree = document.getElementById("THREE");
+  var items = document.getElementById("ITEMS");
+  var boost = 1;
+  var math = items.value + boost;
+  var sniffitems = document.getElementById("ITEMS");
+  sniffitems.value = math;
+  var getItem = document.getElementById(math);
 
-var getItem = document.getElementById(math);
+  if (items.value < 19) {
+    if (getItem.title == "blank") {
+      getItem.className = "slotitem";
+      checkWIN();
+    } else {
+      if (selectOne.title == selectTwo.title) {
+        if (selectTwo.title == selectThree.title) {
+          alert("YOU WIN");
+        }
+      } else {
+        items.value = "0";
+        selectOne.title = "select";
+                selectOne.title = "select";
+        selectOne.title = "select";
 
-sniffitems.value = math;
-if (items.value < 19) {
-  if (getItem.title == "blank") {
-    var nameItem = slotNames[Math.floor(Math.random() * slotNames.length)];
-    getItem.title = nameItem;
-    getItem.innerHTML = nameItem;
-    startSlots();
+        alert("Sorry Try Again");
+      }
+    }
   }
 }
