@@ -23,10 +23,13 @@
     <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
     <script src="/client.js" defer></script>
     <script src="/games/games.js" defer></script>
+    <script src="/games/spin/spin.js" defer></script>
+    <script src="/games/spin/start.js" defer></script>
 
     <script src="/fly.js" defer></script>
 
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/games/spin/style.css" defer />
   </head>
   <body>
     <wrap>
@@ -175,7 +178,7 @@
             >
             <a href="https://glitch.com/@mg-games" target="_blank">
               <button>Glitch (Code Games)</button>
-            </a>            
+            </a>
             <a href="https://hubs.mozilla.com/spoke/" target="_blank">
               <button>Spoke (Virtual Hubs)</button>
             </a>
@@ -234,6 +237,116 @@
               <p class="white">
                 Select A Game Below To Play While Earning Rewards
               </p>
+              <p style="color: red">
+                Rewards Mined: <label id="mined">0</label>
+              </p>
+              <div class="map">
+                <div>
+                  <div class="box" id="1" title="MINE">Blank</div>
+                  <div class="box" id="2" title="MINE">Blank</div>
+                  <div class="box" id="3" title="MINE">Blank</div>
+                  <div class="box" id="4" title="MINE">Blank</div>
+                  <div class="box" id="5" title="MINE">Blank</div>
+                </div>
+                <br />
+                <div>
+                  <div class="box" id="6" title="MINE">Blank</div>
+                  <div class="box" id="7" title="MINE">Blank</div>
+                  <div class="box" id="8" title="MINE">Blank</div>
+                  <div class="box" id="9" title="MINE">Blank</div>
+                  <div class="box" id="10" title="MINE">Blank</div>
+                </div>
+                <br />
+                <div>
+                  <div class="box" id="11" title="MINE">Blank</div>
+                  <div class="box" id="12" title="MINE">Blank</div>
+                  <div class="box" id="13" title="MINE">Blank</div>
+                  <div class="box" id="14" title="MINE">Blank</div>
+                  <div class="box" id="15" title="MINE">Blank</div>
+                </div>
+                <br />
+                <div>
+                  <div class="box" id="16" title="MINE">Blank</div>
+                  <div class="box" id="17" title="MINE">Blank</div>
+                  <div class="box" id="18" title="MINE">Blank</div>
+                  <div class="box" id="19" title="MINE">Blank</div>
+                  <div class="box" id="20" title="MINE">Blank</div>
+                </div>
+                <br />
+                <div>
+                  <div class="box" id="21" title="MINE">Blank</div>
+                  <div class="box" id="22" title="MINE">Blank</div>
+                  <div class="box" id="23" title="MINE">Blank</div>
+                  <div class="box" id="24" title="MINE">Blank</div>
+                  <div class="box" id="25" title="MINE">Blank</div>
+                </div>
+                <br />
+
+                <br />
+                <br />
+                <button class="mineBTN" id="dig">Spin</button>
+                <br />
+                <p>Loaded:<label id="pool">2</label></p>
+                <p>Skill:<label id="hardness">0</label></p>
+                <div class="lastspin">
+                  <h3>MATCH THREE</h3>
+                  <label id="ONE"></label>
+                  <label id="TWO"></label>
+                  <label id="THREE"></label>
+                </div>
+                <div class="unlock">Unlock Claim By Hitting The JackPot!</div>
+              </div>
+              <meter
+                id="POOL"
+                title="POOL"
+                class="hide"
+                min="1"
+                low="1"
+                high="100"
+                max="1000"
+                value="2"
+              ></meter>
+              <meter
+                id="EARNED"
+                title="EARNED"
+                class="hide"
+                min="0"
+                low="1"
+                high="100"
+                max="1000"
+                value="0"
+              ></meter>
+              <meter
+                id="HARDNESS"
+                title="HARDNESS"
+                class="hide"
+                min="0"
+                low="5000"
+                high="25000"
+                max="100000"
+                value="5000"
+              ></meter>
+              <meter
+                id="RANDOM"
+                title="RANDOM"
+                class="hide"
+                min="0"
+                low="1"
+                high="25"
+                max="26"
+                value="1"
+              ></meter>
+              <meter
+                id="SPINS"
+                title="SPINS"
+                class="hide"
+                min="0"
+                low="1"
+                high="3"
+                max="4"
+                value="1"
+              ></meter>
+              <br />
             </article>
 
             <article>
