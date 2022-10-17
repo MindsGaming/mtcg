@@ -250,6 +250,19 @@ SALT.title = "SALT";
 SALT.className = "card";
 const salt = document.getElementById("SALT").appendChild(SALT);
 
+const BUTTER = document.createElement("img");
+BUTTER.src =
+  "https://momintdev.blob.core.windows.net/uploads/9eeda844-6f70-4c51-bffe-27af47504d6c.jpeg";
+BUTTER.title = "BUTTER";
+BUTTER.className = "card";
+const butter = document.getElementById("BUTTER").appendChild(BUTTER);
+
+const DEVIL = document.createElement("img");
+DEVIL.src = "https://momintdev.blob.core.windows.net/uploads/c2f9cb98-05c0-4724-94c0-22a5b717a056.jpeg"
+ DEVIL.title = "DEVIL";
+DEVIL.className = "card";
+const devil = document.getElementById("DEVIL").appendChild(DEVIL);
+
 /// Card Tools
 
 function hideBirds() {
