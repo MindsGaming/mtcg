@@ -234,6 +234,22 @@ const SHARKSANDMINNOWS = document
   .getElementById("SharksAndMinnows")
   .appendChild(SharksAndMinnows);
 
+const MonkeyBusiness = document.createElement("img");
+MonkeyBusiness.src =
+  "https://momintdev.blob.core.windows.net/uploads/39323bfe-fc58-4e0e-ae55-d74a826ea583.jpeg";
+MonkeyBusiness.title = "Sharks And Minnows";
+MonkeyBusiness.className = "card";
+const MONKEYBUSINESS = document
+  .getElementById("MonkeyBusiness")
+  .appendChild(MonkeyBusiness);
+
+const SALT = document.createElement("img");
+SALT.src =
+  "https://momintdev.blob.core.windows.net/uploads/fc2bee49-74ad-4f86-bfa1-0432f18d804b.jpeg";
+SALT.title = "SALT";
+SALT.className = "card";
+const salt = document.getElementById("SALT").appendChild(SALT);
+
 /// Card Tools
 
 function hideBirds() {
