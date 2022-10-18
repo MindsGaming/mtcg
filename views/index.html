@@ -288,66 +288,68 @@
                 <br />
                 <p class="hide">Loaded:<label id="pool">2</label></p>
                 <p>Skill:<label id="hardness">0</label></p>
-                <br>
-                <div class="lastspin">
-                  <h3>MATCH THREE</h3>
-                  <label id="ONE"></label>
-                  <label id="TWO"></label>
-                  <label id="THREE"></label>
+                <br />
+                <div class="">
+                  <p>
+                    Your Spins:
+                    <label id="ONE"></label>
+                    <label id="TWO"></label>
+                    <label id="THREE"></label>
+                  </p>
+                  <div class="unlock">Unlock Claim By Hitting The JackPot!</div>
                 </div>
-                <div class="unlock">Unlock Claim By Hitting The JackPot!</div>
+                <meter
+                  id="POOL"
+                  title="POOL"
+                  class="hide"
+                  min="1"
+                  low="1"
+                  high="100"
+                  max="1000"
+                  value="2"
+                ></meter>
+                <meter
+                  id="EARNED"
+                  title="EARNED"
+                  class="hide"
+                  min="0"
+                  low="1"
+                  high="100"
+                  max="1000"
+                  value="0"
+                ></meter>
+                <meter
+                  id="HARDNESS"
+                  title="HARDNESS"
+                  class="hide"
+                  min="0"
+                  low="5000"
+                  high="25000"
+                  max="100000"
+                  value="5000"
+                ></meter>
+                <meter
+                  id="RANDOM"
+                  title="RANDOM"
+                  class="hide"
+                  min="0"
+                  low="1"
+                  high="25"
+                  max="26"
+                  value="1"
+                ></meter>
+                <meter
+                  id="SPINS"
+                  title="SPINS"
+                  class="hide"
+                  min="0"
+                  low="1"
+                  high="3"
+                  max="4"
+                  value="1"
+                ></meter>
+                <br />
               </div>
-              <meter
-                id="POOL"
-                title="POOL"
-                class="hide"
-                min="1"
-                low="1"
-                high="100"
-                max="1000"
-                value="2"
-              ></meter>
-              <meter
-                id="EARNED"
-                title="EARNED"
-                class="hide"
-                min="0"
-                low="1"
-                high="100"
-                max="1000"
-                value="0"
-              ></meter>
-              <meter
-                id="HARDNESS"
-                title="HARDNESS"
-                class="hide"
-                min="0"
-                low="5000"
-                high="25000"
-                max="100000"
-                value="5000"
-              ></meter>
-              <meter
-                id="RANDOM"
-                title="RANDOM"
-                class="hide"
-                min="0"
-                low="1"
-                high="25"
-                max="26"
-                value="1"
-              ></meter>
-              <meter
-                id="SPINS"
-                title="SPINS"
-                class="hide"
-                min="0"
-                low="1"
-                high="3"
-                max="4"
-                value="1"
-              ></meter>
-              <br />
             </article>
 
             <article>
@@ -650,7 +652,7 @@
     </wrap>
     <div id="offline" class="hide">
       <center>
-        <h1>No connection Found, Try Againg</h1>
+        <h1>No connection Found :/</h1>
         <button onclick="HOME();">Relaod Site</button>
       </center>
     </div>
