@@ -287,16 +287,18 @@
                 <button class="mineBTN" id="dig">Spin</button>
                 <br />
                 <p class="hide">Loaded:<label id="pool">2</label></p>
-                <p>Skill:<label id="hardness">0</label></p>
-                <br />
+                <p class="hide">Skill:<label id="hardness">0</label></p>
                 <div class="">
                   <p>
                     Your Spins:
                     <label id="ONE"></label>
                     <label id="TWO"></label>
                     <label id="THREE"></label>
+                    <br>
+                    <label class="unlock"
+                      >Unlock Claim By Hitting The JackPot!</label
+                    >
                   </p>
-                  <div class="unlock">Unlock Claim By Hitting The JackPot!</div>
                 </div>
                 <meter
                   id="POOL"
@@ -392,8 +394,76 @@
                 <p class="white">Play Rock, Paper, Scissors Verse Our Bot</p>
 
                 <br />
-                <button onclick="RPS();">Start Playing!</button>
-              </div>
+<center>
+        <div id="PLAYER" class="player">
+          <b><textarea id="Player">Player One</textarea></b>
+          <br />
+          <label>Money: $</label><label id="pmoney">100</label>
+          <br />
+          <label>Gains:</label><label id="pgains">0.00</label>
+          <br />
+          <label>Stocks:</label><label id="pstocks">0</label>
+          <br />
+          <div class="astock">
+            <b id="atitle"><textarea>The Stock</textarea></b><br />
+            <label>Value:</label> <label id="astock">0.00</label>
+            <br />
+            <label
+              >Amount: <label id="amount">0</label
+              ><button class="amount" onclick="addone()">+</button
+              ><button class="amount" onclick="removeone()">-</button>
+            </label>
+            <label>Price: <label id="Price">0.00</label></label
+            ><br />
+            <button onclick="buystock();">Buy</button>
+            <button onclick="sellstock();">Sell</button>
+          </div>
+        </div>
+        <br />
+      </center>
+      <br />
+      <div class="hide">
+        <div class="challange" id="HARD" title="OFF">
+          <b>Gain -150.00</b>
+          <button id="starthard" title="Start" onclick="hard();">Start</button>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="note">
+        <p>
+          This game is not ment to simulate actual trading, only show the
+          benefits of buying low and selling high.
+        </p>
+      </div>
+<br>
+                <div class="hide" id="METERS">
+      <meter id="ASTOCK" min="0" low="1" high="5" max="100" value="0"></meter>
+      <meter id="AMOUNT" min="0" low="1" high="5" max="1000" value="0"></meter>
+      <meter
+        id="PRICE"
+        min="0"
+        low="1"
+        high="90"
+        max="100000"
+        value="0"
+      ></meter>
+      <meter
+        id="MONEY"
+        min="0"
+        low="1"
+        high="90"
+        max="100000"
+        value="100"
+      ></meter>
+      <meter
+        id="STOCKS"
+        min="0"
+        low="1"
+        high="90"
+        max="100000"
+        value="0"
+      ></meter>
             </article>
 
             <article>
