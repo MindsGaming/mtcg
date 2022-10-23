@@ -250,3 +250,10 @@ button:hover {
   opacity: 2;
   background-color: green;
 }
+
+.airdrop {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 100px;
+}
