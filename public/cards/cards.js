@@ -263,6 +263,38 @@ DEVIL.src = "https://momintdev.blob.core.windows.net/uploads/c2f9cb98-05c0-4724-
 DEVIL.className = "card";
 const devil = document.getElementById("DEVIL").appendChild(DEVIL);
 
+
+const WITCH = document.createElement("img");
+WITCH.src =
+  "https://momintdev.blob.core.windows.net/uploads/c911cf2e-0716-4c0a-b40c-82e473735bdc.jpeg";
+WITCH.title = "WITCH";
+WITCH.className = "card";
+const witch = document.getElementById("WITCH").appendChild(WITCH);
+
+const JackOLantern = document.createElement("img");
+JackOLantern.src =
+  "https://momintdev.blob.core.windows.net/uploads/879009d5-1dd3-42d8-98dc-f1b01791cf04.jpeg";
+JackOLantern.title = "Jack-O'-Lantern";
+JackOLantern.className = "card";
+const JackoLantern = document
+  .getElementById("JackOLantern")
+  .appendChild(JackOLantern);
+
+const TicTacToe = document.createElement("img");
+TicTacToe.src =
+  "https://momintdev.blob.core.windows.net/uploads/d47ec73b-3901-4f94-ace6-5ac2f95cd258.jpeg";
+TicTacToe.title = "Tic-Tac-Toe";
+TicTacToe.className = "card";
+const TicTactoe = document.getElementById("TicTacToe").appendChild(TicTacToe);
+
+const BNDR = document.createElement("img");
+BNDR.src =
+  "https://momintdev.blob.core.windows.net/uploads/d1606154-dc5c-472b-a8d3-a1ebcb2698f0.jpeg";
+BNDR.title = "BNDR";
+BNDR.className = "card";
+const bdr = document.getElementById("BNDR").appendChild(BNDR);
+
+
 /// Card Tools
 
 function hideBirds() {
