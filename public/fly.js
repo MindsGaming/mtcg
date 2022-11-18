@@ -22,7 +22,7 @@ function changeToken() {
     "GAMER",
   ];
   const newtoken = newTokens[Math.floor(Math.random() * newTokens.length)];
-  dreamToken.innerHTML = newtoken;
+  dreamToken.innerHTML = "DragonToken";
 
   if (newtoken == oldToken) {
     changeToken();
