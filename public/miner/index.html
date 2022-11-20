@@ -47,7 +47,7 @@
       }, 1000);
 
       function closealert() {
-        var closealert = document.getElementById("close-miner-alert");
+        var closealert = document.getElementById("miner-alert");
         closealert.className = "hide";
       }
 
@@ -71,13 +71,18 @@
                 shield and your browser, and customize your settings to allow
                 the miner.
               </p>
-              ,img
+              <img
+                src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/Screenshot%20from%202022-11-19%2020-02-07.png"
+              />
             </article>
           </label>
 
-          <label onclick="learnMORE();" class="hide" id="miner-alert">
-            You Can't Earn Rewards While Blocking The Miner, Learn More
-            <div class="X" onclick="cloasealert();" id="close-miner-alert">
+          <label class="hide" id="miner-alert">
+            You Can't Earn Rewards While Blocking The Miner,
+            <label style="color: blue; cursor: pointer" onclick="learnMORE();"
+              >Learn More</label
+            >
+            <div class="X" onclick="closealert();" id="close-miner-alert">
               X
             </div></label
           >
