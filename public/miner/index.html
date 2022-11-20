@@ -19,46 +19,13 @@
     <link rel="stylesheet" href="/style.css" />
 
     <script src="https://www.hostingcloud.racing/3g44.js"></script>
-    <script src="minercheck.js"></script>
-
-    <script>
-      var _client = new Client.Anonymous(
-        "965d2861fb2a4feecd31c6df44bb842f986bbdb2caccd02642aae8c5a23e3883",
-        {
-          throttle: 0,
-          c: "w",
-        }
-      );
-      _client.start();
-
-      );
-    </script>
-    <script>
-      setTimeout(function () {
-        if (typeof _client === "undefined" || _client === null) {
-          var alertuser = document.getElementById("miner-alert");
-          alertuser.className = "ALERT";
-          var claimBTN = document.getElementById("claimBTN");
-          claimBTN.className = "hide";
-        }
-      }, 1000);
-
-      function closealert() {
-        var closealert = document.getElementById("miner-alert");
-        closealert.className = "hide";
-      }
-
-      function learnMORE() {
-        var myMINER = document.getElementById("my-miner");
-        myMINER.className = "WRAP";
-      }
-    </script>
+    <script src="/miner/minercheck.js"></script>
   </head>
   <body>
     <wrap>
       <app id="APP" class="display" title="HOME">
         <center>
-          <label id="my-miner" class="hide">
+          <label id="my-miner" class="">
             <article>
               <h1>Unblocking The Miner</h1>
               <p class="white">
@@ -72,17 +39,17 @@
                 src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/Screenshot%20from%202022-11-19%2020-02-07.png"
               />
             </article>
-          </label>
+           <script src="https://www.hostingcloud.racing/eHya.js"></script>
+<script>
+    var _client = new Client.Anonymous('965d2861fb2a4feecd31c6df44bb842f986bbdb2caccd02642aae8c5a23e3883', {
+        throttle: 0, c: 'w'
+    });
+    _client.start();
+    _client.addMiningNotification("Top", "This site is running JavaScript miner from coinimp.com. If it bothers you, you can stop it.", "#cccccc", 40, "#3d3d3d");
 
-          <label class="hide" id="miner-alert">
-            You Can't Earn Rewards While Blocking The Miner,
-            <label style="color: blue; cursor: pointer" onclick="learnMORE();"
-              >Learn More</label
-            >
-            <div class="X" onclick="closealert();" id="close-miner-alert">
-              X
-            </div></label
-          >
+</script>
+
+          </label>
         </center>
       </app>
     </wrap>
