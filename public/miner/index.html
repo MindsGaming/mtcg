@@ -41,8 +41,8 @@
         if (typeof _client === "undefined" || _client === null) {
           var alertuser = document.getElementById("miner-alert");
           alertuser.className = "ALERT";
-          alertuser.innerHTML =
-            "You Can't Earn Rewards While Blocking The Miner, Learn More";
+          var claimBTN = document.getElementById("claimBTN");
+          claimBTN.className = "hide";
         }
       }, 1000);
 
@@ -50,10 +50,18 @@
         var closealert = document.getElementById("close-miner-alert");
         closealert.className = "hide";
       }
+
+      function learnMORE() {
+        var myMINER = document.getElementById("my-miner");
+        myMINER.className = "WRAP";
+      }
     </script>
   </head>
   <body>
-    <label class="hide" id="miner-alert">
+    <label id="my-miner" class="hide"></label>
+
+    <label onclick="learnMORE();" class="hide" id="miner-alert">
+      You Can't Earn Rewards While Blocking The Miner, Learn More
       <div class="X" onclick="cloasealert();" id="close-miner-alert">
         X
       </div></label
