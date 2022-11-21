@@ -98,13 +98,13 @@ button:hover {
   top: 0;
   right: 0;
   margin: 3px;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-style: groove;
   border-radius: 20px 0px 00px 20px;
   background-color: blue;
   cursor: pointer;
-  background-image: url("https://ipack.glitch.me/ogsmile.png");
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669052080420.png");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 3;
