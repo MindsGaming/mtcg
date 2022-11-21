@@ -280,3 +280,11 @@ button:hover {
   width: 90%;
   height: 200px;
 }
+
+.clickminer {
+  color: green;
+  background-color: gold;
+  width: 50%;
+  border-style: groove;
+  border-radius: 30px 30px 30px 30px;
+}

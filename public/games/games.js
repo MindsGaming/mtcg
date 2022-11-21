@@ -131,3 +131,54 @@ function BART() {
     }
   }
 }
+
+function clickMINER() {
+  var currentclicks = document.getElementById("CLICKMINER");
+  var addclicks = 0.01;
+  var clickmath = currentclicks.value + addclicks;
+  var pushclicks = document.getElementById("CLICKMINER");
+  pushclicks.value = clickmath;
+  var displayclicks = document.getElementById("click-earned");
+  displayclicks.innerHTML = clickmath;
+
+  if (clickmath > 100) {
+    var clickbtn = document.getElementById("click-btn");
+    clickbtn.innerHTML = "Claim Rewards!";
+    clickbtn.addEventListener("click", cashclickMINER);
+  }
+
+  function cashclickMINER() {
+    if (dreamInput.value == "") {
+      userview();
+    } else {
+      var EARNED = document.getElementById("CLICKMINER");
+      var REWARDS = EARNED.value;
+      if (REWARDS < 1) {
+        clickbtn.removeEventListener("click", cashclickMINER);
+      } else {
+        const data = {
+          dream: dreamInput.value + " " + "DragonToken" + ":" + REWARDS,
+        };
+        fetch("/addDream", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log(JSON.stringify(response));
+          });
+        // get dream value and add it to the list
+        dreams.push(dreamInput.value + "  " + "DragonToken" + ":" + REWARDS);
+        appendNewDream(dreamInput.value + "  " + "DragonToken" + ":" + REWARDS);
+
+        EARNED.value = "0";
+        clickbtn.innerHTML = "Click Me";
+        EARNED.value = "0";
+        reset();
+        levelUp();
+      }
+    }
+  }
+}
+
