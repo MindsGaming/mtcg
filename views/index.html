@@ -245,6 +245,7 @@
       <!-- GAMES Built In -->
 
       <div class="hide" id="GAMES" title="closed">
+        <div id="inplay" class="hide" title="CLOSED"></div>
         <div id="gameMenu" class="" title="CLOSED">
           <center>
             <article>
@@ -255,7 +256,6 @@
             </article>
 
             <article>
-              <div id="spin-btn" onclick="theStock();" class="hide">X</div>
               <h1 id="spin-title">Spin Miner</h1>
               <div id="spin-info">
                 <p class="white">
@@ -374,132 +374,44 @@
             </article>
 
             <article>
-              <div id="stock-btn" onclick="theStock();" class="hide">X</div>
-              <h1 id="stock-title">The Stock</h1>
-              <div id="stock-info">
-                <p class="white">
-                  Trade this fake stock and learn the benifit of buying low and
-                  selling high!
-                </p>
-                <iframe
-                  style="
-                    width: 100%;
-                    height: 450px;
-                    overflow: scroll;
-                    border-radius: 25px 25px 25px 25px;
-                  "
-                  src="/games/the-stock"
-                >
-                </iframe>
+              <h1 id="click-title">Click Miner</h1>
+              <div id="click-info">
+                <p class="white">Fill the meter and earn rewards!</p>
+                <meter
+                  class="clickminer"
+                  id="CLICKMINER"
+                  min="0"
+                  low="25"
+                  high="85"
+                  max="100"
+                  value="0"
+                ></meter>
+                <button id="click-btn" onclick="clickMINER();">Click Me</button>
+                <br />
+                <div class="white">
+                  <label>Earned:<label id="click-earned">0</label></label>
+                </div>
               </div>
             </article>
 
             <article>
-              <div id="gtpc-btn" onclick="theStock();" class="hide">X</div>
               <h1 id="gtpc-title">GTPC</h1>
+              <div id="gtpc-build" title="build" class="hide"></div>
               <div id="gtpc-info">
                 <p class="white">
                   No mistake GTPC has thier own game, website and rewards make
                   sure to check them out!
                 </p>
-                <div id="gtpc-build" title="build" class="hide"></div>
 
                 <br />
-                <a href="https://gametestplay.com/" target="_blank">
+                <a href="http://gametestplay.com/" target="_blank">
                   <button>Explore GTPC!</button></a
                 >
               </div>
             </article>
 
             <article>
-              <div id="rps-btn" onclick="RPS();" class="hide">X</div>
-              <h1 id="rps-title">Rock, Paper, Scissors</h1>
-              <div id="rps-build" title="build" class="hide"></div>
-              <div id="rps-info">
-                <p class="white">Play Rock, Paper, Scissors Verse Our Bot</p>
-
-                <br />
-                <button onclick="RPS();">Start Playing!</button>
-              </div>
-            </article>
-
-            <article>
-              <div id="wack-btn" onclick="WACK();" class="hide">X</div>
-              <h1 id="wack-title">Wack Me</h1>
-              <div id="wack-build" title="build" class="hide"></div>
-              <div id="wack-info">
-                <p class="white">
-                  Wack Me is a wackamole style game, give it a try
-                </p>
-
-                <br />
-                <button onclick="WACK();">Start Playing!</button>
-              </div>
-            </article>
-
-            <article class="hide">
-              <div id="bart-btn" onclick="BART();" class="hide">X</div>
-              <h1 id="bart-title">BART Ballons</h1>
-              <div id="bart-build" title="closed" class="hide">
-                <div id="BARTSBALLONS">
-                  <script src="/games/balloon/pop.js" defer></script>
-                  <wrap>
-                    <center>
-                      <h1>BART Balloon</h1>
-                      <p>What Will You Do?</p>
-                      <img
-                        id="balloon"
-                        title="balloon"
-                        width="100px"
-                        height="100px"
-                        src="https://cdn.glitch.global/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28/balloon.png"
-                      /><br /><br />
-                      <label class="white">
-                        <label id="balloon-text">Rewards In Balloon:</label
-                        ><label id="pop">1</label></label
-                      >
-
-                      <br />
-                      <button onclick="popBalloon();">Add Air</button>
-
-                      <button onclick="grabBalloon();">Grab</button>
-                    </center>
-                  </wrap>
-                  <meter
-                    id="BALLOON"
-                    title="BALLON"
-                    class="hide"
-                    min="80"
-                    low="100"
-                    high="1000"
-                    max="10000"
-                    value="100"
-                  ></meter>
-                  <meter
-                    id="POP"
-                    title="POP"
-                    class="hide"
-                    min="0"
-                    low="1"
-                    high="100"
-                    max="1000"
-                    value="1"
-                  ></meter>
-                </div>
-              </div>
-              <div id="bart-info">
-                <p class="white">
-                  Game or test? The Balloon Analogue Risk Task (BART)
-                </p>
-                <br />
-                <button onclick="BART();">Start Playing!</button>
-              </div>
-            </article>
-
-            <article>
-              <div id="soon" class="hide">X</div>
               <h1 id="soon-title">New Games On The Way!</h1>
-              <div id="soon-build" title="build" class="hide"></div>
               <div id="soon-info">
                 <p class="white">
                   We are always changing and adding new games to try out and
