@@ -407,3 +407,10 @@ function checkStatus() {
     }
   }
 }
+
+function comingsoon() {
+  var comingsoon = document.getElementById("comingsoon");
+  comingsoon.innerHTML = "Stores Coming Soon!";
+  comingsoon.style =
+    "font-size: 30px; color: red; text-weight: bold; font-align: center;";
+}
