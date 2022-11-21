@@ -288,3 +288,18 @@ button:hover {
   border-style: groove;
   border-radius: 30px 30px 30px 30px;
 }
+
+.shopicon {
+  float: left;
+  display: block;
+  border-style: none;
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669065937567.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  background-color: pink;
+  z-index: 5;
+}
