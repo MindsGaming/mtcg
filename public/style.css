@@ -303,3 +303,11 @@ button:hover {
   background-color: pink;
   z-index: 5;
 }
+
+.shopbtn {
+  width: 150px;
+  background-color: silver;
+  text-align: center;
+  background-color: silver;
+  color: black;
+}
