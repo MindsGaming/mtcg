@@ -240,6 +240,7 @@ function ducktimer() {
 
   if (duckgame.title == "CLOSED") {
     duckgame.src = "https://duckhunterjs.glitch.me/";
+    duckgame.title = "DUCK";
     duckgame.style =
       "display: block; width: 100%;height: 400px;border-radius: 30px 30px 30px 30px; opacity: 0.9;";
   }
