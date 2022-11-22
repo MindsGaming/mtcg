@@ -258,11 +258,11 @@ BUTTER.className = "card";
 const butter = document.getElementById("BUTTER").appendChild(BUTTER);
 
 const DEVIL = document.createElement("img");
-DEVIL.src = "https://momintdev.blob.core.windows.net/uploads/c2f9cb98-05c0-4724-94c0-22a5b717a056.jpeg"
- DEVIL.title = "DEVIL";
+DEVIL.src =
+  "https://momintdev.blob.core.windows.net/uploads/c2f9cb98-05c0-4724-94c0-22a5b717a056.jpeg";
+DEVIL.title = "DEVIL";
 DEVIL.className = "card";
 const devil = document.getElementById("DEVIL").appendChild(DEVIL);
-
 
 const WITCH = document.createElement("img");
 WITCH.src =
@@ -292,8 +292,14 @@ BNDR.src =
   "https://momintdev.blob.core.windows.net/uploads/d1606154-dc5c-472b-a8d3-a1ebcb2698f0.jpeg";
 BNDR.title = "BNDR";
 BNDR.className = "card";
-const bdr = document.getElementById("BNDR").appendChild(BNDR);
+const bndr = document.getElementById("BNDR").appendChild(BNDR);
 
+const CD = document.createElement("img");
+CD.src =
+  "https://momintdev.blob.core.windows.net/uploads/44375f5e-3729-47b9-b585-64b0e8a5ff09.jpeg";
+CD.title = "CD";
+CD.className = "card";
+const cd = document.getElementById("CD").appendChild(CD);
 
 /// Card Tools
 
