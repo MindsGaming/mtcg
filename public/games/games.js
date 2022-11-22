@@ -227,28 +227,27 @@ function cashcastletimer() {
   }
 }
 
-
 /* Castle Timer */
 
 function ducktimer() {
-  const castleTIMER = document.getElementById("castletimer");
-  const castleminutes = document.getElementById("minutes");
-  const castleseconds = document.getElementById("seconds");
-  const castlemath = castleminutes.innerHTML + "." + castleseconds.innerHTML;
-  castleTIMER.innerHTML = castlemath;
+  const duckTIMER = document.getElementById("ducktimer");
+  const duckminutes = document.getElementById("minutes");
+  const duckseconds = document.getElementById("seconds");
+  const duckmath = duckminutes.innerHTML + "." + duckseconds.innerHTML;
+  duckTIMER.innerHTML = duckmath;
 }
 
-function cashcastletimer() {
+function cashducktimer() {
   if (dreamInput.value == "") {
     userview();
   } else {
-    var EARNED = document.getElementById("castletimer");
+    var EARNED = document.getElementById("ducktimer");
     var REWARDS = EARNED.innerHTML;
     if (REWARDS < 1) {
-      var castlealert = document.getElementById("castle-alert");
-      castlealert.className = "";
-      castlealert.innerHTML = "Full Reward Needed :/";
-      castlealert.style = "color: red;";
+      var duckalert = document.getElementById("duck-alert");
+      duckalert.className = "";
+      duckalert.innerHTML = "Full Reward Needed :/";
+      duckalert.style = "color: red;";
     } else {
       const data = {
         dream: dreamInput.value + " " + "DragonToken" + ":" + REWARDS,
