@@ -226,3 +226,49 @@ function cashcastletimer() {
     }
   }
 }
+
+
+/* Castle Timer */
+
+function ducktimer() {
+  const castleTIMER = document.getElementById("castletimer");
+  const castleminutes = document.getElementById("minutes");
+  const castleseconds = document.getElementById("seconds");
+  const castlemath = castleminutes.innerHTML + "." + castleseconds.innerHTML;
+  castleTIMER.innerHTML = castlemath;
+}
+
+function cashcastletimer() {
+  if (dreamInput.value == "") {
+    userview();
+  } else {
+    var EARNED = document.getElementById("castletimer");
+    var REWARDS = EARNED.innerHTML;
+    if (REWARDS < 1) {
+      var castlealert = document.getElementById("castle-alert");
+      castlealert.className = "";
+      castlealert.innerHTML = "Full Reward Needed :/";
+      castlealert.style = "color: red;";
+    } else {
+      const data = {
+        dream: dreamInput.value + " " + "DragonToken" + ":" + REWARDS,
+      };
+      fetch("/addDream", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          console.log(JSON.stringify(response));
+        });
+      // get dream value and add it to the list
+      dreams.push(dreamInput.value + "  " + "DragonToken" + ":" + REWARDS);
+      appendNewDream(dreamInput.value + "  " + "DragonToken" + ":" + REWARDS);
+
+      EARNED.innerHTML = "0";
+      reset();
+      levelUp();
+    }
+  }
+}
