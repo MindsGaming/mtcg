@@ -22,6 +22,7 @@ function MTCGinfo() {
     var T5 = document.getElementById("T5");
     var T6 = document.getElementById("T6");
     var T7 = document.getElementById("T7");
+    var T8 = document.getElementById("T8");
     T1.className = "";
     T2.className = "hide";
     T3.className = "hide";
@@ -29,6 +30,7 @@ function MTCGinfo() {
     T5.className = "hide";
     T6.className = "hide";
     T7.className = "hide";
+    T8.className = "hide";
     hideconnect.className = "hide";
   } else {
     tokenList.title = "CLOSED";
@@ -60,8 +62,7 @@ function GAMERinfo() {
     var T5 = document.getElementById("T5");
     var T6 = document.getElementById("T6");
     var T7 = document.getElementById("T7");
-        var T8 = document.getElementById("T8");
-
+    var T8 = document.getElementById("T8");
     T1.className = "hide";
     T2.className = "";
     T3.className = "hide";
@@ -69,7 +70,7 @@ function GAMERinfo() {
     T5.className = "hide";
     T6.className = "hide";
     T7.className = "hide";
-    T8.classname = "hide"
+    T8.classname = "hide";
     hideconnect.className = "hide";
   } else {
     tokenList.title = "CLOSED";
@@ -207,36 +208,11 @@ function DragonTokeninfo() {
     tokenList.title = "DragonToken";
     tokenList.className = "tokenlist";
 
-    var tokenPAGE = document.createElement("iframe");
-    tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/dragontoken";
-    tokenPAGE.className = "tokensplash";
-    var CREATINFO = document
-      .getElementById("DragonTokeninfo")
-      .appendChild(tokenPAGE);
-
     var pushpage = document.getElementById("TOKENINFO");
     pushpage.title = "DragonToken";
     pushpage.className = "tokenbutton";
     pushpage.innerHTML = "Connect DragonToken";
-
-    var hideconnect = document.getElementById("connect");
-    var T1 = document.getElementById("T1");
-    var T2 = document.getElementById("T2");
-    var T3 = document.getElementById("T3");
-    var T4 = document.getElementById("T4");
-    var T5 = document.getElementById("T5");
-    var T6 = document.getElementById("T6");
-    var T7 = document.getElementById("T7");
-    var T8 = document.getElementById("T8");
-    T1.className = "hide";
-    T2.className = "hide";
-    T3.className = "hide";
-    T4.className = "hide";
-    T5.className = "hide";
-    T6.className = "";
-    T7.className = "hide";
-    T8.className = "hide";
-    hideconnect.className = "hide";
+    addtokens();
   } else {
     tokenList.title = "CLOSED";
     tokenList.className = "hide";
@@ -249,36 +225,11 @@ function DarkMarkinfo() {
     tokenList.title = "DarkMark";
     tokenList.className = "tokenlist";
 
-    var tokenPAGE = document.createElement("iframe");
-    tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/darkmark";
-    tokenPAGE.className = "tokensplash";
-    var CREATINFO = document
-      .getElementById("DarkMarkinfo")
-      .appendChild(tokenPAGE);
-
     var pushpage = document.getElementById("TOKENINFO");
     pushpage.title = "DarkMark";
     pushpage.className = "tokenbutton";
     pushpage.innerHTML = "Connect DarkMark";
-
-    var hideconnect = document.getElementById("connect");
-    var T1 = document.getElementById("T1");
-    var T2 = document.getElementById("T2");
-    var T3 = document.getElementById("T3");
-    var T4 = document.getElementById("T4");
-    var T5 = document.getElementById("T5");
-    var T6 = document.getElementById("T6");
-    var T7 = document.getElementById("T7");
-    var T8 = document.getElementById("T8");
-    T1.className = "hide";
-    T2.className = "hide";
-    T3.className = "hide";
-    T4.className = "hide";
-    T5.className = "hide";
-    T6.className = "hide";
-    T7.className = "";
-    T8.className = "hide";
-    hideconnect.className = "hide";
+    addtokens();
   } else {
     tokenList.title = "CLOSED";
     tokenList.className = "hide";
@@ -287,39 +238,14 @@ function DarkMarkinfo() {
 function Candysinfo() {
   var tokenList = document.getElementById("Candysinfo");
   if (tokenList.title == "CLOSED") {
-    tokenList.title = "DarkMark";
+    tokenList.title = "Candys";
     tokenList.className = "tokenlist";
-
-    var tokenPAGE = document.createElement("iframe");
-    tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/candys";
-    tokenPAGE.className = "tokensplash";
-    var CREATINFO = document
-      .getElementById("Candysinfo")
-      .appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
     pushpage.title = "Candys";
-    pushpage.className = "tokenbutton";
+    pushpage.className = "hide";
     pushpage.innerHTML = "Connect Candys";
-
-    var hideconnect = document.getElementById("connect");
-    var T1 = document.getElementById("T1");
-    var T2 = document.getElementById("T2");
-    var T3 = document.getElementById("T3");
-    var T4 = document.getElementById("T4");
-    var T5 = document.getElementById("T5");
-    var T6 = document.getElementById("T6");
-    var T7 = document.getElementById("T7");
-    var T8 = document.getElementById("T8");
-    T1.className = "hide";
-    T2.className = "hide";
-    T3.className = "hide";
-    T4.className = "hide";
-    T5.className = "hide";
-    T6.className = "hide";
-    T7.className = "hide";
-    T8.className = "";
-    hideconnect.className = "hide";
+    addtokens();
   } else {
     tokenList.title = "CLOSED";
     tokenList.className = "hide";

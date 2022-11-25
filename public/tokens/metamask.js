@@ -336,7 +336,7 @@ function addtokens() {
     }
   }
 
-  if (addingtoken.title == "Darkmark") {
+  if (addingtoken.title == "DarkMark") {
     const tokenAddress = "0xB43E083a4E5a42b45a20012F9130152A04Fb1ECB";
     const tokenSymbol = "DarkMark";
     const tokenDecimals = 12;
