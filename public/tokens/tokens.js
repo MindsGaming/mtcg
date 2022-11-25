@@ -45,7 +45,7 @@ function GAMERinfo() {
     var tokenPAGE = document.createElement("iframe");
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/gamer";
     tokenPAGE.className = "tokensplash";
-    var CREATINFO = document.getElementById("GAMERinfo").appendChild(tokenPAGE);
+    var CREATINFO = document.getElementById("selectedPAGE").appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
     pushpage.title = "GAMER";
@@ -84,7 +84,7 @@ function ECLIPSEinfo() {
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/eclipse";
     tokenPAGE.className = "tokensplash";
     var CREATINFO = document
-      .getElementById("ECLIPSEinfo")
+      .getElementById("selectedPAGE")
       .appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
@@ -124,7 +124,7 @@ function DooBetterinfo() {
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/doobetter";
     tokenPAGE.className = "tokensplash";
     var CREATINFO = document
-      .getElementById("DooBetterinfo")
+      .getElementById("selectedPAGE")
       .appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
@@ -163,7 +163,7 @@ function GTPCinfo() {
     var tokenPAGE = document.createElement("iframe");
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/gtpc";
     tokenPAGE.className = "tokensplash";
-    var CREATINFO = document.getElementById("GTPCinfo").appendChild(tokenPAGE);
+    var CREATINFO = document.getElementById("selectedPAGE").appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
     pushpage.title = "GTPC";
@@ -203,7 +203,7 @@ function DragonTokeninfo() {
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/dragontoken";
     tokenPAGE.className = "tokensplash";
     var CREATINFO = document
-      .getElementById("DragonTokeninfo")
+      .getElementById("selectedPAGE")
       .appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
@@ -243,7 +243,7 @@ function DarkMarkinfo() {
     var tokenPAGE = document.createElement("iframe");
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/darkmark";
     tokenPAGE.className = "tokensplash";
-    var CREATINFO = document.getElementById("DarkMarkinfo").appendChild(tokenPAGE);
+    var CREATINFO = document.getElementById("selectedPAGE").appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
     pushpage.title = "DarkMark";
