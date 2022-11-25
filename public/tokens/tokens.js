@@ -45,7 +45,7 @@ function GAMERinfo() {
     var tokenPAGE = document.createElement("iframe");
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/gamer";
     tokenPAGE.className = "tokensplash";
-    var CREATINFO = document.getElementById("selectedPAGE").appendChild(tokenPAGE);
+    var CREATINFO = document.getElementById("GAMERinfo").appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
     pushpage.title = "GAMER";
@@ -60,6 +60,8 @@ function GAMERinfo() {
     var T5 = document.getElementById("T5");
     var T6 = document.getElementById("T6");
     var T7 = document.getElementById("T7");
+        var T8 = document.getElementById("T8");
+
     T1.className = "hide";
     T2.className = "";
     T3.className = "hide";
@@ -67,6 +69,7 @@ function GAMERinfo() {
     T5.className = "hide";
     T6.className = "hide";
     T7.className = "hide";
+    T8.classname = "hide"
     hideconnect.className = "hide";
   } else {
     tokenList.title = "CLOSED";
@@ -84,7 +87,7 @@ function ECLIPSEinfo() {
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/eclipse";
     tokenPAGE.className = "tokensplash";
     var CREATINFO = document
-      .getElementById("selectedPAGE")
+      .getElementById("ECLIPSEinfo")
       .appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
@@ -100,6 +103,7 @@ function ECLIPSEinfo() {
     var T5 = document.getElementById("T5");
     var T6 = document.getElementById("T6");
     var T7 = document.getElementById("T7");
+    var T8 = document.getElementById("T8");
     T1.className = "hide";
     T2.className = "hide";
     T3.className = "";
@@ -107,6 +111,7 @@ function ECLIPSEinfo() {
     T5.className = "hide";
     T6.className = "hide";
     T7.className = "hide";
+    T8.className = "hide";
     hideconnect.className = "hide";
   } else {
     tokenList.title = "CLOSED";
@@ -124,7 +129,7 @@ function DooBetterinfo() {
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/doobetter";
     tokenPAGE.className = "tokensplash";
     var CREATINFO = document
-      .getElementById("selectedPAGE")
+      .getElementById("DooBetterinfo")
       .appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
@@ -140,6 +145,7 @@ function DooBetterinfo() {
     var T5 = document.getElementById("T5");
     var T6 = document.getElementById("T6");
     var T7 = document.getElementById("T7");
+    var T8 = document.getElementById("T8");
     T1.className = "hide";
     T2.className = "hide";
     T3.className = "hide";
@@ -147,6 +153,7 @@ function DooBetterinfo() {
     T5.className = "hide";
     T6.className = "hide";
     T7.className = "hide";
+    T8.className = "hide";
     hideconnect.className = "hide";
   } else {
     tokenList.title = "CLOSED";
@@ -163,7 +170,7 @@ function GTPCinfo() {
     var tokenPAGE = document.createElement("iframe");
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/gtpc";
     tokenPAGE.className = "tokensplash";
-    var CREATINFO = document.getElementById("selectedPAGE").appendChild(tokenPAGE);
+    var CREATINFO = document.getElementById("GTPCinfo").appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
     pushpage.title = "GTPC";
@@ -178,6 +185,7 @@ function GTPCinfo() {
     var T5 = document.getElementById("T5");
     var T6 = document.getElementById("T6");
     var T7 = document.getElementById("T7");
+    var T8 = document.getElementById("T8");
     T1.className = "hide";
     T2.className = "hide";
     T3.className = "hide";
@@ -185,13 +193,13 @@ function GTPCinfo() {
     T5.className = "";
     T6.className = "hide";
     T7.className = "hide";
+    T8.classname = "hide";
     hideconnect.className = "hide";
   } else {
     tokenList.title = "CLOSED";
     tokenList.className = "hide";
   }
 }
-
 
 function DragonTokeninfo() {
   var tokenList = document.getElementById("DragonTokeninfo");
@@ -203,7 +211,7 @@ function DragonTokeninfo() {
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/dragontoken";
     tokenPAGE.className = "tokensplash";
     var CREATINFO = document
-      .getElementById("selectedPAGE")
+      .getElementById("DragonTokeninfo")
       .appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
@@ -219,6 +227,7 @@ function DragonTokeninfo() {
     var T5 = document.getElementById("T5");
     var T6 = document.getElementById("T6");
     var T7 = document.getElementById("T7");
+    var T8 = document.getElementById("T8");
     T1.className = "hide";
     T2.className = "hide";
     T3.className = "hide";
@@ -226,13 +235,13 @@ function DragonTokeninfo() {
     T5.className = "hide";
     T6.className = "";
     T7.className = "hide";
+    T8.className = "hide";
     hideconnect.className = "hide";
   } else {
     tokenList.title = "CLOSED";
     tokenList.className = "hide";
   }
 }
-
 
 function DarkMarkinfo() {
   var tokenList = document.getElementById("DarkMarkinfo");
@@ -243,7 +252,9 @@ function DarkMarkinfo() {
     var tokenPAGE = document.createElement("iframe");
     tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/darkmark";
     tokenPAGE.className = "tokensplash";
-    var CREATINFO = document.getElementById("selectedPAGE").appendChild(tokenPAGE);
+    var CREATINFO = document
+      .getElementById("DarkMarkinfo")
+      .appendChild(tokenPAGE);
 
     var pushpage = document.getElementById("TOKENINFO");
     pushpage.title = "DarkMark";
@@ -258,6 +269,7 @@ function DarkMarkinfo() {
     var T5 = document.getElementById("T5");
     var T6 = document.getElementById("T6");
     var T7 = document.getElementById("T7");
+    var T8 = document.getElementById("T8");
     T1.className = "hide";
     T2.className = "hide";
     T3.className = "hide";
@@ -265,13 +277,54 @@ function DarkMarkinfo() {
     T5.className = "hide";
     T6.className = "hide";
     T7.className = "";
+    T8.className = "hide";
     hideconnect.className = "hide";
   } else {
     tokenList.title = "CLOSED";
     tokenList.className = "hide";
   }
 }
+function Candysinfo() {
+  var tokenList = document.getElementById("Candysinfo");
+  if (tokenList.title == "CLOSED") {
+    tokenList.title = "DarkMark";
+    tokenList.className = "tokenlist";
 
+    var tokenPAGE = document.createElement("iframe");
+    tokenPAGE.src = "https://mindsgaming.glitch.me/tokens/candys";
+    tokenPAGE.className = "tokensplash";
+    var CREATINFO = document
+      .getElementById("Candysinfo")
+      .appendChild(tokenPAGE);
+
+    var pushpage = document.getElementById("TOKENINFO");
+    pushpage.title = "Candys";
+    pushpage.className = "tokenbutton";
+    pushpage.innerHTML = "Connect Candys";
+
+    var hideconnect = document.getElementById("connect");
+    var T1 = document.getElementById("T1");
+    var T2 = document.getElementById("T2");
+    var T3 = document.getElementById("T3");
+    var T4 = document.getElementById("T4");
+    var T5 = document.getElementById("T5");
+    var T6 = document.getElementById("T6");
+    var T7 = document.getElementById("T7");
+    var T8 = document.getElementById("T8");
+    T1.className = "hide";
+    T2.className = "hide";
+    T3.className = "hide";
+    T4.className = "hide";
+    T5.className = "hide";
+    T6.className = "hide";
+    T7.className = "hide";
+    T8.className = "";
+    hideconnect.className = "hide";
+  } else {
+    tokenList.title = "CLOSED";
+    tokenList.className = "hide";
+  }
+}
 
 function goBack() {
   window.open("/tokens/index.html", "_self");
