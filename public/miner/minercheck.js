@@ -5,7 +5,7 @@ setTimeout(function () {
     var claimBTN = document.getElementById("claimBTN");
     var minerarticle = document.getElementById("my-miner");
     var pending = document.getElementById("PENDING");
-    var yourLevel = document.getElementById("yourlevel");
+    var yourLevel = document.getElementById("yourLevel");
     yourLevel.innerHTML = "Connect Miner";
     alertuser.innerHTML = "Allow Our Miner To Start Earning Rewards";
     claimBTN.className = "hide";
