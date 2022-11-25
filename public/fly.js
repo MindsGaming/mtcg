@@ -12,22 +12,31 @@ changeToken();
 function changeToken() {
   var oldToken = dreamToken.innerHTML;
 
-  var extralist = ["DragonToken", "DarkMark", "ECLIPSE", "DooBetter", "GTPC"];
+  var extralist = [
+    "DragonToken",
+    "DarkMark",
+    "Candys",
+    "ECLIPSE",
+    "DooBetter",
+    "GTPC",
+  ];
   var newTokens = [
     "DarkMark",
     "DragonToken",
+    "Candys",
     "ECLIPSE",
     "DooBetter",
     "GTPC",
     "GAMER",
   ];
   const newtoken = newTokens[Math.floor(Math.random() * newTokens.length)];
-  dreamToken.innerHTML = "DragonToken";
+  dreamToken.innerHTML = newtoken;
 
   if (newtoken == oldToken) {
     changeToken();
   } else {
     var levelUp = document.getElementById("levelUp");
+
     if (newtoken == "DarkMark") {
       dreamToken.className = "darkmarkIMG";
       dreamToken.title = newtoken;
@@ -39,28 +48,33 @@ function changeToken() {
       dreamToken.title = newtoken;
       levelUp.value = "11";
     }
+    if (newtoken == "Candys") {
+      dreamToken.className = "candysIMG";
+      dreamToken.title = newtoken;
+      levelUp.value = "17";
+    }
 
     if (newtoken == "ECLIPSE") {
       dreamToken.className = "eclipseIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "15";
+      levelUp.value = "21";
     }
 
     if (newtoken == "DooBetter") {
       dreamToken.className = "doobetterIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "21";
+      levelUp.value = "32";
     }
     if (newtoken == "GTPC") {
       dreamToken.className = "gtpcIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "25";
+      levelUp.value = "42";
     }
 
     if (newtoken == "GAMER") {
       dreamToken.className = "gamerIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "31";
+      levelUp.value = "52";
     }
     var current = levelUp.value;
     var remove = 1;

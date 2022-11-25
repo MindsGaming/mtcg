@@ -8,7 +8,7 @@ var dreamToken = document.getElementById("myToken");
 var dreamWallet = document.getElementById("myWallet");
 
 var totalSeconds = 0;
-setInterval(setTime, 8000);
+setInterval(setTime, 80);
 
 function setTime() {
   ++totalSeconds;
@@ -20,6 +20,11 @@ function setTime() {
   if (minutesLabel.innerHTML == "11") {
     if (secondsLabel.innerHTML == "01") {
       levelups.value = "10";
+    }
+  }
+  if (minutesLabel.innerHTML == "17") {
+    if (secondsLabel.innerHTML == "01") {
+      levelups.value = "16";
     }
   }
   if (minutesLabel.innerHTML == "21") {
@@ -159,6 +164,7 @@ function claimUpdate() {
       alert("You Need A Full Token To Claim Rewards");
     } else {
       var REWARDS = minutesLabel.innerHTML + "." + secondsLabel.innerHTML;
+      levelUp();
 
       const data = {
         dream: dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS,
@@ -181,7 +187,6 @@ function claimUpdate() {
       );
 
       reset();
-      levelUp();
     }
   }
 }
@@ -228,12 +233,22 @@ function levelUp() {
   var tackCount = document.getElementById("levelUp").value;
   var tackcount = tackCount + 1;
   document.getElementById("levelUp").value = tackcount;
+  var yourlevel = document.getElementById("yourLevel");
 
   if (tackcount == "11") {
     dreamToken.innerHTML = "DragonToken";
     dreamToken.title = "DragonToken";
     dreamToken.className = "dragontokenIMG";
     tackCount.value = "12";
+    yourlevel.innerHTML = "TWO";
+  }
+
+  if (tackcount == "16") {
+    dreamToken.innerHTML = "Candys";
+    dreamToken.title = "Candys";
+    dreamToken.className = "candysIMG";
+    tackCount.value = "17";
+    yourlevel.innerHTML = "THREE";
   }
 
   if (tackcount == "21") {
@@ -241,6 +256,7 @@ function levelUp() {
     dreamToken.title = "ECLIPSE";
     dreamToken.className = "eclipseIMG";
     tackCount.value = "22";
+    yourlevel.innerHTML = "FOUR";
   }
 
   if (tackcount == "31") {
@@ -248,6 +264,7 @@ function levelUp() {
     dreamToken.title = "DooBetter";
     dreamToken.className = "doobetterIMG";
     tackCount.value = "32";
+    yourlevel.innerHTML = "FIVE";
   }
 
   if (tackcount == "41") {
@@ -255,6 +272,7 @@ function levelUp() {
     dreamToken.title = "GTPC";
     dreamToken.className = "gtpcIMG";
     tackCount.value = "42";
+    yourlevel.innerHTML = "SIX";
   }
 
   if (tackcount == "51") {
@@ -262,6 +280,7 @@ function levelUp() {
     dreamToken.title = "GAMER";
     dreamToken.className = "gamerIMG";
     tackCount.value = "52";
+    yourlevel.innerHTML = "SEVEN";
   }
 
   if (tackcount == "61") {
@@ -269,6 +288,7 @@ function levelUp() {
     dreamToken.title = "DarkMark";
     dreamToken.className = "darkmarkIMG";
     tackCount.value = "0";
+    yourlevel.innerHTML = "ONE";
   }
 }
 
