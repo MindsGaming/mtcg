@@ -130,11 +130,11 @@ function Candysinfo() {
 function withinthevacuuminfo() {
   var tokenList = document.getElementById("withinthevacuuminfo");
   if (tokenList.title == "CLOSED") {
-    tokenList.title = "withinthevacuum";
+    tokenList.title = "WTV";
     tokenList.className = "tokenlist";
 
     var pushpage = document.getElementById("TOKENINFO");
-    pushpage.title = "withinthevacuum";
+    pushpage.title = "WTV";
     pushpage.className = "hide";
     pushpage.innerHTML = "Connect withinthevacuum";
     addtokens();

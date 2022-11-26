@@ -398,9 +398,9 @@ function addtokens() {
     }
   }
 
-  if (addingtoken.title == "withinthevacuum") {
+  if (addingtoken.title == "WTV") {
     const tokenAddress = "0x3C20f6fC8adCb39769E307a8B3a5109a3Ff97933";
-    const tokenSymbol = "withinthevacuum";
+    const tokenSymbol = "WTV";
     const tokenDecimals = 12;
     const tokenImage =
       "https://www.mintme.com/media/cache/avatar_large/uploads/images/88c34c38-548c-11ed-b7ae-ac162db679ce.png";
