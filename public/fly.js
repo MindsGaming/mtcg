@@ -16,6 +16,7 @@ function changeToken() {
     "DragonToken",
     "DarkMark",
     "Candys",
+    "withinthevacuum",
     "ECLIPSE",
     "DooBetter",
     "GTPC",
@@ -24,6 +25,7 @@ function changeToken() {
     "DarkMark",
     "DragonToken",
     "Candys",
+    "withinthevacuum",
     "ECLIPSE",
     "DooBetter",
     "GTPC",
@@ -51,15 +53,19 @@ function changeToken() {
     if (newtoken == "Candys") {
       dreamToken.className = "candysIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "17";
+      levelUp.value = "15";
+    }
+    if (newtoken == "withinthevacuum") {
+      dreamToken.className = "withinthevacuumIMG";
+      dreamToken.title = newtoken;
+      levelUp.value = "21";
     }
 
     if (newtoken == "ECLIPSE") {
       dreamToken.className = "eclipseIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "21";
+      levelUp.value = "25";
     }
-
     if (newtoken == "DooBetter") {
       dreamToken.className = "doobetterIMG";
       dreamToken.title = newtoken;

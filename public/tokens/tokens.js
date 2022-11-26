@@ -109,6 +109,7 @@ function DarkMarkinfo() {
     tokenList.className = "hide";
   }
 }
+
 function Candysinfo() {
   var tokenList = document.getElementById("Candysinfo");
   if (tokenList.title == "CLOSED") {
@@ -119,6 +120,23 @@ function Candysinfo() {
     pushpage.title = "Candys";
     pushpage.className = "hide";
     pushpage.innerHTML = "Connect Candys";
+    addtokens();
+  } else {
+    tokenList.title = "CLOSED";
+    tokenList.className = "hide";
+  }
+}
+
+function withinthevacuuminfo() {
+  var tokenList = document.getElementById("withinthevacuuminfo");
+  if (tokenList.title == "CLOSED") {
+    tokenList.title = "withinthevacuum";
+    tokenList.className = "tokenlist";
+
+    var pushpage = document.getElementById("TOKENINFO");
+    pushpage.title = "withinthevacuum";
+    pushpage.className = "hide";
+    pushpage.innerHTML = "Connect withinthevacuum";
     addtokens();
   } else {
     tokenList.title = "CLOSED";

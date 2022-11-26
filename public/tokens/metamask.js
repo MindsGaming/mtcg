@@ -397,6 +397,37 @@ function addtokens() {
       console.log(error);
     }
   }
+
+  if (addingtoken.title == "withinthevacuum") {
+    const tokenAddress = "0x3C20f6fC8adCb39769E307a8B3a5109a3Ff97933";
+    const tokenSymbol = "withinthevacuum";
+    const tokenDecimals = 12;
+    const tokenImage =
+      "https://www.mintme.com/media/cache/avatar_large/uploads/images/88c34c38-548c-11ed-b7ae-ac162db679ce.png";
+    try {
+      // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+      ethereum.request({
+        method: "wallet_watchAsset",
+        params: {
+          type: "ERC20", // Initially only supports ERC20, but eventually more!
+          options: {
+            address: tokenAddress, // The address that the token is at.
+            symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+            decimals: tokenDecimals, // The number of decimals in the token
+            image: tokenImage, // A string url of the token logo
+          },
+        },
+      });
+
+      if (wasAdded) {
+        console.log("Thanks for your interest!");
+      } else {
+        console.log("Your loss!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 function closePOP() {

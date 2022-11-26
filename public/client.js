@@ -22,14 +22,19 @@ function setTime() {
       levelups.value = "10";
     }
   }
-  if (minutesLabel.innerHTML == "17") {
+  if (minutesLabel.innerHTML == "16") {
     if (secondsLabel.innerHTML == "01") {
-      levelups.value = "16";
+      levelups.value = "15";
     }
   }
   if (minutesLabel.innerHTML == "21") {
     if (secondsLabel.innerHTML == "01") {
       levelups.value = "20";
+    }
+  }
+  if (minutesLabel.innerHTML == "26") {
+    if (secondsLabel.innerHTML == "01") {
+      levelups.value = "25";
     }
   }
   if (minutesLabel.innerHTML == "31") {
@@ -252,11 +257,19 @@ function levelUp() {
   }
 
   if (tackcount == "21") {
+    dreamToken.innerHTML = "withinthevacuum";
+    dreamToken.title = "withinthevacuum";
+    dreamToken.className = "withinthevacuumIMG";
+    tackCount.value = "22";
+    yourlevel.innerHTML = "FOUR";
+  }
+
+  if (tackcount == "25") {
     dreamToken.innerHTML = "ECLIPSE";
     dreamToken.title = "ECLIPSE";
     dreamToken.className = "eclipseIMG";
     tackCount.value = "22";
-    yourlevel.innerHTML = "FOUR";
+    yourlevel.innerHTML = "FIVE";
   }
 
   if (tackcount == "31") {
@@ -264,7 +277,7 @@ function levelUp() {
     dreamToken.title = "DooBetter";
     dreamToken.className = "doobetterIMG";
     tackCount.value = "32";
-    yourlevel.innerHTML = "FIVE";
+    yourlevel.innerHTML = "SIX";
   }
 
   if (tackcount == "41") {
@@ -272,7 +285,7 @@ function levelUp() {
     dreamToken.title = "GTPC";
     dreamToken.className = "gtpcIMG";
     tackCount.value = "42";
-    yourlevel.innerHTML = "SIX";
+    yourlevel.innerHTML = "SEVEN";
   }
 
   if (tackcount == "51") {
@@ -280,7 +293,7 @@ function levelUp() {
     dreamToken.title = "GAMER";
     dreamToken.className = "gamerIMG";
     tackCount.value = "52";
-    yourlevel.innerHTML = "SEVEN";
+    yourlevel.innerHTML = "EIGHT";
   }
 
   if (tackcount == "61") {
