@@ -345,6 +345,16 @@
                 <p style="color: red">
                   Spun Rewards: <label id="mined">0</label>
                 </p>
+                <div class="white">
+                  <p>
+                    Your Spins:
+                    <label id="ONE"></label>
+                    <label id="TWO"></label>
+                    <label id="THREE"></label><br /><br />
+                    <label id="FOUR"></label>
+                  </p>
+                </div>
+
                 <div class="map">
                   <div>
                     <div class="box" id="1" title="MINE">Blank</div>
@@ -389,26 +399,6 @@
                   <br />
                   <br />
                   <button class="mineBTN" id="dig">Spin</button>
-                  <p class="hide">Loaded:<label id="pool">2</label></p>
-                  <p class="hide">Skill:<label id="hardness">0</label></p>
-                  <div class="">
-                    <p>
-                      Your Spins:
-                      <label id="ONE"></label>
-                      <label id="TWO"></label>
-                      <label id="THREE"></label>
-                    </p>
-                  </div>
-                  <meter
-                    id="POOL"
-                    title="POOL"
-                    class="hide"
-                    min="1"
-                    low="1"
-                    high="100"
-                    max="1000"
-                    value="2"
-                  ></meter>
                   <meter
                     id="EARNED"
                     title="EARNED"
@@ -418,16 +408,6 @@
                     high="100"
                     max="1000"
                     value="0"
-                  ></meter>
-                  <meter
-                    id="HARDNESS"
-                    title="HARDNESS"
-                    class="hide"
-                    min="0"
-                    low="5000"
-                    high="25000"
-                    max="100000"
-                    value="5000"
                   ></meter>
                   <meter
                     id="RANDOM"
@@ -448,6 +428,16 @@
                     high="3"
                     max="4"
                     value="1"
+                  ></meter>
+                  <meter
+                    id="HARDNESS"
+                    title="HARDNESS"
+                    class="hide"
+                    min="1000"
+                    low="5000"
+                    high="100000"
+                    max="10000000"
+                    value="1000"
                   ></meter>
                   <br />
                 </div>
