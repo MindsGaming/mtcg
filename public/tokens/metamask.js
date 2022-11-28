@@ -428,6 +428,36 @@ function addtokens() {
       console.log(error);
     }
   }
+  if (addingtoken.title == "PINN") {
+    const tokenAddress = "0xD44bf50dc440a38bF76499cC854EACe4d6e350F4";
+    const tokenSymbol = "PINN";
+    const tokenDecimals = 12;
+    const tokenImage =
+      "https://www.mintme.com/media/cache/avatar_large/uploads/images/f8c5dbe6-cec7-11eb-be8f-78e3b517e592.jpeg";
+    try {
+      // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+      ethereum.request({
+        method: "wallet_watchAsset",
+        params: {
+          type: "ERC20", // Initially only supports ERC20, but eventually more!
+          options: {
+            address: tokenAddress, // The address that the token is at.
+            symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+            decimals: tokenDecimals, // The number of decimals in the token
+            image: tokenImage, // A string url of the token logo
+          },
+        },
+      });
+
+      if (wasAdded) {
+        console.log("Thanks for your interest!");
+      } else {
+        console.log("Your loss!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 function closePOP() {
