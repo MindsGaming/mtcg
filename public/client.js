@@ -42,6 +42,11 @@ function setTime() {
       levelups.value = "30";
     }
   }
+  if (minutesLabel.innerHTML == "36") {
+    if (secondsLabel.innerHTML == "01") {
+      levelups.value = "35";
+    }
+  }
   if (minutesLabel.innerHTML == "41") {
     if (secondsLabel.innerHTML == "01") {
       levelups.value = "40";
@@ -257,27 +262,35 @@ function levelUp() {
   }
 
   if (tackcount == "21") {
-    dreamToken.innerHTML = "withinthevacuum";
-    dreamToken.title = "withinthevacuum";
-    dreamToken.className = "withinthevacuumIMG";
+    dreamToken.innerHTML = "PINN";
+    dreamToken.title = "PINN";
+    dreamToken.className = "PINNIMG";
     tackCount.value = "22";
     yourlevel.innerHTML = "FOUR";
   }
 
   if (tackcount == "25") {
-    dreamToken.innerHTML = "ECLIPSE";
-    dreamToken.title = "ECLIPSE";
-    dreamToken.className = "eclipseIMG";
+    dreamToken.innerHTML = "withinthevacuum";
+    dreamToken.title = "withinthevacuum";
+    dreamToken.className = "withinthevacuumIMG";
     tackCount.value = "22";
     yourlevel.innerHTML = "FIVE";
   }
 
   if (tackcount == "31") {
+    dreamToken.innerHTML = "ECLIPSE";
+    dreamToken.title = "ECLIPSE";
+    dreamToken.className = "ECLIPSEIMG";
+    tackCount.value = "32";
+    yourlevel.innerHTML = "SIX";
+  }
+
+  if (tackcount == "36") {
     dreamToken.innerHTML = "DooBetter";
     dreamToken.title = "DooBetter";
     dreamToken.className = "doobetterIMG";
     tackCount.value = "32";
-    yourlevel.innerHTML = "SIX";
+    yourlevel.innerHTML = "SEVEN";
   }
 
   if (tackcount == "41") {
@@ -285,7 +298,7 @@ function levelUp() {
     dreamToken.title = "GTPC";
     dreamToken.className = "gtpcIMG";
     tackCount.value = "42";
-    yourlevel.innerHTML = "SEVEN";
+    yourlevel.innerHTML = "EIGHT";
   }
 
   if (tackcount == "51") {
@@ -293,14 +306,14 @@ function levelUp() {
     dreamToken.title = "GAMER";
     dreamToken.className = "gamerIMG";
     tackCount.value = "52";
-    yourlevel.innerHTML = "EIGHT";
+    yourlevel.innerHTML = "NINE";
   }
 
   if (tackcount == "61") {
     dreamToken.innerHTML = "DarkMark";
     dreamToken.title = "DarkMark";
     dreamToken.className = "darkmarkIMG";
-    tackCount.value = "0";
+    tackCount.value = "3";
     yourlevel.innerHTML = "ONE";
   }
 }

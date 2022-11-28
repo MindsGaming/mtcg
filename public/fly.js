@@ -16,6 +16,7 @@ function changeToken() {
     "DragonToken",
     "DarkMark",
     "Candys",
+    "PINN",
     "withinthevacuum",
     "ECLIPSE",
     "DooBetter",
@@ -25,6 +26,7 @@ function changeToken() {
     "DarkMark",
     "DragonToken",
     "Candys",
+    "PINN",
     "withinthevacuum",
     "ECLIPSE",
     "DooBetter",
@@ -53,34 +55,41 @@ function changeToken() {
     if (newtoken == "Candys") {
       dreamToken.className = "candysIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "15";
+      levelUp.value = "16";
     }
-    if (newtoken == "withinthevacuum") {
-      dreamToken.className = "withinthevacuumIMG";
+    if (newtoken == "PINN") {
+      dreamToken.className = "PINNIMG";
       dreamToken.title = newtoken;
       levelUp.value = "21";
     }
 
-    if (newtoken == "ECLIPSE") {
-      dreamToken.className = "eclipseIMG";
+    if (newtoken == "withinthevacuum") {
+      dreamToken.className = "withinthevacuumIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "25";
+      levelUp.value = "26";
     }
-    if (newtoken == "DooBetter") {
+    if (newtoken == "ECLIPSE") {
       dreamToken.className = "doobetterIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "32";
+      levelUp.value = "31";
     }
+
+    if (newtoken == "DooBetter") {
+      dreamToken.className = "gtpcIMG";
+      dreamToken.title = newtoken;
+      levelUp.value = "36";
+    }
+
     if (newtoken == "GTPC") {
       dreamToken.className = "gtpcIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "42";
+      levelUp.value = "41";
     }
 
     if (newtoken == "GAMER") {
       dreamToken.className = "gamerIMG";
       dreamToken.title = newtoken;
-      levelUp.value = "52";
+      levelUp.value = "51";
     }
     var current = levelUp.value;
     var remove = 1;
