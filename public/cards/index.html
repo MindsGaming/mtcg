@@ -52,8 +52,40 @@
       <app id="APP" class="display" title="HOME">
         <center>
           <article>
+            <h1>MTCG Token Shop</h1>
+            <p class="white">
+              You can purchase our last 10(Ten) minted cards from our token shop
+              for MTCG on MintMe!
+              <br />
+              Just head over to our token introduction page and open the token
+              shop to spend your MTCG on collector cards!
+            </p>
+            <button class="shopbtn">
+              <a href="https://www.mintme.com/token/MTCG">MTCG</a>
+            </button>
+          </article>
+
+          <article>
+            <h1>Creator Shops</h1>
+            <p class="white">
+              Each creator in our ecosystem has thier own shop and can sell a
+              wide range of items that can be found on the creators token
+              introduction page. <br />
+              Click below to open a random store item from one of our creators!
+            </p>
+            <button class="shopbtn" onclick="comingsoon();">Random Item</button>
+
+            <br />
+            <label id="comingsoon"></label>
+          </article>
+
+          <article>
             <center style="color: white">
-              <h1>MTCG Collector Cards</h1>
+              <h1>Momint Shop</h1>
+              <p>
+                Our full collection of collector cards can be purchased on
+                Momint!
+              </p>
               <div class="holder">
                 <label class="hide" onclick="byAttack();">ATK</label>
                 <div class="hide" title="CLOSED" id="SEARCH">
@@ -489,16 +521,6 @@
                         >Buy</a
                       >
                     </div>
-                    <div class="cHolder">
-                      <label id="CD"></label>
-                      <a
-                        href="https://app.momint.so/m/637a6f25159dfce6aa2740d3"
-                        target="_blank"
-                        class="button"
-                        title="Buy CD"
-                        >Buy</a
-                      >
-                    </div>
                   </div>
                 </div>
 
@@ -550,21 +572,6 @@
               </div>
             </center>
           </article>
-
-          <article>
-            <h1>Community Shops</h1>
-            <p class="white">
-              Select one of the topics below and open a creators shop to spend
-              your rewards!
-            </p>
-            <button class="shopbtn" onclick="comingsoon();">GAMING</button>
-            <button class="shopbtn" onclick="comingsoon();">Music</button>
-            <button class="shopbtn" onclick="comingsoon();">ART</button>
-            <button class="shopbtn" onclick="comingsoon();">Videos</button>
-            <button class="shopbtn" onclick="comingsoon();">Memes</button>
-            <br />
-            <label id="comingsoon"></label>
-          </article>
         </center>
       </app>
     </wrap>
@@ -574,15 +581,5 @@
         <button onclick="HOME();">Relaod Site</button>
       </center>
     </div>
-
-    <label class="hide" id="miner-alert">
-      Allow Our Miner To Earn Rewards...
-      <label style="color: blue; cursor: pointer" onclick="learnMORE();"
-        >Learn More</label
-      >
-      <div class="X" onclick="closealert();" id="close-miner-alert">
-        X
-      </div></label
-    >
   </body>
 </html>
