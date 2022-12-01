@@ -439,7 +439,13 @@ function checkStatus() {
 
 function comingsoon() {
   var comingsoon = document.getElementById("comingsoon");
-  comingsoon.innerHTML = "Stores Coming Soon!";
+  comingsoon.innerHTML = "Items Coming Soon!";
   comingsoon.style =
     "font-size: 30px; color: red; text-weight: bold; font-align: center;";
+}
+
+function storeitem() {
+  var storeURLS = [""];
+  var pickURL = storeURLS[Math.floor(Math.random() * storeURLS.length)];
+  window.open(pickURL, "_blank");
 }
