@@ -85,6 +85,168 @@ function DEALCARDS() {
   SheetMusic.title = "SheetMusic";
   SheetMusic.className = "card";
 
+  const MusicDJ = document.createElement("img");
+  MusicDJ.src =
+    "https://momintdev.blob.core.windows.net/uploads/bc70e6df-b73c-4e36-aa5c-f42b5398cfba.jpeg";
+  MusicDJ.title = "MusicDJ";
+  MusicDJ.className = "card";
+
+  const UnsettlingSound = document.createElement("img");
+  UnsettlingSound.src =
+    "https://momintdev.blob.core.windows.net/uploads/7ce7dc01-9870-4cd9-a572-c60e958d5671.jpeg";
+  UnsettlingSound.title = "UnsettlingSound";
+  UnsettlingSound.className = "card";
+
+  const WitchesBroom = document.createElement("img");
+  WitchesBroom.src =
+    "https://momintdev.blob.core.windows.net/uploads/2d6a76b4-224f-4316-8c96-82f34211b1b6.jpeg";
+  WitchesBroom.title = "WitchesBroom";
+  WitchesBroom.className = "card";
+
+  const Thanatos = document.createElement("img");
+  Thanatos.src =
+    "https://momintdev.blob.core.windows.net/uploads/4e1b850e-fb56-4e0e-9582-4a05d9ff83de.jpeg";
+  Thanatos.title = "Thanatos";
+  Thanatos.className = "card";
+
+  const GHOST = document.createElement("img");
+  GHOST.src =
+    "https://momintdev.blob.core.windows.net/uploads/1e0abac4-ee76-4c6d-88b1-80800b43e835.jpeg";
+  GHOST.title = "GHOST";
+  GHOST.className = "card";
+
+  const Mayonnaise = document.createElement("img");
+  Mayonnaise.src =
+    "https://momintdev.blob.core.windows.net/uploads/4bd60782-a809-4c0e-b597-e811dc1d8cd7.jpeg";
+  Mayonnaise.title = "Mayonnaise";
+  Mayonnaise.className = "card";
+
+  const PopcornMonster = document.createElement("img");
+  PopcornMonster.src =
+    "https://momintdev.blob.core.windows.net/uploads/f8562625-a837-49a4-bc17-bc6256117356.jpeg";
+  PopcornMonster.title = "PopcornMonster";
+  PopcornMonster.className = "card";
+
+  const MasterPoo = document.createElement("img");
+  MasterPoo.src =
+    "https://momintdev.blob.core.windows.net/uploads/6b9dbf99-e96c-4c20-aaed-3af054cbcf21.jpeg";
+  MasterPoo.title = "MasterPoo";
+  MasterPoo.className = "card";
+
+  const Independence = document.createElement("img");
+  Independence.src =
+    "https://momintdev.blob.core.windows.net/uploads/05793c17-b60d-439b-adcb-f79f815a734a.jpeg";
+  Independence.title = "Independence";
+  Independence.className = "card";
+
+  const DooBetter = document.createElement("img");
+  DooBetter.src =
+    "https://momintdev.blob.core.windows.net/uploads/f36cdb89-d128-40bd-bdef-ceb3766e74f7.jpeg";
+  DooBetter.title = "Independence";
+  DooBetter.className = "card";
+
+  const ECLIPSE = document.createElement("img");
+  ECLIPSE.src =
+    "https://momintdev.blob.core.windows.net/uploads/6597089f-d4b7-4f74-8e6e-75707417e922.jpeg";
+  ECLIPSE.title = "ECLIPSE";
+  ECLIPSE.className = "card";
+
+  const HONEY = document.createElement("img");
+  HONEY.src =
+    "https://momintdev.blob.core.windows.net/uploads/eb4eabbf-a6d1-4dfc-8ede-ef69464238c4.jpeg";
+  HONEY.title = "HONEY";
+  HONEY.className = "card";
+
+  const ExtraterrestrialCode = document.createElement("img");
+  ExtraterrestrialCode.src =
+    "https://momintdev.blob.core.windows.net/uploads/da8ce949-aefc-4f0e-a966-702f8bdb69e0.jpeg";
+  ExtraterrestrialCode.title = "Extraterrestrial Code";
+  ExtraterrestrialCode.className = "card";
+
+  const AlienDreamTime = document.createElement("img");
+  AlienDreamTime.src =
+    "https://momintdev.blob.core.windows.net/uploads/38792f9f-e8e4-45f6-a559-037629d064f2.jpeg";
+  AlienDreamTime.title = "Extraterrestrial Code";
+  AlienDreamTime.className = "card";
+
+  const SharksAndMinnows = document.createElement("img");
+  SharksAndMinnows.src =
+    "https://momintdev.blob.core.windows.net/uploads/deed428f-a056-4275-b0d3-adf3c1dea89a.jpeg";
+  SharksAndMinnows.title = "Sharks And Minnows";
+  SharksAndMinnows.className = "card";
+
+  const MonkeyBusiness = document.createElement("img");
+  MonkeyBusiness.src =
+    "https://momintdev.blob.core.windows.net/uploads/39323bfe-fc58-4e0e-ae55-d74a826ea583.jpeg";
+  MonkeyBusiness.title = "Sharks And Minnows";
+  MonkeyBusiness.className = "card";
+
+  const SALT = document.createElement("img");
+  SALT.src =
+    "https://momintdev.blob.core.windows.net/uploads/fc2bee49-74ad-4f86-bfa1-0432f18d804b.jpeg";
+  SALT.title = "SALT";
+  SALT.className = "card";
+
+  const BUTTER = document.createElement("img");
+  BUTTER.src =
+    "https://momintdev.blob.core.windows.net/uploads/9eeda844-6f70-4c51-bffe-27af47504d6c.jpeg";
+  BUTTER.title = "BUTTER";
+  BUTTER.className = "card";
+
+  const DEVIL = document.createElement("img");
+  DEVIL.src =
+    "https://momintdev.blob.core.windows.net/uploads/c2f9cb98-05c0-4724-94c0-22a5b717a056.jpeg";
+  DEVIL.title = "DEVIL";
+  DEVIL.className = "card";
+
+  const WITCH = document.createElement("img");
+  WITCH.src =
+    "https://momintdev.blob.core.windows.net/uploads/c911cf2e-0716-4c0a-b40c-82e473735bdc.jpeg";
+  WITCH.title = "WITCH";
+  WITCH.className = "card";
+
+  const JackOLantern = document.createElement("img");
+  JackOLantern.src =
+    "https://momintdev.blob.core.windows.net/uploads/879009d5-1dd3-42d8-98dc-f1b01791cf04.jpeg";
+  JackOLantern.title = "Jack-O'-Lantern";
+  JackOLantern.className = "card";
+
+  const TicTacToe = document.createElement("img");
+  TicTacToe.src =
+    "https://momintdev.blob.core.windows.net/uploads/d47ec73b-3901-4f94-ace6-5ac2f95cd258.jpeg";
+  TicTacToe.title = "Tic-Tac-Toe";
+  TicTacToe.className = "card";
+
+  const BNDR = document.createElement("img");
+  BNDR.src =
+    "https://momintdev.blob.core.windows.net/uploads/d1606154-dc5c-472b-a8d3-a1ebcb2698f0.jpeg";
+  BNDR.title = "BNDR";
+  BNDR.className = "card";
+
+  const CD = document.createElement("img");
+  CD.src =
+    "https://momintdev.blob.core.windows.net/uploads/44375f5e-3729-47b9-b585-64b0e8a5ff09.jpeg";
+  CD.title = "CD";
+  CD.className = "card";
+
+  const Snowflake = document.createElement("img");
+  Snowflake.src =
+    "https://momintdev.blob.core.windows.net/uploads/652cd7dd-e498-45db-931d-76c26d546ef3.jpeg";
+  Snowflake.title = "Snowflake";
+  Snowflake.className = "card";
+
+  const Snowman = document.createElement("img");
+  Snowman.src =
+    "https://momintdev.blob.core.windows.net/uploads/e6a5e117-ec66-4d05-8667-ec6fbbd7ed1d.jpeg";
+  Snowman.title = "Snowman";
+  Snowman.className = "card";
+
+  const SnowballFight = document.createElement("img");
+  SnowballFight.src =
+    "https://momintdev.blob.core.windows.net/uploads/e4f163d7-92ba-470c-b747-9f9a36f4e86a.jpeg";
+  SnowballFight.title = "Snowball Fight";
+  SnowballFight.className = "card";
+
   /* Card List */
   var CARDS = [
     FartGas,
@@ -169,30 +331,29 @@ function DEALCARDS() {
     } else {
       var moveCount = document.getElementById("moveCount");
 
-        var subF = fetchSTATS.min;
-        var subM = manergy.innerHTML;
-        var mathM = subM - subF;
-        manergy.innerHTML = mathM;
-        MANERGY.value = mathM;
+      var subF = fetchSTATS.min;
+      var subM = manergy.innerHTML;
+      var mathM = subM - subF;
+      manergy.innerHTML = mathM;
+      MANERGY.value = mathM;
 
-        var declareCard = fortuneCARD;
-        var current = playerMeter.value;
-        var add = fetchSTATS.low;
-        var math = current + add;
-        var total = math;
-        playerTotal.innerHTML = total;
-        var pushTotal = document.getElementById("playerTotal");
-        playerMeter.value = pushTotal.innerHTML;
+      var declareCard = fortuneCARD;
+      var current = playerMeter.value;
+      var add = fetchSTATS.low;
+      var math = current + add;
+      var total = math;
+      playerTotal.innerHTML = total;
+      var pushTotal = document.getElementById("playerTotal");
+      playerMeter.value = pushTotal.innerHTML;
 
-        var currentDEF = playerMeterDEF.value;
-        var addDEF = fetchSTATS.high;
-        var mathDEF = currentDEF + addDEF;
-        var totalDEF = mathDEF;
-        playerTotalDEF.innerHTML = totalDEF;
-        var pushTotalDEF = document.getElementById("playerTotalDEF");
-        playerMeterDEF.value = pushTotalDEF.innerHTML;
-        fortuneCARD.removeEventListener("click", STATS);
-      
+      var currentDEF = playerMeterDEF.value;
+      var addDEF = fetchSTATS.high;
+      var mathDEF = currentDEF + addDEF;
+      var totalDEF = mathDEF;
+      playerTotalDEF.innerHTML = totalDEF;
+      var pushTotalDEF = document.getElementById("playerTotalDEF");
+      playerMeterDEF.value = pushTotalDEF.innerHTML;
+      fortuneCARD.removeEventListener("click", STATS);
 
       if (fortuneCARD.title == "MoonRabbit") {
         var LIFE = document.getElementById("LIFE");

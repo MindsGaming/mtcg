@@ -315,6 +315,15 @@ Snowman.title = "Snowman";
 Snowman.className = "card";
 const snowman = document.getElementById("Snowman").appendChild(Snowman);
 
+const SnowballFight = document.createElement("img");
+SnowballFight.src =
+  "https://momintdev.blob.core.windows.net/uploads/e4f163d7-92ba-470c-b747-9f9a36f4e86a.jpeg";
+SnowballFight.title = "Snowball Fight";
+SnowballFight.className = "card";
+const snowballfight = document
+  .getElementById("SnowballFight")
+  .appendChild(SnowballFight);
+
 /// Card Tools
 
 function hideBirds() {
