@@ -232,6 +232,25 @@ function dealCards() {
     "https://momintdev.blob.core.windows.net/uploads/44375f5e-3729-47b9-b585-64b0e8a5ff09.jpeg";
   CD.title = "CD";
   CD.className = "card";
+
+  const Snowflake = document.createElement("img");
+  Snowflake.src =
+    "https://momintdev.blob.core.windows.net/uploads/652cd7dd-e498-45db-931d-76c26d546ef3.jpeg";
+  Snowflake.title = "Snowflake";
+  Snowflake.className = "card";
+
+  const Snowman = document.createElement("img");
+  Snowman.src =
+    "https://momintdev.blob.core.windows.net/uploads/e6a5e117-ec66-4d05-8667-ec6fbbd7ed1d.jpeg";
+  Snowman.title = "Snowman";
+  Snowman.className = "card";
+
+  const SnowballFight = document.createElement("img");
+  SnowballFight.src =
+    "https://momintdev.blob.core.windows.net/uploads/e4f163d7-92ba-470c-b747-9f9a36f4e86a.jpeg";
+  SnowballFight.title = "Snowball Fight";
+  SnowballFight.className = "card";
+
   /* Card List */
   const CARDS = [
     FartGas,
@@ -272,6 +291,9 @@ function dealCards() {
     TicTacToe,
     BNDR,
     CD,
+    Snowflake,
+    Snowman,
+    SnowballFight,
   ];
 
   var p1card = CARDS[Math.floor(Math.random() * CARDS.length)];
@@ -299,13 +321,17 @@ function dealCards() {
   }
 
   function moveCard() {
-    var newprint = document.createElement("img");
-    newprint.title = P1card.title;
-    newprint.src = P1card.src;
-    newprint.className = "minicard";
-    P1card.removeEventListener("mousemove", moveCard);
-    P1card.className = "hide";
-    var newprint = document.getElementById("inPlay").appendChild(newprint);
+    var inplay = document.getElementById("INPLAY");
+
+    if (inplay.value > 3) {
+      var newprint = document.createElement("img");
+      newprint.title = P1card.title;
+      newprint.src = P1card.src;
+      newprint.className = "minicard";
+      P1card.removeEventListener("mousemove", moveCard);
+      P1card.className = "hide";
+      var newprint = document.getElementById("inPlay").appendChild(newprint);
+    }
   }
 
   function specialtext() {
