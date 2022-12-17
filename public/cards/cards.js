@@ -301,6 +301,20 @@ CD.title = "CD";
 CD.className = "card";
 const cd = document.getElementById("CD").appendChild(CD);
 
+const Snowflake = document.createElement("img");
+Snowflake.src =
+  "https://momintdev.blob.core.windows.net/uploads/652cd7dd-e498-45db-931d-76c26d546ef3.jpeg";
+Snowflake.title = "Snowflake";
+Snowflake.className = "card";
+const snowflake = document.getElementById("Snowflake").appendChild(Snowflake);
+
+const Snowman = document.createElement("img");
+Snowman.src =
+  "https://momintdev.blob.core.windows.net/uploads/e6a5e117-ec66-4d05-8667-ec6fbbd7ed1d.jpeg";
+Snowman.title = "Snowman";
+Snowman.className = "card";
+const snowman = document.getElementById("Snowman").appendChild(Snowman);
+
 /// Card Tools
 
 function hideBirds() {
