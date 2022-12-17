@@ -437,15 +437,10 @@ function checkStatus() {
   }
 }
 
-
 function storeitem() {
   var storeURLS = [
-    "https://www.mintme.com/token/GAMER",
     "https://mintme.com/token/ECLIPSE",
-    "https://mintme.com/token/DooBetter",
     "https://mintme.com/token/GTPC",
-    "https://mintme.com/token/withinthevacuum",
-    "https://mintme.com/token/DragonToken",
     "https://mintme.com/token/Candys",
   ];
   var pickURL = storeURLS[Math.floor(Math.random() * storeURLS.length)];
