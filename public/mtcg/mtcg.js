@@ -1,6 +1,4 @@
-DEALCARDS();
-
-function DEALCARDS() {
+function dealCards() {
   const DINOMONSTER = document.createElement("img");
   DINOMONSTER.src =
     "https://momintdev.blob.core.windows.net/uploads/a0f061e5-eebc-4d5e-a17f-c398d21f01ce.jpeg";
@@ -73,6 +71,12 @@ function DEALCARDS() {
   Mayflower.title = "Mayflower";
   Mayflower.className = "card";
 
+  const Manergy = document.createElement("img");
+  Manergy.src =
+    "https://momintdev.blob.core.windows.net/uploads/88dfb6d7-8cd0-43fb-9283-bb2fb6ca753d.jpeg";
+  Manergy.title = "Manergy";
+  Manergy.className = "card";
+
   const MAYDAY = document.createElement("img");
   MAYDAY.src =
     "https://momintdev.blob.core.windows.net/uploads/756eccad-c783-47f5-8466-e842119a200e.jpeg";
@@ -142,7 +146,7 @@ function DEALCARDS() {
   const DooBetter = document.createElement("img");
   DooBetter.src =
     "https://momintdev.blob.core.windows.net/uploads/f36cdb89-d128-40bd-bdef-ceb3766e74f7.jpeg";
-  DooBetter.title = "Independence";
+  DooBetter.title = "DooBetter";
   DooBetter.className = "card";
 
   const ECLIPSE = document.createElement("img");
@@ -228,27 +232,8 @@ function DEALCARDS() {
     "https://momintdev.blob.core.windows.net/uploads/44375f5e-3729-47b9-b585-64b0e8a5ff09.jpeg";
   CD.title = "CD";
   CD.className = "card";
-
-  const Snowflake = document.createElement("img");
-  Snowflake.src =
-    "https://momintdev.blob.core.windows.net/uploads/652cd7dd-e498-45db-931d-76c26d546ef3.jpeg";
-  Snowflake.title = "Snowflake";
-  Snowflake.className = "card";
-
-  const Snowman = document.createElement("img");
-  Snowman.src =
-    "https://momintdev.blob.core.windows.net/uploads/e6a5e117-ec66-4d05-8667-ec6fbbd7ed1d.jpeg";
-  Snowman.title = "Snowman";
-  Snowman.className = "card";
-
-  const SnowballFight = document.createElement("img");
-  SnowballFight.src =
-    "https://momintdev.blob.core.windows.net/uploads/e4f163d7-92ba-470c-b747-9f9a36f4e86a.jpeg";
-  SnowballFight.title = "Snowball Fight";
-  SnowballFight.className = "card";
-
   /* Card List */
-  var CARDS = [
+  const CARDS = [
     FartGas,
     DinoEggs,
     DINOMONSTER,
@@ -263,141 +248,69 @@ function DEALCARDS() {
     Mayflower,
     MAYDAY,
     SheetMusic,
+    MusicDJ,
+    UnsettlingSound,
+    WitchesBroom,
+    Thanatos,
+    GHOST,
+    Mayonnaise,
+    PopcornMonster,
+    MasterPoo,
+    Independence,
+    DooBetter,
+    ECLIPSE,
+    HONEY,
+    ExtraterrestrialCode,
+    AlienDreamTime,
+    SharksAndMinnows,
+    MonkeyBusiness,
+    SALT,
+    BUTTER,
+    DEVIL,
+    WITCH,
+    JackOLantern,
+    TicTacToe,
+    BNDR,
+    CD,
   ];
 
-  var inHand = document.getElementById("inHand");
+  var p1card = CARDS[Math.floor(Math.random() * CARDS.length)];
+  p1card.title = p1card.title;
+  var P1card = document.getElementById("playCards").appendChild(p1card);
+  P1card.addEventListener("click", moveCard);
+  P1card.addEventListener("mouseover", specialtext);
 
-  var getMANERGY = [
-    "30",
-    "10",
-    "60",
-    "90",
-    "20",
-    "15",
-    "50",
-    "40",
-    "80",
-    "100",
-  ];
+  var mtcgstartBTN = document.getElementById("mtcg-startBTN");
+  mtcgstartBTN.className = "hide";
 
-  var placeMANERGY = document.getElementById("MANERGY");
-  if (placeMANERGY.value == "0") {
-    var myMANERGY = getMANERGY[Math.floor(Math.random() * getMANERGY.length)];
-    var relyMANERGY = document.getElementById("manergy");
-    placeMANERGY.value = myMANERGY + placeMANERGY.value;
-    relyMANERGY.innerHTML = myMANERGY;
-  } else {
-  }
+  var HAND = document.getElementById("HAND");
+  var ROUND = document.getElementById("ROUND");
+  var round = document.getElementById("round");
 
-  if (inHand.value == "5") {
-  } else {
-    var CARD1 = CARDS[Math.floor(Math.random() * CARDS.length)];
-    var CARD2 = CARDS[Math.floor(Math.random() * CARDS.length)];
-    var CARD3 = CARDS[Math.floor(Math.random() * CARDS.length)];
-    var shuffle = [CARD1, CARD2, CARD3];
-
-    var CARD = shuffle[Math.floor(Math.random() * shuffle.length)];
-
-    var fortuneCARD = document.createElement("img");
-    fortuneCARD.src = CARD.src;
-    fortuneCARD.title = CARD.title;
-    fortuneCARD.className = "card";
-    fortuneCARD.addEventListener("click", STATS);
-    var NEWCARD = document
-      .getElementById("playerCards")
-      .appendChild(fortuneCARD);
-
-    var boost = 1;
-    var current = inHand.value;
-    var math = current + boost;
-    inHand.value = math;
-    DEALCARDS();
-  }
-  function STATS() {
-    var MATH = document.getElementById("MATH");
-    var playerMeter = document.getElementById("playerMeter");
-    var playerTotal = document.getElementById("playerTotal");
-    var playerMeterDEF = document.getElementById("playerMeterDEF");
-    var playerTotalDEF = document.getElementById("playerTotalDEF");
-
-    var MANERGY = document.getElementById("MANERGY");
-    var manergy = document.getElementById("manergy");
-    var cardMANERGY = fortuneCARD.title;
-    cardMANERGY.id = cardMANERGY;
-    var fetchSTATS = document.getElementById(cardMANERGY);
-
-    if (relyMANERGY.innerHTML < 0) {
-      alert("Not Enough MANERGY");
-    } else {
-      var moveCount = document.getElementById("moveCount");
-
-      var subF = fetchSTATS.min;
-      var subM = manergy.innerHTML;
-      var mathM = subM - subF;
-      manergy.innerHTML = mathM;
-      MANERGY.value = mathM;
-
-      var declareCard = fortuneCARD;
-      var current = playerMeter.value;
-      var add = fetchSTATS.low;
-      var math = current + add;
-      var total = math;
-      playerTotal.innerHTML = total;
-      var pushTotal = document.getElementById("playerTotal");
-      playerMeter.value = pushTotal.innerHTML;
-
-      var currentDEF = playerMeterDEF.value;
-      var addDEF = fetchSTATS.high;
-      var mathDEF = currentDEF + addDEF;
-      var totalDEF = mathDEF;
-      playerTotalDEF.innerHTML = totalDEF;
-      var pushTotalDEF = document.getElementById("playerTotalDEF");
-      playerMeterDEF.value = pushTotalDEF.innerHTML;
-      fortuneCARD.removeEventListener("click", STATS);
-
-      if (fortuneCARD.title == "MoonRabbit") {
-        var LIFE = document.getElementById("LIFE");
-        var life = document.getElementById("life");
-        LIFE.value = "500";
-        life.innerHTML = "500";
-      }
-      if (fortuneCARD.title == "APHRODITE") {
-        var LIFE = document.getElementById("LIFE");
-        var life = document.getElementById("life");
-        var tackscore = LIFE.value;
-        var tackMath = tackscore + tackscore;
-        life.innerHTML = tackMath;
-        LIFE.value = playerTotal.innerHTML;
-      }
-
-      var moveCARD = document.createElement("img");
-
-      if (moveCount.value < 3) {
-        moveCARD.className = "playcard";
-        moveCARD.title = fortuneCARD.title;
-        moveCARD.src = fortuneCARD.src;
-        moveCARD.id = fortuneCARD.id;
-        fortuneCARD.className = "hide";
-
-        var addmoves = +1;
-        var totalmoves = moveCount.value + addmoves;
-        moveCount.value = totalmoves;
-
-        document.getElementById("moveCARD").appendChild(moveCARD);
-      } else {
-        var battlebutton = document.getElementById("battleButton");
-        battlebutton.className = "battlebutton";
-      }
+  if (HAND.value < 4) {
+    var addcard = 1;
+    var addmath = HAND.value + addcard;
+    HAND.value = addmath;
+    dealCards();
+    if (ROUND.value == 0) {
+      ROUND.value = 1;
+      round.innerHTML = ROUND.value;
     }
   }
-}
 
-/// METERS
+  function moveCard() {
+    var newprint = document.createElement("img");
+    newprint.title = P1card.title;
+    newprint.src = P1card.src;
+    newprint.className = "minicard";
+    P1card.removeEventListener("mousemove", moveCard);
+    P1card.className = "hide";
+    var newprint = document.getElementById("inPlay").appendChild(newprint);
+  }
 
-function playerMeter() {
-  var playerTotal = document.getElementById("playerTotal");
-  var playerMeter = document.getElementById("playerMeter");
-
-  playerTotal.innerHTML = playerMeter.value;
-  playerTotal.title = playerMeter.value;
+  function specialtext() {
+    var getspecial = document.getElementById("specialtext");
+    if (P1card.title == "DinoMonster") {
+    }
+  }
 }

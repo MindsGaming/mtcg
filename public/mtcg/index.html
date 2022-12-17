@@ -17,266 +17,53 @@
     />
 
     <script src="/mtcg/mtcg.js" defer></script>
+
     <link rel="stylesheet" href="/mtcg/style.css" defer />
   </head>
   <body>
-    <wrap>
-      <center>
-        <div id="playboard" class="playboard">
-          <div id="moveCARD">
-          
-          <div class="hide" id="battleButton" onclick="battle();">
-            Battle
-            </div>
-          </div>
+    <mtcg>
+      <div class="mtcgmap">
+        <div class="p1"></div>
+        <div class="scroll">
+          <label class="inplay" id="inPlay"> </label>
         </div>
-
-        <div class="playerOne" id="playerOne">
-          <center>
-            <label class="playerTotal"
-              >ATK:
-              <label title="0" id="playerTotal" onmouseover="playerMeter();"
-                >0</label
-              ></label
-            >
-            <label class="playerTotals"
-              >DEF:
-              <label title="0" id="playerTotalDEF" onmouseover="playerMeter();"
-                >0</label
-              ></label
-            >
-            <div id="playerCards">
-              <label class="manergy"
-                >MANERGY: <label id="manergy">0</label></label
-              >
-              <label class="life">LIFE:<label id="life">500</label></label>
-            </div>
-          </center>
+        <div class="p2">
+          <label id="playCards"></label>
         </div>
-      </center>
-    </wrap>
+        <div align="center">
+          <lable style="color: red" id="specialtext"></lable>
+        </div>
+      </div>
 
-    <div id="METERS" class="hide">
+      <div class="mtcgtools">
+        <label>Round:<label id="round">0</label></label>
+        <br />
+        <label>Points:<label id="mtcgRewards">0</label></label>
+        <br />
+        <label>Wins:<label id="roundWins">0</label></label>
+        <br />
+        <button onclick="dealCards();" class="startBTN" id="mtcg-startBTN">
+          Ready
+        </button>
+        <br />
+        <br />
+      </div>
+    </mtcg>
+    <div class="mtcgmeter">
       <meter
-        id="BirdsNest"
-        title="BirdsNest"
-        class="hide"
+        id="mtcgMETER"
+        class="mtcgMETER"
         min="0"
-        low="25"
-        high="50"
-        max="1000"
+        low="0"
+        high="1000000"
+        max="1000000"
         value="25"
-        optimum="0"
       ></meter>
-      <meter
-        id="FlyingWisdom"
-        title="FlyingWisdom"
-        class="hide"
-        min="8"
-        low="135"
-        high="500"
-        max="1350"
-        value="135"
-        optimum="8"
-      ></meter>
-      <meter
-        id="BullishFlyer"
-        title="BullishFlyer"
-        class="hide"
-        min="8"
-        low="95"
-        high="300"
-        max="1350"
-        value="195"
-        optimum="8"
-      ></meter>
-      <meter
-        id="MAYDAY"
-        title="MAYDAY"
-        class="hide"
-        min="4"
-        low="35"
-        high="200"
-        max="1000"
-        value="85"
-        optimum="4"
-      ></meter>
-      <meter
-        id="MoonRabbit"
-        title="MoonRabbit"
-        class="hide"
-        min="8"
-        low="0"
-        high="0"
-        max="0"
-        value="0"
-        optimum="8"
-      ></meter>
-      <meter
-        id="APHRODITE"
-        title="APHRODITE"
-        class="hide"
-        min="6"
-        low="0"
-        high="0"
-        max="1000"
-        value="0"
-        optimum="6"
-      ></meter>
-      <meter
-        id="Mayflower"
-        title="Mayflower"
-        class="hide"
-        min="6"
-        low="100"
-        high="200"
-        max="1000"
-        value="200"
-        optimum="6"
-      ></meter>
-      <meter
-        id="DinoMonster"
-        title="DinoMonster"
-        class="hide"
-        min="3"
-        low="51"
-        high="600"
-        max="1001"
-        value="101"
-        optimum="3"
-      ></meter>
-      <meter
-        id="DinoEggs"
-        title="DinoEggs"
-        class="hide"
-        min="0"
-        low="0"
-        high="100"
-        max="100"
-        value="0"
-        optimum="0"
-      ></meter>
-      <meter
-        id="POPOLVUH"
-        title="POPOLVUH"
-        class="hide"
-        min="10"
-        low="735"
-        high="500"
-        max="7350"
-        value="735"
-        optimum="10"
-      ></meter>
-      <meter
-        id="TheMayans"
-        title="TheMayans"
-        class="hide"
-        min="7"
-        low="85"
-        high="200"
-        max="2000"
-        value="50"
-        optimum="7"
-      ></meter>
-      <meter
-        id="AlienBeer"
-        title="AlienBeer"
-        class="hide"
-        min="1"
-        low="5"
-        high="50"
-        max="500"
-        value="5"
-        optimum="1"
-      ></meter>
-      <meter
-        id="FartGas"
-        title="FartGas"
-        class="hide"
-        min="0"
-        low="2"
-        high="3"
-        max="3"
-        value="2"
-        optimum="0"
-      ></meter>
-      <meter
-        id="SheetMusic"
-        title="SheetMusic"
-        class="hide"
-        min="5"
-        low="200"
-        high="200"
-        max="200"
-        value="0"
-        optimum="5"
-      ></meter>
-      <meter
-        id="playerMeter"
-        title="playerMeter"
-        class="hide"
-        min="0"
-        low="0"
-        high="1000"
-        max="1000"
-        value="0"
-        optimum="0"
-      ></meter>
-      <meter
-        id="playerMeterDEF"
-        title="playerMeterDEF"
-        class="hide"
-        min="0"
-        low="0"
-        high="1000"
-        max="1000"
-        value="0"
-        optimum="0"
-      ></meter>
-      <meter
-        id="inHand"
-        title="inHand"
-        class="hide"
-        min="0"
-        low="0"
-        high="5"
-        max="5"
-        value="0"
-        optimum="5"
-      ></meter>
-      <meter
-        id="moveCount"
-        title="moveCount"
-        class="hide"
-        min="0"
-        low="0"
-        high="0"
-        max="3"
-        value="0"
-        optimum="0"
-      ></meter>
-      <meter
-        id="MANERGY"
-        title="MANERGY"
-        class="hide"
-        min="0"
-        low="0"
-        high="0"
-        max="0"
-        value="0"
-        optimum="0"
-      ></meter>
-      <meter
-        id="LIFE"
-        title="LIFE"
-        class="hide"
-        min="0"
-        low="100"
-        high="1000"
-        max="5000"
-        value="500"
-        optimum="0"
-      ></meter>
+    </div>
+
+    <div class="hide" id="more-meters">
+      <meter id="HAND" min="0" low="0" high="5" max="5" value="0"></meter>
+      <meter id="ROUND" min="0" low="0" high="5" max="5" value="0"></meter>
     </div>
   </body>
 </html>
