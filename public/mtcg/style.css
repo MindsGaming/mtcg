@@ -78,6 +78,10 @@ mtcg {
   z-index: -1;
 }
 
+.battlebutton {
+  
+}
+
 .mtcgmeter {
   position: absolute;
   top: 0;

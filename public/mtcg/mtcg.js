@@ -323,7 +323,7 @@ function dealCards() {
   function moveCard() {
     var inplay = document.getElementById("INPLAY");
 
-    if (inplay.value > 3) {
+    if (inplay.value < 3) {
       var newprint = document.createElement("img");
       newprint.title = P1card.title;
       newprint.src = P1card.src;
@@ -331,6 +331,14 @@ function dealCards() {
       P1card.removeEventListener("mousemove", moveCard);
       P1card.className = "hide";
       var newprint = document.getElementById("inPlay").appendChild(newprint);
+
+      var addplay = 1;
+      var playmath = inplay.value + addplay;
+      inplay.value = playmath;
+    }
+    if (inplay.value == 3) {
+      var specialtext = document.getElementById("specialtext");
+      specialtext.innerHTML = "BATTLE";
     }
   }
 
