@@ -335,16 +335,26 @@ function dealCards() {
       var addplay = 1;
       var playmath = inplay.value + addplay;
       inplay.value = playmath;
+
+      meterMATH();
     }
     if (inplay.value == 3) {
       var specialtext = document.getElementById("specialtext");
       specialtext.innerHTML = "BATTLE";
+      specialtext.className = "battlebutton";
     }
+  }
+  
+  function meterMATH(){
+    
   }
 
   function specialtext() {
     var getspecial = document.getElementById("specialtext");
     if (P1card.title == "DinoMonster") {
+      getspecial.innerHTML = "Dinomonster ATK:X DEF:X";
     }
   }
+  
+
 }
