@@ -313,9 +313,12 @@ function dealCards() {
   p1card.title = p1card.title;
   var P1card = document.getElementById("playCards").appendChild(p1card);
   P1card.addEventListener("click", moveCard);
+  P1card.addEventListener("click", specialtext);
 
   const manergy = p1card.value;
   const MANERGY = document.getElementById("MANERGY");
+  const inplay = document.getElementById("INPLAY");
+  const getspecialtext = document.getElementById("specialtext");
   MANERGY.value = "20";
 
   var mtcgstartBTN = document.getElementById("mtcg-startBTN");
@@ -337,16 +340,12 @@ function dealCards() {
   }
 
   function moveCard() {
-    var inplay = document.getElementById("INPLAY");
-    var specialtext = document.getElementById("specialtext");
-
     if (p1card.value > MANERGY.value) {
-      alert("Not enough MANA");
+      getspecialtext.innerHTML = "Not enough MANA";
     } else {
       var manergymath = MANERGY.value - p1card.value;
       MANERGY.value = manergymath;
 
-      specialtext();
       if (inplay.value < 3) {
         var newprint = document.createElement("img");
         newprint.title = P1card.title;
@@ -361,15 +360,16 @@ function dealCards() {
         inplay.value = playmath;
         meterMATH();
       }
-      if (inplay.value == 3) {
-        specialtext.innerHTML = "BATTLE";
-        specialtext.className = "battlebutton";
-      }
-      function specialtext() {
-        var getspecial = document.getElementById("specialtext");
-        getspecial.innerHTML =
-          p1card.title + " " + "ATK:" + p1card.ATK + " " + "DEF:" + p1card.DEF;
-      }
+    }
+  }
+
+  function specialtext() {
+    getspecialtext.innerHTML =
+      p1card.title + " " + "ATK:" + p1card.ATK + " " + "DEF:" + p1card.DEF;
+    getspecialtext.className = "specialtext";
+    if (inplay.value == 3) {
+      getspecialtext.innerHTML = "BATTLE";
+      getspecialtext.className = "battlebutton";
     }
   }
 

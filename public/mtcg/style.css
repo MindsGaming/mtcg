@@ -86,6 +86,12 @@ mtcg {
   cursor: pointer;
 }
 
+.specialtext {
+  max-width: 5rem;
+  color: white;
+  text-align: center;
+}
+
 .mtcgmeter {
   position: absolute;
   top: 0;
