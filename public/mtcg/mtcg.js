@@ -259,6 +259,7 @@ function dealCards() {
     FartGas,
     DinoEggs,
     DINOMONSTER,
+    /*
     AlienBeer,
     APHRODITE,
     MoonRabbit,
@@ -296,14 +297,17 @@ function dealCards() {
     CD,
     Snowflake,
     Snowman,
-    SnowballFight,
+    SnowballFight, */
   ];
 
   var p1card = CARDS[Math.floor(Math.random() * CARDS.length)];
   p1card.title = p1card.title;
   var P1card = document.getElementById("playCards").appendChild(p1card);
   P1card.addEventListener("click", moveCard);
-  P1card.addEventListener("mouseover", specialtext);
+
+  const manergy = p1card.value;
+  const MANERGY = document.getElementById("MANERGY");
+  MANERGY.value = "20";
 
   var mtcgstartBTN = document.getElementById("mtcg-startBTN");
   mtcgstartBTN.className = "hide";
@@ -326,20 +330,25 @@ function dealCards() {
   function moveCard() {
     var inplay = document.getElementById("INPLAY");
 
-    if (inplay.value < 3) {
-      var newprint = document.createElement("img");
-      newprint.title = P1card.title;
-      newprint.src = P1card.src;
-      newprint.className = "minicard";
-      P1card.removeEventListener("mousemove", moveCard);
-      P1card.className = "hide";
-      var newprint = document.getElementById("inPlay").appendChild(newprint);
+    if (p1card.value > MANERGY.value) {
+      alert("Not enough MANA");
+    } else {
+      specialtext();
+      if (inplay.value < 3) {
+        var newprint = document.createElement("img");
+        newprint.title = P1card.title;
+        newprint.src = P1card.src;
+        newprint.className = "minicard";
+        P1card.removeEventListener("mousemove", moveCard);
+        P1card.className = "hide";
+        var newprint = document.getElementById("inPlay").appendChild(newprint);
 
-      var addplay = 1;
-      var playmath = inplay.value + addplay;
-      inplay.value = playmath;
+        var addplay = 1;
+        var playmath = inplay.value + addplay;
+        inplay.value = playmath;
 
-      meterMATH();
+        meterMATH();
+      }
     }
     if (inplay.value == 3) {
       var specialtext = document.getElementById("specialtext");
@@ -352,8 +361,7 @@ function dealCards() {
 
   function specialtext() {
     var getspecial = document.getElementById("specialtext");
-    if (P1card.title == "DinoMonster") {
-      getspecial.innerHTML = "Dinomonster ATK:X DEF:X";
-    }
+    getspecial.innerHTML =
+      p1card.title + " " + "ATK:" + p1card.ATK + " " + "DEF:" + p1card.DEF;
   }
 }
