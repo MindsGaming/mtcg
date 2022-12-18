@@ -13,18 +13,27 @@ function dealCards() {
     "https://momintdev.blob.core.windows.net/uploads/425c38c9-6b34-4c35-bb17-b3bba649cfd4.jpeg";
   DinoEggs.title = "DinoEggs";
   DinoEggs.className = "card";
+  DinoEggs.value = "0";
+  DinoEggs.ATK = "0";
+  DinoEggs.DEF = "100";
 
   const FartGas = document.createElement("img");
   FartGas.src =
     "https://momintdev.blob.core.windows.net/uploads/f0653389-45f9-4e05-a1da-88b38e4b8fb0.jpeg";
   FartGas.title = "FartGas";
   FartGas.className = "card";
+  FartGas.value = "0";
+  FartGas.ATK = "2";
+  FartGas.DEF = "3";
 
   const AlienBeer = document.createElement("img");
   AlienBeer.src =
     "https://momintdev.blob.core.windows.net/uploads/13dced15-b376-4488-be53-fba2fb642914.jpeg";
   AlienBeer.title = "AlienBeer";
   AlienBeer.className = "card";
+  AlienBeer.value = "1";
+  AlienBeer.ATK = "5";
+  AlienBeer.DEF = "50";
 
   const APHRODITE = document.createElement("img");
   APHRODITE.src =
@@ -329,10 +338,14 @@ function dealCards() {
 
   function moveCard() {
     var inplay = document.getElementById("INPLAY");
+    var specialtext = document.getElementById("specialtext");
 
     if (p1card.value > MANERGY.value) {
       alert("Not enough MANA");
     } else {
+      var manergymath = MANERGY.value - p1card.value;
+      MANERGY.value = manergymath;
+
       specialtext();
       if (inplay.value < 3) {
         var newprint = document.createElement("img");
@@ -346,22 +359,19 @@ function dealCards() {
         var addplay = 1;
         var playmath = inplay.value + addplay;
         inplay.value = playmath;
-
         meterMATH();
       }
-    }
-    if (inplay.value == 3) {
-      var specialtext = document.getElementById("specialtext");
-      specialtext.innerHTML = "BATTLE";
-      specialtext.className = "battlebutton";
+      if (inplay.value == 3) {
+        specialtext.innerHTML = "BATTLE";
+        specialtext.className = "battlebutton";
+      }
+      function specialtext() {
+        var getspecial = document.getElementById("specialtext");
+        getspecial.innerHTML =
+          p1card.title + " " + "ATK:" + p1card.ATK + " " + "DEF:" + p1card.DEF;
+      }
     }
   }
 
   function meterMATH() {}
-
-  function specialtext() {
-    var getspecial = document.getElementById("specialtext");
-    getspecial.innerHTML =
-      p1card.title + " " + "ATK:" + p1card.ATK + " " + "DEF:" + p1card.DEF;
-  }
 }
