@@ -4,6 +4,9 @@ function dealCards() {
     "https://momintdev.blob.core.windows.net/uploads/a0f061e5-eebc-4d5e-a17f-c398d21f01ce.jpeg";
   DINOMONSTER.title = "DinoMonster";
   DINOMONSTER.className = "card";
+  DINOMONSTER.value = "3";
+  DINOMONSTER.ATK = "51";
+  DINOMONSTER.DEF = "600";
 
   const DinoEggs = document.createElement("img");
   DinoEggs.src =
@@ -344,10 +347,8 @@ function dealCards() {
       specialtext.className = "battlebutton";
     }
   }
-  
-  function meterMATH(){
-    
-  }
+
+  function meterMATH() {}
 
   function specialtext() {
     var getspecial = document.getElementById("specialtext");
@@ -355,6 +356,4 @@ function dealCards() {
       getspecial.innerHTML = "Dinomonster ATK:X DEF:X";
     }
   }
-  
-
 }
