@@ -4,27 +4,27 @@ function dealCards() {
     "https://momintdev.blob.core.windows.net/uploads/a0f061e5-eebc-4d5e-a17f-c398d21f01ce.jpeg";
   DINOMONSTER.title = "DinoMonster";
   DINOMONSTER.className = "card";
-  DINOMONSTER.value = "3";
-  DINOMONSTER.ATK = "51";
-  DINOMONSTER.DEF = "600";
+  DINOMONSTER.value = 3;
+  DINOMONSTER.ATK = 51;
+  DINOMONSTER.DEF = 600;
 
   const DinoEggs = document.createElement("img");
   DinoEggs.src =
     "https://momintdev.blob.core.windows.net/uploads/425c38c9-6b34-4c35-bb17-b3bba649cfd4.jpeg";
   DinoEggs.title = "DinoEggs";
   DinoEggs.className = "card";
-  DinoEggs.value = "0";
-  DinoEggs.ATK = "0";
-  DinoEggs.DEF = "100";
+  DinoEggs.value = 0;
+  DinoEggs.ATK = 0;
+  DinoEggs.DEF = 100;
 
   const FartGas = document.createElement("img");
   FartGas.src =
     "https://momintdev.blob.core.windows.net/uploads/f0653389-45f9-4e05-a1da-88b38e4b8fb0.jpeg";
   FartGas.title = "FartGas";
   FartGas.className = "card";
-  FartGas.value = "0";
-  FartGas.ATK = "2";
-  FartGas.DEF = "3";
+  FartGas.value = 0;
+  FartGas.ATK = 2;
+  FartGas.DEF = 3;
 
   const AlienBeer = document.createElement("img");
   AlienBeer.src =
@@ -268,7 +268,6 @@ function dealCards() {
     FartGas,
     DinoEggs,
     DINOMONSTER,
-    /*
     AlienBeer,
     APHRODITE,
     MoonRabbit,
@@ -306,7 +305,7 @@ function dealCards() {
     CD,
     Snowflake,
     Snowman,
-    SnowballFight, */
+    SnowballFight,
   ];
 
   var p1card = CARDS[Math.floor(Math.random() * CARDS.length)];
@@ -373,5 +372,11 @@ function dealCards() {
     }
   }
 
-  function meterMATH() {}
+  function meterMATH() {
+    var mtcgMETER = document.getElementById("mtcgMETER");
+    var getDEF = p1card.DEF;
+    var getATK = p1card.ATK;
+    var supermetermath = getATK + getDEF;
+    mtcgMETER.value = supermetermath;
+  }
 }
