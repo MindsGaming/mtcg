@@ -97,6 +97,13 @@ Manergy.title = "Manergy";
 Manergy.className = "card";
 const MANERGY = document.getElementById("MANERGY").appendChild(Manergy);
 
+const Manergy2 = document.createElement("img");
+Manergy2.src =
+  "https://momintdev.blob.core.windows.net/uploads/b43bdcf9-9bc9-4d7e-a27e-fea1deb698cb.jpeg";
+Manergy2.title = "Manergy";
+Manergy2.className = "card";
+const MANERGY2 = document.getElementById("MANERGY2").appendChild(Manergy2);
+
 const MAYDAY = document.createElement("img");
 MAYDAY.src =
   "https://momintdev.blob.core.windows.net/uploads/756eccad-c783-47f5-8466-e842119a200e.jpeg";
@@ -324,8 +331,29 @@ const snowballfight = document
   .getElementById("SnowballFight")
   .appendChild(SnowballFight);
 
-https://app.momint.so/m/63a51884bba4c0b0892d6010
+const COAT = document.createElement("img");
+COAT.src =
+  "https://momintdev.blob.core.windows.net/uploads/14575bb3-3521-467c-8167-356a1e46d769.jpeg";
+COAT.title = "COAT";
+COAT.className = "card";
+const coat = document.getElementById("COAT").appendChild(COAT);
 
+const DropTheBall = document.createElement("img");
+DropTheBall.src =
+  "https://momintdev.blob.core.windows.net/uploads/6c4a2983-90a6-4e26-97b9-46f5dd716c2a.jpeg";
+DropTheBall.title = "Drop The Ball";
+DropTheBall.className = "card";
+const DroptheBall = document
+  .getElementById("DropTheBall")
+  .appendChild(DropTheBall);
+
+const ThePowerOfZeus = document.createElement("img");
+ThePowerOfZeus.src = "https://momintdev.blob.core.windows.net/uploads/23876de1-b156-4177-abd0-88d366ab130f.jpeg"
+ThePowerOfZeus.title = "The Power Of Zeus";
+ThePowerOfZeus.className = "card";
+const zeus = document
+  .getElementById("ThePowerOfZeus")
+  .appendChild(ThePowerOfZeus);
 
 /// Card Tools
 
