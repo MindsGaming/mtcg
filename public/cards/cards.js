@@ -348,12 +348,22 @@ const DroptheBall = document
   .appendChild(DropTheBall);
 
 const ThePowerOfZeus = document.createElement("img");
-ThePowerOfZeus.src = "https://momintdev.blob.core.windows.net/uploads/23876de1-b156-4177-abd0-88d366ab130f.jpeg"
+ThePowerOfZeus.src =
+  "https://momintdev.blob.core.windows.net/uploads/23876de1-b156-4177-abd0-88d366ab130f.jpeg";
 ThePowerOfZeus.title = "The Power Of Zeus";
 ThePowerOfZeus.className = "card";
 const zeus = document
   .getElementById("ThePowerOfZeus")
   .appendChild(ThePowerOfZeus);
+
+const GuitarSolo = document.createElement("img");
+GuitarSolo.src =
+  "https://momintdev.blob.core.windows.net/uploads/18191d05-6449-4f98-906f-bdca1d9fee1d.jpeg";
+GuitarSolo.title = "Guitar Solo";
+GuitarSolo.className = "card";
+const guitarsolo = document
+  .getElementById("GuitarSolo")
+  .appendChild(GuitarSolo);
 
 /// Card Tools
 
