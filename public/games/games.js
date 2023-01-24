@@ -239,7 +239,7 @@ function ducktimer() {
   var duckgame = document.getElementById("duck-game");
 
   if (duckgame.title == "CLOSED") {
-    duckgame.src = "/games/mindsweep/files/public/index.html";
+    duckgame.src = "/games/city-builder";
     duckgame.title = "DUCK";
     duckgame.style =
       "display: block; width: 100%;height: 400px;border-radius: 30px 30px 30px 30px; opacity: 0.9;";
