@@ -365,6 +365,15 @@ const guitarsolo = document
   .getElementById("GuitarSolo")
   .appendChild(GuitarSolo);
 
+const CHEESEBALLS = document.createElement("img");
+CHEESEBALLS.src = "https://momintdev.blob.core.windows.net/uploads/870e7b03-acfe-4093-9d19-270efc35fc2d.jpeg"
+CHEESEBALLS.title = "CHEESEBALLS";
+CHEESEBALLS.className = "card";
+const cheeseballs = document
+  .getElementById("CHEESEBALLS")
+  .appendChild(CHEESEBALLS);
+
+
 /// Card Tools
 
 function hideBirds() {
