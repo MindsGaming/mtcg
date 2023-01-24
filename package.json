@@ -15,7 +15,6 @@
     "metamask-react": "^2.4.0"
   },
   "engines": {
-    "node": "12.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-sqlite"
