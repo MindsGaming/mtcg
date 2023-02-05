@@ -18,15 +18,17 @@ const values = [
 function hitme() {
   const suit = suits[Math.floor(Math.random() * suits.length)];
   const value = values[Math.floor(Math.random() * values.length)];
-  var printsuit = document.createElement("label");
+  var printsuit = document.createElement("div");
   printsuit.innerHTML = suit;
   printsuit.className = "suit";
-  var printvalue = document.createElement("label");
+  var printvalue = document.createElement("div");
   printvalue.innerHTML = value;
   printvalue.className = "value";
-  var printValue = document.getElementById("deck").appendChild(printvalue);
-  var printSuit = document.getElementById("deck").appendChild(printsuit);
+  var printValue = document.getElementById("card1").appendChild(printvalue);
+  var printSuit = document.getElementById("card1").appendChild(printsuit);
 
+  var restyle = document.getElementById("card1");
+  restyle.className = "card";
   log();
   function log() {
     var logcard = suit + value;
