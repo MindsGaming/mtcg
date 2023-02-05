@@ -31,11 +31,25 @@ function hitme() {
   restyle.className = "card";
   log();
   function log() {
-    var logcard = suit + value;
+    var logcard = value + suit;
     var log = document.createElement("li");
     log.innerHTML = logcard;
     log.id = logcard;
     var LOG = document.getElementById("log").appendChild(log);
     log.style = "";
+
+    var currentlog = document.getElementById("log");
+    if (currentlog.innerHTML == "") {
+    } else {
+      var countcards = document.getElementById("cardmeter");
+      var count = value;
+      var current = countcards.value;
+      var currentcount =  current + count;
+      countcards.value = currentcount;
+
+      if (currentcount > 21) {
+        alert("You Busted");
+      }
+    }
   }
 }
