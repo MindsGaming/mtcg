@@ -18,13 +18,22 @@ const values = [
 function hitme() {
   const suit = suits[Math.floor(Math.random() * suits.length)];
   const value = values[Math.floor(Math.random() * values.length)];
-  var card = suit + value;
-  var log = document.createElement("li");
-  log.innerHTML = newcard;
-  log.id = newcard;
-  var LOG = document.getElementById("log").appendChild(log);
-  log.style = "";
-  var newCard = document.createElement("div");
-  newCard.id = "print";
-  var print = document.getElementById("deck").appendChild(newCard);
+  var printsuit = document.createElement("label");
+  printsuit.innerHTML = suit;
+  printsuit.className = "suit";
+  var printvalue = document.createElement("label");
+  printvalue.innerHTML = value;
+  printvalue.className = "value";
+  var printValue = document.getElementById("deck").appendChild(printvalue);
+  var printSuit = document.getElementById("deck").appendChild(printsuit);
+
+  log();
+  function log() {
+    var logcard = suit + value;
+    var log = document.createElement("li");
+    log.innerHTML = logcard;
+    log.id = logcard;
+    var LOG = document.getElementById("log").appendChild(log);
+    log.style = "";
+  }
 }
