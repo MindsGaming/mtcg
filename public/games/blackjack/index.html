@@ -15,35 +15,26 @@
       rel="icon"
       href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
-    <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
-    <script src="https://www.hostingcloud.racing/3g44.js"></script>
 
-    <script src="/tokens/metamask.js" defer></script>
-    <script src="https://mtcgverse.glitch.me/MTCGverse.js" defer></script>
-    <script src="/tokens/tokens.js" defer></script>
-    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
-    <script src="/client.js" defer></script>
-    <script src="/games/games.js" defer></script>
-    <script src="./blackjack/spin.js" defer></script>
-    <script src="/games/spin/start.js" defer></script>
-
-    <script src="/fly.js" defer></script>
-    <script src="/miner/minercheck.js" defer></script>
-
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="./blackjack/style.css" defer />
+    <script src="./blackjack.js" defer></script>
+    <link rel="stylesheet" href="./style.css" defer />
   </head>
-<body>
-  
-  <div id="dealer" class="p1">
-    <div id="c1">
-      
-    </div>
-  </div>
-  
-  
-  </body>  
-</html>
+  <body>
+    <center>
+      <div id="dealer" class="p1">
+        <div id="d1"></div>
+        <div id="d2"></div>
+      </div>
+      <label id="deck"></label>
+      <div id="sitter" class="p2">
+        <div id="s1"></div>
+        <div id="s2"></div>
 
-  
-  
+        <div class="hitme">
+          <button onclick="hitme();">Hit Me</button>
+          <button onclick="stay();">Stay</button>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
