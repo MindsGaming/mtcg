@@ -1,5 +1,21 @@
-var suits = ["spades", "diamonds", "clubs", "hearts"];
-var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+const suits = ["spades", "diamonds", "clubs", "hearts"];
+const values = [
+  "A",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "J",
+  "Q",
+  "K",
+];
+
+getDeck();
 
 function getDeck() {
   let deck = new Array();
@@ -14,11 +30,13 @@ function getDeck() {
   return deck;
 }
 
-var deck = [
+const deck = [
   { Value: "A", Suit: "Spades" },
   { Value: "A", Suit: "Diamonds" },
   { Value: "A", Suit: "Clubs" },
 ];
+
+shuffle(deck);
 
 function shuffle(deck) {
   // for 1000 turns
@@ -33,6 +51,7 @@ function shuffle(deck) {
   }
 }
 
+renderDeck(deck);
 function renderDeck(deck) {
   document.getElementById("deck").innerHTML = "";
 
