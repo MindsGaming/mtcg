@@ -16,14 +16,8 @@ const values = [
 ];
 
 function hitme() {
-  var suit = Math.floor(Math.random() * suits.length);
-  var value = Math.floor(Math.random() * values.length);
-  var card = suit ;
+  const suit = suits[Math.floor(Math.random() * suits.length)];
+  const value = values[Math.floor(Math.random() * values.length)];
 
-  var log = document.createElement("txt");
-  log.txt = card;
-  log.id = card;
-  log.style = "color: red, font-size: 42px";
-  var LOG = document.getElementById("log").appendChild(log);
-  alert(log.txt);
+  var newcard = suit + value;
 }
