@@ -24,8 +24,19 @@ function hitme() {
   var printvalue = document.createElement("div");
   printvalue.innerHTML = value;
   printvalue.className = "value";
-  var printValue = document.getElementById("card1").appendChild(printvalue);
-  var printSuit = document.getElementById("card1").appendChild(printsuit);
+
+  var cardprinter = document.getElementById("cardprinter");
+  var currentprints = cardprinter.value;
+  var addprint = 1;
+  var printmath = cardprinter + printmath;
+  var cardprinterR = document.getElementById("cardprinter").value;
+  cardprinterR = printmath;
+  var printid = "card" + printmath;
+
+  var createprint = document.getElementByI("deck").appendChild(cardprinter);
+
+  var printValue = document.getElementById(printid).appendChild(printvalue);
+  var printSuit = document.getElementById(printid).appendChild(printsuit);
 
   var restyle = document.getElementById("card1");
   restyle.className = "card";
@@ -43,8 +54,12 @@ function hitme() {
     } else {
       var countcards = document.getElementById("cardmeter");
       var count = value;
+      if ((count == "A", "K", "Q", "K")) {
+        count = 10;
+      }
+
       var current = countcards.value;
-      var currentcount =  current + count;
+      var currentcount = current + count;
       countcards.value = currentcount;
 
       if (currentcount > 21) {
