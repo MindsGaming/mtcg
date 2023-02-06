@@ -343,7 +343,8 @@ function dealCards() {
       getspecialtext.innerHTML = "Not enough MANA";
     } else {
       var manergymath = MANERGY.value - p1card.value;
-      MANERGY.value = manergymath;
+      var pushmanergy = document.getElementById("MANERGY").value
+      pushmanergy = manergymath;
 
       if (inplay.value < 3) {
         var newprint = document.createElement("img");
