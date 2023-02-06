@@ -260,7 +260,7 @@ function userview() {
 function viewcollection() {
   if (collection.title == "build") {
     var createHUB = document.createElement("iframe");
-    createHUB.src = "/cards";
+    createHUB.src = "/mtcg/cards";
     createHUB.className = "wrap";
     createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document
