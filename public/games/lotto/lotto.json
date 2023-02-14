@@ -1,0 +1,7 @@
+function payME()
+{
+  "currency": "MINTME",
+  "amount": "12.33",
+  "address": "0x0..0",
+  "network": ""
+}
