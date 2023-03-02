@@ -391,13 +391,20 @@ const mobilemechanic = document
   .appendChild(MobileMechanic);
 
 const MagicWand = document.createElement("img");
-MagicWand.src = "https://momintdev.blob.core.windows.net/uploads/15726292-4f7f-40d1-9894-efbba0a02a3a.jpeg"
+MagicWand.src =
+  "https://momintdev.blob.core.windows.net/uploads/15726292-4f7f-40d1-9894-efbba0a02a3a.jpeg";
 MagicWand.title = "Magic Wand";
 MagicWand.className = "card";
-const magicwand = document
-  .getElementById("MagicWand")
-  .appendChild(MobileMechanic);
+const magicwand = document.getElementById("MagicWand").appendChild(MagicWand);
 
+const Basketball = document.createElement("img");
+Basketball.src =
+  "https://momintdev.blob.core.windows.net/uploads/2772439e-d42d-443f-86a0-fbe3c38ad50c.jpeg";
+Basketball.title = "Basketball";
+Basketball.className = "card";
+const basketballl = document
+  .getElementById("Basketball")
+  .appendChild(Basketball);
 
 /// Card Tools
 
