@@ -282,31 +282,3 @@ function cashducktimer() {
   }
 }
 
-
-var LOTTO = document.getElementById("lotto");
-var getseconds = seconds
-lotto.className = "hide"
-
-function lotto() {
-  if (dreamInput.value == "") {
-    userview();
-  } else {
-    const data = {
-      dream: dreamInput.value + " " + "Lotto Entry",
-    };
-    fetch("/addDream", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((res) => res.json())
-      .then((response) => {
-        console.log(JSON.stringify(response));
-      });
-    // get dream value and add it to the list
-    dreams.push(dreamInput.value + "  " + "Lotto Entry");
-    appendNewDream(dreamInput.value + "  " + "Lotto Entry");
-
-    levelUp();
-  }
-}
