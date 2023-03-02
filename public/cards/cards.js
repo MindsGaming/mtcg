@@ -375,10 +375,29 @@ const cheeseballs = document
   .appendChild(CHEESEBALLS);
 
 const BOTMAN = document.createElement("img");
-BOTMAN.src = "https://momintdev.blob.core.windows.net/uploads/f965b2b0-6c5a-49c6-9d84-fff24b15bcae.jpeg"
-BOTMAN.title = "CHEESEBALLS";
+BOTMAN.src =
+  "https://momintdev.blob.core.windows.net/uploads/f965b2b0-6c5a-49c6-9d84-fff24b15bcae.jpeg";
+BOTMAN.title = "BOTMAN";
 BOTMAN.className = "card";
 const botman = document.getElementById("BOTMAN").appendChild(BOTMAN);
+
+const MobileMechanic = document.createElement("img");
+MobileMechanic.src =
+  "https://momintdev.blob.core.windows.net/uploads/7a06a3bb-6360-4416-8a75-5f76b2df4926.jpeg";
+MobileMechanic.title = "Mobile Mechanic";
+MobileMechanic.className = "card";
+const mobilemechanic = document
+  .getElementById("MobileMechanic")
+  .appendChild(MobileMechanic);
+
+const MagicWand = document.createElement("img");
+MagicWand.src = "https://momintdev.blob.core.windows.net/uploads/15726292-4f7f-40d1-9894-efbba0a02a3a.jpeg"
+MagicWand.title = "Magic Wand";
+MagicWand.className = "card";
+const magicwand = document
+  .getElementById("MagicWand")
+  .appendChild(MobileMechanic);
+
 
 /// Card Tools
 
