@@ -356,5 +356,8 @@ function lotto() {
     appendNewDream(dreamInput.value + "  " + "Lotto Entry");
 
     levelUp();
+    LOTTO.innerHTML = "You have Entered The Lotto";
+    
+
   }
 }
