@@ -10,6 +10,9 @@ wrap {
   overflow: scroll;
 }
 
+li {
+  list-style-type: none;
+}
 .wrap {
   position: fixed;
   left: 0;
