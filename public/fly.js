@@ -398,6 +398,17 @@ function walletTools() {
   window.open("#wallet-links", "_self");
 }
 
+/* B Social */
+function Bsocial() {
+  var SOCIAL = document.getElementById("SOCIAL");
+  var createHUB = document.createElement("iframe");
+  createHUB.src = "https://bastyon.com/mindsgaming";
+  SOCIAL.className = "wrap";
+   var CREATEHUB = document
+      .getElementById("SOCIAL")
+      .appendChild(createHUB);
+}
+
 /* Online Check */
 
 const status = window.navigator.onLine;
