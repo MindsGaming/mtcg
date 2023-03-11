@@ -403,10 +403,12 @@ function Bsocial() {
   var SOCIAL = document.getElementById("SOCIAL");
   var createHUB = document.createElement("iframe");
   createHUB.src = "https://bastyon.com/mindsgaming";
-  SOCIAL.className = "wrap";
-   var CREATEHUB = document
-      .getElementById("SOCIAL")
-      .appendChild(createHUB);
+  createHUB.style =
+    "position:fixed; top:0 left:0; width: 100%; height: 100%; background-color: white; z-index: 2 ";
+  SOCIAL.className="";
+  SOCIAL.style =
+    "position:fixed; top:0 left:0; width: 100%; height: 100%; background-color: white; z-index: 2 ";
+  var CREATEHUB = document.getElementById("SOCIAL").appendChild(createHUB);
 }
 
 /* Online Check */
