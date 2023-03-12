@@ -1,0 +1,76 @@
+!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A cool thing made with Glitch" />
+
+    <title>Welcome to Glitch!</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="./client.js" defer></script>
+    <script src="./web3.js" defer></script>
+  </head>
+  <body>
+    <wrap>
+      <center>
+        <button class="hide" id="connect" title="connect">
+          Connect Network
+        </button>
+        <form>
+          <label class="user" id="myUSER" title="MG Post">MG Post</label>
+          <input
+            id="dream"
+            name="dream"
+            aria-label="a new dream"
+            type="text"
+            maxlength="200"
+            onclick="createPOST();"
+            placeholder="What's Up?"
+            required
+          />
+          <button class="postBTN" type="submit" id="submit-dream">Post</button>
+        </form>
+
+        <section class="dreams">
+          <div>
+            Last Post
+            <hr />
+          </div>
+          <ul class="POST" id="last" title="0">
+            Create A Post
+          </ul>
+          <br />
+          <div>
+            History
+            <hr />
+          </div>
+          <ul id="dreams"></ul>
+        </section>
+      </center>
+      <button class="hide" id="clear-dreams">Clear Dreams</button>
+      <br />
+    </wrap>
+
+    <meter
+      id="totalPOSTS"
+      min="0"
+      low="0"
+      high="15"
+      max="250000"
+      value="0"
+    ></meter>
+  </body>
+</html>
