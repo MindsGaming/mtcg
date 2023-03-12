@@ -9,7 +9,7 @@ wrap {
   z-index: 0;
 }
 
-form {
+.chatform {
   position: fixed;
   top: 0;
   right: 0;
