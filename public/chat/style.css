@@ -104,3 +104,13 @@ button {
   cursor: pointer;
   padding: 3px;
 }
+
+.goHOME {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 30px;
+  border-style:solid;
+  cursor: pointer;
+}

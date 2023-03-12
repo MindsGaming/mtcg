@@ -90,5 +90,6 @@ dreamsForm.onsubmit = (event) => {
   });
 };
 
-
-
+function GOHOME() {
+  window.open("/", "_self");
+}
