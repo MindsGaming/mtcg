@@ -1,0 +1,106 @@
+wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  overflow: scroll;
+  z-index: 0;
+}
+
+form {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  width: 10.3rem;
+  height: 4rem;
+  background-color: silver;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+input {
+  width: 90%;
+}
+
+.postBTN {
+  margin-left: 70%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 0.5px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: green;
+  border-style: groove;
+  border-color: blue;
+  border-radius: 15px 15px 15px 15px;
+  background-color: blue;
+}
+
+ul {
+  position: relative;
+  list-style-type: none;
+  z-index: 1;
+  color: blue;
+  font-weight: bolder;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.POST {
+  position: relative;
+  text-align: left;
+  bottom: 0;
+  border-style: groove;
+  border-color: silver;
+  margin: 15px;
+  max-width: 60%;
+  max-height: 21%;
+  overflow: scroll;
+  background-color: white;
+}
+
+.user {
+  float: left;
+  margin: 2px;
+  color: black;
+  font-weight: bolder;
+  font-size: 12px;
+  overflow: scroll;
+}
+
+.dreams {
+  margin-top: 5.6rem;
+}
+
+.hide {
+  display: none;
+}
+
+.POP {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: red;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+}
+
+.X {
+  float: left;
+  margin: 3px;
+  color: green;
+  background-color: gold;
+  cursor: pointer;
+  padding: 3px;
+}

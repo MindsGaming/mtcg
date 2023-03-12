@@ -329,11 +329,16 @@ function selectToken() {
   dreamToken.innerHTML = newtoken;
 }
 
+/*Dapps */
+if (ethereum.selectedAddress == null) {
+} else {
+  dreamInput.value = ethereum.selectedAddress;
+}
+
 /* Lotto */
 var LOTTO = document.getElementById("lotto");
 var getseconds = document.getElementById("seconds");
 LOTTO.className = "lotto";
-
 
 function lotto() {
   if (dreamInput.value == "") {
@@ -357,7 +362,5 @@ function lotto() {
 
     levelUp();
     LOTTO.innerHTML = "You have Entered The Lotto";
-    
-
   }
 }
