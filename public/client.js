@@ -329,16 +329,6 @@ function selectToken() {
   dreamToken.innerHTML = newtoken;
 }
 
-/*Dapps */
-function checkmeta() {
-  if (ethereum.selectedAddress == null) {
-  } else {
-    var get
-    
-  }
-}
-checkmeta();
-
 /* Lotto */
 var LOTTO = document.getElementById("lotto");
 var getseconds = document.getElementById("seconds");

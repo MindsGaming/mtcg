@@ -21,6 +21,9 @@ var connectWithMetaMask = async function () {
   const accounts = await ethereum.request({ method: "eth_requestAccounts" });
   const publicAddress = accounts[0];
   console.log("Address chosen is", publicAddress);
+  var placeaddy = document.getElementById("dream");
+  placeaddy.value = ethereum.selectedAddress;
+  dream;
 
   async () => {
     await ethereum.request({
