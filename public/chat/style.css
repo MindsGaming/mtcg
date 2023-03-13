@@ -158,6 +158,8 @@ button {
 .desktoponly{
   position: relative;
   margin-top: 3%;
-  margin-left: 10%;
-  font-size:10px;
+  margin-left: 4.8%;
+  font-size:8px;
+  color: red;
+  font-weight: bold;
 }
