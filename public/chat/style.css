@@ -50,14 +50,12 @@ ul {
   width: 85%;
 }
 
-.POST {
-  position: relative;
-  text-align: left;
-  bottom: 0;
+.POST{
+float: left;  text-align: left;
   border-style: groove;
   border-color: silver;
-  margin: 15px;
-  max-width: 60%;
+  margin: 150px;
+  width: 500px;
   max-height: 21%;
   overflow: scroll;
   background-color: white;
