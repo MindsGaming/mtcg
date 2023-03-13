@@ -332,3 +332,9 @@ button:hover {
   z-index: 2;
 }
 
+.commentBox {
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+}
+

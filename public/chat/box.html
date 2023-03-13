@@ -24,33 +24,30 @@
     <script src="./web3.js" defer></script>
   </head>
   <body>
-    <wrap>
-      <div id="CHATTING">
-        <form class="chatformBOX">
-          <label class="user" id="myUSER" title="MG Post">MG Post</label>
-          <input
-            id="dream"
-            name="dream"
-            aria-label="a new dream"
-            type="text"
-            maxlength="200"
-            onclick="createPOST();"
-            placeholder="What's Up?"
-            required
-          />
-          <button class="POSTBTN" type="submit" id="submit-dream">Post</button>
-        </form>
+    <form class="chatformBOX">
+      <label class="user" id="myUSER" title="MG Post">MG Post</label>
+      <input
+        id="dream"
+        name="dream"
+        aria-label="a new dream"
+        type="text"
+        maxlength="200"
+        onclick="createPOST();"
+        placeholder="What's Up?"
+        required
+      />
+      <button class="POSTBTN" type="submit" id="submit-dream">Post</button>
+    </form>
 
-        <section class="hide">
-          <ul class="POST" id="last" title="0"></ul>
-          <br />
-          <ul id="dreams"></ul>
-        </section>
-        <button class="hide" id="clear-dreams">Clear Dreams</button>
-        <br />
-      </div>
-      <button class="hide" id="connect" title="connect">Connect Network</button>
-    </wrap>
+    <section class="hide">
+      <ul class="POST" id="last" title="0"></ul>
+      <br />
+      <ul id="dreams"></ul>
+    </section>
+    <button class="hide" id="clear-dreams">Clear Dreams</button>
+    <br />
+    <button class="hide" id="connect" title="connect">Connect Network</button>
+
     <meter
       id="totalPOSTS"
       min="0"
@@ -58,6 +55,7 @@
       high="15"
       max="250000"
       value="0"
+      class="hide"
     ></meter>
   </body>
 </html>
