@@ -23,7 +23,34 @@ var connectWithMetaMask = async function () {
   console.log("Address chosen is", publicAddress);
   var placeaddy = document.getElementById("dream");
   placeaddy.value = ethereum.selectedAddress;
-  dream;
+
+  // CUstom
+  
+  const data = {
+    dream: dreamInput.value,
+  };
+
+  fetch("/addDream", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "Content-Type": "application/json" },
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      console.log(JSON.stringify(response));
+    });
+  // get dream value and add it to the list
+  dreams.push(dreamInput.value);
+  appendNewDream(dreamInput.value);
+
+  // reset form
+  var loginform = document.getElementById("login-form");
+  var walletlinks = document.getElementById("wallet-links");
+  myWallet.innerHTML = dreamInput.value;
+  loginform.className = "hide";
+  walletlinks.className = "display";
+  selectToken();
+//
 
   async () => {
     await ethereum.request({
