@@ -22,9 +22,10 @@ fetch("/getDreams", {})
 
 // a helper function that creates a list item for a given dream
 const appendNewDream = (dream) => {
-  const newListItem = document.createElement("li");
+  const newListItem = document.createElement("a");
   newListItem.className = "POST";
   newListItem.innerText = dream;
+  newListItem.href = "/chat";
 
   var totalposts = document.getElementById("totalPOSTS");
   var addpost = 1;
@@ -55,7 +56,9 @@ dreamsForm.onsubmit = (event) => {
   } else {
     myUSER.innerHTML = ethereum.selectedAddress;
 
-    const data = { dream: myUSER.innerHTML + " Said:" + dreamInput.value };
+    const data = {
+      dream: myUSER.innerHTML + " Said: " + dreamInput.value,
+    };
 
     fetch("/addDream", {
       method: "POST",
