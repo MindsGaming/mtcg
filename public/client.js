@@ -177,7 +177,7 @@ function claimUpdate() {
       levelUp();
 
       const data = {
-        dream: dreamInput.value + " " + dreamToken.innerHTML + ":" + REWARDS,
+        dream: dreamInput.value + " Earned: " + REWARDS + dreamToken.innerHTML,
       };
       fetch("/addDream", {
         method: "POST",
@@ -190,10 +190,10 @@ function claimUpdate() {
         });
       // get dream value and add it to the list
       dreams.push(
-        dreamInput.value + "  " + dreamToken.innerHTML + ":" + REWARDS
+        dreamInput.value + " Earned: " + REWARDS + dreamToken.innerHTML
       );
       appendNewDream(
-        dreamInput.value + "  " + dreamToken.innerHTML + ":" + REWARDS
+        dreamInput.value + " Earned: " + REWARDS + dreamToken.innerHTML
       );
 
       reset();

@@ -21,6 +21,16 @@ wrap {
   z-index: 2;
 }
 
+.chatformBOX {
+  position: fixed;
+  margin: 20px;
+  width: 80%;
+  height: 10%;
+  background-color: silver;
+  opacity: 0.8;
+  z-index: 5;
+}
+
 input {
   width: 90%;
 }
@@ -38,6 +48,21 @@ input {
   border-color: blue;
   border-radius: 15px 15px 15px 15px;
   background-color: blue;
+}
+.POSTBTN {
+  margin-left: 70%;
+  margin-top: 13px;
+  margin-bottom: 3px;
+  padding: 0.5px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: green;
+  border-style: groove;
+  border-color: blue;
+  border-radius: 15px 15px 15px 15px;
+  background-color: blue;
+  width: 20%;
 }
 
 ul {

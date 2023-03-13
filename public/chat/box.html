@@ -1,4 +1,3 @@
-<!-- This is a static file -->
 <!-- served from your routes in server.js -->
 <!DOCTYPE html>
 <html lang="en">
@@ -25,45 +24,34 @@
     <script src="./web3.js" defer></script>
   </head>
   <body>
-    <center>
-      <button class="hide" id="connect" title="connect">Connect Network</button>
-      <form class="chatform">
-        <label class="user" id="myUSER" title="MG Post">MG Post</label>
-        <input
-          id="dream"
-          name="dream"
-          aria-label="a new dream"
-          type="text"
-          maxlength="200"
-          onclick="createPOST();"
-          placeholder="What's Up?"
-          required
-        />
-        <button class="postBTN" type="submit" id="submit-dream">Post</button>
-      </form>
+    <wrap>
+      <div id="CHATTING">
+        <form class="chatformBOX">
+          <label class="user" id="myUSER" title="MG Post">MG Post</label>
+          <input
+            id="dream"
+            name="dream"
+            aria-label="a new dream"
+            type="text"
+            maxlength="200"
+            onclick="createPOST();"
+            placeholder="What's Up?"
+            required
+          />
+          <button class="POSTBTN" type="submit" id="submit-dream">Post</button>
+        </form>
 
-      <section class="dreams">
-        <div>
-          Last Activity
-          <hr />
-        </div>
-        <ul class="POST" id="last" title="0">
-          Create A Post
-        </ul>
+        <section class="hide">
+          <ul class="POST" id="last" title="0"></ul>
+          <br />
+          <ul id="dreams"></ul>
+        </section>
+        <button class="hide" id="clear-dreams">Clear Dreams</button>
         <br />
-        <ul id="dreams">
-          <div>
-            History
-            <hr />
-          </div>
-        </ul>
-      </section>
-    </center>
-    <button class="hide" id="clear-dreams">Clear Dreams</button>
-    <br />
-
+      </div>
+      <button class="hide" id="connect" title="connect">Connect Network</button>
+    </wrap>
     <meter
-      class="hide"
       id="totalPOSTS"
       min="0"
       low="0"
