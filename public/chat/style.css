@@ -47,18 +47,24 @@ ul {
   color: blue;
   font-weight: bolder;
   text-align: center;
+  width: 85%;
+}
+
+.POST {
+  position: relative;
+  text-align: left;
+  bottom: 0;
+  border-style: groove;
+  border-color: silver;
+  margin: 15px;
+  max-width: 60%;
+  max-height: 21%;
+  overflow: scroll;
+  background-color: white;
 }
 
 button {
   cursor: pointer;
-}
-
-.POST {
-  float: left;
-  width: 85%;
-  margin-top: 80px;
-  margin-left: 80px;
-  border-style: groove;
 }
 
 .user {
