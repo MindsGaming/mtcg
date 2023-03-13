@@ -332,17 +332,3 @@ button:hover {
   z-index: 2;
 }
 
-.POST {
-  position: relative;
-  text-align: left;
-  bottom: 0;
-  border-style: groove;
-  border-color: silver;
-  margin: 15px;
-  max-width: 60%;
-  max-height: 21%;
-  overflow: scroll;
-  background-color: white;
-  color: blue;
-  cursor: pointer;
-}

@@ -22,10 +22,9 @@ fetch("/getDreams", {})
 
 // a helper function that creates a list item for a given dream
 const appendNewDream = (dream) => {
-  const newListItem = document.createElement("a");
+  const newListItem = document.createElement("li");
   newListItem.className = "POST";
   newListItem.innerText = dream;
-  newListItem.href = "/chat";
 
   var totalposts = document.getElementById("totalPOSTS");
   var addpost = 1;
