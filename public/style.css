@@ -334,9 +334,10 @@ button:hover {
 
 .commentbox {
   position: relative;
+  width: 75%;
   display: block;
-  margin-left: 68%;
-  padding: 2px;
+  padding: .5px;
   margin-top: 20px;
   border-radius: 25px 25px 25px 25px;
+  border-color: silver;
 }
