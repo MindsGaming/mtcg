@@ -131,7 +131,7 @@ dreamsForm.onsubmit = (event) => {
   event.preventDefault();
 
   const data = {
-    dream: dreamInput.value,
+    dream: dreamInput.value + "Started Earming",
   };
 
   fetch("/addDream", {
@@ -144,8 +144,8 @@ dreamsForm.onsubmit = (event) => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
-  dreams.push(dreamInput.value);
-  appendNewDream(dreamInput.value);
+  dreams.push(dreamInput.value, "Started Earming");
+  appendNewDream(dreamInput.value, "Started Earming");
 
   // reset form
   var loginform = document.getElementById("login-form");

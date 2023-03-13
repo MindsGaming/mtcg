@@ -334,7 +334,8 @@ button:hover {
 
 .commentbox {
   position: relative;
-  width: 75%;
+  width: 78%;
+  height: 80pcx
   display: block;
   padding: .5px;
   margin-top: 20px;
