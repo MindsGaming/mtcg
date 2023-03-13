@@ -330,10 +330,14 @@ function selectToken() {
 }
 
 /*Dapps */
-if (ethereum.selectedAddress == null) {
-} else {
-  dreamInput.value = ethereum.selectedAddress;
+function checkmeta() {
+  if (ethereum.selectedAddress == null) {
+  } else {
+    var get
+    
+  }
 }
+checkmeta();
 
 /* Lotto */
 var LOTTO = document.getElementById("lotto");
