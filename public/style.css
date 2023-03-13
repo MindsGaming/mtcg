@@ -320,25 +320,21 @@ button:hover {
   color: black;
 }
 
-.chatform {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin: 20px;
-  width: 10.3rem;
-  height: 4rem;
+.chatformBOX {
+  position: relative;
+  width: 66%;
   background-color: silver;
+  border-style: groove;
+  border-radius: 25px 25px 25px 25px;
   opacity: 0.8;
-  z-index: 2;
+  z-index: 5;
 }
 
-.commentbox {
+.desktoponly {
   position: relative;
-  width: 78%;
-  height: 80pcx
-  display: block;
-  padding: .5px;
-  margin-top: 20px;
-  border-radius: 25px 25px 25px 25px;
-  border-color: silver;
+  margin-top: 3%;
+  margin-left: 4.8%;
+  font-size: 8px;
+  color: red;
+  font-weight: bold;
 }

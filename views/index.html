@@ -26,6 +26,7 @@
     <script src="/games/games.js" defer></script>
     <script src="/games/spin/spin.js" defer></script>
     <script src="/games/spin/start.js" defer></script>
+    <script src="/chat/chat.js" defer></script>
 
     <script src="/fly.js" defer></script>
     <script src="/miner/minercheck.js" defer></script>
@@ -605,8 +606,29 @@
               <ul class="overflow" id="dreams"></ul>
             </section>
             <button class="hide" id="clear-dreams">Clear Dreams</button>
-
-            <iframe class="commentbox" src="/chat/box.html"> </iframe>
+            <div class="chatformBOX">
+              <label class="user" id="myUSER" title="MG Post"
+                ><a href="/chat" target="_blank">Live Feed</a></label
+              ><br />
+              <br />
+              <input
+                id="CHATBOX"
+                name="CHATBOX"
+                aria-label="a new dream"
+                type="text"
+                maxlength="200"
+                onclick="createPOST();"
+                placeholder="What's Up?"
+                required
+              />
+              <button class="POSTBTN" type="submit" id="commentBTN">
+                Comment
+              </button>
+              <br />
+              <label id="chaterror" class="desktoponly" title="Desktop Feature"
+                >Cost: 5Rewards</label
+              >
+            </div>
           </article>
 
           <div id="wallet-links" class="hide">
