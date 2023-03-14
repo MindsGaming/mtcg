@@ -26,51 +26,53 @@
   </head>
   <body>
     <wrap>
-    <center>
-      <a class="goHOME" href="/" target="_self">HOME</a>
-      <button class="hide" id="connect" title="connect">Connect Network</button>
-      <form class="chatform">
-        <label class="user" id="myUSER" title="MG Post">MG Post</label>
-        <input
-          id="dream"
-          name="dream"
-          aria-label="a new dream"
-          type="text"
-          maxlength="200"
-          onclick="createPOST();"
-          placeholder="What's Up?"
-          required
-        />
-         <input
-          id="FileUpload"
-          name="*"
-          aria-label="a new dream"
-          type="file"
-          maxlength="200"
-          accept="image/jpeg
-        />
-        <button class="postBTN" type="submit" id="submit-dream">Post</button>
-      </form>
+      <center>
+        <a class="goHOME" href="/" target="_self">HOME</a>
+        <button class="hide" id="connect" title="connect">
+          Connect Network
+        </button>
+        <form class="chatform">
+          <label class="user" id="myUSER" title="MG Post">MG Post</label>
+          <input
+            id="dream"
+            name="dream"
+            aria-label="a new dream"
+            type="text"
+            maxlength="200"
+            onclick="createPOST();"
+            placeholder="What's Up?"
+            required
+          />
+          <input
+            id="FileUpload"
+            name="*"
+            aria-label="a new dream"
+            type="file"
+            maxlength="200"
+            accept="image/jpeg, image/mp3"
+          />
+          <button class="postBTN" type="submit" id="submit-dream">Post</button>
+        </form>
 
-      <section class="dreams">
-        <div>
-          Last Activity
-          <hr />
-        </div>
-        <ul class="POST" id="last" title="0">
-          Create A Post
-        </ul>
-        <br />
-        <ul id="dreams">
+        <section class="dreams">
           <div>
-            History
+            Last Activity
             <hr />
           </div>
-        </ul>
-      </section>
-    </center>
-    <button class="hide" id="clear-dreams">Clear Dreams</button>
-    <br />
+          <ul class="POST" id="last" title="0">
+            Create A Post
+          </ul>
+          <br />
+          <ul id="dreams">
+            <div>
+              History
+              <hr />
+            </div>
+          </ul>
+        </section>
+      </center>
+      <button class="hide" id="clear-dreams">Clear Dreams</button>
+      <br />
     </wrap>
     <meter
       class="hide"

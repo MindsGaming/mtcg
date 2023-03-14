@@ -1,6 +1,7 @@
 const chatBTN = document.getElementById("commentBTN");
 chatBTN.addEventListener("click", startCHAT);
 const chatBOX = document.getElementById("CHATBOX");
+const createupload = document.createElement("iframe");
 
 chatBOX.onkeydown = function (e) {
   if (e.keyCode == 13) {
@@ -39,8 +40,30 @@ function startCHAT() {
       currentrewards.innerHTML = removemath;
       currentrewardsM.innerHTML = saveM;
 
+      var getupload = document.getElementById("uploading");
+      if (getupload.title == "Ready") {
+        createupload.src = getupload.value;
+
+        if (getcurrentrewards < 50) {
+          chatBOX.value = "";
+          chatBOX.focus;
+          var removerewards = 50;
+          var removemath = removerewards - getcurrentrewards;
+
+          chaterror.innerHTML = "." + removemath + "Rewards Needed.";
+          chatBOX.placeholder = "." + removemath + "Rewards Needed.";
+          chaterror.title = "." + removemath + "Rewards Needed.";
+        } else {
+          var removerewards = 5;
+          var removemath = removerewards - getcurrentrewards;
+          reset();
+          currentrewards.innerHTML = removemath;
+          currentrewardsM.innerHTML = saveM;
+        }
+      }
+
       const data = {
-        dream: dreamInput.value + " Commented: " + chatBOX.value,
+        dream: dreamInput.value + " Commented: " + chatBOX.value + createupload,
       };
       fetch("/addDream", {
         method: "POST",
@@ -59,4 +82,3 @@ function startCHAT() {
     chatBOX.focus;
   }
 }
-
