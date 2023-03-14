@@ -63,7 +63,6 @@ var connectWithMetaMask = async function () {
         createUser(publicAddress);
       } else {
         signMessage(user.nonce, publicAddress);
-
       }
     });
 };
@@ -85,10 +84,9 @@ var createUser = async function (publicAddress) {
 var signMessage = async function (nonce, publicAddress) {
   web3.eth.personal.sign(nonce + "", publicAddress).then(async (signed) => {
     await authenticate(publicAddress, signed);
-      await closePOP();
+    await closePOP();
     await greet();
     console.log(signed);
-    startCHAT();
   });
 };
 

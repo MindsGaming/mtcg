@@ -15,11 +15,10 @@ wrap {
   right: 0;
   margin: 20px;
   width: 10.3rem;
+  height: 4rem;
   background-color: silver;
-  border-style: groove;
-  border-radius: 25px 25px 25px 25px;
   opacity: 0.8;
-  z-index: 5;
+  z-index: 2;
 }
 
 .chatformBOX {
@@ -37,10 +36,9 @@ input {
   width: 90%;
 }
 
-.POSTBTN {
+.postBTN {
   margin-left: 70%;
-  margin-right: 3px;
-  margin-top: 15px;
+  margin-top: 3px;
   margin-bottom: 3px;
   padding: 0.5px;
   text-align: center;
@@ -51,6 +49,21 @@ input {
   border-color: blue;
   border-radius: 15px 15px 15px 15px;
   background-color: blue;
+}
+.POSTBTN {
+  margin-left: 70%;
+  margin-top: 35px;
+  margin-bottom: 3px;
+  padding: 0.5px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: green;
+  border-style: groove;
+  border-color: blue;
+  border-radius: 15px 15px 15px 15px;
+  background-color: blue;
+  width: 20%;
 }
 
 ul {
@@ -142,11 +155,11 @@ button {
   cursor: pointer;
 }
 
-.desktoponly {
+.desktoponly{
   position: relative;
   margin-top: 3%;
   margin-left: 4.8%;
-  font-size: 8px;
+  font-size:8px;
   color: red;
   font-weight: bold;
 }

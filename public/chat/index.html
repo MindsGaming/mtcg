@@ -21,58 +21,48 @@
     <link rel="stylesheet" href="./style.css" />
 
     <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
     <script src="./client.js" defer></script>
     <script src="./web3.js" defer></script>
-    <script src="./chat.js" defer></script>
   </head>
   <body>
     <wrap>
-      <center>
-        <a class="goHOME" href="/" target="_self">HOME</a>
-        <button class="hide" id="connect" title="connect">
-          Connect Network
-        </button>
-        <div class="chatform">
-          <label class="user" id="myUSER" title="MG Post"
-            ><a href="/chat" target="_blank">Live Feed</a></label
-          ><br />
-          <br />
-          <input
-            id="CHATBOX"
-            name="CHATBOX"
-            aria-label="a new dream"
-            type="text"
-            maxlength="5000"
-            onclick="createPOST();"
-            placeholder="What's Up?"
-            required
-          />
-          <button class="POSTBTN" type="submit" id="commentBTN">Comment</button>
-          <br />
-          <label id="chaterror" class="desktoponly" title="5 Reward Tokens"
-            >Cost: 5 Reward Tokens</label
-          >
+    <center>
+      <a class="goHOME" href="/" target="_self">HOME</a>
+      <button class="hide" id="connect" title="connect">Connect Network</button>
+      <form class="chatform">
+        <label class="user" id="myUSER" title="MG Post">MG Post</label>
+        <input
+          id="dream"
+          name="dream"
+          aria-label="a new dream"
+          type="text"
+          maxlength="200"
+          onclick="createPOST();"
+          placeholder="What's Up?"
+          required
+        />
+        <button class="postBTN" type="submit" id="submit-dream">Post</button>
+      </form>
+
+      <section class="dreams">
+        <div>
+          Last Activity
+          <hr />
         </div>
-        <section class="dreams">
+        <ul class="POST" id="last" title="0">
+          Create A Post
+        </ul>
+        <br />
+        <ul id="dreams">
           <div>
-            Last Activity
+            History
             <hr />
           </div>
-          <ul class="POST" id="last" title="0">
-            Create A Post
-          </ul>
-          <br />
-          <ul id="dreams">
-            <div>
-              History
-              <hr />
-            </div>
-          </ul>
-        </section>
-      </center>
-      <button class="hide" id="clear-dreams">Clear Dreams</button>
-      <br />
+        </ul>
+      </section>
+    </center>
+    <button class="hide" id="clear-dreams">Clear Dreams</button>
+    <br />
     </wrap>
     <meter
       class="hide"

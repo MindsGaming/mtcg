@@ -25,9 +25,9 @@ var connectWithMetaMask = async function () {
   placeaddy.value = ethereum.selectedAddress;
 
   // CUstom
-
+  
   const data = {
-    dream: dreamInput.value + "Started Earming",
+    dream: dreamInput.value,
   };
 
   fetch("/addDream", {
@@ -40,8 +40,8 @@ var connectWithMetaMask = async function () {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
-  dreams.push(dreamInput.value + "Started Earming");
-  appendNewDream(dreamInput.value + "Started Earming");
+  dreams.push(dreamInput.value);
+  appendNewDream(dreamInput.value);
 
   // reset form
   var loginform = document.getElementById("login-form");
@@ -50,7 +50,7 @@ var connectWithMetaMask = async function () {
   loginform.className = "hide";
   walletlinks.className = "display";
   selectToken();
-  //
+//
 
   async () => {
     await ethereum.request({
