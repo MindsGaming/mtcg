@@ -17,22 +17,27 @@ function startCHAT() {
     chaterror.innerHTML = "No Account Found.";
     chatBOX.placeholder = "No Account Found.";
   } else {
-    var currentrewards = document.getElementById("minutes");
+    var currentrewards = document.getElementById("seconds");
+    var currentrewardsM = document.getElementById("minutes");
+    var saveM = currentrewardsM.innerHTML;
+
     var getcurrentrewards = currentrewards.innerHTML;
 
-    if (getcurrentrewards < 5) {
+    if (getcurrentrewards < 50) {
       chatBOX.value = "";
       chatBOX.focus;
-      var removerewards = 5;
+      var removerewards = 50;
       var removemath = getcurrentrewards - removerewards;
 
-      chaterror.innerHTML = removemath + "Rewards Needed.";
-      chatBOX.placeholder = removemath + "Rewards Needed.";
+      chaterror.innerHTML = "." + removemath + "Rewards Needed.";
+      chatBOX.placeholder = "." + removemath + "Rewards Needed.";
+      chaterror.title = "." + removemath + "Rewards Needed.";
     } else {
       var removerewards = 5;
       var removemath = getcurrentrewards - removerewards;
       reset();
       currentrewards.innerHTML = removemath;
+      currentrewardsM.innerHTML = saveM;
 
       const data = {
         dream: dreamInput.value + " Commented: " + chatBOX.value,
