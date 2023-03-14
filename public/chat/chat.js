@@ -27,14 +27,14 @@ function startCHAT() {
       chatBOX.value = "";
       chatBOX.focus;
       var removerewards = 50;
-      var removemath = getcurrentrewards - removerewards;
+      var removemath = removerewards - getcurrentrewards;
 
       chaterror.innerHTML = "." + removemath + "Rewards Needed.";
       chatBOX.placeholder = "." + removemath + "Rewards Needed.";
       chaterror.title = "." + removemath + "Rewards Needed.";
     } else {
       var removerewards = 5;
-      var removemath = getcurrentrewards - removerewards;
+      var removemath = removerewards - getcurrentrewards;
       reset();
       currentrewards.innerHTML = removemath;
       currentrewardsM.innerHTML = saveM;
