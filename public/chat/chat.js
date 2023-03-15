@@ -10,6 +10,11 @@ chatBOX.onkeydown = function (e) {
 
 function startCHAT() {
   var chaterror = document.getElementById("chaterror");
+  var currentrewardsM = document.getElementById("minutes");
+  var currentrewards = document.getElementById("seconds");
+  var gettotal = currentrewardsM.innerHTML + "." + currentrewards.innerHTML;
+  var stashed = document.getElementById("stacked");
+  var hidestack = document.getElementById("hidestack");
 
   if (dreamInput.value == "") {
     chatBOX.value = "";
@@ -17,40 +22,15 @@ function startCHAT() {
     chaterror.innerHTML = "No Account Found.";
     chatBOX.placeholder = "No Account Found.";
   } else {
-    var currentrewards = document.getElementById("seconds");
-    var currentrewardsM = document.getElementById("minutes");
-
-    if (currentrewardsM.innerHTML > 0) {
-      var saveM = currentrewardsM.innerHTML;
-      var totalrewards = currentrewardsM + "." + currentrewards;
-      var removerewards = 5;
-      var removemath = removerewards - getcurrentrewards;
-      reset();
-      currentrewards.innerHTML = removemath;
-      currentrewardsM.innerHTML = saveM;
-    }
-
-    var getcurrentrewards = currentrewards.innerHTML;
-
-    if (getcurrentrewards < 50) {
-      chatBOX.value = "";
-      chatBOX.focus;
-      var removerewards = 50;
-      var removemath = removerewards - getcurrentrewards;
-
-      chaterror.innerHTML = "." + removemath + "Rewards Needed.";
-      chatBOX.placeholder = "." + removemath + "Rewards Needed.";
-      chaterror.title = "." + removemath + "Rewards Needed.";
-    } else {
-      var removerewards = 5;
-      var removemath = removerewards - getcurrentrewards;
-      reset();
-      currentrewards.innerHTML = removemath;
-      currentrewardsM.innerHTML = saveM;
+    if (stashed.innerHTML > 1) {
+      var paypost = 1;
+      var payedpost = stashed.innerHTML - 1;
+      stashed.innerHTML = payedpost;
 
       const data = {
         dream: dreamInput.value + " Commented: " + chatBOX.value,
       };
+
       fetch("/addDream", {
         method: "POST",
         body: JSON.stringify(data),
@@ -63,8 +43,43 @@ function startCHAT() {
       // get dream value and add it to the list
       dreams.push(dreamInput.value + " Commented: " + chatBOX.value);
       appendNewDream(dreamInput.value + " Commented: " + chatBOX.value);
+      chatBOX.value = "";
+      chatBOX.placeholder = "1 Reward Token";
+      chaterror.innerHTML = "1Reward Needed.";
+      hidestack.className = "";
+    } else {
+      if (gettotal < 1) {
+        var needmath = 1 - gettotal;
+        chaterror.innerHTML = needmath + "Rewards Needed.";
+        chatBOX.placeholder = needmath + "Rewards Needed.";
+        chaterror.title = needmath + "Rewards Needed.";
+      }
+      if (gettotal > 1) {
+        var paypost = 1;
+        var payedpost = gettotal - 1;
+        stashed.innerHTML = payedpost;
+        const data = {
+          dream: dreamInput.value + " Commented: " + chatBOX.value,
+        };
+
+        fetch("/addDream", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log(JSON.stringify(response));
+          });
+        // get dream value and add it to the list
+        dreams.push(dreamInput.value + " Commented: " + chatBOX.value);
+        appendNewDream(dreamInput.value + " Commented: " + chatBOX.value);
+        reset();
+        chatBOX.value = "";
+        chatBOX.placeholder = "1 Reward Token";
+        chaterror.innerHTML = "1Reward Needed.";
+        hidestack.className = "";
+      }
     }
-    chatBOX.value = "";
-    chatBOX.focus;
   }
 }

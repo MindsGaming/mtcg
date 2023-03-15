@@ -578,13 +578,18 @@
               <label id="myToken">Random</label>
             </div>
             <section title="closed" id="pendingClaims" class="">
-              Earned
               <center>
+                Earned
+
                 <label id="minutes" value="0">00</label>.<label
                   id="seconds"
                   value="0"
                   >00</label
                 >
+                <br />
+                <label id="hidestack" class="hide">
+                  Comment Stash <label id="stacked">0</label>
+                </label>
               </center>
               <button id="claimBTN" onclick="claimUpdate();">
                 Grab These Rewards!
@@ -625,11 +630,8 @@
                 Comment
               </button>
               <br />
-              <label
-                id="chaterror"
-                class="desktoponly"
-                title=".50 Reward Tokens"
-                >Cost: .50 Reward Tokens</label
+              <label id="chaterror" class="desktoponly" title="1 Reward Token"
+                >Cost: 1 Reward Token</label
               >
             </div>
           </article>
