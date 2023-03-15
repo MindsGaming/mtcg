@@ -129,6 +129,25 @@ function quickhub() {
     createHUB.className = "wrap";
     createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document.getElementById("HUBS").appendChild(createHUB);
+    if (dreamInput.value == "") {
+    } else {
+      const data = {
+        dream: dreamInput.value + " Joined Hubs " + todaysDate.innerHTML,
+      };
+
+      fetch("/addDream", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          console.log(JSON.stringify(response));
+        });
+      // get dream value and add it to the list
+      dreams.push(dreamInput.value + " Joined Hubs " + todaysDate.innerHTML);
+      appendNewDream(dreamInput.value + " Joined Hubs " + todaysDate.innerHTML);
+    }
   } else {
     if (hubs.title == "closed") {
       hubs.title = "HUBS";
@@ -147,10 +166,7 @@ function quickhub() {
   if (hubs.innerHTML == "") {
     hubs.title = "build";
     quickhub();
-    
   }
-
-
 }
 
 function HOME() {
