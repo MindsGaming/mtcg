@@ -58,6 +58,7 @@ function startCHAT() {
     // get dream value and add it to the list
     dreams.push(dreamInput.value + " Commented:" + CHATBOX.value);
     appendNewDream(dreamInput.value + " Commented:" + CHATBOX.value);
+    
     CHATBOX.innerHTML = "";
     CHATBOX.focus;
     chaterror.innerHTML = "";
