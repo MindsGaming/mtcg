@@ -50,9 +50,9 @@ function startCHAT() {
     } else {
       if (gettotal < 1) {
         var needmath = 1 - gettotal;
-        chaterror.innerHTML = needmath + "Rewards Needed.";
-        chatBOX.placeholder = needmath + "Rewards Needed.";
-        chaterror.title = needmath + "Rewards Needed.";
+        chaterror.innerHTML = "Earn +" + needmath + "Rewards.";
+        chatBOX.placeholder = "Earn +" + needmath + "Rewards.";
+        chaterror.title = "Earn +" + needmath + "Rewards.";
       }
       if (gettotal > 1) {
         var paypost = 1;
