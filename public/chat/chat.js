@@ -83,3 +83,17 @@ function startCHAT() {
     }
   }
 }
+
+/// Date
+
+const getdate = new Date();
+const todaysDate = document.getElementById("todaysDate");
+todaysDate.innerHTML = getdate;
+
+if (todaysDate.innerHTML == getdate) {
+  let text = document.getElementById("todaysDate").innerHTML;
+  document.getElementById("todaysDate").innerHTML = text.replace(
+    "GMT-0400 (Eastern Daylight Time)",
+    ""
+  );
+}
