@@ -59,7 +59,7 @@ function startCHAT() {
     dreams.push(dreamInput.value + " Commented:" + CHATBOX.value);
     appendNewDream(dreamInput.value + " Commented:" + CHATBOX.value);
     
-    CHATBOX.innerHTML = "";
+    CHATBOX.placeholder = "";
     CHATBOX.focus;
     chaterror.innerHTML = "";
 
