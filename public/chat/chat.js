@@ -19,19 +19,16 @@ function startCHAT() {
   } else {
     var currentrewards = document.getElementById("seconds");
     var currentrewardsM = document.getElementById("minutes");
-    
-    if (currentrewardsM.innerHTML > 0){
-    var saveM = currentrewardsM.innerHTML;
-    var totalrewards = currentrewardsM + "." + currentrewards;
-       var removerewards = 5;
+
+    if (currentrewardsM.innerHTML > 0) {
+      var saveM = currentrewardsM.innerHTML;
+      var totalrewards = currentrewardsM + "." + currentrewards;
+      var removerewards = 5;
       var removemath = removerewards - getcurrentrewards;
       reset();
       currentrewards.innerHTML = removemath;
       currentrewardsM.innerHTML = saveM;
-
-    
     }
-    
 
     var getcurrentrewards = currentrewards.innerHTML;
 
