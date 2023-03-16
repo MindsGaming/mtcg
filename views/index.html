@@ -575,7 +575,12 @@
             </div>
             <div>
               Reward Token:
-              <label id="myToken">Random</label>
+              <label
+                style="color: gold; font-weight: bold; cursor: pointer"
+                id="myToken"
+                onclick="changeToken();"
+                >Random</label
+              >
             </div>
             <section title="closed" id="pendingClaims" class="">
               <center>
@@ -586,13 +591,50 @@
                   value="0"
                   >00</label
                 >
-                <br />
+                <br /><br />
                 <label
                   id="hidestack"
                   class="hide"
                   onclick="claimstashREWARDS();"
                 >
-                  Comment Stash <label id="stacked">0</label>
+                  <div id="creratestash">
+                    Comment Stash <br />
+                    <p class="userstash">
+                      GAMER <label class="stashing" id="GAMERSTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      Eclipse
+                      <label class="stashing" id="ECLIPSESTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      DooBetter
+                      <label class="stashing" id="DooBetterSTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      GTPC <label class="stashing" id="GTPCSTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      withinthevacuum
+                      <label class="stashing" id="withinthevacuumSTASH"
+                        >0</label
+                      >
+                    </p>
+                    <p class="userstash">
+                      PINN <label class="stashing" id="PINNSTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      DarkMark
+                      <label class="stashing" id="DarkMarkSTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      DragonToken<label class="stashing" id="DragonTokenSTASH"
+                        >0</label
+                      >
+                    </p>
+                    <p class="userstash">
+                      Candys <label class="stashing" id="CandysSTASH">0</label>
+                    </p>
+                  </div>
                 </label>
               </center>
               <button id="claimBTN" onclick="claimUpdate();">

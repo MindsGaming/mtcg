@@ -338,3 +338,22 @@ button:hover {
   color: red;
   font-weight: bold;
 }
+
+
+.userstash {
+  position: relative;
+  margin-right: 2%;
+  color: grey;
+  font-size: 12px;
+  border-style: solid;
+  max-width: 35%;
+}
+
+.stashing {
+  position: relative;
+  margin: 1%;
+  padding: 2px;
+  color: white;
+  font-size: 11.2px;
+  font-weight: bold;
+}

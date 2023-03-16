@@ -9,12 +9,14 @@ chatBOX.onkeydown = function (e) {
 };
 
 function startCHAT() {
-  var chaterror = document.getElementById("chaterror");
   var currentrewardsM = document.getElementById("minutes");
   var currentrewards = document.getElementById("seconds");
+  var mytoken = document.getElementById("myToken").innerHTML;
   var gettotal = currentrewardsM.innerHTML + "." + currentrewards.innerHTML;
-  var stashed = document.getElementById("stacked");
+  var stashwallet = mytoken + "STASH";
+  var stashid = document.getElementById(stashwallet);
   var hidestack = document.getElementById("hidestack");
+  var stashed = gettotal + stashid.innerHTML;
 
   if (dreamInput.value == "") {
     chatBOX.value = "";
@@ -22,10 +24,10 @@ function startCHAT() {
     chaterror.innerHTML = "No Account Found.";
     chatBOX.placeholder = "No Account Found.";
   } else {
-    if (stashed.innerHTML > 1) {
+    if (stashid.innerHTML > 1) {
       var paypost = 1;
-      var payedpost = stashed.innerHTML - 1;
-      stashed.innerHTML = payedpost;
+      var payedpost = stashid.innerHTML - paypost;
+      stashid.innerHTML = payedpost;
 
       const data = {
         dream: dreamInput.value + " Commented: " + chatBOX.value,
@@ -56,9 +58,13 @@ function startCHAT() {
         chaterror.title = "Earn +" + needmath + "Rewards.";
       }
       if (gettotal > 1) {
+        var mytoken = document.getElementById("myToken").innerHTML;
+        var stashwallet = mytoken + "STASH";
+        var stashid = document.getElementById(stashwallet);
         var paypost = 1;
-        var payedpost = gettotal - 1;
-        stashed.innerHTML = payedpost;
+        var payedpost = gettotal - paypost;
+        stashid.innerHTML = payedpost;
+
         const data = {
           dream: dreamInput.value + " Commented: " + chatBOX.value,
         };
@@ -89,7 +95,11 @@ function startCHAT() {
 /// Stash Reward
 
 function claimstashREWARDS() {
-  var getstash = document.getElementById("stacked");
+  var mytoken = document.getElementById("myToken").innerHTML;
+
+  var stashwallet = mytoken + "STASH";
+  var stashid = document.getElementById(stashwallet);
+  var getstash = document.getElementById(stashwallet);
 
   if (getstash.innerHTML > 1) {
     var REWARDS = getstash.innerHTML;
@@ -118,7 +128,7 @@ function claimstashREWARDS() {
     reset();
     getstash.innerHTML = "0";
   } else {
-    alert("1 Reward Required.");
+    alert("1 Reward Required," + " Using " + stashwallet);
   }
 }
 
