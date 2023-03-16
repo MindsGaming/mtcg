@@ -62,7 +62,7 @@ BirdsNest.src =
 BirdsNest.title = "BirdsNest";
 BirdsNest.className = "card";
 BirdsNest.atk = "0";
-BirdsNest.def = "0";
+BirdsNest.def = "50";
 const BIRDSNEST = document.getElementById("BirdsNest").appendChild(BirdsNest);
 
 const BullishFlyer = document.createElement("img");
@@ -70,6 +70,8 @@ BullishFlyer.src =
   "https://momintdev.blob.core.windows.net/uploads/629ce241-4ba9-4e03-a109-7e65f84a9b90.jpeg";
 BullishFlyer.title = "BullishFlyer";
 BullishFlyer.className = "card";
+BullishFlyer.atk = "95";
+BullishFlyer.def = "300";
 const BULLISHFLYER = document
   .getElementById("BullishFlyer")
   .appendChild(BullishFlyer);
@@ -79,6 +81,8 @@ FlyingWisdom.src =
   "https://momintdev.blob.core.windows.net/uploads/4f7e62d3-d38c-4a00-a273-f8fcf46e676d.jpeg";
 FlyingWisdom.title = "FlyingWisdom";
 FlyingWisdom.className = "card";
+FlyingWisdom.atk = "130";
+FlyingWisdom.def = "500";
 const FLYINGWISDOM = document
   .getElementById("FlyingWisdom")
   .appendChild(FlyingWisdom);
@@ -88,6 +92,8 @@ POPOLVUH.src =
   "https://momintdev.blob.core.windows.net/uploads/7af2b13d-5da5-49d3-97cf-5625f6f62a5b.jpeg";
 POPOLVUH.title = "POPOLVUH";
 POPOLVUH.className = "card";
+POPOLVUH.atk = "735";
+POPOLVUH.def = "500";
 const popolvuh = document.getElementById("POPOLVUH").appendChild(POPOLVUH);
 
 const TheMayans = document.createElement("img");
@@ -95,6 +101,8 @@ TheMayans.src =
   "https://momintdev.blob.core.windows.net/uploads/ba5db749-5638-47bb-93f3-953b850c472e.jpeg";
 TheMayans.title = "TheMayans";
 TheMayans.className = "card";
+TheMayans.atk = "50";
+TheMayans.def = "200";
 const THEMAYANS = document.getElementById("TheMayans").appendChild(TheMayans);
 
 const Mayflower = document.createElement("img");
@@ -102,6 +110,8 @@ Mayflower.src =
   "https://momintdev.blob.core.windows.net/uploads/ff1508f7-6c38-40a1-84ea-25ec9c97d1ba.jpeg";
 Mayflower.title = "Mayflower";
 Mayflower.className = "card";
+DINOMONSTER.atk = "200";
+DINOMONSTER.def = "200";
 const MAYFLOWER = document.getElementById("Mayflower").appendChild(Mayflower);
 
 const Manergy = document.createElement("img");
@@ -123,6 +133,8 @@ MAYDAY.src =
   "https://momintdev.blob.core.windows.net/uploads/756eccad-c783-47f5-8466-e842119a200e.jpeg";
 MAYDAY.title = "Mayflower";
 MAYDAY.className = "card";
+MAYDAY.atk = "85";
+MAYDAY.def = "200";
 const Mayday = document.getElementById("MAYDAY").appendChild(MAYDAY);
 
 const SheetMusic = document.createElement("img");
@@ -130,6 +142,8 @@ SheetMusic.src =
   "https://momintdev.blob.core.windows.net/uploads/38e13978-41a6-443c-a7ac-4110d2e8776b.jpeg";
 SheetMusic.title = "SheetMusic";
 SheetMusic.className = "card";
+SheetMusic.atk = "0";
+SheetMusic.def = "200";
 const SHEETMUSIC = document
   .getElementById("SheetMusic")
   .appendChild(SheetMusic);
@@ -139,6 +153,8 @@ MusicDJ.src =
   "https://momintdev.blob.core.windows.net/uploads/bc70e6df-b73c-4e36-aa5c-f42b5398cfba.jpeg";
 MusicDJ.title = "MusicDJ";
 MusicDJ.className = "card";
+MusicDJ.atk = "45";
+MusicDJ.def = "120";
 const MUSICDJ = document.getElementById("MusicDJ").appendChild(MusicDJ);
 
 const UnsettlingSound = document.createElement("img");
@@ -146,6 +162,8 @@ UnsettlingSound.src =
   "https://momintdev.blob.core.windows.net/uploads/7ce7dc01-9870-4cd9-a572-c60e958d5671.jpeg";
 UnsettlingSound.title = "UnsettlingSound";
 UnsettlingSound.className = "card";
+UnsettlingSound.atk = "20";
+UnsettlingSound.def = "100";
 const UNSETTLINGSOUND = document
   .getElementById("UnsettlingSound")
   .appendChild(UnsettlingSound);
@@ -155,6 +173,8 @@ WitchesBroom.src =
   "https://momintdev.blob.core.windows.net/uploads/2d6a76b4-224f-4316-8c96-82f34211b1b6.jpeg";
 WitchesBroom.title = "WitchesBroom";
 WitchesBroom.className = "card";
+WitchesBroom.atk = "60";
+WitchesBroom.def = "95";
 const WITCHESBROOM = document
   .getElementById("WitchesBroom")
   .appendChild(WitchesBroom);
@@ -164,6 +184,8 @@ Thanatos.src =
   "https://momintdev.blob.core.windows.net/uploads/4e1b850e-fb56-4e0e-9582-4a05d9ff83de.jpeg";
 Thanatos.title = "Thanatos";
 Thanatos.className = "card";
+Thanatos.atk = "500";
+Thanatos.def = "500";
 const THANATOS = document.getElementById("Thanatos").appendChild(Thanatos);
 
 const GHOST = document.createElement("img");
@@ -171,6 +193,8 @@ GHOST.src =
   "https://momintdev.blob.core.windows.net/uploads/1e0abac4-ee76-4c6d-88b1-80800b43e835.jpeg";
 GHOST.title = "GHOST";
 GHOST.className = "card";
+GHOST.atk = "20";
+GHOST.def = "100";
 const ghost = document.getElementById("GHOST").appendChild(GHOST);
 
 const Mayonnaise = document.createElement("img");
@@ -178,6 +202,8 @@ Mayonnaise.src =
   "https://momintdev.blob.core.windows.net/uploads/4bd60782-a809-4c0e-b597-e811dc1d8cd7.jpeg";
 Mayonnaise.title = "Mayonnaise";
 Mayonnaise.className = "card";
+Mayonnaise.atk = "25";
+Mayonnaise.def = "200";
 const MAYONNAISE = document
   .getElementById("Mayonnaise")
   .appendChild(Mayonnaise);
@@ -187,6 +213,8 @@ PopcornMonster.src =
   "https://momintdev.blob.core.windows.net/uploads/f8562625-a837-49a4-bc17-bc6256117356.jpeg";
 PopcornMonster.title = "PopcornMonster";
 PopcornMonster.className = "card";
+PopcornMonster.atk = "100";
+PopcornMonster.def = "200";
 const POPCORNMONSTER = document
   .getElementById("PopcornMonster")
   .appendChild(PopcornMonster);
@@ -428,7 +456,8 @@ Angel.className = "card";
 const ANGEL = document.getElementById("Angel").appendChild(Angel);
 
 const Glitch = document.createElement("img");
-Glitch.src = "https://momintdev.blob.core.windows.net/uploads/102137f2-0853-4c5e-9651-f83feec9aa00.jpeg"
+Glitch.src =
+  "https://momintdev.blob.core.windows.net/uploads/102137f2-0853-4c5e-9651-f83feec9aa00.jpeg";
 Glitch.title = "Glitch";
 Glitch.className = "card";
 const GLITCH = document.getElementById("Glitch").appendChild(Glitch);
