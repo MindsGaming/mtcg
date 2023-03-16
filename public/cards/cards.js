@@ -3,6 +3,8 @@ DINOMONSTER.src =
   "https://momintdev.blob.core.windows.net/uploads/a0f061e5-eebc-4d5e-a17f-c398d21f01ce.jpeg";
 DINOMONSTER.title = "DinoMonster";
 DINOMONSTER.className = "card";
+DINOMONSTER.atk = "50";
+DINOMONSTER.def = "600";
 const dinomonster = document
   .getElementById("DINOMONSTER")
   .appendChild(DINOMONSTER);
@@ -12,6 +14,8 @@ DinoEggs.src =
   "https://momintdev.blob.core.windows.net/uploads/425c38c9-6b34-4c35-bb17-b3bba649cfd4.jpeg";
 DinoEggs.title = "DinoEggs";
 DinoEggs.className = "card";
+DinoEggs.atk = "0";
+DinoEggs.def = "100";
 const DINOEGGS = document.getElementById("DinoEggs").appendChild(DinoEggs);
 
 const FartGas = document.createElement("img");
@@ -19,6 +23,8 @@ FartGas.src =
   "https://momintdev.blob.core.windows.net/uploads/f0653389-45f9-4e05-a1da-88b38e4b8fb0.jpeg";
 FartGas.title = "FartGas";
 FartGas.className = "card";
+FartGas.atk = "2";
+FartGas.def = "3";
 const FARTGAS = document.getElementById("FartGas").appendChild(FartGas);
 
 const AlienBeer = document.createElement("img");
@@ -26,6 +32,8 @@ AlienBeer.src =
   "https://momintdev.blob.core.windows.net/uploads/13dced15-b376-4488-be53-fba2fb642914.jpeg";
 AlienBeer.title = "AlienBeer";
 AlienBeer.className = "card";
+AlienBeer.atk = "5";
+AlienBeer.def = "50";
 const ALIENBEER = document.getElementById("AlienBeer").appendChild(AlienBeer);
 
 const APHRODITE = document.createElement("img");
@@ -33,6 +41,8 @@ APHRODITE.src =
   "https://momintdev.blob.core.windows.net/uploads/51819bca-ba1c-4ed2-a74d-2ac0dd1db9d2.jpeg";
 APHRODITE.title = "APHRODITE";
 APHRODITE.className = "card";
+APHRODITE.atk = "0";
+APHRODITE.def = "0";
 const Aphroite = document.getElementById("Aphrodite").appendChild(APHRODITE);
 
 const MoonRabbit = document.createElement("img");
@@ -40,6 +50,8 @@ MoonRabbit.src =
   "https://momintdev.blob.core.windows.net/uploads/d109dbea-0b06-46ff-b4fc-2b0446e1ec6e.jpeg";
 MoonRabbit.title = "MoonRabbit";
 MoonRabbit.className = "card";
+MoonRabbit.atk = "0";
+MoonRabbit.def = "0";
 const MOONRABBIT = document
   .getElementById("MoonRabbit")
   .appendChild(MoonRabbit);
@@ -49,6 +61,8 @@ BirdsNest.src =
   "https://momintdev.blob.core.windows.net/uploads/87911f7b-6ab0-42f9-9efe-11411277244e.jpeg";
 BirdsNest.title = "BirdsNest";
 BirdsNest.className = "card";
+BirdsNest.atk = "0";
+BirdsNest.def = "0";
 const BIRDSNEST = document.getElementById("BirdsNest").appendChild(BirdsNest);
 
 const BullishFlyer = document.createElement("img");
@@ -407,10 +421,17 @@ const basketballl = document
   .appendChild(Basketball);
 
 const Angel = document.createElement("img");
-Angel.src = "https://momintdev.blob.core.windows.net/uploads/c12d09a6-4e18-419e-8496-ccbb99fcc2b7.jpeg"
-Angel.title = "Basketball";
+Angel.src =
+  "https://momintdev.blob.core.windows.net/uploads/c12d09a6-4e18-419e-8496-ccbb99fcc2b7.jpeg";
+Angel.title = "Angel";
 Angel.className = "card";
-const ANGEL = document.getElementById("Angel").appendChild(ANGEL);
+const ANGEL = document.getElementById("Angel").appendChild(Angel);
+
+const Glitch = document.createElement("img");
+Glitch.src = "https://momintdev.blob.core.windows.net/uploads/102137f2-0853-4c5e-9651-f83feec9aa00.jpeg"
+Glitch.title = "Glitch";
+Glitch.className = "card";
+const GLITCH = document.getElementById("Glitch").appendChild(Glitch);
 
 /// Card Tools
 
