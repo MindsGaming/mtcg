@@ -224,6 +224,8 @@ MasterPoo.src =
   "https://momintdev.blob.core.windows.net/uploads/6b9dbf99-e96c-4c20-aaed-3af054cbcf21.jpeg";
 MasterPoo.title = "MasterPoo";
 MasterPoo.className = "card";
+MasterPoo.atk = "75";
+MasterPoo.def = "250";
 const MASTERPOO = document.getElementById("MasterPoo").appendChild(MasterPoo);
 
 const Independence = document.createElement("img");
@@ -231,6 +233,8 @@ Independence.src =
   "https://momintdev.blob.core.windows.net/uploads/05793c17-b60d-439b-adcb-f79f815a734a.jpeg";
 Independence.title = "Independence";
 Independence.className = "card";
+Independence.atk = "100";
+Independence.def = "200";
 const INDEPENDENCE = document
   .getElementById("Independence")
   .appendChild(Independence);
@@ -240,6 +244,8 @@ DooBetter.src =
   "https://momintdev.blob.core.windows.net/uploads/f36cdb89-d128-40bd-bdef-ceb3766e74f7.jpeg";
 DooBetter.title = "Independence";
 DooBetter.className = "card";
+DooBetter.atk = "100";
+DooBetter.def = "200";
 const DOOBETTER = document.getElementById("DooBetter").appendChild(DooBetter);
 
 const ECLIPSE = document.createElement("img");
@@ -247,6 +253,8 @@ ECLIPSE.src =
   "https://momintdev.blob.core.windows.net/uploads/6597089f-d4b7-4f74-8e6e-75707417e922.jpeg";
 ECLIPSE.title = "ECLIPSE";
 ECLIPSE.className = "card";
+ECLIPSE.atk = "852";
+ECLIPSE.def = "522";
 const ECLIPSECARD = document.getElementById("ECLIPSE").appendChild(ECLIPSE);
 
 const HONEY = document.createElement("img");
