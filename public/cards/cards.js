@@ -406,6 +406,12 @@ const basketballl = document
   .getElementById("Basketball")
   .appendChild(Basketball);
 
+const Angel = document.createElement("img");
+Angel.src = "https://momintdev.blob.core.windows.net/uploads/c12d09a6-4e18-419e-8496-ccbb99fcc2b7.jpeg"
+Angel.title = "Basketball";
+Angel.className = "card";
+const ANGEL = document.getElementById("Angel").appendChild(ANGEL);
+
 /// Card Tools
 
 function hideBirds() {
