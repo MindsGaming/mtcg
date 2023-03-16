@@ -46,7 +46,8 @@ function startCHAT() {
       chatBOX.value = "";
       chatBOX.placeholder = "1 Reward Token";
       chaterror.innerHTML = "1Reward Needed.";
-      hidestack.className = "";
+      hidestack.style =
+        "display: block; cursor:pointer; color:gold; opacity.6;";
     } else {
       if (gettotal < 1) {
         var needmath = 1 - gettotal;
@@ -78,9 +79,46 @@ function startCHAT() {
         chatBOX.value = "";
         chatBOX.placeholder = "1 Reward Token";
         chaterror.innerHTML = "1Reward Needed.";
-        hidestack.className = "";
+        hidestack.style =
+          "display: block; cursor:pointer; color:gold; opacity.6;";
       }
     }
+  }
+}
+
+/// Stash Reward
+
+function claimstashREWARDS() {
+  var getstash = document.getElementById("stacked");
+
+  if (getstash.innerHTML > 1) {
+    var REWARDS = getstash.innerHTML;
+    levelUp();
+
+    const data = {
+      dream: dreamInput.value + " Earned: " + REWARDS + dreamToken.innerHTML,
+    };
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+    // get dream value and add it to the list
+    dreams.push(
+      dreamInput.value + " Earned: " + REWARDS + dreamToken.innerHTML
+    );
+    appendNewDream(
+      dreamInput.value + " Earned: " + REWARDS + dreamToken.innerHTML
+    );
+
+    reset();
+    getstash.innerHTML = "0";
+  } else {
+    alert("1 Reward Required.");
   }
 }
 
