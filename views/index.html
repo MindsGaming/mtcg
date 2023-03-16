@@ -597,12 +597,10 @@
                   class="hide"
                   onclick="claimstashREWARDS();"
                 >
-                  <div id="creratestash">
-                    Comment Stash
-                    <label
-                      class="squestion"
-                      title="Comment Stash Is Kept Until Page Is Left"
-                    ></label>
+                  <div id="createstash">
+                    <label title="Comment Stash Is Kept Until Page Is Left">
+                      Comment Stash
+                    </label>
                     <br />
                     <p class="userstash">
                       GAMER <label class="stashing" id="GAMERSTASH">0</label>
@@ -642,7 +640,11 @@
                   </div>
                 </label>
               </center>
-              <button id="claimBTN" onclick="claimUpdate();">
+              <button
+                id="claimBTN"
+                onclick="claimUpdate();"
+                title="Grab These Rewards!"
+              >
                 Grab These Rewards!
               </button>
 
@@ -660,7 +662,7 @@
               ></meter>
               <label class="hide" id="todaysDate"></label>
               <hr />
-              <ul class="overflow" id="dreams"></ul>
+              <ul class="overflow" id="dreams" title="Activity Board"></ul>
             </section>
             <button class="hide" id="clear-dreams">Clear Dreams</button>
             <div class="chatformBOX">
