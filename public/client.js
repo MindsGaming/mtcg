@@ -78,8 +78,8 @@ function setTime() {
   }
   if (minutesLabel.innerHTML == "100") {
     if (dreamInput.value == "") {
-      alert("MAXED REACHED, No Login Found, Refersing Page!");
-      window.open("/", "_self");
+      alert("MAXED REACHED Without account, restarting count.");
+      reset();
     } else {
       alert("MAXED REWARDS, Awating claim");
       claimUpdate();
