@@ -106,7 +106,8 @@ function claimstashREWARDS() {
     levelUp();
 
     const data = {
-      dream: dreamInput.value + " Earned: " + REWARDS + dreamToken.innerHTML,
+      dream:
+        dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML,
     };
     fetch("/addDream", {
       method: "POST",
@@ -119,10 +120,10 @@ function claimstashREWARDS() {
       });
     // get dream value and add it to the list
     dreams.push(
-      dreamInput.value + " Earned: " + REWARDS + dreamToken.innerHTML
+      dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML
     );
     appendNewDream(
-      dreamInput.value + " Earned: " + REWARDS + dreamToken.innerHTML
+      dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML
     );
 
     reset();
