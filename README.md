@@ -13,11 +13,6 @@ The easiest way to get your own version of MTCG to edit and design yourself is t
 
 You can also install MTCG on your own website you will need Node and express.
 
-### Miner
-
-You can use our minyminer if your just looking to host your miner script.
-https://glitch.com/~minymine
-
 ## Building (Remix)
 
 - Edit
