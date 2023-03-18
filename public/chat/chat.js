@@ -138,7 +138,7 @@ function claimstashREWARDS() {
     reset();
     getstash.innerHTML = "0";
   } else {
-    alert("1 Reward Required," + " Using " + stashwallet);
+    alert("1 Reward Required," + " Using " + mytoken);
   }
 }
 
