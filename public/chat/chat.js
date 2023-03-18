@@ -11,6 +11,7 @@ chatBOX.onkeydown = function (e) {
 function startCHAT() {
   var currentrewardsM = document.getElementById("minutes");
   var currentrewards = document.getElementById("seconds");
+  var chaterror = document.getElementById("chaterror");
   var mytoken = document.getElementById("myToken").innerHTML;
   var gettotal = currentrewardsM.innerHTML + "." + currentrewards.innerHTML;
   var stashwallet = mytoken + "STASH";
@@ -24,45 +25,15 @@ function startCHAT() {
     chaterror.innerHTML = "No Account Found.";
     chatBOX.placeholder = "No Account Found.";
   } else {
-    if (stashid.innerHTML > 1) {
-      var paypost = 1;
-      var payedpost = stashid.innerHTML - paypost;
-      stashid.innerHTML = payedpost;
-
-      const data = {
-        dream: dreamInput.value + " Commented: " + chatBOX.value,
-      };
-
-      fetch("/addDream", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" },
-      })
-        .then((res) => res.json())
-        .then((response) => {
-          console.log(JSON.stringify(response));
-        });
-      // get dream value and add it to the list
-      dreams.push(dreamInput.value + " Commented: " + chatBOX.value);
-      appendNewDream(dreamInput.value + " Commented: " + chatBOX.value);
+    if (chatBOX.value == "") {
       chatBOX.value = "";
-      chatBOX.placeholder = "1 Reward Token";
-      chaterror.innerHTML = "1Reward Needed.";
-      hidestack.style =
-        "display: block; cursor:pointer; color:gold; opacity.6;";
+      chatBOX.focus;
+      chaterror.innerHTML = "Write Something To Comment.";
+      chatBOX.placeholder = "Write Something To Comment.";
     } else {
-      if (gettotal < 1) {
-        var needmath = 1 - gettotal;
-        chaterror.innerHTML = "Earn +" + needmath + "Rewards.";
-        chatBOX.placeholder = "Earn +" + needmath + "Rewards.";
-        chaterror.title = "Earn +" + needmath + "Rewards.";
-      }
-      if (gettotal > 1) {
-        var mytoken = document.getElementById("myToken").innerHTML;
-        var stashwallet = mytoken + "STASH";
-        var stashid = document.getElementById(stashwallet);
+      if (stashid.innerHTML > 1) {
         var paypost = 1;
-        var payedpost = gettotal - paypost;
+        var payedpost = stashid.innerHTML - paypost;
         stashid.innerHTML = payedpost;
 
         const data = {
@@ -81,55 +52,92 @@ function startCHAT() {
         // get dream value and add it to the list
         dreams.push(dreamInput.value + " Commented: " + chatBOX.value);
         appendNewDream(dreamInput.value + " Commented: " + chatBOX.value);
-        reset();
         chatBOX.value = "";
         chatBOX.placeholder = "1 Reward Token";
         chaterror.innerHTML = "1Reward Needed.";
         hidestack.style =
           "display: block; cursor:pointer; color:gold; opacity.6;";
+      } else {
+        if (gettotal < 1) {
+          var needmath = 1 - gettotal;
+          chaterror.innerHTML = "Earn +" + needmath + "Rewards.";
+          chatBOX.placeholder = "Earn +" + needmath + "Rewards.";
+          chaterror.title = "Earn +" + needmath + "Rewards.";
+        }
+        if (gettotal > 1) {
+          var mytoken = document.getElementById("myToken").innerHTML;
+          var stashwallet = mytoken + "STASH";
+          var stashid = document.getElementById(stashwallet);
+          var paypost = 1;
+          var payedpost = gettotal - paypost;
+          stashid.innerHTML = payedpost;
+
+          const data = {
+            dream: dreamInput.value + " Commented: " + chatBOX.value,
+          };
+
+          fetch("/addDream", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json" },
+          })
+            .then((res) => res.json())
+            .then((response) => {
+              console.log(JSON.stringify(response));
+            });
+          // get dream value and add it to the list
+          dreams.push(dreamInput.value + " Commented: " + chatBOX.value);
+          appendNewDream(dreamInput.value + " Commented: " + chatBOX.value);
+          reset();
+          chatBOX.value = "";
+          chatBOX.placeholder = "1 Reward Token";
+          chaterror.innerHTML = "1Reward Needed.";
+          hidestack.style =
+            "display: block; cursor:pointer; color:gold; opacity.6;";
+        }
       }
     }
   }
-}
 
-/// Stash Reward
+  /// Stash Reward
 
-function claimstashREWARDS() {
-  var mytoken = document.getElementById("myToken").innerHTML;
+  function claimstashREWARDS() {
+    var mytoken = document.getElementById("myToken").innerHTML;
 
-  var stashwallet = mytoken + "STASH";
-  var stashid = document.getElementById(stashwallet);
-  var getstash = document.getElementById(stashwallet);
+    var stashwallet = mytoken + "STASH";
+    var stashid = document.getElementById(stashwallet);
+    var getstash = document.getElementById(stashwallet);
 
-  if (getstash.innerHTML > 1) {
-    var REWARDS = getstash.innerHTML;
-    levelUp();
+    if (getstash.innerHTML > 1) {
+      var REWARDS = getstash.innerHTML;
+      levelUp();
 
-    const data = {
-      dream:
-        dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML,
-    };
-    fetch("/addDream", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((res) => res.json())
-      .then((response) => {
-        console.log(JSON.stringify(response));
-      });
-    // get dream value and add it to the list
-    dreams.push(
-      dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML
-    );
-    appendNewDream(
-      dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML
-    );
+      const data = {
+        dream:
+          dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML,
+      };
+      fetch("/addDream", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          console.log(JSON.stringify(response));
+        });
+      // get dream value and add it to the list
+      dreams.push(
+        dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML
+      );
+      appendNewDream(
+        dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML
+      );
 
-    reset();
-    getstash.innerHTML = "0";
-  } else {
-    alert("1 Reward Required," + " Using " + stashwallet);
+      reset();
+      getstash.innerHTML = "0";
+    } else {
+      alert("1 Reward Required," + " Using " + stashwallet);
+    }
   }
 }
 
