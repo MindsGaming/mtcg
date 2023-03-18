@@ -1,6 +1,8 @@
 const chatBTN = document.getElementById("commentBTN");
 chatBTN.addEventListener("click", startCHAT);
 const chatBOX = document.getElementById("CHATBOX");
+const chaterror = document.getElementById("chaterror");
+chaterror.addEventListener("click", claimstashREWARDS);
 
 chatBOX.onkeydown = function (e) {
   if (e.keyCode == 13) {
@@ -11,7 +13,6 @@ chatBOX.onkeydown = function (e) {
 function startCHAT() {
   var currentrewardsM = document.getElementById("minutes");
   var currentrewards = document.getElementById("seconds");
-  var chaterror = document.getElementById("chaterror");
   var mytoken = document.getElementById("myToken").innerHTML;
   var gettotal = currentrewardsM.innerHTML + "." + currentrewards.innerHTML;
   var stashwallet = mytoken + "STASH";
