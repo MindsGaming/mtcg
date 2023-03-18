@@ -1,7 +1,6 @@
 const chatBTN = document.getElementById("commentBTN");
 chatBTN.addEventListener("click", startCHAT);
-const chatBOX = document.getElementById("CHATBOX");
-
+https://8x8.vc/vpaas-magic-cookie-60db99f86bb64087abd2168dfaa39e68/SampleAppEmotionalHellsEscapeToo
 chatBOX.onkeydown = function (e) {
   if (e.keyCode == 13) {
     startCHAT();
