@@ -30,7 +30,7 @@ function tipstoreitemONE() {
   var chaterror = document.getElementById("chaterror");
   var chatBOX = document.getElementById("storeitemONECHAT");
   var tipAMOUNT = document.getElementById("storePRICE").innerHTML;
-  var storeitemNAME = document.getElementById("storeitemName");
+  var storeitemNAME = document.getElementById("storeitemNAME");
 
   if (dreamInput.value == "") {
     chatBOX.value = "";
