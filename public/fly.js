@@ -124,7 +124,8 @@ function quickhub() {
     games.className = "hide";
     games.title = "closed";
     var createHUB = document.createElement("iframe");
-    createHUB.src = "https://needle-castle.glitch.me/";
+    createHUB.src =
+      "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
     createHUB.className = "wrap";
     createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document.getElementById("HUBS").appendChild(createHUB);
@@ -496,23 +497,4 @@ function storeitem() {
   ];
   var pickURL = storeURLS[Math.floor(Math.random() * storeURLS.length)];
   window.open(pickURL, "_blank");
-}
-
-/// Home video
-
-function homeVideo() {
-  var homevideo = document.getElementById("playhomevideo");
-  var createvideo = document.createElement("iframe");
-  var homevideoBTN = document.getElementById("homevideoBTN");
-
-  createvideo.src =
-    "https://www.youtube.com/embed/videoseries?list=PLZe95H1B_pl9HNdVrncnmKY3iQi-f5mXU";
-  createvideo.style =
-    "display: block; position:relative; width:100%; height:100%;";
-  homevideoBTN.title = "Watching Videos";
-  homevideoBTN.style = "display: none";
-
-  var CREATEHOMEVIDEO = document
-    .getElementById("playhomevideo")
-    .appendChild(createvideo);
 }

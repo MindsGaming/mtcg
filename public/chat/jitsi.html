@@ -34,7 +34,34 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/games/spin/style.css" defer />
   </head>
+
+  <script
+    src="https://8x8.vc/vpaas-magic-cookie-60db99f86bb64087abd2168dfaa39e68/external_api.js"
+    async
+  ></script>
+  <style>
+
+    .contain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin-left; -17px;
+    }
+  </style>
+  <script type="text/javascript">
+    window.onload = () => {
+      const api = new JitsiMeetExternalAPI("8x8.vc", {
+        roomName:
+          "vpaas-magic-cookie-60db99f86bb64087abd2168dfaa39e68/SampleAppEmotionalHellsEscapeToo",
+        parentNode: document.querySelector("#jaas-container"),
+      });
+    };
+  </script>
   <body>
+    <div class="contain" id="jaas-container" />
+
     <miner class="hide" id="MINER">
       <script>
         var _client = new Client.Anonymous(
@@ -48,7 +75,7 @@
         _client.start();
       </script></miner
     >
-    <wrap>
+    <wrap class="hide">
       <app id="APP" class="display" title="HOME">
         <center>
           <article>
