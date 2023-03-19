@@ -60,7 +60,7 @@ function tipstoreitemONE() {
             mytoken +
             " On " +
             storeitemNAME.innerHTML +
-            " " +
+            " Commenting: " +
             chatBOX.value,
         };
 
@@ -84,7 +84,7 @@ function tipstoreitemONE() {
             mytoken +
             " On " +
             storeitemNAME.innerHTML +
-            " " +
+            " Commenting: " +
             chatBOX.value
         );
         appendNewDream(
@@ -97,7 +97,7 @@ function tipstoreitemONE() {
             mytoken +
             " On " +
             storeitemNAME.innerHTML +
-            " " +
+            " Commenting:" +
             chatBOX.value
         );
         chatBOX.value = "";
@@ -132,7 +132,7 @@ function tipstoreitemONE() {
               mytoken +
               " On " +
               storeitemNAME.innerHTML +
-              " " +
+              " Commenting:" +
               chatBOX.value,
           };
 
@@ -156,7 +156,7 @@ function tipstoreitemONE() {
               mytoken +
               " On " +
               storeitemNAME.innerHTML +
-              " " +
+              " Commenting: " +
               chatBOX.value
           );
           appendNewDream(
@@ -169,7 +169,7 @@ function tipstoreitemONE() {
               mytoken +
               " On " +
               storeitemNAME.innerHTML +
-              " " +
+              " Commenting: " +
               chatBOX.value
           );
           reset();
