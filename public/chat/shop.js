@@ -30,6 +30,7 @@ function tipstoreitemONE() {
   var chaterror = document.getElementById("chaterror");
   var chatBOX = document.getElementById("storeitemONECHAT");
   var tipAMOUNT = document.getElementById("storePRICE").innerHTML;
+  var storeitemNAME = document.getElementById("storeitemName");
 
   if (dreamInput.value == "") {
     chatBOX.value = "";
@@ -55,7 +56,10 @@ function tipstoreitemONE() {
             creatorONE +
             " " +
             tipAMOUNT +
+            ".00" +
             mytoken +
+            " On " +
+            storeitemNAME.innerHTML +
             " " +
             chatBOX.value,
         };
@@ -76,7 +80,10 @@ function tipstoreitemONE() {
             creatorONE +
             " " +
             tipAMOUNT +
+            ".00" +
             mytoken +
+            " On " +
+            storeitemNAME.innerHTML +
             " " +
             chatBOX.value
         );
@@ -86,7 +93,10 @@ function tipstoreitemONE() {
             creatorONE +
             " " +
             tipAMOUNT +
+            ".00" +
             mytoken +
+            " On " +
+            storeitemNAME.innerHTML +
             " " +
             chatBOX.value
         );
@@ -118,7 +128,10 @@ function tipstoreitemONE() {
               creatorONE +
               " " +
               tipAMOUNT +
+              ".00" +
               mytoken +
+              " On " +
+              storeitemNAME.innerHTML +
               " " +
               chatBOX.value,
           };
@@ -139,7 +152,10 @@ function tipstoreitemONE() {
               creatorONE +
               " " +
               tipAMOUNT +
+              ".00" +
               mytoken +
+              " On " +
+              storeitemNAME.innerHTML +
               " " +
               chatBOX.value
           );
@@ -149,7 +165,10 @@ function tipstoreitemONE() {
               creatorONE +
               " " +
               tipAMOUNT +
+              ".00" +
               mytoken +
+              " On " +
+              storeitemNAME.innerHTML +
               " " +
               chatBOX.value
           );
@@ -165,7 +184,6 @@ function tipstoreitemONE() {
     }
   }
 }
-
 
 /// Value Toggle
 
