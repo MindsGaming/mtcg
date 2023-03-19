@@ -1,6 +1,9 @@
 const chatBTN = document.getElementById("commentBTN");
 chatBTN.addEventListener("click", startCHAT);
-https://8x8.vc/vpaas-magic-cookie-60db99f86bb64087abd2168dfaa39e68/SampleAppEmotionalHellsEscapeToo
+const chatBOX = document.getElementById("CHATBOX");
+const chaterror = document.getElementById("chaterror");
+chaterror.addEventListener("click", claimstashREWARDS);
+
 chatBOX.onkeydown = function (e) {
   if (e.keyCode == 13) {
     startCHAT();
@@ -10,7 +13,6 @@ chatBOX.onkeydown = function (e) {
 function startCHAT() {
   var currentrewardsM = document.getElementById("minutes");
   var currentrewards = document.getElementById("seconds");
-  var chaterror = document.getElementById("chaterror");
   var mytoken = document.getElementById("myToken").innerHTML;
   var gettotal = currentrewardsM.innerHTML + "." + currentrewards.innerHTML;
   var stashwallet = mytoken + "STASH";
@@ -97,46 +99,46 @@ function startCHAT() {
       }
     }
   }
+}
 
-  /// Stash Reward
+/// Stash Reward
 
-  function claimstashREWARDS() {
-    var mytoken = document.getElementById("myToken").innerHTML;
+function claimstashREWARDS() {
+  var mytoken = document.getElementById("myToken").innerHTML;
 
-    var stashwallet = mytoken + "STASH";
-    var stashid = document.getElementById(stashwallet);
-    var getstash = document.getElementById(stashwallet);
+  var stashwallet = mytoken + "STASH";
+  var stashid = document.getElementById(stashwallet);
+  var getstash = document.getElementById(stashwallet);
 
-    if (getstash.innerHTML > 1) {
-      var REWARDS = getstash.innerHTML;
-      levelUp();
+  if (getstash.innerHTML > 1) {
+    var REWARDS = getstash.innerHTML;
+    levelUp();
 
-      const data = {
-        dream:
-          dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML,
-      };
-      fetch("/addDream", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" },
-      })
-        .then((res) => res.json())
-        .then((response) => {
-          console.log(JSON.stringify(response));
-        });
-      // get dream value and add it to the list
-      dreams.push(
-        dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML
-      );
-      appendNewDream(
-        dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML
-      );
+    const data = {
+      dream:
+        dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML,
+    };
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+    // get dream value and add it to the list
+    dreams.push(
+      dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML
+    );
+    appendNewDream(
+      dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML
+    );
 
-      reset();
-      getstash.innerHTML = "0";
-    } else {
-      alert("1 Reward Required," + " Using " + stashwallet);
-    }
+    reset();
+    getstash.innerHTML = "0";
+  } else {
+    alert("1 Reward Required," + " Using " + mytoken);
   }
 }
 
