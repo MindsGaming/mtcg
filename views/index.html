@@ -572,6 +572,27 @@
             </form>
             <div class="helper" onclick="walletTools()">HELP</div>
           </h1>
+
+          <div class="hide" id="rewardsSTORE" title="Closed">
+            <label
+              class="sclose"
+              title="Open"
+              onclick="openrewardsStore();"
+            ></label>
+            <center>
+              <h1>Rewards Store</h1>
+            </center>
+            <article id="testITEM" style="margin-right: 35%; width: 35%">
+              <h1>Test Item</h1>
+              <label class="testitem" id="testitem"></label>
+              <p class="white">This Is A Test Item</p>
+              <br />
+              <button id="buytestitem" onclick="buytestitem()">
+                5 Rewards
+              </button>
+            </article>
+          </div>
+
           <article id="PENDING" class="white" title="Activity Board">
             <div>
               Wallet:
@@ -641,9 +662,13 @@
                     <p class="userstash">
                       Candys <label class="stashing" id="CandysSTASH">0</label>
                     </p>
+                    <br />
                   </div>
                 </label>
               </center>
+              <br />
+              <button onclick="openrewardsStore();">Rewards Store</button>
+              <br />
               <button
                 id="claimBTN"
                 onclick="claimUpdate();"

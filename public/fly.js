@@ -415,6 +415,21 @@ function importTokens() {
   }
 }
 
+function openrewardsStore() {
+  var walletlinks = document.getElementById("wallet-links");
+  var rewardstore = document.getElementById("rewardsSTORE");
+  if (rewardstore.title == "Closed") {
+    walletlinks.className = "hide";
+    rewardstore.className = "";
+    rewardstore.title = "Rewards Store"
+  } else {
+    walletlinks.className = "display";
+    rewardstore.className = "hide";
+    rewardstore.title = "Closed"
+  }
+}
+
+
 function manualInfo() {
   var manual = document.getElementById("manualInfo");
 

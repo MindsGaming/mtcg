@@ -155,3 +155,106 @@ if (todaysDate.innerHTML == getdate) {
     ""
   );
 }
+
+/// STORE
+
+function buytestitem() {
+  var currentrewardsM = document.getElementById("minutes");
+  var currentrewards = document.getElementById("seconds");
+  var mytoken = document.getElementById("myToken").innerHTML;
+  var gettotal = currentrewardsM.innerHTML + "." + currentrewards.innerHTML;
+  var stashwallet = mytoken + "STASH";
+  var stashid = document.getElementById(stashwallet);
+  var hidestack = document.getElementById("hidestack");
+  var stashed = gettotal + stashid.innerHTML;
+  var testitem = document.getElementById("testITEM");
+
+  if (dreamInput.value == "") {
+    chatBOX.value = "";
+    chatBOX.focus;
+    chaterror.innerHTML = "No Account Found.";
+    chatBOX.placeholder = "No Account Found.";
+  } else {
+    if (chatBOX.value == "fkda;lkfeoipodif90eujcdiaourefu") {
+      chatBOX.value = "";
+      chatBOX.focus;
+      chaterror.innerHTML = "Write Something To Comment.";
+      chatBOX.placeholder = "Write Something To Comment.";
+    } else {
+      if (stashid.innerHTML > 5) {
+        var paypost = 5;
+        var payedpost = stashid.innerHTML - paypost;
+        stashid.innerHTML = payedpost;
+
+        const data = {
+          dream: dreamInput.value + " Used Rewards.",
+        };
+
+        fetch("/addDream", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log(JSON.stringify(response));
+          });
+        // get dream value and add it to the list
+        dreams.push(dreamInput.value + " Used Rewards");
+        appendNewDream(dreamInput.value + " Used Rewards");
+        chatBOX.placeholder = "Reward Token";
+        chaterror.innerHTML = "1Reward Needed.";
+        hidestack.style =
+          "display: block; cursor:pointer; color:gold; opacity.6;";
+        testitem.className = "hide";
+        window.open(
+          "https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/MTCG%20circuit%20breaker%20000.png",
+          "_blank"
+        );
+      } else {
+        if (gettotal < 5) {
+          var needmath = 5 - gettotal;
+          chaterror.innerHTML = "Earn +" + needmath + "Rewards.";
+          chatBOX.placeholder = "Earn +" + needmath + "Rewards.";
+          chaterror.title = "Earn +" + needmath + "Rewards.";
+        }
+        if (gettotal > 5) {
+          var mytoken = document.getElementById("myToken").innerHTML;
+          var stashwallet = mytoken + "STASH";
+          var stashid = document.getElementById(stashwallet);
+          var paypost = 5;
+          var payedpost = gettotal - paypost;
+          stashid.innerHTML = payedpost;
+
+          const data = {
+            dream: dreamInput.value + " Used Rewards.",
+          };
+
+          fetch("/addDream", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json" },
+          })
+            .then((res) => res.json())
+            .then((response) => {
+              console.log(JSON.stringify(response));
+            });
+          // get dream value and add it to the list
+          dreams.push(dreamInput.value + " Used Rewards. ");
+          appendNewDream(dreamInput.value + " Used Rewards ");
+          reset();
+          chatBOX.value = "";
+          chatBOX.placeholder = "1 Reward Token";
+          chaterror.innerHTML = "1Reward Needed.";
+          hidestack.style =
+            "display: block; cursor:pointer; color:gold; opacity.6;";
+          testitem.className = "hide";
+          window.open(
+            "https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/MTCG%20circuit%20breaker%20000.png",
+            "_blank"
+          );
+        }
+      }
+    }
+  }
+}
