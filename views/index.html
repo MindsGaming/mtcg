@@ -27,6 +27,7 @@
     <script src="/games/spin/spin.js" defer></script>
     <script src="/games/spin/start.js" defer></script>
     <script src="/chat/chat.js" defer></script>
+    <script src="/chat/shop.js" defer></script>
 
     <script src="/fly.js" defer></script>
     <script src="/miner/minercheck.js" defer></script>
@@ -582,14 +583,42 @@
             <center>
               <h1>Rewards Store</h1>
             </center>
-            <article id="testITEM" style="margin-right: 35%; width: 35%">
-              <h1>Test Item</h1>
-              <label class="testitem" id="testitem"></label>
-              <p class="white">This Is A Test Item</p>
+            <article id="storeitemONE" style="margin-right: 35%; width: 35%">
+              <h1 id="storeitemNAME">MTCG circuit breaker</h1>
+              <label class="testitem" id="storeitemone"></label>
+              <p id="storeitemoneintro" class="white">
+                Circuit breaker icon for MTCG by @SatoriD
+              </p>
               <br />
-              <button id="buytestitem" onclick="buytestitem()">
-                Tip Creator 5 Rewards
-              </button>
+              <input
+                id="storeitemONECHAT"
+                name="storeitemONECHAT"
+                class="storechat"
+                type="text"
+                maxlength="5000"
+                placeholder="Great Work!"
+              /><br />
+              <button id="storeitemONEBTN" onclick="tipstoreitemONE()">
+                Tip Creator</button
+              ><br />
+              <label class="storeerror" id="storeerror"></label><br />
+              <label
+                class="toggleicon"
+                id="toggleicon"
+                onclick="togglevalue();"
+              ></label>
+              <label class="storeerror" id="storePRICE">01</label>
+              <meter
+                id="storePRICEMETER"
+                title="storePRICE"
+                class="hide"
+                min="0"
+                low="1"
+                high="25"
+                max="100"
+                value="1"
+              ></meter>
+              <label class="storeerror" id="storeTOKEN">Rewards</label>
             </article>
           </div>
 

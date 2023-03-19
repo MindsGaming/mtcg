@@ -339,7 +339,6 @@ button:hover {
   font-weight: bold;
 }
 
-
 .userstash {
   position: relative;
   margin-right: 2%;
@@ -358,8 +357,6 @@ button:hover {
   font-weight: bold;
 }
 
-
-
 .testitem {
   position: relative;
   display: block;
@@ -371,11 +368,40 @@ button:hover {
   background-repeat: no-repeat;
 }
 
-
 .sclose {
-  float: left; 
+  float: left;
   margin-top: -8px;
   margin-left: 1px;
   padding: 1px;
-  
+}
+
+.storeerror {
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4.8%;
+  font-size: 8px;
+  color: red;
+  font-weight: bold;
+}
+
+.storechat {
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4.8%;
+  font-size: 8px;
+  font-weight: bold;
+  width: 30%;
+}
+
+.toggleicon {
+  display: block;
+  margin-top: 10%;
+  margin-left: -25.1%;
+  margin-bottom: -4%;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  background-image: url("https://cdn.glitch.global/54379175-7d26-4fa6-8e60-9df29ffbdde5/Rabbit.jpg");
+  cursor: pointer;
 }
