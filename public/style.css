@@ -120,11 +120,11 @@ button:hover {
   position: absolute;
   display: block;
   top: 0;
-  left: 0;
+  right: 0;
   margin-left: -3px;
   margin-top: -3px;
-  width: 3rem;
-  height: 100%;
+  width: 100%;
+  height: 4rem;
   border-style: groove;
   border-radius: 00px 00px 83.5px 13.5px;
   background-color: silver;
@@ -140,7 +140,7 @@ button:hover {
   width: 38px;
   margin-left: -3px;
   margin-top: 25px;
-  background-image: url("https://cdn.glitch.global/9636c676-ec62-41a2-a00f-59dfc9c0dd6a/homeICONN.png");
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/homeICON.png");
   background-size: contain;
   border-radius: 50%;
 }
@@ -149,7 +149,7 @@ button:hover {
   width: 38px;
   margin-left: -3px;
   margin-top: 25px;
-  background-image: url("https://cdn.glitch.global/9636c676-ec62-41a2-a00f-59dfc9c0dd6a/controllericon.png");
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/gamepadICON.png");
   border-radius: 50%;
   background-size: cover;
 }
@@ -159,7 +159,7 @@ button:hover {
   width: 38px;
   margin-left: -3px;
   margin-top: 25px;
-  background-image: url("https://cdn.glitch.global/9636c676-ec62-41a2-a00f-59dfc9c0dd6a/lightningbolticon.png?v=1679255886448");
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/boltICON.png");
   border-radius: 50%;
   background-size: cover;
 }
@@ -169,7 +169,7 @@ button:hover {
   width: 38px;
   margin-left: -3px;
   margin-top: 25px;
-  background-image: url("https://cdn.glitch.global/9636c676-ec62-41a2-a00f-59dfc9c0dd6a/virtualspaceicon.png");
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/vrspaceICON.png");
   background-size: cover;
   border-radius: 50%;
 }
@@ -190,6 +190,7 @@ button:hover {
   border-style: groove;
   border-radius: 25px 25px 25px 25px;
   width: 80%;
+  background-color: black;
 }
 
 .tokensplash {
@@ -318,7 +319,7 @@ button:hover {
   height: 38px;
   margin-left: -3px;
   margin-top: 20px;
-  background-image: url("https://cdn.glitch.global/9636c676-ec62-41a2-a00f-59dfc9c0dd6a/shopingcart.png?v=1679256068191");
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/shopicon.png");
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 50%;
@@ -334,7 +335,7 @@ button:hover {
   height: 38px;
   margin-left: -3px;
   margin-top: 20px;
-  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/RabbitHole.webp");
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/Rabbit.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 50%;
