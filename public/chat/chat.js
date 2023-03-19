@@ -187,9 +187,14 @@ function buytestitem() {
         stashid.innerHTML = payedpost;
 
         const data = {
-      dream:
-        dreamInput.value + " Used Stash: " + REWARDS + dreamToken.innerHTML,
-    };
+          dream:
+            dreamInput.value +
+            " Paid:" +
+            "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
+            " " +
+            "5" +
+            mytoken,
+        };
         fetch("/addDream", {
           method: "POST",
           body: JSON.stringify(data),
@@ -200,18 +205,22 @@ function buytestitem() {
             console.log(JSON.stringify(response));
           });
         // get dream value and add it to the list
-        dreams.push(dreamInput.value +
-              " Paid:" +
-              "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
-              " " +
-              "5" +
-              mytoken,
-        appendNewDream(dreamInput.value +
-              " Paid:" +
-              "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
-              " " +
-              "5" +
-              mytoken,)
+        dreams.push(
+          dreamInput.value +
+            " Paid:" +
+            "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
+            " " +
+            "5" +
+            mytoken
+        );
+        appendNewDream(
+          dreamInput.value +
+            " Paid:" +
+            "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
+            " " +
+            "5" +
+            mytoken
+        );
         chatBOX.placeholder = "Reward Token";
         chaterror.innerHTML = "1Reward Needed.";
         hidestack.style =
@@ -256,12 +265,14 @@ function buytestitem() {
               console.log(JSON.stringify(response));
             });
           // get dream value and add it to the list
-          dreams.push(dreamInput.value +
+          dreams.push(
+            dreamInput.value +
               " Paid:" +
               "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
               " " +
               "5" +
-              mytoken);
+              mytoken
+          );
           reset();
           chatBOX.value = "";
           chatBOX.placeholder = "1 Reward Token";
