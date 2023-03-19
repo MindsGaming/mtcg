@@ -103,12 +103,12 @@ button:hover {
   position: absolute;
   display: block;
   top: 0;
-  left: 0;
+  right: 0;
   margin-left: 0px;
   width: 2rem;
   height: 2rem;
   border-style: groove;
-  border-radius: 00px 20px 20px 00px;
+  border-radius: 20px 0px 0px 20px;
   background-color: grey;
   background-repeat: no-repeat;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669052080420.png");
@@ -123,10 +123,10 @@ button:hover {
   right: 0;
   margin-left: -3px;
   margin-top: -3px;
-  width: 100%;
-  height: 4rem;
+  width: 20rem;
+  height: 3rem;
   border-style: groove;
-  border-radius: 00px 00px 83.5px 13.5px;
+  border-radius: 42.5px 0px 00px 84.3px;
   background-color: silver;
   background-repeat: no-repeat;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/articlebackground.png");
@@ -139,7 +139,6 @@ button:hover {
   float: left;
   width: 38px;
   margin-left: -3px;
-  margin-top: 25px;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/homeICON.png");
   background-size: contain;
   border-radius: 50%;
@@ -148,7 +147,6 @@ button:hover {
   float: left;
   width: 38px;
   margin-left: -3px;
-  margin-top: 25px;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/gamepadICON.png");
   border-radius: 50%;
   background-size: cover;
@@ -158,7 +156,6 @@ button:hover {
   float: left;
   width: 38px;
   margin-left: -3px;
-  margin-top: 25px;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/boltICON.png");
   border-radius: 50%;
   background-size: cover;
@@ -168,7 +165,6 @@ button:hover {
   float: left;
   width: 38px;
   margin-left: -3px;
-  margin-top: 25px;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/vrspaceICON.png");
   background-size: cover;
   border-radius: 50%;
@@ -178,7 +174,6 @@ button:hover {
   float: left;
   width: 38px;
   margin-left: -3px;
-  margin-top: 25px;
 }
 
 .rewards-intro {
@@ -318,7 +313,6 @@ button:hover {
   width: 38px;
   height: 38px;
   margin-left: -3px;
-  margin-top: 20px;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/shopicon.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -334,7 +328,6 @@ button:hover {
   width: 38px;
   height: 38px;
   margin-left: -3px;
-  margin-top: 20px;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/Rabbit.jpg");
   background-repeat: no-repeat;
   background-size: contain;
