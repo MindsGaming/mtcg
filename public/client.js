@@ -120,8 +120,9 @@ levelups.title = dreamInput.value;
 // a helper function that creates a list item for a given dream
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
+  newListItem.className = "POST";
   newListItem.innerText = dream;
-  newListItem.id = dreamInput.value;
+  newListItem.id = dream;
   dreamsList.appendChild(newListItem);
 };
 
