@@ -8,6 +8,8 @@ wrap {
   filter: opacity(78%);
   z-index: -1;
   overflow: scroll;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/background.gif");
+  background-size: cover;
 }
 
 li {
@@ -48,6 +50,8 @@ article {
   border-style: groove;
   border-radius: 25px 25px 25px 25px;
   width: 80%;
+  background-color: black;
+  opacity: 0.8;
 }
 
 button {
@@ -99,17 +103,16 @@ button:hover {
   position: absolute;
   display: block;
   top: 0;
-  right: 0;
-  margin: 3px;
-  width: 32px;
-  height: 32px;
+  left: 0;
+  margin-left: 0px;
+  width: 2rem;
+  height: 2rem;
   border-style: groove;
-  border-radius: 20px 0px 00px 20px;
-  background-color: blue;
-  cursor: pointer;
+  border-radius: 00px 20px 20px 00px;
+  background-color: grey;
+  background-repeat: no-repeat;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669052080420.png");
   background-size: contain;
-  background-repeat: no-repeat;
   z-index: 3;
 }
 
@@ -117,49 +120,65 @@ button:hover {
   position: absolute;
   display: block;
   top: 0;
-  right: 0;
-  margin: 3px;
-  width: 15rem;
-  height: 36px;
+  left: 0;
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 3rem;
+  height: 100%;
   border-style: groove;
-  border-radius: 20px 0px 00px 20px;
-  background-color: blue;
+  border-radius: 00px 00px 83.5px 13.5px;
+  background-color: silver;
   background-repeat: no-repeat;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/articlebackground.png");
+  background-size: cover;
+  opacity: 0.78;
   z-index: 3;
 }
 
 .home {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 3px;
+  float: left;
+  width: 38px;
+  margin-left: -3px;
+  margin-top: 25px;
+  background-image: url("https://cdn.glitch.global/9636c676-ec62-41a2-a00f-59dfc9c0dd6a/homeICONN.png");
+  background-size: contain;
+  border-radius: 50%;
 }
 .gamepad {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 3px;
+  float: left;
+  width: 38px;
+  margin-left: -3px;
+  margin-top: 25px;
+  background-image: url("https://cdn.glitch.global/9636c676-ec62-41a2-a00f-59dfc9c0dd6a/controllericon.png");
+  border-radius: 50%;
+  background-size: cover;
 }
 
 .lightning {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 3px;
+  float: left;
+  width: 38px;
+  margin-left: -3px;
+  margin-top: 25px;
+  background-image: url("https://cdn.glitch.global/9636c676-ec62-41a2-a00f-59dfc9c0dd6a/lightningbolticon.png?v=1679255886448");
+  border-radius: 50%;
+  background-size: cover;
 }
 
 .browser {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 3px;
+  float: left;
+  width: 38px;
+  margin-left: -3px;
+  margin-top: 25px;
+  background-image: url("https://cdn.glitch.global/9636c676-ec62-41a2-a00f-59dfc9c0dd6a/virtualspaceicon.png");
+  background-size: cover;
+  border-radius: 50%;
 }
 
 .grid {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 3px;
+  float: left;
+  width: 38px;
+  margin-left: -3px;
+  margin-top: 25px;
 }
 
 .rewards-intro {
@@ -193,7 +212,6 @@ button:hover {
   right: 0;
   margin-top: 5.2rem;
   margin-right: 7rem;
-
   cursor: pointer;
   z-index: 7;
 }
@@ -296,10 +314,27 @@ button:hover {
   float: left;
   display: block;
   border-style: none;
-  width: 30px;
-  height: 30px;
-  margin: 3px;
-  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669065937567.png");
+  width: 38px;
+  height: 38px;
+  margin-left: -3px;
+  margin-top: 20px;
+  background-image: url("https://cdn.glitch.global/9636c676-ec62-41a2-a00f-59dfc9c0dd6a/shopingcart.png?v=1679256068191");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  background-color: pink;
+  z-index: 5;
+}
+
+.experimenticon {
+  float: left;
+  display: block;
+  border-style: none;
+  width: 38px;
+  height: 38px;
+  margin-left: -3px;
+  margin-top: 20px;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/RabbitHole.webp");
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 50%;

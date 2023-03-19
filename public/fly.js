@@ -421,14 +421,18 @@ function openrewardsStore() {
   if (rewardstore.title == "Closed") {
     walletlinks.className = "hide";
     rewardstore.className = "";
-    rewardstore.title = "Rewards Store"
+    rewardstore.title = "Rewards Store";
   } else {
     walletlinks.className = "display";
     rewardstore.className = "hide";
-    rewardstore.title = "Closed"
+    rewardstore.title = "Closed";
   }
 }
 
+function openexperiments() {
+  userview();
+  openrewardsStore();
+}
 
 function manualInfo() {
   var manual = document.getElementById("manualInfo");
