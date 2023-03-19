@@ -157,7 +157,6 @@ if (todaysDate.innerHTML == getdate) {
 }
 
 /// STORE
-
 function buytestitem() {
   var currentrewardsM = document.getElementById("minutes");
   var currentrewards = document.getElementById("seconds");
@@ -175,13 +174,13 @@ function buytestitem() {
     chaterror.innerHTML = "No Account Found.";
     chatBOX.placeholder = "No Account Found.";
   } else {
-    if (chatBOX.value == "fkda;lkfeoipodif90eujcdiaourefu") {
+    if (chatBOX.value == "fdafajfoirufjhvaoithgo438854%d987&$") {
       chatBOX.value = "";
       chatBOX.focus;
       chaterror.innerHTML = "Write Something To Comment.";
       chatBOX.placeholder = "Write Something To Comment.";
     } else {
-      if (stashid.innerHTML > 5) {
+      if (stashid.innerHTML > 1) {
         var paypost = 5;
         var payedpost = stashid.innerHTML - paypost;
         stashid.innerHTML = payedpost;
@@ -189,12 +188,13 @@ function buytestitem() {
         const data = {
           dream:
             dreamInput.value +
-            " Paid:" +
+            " Tipped: " +
             "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
             " " +
             "5" +
             mytoken,
         };
+
         fetch("/addDream", {
           method: "POST",
           body: JSON.stringify(data),
@@ -207,7 +207,7 @@ function buytestitem() {
         // get dream value and add it to the list
         dreams.push(
           dreamInput.value +
-            " Paid:" +
+            " Tipped: " +
             "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
             " " +
             "5" +
@@ -215,21 +215,18 @@ function buytestitem() {
         );
         appendNewDream(
           dreamInput.value +
-            " Paid:" +
+            " Tipped:" +
             "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
             " " +
             "5" +
             mytoken
         );
-        chatBOX.placeholder = "Reward Token";
+        chatBOX.value = "";
+        chatBOX.placeholder = "1 Reward Token";
         chaterror.innerHTML = "1Reward Needed.";
         hidestack.style =
           "display: block; cursor:pointer; color:gold; opacity.6;";
         testitem.className = "hide";
-        window.open(
-          "https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/MTCG%20circuit%20breaker%20000.png",
-          "_blank"
-        );
       } else {
         if (gettotal < 5) {
           var needmath = 5 - gettotal;
@@ -248,7 +245,7 @@ function buytestitem() {
           const data = {
             dream:
               dreamInput.value +
-              " Paid:" +
+              " Tipped :" +
               "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
               " " +
               "5" +
@@ -267,7 +264,15 @@ function buytestitem() {
           // get dream value and add it to the list
           dreams.push(
             dreamInput.value +
-              " Paid:" +
+              " Tipped: " +
+              "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
+              " " +
+              "5" +
+              mytoken
+          );
+          appendNewDream(
+            dreamInput.value +
+              " Tipped: " +
               "xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B" +
               " " +
               "5" +
@@ -280,10 +285,6 @@ function buytestitem() {
           hidestack.style =
             "display: block; cursor:pointer; color:gold; opacity.6;";
           testitem.className = "hide";
-          window.open(
-            "https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/MTCG%20circuit%20breaker%20000.png",
-            "_blank"
-          );
         }
       }
     }
