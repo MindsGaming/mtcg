@@ -498,3 +498,14 @@ function storeitem() {
   var pickURL = storeURLS[Math.floor(Math.random() * storeURLS.length)];
   window.open(pickURL, "_blank");
 }
+
+////
+function playhomevideo() {
+  var createvideo = document.createElement("iframe");
+  createvideo.src =
+    "https://www.youtube.com/embed/videoseries?list=PLZe95H1B_pl9HNdVrncnmKY3iQi-f5mXU";
+  createvideo.width = " 100%;";
+  var CREATEVIDEOS = document
+    .getElementById("playhomevideo")
+    .appendChild(createvideo);
+}
