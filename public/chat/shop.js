@@ -166,6 +166,9 @@ function tipstoreitemONE() {
   }
 }
 
+
+/// Value Toggle
+
 function togglevalue() {
   let tipAMOUNT = document.getElementById("storePRICEMETER");
   var addTIP = 1;
