@@ -137,8 +137,9 @@ button:hover {
 
 .home {
   float: left;
-  width: 38px;
+  width: 40px;
   margin-left: -3px;
+  margin-top: 3px;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/homeICON.png");
   background-size: contain;
   border-radius: 50%;
@@ -147,6 +148,7 @@ button:hover {
   float: left;
   width: 38px;
   margin-left: -3px;
+  margin-top: 3px;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/gamepadICON.png");
   border-radius: 50%;
   background-size: cover;
@@ -156,6 +158,8 @@ button:hover {
   float: left;
   width: 38px;
   margin-left: -3px;
+  margin-top: 3px;
+
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/boltICON.png");
   border-radius: 50%;
   background-size: cover;
@@ -165,6 +169,8 @@ button:hover {
   float: left;
   width: 38px;
   margin-left: -3px;
+  margin-top: 3px;
+
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/vrspaceICON.png");
   background-size: cover;
   border-radius: 50%;
@@ -174,6 +180,7 @@ button:hover {
   float: left;
   width: 38px;
   margin-left: -3px;
+  margin-top: 3px;
 }
 
 .rewards-intro {
@@ -313,6 +320,7 @@ button:hover {
   width: 38px;
   height: 38px;
   margin-left: -3px;
+  margin-top: 3px;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/shopicon.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -327,13 +335,30 @@ button:hover {
   border-style: none;
   width: 38px;
   height: 38px;
-  margin-left: -3px;
+  margin-left: 35px;
+  margin-top: -35px;
   background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/Rabbit.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 50%;
   background-color: pink;
   z-index: 5;
+}
+
+.jitsiicon {
+  float: left;
+  display: block;
+  border-style: none;
+  width: 38px;
+  height: 38px;
+  margin-left: -3px;
+  background-image: url("https://cdn.glitch.global/f947c5c8-60ca-4563-8c9b-0c6b31953486/craiyon_130610_Trippy_video_chat_icon__high_quality__high_detail__high_graphics___.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  background-color: pink;
+  z-index: 5;
+  margin-top: 3px;
 }
 
 .shopbtn {
