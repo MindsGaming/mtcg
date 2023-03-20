@@ -467,6 +467,7 @@ button:hover {
   margin: 5px;
   width: 45%;
   height: 300px;
-  background-color: blue;
+  background-color: black;
+  filter: opacity(78%);
   z-index: 12;
 }
