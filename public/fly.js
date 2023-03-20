@@ -480,6 +480,7 @@ function Jsocial() {
     SOCIAL.className = "";
     var CREATEHUB = document.getElementById("SOCIAL").appendChild(createHUB);
     SOCIAL.className = "wrap";
+    SOCIAL.style = " display:block;";
   } else {
     if (SOCIAL.className == "wrap") {
       SOCIAL.style = "display: none;";
