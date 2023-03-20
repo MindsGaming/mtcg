@@ -468,4 +468,5 @@ button:hover {
   width: 45%;
   height: 300px;
   background-color: blue;
+  z-index: 12;
 }

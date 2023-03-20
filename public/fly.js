@@ -473,20 +473,27 @@ function Bsocial() {
 function Jsocial() {
   var SOCIAL = document.getElementById("SOCIAL");
   var socialwrap = document.getElementById("DRAGME");
-
-  if (socialwrap.className == "hide") {
+  if (socialwrap.title == "BUILD") {
     var createHUB = document.createElement("iframe");
     createHUB.src = "https://meet.jit.si/MTCG";
     createHUB.style = "width:100%; height: 400px; padding: 2px;";
     var CREATEHUB = document.getElementById("SOCIAL").appendChild(createHUB);
     socialwrap.className = "jitsiwrap";
     SOCIAL.style = " display:block;";
+    socialwrap.title = "OPEN";
   } else {
-    if (socialwrap.className == "jitsiwrap") {
-      SOCIAL.style = "display: none;";
-      SOCIAL.title = "CLOSED";
-      SOCIAL.className = "hide";
-      socialwrap.className = "hide"
+    if (socialwrap.className == "hide") {
+      socialwrap.className = "jitsiwrap";
+      SOCIAL.style = " display:block;";
+      socialwrap.title = "hidden"
+    } else {
+      if (socialwrap.className == "jitsiwrap") {
+        SOCIAL.style = "display: none;";
+        SOCIAL.title = "CLOSED";
+        SOCIAL.className = "hide";
+        socialwrap.className = "hide";
+        socialwrap.title = "MTCG JITSI"
+      }
     }
   }
 }
