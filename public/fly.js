@@ -472,20 +472,21 @@ function Bsocial() {
 /* J Social */
 function Jsocial() {
   var SOCIAL = document.getElementById("SOCIAL");
-  if (SOCIAL.className == "hide") {
+  var socialwrap = document.getElementById("DRAGME");
+
+  if (socialwrap.className == "hide") {
     var createHUB = document.createElement("iframe");
     createHUB.src = "https://meet.jit.si/MTCG";
-    createHUB.style =
-      "position:fixed; display: block; top:0 right:0; width: 100%; height: 100%; background-color: white; z-index: 2 ";
-    SOCIAL.className = "";
+    createHUB.style = "width:100%; height: 400px; padding: 2px;";
     var CREATEHUB = document.getElementById("SOCIAL").appendChild(createHUB);
-    SOCIAL.className = "wrap";
+    socialwrap.className = "jitsiwrap";
     SOCIAL.style = " display:block;";
   } else {
-    if (SOCIAL.className == "wrap") {
+    if (socialwrap.className == "jitsiwrap") {
       SOCIAL.style = "display: none;";
       SOCIAL.title = "CLOSED";
       SOCIAL.className = "hide";
+      socialwrap.className = "hide"
     }
   }
 }
