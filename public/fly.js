@@ -472,21 +472,18 @@ function Bsocial() {
 /* J Social */
 function Jsocial() {
   var SOCIAL = document.getElementById("SOCIAL");
-  if (SOCIAL.title == "CLOSED") {
-    SOCIAL.title == "JITSI";
+  if (SOCIAL.className == "hide") {
     var createHUB = document.createElement("iframe");
-    createHUB.src = "/chat/jitsi.html";
+    createHUB.src = "https://meet.jit.si/MTCG";
     createHUB.style =
-      "position:fixed; top:0 left:0; width: 100%; height: 100%; background-color: white; z-index: 2 ";
+      "position:fixed; display: block; top:0 right:0; width: 100%; height: 100%; background-color: white; z-index: 2 ";
     SOCIAL.className = "";
-    SOCIAL.style =
-      "position:fixed; top:0 left:0; width: 100%; height: 100%; background-color: white; z-index: 2 ";
     var CREATEHUB = document.getElementById("SOCIAL").appendChild(createHUB);
     SOCIAL.className = "wrap";
   } else {
-    if (SOCIAL.title == "JITSI") {
-      SOCIAL.title == "CLOSED";
-
+    if (SOCIAL.className == "wrap") {
+      SOCIAL.style = "display: none;";
+      SOCIAL.title = "CLOSED";
       SOCIAL.className = "hide";
     }
   }
