@@ -1,6 +1,7 @@
 /// CREATORS
 
 const creatorONE = "0xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B";
+const creatorTWO = "0xB1D5C174d8b682F92115593370530b5Daa487C4A";
 
 // ITEMS
 
@@ -18,6 +19,8 @@ const storeitemTEN = document.getElementById("storeitemTEN");
 // PRICE
 
 /// STORE
+
+///Item One
 function tipstoreitemONE() {
   var currentrewardsM = document.getElementById("minutes");
   var currentrewards = document.getElementById("seconds");
@@ -179,6 +182,174 @@ function tipstoreitemONE() {
           hidestack.style =
             "display: block; cursor:pointer; color:gold; opacity.6;";
           storeitemONE.className = "hide";
+        }
+      }
+    }
+  }
+}
+
+///Item TWO
+function tipstoreitemTWO() {
+  var currentrewardsM = document.getElementById("minutes");
+  var currentrewards = document.getElementById("seconds");
+  var mytoken = document.getElementById("myToken").innerHTML;
+  var gettotal = currentrewardsM.innerHTML + "." + currentrewards.innerHTML;
+  var stashwallet = mytoken + "STASH";
+  var stashid = document.getElementById(stashwallet);
+  var hidestack = document.getElementById("hidestack");
+  var stashed = gettotal + stashid.innerHTML;
+  var chaterror = document.getElementById("storeerrorTWO");
+  var chatBOX = document.getElementById("storeitemTWOCHAT");
+  var tipAMOUNT = document.getElementById("storePRICETWO").innerHTML;
+  var storeitemNAME = document.getElementById("storeitemNAMETWO");
+
+  if (dreamInput.value == "") {
+    chatBOX.value = "";
+    chatBOX.focus;
+    chaterror.innerHTML = "No Account Found.";
+    chatBOX.placeholder = "No Account Found.";
+  } else {
+    if (chatBOX.value == "jhfjairjfooriuugjjiirau8r7231974*&#Uy") {
+      chatBOX.value = "";
+      chatBOX.focus;
+      chaterror.innerHTML = "Write Something To Comment.";
+      chatBOX.placeholder = "Write Something To Comment.";
+    } else {
+      if (stashid.innerHTML > tipAMOUNT) {
+        var paypost = tipAMOUNT;
+        var payedpost = stashid.innerHTML - paypost;
+        stashid.innerHTML = payedpost;
+
+        const data = {
+          dream:
+            dreamInput.value +
+            " Tipped: " +
+            creatorTWO +
+            " " +
+            tipAMOUNT +
+            ".00" +
+            mytoken +
+            " On " +
+            storeitemNAME.innerHTML +
+            " Commenting: " +
+            chatBOX.value,
+        };
+
+        fetch("/addDream", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log(JSON.stringify(response));
+          });
+        // get dream value and add it to the list
+        dreams.push(
+          dreamInput.value +
+            " Tipped: " +
+            creatorTWO +
+            " " +
+            tipAMOUNT +
+            ".00" +
+            mytoken +
+            " On " +
+            storeitemNAME.innerHTML +
+            " Commenting: " +
+            chatBOX.value
+        );
+        appendNewDream(
+          dreamInput.value +
+            " Tipped: " +
+            creatorTWO +
+            " " +
+            tipAMOUNT +
+            ".00" +
+            mytoken +
+            " On " +
+            storeitemNAME.innerHTML +
+            " Commenting:" +
+            chatBOX.value
+        );
+        chatBOX.value = "";
+        chatBOX.placeholder = "1 Reward Token";
+        chaterror.innerHTML = "1Reward Needed.";
+        hidestack.style =
+          "display: block; cursor:pointer; color:gold; opacity.6;";
+        storeitemONE.className = "hide";
+      } else {
+        if (gettotal < tipAMOUNT) {
+          var needmath = tipAMOUNT - gettotal;
+          chaterror.innerHTML = "Earn +" + needmath + "Rewards.";
+          chatBOX.placeholder = "Earn +" + needmath + "Rewards.";
+          chaterror.title = "Earn +" + needmath + "Rewards.";
+        }
+        if (gettotal > tipAMOUNT) {
+          var mytoken = document.getElementById("myToken").innerHTML;
+          var stashwallet = mytoken + "STASH";
+          var stashid = document.getElementById(stashwallet);
+          var paypost = tipAMOUNT;
+          var payedpost = gettotal - paypost;
+          stashid.innerHTML = payedpost;
+
+          const data = {
+            dream:
+              dreamInput.value +
+              " Tipped: " +
+              creatorTWO +
+              " " +
+              tipAMOUNT +
+              ".00" +
+              mytoken +
+              " On " +
+              storeitemNAME.innerHTML +
+              " Commenting:" +
+              chatBOX.value,
+          };
+
+          fetch("/addDream", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json" },
+          })
+            .then((res) => res.json())
+            .then((response) => {
+              console.log(JSON.stringify(response));
+            });
+          // get dream value and add it to the list
+          dreams.push(
+            dreamInput.value +
+              " Tipped: " +
+              creatorTWO +
+              " " +
+              tipAMOUNT +
+              ".00" +
+              mytoken +
+              " On " +
+              storeitemNAME.innerHTML +
+              " Commenting: " +
+              chatBOX.value
+          );
+          appendNewDream(
+            dreamInput.value +
+              " Tipped: " +
+              creatorTWO +
+              " " +
+              tipAMOUNT +
+              ".00" +
+              mytoken +
+              " On " +
+              storeitemNAME.innerHTML +
+              " Commenting: " +
+              chatBOX.value
+          );
+          reset();
+          chatBOX.value = "";
+          chatBOX.placeholder = "1 Reward Token";
+          chaterror.innerHTML = "1Reward Needed.";
+          hidestack.style =
+            "display: block; cursor:pointer; color:gold; opacity.6;";
+          storeitemTWO.className = "hide";
         }
       }
     }

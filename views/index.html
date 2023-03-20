@@ -289,8 +289,9 @@
       <!-- SOCIAL BUILD -->
       <div id="DRAGME" class="hide" title="BUILD">
         <center>
-        <p style="font-size: 12px; color: gold; font-weight: bolder">
-          MTCG Jitsi</p>
+          <p style="font-size: 12px; color: gold; font-weight: bolder">
+            MTCG Jitsi
+          </p>
           <div id="SOCIAL">
             <label
               class="close"
@@ -589,7 +590,7 @@
             </form>
             <div class="helper" onclick="walletTools()">HELP</div>
           </h1>
-
+          <!-- Start Store -->
           <div class="hide" id="rewardsSTORE" title="Closed">
             <label
               class="sclose"
@@ -599,7 +600,7 @@
             <center>
               <h1>Rewards Store</h1>
             </center>
-            <article id="storeitemONE" style="margin-right: 35%; width: 35%">
+            <article id="storeitemONE" style="margin-left: -45%; width: 35%">
               <h1 id="storeitemNAME">MTCG circuit breaker</h1>
               <label class="testitem" id="storeitemone"></label>
               <p id="storeitemoneintro" class="white">
@@ -636,6 +637,47 @@
               ></meter>
               <label class="storeerror" id="storeTOKEN">Rewards</label>
             </article>
+
+            <article
+              id="storeitemTWO"
+              style="margin-left: 45%; margin-top: -33%; width: 35%"
+            >
+              <h1 id="storeitemNAMETWO">Title: Skull</h1>
+              <label class="testitemTWO" id="storeitemtwo"></label>
+              <p id="storeitemtwointro" class="white">
+                Skull and Snake Image By @Darkmark on momint
+              </p>
+              <br />
+              <input
+                id="storeitemTWOCHAT"
+                name="storeitemTWOCHAT"
+                class="storechat"
+                type="text"
+                maxlength="5000"
+                placeholder="Great Work!"
+              /><br />
+              <button id="storeitemTWOBTN" onclick="tipstoreitemTWO()">
+                Tip Creator</button
+              ><br />
+              <label class="storeerror" id="storeerrorTWO"></label><br />
+              <label
+                class="toggleicon"
+                id="toggleiconTWO"
+                onclick="togglevalue();"
+              ></label>
+              <label class="storeerror" id="storePRICETWO">01</label>
+              <meter
+                id="storePRICEMETERTWO"
+                title="storePRICETWO"
+                class="hide"
+                min="0"
+                low="1"
+                high="25"
+                max="100"
+                value="1"
+              ></meter>
+              <label class="storeerror" id="storeTOKENTWO">Rewards</label>
+            </article>
             <br />
             <br />
             <a
@@ -645,7 +687,7 @@
               <button>Add Shop Item</button>
             </a>
           </div>
-
+          <!-- End Store -->
           <article id="PENDING" class="white" title="Activity Board">
             <div>
               Wallet:
