@@ -313,11 +313,113 @@
         <div id="inplay" class="hide" title="CLOSED"></div>
         <div id="gameMenu" class="" title="CLOSED">
           <center>
-            <article title="Intro">
-              <h1 align="center">Play Games While Earning Rewards</h1>
-              <p class="white">
-                Select A Game Below To Play While Earning Rewards
-              </p>
+            <article title="Spin Miner">
+              <h1 id="spin-title">Spin Miner</h1>
+              <div id="spin-info">
+                <p class="white">
+                  Spin And Match To Win! Match Three To Unlock The Spun Rewards!
+                </p>
+                <p style="color: red">
+                  Spun Rewards: <label id="mined">0</label>
+                </p>
+                <div class="white">
+                  <p>
+                    Your Spins:
+                    <label id="ONE"></label><br />
+                    <label id="TWO"></label><br />
+                    <label id="THREE"></label><br />
+                    <label id="FOUR"></label>
+                  </p>
+                  <button class="mineBTN" id="dig">Spin (1Reward)</button><br />
+                  <label class="storeerror" id="spinerror"></label>
+                </div>
+
+                <div class="hide">
+                  <div>
+                    <div class="box" id="1" title="MINE">Blank</div>
+                    <div class="box" id="2" title="MINE">Blank</div>
+                    <div class="box" id="3" title="MINE">Blank</div>
+                    <div class="box" id="4" title="MINE">Blank</div>
+                    <div class="box" id="5" title="MINE">Blank</div>
+                  </div>
+                  <br />
+                  <div>
+                    <div class="box" id="6" title="MINE">Blank</div>
+                    <div class="box" id="7" title="MINE">Blank</div>
+                    <div class="box" id="8" title="MINE">Blank</div>
+                    <div class="box" id="9" title="MINE">Blank</div>
+                    <div class="box" id="10" title="MINE">Blank</div>
+                  </div>
+                  <br />
+                  <div>
+                    <div class="box" id="11" title="MINE">Blank</div>
+                    <div class="box" id="12" title="MINE">Blank</div>
+                    <div class="box" id="13" title="MINE">Blank</div>
+                    <div class="box" id="14" title="MINE">Blank</div>
+                    <div class="box" id="15" title="MINE">Blank</div>
+                  </div>
+                  <br />
+                  <div>
+                    <div class="box" id="16" title="MINE">Blank</div>
+                    <div class="box" id="17" title="MINE">Blank</div>
+                    <div class="box" id="18" title="MINE">Blank</div>
+                    <div class="box" id="19" title="MINE">Blank</div>
+                    <div class="box" id="20" title="MINE">Blank</div>
+                  </div>
+                  <br />
+                  <div>
+                    <div class="box" id="21" title="MINE">Blank</div>
+                    <div class="box" id="22" title="MINE">Blank</div>
+                    <div class="box" id="23" title="MINE">Blank</div>
+                    <div class="box" id="24" title="MINE">Blank</div>
+                    <div class="box" id="25" title="MINE">Blank</div>
+                  </div>
+                  <br />
+                  <br />
+                  <br />
+                  <meter
+                    id="EARNED"
+                    title="EARNED"
+                    class="hide"
+                    min="0"
+                    low="1"
+                    high="100"
+                    max="1000"
+                    value="0"
+                  ></meter>
+                  <meter
+                    id="RANDOM"
+                    title="RANDOM"
+                    class="hide"
+                    min="0"
+                    low="1"
+                    high="25"
+                    max="26"
+                    value="1"
+                  ></meter>
+                  <meter
+                    id="SPINS"
+                    title="SPINS"
+                    class="hide"
+                    min="0"
+                    low="1"
+                    high="3"
+                    max="4"
+                    value="1"
+                  ></meter>
+                  <meter
+                    id="HARDNESS"
+                    title="HARDNESS"
+                    class="hide"
+                    min="1000"
+                    low="5000"
+                    high="100000"
+                    max="10000000"
+                    value="1000"
+                  ></meter>
+                  <br />
+                </div>
+              </div>
             </article>
 
             <article id="lotto">
@@ -401,114 +503,6 @@
                   <button onclick="cashducktimer()">Grab Rewards!</button>
                   <br />
                   <div id="duck-alert"></div>
-                </div>
-              </div>
-            </article>
-
-            <article title="Spin Miner">
-              <h1 id="spin-title">Spin Miner</h1>
-              <div id="spin-info">
-                <p class="white">
-                  Spin And Match To Win! Match Three To Unlock The Spun Rewards!
-                </p>
-                <p style="color: red">
-                  Spun Rewards: <label id="mined">0</label>
-                </p>
-                <div class="white">
-                  <p>
-                    Your Spins:
-                    <label id="ONE"></label>
-                    <label id="TWO"></label>
-                    <label id="THREE"></label><br /><br />
-                    <label id="FOUR"></label>
-                  </p>
-                </div>
-
-                <div class="map">
-                  <div>
-                    <div class="box" id="1" title="MINE">Blank</div>
-                    <div class="box" id="2" title="MINE">Blank</div>
-                    <div class="box" id="3" title="MINE">Blank</div>
-                    <div class="box" id="4" title="MINE">Blank</div>
-                    <div class="box" id="5" title="MINE">Blank</div>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="box" id="6" title="MINE">Blank</div>
-                    <div class="box" id="7" title="MINE">Blank</div>
-                    <div class="box" id="8" title="MINE">Blank</div>
-                    <div class="box" id="9" title="MINE">Blank</div>
-                    <div class="box" id="10" title="MINE">Blank</div>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="box" id="11" title="MINE">Blank</div>
-                    <div class="box" id="12" title="MINE">Blank</div>
-                    <div class="box" id="13" title="MINE">Blank</div>
-                    <div class="box" id="14" title="MINE">Blank</div>
-                    <div class="box" id="15" title="MINE">Blank</div>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="box" id="16" title="MINE">Blank</div>
-                    <div class="box" id="17" title="MINE">Blank</div>
-                    <div class="box" id="18" title="MINE">Blank</div>
-                    <div class="box" id="19" title="MINE">Blank</div>
-                    <div class="box" id="20" title="MINE">Blank</div>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="box" id="21" title="MINE">Blank</div>
-                    <div class="box" id="22" title="MINE">Blank</div>
-                    <div class="box" id="23" title="MINE">Blank</div>
-                    <div class="box" id="24" title="MINE">Blank</div>
-                    <div class="box" id="25" title="MINE">Blank</div>
-                  </div>
-                  <br />
-                  <br />
-                  <br />
-                  <button class="mineBTN" id="dig">Spin</button>
-                  <meter
-                    id="EARNED"
-                    title="EARNED"
-                    class="hide"
-                    min="0"
-                    low="1"
-                    high="100"
-                    max="1000"
-                    value="0"
-                  ></meter>
-                  <meter
-                    id="RANDOM"
-                    title="RANDOM"
-                    class="hide"
-                    min="0"
-                    low="1"
-                    high="25"
-                    max="26"
-                    value="1"
-                  ></meter>
-                  <meter
-                    id="SPINS"
-                    title="SPINS"
-                    class="hide"
-                    min="0"
-                    low="1"
-                    high="3"
-                    max="4"
-                    value="1"
-                  ></meter>
-                  <meter
-                    id="HARDNESS"
-                    title="HARDNESS"
-                    class="hide"
-                    min="1000"
-                    low="5000"
-                    high="100000"
-                    max="10000000"
-                    value="1000"
-                  ></meter>
-                  <br />
                 </div>
               </div>
             </article>

@@ -482,3 +482,150 @@ button:hover {
   filter: opacity(78%);
   z-index: 12;
 }
+
+.GAMER {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://cdn.glitch.me/76239ef0-e5c6-4e29-9830-26d4ec2dfc0b%2FGAMER.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.DooBetter {
+  display: block;
+  border-style: none;
+  margin: 25px;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://cdn.glitch.me/76239ef0-e5c6-4e29-9830-26d4ec2dfc0b%2FDOOBETTER.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.ECLIPSE {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://cdn.minds.com/fs/v1/thumbnail/1254528606228328448/xlarge/");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.GTPC {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://cdn.minds.com/icon/822733901683236867/medium/1621185080");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.DragonToken {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/8c9b7180-cf97-11eb-a4e9-ac162db679ce.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.DarkMark {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/e23e501e-8bb5-11ec-9b8c-ac162db679ce.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.PINN {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/f8c5dbe6-cec7-11eb-be8f-78e3b517e592.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.withinthevacuum {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/88c34c38-548c-11ed-b7ae-ac162db679ce.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.Candys {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/3a67dce8-b328-11ed-bdc5-ac162db679ce.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.MTCG {
+  position: relative;
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://cdn.minds.com/icon/568132636652875781/medium/1630521552");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.mineBTN {
+  position: relative;
+  font-size: 10px;
+}
