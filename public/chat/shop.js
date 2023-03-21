@@ -363,10 +363,13 @@ function togglevalue() {
   var addTIP = 1;
   var totalTIP = tipAMOUNT.value + addTIP;
   document.getElementById("storePRICE").innerHTML = "0" + totalTIP;
+  document.getElementById("storePRICETWO").innerHTML = "0" + totalTIP;
+
   tipAMOUNT.value = totalTIP;
 
   if (totalTIP > 9) {
     tipAMOUNT.value = 1;
     document.getElementById("storePRICE").innerHTML = "01";
+    document.getElementById("storePRICETWO").innerHTML = "01";
   }
 }
