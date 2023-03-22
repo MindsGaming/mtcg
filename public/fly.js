@@ -96,9 +96,6 @@ function changeToken() {
     var math = current.innerHTML - remove;
     reset();
   }
-
-  var stashtoken = document.getElementById("stashfetchTOKEN");
-  stashtoken.innerHTML = dreamToken.innerHTMl;
 }
 
 function displayTools() {
@@ -559,93 +556,4 @@ function playhomevideo() {
   var CREATEVIDEOS = document
     .getElementById("playhomevideo")
     .appendChild(createvideo);
-}
-
-function changeSTASH() {
-  var stashtoken = document.getElementById("stashfetchTOKEN");
-  var oldToken = stashtoken.innerHTML;
-
-  var extralist = [
-    "DragonToken",
-    "DarkMark",
-    "Candys",
-    "PINN",
-    "withinthevacuum",
-    "ECLIPSE",
-    "DooBetter",
-    "GTPC",
-  ];
-  var newTokens = [
-    "DarkMark",
-    "DragonToken",
-    "Candys",
-    "PINN",
-    "withinthevacuum",
-    "ECLIPSE",
-    "DooBetter",
-    "GTPC",
-    "GAMER",
-  ];
-  const newtoken = newTokens[Math.floor(Math.random() * newTokens.length)];
-  dreamToken.innerHTML = newtoken;
-
-  if (newtoken == oldToken) {
-    changeToken();
-  } else {
-    var levelUp = document.getElementById("levelUp");
-
-    if (newtoken == "DarkMark") {
-      dreamToken.className = "darkmarkIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "5";
-    }
-
-    if (newtoken == "DragonToken") {
-      dreamToken.className = "dragontokenIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "11";
-    }
-    if (newtoken == "Candys") {
-      dreamToken.className = "candysIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "16";
-    }
-    if (newtoken == "PINN") {
-      dreamToken.className = "PINNIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "21";
-    }
-
-    if (newtoken == "withinthevacuum") {
-      dreamToken.className = "withinthevacuumIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "26";
-    }
-    if (newtoken == "ECLIPSE") {
-      dreamToken.className = "doobetterIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "31";
-    }
-
-    if (newtoken == "DooBetter") {
-      dreamToken.className = "gtpcIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "36";
-    }
-
-    if (newtoken == "GTPC") {
-      dreamToken.className = "gtpcIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "41";
-    }
-
-    if (newtoken == "GAMER") {
-      dreamToken.className = "gamerIMG";
-      dreamToken.title = newtoken;
-      levelUp.value = "51";
-    }
-    var current = levelUp.value;
-    var remove = 1;
-    var math = current.innerHTML - remove;
-  }
 }
