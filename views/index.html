@@ -24,7 +24,6 @@
     <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
     <script src="/client.js" defer></script>
     <script src="/games/games.js" defer></script>
-    <script src="/games/spin/spin.js" defer></script>
     <script src="/games/spin/start.js" defer></script>
     <script src="/chat/chat.js" defer></script>
     <script src="/chat/shop.js" defer></script>
@@ -327,56 +326,14 @@
                 <div class="white">
                   <p>
                     Your Spins:
-                    <label id="ONE"></label><br />
-                    <label id="TWO"></label><br />
-                    <label id="THREE"></label><br />
-                    <label id="FOUR"></label>
+                    <label id="SPINONE"></label><br />
+                    <label id="SPINTWO"></label><br />
+                    <label id="SPINTHREE"></label><br />
                   </p>
                   <button class="mineBTN" id="dig">Spin</button><br />
                   <button class="hide" id="stashBTN"></button><br />
                   <label class="storeerror" id="spinerror"></label>
                 </div>
-
-                <div class="hide">
-                  <div>
-                    <div class="box" id="1" title="MINE">Blank</div>
-                    <div class="box" id="2" title="MINE">Blank</div>
-                    <div class="box" id="3" title="MINE">Blank</div>
-                    <div class="box" id="4" title="MINE">Blank</div>
-                    <div class="box" id="5" title="MINE">Blank</div>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="box" id="6" title="MINE">Blank</div>
-                    <div class="box" id="7" title="MINE">Blank</div>
-                    <div class="box" id="8" title="MINE">Blank</div>
-                    <div class="box" id="9" title="MINE">Blank</div>
-                    <div class="box" id="10" title="MINE">Blank</div>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="box" id="11" title="MINE">Blank</div>
-                    <div class="box" id="12" title="MINE">Blank</div>
-                    <div class="box" id="13" title="MINE">Blank</div>
-                    <div class="box" id="14" title="MINE">Blank</div>
-                    <div class="box" id="15" title="MINE">Blank</div>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="box" id="16" title="MINE">Blank</div>
-                    <div class="box" id="17" title="MINE">Blank</div>
-                    <div class="box" id="18" title="MINE">Blank</div>
-                    <div class="box" id="19" title="MINE">Blank</div>
-                    <div class="box" id="20" title="MINE">Blank</div>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="box" id="21" title="MINE">Blank</div>
-                    <div class="box" id="22" title="MINE">Blank</div>
-                    <div class="box" id="23" title="MINE">Blank</div>
-                    <div class="box" id="24" title="MINE">Blank</div>
-                    <div class="box" id="25" title="MINE">Blank</div>
-                  </div>
                   <br />
                   <br />
                   <br />
@@ -874,7 +831,6 @@
                 aria-label="a new dream"
                 type="text"
                 maxlength="5000"
-                onclick="createPOST();"
                 placeholder="What's Up?"
                 required
               />
