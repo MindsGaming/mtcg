@@ -8,7 +8,7 @@ function swaping() {
   swapmap.className = "swapmap";
   swapone.innerHTML = mytoken.innerHTML;
   if (swaptwo.innerHTML == "") {
-    swaptwo.innerHTML = mytoken.innerHTML;
+    swapone.innerHTML = mytoken.innerHTML;
   } else {
     if (swaptwo.innerHTML == "DarkMark") {
       swaptwo.innerHTML = "DragonToken";
@@ -62,6 +62,9 @@ function swapready() {
   var swapwallet = swaptwo.innerHTML + "STASH";
   var stashid = document.getElementById(stashwallet);
   var stashswap = document.getElementById(swapwallet);
+  var SWAPMATH = document.getElementById("SWAPMATH");
+  SWAPMATH.value = stashswap.innerHTML;
+  var SWAPMATHTWO = document.getElementById("SWAPMATHTWO");
 
   if (swapone.innerHTML == "") {
     swapone.innerHTML = mytoken.innerHTML;
@@ -72,24 +75,31 @@ function swapready() {
     } else {
       if (stashid.innerHTML > 1) {
         var payswap = 1;
-        var payedswap = stashid.innerHTML - payswap;
-        stashid.innerHTML = "0";
-        swapwallet.innerHTML = payedswap;
+        var fishswap = SWAPMATH.value;
+        var payedswap = gettotal - payswap;
+        SWAPMATHTWO.value = payedswap;
+        var fishtotal = fishswap + SWAPMATHTWO.value;
+        stashid.innerHTML = gettotal;
+        stashswap.innerHTML = fishtotal;
         reset();
       } else {
         if (gettotal < 1) {
           var needmath = 1 - gettotal;
           swaperror.innerHTML = "Earn +" + needmath + "Rewards.";
-        }
-        if (gettotal > 1) {
-          var mytoken = document.getElementById("myToken").innerHTML;
-          var stashwallet = mytoken + "STASH";
-          var stashid = document.getElementById(stashwallet);
-          var paypost = 1;
-          var payedpost = gettotal - paypost;
-          stashid.innerHTML = "0";
-          stashswap.innerHTML = payedpost;
-          reset();
+        } else {
+          if (gettotal > 1) {
+            var mytoken = document.getElementById("myToken").innerHTML;
+            var stashwallet = mytoken + "STASH";
+            var stashid = document.getElementById(stashwallet);
+            var payswap = 1;
+            var fishswap = SWAPMATH.value;
+            var payedswap = gettotal - payswap;
+            SWAPMATHTWO.value = payedswap;
+            var fishtotal = fishswap + SWAPMATHTWO.value;
+            stashid.innerHTML = "0";
+            stashswap.innerHTML = fishtotal;
+            reset();
+          }
         }
       }
     }
