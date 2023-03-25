@@ -629,3 +629,12 @@ button:hover {
   position: relative;
   font-size: 10px;
 }
+
+.swapmap {
+  width: 28%;
+  background-color: silver;
+  border-style: solid;
+  border-color: silver;
+  color: blue;
+  border-radius: 30px 30px 30px 30px;
+}
