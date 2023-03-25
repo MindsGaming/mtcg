@@ -29,6 +29,7 @@
     <script src="/chat/chat.js" defer></script>
     <script src="/chat/shop.js" defer></script>
     <script src="/chat/jitsi.js" defer></script>
+    <script src="/chat/swap.js" defer></script>
 
     <script src="/fly.js" defer></script>
     <script src="/miner/minercheck.js" defer></script>
@@ -52,6 +53,61 @@
     >
     <wrap>
       <app id="APP" class="display" title="HOME">
+        <div id="quickTools" class="quicker" onclick="displayTools();">
+          <tool class="display" id="TOOLS" title="TOOLS">
+            <tool>
+              <div onclick="HOME();" id="home" class="home" title="HOME"></div>
+            </tool>
+            <tool>
+              <div
+                onclick="quickhub();"
+                id="hub"
+                class="browser"
+                title="Hang-Out"
+              ></div>
+            </tool>
+            <tool>
+              <div
+                onclick="Jsocial();"
+                id="jitsi"
+                class="jitsiicon"
+                title="Jitsi"
+              ></div>
+            </tool>
+            <tool>
+              <div
+                onclick="viewgames();"
+                id="games"
+                class="gamepad"
+                title="Games"
+              ></div>
+            </tool>
+            <tool>
+              <div
+                onclick="userview();"
+                id="userview"
+                class="lightning"
+                title="Rewards"
+              ></div>
+            </tool>
+            <tool>
+              <div
+                onclick="viewcollection();"
+                id="shop"
+                class="shopicon"
+                title="Shop"
+              ></div>
+            </tool>
+            <tool>
+              <div
+                onclick="openexperiments();"
+                id="experiment"
+                class="experimenticon"
+                title="Shop"
+              ></div>
+            </tool>
+          </tool>
+        </div>
         <center>
           <article>
             <h1>MTCG Ecosystem & Rewards</h1>
@@ -228,61 +284,7 @@
           <br />
         </center>
       </app>
-      <div id="quickTools" class="quicker" onclick="displayTools();">
-        <tool class="display" id="TOOLS" title="TOOLS">
-          <tool>
-            <div onclick="HOME();" id="home" class="home" title="HOME"></div>
-          </tool>
-          <tool>
-            <div
-              onclick="quickhub();"
-              id="hub"
-              class="browser"
-              title="Hang-Out"
-            ></div>
-          </tool>
-          <tool>
-            <div
-              onclick="Jsocial();"
-              id="jitsi"
-              class="jitsiicon"
-              title="Jitsi"
-            ></div>
-          </tool>
-          <tool>
-            <div
-              onclick="viewgames();"
-              id="games"
-              class="gamepad"
-              title="Games"
-            ></div>
-          </tool>
-          <tool>
-            <div
-              onclick="userview();"
-              id="userview"
-              class="lightning"
-              title="Rewards"
-            ></div>
-          </tool>
-          <tool>
-            <div
-              onclick="viewcollection();"
-              id="shop"
-              class="shopicon"
-              title="Shop"
-            ></div>
-          </tool>
-          <tool>
-            <div
-              onclick="openexperiments();"
-              id="experiment"
-              class="experimenticon"
-              title="Shop"
-            ></div>
-          </tool>
-        </tool>
-      </div>
+
       <!-- HUBS in script -->
       <div class="hide" id="HUBS" title="build"></div>
 
@@ -697,50 +699,111 @@
                   >00</label
                 >
                 <br /><br />
-                <label
-                  id="hidestack"
-                  class="hide"
-                  onclick="claimstashREWARDS();"
-                >
+                <label id="hidestack" class="hide">
                   <div id="createstash">
                     <label title="Comment Stash Is Kept Until Page Is Left">
                       Reward Stash
                     </label>
                     <br />
+                    <div id="swapmap" class="swapmap">
+                      <label style="color: blue" id="swapONE"></label>
+                      <div
+                        id="swapICON"
+                        class="srefresh"
+                        onclick="swaping();"
+                      ></div>
+                      <label id="swapTWO" style="color: blue"></label><br />
+                      <button
+                        id="swapBTN"
+                        class="swapBTN"
+                        onclick="swapready();"
+                      >
+                        Swap Rewards</button
+                      ><br />
+                      <label id="swaperror" style="color: red; font-size: 8px"
+                        >Cost: 1 Reward</label
+                      >
+                    </div>
+
                     <p class="userstash">
-                      GAMER <label class="stashing" id="GAMERSTASH">0</label>
+                      GAMER
+                      <label
+                        class="stashing"
+                        id="GAMERSTASH"
+                        onclick="claimstashREWARDS();"
+                        >0</label
+                      >
                     </p>
                     <p class="userstash">
                       Eclipse
-                      <label class="stashing" id="ECLIPSESTASH">0</label>
+                      <label
+                        class="stashing"
+                        id="ECLIPSESTASH"
+                        onclick="claimstashREWARDS();"
+                        >0</label
+                      >
                     </p>
                     <p class="userstash">
                       DooBetter
-                      <label class="stashing" id="DooBetterSTASH">0</label>
+                      <label
+                        class="stashing"
+                        id="DooBetterSTASH"
+                        onclick="claimstashREWARDS();"
+                        >0</label
+                      >
                     </p>
                     <p class="userstash">
-                      GTPC <label class="stashing" id="GTPCSTASH">0</label>
+                      GTPC
+                      <label
+                        class="stashing"
+                        id="GTPCSTASH"
+                        onclick="claimstashREWARDS();"
+                        >0</label
+                      >
                     </p>
                     <p class="userstash">
                       withinthevacuum
-                      <label class="stashing" id="withinthevacuumSTASH"
+                      <label
+                        class="stashing"
+                        id="withinthevacuumSTASH"
+                        onclick="claimstashREWARDS();"
                         >0</label
                       >
                     </p>
                     <p class="userstash">
-                      PINN <label class="stashing" id="PINNSTASH">0</label>
+                      PINN
+                      <label
+                        class="stashing"
+                        id="PINNSTASH"
+                        onclick="claimstashREWARDS();"
+                        >0</label
+                      >
                     </p>
                     <p class="userstash">
                       DarkMark
-                      <label class="stashing" id="DarkMarkSTASH">0</label>
-                    </p>
-                    <p class="userstash">
-                      DragonToken<label class="stashing" id="DragonTokenSTASH"
+                      <label
+                        class="stashing"
+                        id="DarkMarkSTASH"
+                        onclick="claimstashREWARDS();"
                         >0</label
                       >
                     </p>
                     <p class="userstash">
-                      Candys <label class="stashing" id="CandysSTASH">0</label>
+                      DragonToken<label
+                        class="stashing"
+                        id="DragonTokenSTASH"
+                        onclick="claimstashREWARDS();"
+                        >0</label
+                      >
+                    </p>
+                    <p class="userstash">
+                      Candys
+                      <label
+                        class="stashing"
+                        id="CandysSTASH"
+                        onclick="claimstashREWARDS();"
+                        >0</label
+                      >
                     </p>
                     <br />
                   </div>
