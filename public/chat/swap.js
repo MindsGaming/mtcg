@@ -7,36 +7,33 @@ function swaping() {
   var swapmap = document.getElementById("swapmap");
   swapmap.className = "swapmap";
   swapone.innerHTML = mytoken.innerHTML;
-  if (swaptwo.innerHTML == "") {
-    swapone.innerHTML = mytoken.innerHTML;
+
+  if (swaptwo.innerHTML == "DarkMark") {
+    swaptwo.innerHTML = "DragonToken";
   } else {
-    if (swaptwo.innerHTML == "DarkMark") {
-      swaptwo.innerHTML = "DragonToken";
+    if (swaptwo.innerHTML == "DragonToken") {
+      swaptwo.innerHTML = "Candys";
     } else {
-      if (swaptwo.innerHTML == "DragonToken") {
-        swaptwo.innerHTML = "Candys";
+      if (swaptwo.innerHTML == "Candys") {
+        swaptwo.innerHTML = "PINN";
       } else {
-        if (swaptwo.innerHTML == "Candys") {
-          swaptwo.innerHTML = "PINN";
+        if (swaptwo.innerHTML == "PINN") {
+          swaptwo.innerHTML = "withinthevacuum";
         } else {
-          if (swaptwo.innerHTML == "PINN") {
-            swaptwo.innerHTML = "withinthevacuum";
+          if (swaptwo.innerHTML == "withinthevacuum") {
+            swaptwo.innerHTML = "ECLIPSE";
           } else {
-            if (swaptwo.innerHTML == "withinthevacuum") {
-              swaptwo.innerHTML = "ECLIPSE";
+            if (swaptwo.innerHTML == "ECLIPSE") {
+              swaptwo.innerHTML = "DooBetter";
             } else {
-              if (swaptwo.innerHTML == "ECLIPSE") {
-                swaptwo.innerHTML = "DooBetter";
+              if (swaptwo.innerHTML == "DooBetter") {
+                swaptwo.innerHTML = "GTPC";
               } else {
-                if (swaptwo.innerHTML == "DooBetter") {
-                  swaptwo.innerHTML = "GTPC";
+                if (swaptwo.innerHTML == "GTPC") {
+                  swaptwo.innerHTML = "GAMER";
                 } else {
-                  if (swaptwo.innerHTML == "GTPC") {
-                    swaptwo.innerHTML = "GAMER";
-                  } else {
-                    if (swaptwo.innerHTML == "GAMER") {
-                      swaptwo.innerHTML = "DarkMark";
-                    }
+                  if (swaptwo.innerHTML == "GAMER") {
+                    swaptwo.innerHTML = "DarkMark";
                   }
                 }
               }
@@ -45,8 +42,8 @@ function swaping() {
         }
       }
     }
-    swapBTN.innerHTML = "Swap Ready!";
   }
+  swapBTN.innerHTML = "Swap Ready!";
 }
 
 function swapready() {
@@ -66,10 +63,10 @@ function swapready() {
   SWAPMATH.value = stashswap.innerHTML;
   var SWAPMATHTWO = document.getElementById("SWAPMATHTWO");
 
-  if (swapone.innerHTML == "") {
-    swapone.innerHTML = mytoken.innerHTML;
+  if (swapone.innerHTML == swaptwo.innerHTML) {
     swaping();
   } else {
+    swapone.innerHTML = mytoken.innerHTML;
     if (swapone.innerHTML == swaptwo.innerHTML) {
       swaperror.innerHTML = "Can't Swap The Same Reward.";
     } else {
