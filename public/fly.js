@@ -477,6 +477,7 @@ function Jsocial() {
     var createHUB = document.createElement("iframe");
     createHUB.src = "https://meet.jit.si/MTCG";
     createHUB.style = "width:100%; height: 400px; padding: 2px;";
+    createHUB.allow = "microphone; camera; vr; speaker;";
     var CREATEHUB = document.getElementById("SOCIAL").appendChild(createHUB);
     socialwrap.className = "jitsiwrap";
     SOCIAL.style = " display:block;";
