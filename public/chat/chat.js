@@ -33,9 +33,13 @@ function startCHAT() {
       chatBOX.placeholder = "Write Something To Comment.";
     } else {
       if (stashid.innerHTML > 1) {
+        var fishystash = document.getElementById("SWAPMATH");
+        fishystash.value = stashid.innerHTML;
         var paypost = 1;
-        var payedpost = stashid.innerHTML - paypost;
-        stashid.innerHTML = payedpost;
+        var payedpost = gettotal - paypost;
+        var fishytotal = payedpost + fishystash.value;
+        stashid.innerHTML = fishytotal;
+        fishystash.value = "0";
 
         const data = {
           dream: dreamInput.value + " Commented: " + chatBOX.value,
