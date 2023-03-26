@@ -113,7 +113,6 @@ function tipstoreitemONE() {
         chaterror.innerHTML = "1Reward Needed.";
         hidestack.style =
           "display: block; cursor:pointer; color:gold; opacity.6;";
-        storeitemONE.className = "hide";
       } else {
         if (gettotal < tipAMOUNT) {
           var needmath = tipAMOUNT - gettotal;
@@ -187,7 +186,6 @@ function tipstoreitemONE() {
             chaterror.innerHTML = "1Reward Needed.";
             hidestack.style =
               "display: block; cursor:pointer; color:gold; opacity.6;";
-            storeitemONE.className = "hide";
           }
         }
       }
@@ -289,7 +287,6 @@ function tipstoreitemTWO() {
         chaterror.innerHTML = "1Reward Needed.";
         hidestack.style =
           "display: block; cursor:pointer; color:gold; opacity.6;";
-        storeitemONE.className = "hide";
       } else {
         if (gettotal < tipAMOUNT) {
           var needmath = tipAMOUNT - gettotal;
@@ -363,7 +360,6 @@ function tipstoreitemTWO() {
             chaterror.innerHTML = "1Reward Needed.";
             hidestack.style =
               "display: block; cursor:pointer; color:gold; opacity.6;";
-            storeitemTWO.className = "hide";
           }
         }
       }
