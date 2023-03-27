@@ -145,8 +145,8 @@ dreamsForm.onsubmit = (event) => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
-  dreams.push(dreamInput.value, " Started Earning");
-  appendNewDream(dreamInput.value, " Started Earning");
+  dreams.push(dreamInput.value + " Started Earning");
+  appendNewDream(dreamInput.value + " Started Earning");
 
   // reset form
   var loginform = document.getElementById("login-form");
