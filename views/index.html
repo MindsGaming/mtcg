@@ -29,6 +29,7 @@
     <script src="/chat/shop.js" defer></script>
     <script src="/chat/jitsi.js" defer></script>
     <script src="/chat/swap.js" defer></script>
+    <script src="/games/lotto/lotto.js" defer></script>
 
     <script src="/fly.js" defer></script>
     <script src="/miner/minercheck.js" defer></script>
@@ -349,20 +350,65 @@
             </article>
 
             <article id="lotto">
-              <h1>Enter The Lotto!</h1>
-              <p>
-                Thanks for being a user of our site! Enter this lotto for a
-                chance to win big!
-              </p>
+              <h1>Lotto Picker</h1>
+              <p>Pick up to five numbers, if they match you win the prize!</p>
               <br />
-              <p
-                style="color: red; font-size: 8px"
-                title="*One entry per wallet"
-              >
-                *One entry per wallet
-              </p>
+              <div class="lottomap">
+                <label id="lottointro">How Many Numbers?</label><br /><br />
 
-              <button onclick="lotto()">Submit Entry</button>
+                <label id="lottoamount" class="lottoball" title="3">3</label>
+                <br /><br />
+                <label onclick="togglepickone();" id="PICKONE" class="hide"
+                  >6</label
+                >
+                <label onclick="togglepicktwo();" id="PICKTWO" class="hide"
+                  >6</label
+                >
+                <label onclick="togglepickthree();" id="PICKTHREE" class="hide"
+                  >6</label
+                >
+                <label onclick="togglepickfour();" id="PICKFOUR" class="hide"
+                  >6</label
+                >
+                <label onclick="togglepickfive();" id="PICKFIVE" class="hide"
+                  >6</label
+                >
+                <br /><br />
+                <div class="hide" id="lottopicks">
+                  <label>Machine Picks:</label><br /><br />
+                  <label class="lottoball" id="pickone">6</label>
+                  <label class="lottoball" id="picktwo">6</label>
+                  <label class="lottoball" id="pickthree">6</label>
+                  <label class="lottoball" id="pickfour">6</label>
+                  <label class="lottoball" id="pickfive">6</label>
+                </div>
+
+                <button id="lottoamountBTN" title="Ready">Ready</button>
+                <button class="hide" id="lottostashBTN"></button>
+              </div>
+              <label id="lottoerror" style="color: red; font-size: 9.5px"
+                >Cost: 3 Reward(s)</label
+              >
+              <meter
+                id="LOTTOMETER"
+                title="EARNED"
+                class="hide"
+                min="0"
+                low="1"
+                high="25"
+                max="100"
+                value="3"
+              ></meter>
+              <meter
+                id="LOTTOPICKS"
+                title="EARNED"
+                class="hide"
+                min="0"
+                low="1"
+                high="25"
+                max="100"
+                value="6"
+              ></meter>
             </article>
 
             <article title="City Builder">
