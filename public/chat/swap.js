@@ -60,7 +60,6 @@ function swapready() {
   var stashid = document.getElementById(stashwallet);
   var stashswap = document.getElementById(swapwallet);
   var SWAPMATH = document.getElementById("SWAPMATH");
-  SWAPMATH.value = stashswap.innerHTML;
   var SWAPMATHTWO = document.getElementById("SWAPMATHTWO");
 
   if (swapone.innerHTML == swaptwo.innerHTML) {
@@ -72,11 +71,11 @@ function swapready() {
     } else {
       if (stashid.innerHTML > 1) {
         var payswap = 1;
-        var fishswap = SWAPMATH.value;
-        var payedswap = gettotal - payswap;
-        SWAPMATHTWO.value = payedswap;
-        var fishtotal = fishswap + SWAPMATHTWO.value;
-        stashid.innerHTML = gettotal;
+        var fishswap = SWAPMATHTWO.value;
+        var payedswap = fishswap - payswap;
+        SWAPMATH.value = payedswap;
+        var fishtotal = gettotal + SWAPMATHTWO.value;
+        stashid.innerHTML = "0";
         stashswap.innerHTML = fishtotal;
         reset();
       } else {
@@ -85,9 +84,6 @@ function swapready() {
           swaperror.innerHTML = "Earn +" + needmath + "Rewards.";
         } else {
           if (gettotal > 1) {
-            var mytoken = document.getElementById("myToken").innerHTML;
-            var stashwallet = mytoken + "STASH";
-            var stashid = document.getElementById(stashwallet);
             var payswap = 1;
             var fishswap = SWAPMATH.value;
             var payedswap = gettotal - payswap;
