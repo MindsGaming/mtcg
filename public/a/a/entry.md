@@ -48,7 +48,7 @@ https://mintme.com/token/PINN
 DarkMark | 0.024 | 0.012
 https://mintme.com/token/DarkMark
 
-DragonToken | 0.0099 | 0.0495
+DragonToken | 0.0099 | 0.0049
 https://mintme.com/token/DragonToken
 
 Candys | 0.01 |0.005
