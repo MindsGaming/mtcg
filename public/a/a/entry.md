@@ -30,7 +30,7 @@ Token | Recorded | Current Price
 Gamer | 0.1 | 0.05
 https://mintme.com/token/GAMER
 
-Eclipse | 0.18 | 0.09
+Eclipse | 0.3 | 0.15
 https://mintme.com/token/ECLIPSE
 
 DooBetter | 0.169 | 0.0845
@@ -45,10 +45,10 @@ https://mintme.com/token/withinthevacuum
 PINN | 0.008 | 0.004
 https://mintme.com/token/PINN
 
-DarkMark | 0.24 | 0.12
+DarkMark | 0.024 | 0.012
 https://mintme.com/token/DarkMark
 
-DragonToken | 0.002 | 0.001
+DragonToken | 0.0099 | 0.0495
 https://mintme.com/token/DragonToken
 
 Candys | 0.01 |0.005
