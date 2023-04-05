@@ -239,8 +239,7 @@ function ducktimer() {
   var duckgame = document.getElementById("duck-game");
 
   if (duckgame.title == "CLOSED") {
-    duckgame.src =
-      "https://www.botlibre.com/chat?&id=26346358&embedded=true&chatroom=Chat+Room&application=5197801608358921144";
+    duckgame.src = "https://mediafiles.botpress.cloud/c1181518-5cec-49b6-94db-0727d5ddd14b/webchat/bot.html"
     duckgame.title = "DUCK";
     duckgame.style =
       "display: block; width: 100%;height: 400px;border-radius: 30px 30px 30px 30px; opacity: 0.9;";
