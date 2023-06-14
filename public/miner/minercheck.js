@@ -1,4 +1,4 @@
-setTimeout(function () {
+/* setTimeout(function () {
   if (typeof _client === "undefined" || _client === null) {
     var alertuser = document.getElementById("rewards-intro");
     var loginform = document.getElementById("form");
@@ -15,3 +15,5 @@ setTimeout(function () {
     walletTools();
   }
 }, 1000);
+
+*/
