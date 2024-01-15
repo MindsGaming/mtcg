@@ -240,7 +240,7 @@ function ducktimer() {
 
   if (duckgame.title == "CLOSED") {
     duckgame.src =
-      "https://mediafiles.botpress.cloud/e0f040b0-8ac6-4f65-ae80-5b8ebce9de66/webchat/bot.html";
+      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=a96193d7-6858-43e3-9e1b-0591a9472f18";
     duckgame.title = "DUCK";
     duckgame.style =
       "display: block; width: 100%;height: 400px;border-radius: 30px 30px 30px 30px; opacity: 0.9;";
