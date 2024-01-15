@@ -239,8 +239,7 @@ function ducktimer() {
   var duckgame = document.getElementById("duck-game");
 
   if (duckgame.title == "CLOSED") {
-    duckgame.src =
-      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=a96193d7-6858-43e3-9e1b-0591a9472f18";
+    duckgame.src = "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=c31e317d-c68a-4c60-a1d2-fb931db4e5a7";
     duckgame.title = "DUCK";
     duckgame.style =
       "display: block; width: 100%;height: 400px;border-radius: 30px 30px 30px 30px; opacity: 0.9;";
