@@ -1,4 +1,0 @@
-0xeE9f5aB4faeCBe30012f675Bb938031BC51bB49B Lotto Entry
-0x6ED62980Aafc803beD6C2E54a9DB07CC97f8b726
-
-https://mediafiles.botpress.cloud/c1181518-5cec-49b6-94db-0727d5ddd14b/webchat/bot.html
