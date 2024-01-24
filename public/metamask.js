@@ -4,7 +4,6 @@ var enableLogin = function () {
 };
 
 var connectWithMetaMask = async function () {
-  walletChecks();
   console.log("Connect with MetaMask");
   console.log("Network version", ethereum.networkVersion);
   console.log("Selected Address", ethereum.selectedAddress);
@@ -35,6 +34,7 @@ var connectWithMetaMask = async function () {
     appendNewDream(dreamInput.value + "Logged In");
     var walletID = document.getElementById("walletID");
     walletID.innerHTML = placeaddy.value;
+    walletChecks();
   }
 
   async () => {
