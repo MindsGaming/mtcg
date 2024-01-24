@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>#MindsGaming - MTCG</title>
+    <title>#MindsGaming -MTCG</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Community & Member Groups" />
+    <meta name="description" content="Community Groups & Resources" />
     <meta
       property="og:image"
       content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
@@ -16,31 +16,690 @@
       href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
     <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
-
-    <script src="/tokens/metamask.js" defer></script>
-    <script src="https://mtcgverse.glitch.me/MTCGverse.js" defer></script>
-    <script src="/tokens/tokens.js" defer></script>
-    <script src="https://mindsgaming.glitch.me/mtcg/docs.js"></script>
-    <script src="/client.js" defer></script>
-    <script src="/games/games.js" defer></script>
-    <script src="/games/spin/start.js" defer></script>
-    <script src="/chat/chat.js" defer></script>
-    <script src="/chat/shop.js" defer></script>
-    <script src="/chat/jitsi.js" defer></script>
-    <script src="/chat/swap.js" defer></script>
-    <script src="/games/lotto/lotto.js" defer></script>
-
-    <script src="/fly.js" defer></script>
-    <script src="/miner/minercheck.js" defer></script>
-
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/games/spin/style.css" defer />
+    <script src="/script.js" defer></script>
+    <script src="/client.js" defer></script>
+    <script src="/cpu.js" defer></script>
+    <script src="/metamask.js" defer></script>
   </head>
   <body>
-    <iframe
-      src="https://mindsgaming.glitch.me/"
-      style="position: fixed; left:0; top:0; width: 100%; height: 100%; margin:-1px;"
-    >
-    </iframe>
+    <div id="fetchLogin">
+      <h1 class="CPUname">MTCG Computer <label id="walletID"></label></h1>
+      <center>
+        <div class="holder">
+          <h1>Login</h1>
+          <form>
+            <input
+              id="dream"
+              name="dream"
+              aria-label="a new dream"
+              type="text"
+              maxlength="100"
+              value=""
+              pattern=".{42,43}"
+              required
+              title="Wallet IDs Are 43 Characters"
+              placeholder="Password"
+            /><label
+              onclick="help();"
+              style="font-size: 0.8rem; margin: 0.2rem; padding: 0.1rem"
+              title="Your reciver wallet"
+              >?</label
+            >
+            <br />
+
+            <button type="submit" id="submit-dream">Standard Login</button>
+            <button id="connect">Meatmask Login</button>
+            <button>
+              <a
+                href="https://mindsgaming.glitch.me"
+                target="_self"
+                style="text-decoration: none; color: white; font-weight: bolder"
+                title="Community Website"
+                >Guest</a
+              >
+            </button>
+          </form>
+          <section class="hide">
+            <ul id="dreams"></ul>
+            <button id="clear-dreams" class="hide">Clear Dreams</button>
+          </section>
+        </div>
+      </center>
+    </div>
+    <div id="MTCG-cpu" class="hide">
+      <wrap>
+        <apps id="groups" class="show">
+          <div>
+            <div class="group">
+              <a
+                title="MTCG"
+                href="https://www.mintme.com/token/MTCG/invite"
+                target="_blank"
+              >
+                <img
+                  class="group-icon"
+                  src="https://www.mintme.com/media/cache/avatar_large/uploads/images/06ac5ff8-c645-11ec-8ae9-78e3b517e592.png"
+                />
+              </a>
+              Community Channel
+            </div>
+
+            <div class="group">
+              <a
+                title="GAMER"
+                href="https://mintme.com/token/GAMER"
+                target="_blank"
+              >
+                <img
+                  class="group-icon"
+                  src="https://www.mintme.com/media/cache/avatar_large/uploads/images/e4c457fa-16aa-11ec-ad28-78e3b517e592.jpeg"
+                />
+              </a>
+              GAMER
+            </div>
+            <div class="group">
+              <a
+                title="ECLIPSE"
+                href="https://mintme.com/token/ECLIPSE"
+                target="_blank"
+              >
+                <img
+                  class="group-icon"
+                  src="https://www.mintme.com/media/cache/avatar_large/uploads/images/421f93e6-d39f-11eb-943e-78e3b517e592.png"
+                />
+              </a>
+              Eclipse
+            </div>
+            <div class="group">
+              <a
+                title="DooBetter"
+                href="https://www.mintme.com/token/DooBetter"
+                target="_blank"
+              >
+                <img
+                  class="group-icon"
+                  src="https://www.mintme.com/media/cache/avatar_large/uploads/images/1b1b6b3e-fb19-11eb-bac5-ac162db679ce.png"
+                />
+              </a>
+              DooBetter
+            </div>
+            <div class="group">
+              <a
+                title="GTPC"
+                href="https://mintme.com/token/GTPC"
+                target="_blank"
+              >
+                <img
+                  class="group-icon"
+                  src="https://www.mintme.com/media/cache/avatar_large/uploads/images/860bded0-799d-11ec-a9f8-78e3b517e592.png"
+                />
+              </a>
+              GTPC
+            </div>
+
+            <div class="group">
+              <a
+                title="PINN"
+                href="https://www.mintme.com/token/PINN"
+                target="_blank"
+              >
+                <img
+                  class="group-icon"
+                  src="https://www.mintme.com/media/cache/avatar_large/media/default_profile.png"
+                />
+              </a>
+              PINN
+            </div>
+            <div class="group">
+              <a
+                title="DarkMark"
+                href="https://www.mintme.com/token/DarkMark"
+                target="_blank"
+              >
+                <img
+                  class="group-icon"
+                  src="https://www.mintme.com/media/cache/avatar_large/uploads/images/9cf57322-0061-11ed-94b3-78e3b517e592.jpeg"
+                />
+              </a>
+              DarkMark
+            </div>
+            <div class="group">
+              <a
+                title="DragonToken"
+                href="https://www.mintme.com/token/DragonToken"
+                target="_blank"
+              >
+                <img
+                  class="group-icon"
+                  src="https://www.mintme.com/media/cache/avatar_large/uploads/images/8c9b7180-cf97-11eb-a4e9-ac162db679ce.jpeg"
+                />
+              </a>
+              DragonToken
+            </div>
+
+            <div class="group">
+              <a
+                title="Candies"
+                href="https://www.mintme.com/token/Candys"
+                target="_blank"
+              >
+                <img
+                  class="group-icon"
+                  src="https://www.mintme.com/media/cache/avatar_large/uploads/images/3a67dce8-b328-11ed-bdc5-ac162db679ce.png"
+                />
+              </a>
+              Candys
+            </div>
+          </div>
+          <div id="menu" class="hide" title="menu">
+            <div id="close-menu" onmouseover="closeside();">
+              <label onclick="infoview();" class="menu-item" title="Information"
+                >Info</label
+              >
+              <label onclick="tokensview();" class="menu-item" title="Tokens"
+                >Groups</label
+              >
+              <label onclick="rewardsview();" class="menu-item" title="Rewards"
+                >Rewads</label
+              >
+              <label onclick="walletsview();" class="menu-item" title="Wallets"
+                >Wallets</label
+              >
+              <label
+                onclick="openhubs();"
+                class="menu-item"
+                title="Hubs"
+                id="hubs"
+                >Hubs</label
+              >
+              <label onclick="tradersview();" class="menu-item" title="Traders"
+                >Traders</label
+              >
+              <label class="menu-item" title="Support Us!">
+                <a href="https://www.minds.com/MindsGaming/wire" target="_blank"
+                  >Donate</a
+                ></label
+              >
+            </div>
+          </div>
+
+          <div class="hide" title="Menu-Expand" id="side-menu">
+            <label id="tokens" class="hide">
+              <a
+                href="https://www.minds.com/groups/profile/567372953759522816"
+                target="_blank"
+                title="GamerTube"
+                class="menu-item"
+                >GamerTube</a
+              >
+              <a
+                href="https://www.minds.com/groups/profile/567523173034110976/feed"
+                target="_blank"
+                title="Music"
+                class="menu-item"
+                >Music</a
+              >
+              <a
+                href="https://www.minds.com/group/569270912981934080/latest"
+                target="_blank"
+                title="News"
+                class="menu-item"
+                >News</a
+              >
+              <a
+                href="https://www.minds.com/group/569272650258460672/latest"
+                target="_blank"
+                title="Photography-Art"
+                class="menu-item"
+                >Photogtaphy</a
+              >
+              <a
+                href="https://www.minds.com/group/574262456742846476/latest"
+                target="_blank"
+                title="Outdoors"
+                class="menu-item"
+                >Outdoors</a
+              >
+              <a
+                href="https://www.minds.com/groups/profile/568271817706319872/feed"
+                target="_blank"
+                title="MemeWars"
+                class="menu-item"
+                >MemeWars</a
+              >
+              <a
+                href="https://www.minds.com/groups/profile/568271817706319872/feed"
+                target="_blank"
+                title="MindTube"
+                class="menu-item"
+                >MindTube</a
+              >
+              <a
+                href="https://www.minds.com/groups/profile/570669535963652100/feed"
+                target="_blank"
+                title="420Time"
+                class="menu-item"
+                >420Time</a
+              >
+              <a
+                href="https://www.minds.com/groups/profile/604673111018713103/feed"
+                target="_blank"
+                title="The Infinite Imaginarium"
+                class="menu-item"
+                >Imaginarium</a
+              >
+              <a
+                href="https://www.minds.com/group/663996010787250178/latest"
+                target="_blank"
+                title="WPRPN"
+                class="menu-item"
+                >WPRPN</a
+              >
+            </label>
+            <label id="wallets" class="hide">
+              <a
+                href="https://minds.com/wallet/"
+                target="_blank"
+                title="Minds Wallet"
+                class="menu-item"
+                >Minds</a
+              >
+              <a
+                href="https://mintme.com/wallet"
+                target="_blank"
+                title="MintMe Wallet"
+                class="menu-item"
+                >MintMe</a
+              >
+              <a
+                href="https://app.momint.so/profile/MindsGaming/all"
+                target="_blank"
+                title="Momint NFTs"
+                class="menu-item"
+                >Momint</a
+              ></label
+            >
+
+            <label id="traders" class="hide">
+              <a
+                href="https://www.mintme.com/token/MTCG/ETH/trade"
+                target="_blank"
+                title="MTCG/ETH"
+                class="menu-item"
+                >MTCG/ETH</a
+              >
+              <a
+                href="https://www.mintme.com/token/MTCG/MINTME/trade"
+                target="_blank"
+                title="MTCG/MintMe"
+                class="menu-item"
+                >MTCG/MintMe</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/ETH"
+                target="_blank"
+                title="MintMe/ETH"
+                class="menu-item"
+                >MintMe/ETH</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/BTC"
+                target="_blank"
+                title="MintMe/BTC"
+                class="menu-item"
+                >MintMe/BTC</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/BNB"
+                target="_blank"
+                title="MintMe/BNB"
+                class="menu-item"
+                >MintMe/BNB</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/USDC"
+                target="_blank"
+                title="MintMe/USDC"
+                class="menu-item"
+                >MintMe/USDC</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/CRO"
+                target="_blank"
+                title="MintMe/CRO"
+                class="menu-item"
+                >MintMe/CRO</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/MATIC"
+                target="_blank"
+                title="MintMe/Matic"
+                class="menu-item"
+                >MintMe/MATIC</a
+              >
+            </label>
+          </div>
+        </apps>
+
+        <div class="footer">
+          <div
+            class="start"
+            id="start"
+            title="Start Here"
+            onclick="startview();"
+          ></div>
+          <div>
+            <a
+              title="MTCG"
+              href="https://www.mintme.com/token/MTCG"
+              target="_blank"
+            >
+              <img
+                class="footer-icon"
+                src="https://www.mintme.com/media/cache/avatar_large/uploads/images/06ac5ff8-c645-11ec-8ae9-78e3b517e592.png"
+              />
+            </a>
+          </div>
+
+          <div onclick="chatbotview();" title="chatbot" align="center">
+            <img
+              class="footer-icon"
+              src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/PromptBuilder.png?"
+            />
+          </div>
+        </div>
+        <div id="rewards" class="hide" title="Closed">
+          <label class="x" onclick="closeside();">X</label>
+          <center>
+            <h>Community Rewards</h>
+            <p style="font-size: 0.65rem; color: white">
+              Earn our community token MTCG <br />
+              Just help with the community or be active in projects!
+              <br />
+              <button
+                onclick="learnHow();"
+                id="learnBTN"
+                title="Learn How"
+                style="
+                  font-size: 0.65rem;
+                  color: white;
+                  border-color: green;
+                  background-color: white;
+                  color: blue;
+                "
+              >
+                Learn How
+              </button>
+            </p>
+            <br />
+            <div id="learn-how" class="hide">
+              <p style="font-size: 0.65rem; color: white">
+                <b>Step #1</b><br />
+                Travel to the MTCG token page, scroll down to bounties/shop.
+                <br />
+                <img
+                  src="https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/Screenshot%202024-01-23%20at%2014-47-55%20Information%20about%20MTCG%20token%20mintMe.png"
+                  class="helpimg"
+                />
+                <br />
+                <b>Step #2</b><br />
+                Select the bounty/shop item you want to claim.
+                <br />
+                <br />
+                <br />
+                <b>Step #3</b><br />
+                Complete the claim/buy form with the required information and
+                click participate/buy!
+                <br />
+                <img
+                  src="https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/Screenshot%202024-01-23%20at%2014-50-31%20Information%20about%20MTCG%20token%20mintMe.png"
+                  class="helpimg"
+                />
+                <br />
+              </p>
+              <br />
+            </div>
+
+            <div class="reward" style="border-color: gold">
+              <h2>Add Your Bounty/Reward</h2>
+              <p style="font-size: 0.55rem; color: white">
+                Add your bounties and rewards to our MTCG voting and you may see
+                it here in the future!
+              </p>
+              <button>
+                <a
+                  href="https://www.mintme.com/token/MTCG/voting"
+                  target="_blank"
+                  >Propose Your Bounty</a
+                >
+              </button>
+            </div>
+            <div class="reward">
+              <h2>Group Moderation</h2>
+              <p style="font-size: 0.55rem; color: white">
+                5 tokens a month for helping approve posts in community groups!
+              </p>
+              <button>
+                <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+                  >Claim</a
+                >
+              </button>
+            </div>
+
+            <div class="reward">
+              <h2>Original Content</h2>
+              <p style="font-size: 0.55rem; color: white">
+                2 token a month for uploading original content in a community
+                group!
+              </p>
+              <button>
+                <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+                  >Claim</a
+                >
+              </button>
+            </div>
+
+            <div class="reward">
+              <h2>Promote Our Community</h2>
+              <p style="font-size: 0.55rem; color: white">
+                1 token a month for promoting our community!
+              </p>
+              <button>
+                <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+                  >Claim</a
+                >
+              </button>
+            </div>
+            <div class="reward">
+              <h2>Join Or Start An Activity</h2>
+              <p style="font-size: 0.55rem; color: white">
+                6 tokens every month you hold or join a community activity.
+              </p>
+              <button>
+                <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+                  >Claim</a
+                >
+              </button>
+            </div>
+            <div class="reward">
+              <h2>Start Your Token</h2>
+              <p style="font-size: 0.55rem; color: white">
+                Start your own token for a one time reward of 10 MTCG
+              </p>
+              <button>
+                <a
+                  href="https://www.mintme.com/token/MTCG/sign-up"
+                  target="_blank"
+                  >Sign Up</a
+                >
+              </button>
+            </div>
+            <br />
+            <div class="shopitems">
+              <h>Shop Items</h>
+              <p style="font-size: 0.65rem; color: white">
+                Launch Your Group, Promote Your Bounties And More <br />On This
+                Community Website<br />
+              </p>
+              <br />
+              <div class="reward">
+                <h2>Launch Your Group</h2>
+                <p style="font-size: 0.55rem; color: white">
+                  Get a spot on this website with MTCG!
+                </p>
+                <button>
+                  <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+                    >Shop Items</a
+                  >
+                </button>
+              </div>
+              <div class="reward">
+                <h2>Promote Your Bounty</h2>
+                <p style="font-size: 0.55rem; color: white">
+                  Don't rely on chance and buy a bounty spot!
+                </p>
+                <button>
+                  <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+                    >Shop Items</a
+                  >
+                </button>
+              </div>
+              <div class="reward">
+                <h2>Become a VIP</h2>
+                <p style="font-size: 0.55rem; color: white">
+                  Promote Your Content Links In Groups By Becoming A Moderator.
+                </p>
+                <button>
+                  <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+                    >Shop Items</a
+                  >
+                </button>
+              </div>
+            </div>
+          </center>
+        </div>
+
+        <div id="splash" class="hide">
+          <label class="x" id="close" onclick="closeside();">X</label>
+          <iframe
+            id="Infinity"
+            style="width: 100%; height: 90%; margin-bottom: 3rem"
+            src="https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc"
+            title="Infinity"
+          ></iframe>
+        </div>
+        <div id="info" class="hide">
+          <label class="x" onclick="closeside();">X</label>
+
+          <div class="notepad">
+            <h1>Welcome to MindsGaming</h1>
+            <hr />
+            <br />
+            <p style="font-family: Cursive">
+              Explore a universe where creativity and open source empowerment
+              come together to unfold a world of possibilities. <br />
+              From socail group topics, cryptocurrency, virtual hubs and more
+              <br />Start exploring the community today.
+            </p>
+            <div>
+              <hr />
+              <br />
+              <strong>Join the Journey:</strong>
+              <p style="font-family: Cursive">
+                Immerse yourself in social group topics, <br />
+                create your own group topics and promote your creator content on
+                <a
+                  href="https://www.minds.com/MindsGaming/?referrer=MindsGaming"
+                  target="_blank"
+                  >Minds.com</a
+                >
+                <br />with our community.
+                <br />
+              </p>
+              <hr />
+              <br />
+              <strong>Community Moderation:</strong>
+              <p style="font-family: Cursive">
+                Shape your experience by joining community groups moderated by
+                passionate members, ensuring a curated and enjoyable
+                environment.
+              </p>
+              <hr />
+              <br />
+              <strong>Tokens:</strong>
+              <p style="font-family: Cursive">
+                Elevate your experience with our
+                <a href="https://www.mintme.com/token/MTCG/invite"
+                  >MTCG token</a
+                >
+                – a gateway to personal group promotions, shop items, and more.
+                <br />
+                Or <br />
+                Grow your brand or community and start crafting your unique
+                social token
+                <a href="https://www.mintme.com/token/MTCG/sign-up">here</a>.
+              </p>
+
+              <hr />
+              <br />
+
+              <strong>MTCG Rewards:</strong>
+              <p style="font-family: Cursive">
+                Get recognized for your community-building activities with
+                <a href="#" onclick="rewardsview();"> MTCG rewards.</a>
+                <br />It's not just a community; it's a rewarding journey!
+              </p>
+              <hr />
+              <br />
+              <strong>Open Source Empowerment:</strong>
+              <p style="font-family: Cursive">
+                Embrace the power of open source!
+                <a href="https://glitch.com/~mindsgaming">Remix</a> the
+                MindsGaming website, start your own community, and explore
+                resources freely. The possibilities are limitless!
+              </p>
+              <hr />
+              <br />
+
+              <p style="font-family: Cursive">
+                <br />Let your imagination soar, and let's build vibrant
+                communities together! ✨🛠️ <br />
+                To infinity and beyond! <br />
+                <a
+                  href="https://www.minds.com/MindsGaming/?referrer=MindsGaming"
+                  >Subscribe To Community Channel!</a
+                >
+                <br />
+              </p>
+              <hr />
+              <br />
+              <div id="launchgroup" class="hide" title="Closed">
+                <h>Launching A Group</h>
+                <p>
+                  You can add a personal group hosted on Minds.com to our
+                  website with MTCG!<br />
+                  Invite us to your group, then head over to our token page and
+                  find the shop. <br />
+                  Launch Your Group Today!
+                  <br />
+                  <button>
+                    <a href="https://mintme.com/token/MTCG" target="_blank"
+                      >Token Page</a
+                    >
+                  </button>
+                </p>
+                <br />
+              </div>
+              <iframe
+                src="https://www.mintme.com/token/MTCG/airdrop/6656/embeded"
+                style="width: 350px; height: 180px; border: none; scrolling: no"
+              ></iframe>
+              <br />
+            </div>
+          </div>
+        </div>
+      </wrap>
+    </div>
   </body>
 </html>

@@ -1,0 +1,667 @@
+wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  filter: opacity(78%);
+  z-index: -1;
+  overflow: scroll;
+  background-image: url("");
+  background-size: cover;
+}
+
+li {
+  list-style-type: none;
+}
+.wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 5;
+  margin-top: -1px;
+  margin-left: -0.5;
+  z-index: 1;
+  opacity: 2;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+tool {
+  float: left;
+  margin-right: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+article {
+  position: relative;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: 5rem;
+  padding: 2px;
+  border-style: groove;
+  border-radius: 25px 25px 25px 25px;
+  width: 80%;
+  background-color: black;
+  opacity: 0.8;
+}
+
+button {
+  background-color: orange;
+  color: black;
+  border-radius: 10%;
+  margin: 10px;
+  padding: 1px;
+  font-weight: bolder;
+  border-radius: 11px 11px 11px 11px;
+}
+
+button:hover {
+  background-color: blue;
+  color: white;
+  border-radius: 10%;
+  margin: 10px;
+  padding: 1px;
+  font-weight: bolder;
+  border-radius: 11px 11px 11px 11px;
+  cursor: pointer;
+}
+.ALERT {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.X {
+  float: right;
+  margin: 3px;
+  padding: 2px;
+  border-style: solid;
+}
+
+.white {
+  color: white;
+  width: 75%;
+  display: block;
+}
+
+.quick {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  margin-left: 0px;
+  width: 2rem;
+  height: 2rem;
+  border-style: groove;
+  border-radius: 20px 0px 0px 20px;
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669052080420.png");
+  background-size: contain;
+  z-index: 3;
+}
+
+.quicker {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 20rem;
+  height: 3rem;
+  border-style: groove;
+  border-radius: 42.5px 0px 00px 84.3px;
+  background-color: silver;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/articlebackground.png");
+  background-size: cover;
+  opacity: 0.78;
+  z-index: 3;
+}
+
+.home {
+  float: left;
+  width: 40px;
+  margin-left: -3px;
+  margin-top: 3px;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/homeICON.png");
+  background-size: contain;
+  border-radius: 50%;
+}
+.gamepad {
+  float: left;
+  width: 38px;
+  margin-left: -3px;
+  margin-top: 3px;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/gamepadICON.png");
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.lightning {
+  float: left;
+  width: 38px;
+  margin-left: -3px;
+  margin-top: 3px;
+
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/boltICON.png");
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.browser {
+  float: left;
+  width: 38px;
+  margin-left: -3px;
+  margin-top: 3px;
+
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/vrspaceICON.png");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.grid {
+  float: left;
+  width: 38px;
+  margin-left: -3px;
+  margin-top: 3px;
+}
+
+.rewards-intro {
+  position: relative;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: 5rem;
+  padding: 2px;
+  border-style: groove;
+  border-radius: 25px 25px 25px 25px;
+  width: 80%;
+  background-color: black;
+}
+
+.tokensplash {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.tokenbutton {
+  position: absolute;
+  border-style: groove;
+  border-color: silver;
+  background-color: blue;
+  color: gold;
+  top: 0;
+  right: 0;
+  margin-top: 5.2rem;
+  margin-right: 7rem;
+  cursor: pointer;
+  z-index: 7;
+}
+
+.hide {
+  display: none;
+}
+
+.display {
+  display: block;
+  overflow: scroll;
+}
+
+.overflow {
+  overflow: scroll;
+}
+
+.helper {
+  margin-top: 5%;
+  margin-left: 85%;
+  width: 30px;
+  height: 30px;
+  color: red;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.float-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  border-style: solid;
+  font-size: 35px;
+  text-align: center;
+  z-index: 3;
+  cursor: pointer;
+}
+.float-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  border-style: solid;
+  font-size: 35px;
+  text-align: center;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 2;
+  opacity: 2;
+  background-color: black;
+  filter: opacity(60%);
+}
+
+.splashapp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 2;
+  opacity: 2;
+  background-color: green;
+}
+
+.airdrop {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 200px;
+}
+
+.clickminer {
+  color: green;
+  background-color: gold;
+  width: 50%;
+  border-style: groove;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.shopicon {
+  float: left;
+  display: block;
+  border-style: none;
+  width: 38px;
+  height: 38px;
+  margin-left: -3px;
+  margin-top: 3px;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/shopicon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  background-color: pink;
+  z-index: 5;
+}
+
+.experimenticon {
+  float: left;
+  display: block;
+  border-style: none;
+  width: 38px;
+  height: 38px;
+  margin-left: 35px;
+  margin-top: -35px;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/Rabbit.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  background-color: pink;
+  z-index: 5;
+}
+
+.jitsiicon {
+  float: left;
+  display: block;
+  border-style: none;
+  width: 38px;
+  height: 38px;
+  margin-left: -3px;
+  background-image: url("https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/videochaticon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  background-color: pink;
+  z-index: 5;
+  margin-top: 3px;
+}
+
+.shopbtn {
+  width: 150px;
+  background-color: silver;
+  text-align: center;
+  background-color: silver;
+  color: black;
+}
+
+.lotto {
+  background-color: gold;
+  color: black;
+}
+
+.chatformBOX {
+  position: relative;
+  width: 66%;
+  background-color: silver;
+  border-style: groove;
+  border-radius: 25px 25px 25px 25px;
+  opacity: 0.8;
+  z-index: 5;
+}
+
+.desktoponly {
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4.8%;
+  font-size: 8px;
+  color: red;
+  font-weight: bold;
+}
+
+.userstash {
+  position: relative;
+  margin-right: 2%;
+  color: grey;
+  font-size: 12px;
+  border-style: solid;
+  max-width: 35%;
+}
+
+.stashing {
+  position: relative;
+  margin: 1%;
+  padding: 2px;
+  color: white;
+  font-size: 11.2px;
+  font-weight: bold;
+}
+
+.testitem {
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 100px;
+  background-color: transparent;
+  background-image: url("https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/MTCG%20circuit%20breaker%20000.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.testitemTWO {
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 100px;
+  background-color: transparent;
+  background-image: url("https://momintdev.blob.core.windows.net/uploads/2445eed9-6944-401c-89d4-770cac3023ab.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sclose {
+  float: left;
+  margin-top: -8px;
+  margin-left: 1px;
+  padding: 1px;
+}
+
+.storeerror {
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4.8%;
+  font-size: 8px;
+  color: red;
+  font-weight: bold;
+}
+
+.storechat {
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4.8%;
+  font-size: 8px;
+  font-weight: bold;
+  width: 30%;
+}
+
+.toggleicon {
+  display: block;
+  margin-top: 10%;
+  margin-left: -25.1%;
+  margin-bottom: -4%;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  background-image: url("https://cdn.glitch.global/54379175-7d26-4fa6-8e60-9df29ffbdde5/Rabbit.jpg");
+  cursor: pointer;
+}
+
+.jitsiwrap {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 5px;
+  width: 45%;
+  height: 300px;
+  background-color: black;
+  filter: opacity(78%);
+  z-index: 12;
+}
+
+.GAMER {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://cdn.glitch.me/76239ef0-e5c6-4e29-9830-26d4ec2dfc0b%2FGAMER.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.DooBetter {
+  display: block;
+  border-style: none;
+  margin: 25px;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://cdn.glitch.me/76239ef0-e5c6-4e29-9830-26d4ec2dfc0b%2FDOOBETTER.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.ECLIPSE {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://cdn.minds.com/fs/v1/thumbnail/1254528606228328448/xlarge/");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.GTPC {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://cdn.minds.com/icon/822733901683236867/medium/1621185080");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.DragonToken {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/8c9b7180-cf97-11eb-a4e9-ac162db679ce.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.DarkMark {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/e23e501e-8bb5-11ec-9b8c-ac162db679ce.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.PINN {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/f8c5dbe6-cec7-11eb-be8f-78e3b517e592.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.withinthevacuum {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/88c34c38-548c-11ed-b7ae-ac162db679ce.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.Candys {
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/3a67dce8-b328-11ed-bdc5-ac162db679ce.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.MTCG {
+  position: relative;
+  display: block;
+  border-style: none;
+  width: 44px;
+  height: 44px;
+  background-image: url("https://cdn.minds.com/icon/568132636652875781/medium/1630521552");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  font-size: 8px;
+  font-weight: bold;
+  color: gold;
+}
+
+.mineBTN {
+  position: relative;
+  font-size: 10px;
+}
+
+.swapmap {
+  width: 28%;
+  background-color: silver;
+  border-style: solid;
+  border-color: silver;
+  color: blue;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.swapBTN {
+  border-style: solid;
+  border-radius: 30px 30px 30px 30px;
+  text-align: center;
+  background-color: green;
+  border-color: green;
+  color: gold;
+  cursor: pointer;
+  width: 23%;
+}
+
+.lottoball {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: white;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin-left: 1%;
+  margin-right: 1%;
+}
