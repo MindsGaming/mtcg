@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>#MindsGaming -MTCG</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Community Groups & Resources" />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
+    <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+    <script src="/client.js" defer></script>
+    <script src="/cpu.js" defer></script>
+    <script src="/metamask.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      #ai_frame {
+        width: 100%;
+        height: 500px;
+        border: none;
+      }
+
+      #ask_form {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      #prompt {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+        flex-grow: 1;
+      }
+
+      #submit_btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #submit_btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe id="ai_frame" sandbox="allow-scripts allow-same-origin"></iframe>
+
+    <form id="ask_form">
+      <input type="text" id="prompt" name="prompt" required />
+      <button type="submit" id="submit_btn">Ask AI</button>
+    </form>
+
+    <script>
+      $(document).ready(function () {
+        $("#ask_form").submit(function (e) {
+          e.preventDefault();
+          sendMessageToAI();
+        });
+      });
+
+      function sendMessageToAI() {
+        var prompt = $("#prompt").val();
+        $.ajax({
+          url: "http://localhost:5000/ask", // Point to the backend endpoint
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify({ prompt: prompt }),
+          success: function (response) {
+            // Write the AI's response to the iframe
+            $("#ai_frame").attr(
+              "srcdoc",
+              "<p>" + response.choices[0].text + "</p>"
+            );
+          },
+          error: function (xhr, status, error) {
+            // Handle error
+            console.error("Error: " + status + " - " + error);
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
