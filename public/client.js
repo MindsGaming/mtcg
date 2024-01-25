@@ -23,8 +23,7 @@ fetch("/getDreams", {})
 
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
-  newListItem.innerText = dream;
-  dreamsList.appendChild(newListItem);
+  newListItem.innerText = dreamInput.value;
 };
 
 // listen for the form to be submitted and add a new dream when it is
@@ -86,23 +85,3 @@ function viewLOGIN() {
 function help() {
   alert("Enter your blockchain reciver wallet");
 }
-
-const commands = function () {
-  var command = dreamInput.value;
-
-  if (command == null) {
-  } else {
-    if (command == "help") {
-      dreamInput.value =
-        "Welcome To The Game Terminal! You Can Type Commands To Play! Commands: games";
-    }
-    if (command == "games") {
-      dreamInput.value = "Games are disabled for Guest-Accouts";
-    }
-    if (command == "login") {
-      dreamInput.value = "Loading Login";
-    } else {
-      dreamInput.value = "Not a valid Command.";
-    }
-  }
-};
