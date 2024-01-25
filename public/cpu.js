@@ -12,6 +12,7 @@ var rewards = document.getElementById("rewards");
 var launchgroup = document.getElementById("launchgroup");
 var learnhow = document.getElementById("learn-how");
 var learnbtn = document.getElementById("learnBTN");
+var cards = document.getElementById("card-page");
 
 function startview() {
   closeside();
@@ -136,7 +137,7 @@ function learnHow() {
 }
 
 function rewardsview() {
-  if ((rewards.title = "Closed")) {
+  if (rewards.title == "Closed") {
     rewards.title = "Rewards";
     rewards.className = "splash";
     groups.className = "hide";
@@ -146,6 +147,25 @@ function rewardsview() {
     rewards.className = "hide";
     groups.className = "show";
     splash.className = "hide";
+  }
+}
+
+function cardssview() {
+  if (infinity.title == "Infinity") {
+    infinity.title = "Cards";
+    infinity.src = "/cards";
+    groups.className = "hide";
+    splash.className = "splash";
+    infinity.className = "apps";
+    rewards.className = "hide";
+  } else {
+    infinity.title = "Infinity";
+    infinity.src =
+      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc";
+    groups.className = "show";
+    infinity.className = "hide";
+    splash.className = "hide";
+    rewards.className = "splash";
   }
 }
 
