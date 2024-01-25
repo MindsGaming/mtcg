@@ -1,6 +1,10 @@
 function Rplaceholder() {
-  var drea
-  dreams.placeholder = "";
+  if (dream.placeholder == "|") {
+    dream.placeholder = "";
+    dreamsList.innerHTML = "";
+  } else {
+    dream.placeholder = "|";
+  }
 }
 
 function commands() {
