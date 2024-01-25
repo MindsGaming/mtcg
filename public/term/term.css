@@ -20,6 +20,7 @@ li {
   height: 100%;
   background-color: black;
   border-style: none;
+  overflow: scroll;
 }
 
 .terminaltop {

@@ -34,7 +34,6 @@ var connectWithMetaMask = async function () {
     appendNewDream(dreamInput.value + "Logged In");
     var walletID = document.getElementById("walletID");
     walletID.innerHTML = placeaddy.value;
-    walletChecks();
   }
 
   async () => {
@@ -101,7 +100,6 @@ var signMessage = async function (nonce, publicAddress) {
   web3.eth.personal.sign(nonce + "", publicAddress).then(async (signed) => {
     await authenticate(publicAddress, signed);
     await greet();
-    await walletCheck();
     console.log(signed);
   });
 };
@@ -182,18 +180,3 @@ if (typeof window.ethereum !== "undefined" && window.ethereum.isMetaMask) {
   console.log("MetaMask is installed");
   enableLogin();
 }
-
-const walletChecks = function walletCheck() {
-  var walletID = document.getElementById("walletID");
-
-  if (walletID.innerHTML == null) {
-  } else {
-    var fetchLogin = document.getElementById("fetchLogin");
-    var mtcgcpu = document.getElementById("MTCG-cpu");
-    var CPUname = document.getElementById("CPUname");
-    fetchLogin.className = "hide";
-    mtcgcpu.className = "show";
-    CPUname.className = "cpuName";
-    walletID.innerHTML = dreamInput.value;
-  }
-};

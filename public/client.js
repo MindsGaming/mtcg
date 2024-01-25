@@ -10,6 +10,7 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
+
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
   .then((res) => res.json())
@@ -20,10 +21,10 @@ fetch("/getDreams", {})
   });
 
 // a helper function that creates a list item for a given dream
-
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
-  newListItem.innerText = dreamInput.value;
+  newListItem.innerText = dream;
+  dreamsList.appendChild(newListItem);
 };
 
 // listen for the form to be submitted and add a new dream when it is
@@ -43,10 +44,11 @@ dreamsForm.onsubmit = (event) => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
-  walletChecks();
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
+
   // reset form
+  dreamInput.value = "";
   dreamInput.focus();
 };
 
