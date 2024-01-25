@@ -13,9 +13,9 @@ function commands() {
   dreamsList.innerHTML = "";
   if (fetchcommand == "help") {
     dreamInput.value =
-      "Welcome To The Game Terminal. You Can Enter Commands Like: help";
+      "Welcome To The Game Terminal. A Gamerfied Way To Earn Rewards, You Can Enter Commands Like: 'help', 'login',";
   }
   if (fetchcommand == "login") {
-    fetchlogin.innerHTML = ""
+    dreamInput.value = "undefined " + "is not a valid user";
   }
 }
