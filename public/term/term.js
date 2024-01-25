@@ -29,12 +29,11 @@ function commands() {
             dreamInput.value = "Coming Soon...";
           } else {
             if (fetchcommand == "git clone" + "") {
-              dreamInput.value = "Remix The Project To Clone";
-              dreamInput.value = "building MTCG";
-              dreamInput.value =
-                "const path = 'absolute/path/to/folder' shell.cd(path) shell.exec('git clone https://github.com/atomicptr/dauntless-builder')";
-              dreamInput.value =
-                "git clone https://glitch.com/edit/#!/remix/mtcg";
+              dreamInput.value = "https://glitch.com/edit/#!/remix/mtcg";
+              var remix = document.getElementById("remix");
+              remix.className = "remix";
+              remix.src = fetchcommand;
+              dreamInput.value = remix.outterHTMl;
             } else {
               dreamInput.value = "Command Not Found :( type 'help' for help.";
             }
