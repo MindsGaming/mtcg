@@ -16,12 +16,11 @@
       rel="icon"
       href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
     />
-    <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js" defer></script>
     <script src="/client.js" defer></script>
     <script src="/cpu.js" defer></script>
     <script src="/metamask.js" defer></script>
+    <script src="/chat/back.py" defer></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
       body {
@@ -83,7 +82,7 @@
       function sendMessageToAI() {
         var prompt = $("#prompt").val();
         $.ajax({
-          url: "http://localhost:5000/ask", // Point to the backend endpoint
+          url: "/chat", // Point to the backend endpoint
           type: "POST",
           contentType: "application/json",
           data: JSON.stringify({ prompt: prompt }),
