@@ -10,7 +10,6 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
-
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
   .then((res) => res.json())
@@ -21,6 +20,7 @@ fetch("/getDreams", {})
   });
 
 // a helper function that creates a list item for a given dream
+
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   newListItem.innerText = dream;
@@ -75,15 +75,34 @@ function walletCheck() {
   }
 }
 
-function viewLOGIN(){
-      var fetchLogin = document.getElementById("fetchLogin");
-      var mtcgcpu = document.getElementById("MTCG-cpu");
+function viewLOGIN() {
+  var fetchLogin = document.getElementById("fetchLogin");
+  var mtcgcpu = document.getElementById("MTCG-cpu");
 
-fetchLogin.className = "holder"
+  fetchLogin.className = "holder";
   mtcgcpu.className = "hide";
-  
 }
 
 function help() {
   alert("Enter your blockchain reciver wallet");
 }
+
+const commands = function () {
+  var command = dreamInput.value;
+
+  if (command == null) {
+  } else {
+    if (command == "help") {
+      dreamInput.value =
+        "Welcome To The Game Terminal! You Can Type Commands To Play! Commands: games";
+    }
+    if (command == "games") {
+      dreamInput.value = "Games are disabled for Guest-Accouts";
+    }
+    if (command == "login") {
+      dreamInput.value = "Loading Login";
+    } else {
+      dreamInput.value = "Not a valid Command.";
+    }
+  }
+};

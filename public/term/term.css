@@ -3,6 +3,10 @@ code {
   font-weight: bolder;
   opacity: 1;
 }
+
+ul{
+  overflow: scroll;
+}
 li {
   list-style-type: none;
 }
