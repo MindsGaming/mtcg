@@ -9,9 +9,13 @@ function Rplaceholder() {
 
 function commands() {
   var fetchcommand = dreamInput.value;
+  var fetchlogin = document.getElementById("fetchlogin");
   dreamsList.innerHTML = "";
   if (fetchcommand == "help") {
     dreamInput.value =
       "Welcome To The Game Terminal. You Can Enter Commands Like: help";
+  }
+  if (fetchcommand == "login") {
+    fetchlogin.innerHTML = ""
   }
 }
