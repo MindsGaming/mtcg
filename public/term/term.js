@@ -11,7 +11,6 @@ function Rplaceholder() {
 function commands() {
   var fetchcommand = dreamInput.value;
   var fetchlogin = document.getElementById("fetchlogin");
-  dreamsList.innerHTML = "";
   dreamsForm.pattern = "{4,100}";
 
   if (fetchcommand == "hello") {
@@ -59,13 +58,13 @@ function commands() {
                     fetchcommand == "0xD44bf50dc440a38bF76499cC854EACe4d6e350F4"
                   ) {
                     dreamInput.value = "PINN";
-                  }
-                  else{
-                     if (
-                    fetchcommand == "0xD44bf50dc440a38bF76499cC854EACe4d6e350F4"
-                  ) {
-                    dreamInput.value = "PINN";
-                  }
+                  } else {
+                    if (
+                      fetchcommand ==
+                      "0xD44bf50dc440a38bF76499cC854EACe4d6e350F4"
+                    ) {
+                      dreamInput.value = "PINN";
+                    }
                   }
                 }
               }
