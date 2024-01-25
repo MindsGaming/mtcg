@@ -39,8 +39,38 @@ function commands() {
           remix.src = "https://glitch.com/edit/#!/remix/mtcg";
           dreamInput.value = remix.outterHTMl;
         } else {
-          if (dreamInput.pattern == "{42,43}") {
+          if (fetchcommand == "0xDA7F833675D2F90E3Df02c36bad3ECc1417B93dD") {
+            dreamInput.value = "GAMER";
           } else {
+            if (fetchcommand == "0xCbc63Dcc51679aDf0394AB2be1318034193003B6") {
+              dreamInput.value = "ECLIPSE";
+            } else {
+              if (
+                fetchcommand == "0x936e08736F882144Efd53813Ee9805701A5f4dC3"
+              ) {
+                dreamInput.value = "DooBetter";
+              } else {
+                if (
+                  fetchcommand == "0x7f0A21Dd46a87C3cEA64A36D771B13257b345324"
+                ) {
+                  dreamInput.value = "GTPC";
+                } else {
+                  if (
+                    fetchcommand == "0xD44bf50dc440a38bF76499cC854EACe4d6e350F4"
+                  ) {
+                    dreamInput.value = "PINN";
+                  }
+                  else{
+                     if (
+                    fetchcommand == "0xD44bf50dc440a38bF76499cC854EACe4d6e350F4"
+                  ) {
+                    dreamInput.value = "PINN";
+                  }
+                  }
+                }
+              }
+            }
+
             if (dreamInput.value == fetchcommand) {
               dreamInput.value = "Command Not Found :(";
             }
