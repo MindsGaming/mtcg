@@ -10,6 +10,10 @@ function commands() {
   var fetchcommand = dreamInput.value;
   var fetchlogin = document.getElementById("fetchlogin");
   dreamsList.innerHTML = "";
+
+  if (fetchcommand == "hello") {
+    dreamInput.value = "I am not a chatbot, please enter a command.";
+  }
   if (fetchcommand == "help") {
     dreamInput.value =
       "Welcome To The Game Terminal. A Gamerfied Way To Earn Rewards, You Can Enter Commands Like: 'help', 'login','refresh'";
