@@ -84,7 +84,7 @@ function openhubs() {
   } else {
     infinity.title = "Infinity";
     infinity.src =
-      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc";
+      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc?shared_id=a27e9bc2-50ff-4106-bfcc-e609e0ca62b3";
     groups.className = "show";
     splash.className = "hide";
     infinity.className = "hide";
@@ -100,7 +100,7 @@ function chatbotview() {
   if (infinity.title == "Infinity") {
     infinity.title = "AI";
     infinity.src =
-      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc";
+      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc?shared_id=a27e9bc2-50ff-4106-bfcc-e609e0ca62b3";
     groups.className = "hide";
     splash.className = "splash";
     infinity.className = "apps";
@@ -108,7 +108,7 @@ function chatbotview() {
   } else {
     infinity.title = "Infinity";
     infinity.src =
-      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc";
+      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc?shared_id=a27e9bc2-50ff-4106-bfcc-e609e0ca62b3";
     groups.className = "show";
     infinity.className = "hide";
     splash.className = "hide";
