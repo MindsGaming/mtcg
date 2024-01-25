@@ -20,26 +20,33 @@ function commands() {
         "MTCG Game Terminal Is A Gamerfied Way To Earn Rewards! Commands: {'help', 'login','refresh','remix',...}";
     } else {
       if (fetchcommand == "login") {
-        dreamInput.value = "Enter Your Wallet Reciver Adderess...";
+        dreamInput.value = "Enter Your Token Wallet Reciver Adderess...";
       } else {
-        if (fetchcommand == "refresh") {
-          dreamInput.value = "";
-          clearposts();
+        if (fetchcommand == "create" + "") {
+          dreamInput.value =
+            fetchcommand +
+            "Account Request;" +
+            "'create' again if not a vaild reciver wallet";
         } else {
-          if (fetchcommand == "rewards") {
-            dreamInput.value = "Coming Soon...";
+          if (fetchcommand == "refresh") {
+            dreamInput.value = "";
+            clearposts();
+          }
+        }
+
+        if (fetchcommand == "rewards") {
+          dreamInput.value = "Coming Soon...";
+        } else {
+          if (fetchcommand == "remix") {
+            var remix = document.getElementById("remix");
+            remix.className = "remix";
+            remix.src = "https://glitch.com/edit/#!/remix/mtcg";
+            dreamInput.value = remix.outterHTMl;
           } else {
-            if (fetchcommand == "remix") {
-              var remix = document.getElementById("remix");
-              remix.className = "remix";
-              remix.src = "https://glitch.com/edit/#!/remix/mtcg";
-              dreamInput.value = remix.outterHTMl;
+            if (dreamInput.pattern == "{42,43}") {
             } else {
-              if (dreamInput.pattern == "{42,43}") {
-              } else {
-                if (dreamInput.value == fetchcommand) {
-                  dreamInput.value = "Command Not Found :(";
-                }
+              if (dreamInput.value == fetchcommand) {
+                dreamInput.value = "Command Not Found :(";
               }
             }
           }
