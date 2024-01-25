@@ -27,19 +27,33 @@
     <div class="terminalFrame">
       <label class="terminaltop">Game Terminal</label>
       <ul class="term-command" id="dreams"></ul>
+
       <form>
-        <label class="HomePrompt">?!@MTCG/:</label>
         <input
-          class="term-command"
+          id="dream"
           name="dream"
           aria-label="a new dream"
           type="text"
           maxlength="100"
-          placeholder="|"
-        />
+          value=""
+          pattern=".{42,43}"
+          required
+          title="Wallet IDs Are 43 Characters"
+          placeholder="Password"
+        /><label
+          onclick="help();"
+          style="font-size: 0.8rem; margin: 0.2rem; padding: 0.1rem"
+          title="Your reciver wallet"
+          >?</label
+        >
+        <br />
+
+        <button type="submit" id="submit-dream">Standard Login</button>
+        <button id="connect">Meatmask Login</button>
       </form>
-      <button class="hide" id="clear-dreams">Clear Dreams</button>
-      <button class="hide" type="submit" id="submit-dream">Enter</button>
+      <section class="hide">
+        <button id="clear-dreams" class="">Clear Dreams</button>
+      </section>
     </div>
   </body>
 </html>

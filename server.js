@@ -111,10 +111,3 @@ const OPENAI = process.env.OPENAI;
 var listener = app.listen(process.env.PORT, () => {
   console.log(`Your app is listening on port ${listener.address().port}`);
 });
-
-/* HTTPS */
-
-var loc = window.location.href + "";
-if (loc.indexOf("http://") == 0) {
-  window.location.href = loc.replace("http://", "https://");
-}
