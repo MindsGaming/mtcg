@@ -34,14 +34,16 @@ function commands() {
               remix.src = "https://glitch.com/edit/#!/remix/mtcg";
               dreamInput.value = remix.outterHTMl;
             } else {
-              if (dreamInput.pattern =".{42,43}"){
-                
-              }
-              else{
-              dreamInput.value = "Command Not Found :( type 'help' for help.";
-              }
+              dream.pattern = "{42,43}";
+              pushrules.value = fetchcommand;
+              dreamInput.value = fetchcommand;
             }
-          }}}}
+          }
+        }
+      }
+    }
+  }
+}
 
 function clearposts() {
   fetch("/clearDreams", {})
