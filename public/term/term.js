@@ -15,16 +15,19 @@ function commands() {
       "Welcome To The Game Terminal. A Gamerfied Way To Earn Rewards, You Can Enter Commands Like: 'help', 'login',";
   }
   if (fetchcommand == "login") {
-    dreamInput.value = "Enter Your Reciver adderess to ";
+    dreamInput.value = "Enter Your Wallet Reciver Adderess...";
   } else {
-    dreamInput.value = "Command Not Found :(";
-    dreamsList.innerHTML = "";
-  }
-}
+    validateForm();
+    function validateForm() {
+      var fetchcommand = dreamInput.value;
+      var dream = document.getElementById("dream");
+      dream.value = fetchcommand;
+      dream.minlength = "42";
+      dream.maxlength = "43";
+      appendNewDream;
+    }
 
-function validateForm() {
-  var fetchcommand = dreamInput.value;
-  var dream = document.getElementById("dream");
-  dream.value = fetchcommand;
-  appendNewDream;
+    dreamsList.innerHTML = "";
+    validateForm();
+  }
 }

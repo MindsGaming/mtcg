@@ -24,6 +24,7 @@ fetch("/getDreams", {})
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   newListItem.innerText = dream;
+  newListItem.id = "fetch"
   dreamsList.appendChild(newListItem);
 };
 
