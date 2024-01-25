@@ -16,7 +16,7 @@ function commands() {
   } else {
     if (fetchcommand == "help") {
       dreamInput.value =
-        "Welcome To The Game Terminal. A Gamerfied Way To Earn Rewards, You Can Enter Commands Like: 'help', 'login','refresh'";
+        "MTCG Game Terminal Is A Gamerfied Way To Earn Rewards! Commands: {'help', 'login','refresh',...}";
     } else {
       if (fetchcommand == "login") {
         dreamInput.value = "Enter Your Wallet Reciver Adderess...";
@@ -25,10 +25,19 @@ function commands() {
           dreamInput.value = "";
           clearposts();
         } else {
-          if (fetchcommand == "games") {
+          if (fetchcommand == "rewards") {
             dreamInput.value = "Coming Soon...";
           } else {
-            dreamInput.value = "Command Not Found :( type 'help' for help.";
+            if (fetchcommand == "git clone" + "") {
+              dreamInput.value = "Remix The Project To Clone";
+              dreamInput.value = "building MTCG";
+              dreamInput.value =
+                "const path = 'absolute/path/to/folder' shell.cd(path) shell.exec('git clone https://github.com/atomicptr/dauntless-builder')";
+              dreamInput.value =
+                "git clone https://glitch.com/edit/#!/remix/mtcg";
+            } else {
+              dreamInput.value = "Command Not Found :( type 'help' for help.";
+            }
           }
         }
       }
