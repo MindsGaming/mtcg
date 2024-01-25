@@ -25,47 +25,36 @@
   <body>
     <h1 class="cpuName" id="CPUname">MTCG Token Space</h1>
 
-    <div id="fetchLogin">
+    <div id="fetchLogin" class="hide">
       <center>
-        <div class="hide">
-          <h1>Login</h1>
-          <form>
-            <input
-              id="dream"
-              name="dream"
-              aria-label="a new dream"
-              type="text"
-              maxlength="100"
-              value=""
-              pattern=".{42,43}"
-              required
-              title="Wallet IDs Are 43 Characters"
-              placeholder="Password"
-            /><label
-              onclick="help();"
-              style="font-size: 0.8rem; margin: 0.2rem; padding: 0.1rem"
-              title="Your reciver wallet"
-              >?</label
-            >
-            <br />
+        <h1>Login</h1>
+        <form>
+          <input
+            id="dream"
+            name="dream"
+            aria-label="a new dream"
+            type="text"
+            maxlength="100"
+            value=""
+            pattern=".{42,43}"
+            required
+            title="Wallet IDs Are 43 Characters"
+            placeholder="Password"
+          /><label
+            onclick="help();"
+            style="font-size: 0.8rem; margin: 0.2rem; padding: 0.1rem"
+            title="Your reciver wallet"
+            >?</label
+          >
+          <br />
 
-            <button type="submit" id="submit-dream">Standard Login</button>
-            <button id="connect">Meatmask Login</button>
-            <button>
-              <a
-                href="https://mindsgaming.glitch.me"
-                target="_self"
-                style="text-decoration: none; color: white; font-weight: bolder"
-                title="Community Website"
-                >Guest</a
-              >
-            </button>
-          </form>
-          <section class="hide">
-            <ul id="dreams"></ul>
-            <button id="clear-dreams" class="hide">Clear Dreams</button>
-          </section>
-        </div>
+          <button type="submit" id="submit-dream">Standard Login</button>
+          <button id="connect">Meatmask Login</button>
+        </form>
+        <section class="hide">
+          <ul id="dreams"></ul>
+          <button id="clear-dreams" class="hide">Clear Dreams</button>
+        </section>
       </center>
     </div>
     <div id="MTCG-cpu" class="show">
@@ -217,11 +206,8 @@
               <label onclick="tradersview();" class="menu-item" title="Traders"
                 >Traders</label
               >
-              <label class="menu-item" title="Support Us!">
-                <a href="#"
-                   onclick="viewLOGIN();"
-                  >Login</a
-                ></label
+              <label class="menu-item" title="Login">
+                <a href="#" onclick="viewLOGIN();">Login</a></label
               >
             </div>
           </div>
