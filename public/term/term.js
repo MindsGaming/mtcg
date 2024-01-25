@@ -19,6 +19,18 @@ function commands() {
   }
 
   if (fetchcommand == "refresh") {
-    dreamInput.value = "Enter Your Wallet Reciver Adderess...";
+    dreamInput.value = "";
+    clearposts();
+  } else {
+    dreamInput.value = "Command Not Found :( 'refresh' to clear the terminal";
   }
+}
+
+function clearposts() {
+  fetch("/clearDreams", {})
+    .then((res) => res.json())
+    .then((response) => {
+      console.log("cleared dreams");
+    });
+  dreamsList.innerHTML = "";
 }
