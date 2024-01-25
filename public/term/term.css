@@ -36,8 +36,21 @@ li {
   font-size: 1.3rem;
 }
 
-.term-command {
+.term-home {
   position: relative;
+  font-size: .93rem;
+  color: white;
+  font-weight: bold;
+}
+
+.term-command {
+   position: relative;
+  font-size: .93rem;
+  color: white;
+  font-weight: bold;
+  border-style: none;
+  background-color: transparent;
+  
 }
 .hide {
   display: none;
