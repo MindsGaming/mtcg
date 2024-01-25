@@ -26,9 +26,8 @@ function commands() {
 }
 
 function validateForm() {
-  let x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
+  var fetchcommand = dreamInput.value;
+  var dream = document.getElementById("dream");
+  dream.value = fetchcommand;
+  appendNewDream;
 }

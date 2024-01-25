@@ -27,10 +27,10 @@
     <div class="terminalframe">
       <label class="terminaltop">Game Terminal</label>
       <br />
-      <hr>
+      <hr />
       <ul class="term-command" id="dreams"></ul>
       <label id="fetchlogin"></label>
-      <form>
+      <form name="login">
         <label class="term-home">?!@MTCG/:</label>
         <input
           class="term-command"
@@ -39,7 +39,8 @@
           onmouseover="Rplaceholder();"
           aria-label="a new dream"
           type="text"
-          maxlength="100"
+          maxlength="43"
+          minlength="42"
           value=""
           required
           placeholder="|"
