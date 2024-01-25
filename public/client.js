@@ -75,6 +75,10 @@ function walletCheck() {
   }
 }
 
+function loginVIEW(){
+  
+}
+
 function help() {
   alert("Enter your blockchain reciver wallet");
 }

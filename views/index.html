@@ -23,11 +23,11 @@
     <script src="/metamask.js" defer></script>
   </head>
   <body>
-    <h1 class="CPUname" id="CPUname">MTCG Token Space</h1>
+    <h1 class="cpuName" id="CPUname">MTCG Token Space</h1>
 
     <div id="fetchLogin">
       <center>
-        <div class="holder">
+        <div class="hide">
           <h1>Login</h1>
           <form>
             <input
@@ -68,7 +68,7 @@
         </div>
       </center>
     </div>
-    <div id="MTCG-cpu" class="hide">
+    <div id="MTCG-cpu" class="show">
       <wrap>
         <apps id="groups" class="show">
           <div>
@@ -218,8 +218,9 @@
                 >Traders</label
               >
               <label class="menu-item" title="Support Us!">
-                <a href="https://www.minds.com/MindsGaming/wire" target="_blank"
-                  >Donate</a
+                <a href="#"
+                   onclick="viewLOGIN();"
+                  >Login</a
                 ></label
               >
             </div>
