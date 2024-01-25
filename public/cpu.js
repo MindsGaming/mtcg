@@ -93,7 +93,7 @@ function openhubs() {
 }
 
 function cardsview() {
- 
+  window.open("/cards", "_self");
 }
 
 function chatbotview() {
