@@ -23,8 +23,9 @@
     <script src="/metamask.js" defer></script>
   </head>
   <body>
+    <h1 class="CPUname">MTCG Connect</h1>
+
     <div id="fetchLogin">
-      <h1 class="CPUname">MTCG Connect<label id="walletID"></label></h1>
       <center>
         <div class="holder">
           <h1>Login</h1>
@@ -82,7 +83,7 @@
                   src="https://www.mintme.com/media/cache/avatar_large/uploads/images/06ac5ff8-c645-11ec-8ae9-78e3b517e592.png"
                 />
               </a>
-              Community Channel
+              MTCG (Community Token)
             </div>
 
             <div class="group">
@@ -390,11 +391,7 @@
             onclick="startview();"
           ></div>
           <div>
-            <a
-              title="MTCG"
-              href="https://www.mintme.com/token/MTCG"
-              target="_blank"
-            >
+            <a title="MTCG" href="#" onclick="Communityview();">
               <img
                 class="footer-icon"
                 src="https://www.mintme.com/media/cache/avatar_large/uploads/images/06ac5ff8-c645-11ec-8ae9-78e3b517e592.png"
@@ -408,6 +405,7 @@
               src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/PromptBuilder.png?"
             />
           </div>
+          <label id="walletID"></label>
         </div>
         <div id="rewards" class="hide" title="Closed">
           <label class="x" onclick="closeside();">X</label>

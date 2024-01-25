@@ -44,6 +44,7 @@ button {
   color: white;
   font-weight: bolder;
   font-family: sans-serif;
+  z-index: 0;
 }
 
 a {
@@ -272,4 +273,5 @@ apps {
   margin-top: -3px;
   margin-left: 3px;
   margin-bottom: 2px;
+  z-index: 10;
 }

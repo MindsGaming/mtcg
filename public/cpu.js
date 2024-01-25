@@ -184,6 +184,14 @@ function comingsoon() {
   alert("Coming Soon!");
 }
 
+function Communityview() {
+  var txt;
+  if (confirm("Switch To MindsGaming?")) {
+    window.open("https://MindsGaming.glitch.me", "_self");
+  } else {
+  }
+}
+
 /* HTTPS */
 
 var loc = window.location.href + "";
