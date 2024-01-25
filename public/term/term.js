@@ -15,10 +15,7 @@ function commands() {
       "Welcome To The Game Terminal. A Gamerfied Way To Earn Rewards, You Can Enter Commands Like: 'help', 'login',";
   }
   if (fetchcommand == "login") {
-    dreamInput.value = "undefined " + "is not a valid user";
-  }
-  if (fetchcommand == "login" + undefined) {
-    checkwallet();
+    dreamInput.value = "Enter Your Reciver adderess to ";
   } else {
     dreamInput.value = "Command Not Found :(";
     dreamsList.innerHTML = "";
