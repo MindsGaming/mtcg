@@ -35,6 +35,7 @@ var connectWithMetaMask = async function () {
     var walletID = document.getElementById("walletID");
     walletID.innerHTML = placeaddy.value;
     walletChecks();
+    Communityview();
   }
 
   async () => {

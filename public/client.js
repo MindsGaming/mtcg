@@ -63,12 +63,15 @@ clearButton.addEventListener("click", (event) => {
 
 function walletCheck() {
   var walletID = document.getElementById("walletID");
+  var CPUname = document.getElementById("CPUname");
+
   if (walletID == null) {
   } else {
     var fetchLogin = document.getElementById("fetchLogin");
     var mtcgcpu = document.getElementById("MTCG-cpu");
     fetchLogin.className = "hide";
     mtcgcpu.className = "show";
+    CPUname.className = "cpuName";
   }
 }
 
