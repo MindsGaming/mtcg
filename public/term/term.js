@@ -22,7 +22,7 @@ function commands() {
       if (fetchcommand == "login") {
         dreamInput.value = "Enter Your Token Wallet Reciver Adderess...";
       } else {
-        if (fetchcommand == "create" + "") {
+        if (fetchcommand == "create " + ...) {
           dreamInput.value =
             fetchcommand +
             "Account Request;" +
