@@ -2,7 +2,19 @@ h1 {
   color: pink;
 }
 
-
+.holder {
+  position: relative;
+  display: block;
+  width: 95%;
+  height: 90%;
+  margin-top: 55px;
+  padding: 1px;
+  background-color: grey;
+  border-style: groove;
+  border-color: white;
+  overflow: scroll;
+  z-index: 1;
+}
 
 .album {
   width: 99%;
@@ -13,6 +25,9 @@ h1 {
   margin: auto;
   padding: 2px;
   z-index: 2;
+  margin-top: -1rem;
+  margin-left: -1rem;
+  padding: 1rem;
 }
 
 .albumT {
