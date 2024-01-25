@@ -9,6 +9,7 @@ function Rplaceholder() {
 function commands() {
   var fetchcommand = dreamInput.value;
   var fetchlogin = document.getElementById("fetchlogin");
+  var fetchcpureply = document.getElementById("fetch-cpu-reply");
   dreamsList.innerHTML = "";
   if (fetchcommand == "help") {
     dreamInput.value =
@@ -19,15 +20,12 @@ function commands() {
   } else {
     validateForm();
     function validateForm() {
-      var fetchcommand = dreamInput.value;
-      var dream = document.getElementById("dream");
-      dream.value = fetchcommand;
-      dream.minlength = "42";
-      dream.maxlength = "43";
+      dreamInput.value = fetchcommand;
+      dreamInput.minlength = "42";
+      dreamInput.maxlength = "43";
       appendNewDream;
+      fetchcpureply.className = "hide";
     }
-
     dreamsList.innerHTML = "";
-    validateForm();
   }
 }
