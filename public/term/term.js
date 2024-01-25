@@ -16,7 +16,7 @@ function commands() {
   } else {
     if (fetchcommand == "help") {
       dreamInput.value =
-        "MTCG Game Terminal Is A Gamerfied Way To Earn Rewards! Commands: {'help', 'login','refresh',...}";
+        "MTCG Game Terminal Is A Gamerfied Way To Earn Rewards! Commands: {'help', 'login','refresh','remix',...}";
     } else {
       if (fetchcommand == "login") {
         dreamInput.value = "Enter Your Wallet Reciver Adderess...";
@@ -28,21 +28,20 @@ function commands() {
           if (fetchcommand == "rewards") {
             dreamInput.value = "Coming Soon...";
           } else {
-            if (fetchcommand == "git clone" + "") {
-              dreamInput.value = "https://glitch.com/edit/#!/remix/mtcg";
+            if (fetchcommand == "remix") {
               var remix = document.getElementById("remix");
               remix.className = "remix";
-              remix.src = fetchcommand;
+              remix.src = "https://glitch.com/edit/#!/remix/mtcg";
               dreamInput.value = remix.outterHTMl;
             } else {
+              if (dreamInput.pattern =".{42,43}"){
+                
+              }
+              else{
               dreamInput.value = "Command Not Found :( type 'help' for help.";
+              }
             }
-          }
-        }
-      }
-    }
-  }
-}
+          }}}}
 
 function clearposts() {
   fetch("/clearDreams", {})
