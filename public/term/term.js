@@ -1,7 +1,6 @@
 function Rplaceholder() {
   if (dream.placeholder == "|") {
     dream.placeholder = "";
-    dreamsList.innerHTML = "";
   } else {
     dream.placeholder = "|";
   }
@@ -17,5 +16,19 @@ function commands() {
   }
   if (fetchcommand == "login") {
     dreamInput.value = "undefined " + "is not a valid user";
+  }
+  if (fetchcommand == "login" + undefined) {
+    checkwallet();
+  } else {
+    dreamInput.value = "Command Not Found :(";
+    dreamsList.innerHTML = "";
+  }
+}
+
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
   }
 }
