@@ -13,20 +13,26 @@ function commands() {
 
   if (fetchcommand == "hello") {
     dreamInput.value = "I am not a chatbot, please enter a command.";
-  }
-  if (fetchcommand == "help") {
-    dreamInput.value =
-      "Welcome To The Game Terminal. A Gamerfied Way To Earn Rewards, You Can Enter Commands Like: 'help', 'login','refresh'";
-  }
-  if (fetchcommand == "login") {
-    dreamInput.value = "Enter Your Wallet Reciver Adderess...";
-  }
-
-  if (fetchcommand == "refresh") {
-    dreamInput.value = "";
-    clearposts();
   } else {
-    dreamInput.value = "Command Not Found :( 'refresh' to clear the terminal";
+    if (fetchcommand == "help") {
+      dreamInput.value =
+        "Welcome To The Game Terminal. A Gamerfied Way To Earn Rewards, You Can Enter Commands Like: 'help', 'login','refresh'";
+    } else {
+      if (fetchcommand == "login") {
+        dreamInput.value = "Enter Your Wallet Reciver Adderess...";
+      } else {
+        if (fetchcommand == "refresh") {
+          dreamInput.value = "";
+          clearposts();
+        } else {
+          if (fetchcommand == "games") {
+            dreamInput.value = "Coming Soon...";
+          } else {
+            dreamInput.value = "Command Not Found :( type 'help' for help.";
+          }
+        }
+      }
+    }
   }
 }
 
