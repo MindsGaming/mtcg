@@ -44,6 +44,7 @@ dreamsForm.onsubmit = (event) => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
+  commands();
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
 
