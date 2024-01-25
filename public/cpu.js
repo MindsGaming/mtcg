@@ -200,7 +200,6 @@ function Communityview() {
 function viewLOGIN() {
   var fetchLogin = document.getElementById("fetchLogin");
   var mtcgcpu = document.getElementById("MTCG-cpu");
-
   fetchLogin.className = "holder";
   mtcgcpu.className = "hide";
 }
