@@ -47,9 +47,8 @@ dreamsForm.onsubmit = (event) => {
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
   // reset form
-  dreamInput.value = "";
-  dreamInput.focus();
   walletCheck();
+  dreamInput.focus();
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -65,13 +64,14 @@ function walletCheck() {
   var walletID = document.getElementById("walletID");
   var CPUname = document.getElementById("CPUname");
 
-  if (walletID == null) {
+  if (walletID.innerHTML == null) {
   } else {
     var fetchLogin = document.getElementById("fetchLogin");
     var mtcgcpu = document.getElementById("MTCG-cpu");
     fetchLogin.className = "hide";
     mtcgcpu.className = "show";
     CPUname.className = "cpuName";
+    walletID.innerHTML = dreamInput.value;
   }
 }
 

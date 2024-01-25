@@ -17,7 +17,7 @@ var connectWithMetaMask = async function () {
   if (placeaddy.value == ethereum.selectedAddress) {
     // CUstom
     const data = {
-      dream: dreamInput.value + " Started Earning",
+      dream: dreamInput.value + "Logged In",
     };
 
     fetch("/addDream", {
@@ -35,7 +35,6 @@ var connectWithMetaMask = async function () {
     var walletID = document.getElementById("walletID");
     walletID.innerHTML = placeaddy.value;
     walletChecks();
-    Communityview();
   }
 
   async () => {
@@ -186,11 +185,15 @@ if (typeof window.ethereum !== "undefined" && window.ethereum.isMetaMask) {
 
 const walletChecks = function walletCheck() {
   var walletID = document.getElementById("walletID");
-  if (walletID == null) {
+
+  if (walletID.innerHTML == null) {
   } else {
     var fetchLogin = document.getElementById("fetchLogin");
     var mtcgcpu = document.getElementById("MTCG-cpu");
+    var CPUname = document.getElementById("CPUname");
     fetchLogin.className = "hide";
     mtcgcpu.className = "show";
+    CPUname.className = "cpuName";
+    walletID.innerHTML = dreamInput.value;
   }
 };
