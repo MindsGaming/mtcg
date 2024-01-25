@@ -197,9 +197,14 @@ function Communityview() {
   }
 }
 
-/* HTTPS */
+function viewLOGIN() {
+  var fetchLogin = document.getElementById("fetchLogin");
+  var mtcgcpu = document.getElementById("MTCG-cpu");
 
-var loc = window.location.href + "";
-if (loc.indexOf("http://") == 0) {
-  window.location.href = loc.replace("http://", "https://");
+  fetchLogin.className = "holder";
+  mtcgcpu.className = "hide";
+}
+
+function help() {
+  alert("Enter your blockchain reciver wallet");
 }

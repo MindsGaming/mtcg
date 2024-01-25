@@ -46,7 +46,6 @@ dreamsForm.onsubmit = (event) => {
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
   // reset form
-  walletCheck();
   dreamInput.focus();
 };
 
@@ -58,30 +57,3 @@ clearButton.addEventListener("click", (event) => {
     });
   dreamsList.innerHTML = "";
 });
-
-function walletCheck() {
-  var walletID = document.getElementById("walletID");
-  var CPUname = document.getElementById("CPUname");
-
-  if (walletID.innerHTML == null) {
-  } else {
-    var fetchLogin = document.getElementById("fetchLogin");
-    var mtcgcpu = document.getElementById("MTCG-cpu");
-    fetchLogin.className = "hide";
-    mtcgcpu.className = "show";
-    CPUname.className = "cpuName";
-    walletID.innerHTML = dreamInput.value;
-  }
-}
-
-function viewLOGIN() {
-  var fetchLogin = document.getElementById("fetchLogin");
-  var mtcgcpu = document.getElementById("MTCG-cpu");
-
-  fetchLogin.className = "holder";
-  mtcgcpu.className = "hide";
-}
-
-function help() {
-  alert("Enter your blockchain reciver wallet");
-}
