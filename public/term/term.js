@@ -10,6 +10,7 @@ function commands() {
   var fetchcommand = dreamInput.value;
   var fetchlogin = document.getElementById("fetchlogin");
   dreamsList.innerHTML = "";
+  dreamsForm.pattern = "{4,100}";
 
   if (fetchcommand == "hello") {
     dreamInput.value = "I am not a chatbot, please enter a command.";
@@ -34,9 +35,12 @@ function commands() {
               remix.src = "https://glitch.com/edit/#!/remix/mtcg";
               dreamInput.value = remix.outterHTMl;
             } else {
-              dream.pattern = "{42,43}";
-              pushrules.value = fetchcommand;
-              dreamInput.value = fetchcommand;
+              if (dreamInput.pattern == "{42,43}") {
+              } else {
+                if (dreamInput.value == fetchcommand) {
+                  dreamInput.value = "Command Not Found :(";
+                }
+              }
             }
           }
         }
