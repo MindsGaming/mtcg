@@ -29,23 +29,29 @@
         >Game Terminal
         <hr />
       </label>
+      <br>
       <br />
-      <br />
-      <ul class="hide" id="dreams"></ul>
-      <div class="term-command" id="dreamsX"></div>
-
+      <ul class="term-command" id="dreams"></ul>
       <iframe id="remix" class="hide" src="#"> </iframe>
 
-        <form>
+      <form name="login">
+        <label class="term-home">?!@MTCG/:</label>
         <input
+          class="term-command"
+          id="dream"
           name="dream"
+          onmouseover="Rplaceholder();"
           aria-label="a new dream"
           type="text"
-          maxlength="100"
-          placeholder="Dreams!"
+          value=""
+          required
+          placeholder="|"
+          maxlength="43"
+          minlength="4"
+          pattern="{1, 43}"
         />
+        <br />
       </form>
-
       <div class="hide">
         <button type="submit" id="submit-dream">Standard Login</button>
         <button id="connect">Meatmask Login</button>
