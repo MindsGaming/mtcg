@@ -25,7 +25,7 @@ function commands() {
       } else {
         if (fetchcommand == "refresh") {
           dreamInput.value = "";
-          clearposts();
+          admincheck();
         }
       }
 
@@ -78,6 +78,11 @@ function commands() {
       }
     }
   }
+}
+
+function admincheck(){
+  var admin = document.getElementById("admin");
+  admin.className = "term-command"
 }
 
 function clearposts() {

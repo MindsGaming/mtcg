@@ -205,7 +205,7 @@ function viewLOGIN() {
     splash.className = "splash";
     infinity.className = "apps";
     info.className = "hide";
-    dreamInput.value = "refresh";
+    dreamsList.innerHTML = "";
   } else {
     infinity.title = "Infinity";
     infinity.src =
