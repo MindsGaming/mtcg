@@ -1,4 +1,5 @@
 const dreamsID = document.getElementById("dream");
+const dreamsX = document.getElementById("dreamsX");
 
 function Rplaceholder() {
   if (dream.placeholder == "|") {
@@ -10,8 +11,8 @@ function Rplaceholder() {
 
 function commands() {
   var fetchcommand = dreamInput.value;
-  var dreamsX = document.getElementById("dreamsX");
-
+  dreamsX.value = dreams.innerHTML;
+  dreamsX.innerHTML == dreamInput.value;
   if (fetchcommand == "hello") {
     dreamsX.value = "I am not a chatbot, please enter a command.";
   } else {
@@ -67,7 +68,7 @@ function commands() {
                       dreamsX.value = "PINN";
                     } else {
                       if (fetchcommand == "test") {
-                        dreamsX.value = "PINN";
+                        dreamsX.value = commands;
                       }
                     }
                   }
@@ -95,7 +96,7 @@ function clearposts() {
 }
 
 function viewLOGIN() {
-   var dreamsX = document.getElementById("dreamsX");
+  var dreamsX = document.getElementById("dreamsX");
   if (infinity.title == "Infinity") {
     infinity.title = "Terminal";
     infinity.src = "/term/index.html";
@@ -103,7 +104,8 @@ function viewLOGIN() {
     splash.className = "splash";
     infinity.className = "apps";
     info.className = "hide";
-dreamsX.innerHTML = ""  } else {
+    dreamsX.innerHTML = "";
+  } else {
     infinity.title = "Infinity";
     infinity.src =
       "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc?shared_id=a27e9bc2-50ff-4106-bfcc-e609e0ca62b3";

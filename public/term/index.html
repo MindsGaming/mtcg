@@ -32,28 +32,20 @@
       <br />
       <br />
       <ul class="hide" id="dreams"></ul>
-      <ul class="term-command" id="dreamsX"></ul>
+      <div class="term-command" id="dreamsX"></div>
 
       <iframe id="remix" class="hide" src="#"> </iframe>
 
-      <form name="login">
-        <label class="term-home">?!@MTCG/:</label>
+        <form>
         <input
-          class="term-command"
-          id="dream"
           name="dream"
-          onmouseover="Rplaceholder();"
           aria-label="a new dream"
           type="text"
-          value=""
-          required
-          placeholder="|"
-          maxlength="43"
-          minlength="4"
-          pattern="{1, 43}"
+          maxlength="100"
+          placeholder="Dreams!"
         />
-        <br />
       </form>
+
       <div class="hide">
         <button type="submit" id="submit-dream">Standard Login</button>
         <button id="connect">Meatmask Login</button>
