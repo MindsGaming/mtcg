@@ -24,8 +24,7 @@ function commands() {
         layout();
       } else {
         if (fetchcommand == "refresh") {
-          dreamInput.value = "";
-          admincheck();
+          refresh();
         }
       }
 
@@ -83,22 +82,27 @@ function commands() {
 function layout() {
   var preview = document.getElementById("l-preview");
   var buttons = document.getElementById("l-buttons");
-
   if (preview.title == "@MTCG") {
     preview.innerHTML = "Login";
     buttons.className = "show";
     preview.title = "Login";
-    dreamInput.value = "Enter Your Token Contact Adderess...";
+    dreamsList.minlength = "42";
+    dreamInput.value = "Enter Your Wallet Reciver Adderess...";
   } else {
-    preview.innerHTML = "Login";
-    buttons.className = "show";
+    preview.innerHTML = "?@MTCG";
+    buttons.className = "hide";
     preview.title = "@MTCG";
-    layout();
   }
+}
+
+function refresh() {
+  dreamsList.innerHTML = "";
+  dreamInput.value = "";
 }
 
 function desktopOnly() {
   dreamInput.value = "Desktop Feature;";
+  dream.value = "";
 }
 
 function clearposts() {
