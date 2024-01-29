@@ -29,14 +29,14 @@
         >Game Terminal
         <hr />
       </label>
-      <br>
+      <br />
       <br />
       <ul class="term-command" id="dreams"></ul>
       <label id="admin" class="hide"></label>
       <iframe id="remix" class="hide" src="#"> </iframe>
 
       <form name="login">
-        <label class="term-home">?!@MTCG/:</label>
+        <label id="l-preview" class="term-home">?!@MTCG/:</label>
         <input
           class="term-command"
           id="dream"
@@ -49,15 +49,14 @@
           placeholder="|"
           maxlength="43"
           minlength="4"
-          pattern="{1, 43}"
         />
         <br />
       </form>
-      <div class="hide">
+      <div id="l-buttons" class="hide">
         <button type="submit" id="submit-dream">Standard Login</button>
         <button id="connect">Meatmask Login</button>
         <button id="guest">Guest</button>
-        <button id="clear-dreams" class="">Clear Dreams</button>
+        <button id="clear-dreams" class="hide">Clear Dreams</button>
       </div>
     </div>
   </body>

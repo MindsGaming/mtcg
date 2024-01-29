@@ -80,22 +80,11 @@ function commands() {
   }
 }
 
-function admincheck() {
-  var admin = document.getElementById("admin");
-  admin.addEventListener("enter", pusher);
-
-  admin.className = "term-command";
-  dreamsID.value = "";
-  admin.innerHTML = "Enter Password";
-
-  function pusher() {
-    admin.value = admin.innerHTML;
-    if (admin.value == "testing") {
-      clearposts();
-    } else {
-      alert("somthing went wrong");
-    }
-  }
+function layout() {
+var preview = document.getElementById("l-preview");
+  var buttons = socument.getElementById("")
+  preview.innerHTML = "Login";
+  
 }
 
 function clearposts() {
