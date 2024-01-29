@@ -101,6 +101,7 @@ var signMessage = async function (nonce, publicAddress) {
     await authenticate(publicAddress, signed);
     await greet();
     console.log(signed);
+    dreamInput.value = "";
   });
 };
 

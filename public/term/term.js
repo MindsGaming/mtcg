@@ -87,7 +87,7 @@ function layout() {
     buttons.className = "show";
     preview.title = "Login";
     dreamsList.minlength = "42";
-    dreamInput.value = "Enter Your Wallet Reciver Adderess...";
+    dreamInput.value = "Enter Your Wallet Receiver Adderess...";
   } else {
     preview.innerHTML = "?@MTCG";
     buttons.className = "hide";
