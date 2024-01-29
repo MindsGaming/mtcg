@@ -21,7 +21,7 @@ function commands() {
         "MTCG Game Terminal Is A Gamerfied Way To Earn Rewards! Commands: {'help', 'login','refresh','remix',...}";
     } else {
       if (fetchcommand == "login") {
-        dreamInput.value = "Enter Your Token Contact Adderess...";
+        layout();
       } else {
         if (fetchcommand == "refresh") {
           dreamInput.value = "";
@@ -71,7 +71,7 @@ function commands() {
             }
 
             if (dreamInput.value == fetchcommand) {
-              dreamInput.value = "Command Not Found :(";
+              dreamInput.value = "Command Logged;";
             }
           }
         }
@@ -81,10 +81,24 @@ function commands() {
 }
 
 function layout() {
-var preview = document.getElementById("l-preview");
-  var buttons = socument.getElementById("")
-  preview.innerHTML = "Login";
-  
+  var preview = document.getElementById("l-preview");
+  var buttons = document.getElementById("l-buttons");
+
+  if (preview.title == "@MTCG") {
+    preview.innerHTML = "Login";
+    buttons.className = "show";
+    preview.title = "Login";
+    dreamInput.value = "Enter Your Token Contact Adderess...";
+  } else {
+    preview.innerHTML = "Login";
+    buttons.className = "show";
+    preview.title = "@MTCG";
+    layout();
+  }
+}
+
+function desktopOnly() {
+  dreamInput.value = "Desktop Feature;";
 }
 
 function clearposts() {

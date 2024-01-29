@@ -22,6 +22,7 @@
     <!-- import the webpage's client-side javascript file -->
     <script src="/term/term.js" defer></script>
     <script src="/client.js" defer></script>
+    <script src="/metamask.js" defer></script>
   </head>
   <body>
     <div class="terminalframe">
@@ -36,7 +37,7 @@
       <iframe id="remix" class="hide" src="#"> </iframe>
 
       <form name="login">
-        <label id="l-preview" class="term-home">?!@MTCG/:</label>
+        <label id="l-preview" title="@MTCG" class="term-home">?!@MTCG/:</label>
         <input
           class="term-command"
           id="dream"
@@ -56,7 +57,7 @@
         <button type="submit" id="submit-dream">Standard Login</button>
         <button id="connect">Meatmask Login</button>
         <button id="guest">Guest</button>
-        <button id="clear-dreams" class="hide">Clear Dreams</button>
+        <button onclick="desktopOnly();" id="clear-dreams" class="hide">Clear Dreams</button>
       </div>
     </div>
   </body>
