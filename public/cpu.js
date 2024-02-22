@@ -13,6 +13,7 @@ var launchgroup = document.getElementById("launchgroup");
 var learnhow = document.getElementById("learn-how");
 var learnbtn = document.getElementById("learnBTN");
 var cards = document.getElementById("APP");
+var hooks = document.getElementById("hooks");
 
 function startview() {
   closeside();
@@ -65,6 +66,22 @@ function tradersview() {
     tokens.className = "hide";
     sidemenu.className = "side-menu";
   } else {
+    traders.className = "hide";
+    tokens.className = "hide";
+    wallets.className = "hide";
+    sidemenu.className = "hide";
+  }
+}
+
+function hooksview() {
+  if (hooks.className == "hide") {
+    hooks.className = "show";
+    traders.className = "hide";
+    wallets.className = "hide";
+    tokens.className = "hide";
+    sidemenu.className = "side-menu";
+  } else {
+    hooks.className = "hide";
     traders.className = "hide";
     tokens.className = "hide";
     wallets.className = "hide";
@@ -183,6 +200,9 @@ function closeside() {
   info.title = "Information";
   rewards.title = "Closed";
   launchgroup.title = "Closed";
+  cards
+  hooks.className = "hide";
+  
 }
 
 function comingsoon() {
