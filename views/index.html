@@ -173,20 +173,21 @@
               <label onclick="infoview();" class="menu-item" title="Information"
                 >Info</label
               >
-              <label
-                onclick="hooksview();"
-                class="menu-item"
-                title="Offchain Hooks"
-                >Hooks</label
-              >
-              <label onclick="rewardsview();" class="menu-item" title="Rewards"
-                >Rewads</label
-              >
+
               <label onclick="walletsview();" class="menu-item" title="Wallets"
                 >Wallets</label
               >
               <label onclick="tradersview();" class="menu-item" title="Traders"
                 >Traders</label
+              >
+              <label onclick="rewardsview();" class="menu-item" title="Rewards"
+                >Rewads</label
+              >
+              <label
+                onclick="hooksview();"
+                class="menu-item"
+                title="Offchain Hooks"
+                >Hooks</label
               >
               <label onclick="tokensview();" class="menu-item" title="Tokens"
                 >Groups</label
@@ -207,6 +208,88 @@
           </div>
 
           <div class="hide" title="Menu-Expand" id="side-menu">
+            <label id="wallets" class="hide">
+              <a
+                href="https://minds.com/wallet/"
+                target="_blank"
+                title="Minds Wallet"
+                class="menu-item"
+                >Minds</a
+              >
+              <a
+                href="https://mintme.com/wallet"
+                target="_blank"
+                title="MintMe Wallet"
+                class="menu-item"
+                >MintMe</a
+              >
+              <a
+                href="https://app.momint.so/profile/MindsGaming/all"
+                target="_blank"
+                title="Momint NFTs"
+                class="menu-item"
+                >Momint</a
+              ></label
+            >
+
+            <label id="traders" class="hide">
+              <a
+                href="https://www.mintme.com/token/MTCG/ETH/trade"
+                target="_blank"
+                title="MTCG/ETH"
+                class="menu-item"
+                >MTCG/ETH</a
+              >
+              <a
+                href="https://www.mintme.com/token/MTCG/MINTME/trade"
+                target="_blank"
+                title="MTCG/MintMe"
+                class="menu-item"
+                >MTCG/MintMe</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/ETH"
+                target="_blank"
+                title="MintMe/ETH"
+                class="menu-item"
+                >MintMe/ETH</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/BTC"
+                target="_blank"
+                title="MintMe/BTC"
+                class="menu-item"
+                >MintMe/BTC</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/BNB"
+                target="_blank"
+                title="MintMe/BNB"
+                class="menu-item"
+                >MintMe/BNB</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/USDC"
+                target="_blank"
+                title="MintMe/USDC"
+                class="menu-item"
+                >MintMe/USDC</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/CRO"
+                target="_blank"
+                title="MintMe/CRO"
+                class="menu-item"
+                >MintMe/CRO</a
+              >
+              <a
+                href="https://www.mintme.com/coin/MINTME/MATIC"
+                target="_blank"
+                title="MintMe/Matic"
+                class="menu-item"
+                >MintMe/MATIC</a
+              >
+            </label>
             <label id="hooks" class="hide">
               <a
                 href="https://www.mintme.com/token/SatoriD"
@@ -301,88 +384,6 @@
                 title="WPRPN"
                 class="menu-item"
                 >WPRPN</a
-              >
-            </label>
-            <label id="wallets" class="hide">
-              <a
-                href="https://minds.com/wallet/"
-                target="_blank"
-                title="Minds Wallet"
-                class="menu-item"
-                >Minds</a
-              >
-              <a
-                href="https://mintme.com/wallet"
-                target="_blank"
-                title="MintMe Wallet"
-                class="menu-item"
-                >MintMe</a
-              >
-              <a
-                href="https://app.momint.so/profile/MindsGaming/all"
-                target="_blank"
-                title="Momint NFTs"
-                class="menu-item"
-                >Momint</a
-              ></label
-            >
-
-            <label id="traders" class="hide">
-              <a
-                href="https://www.mintme.com/token/MTCG/ETH/trade"
-                target="_blank"
-                title="MTCG/ETH"
-                class="menu-item"
-                >MTCG/ETH</a
-              >
-              <a
-                href="https://www.mintme.com/token/MTCG/MINTME/trade"
-                target="_blank"
-                title="MTCG/MintMe"
-                class="menu-item"
-                >MTCG/MintMe</a
-              >
-              <a
-                href="https://www.mintme.com/coin/MINTME/ETH"
-                target="_blank"
-                title="MintMe/ETH"
-                class="menu-item"
-                >MintMe/ETH</a
-              >
-              <a
-                href="https://www.mintme.com/coin/MINTME/BTC"
-                target="_blank"
-                title="MintMe/BTC"
-                class="menu-item"
-                >MintMe/BTC</a
-              >
-              <a
-                href="https://www.mintme.com/coin/MINTME/BNB"
-                target="_blank"
-                title="MintMe/BNB"
-                class="menu-item"
-                >MintMe/BNB</a
-              >
-              <a
-                href="https://www.mintme.com/coin/MINTME/USDC"
-                target="_blank"
-                title="MintMe/USDC"
-                class="menu-item"
-                >MintMe/USDC</a
-              >
-              <a
-                href="https://www.mintme.com/coin/MINTME/CRO"
-                target="_blank"
-                title="MintMe/CRO"
-                class="menu-item"
-                >MintMe/CRO</a
-              >
-              <a
-                href="https://www.mintme.com/coin/MINTME/MATIC"
-                target="_blank"
-                title="MintMe/Matic"
-                class="menu-item"
-                >MintMe/MATIC</a
               >
             </label>
           </div>
@@ -703,10 +704,7 @@
                 </p>
                 <br />
               </div>
-              <iframe
-                src="https://www.mintme.com/token/MTCG/airdrop/6656/embeded"
-                style="width: 350px; height: 180px; border: none; scrolling: no"
-              ></iframe>
+
               <br />
             </div>
           </div>

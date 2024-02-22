@@ -163,6 +163,7 @@ function rewardsview() {
     rewards.className = "splash";
     groups.className = "hide";
     splash.className = "hide";
+    info.className = "hide";
   } else {
     rewards.title = "Closed";
     rewards.className = "hide";
@@ -200,9 +201,7 @@ function closeside() {
   info.title = "Information";
   rewards.title = "Closed";
   launchgroup.title = "Closed";
-  cards
   hooks.className = "hide";
-  
 }
 
 function comingsoon() {
