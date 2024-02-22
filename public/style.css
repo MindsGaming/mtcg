@@ -6,7 +6,16 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  z-index: 0.8;
+}
+blackhole {
+  position: fixed;
+  background-color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
   z-index: 0;
+  background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3dzNmFpaXVybnh2dTcycXUzb2Vkc3d2MDYyMmZzajFvcHVkMHZ4MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3og0IFrHkIglEOg8Ba/giphy.gif");
 }
 
 li {
@@ -55,7 +64,7 @@ button {
   color: white;
   font-weight: bolder;
   font-family: sans-serif;
-  padding: .4rem;
+  padding: 0.4rem;
   z-index: 0;
 }
 
