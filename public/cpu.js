@@ -98,6 +98,7 @@ function openhubs() {
     splash.className = "splash";
     infinity.className = "apps";
     info.className = "hide";
+    dreamInput.value = "Loading Hubs...";
   } else {
     infinity.title = "Infinity";
     infinity.src =
