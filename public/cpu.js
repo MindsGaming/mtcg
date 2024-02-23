@@ -220,7 +220,7 @@ function Communityview() {
 }
 
 function viewLOGIN() {
-  if (infinity.title == "Infinity") {
+  if (termframe.title == "Login") {
     infinity.title = "Terminal";
     infinity.src = "/term";
     groups.className = "hide";
