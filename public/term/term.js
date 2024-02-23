@@ -1,10 +1,10 @@
 const dreamsID = document.getElementById("dream");
 
 function Rplaceholder() {
-  if (dream.placeholder == "|") {
+  if (dream.placeholder == "Type A Command") {
     dream.placeholder = "";
   } else {
-    dream.placeholder = "|";
+    dream.placeholder = "Type A Command.";
   }
 }
 
@@ -41,6 +41,7 @@ function commands() {
             dreamInput.value = "";
           } else {
             if (dreamInput.value == "hubs") {
+              dreamInput.value = "Loading Hubs...";
               openhubs();
               termframe.className = "hide";
             } else {

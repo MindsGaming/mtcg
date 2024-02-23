@@ -16,8 +16,10 @@ var connectWithMetaMask = async function () {
 
   if (placeaddy.value == ethereum.selectedAddress) {
     // CUstom
+    var form = document.getelementById("form");
+    form.className = "hide";
     const data = {
-      dream: dreamInput.value + "Logged In",
+      dream: dreamInput.value + " Logged In",
     };
 
     fetch("/addDream", {
