@@ -16,10 +16,8 @@ var connectWithMetaMask = async function () {
 
   if (placeaddy.value == ethereum.selectedAddress) {
     // CUstom
-    var form = document.getelementById("form");
-    form.className = "hide";
     const data = {
-      dream: dreamInput.value + " Logged In",
+      dream: ethereum.selectedAddress + " Logged In",
     };
 
     fetch("/addDream", {
@@ -36,6 +34,8 @@ var connectWithMetaMask = async function () {
     appendNewDream(dreamInput.value + "Logged In");
     var walletID = document.getElementById("walletID");
     walletID.innerHTML = placeaddy.value;
+    dreamList.value = "";
+    
   }
 
   async () => {
@@ -103,6 +103,8 @@ var signMessage = async function (nonce, publicAddress) {
     await authenticate(publicAddress, signed);
     await greet();
     console.log(signed);
+    var form = document.getelementById("form");
+    form.className = "hide";
     dreamInput.value = "";
   });
 };
