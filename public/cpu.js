@@ -103,8 +103,7 @@ function openhubs() {
     dreamslist.innerHTML = "Loading Hubs...";
   } else {
     infinity.title = "Infinity";
-    infinity.src =
-      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc?shared_id=a27e9bc2-50ff-4106-bfcc-e609e0ca62b3";
+    infinity.src = "https://mindsgaming.glitch.me";
     groups.className = "show";
     splash.className = "hide";
     infinity.className = "hide";
