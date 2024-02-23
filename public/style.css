@@ -316,7 +316,7 @@ hr {
   color: black;
 }
 .terminalframe {
-  position: flex;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;

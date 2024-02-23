@@ -33,9 +33,11 @@ var connectWithMetaMask = async function () {
     dreams.push(dreamInput.value + "Logged In");
     appendNewDream(dreamInput.value + "Logged In");
     var walletID = document.getElementById("walletID");
+    var buttons = document.getElementById("l-buttons");
     walletID.innerHTML = placeaddy.value;
-    dreamList.value = "";
-    
+    buttons.className = "hide";
+    dreamInput.value = "";
+    dreamInput.focus();
   }
 
   async () => {
@@ -103,9 +105,6 @@ var signMessage = async function (nonce, publicAddress) {
     await authenticate(publicAddress, signed);
     await greet();
     console.log(signed);
-    var form = document.getelementById("form");
-    form.className = "hide";
-    dreamInput.value = "";
   });
 };
 
