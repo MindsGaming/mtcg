@@ -133,6 +133,7 @@ apps {
 }
 
 .splash {
+  position: fixed;
   float: left;
   width: 100%;
   height: 99%;
@@ -141,7 +142,7 @@ apps {
   margin-left: -10px;
   margin-top: -5px;
   opacity: 0.545;
-  overflow: scroll;
+  overflow: auto;
   z-index: 2;
 }
 
