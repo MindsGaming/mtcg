@@ -7,66 +7,7 @@ body {
   background-color: black;
 }
 
-li {
-  list-style-type: none;
-}
 
-hr {
-  float: left;
-  width: 100%;
-  margin-top: 0.7rem;
-  margin-bottom: 1rem;
-  padding: 0.03rem;
-  background-color: black;
-  color: black;
-}
-.terminalframe {
-  position: flex;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  margin: -1px;
-  background-color: black;
-  opacity: 0.5;
-  overflow: scroll;
-}
-
-.terminaltop {
-  position: fixed;
-  display: block;
-  height: 5rem;
-  top: 0;
-  left: 0;
-  margin-top: 1.3rem;
-  margin-bottom: .5rem;
-  padding: 0.3rem;
-  color: white;
-  font-weight: bolder;
-  font-size: 1.3rem;
-}
-
-.term-home {
-  position: relative;
-  font-size: 0.93rem;
-  color: white;
-  font-weight: bold;
-}
-
-.term-command {
-  position: relative;
-  font-size: 0.93rem;
-  color: white;
-  font-weight: bold;
-  border-style: none;
-  background-color: transparent;
-  margin: 1.3rem;
-}
-
-.remix {
-  width: 100%;
-  height: 100%;
-}
 .hide {
   display: none;
 }

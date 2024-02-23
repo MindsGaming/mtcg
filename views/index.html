@@ -21,11 +21,11 @@
 
     <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/term/term.css" />
     <script src="/script.js" defer></script>
     <script src="/client.js" defer></script>
     <script src="/cpu.js" defer></script>
     <script src="/metamask.js" defer></script>
-    <script src="/term/term.js" defer></script>
   </head>
   <body>
     <h1 class="cpuName" id="CPUname">MTCG Token Space</h1>
@@ -691,68 +691,71 @@
               <br />
             </div>
           </div>
-          <div class="footer">
-            <div
-              class="start"
-              id="start"
-              title="Start Here"
-              onclick="startview();"
-            ></div>
-            <div>
-              <a title="MTCG" href="#" onclick="Communityview();">
-                <img
-                  class="footer-icon"
-                  src="https://www.mintme.com/media/cache/avatar_large/uploads/images/06ac5ff8-c645-11ec-8ae9-78e3b517e592.png"
-                />
-              </a>
-            </div>
+        </div>
+        <div id="termframe" class="hide" title="Login">
+          <label class="x" onclick="closeside();">X</label>
 
-            <div onclick="openhubs();" title="chatbot" align="center">
+          <label class="terminaltop"
+            >Game Terminal
+            <hr />
+          </label>
+          <br />
+          <br />
+          <ul class="term-command" id="dreams"></ul>
+          <label id="admin" class="hide"></label>
+          <iframe id="remix" class="hide" src="#"> </iframe>
+
+          <form name="login">
+            <label id="l-preview" title="@MTCG" class="term-home"
+              >?!@MTCG/:</label
+            >
+            <input
+              class="term-command"
+              id="dream"
+              name="dream"
+              onmouseover="Rplaceholder();"
+              aria-label="a new dream"
+              type="text"
+              value=""
+              required
+              placeholder="|"
+              maxlength="43"
+              minlength="4"
+            />
+            <br />
+          </form>
+          <div id="l-buttons" class="hide">
+            <button type="submit" id="submit-dream">Standard Login</button>
+            <button onclick="desktopOnly();" id="connect">
+              Meatmask Login
+            </button>
+            <button onclick="layout();" id="guest">Guest</button>
+            <button id="clear-dreams" class="hide">Clear Dreams</button>
+          </div>
+          <label id="walletID"></label>
+        </div>
+
+        <div class="footer">
+          <div
+            class="start"
+            id="start"
+            title="Start Here"
+            onclick="startview();"
+          ></div>
+          <div>
+            <a title="MTCG" href="#" onclick="Communityview();">
               <img
                 class="footer-icon"
-                src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/AIExpolore.jpg"
+                src="https://www.mintme.com/media/cache/avatar_large/uploads/images/06ac5ff8-c645-11ec-8ae9-78e3b517e592.png"
               />
-            </div>
-            <div  id="termframe" class="" title="Login">
-              <label class="terminaltop"
-                >Game Terminal
-                <hr />
-              </label>
-              <br />
-              <br />
-              <ul class="term-command" id="dreams"></ul>
-              <label id="admin" class="hide"></label>
-              <iframe id="remix" class="hide" src="#"> </iframe>
+            </a>
+          </div>
 
-              <form name="login">
-                <label id="l-preview" title="@MTCG" class="term-home"
-                  >?!@MTCG/:</label
-                >
-                <input
-                  class="term-command"
-                  id="dream"
-                  name="dream"
-                  onmouseover="Rplaceholder();"
-                  aria-label="a new dream"
-                  type="text"
-                  value=""
-                  required
-                  placeholder="|"
-                  maxlength="43"
-                  minlength="4"
-                />
-                <br />
-              </form>
-              <div id="l-buttons" class="hide">
-                <button type="submit" id="submit-dream">Standard Login</button>
-                <button onclick="desktopOnly();" id="connect">
-                  Meatmask Login
-                </button>
-                <button onclick="layout();" id="guest">Guest</button>
-                <button id="clear-dreams" class="hide">Clear Dreams</button>
-              </div>
-              <label id="walletID"></label>
-            </div>
+          <div onclick="openhubs();" title="chatbot" align="center">
+            <img
+              class="footer-icon"
+              src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/AIExpolore.jpg"
+            />
           </div>
         </div>
       </wrap>

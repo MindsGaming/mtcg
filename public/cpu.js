@@ -15,7 +15,7 @@ var learnbtn = document.getElementById("learnBTN");
 var cards = document.getElementById("APP");
 var hooks = document.getElementById("hooks");
 var dreamslist = document.getElementById("dream");
-
+var termframe = document.getElementById("termframe");
 
 function startview() {
   closeside();
@@ -205,6 +205,7 @@ function closeside() {
   rewards.title = "Closed";
   launchgroup.title = "Closed";
   hooks.className = "hide";
+  termframe.className = "hide";
 }
 
 function comingsoon() {
@@ -221,17 +222,16 @@ function Communityview() {
 
 function viewLOGIN() {
   if (termframe.title == "Login") {
-    infinity.title = "Terminal";
-    infinity.src = "/term";
+    termframe.title = "Terminal";
+    termframe.className = "terminalframe";
     groups.className = "hide";
-    splash.className = "splash";
-    infinity.className = "apps";
+    splash.className = "hide";
+    infinity.className = "hide";
     info.className = "hide";
-    dreamsList.innerHTML = "";
+    dreamslist.innerHTML = "";
   } else {
-    infinity.title = "Infinity";
-    infinity.src =
-      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=f8e255b1-6ac6-4b5b-af4c-5a00afad18bc?shared_id=a27e9bc2-50ff-4106-bfcc-e609e0ca62b3";
+    termframe.title = "Login";
+    termframe.className = "hide";
     groups.className = "show";
     splash.className = "hide";
     infinity.className = "hide";
