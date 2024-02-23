@@ -14,6 +14,8 @@ var learnhow = document.getElementById("learn-how");
 var learnbtn = document.getElementById("learnBTN");
 var cards = document.getElementById("APP");
 var hooks = document.getElementById("hooks");
+var dreamslist = document.getElementById("dream");
+
 
 function startview() {
   closeside();
@@ -98,7 +100,7 @@ function openhubs() {
     splash.className = "splash";
     infinity.className = "apps";
     info.className = "hide";
-    dreamInput.value = "Loading Hubs...";
+    dreamslist.innerHTML = "Loading Hubs...";
   } else {
     infinity.title = "Infinity";
     infinity.src =

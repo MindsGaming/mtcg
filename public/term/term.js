@@ -40,8 +40,12 @@ function commands() {
             window.open("https://testnet.chesspolygon.com/", "_blank");
             dreamInput.value = "";
           } else {
-            if (dreamInput.value == fetchcommand) {
-              dreamInput.value = "Logged; " + fetchcommand;
+            if (dreamInput.value == "hubs") {
+              openhubs();
+            } else {
+              if (dreamInput.value == fetchcommand) {
+                dreamInput.value = "Logged; " + fetchcommand;
+              }
             }
           }
         }
