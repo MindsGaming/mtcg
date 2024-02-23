@@ -42,6 +42,7 @@ function commands() {
           } else {
             if (dreamInput.value == "hubs") {
               openhubs();
+              termframe.className = "hide";
             } else {
               if (dreamInput.value == fetchcommand) {
                 dreamInput.value = "Logged; " + fetchcommand;

@@ -229,6 +229,7 @@ function viewLOGIN() {
     infinity.className = "hide";
     info.className = "hide";
     dreamslist.innerHTML = "";
+    dreamInput.focus();
   } else {
     termframe.title = "Login";
     termframe.className = "hide";
