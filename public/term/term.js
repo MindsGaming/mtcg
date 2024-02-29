@@ -1,4 +1,10 @@
-const dreamsID = document.getElementById("dream");
+const command = document.getElementById("commands");
+document.getElementById("command").addEventListener("enter", paste); 
+const dreams = document.getElementById("dreams");
+
+function paste(){
+  command.value = dreams.value;
+}
 
 function Rplaceholder() {
   if (dream.placeholder == "Type A Command") {
