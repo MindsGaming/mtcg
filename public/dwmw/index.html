@@ -28,8 +28,7 @@
     <script src="/cpu.js" defer></script>
     <script src="/metamask.js" defer></script>
     <script src="/term/term.js" defer></script>
-        <script src="/dwmw/dwmw.js" defer></script>
-
+    <script src="/dwmw/dwmw.js" defer></script>
   </head>
   <body>
     <div align="center" class="movie" title="DWMW (Dude Where's My Wallet?)">
@@ -39,7 +38,12 @@
         src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/IMG_20230417_140324_Glitch2.jpg?"
       />
       <br />
-      <button onclick="watchDWMW();" class="watchDWMW" title="E1" id="watchDWMW">
+      <button
+        onclick="watchDWMW();"
+        class="watchDWMW"
+        title="E1"
+        id="watchDWMW"
+      >
         Eposide One
       </button>
 
@@ -52,9 +56,9 @@
       </p>
 
       <br />
-      <button class="DWMWbuttons">Donate</button>
-      <button class="DWMWbuttons">Be In A Show</button>
-      <button class="DWMWbuttons">Join The Movie Group</button>
+      <button onclick="DWMWdonate();" class="DWMWbuttons">Donate</button>
+      <button onclick="joinshow();" class="DWMWbuttons">Be In A Show</button>
+      <button onclick="DWMWgit()" class="DWMWbuttons">Improve The Git</button>
     </div>
   </body>
 </html>
