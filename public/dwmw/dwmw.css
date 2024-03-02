@@ -1,0 +1,24 @@
+.movie {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  border-style: none;
+  width: 100%;
+  height: 100%;
+  background-color: gold;
+}
+
+h {
+  font-size: 3rem;
+  padding: 0.4rem;
+}
+
+.DWMWimg {
+  display: block;
+  border-radius: 50%;
+  border-style: none;
+
+  width: 10rem;
+  
+}
