@@ -9,8 +9,8 @@
   background-color: gold;
 }
 
-h {
-  font-size: 3rem;
+.DWMWhead {
+  font-size: 4.5rem;
   padding: 0.4rem;
 }
 
@@ -18,7 +18,19 @@ h {
   display: block;
   border-radius: 50%;
   border-style: none;
-
   width: 10rem;
+}
+
+.DWMWinfo {
+  font-family: cursive;
+  font-size: 2.2rem;
+  color: blue;
+  line-height: 2.3rem;
+  text-indent: 3rem;
   
+}
+
+.watchDWMW {
+  display: block;
+  border-size: 20px 15px 10px 
 }
