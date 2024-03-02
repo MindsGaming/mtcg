@@ -34,3 +34,7 @@ function joinshow() {
 function DWMWgit() {
   window.open("https://gitlab.com/MindsGaming/dwmw", "_blank");
 }
+
+function HOME() {
+  window.open("/", "_self");
+}
