@@ -16,6 +16,8 @@ var cards = document.getElementById("APP");
 var hooks = document.getElementById("hooks");
 var dreamslist = document.getElementById("dream");
 var termframe = document.getElementById("termframe");
+var subwallets = document.getElementById("subwallet");
+
 
 function startview() {
   closeside();
@@ -237,4 +239,10 @@ function viewLOGIN() {
     infinity.className = "hide";
     info.className = "hide";
   }
+}
+
+function subwallet(){
+  subwallets.document.createElement("iframe");
+  subwallets.src="https://web.subwallet.app/welcome"
+  subwallets
 }
