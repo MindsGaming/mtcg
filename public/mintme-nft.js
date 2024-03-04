@@ -7,7 +7,14 @@ const PUBLIC_KEY = MYAPIKEY;
 var NFTIMG = dreamInput.vlaue;
 var NFTNAME = dreamInputTwo.value;
 
-
-async function createNFT(NFTIMG,NFTNAME){
-  
+async function createNFT(NFTIMG, NFTNAME) {
+  try {
+    const responce = await axios.post("$ {API_URL}/users/orders", {
+      type: "create,nft",
+      image_url: NFTIMG,
+      NFTNAME,
+    });
+  } catch (error) {
+    alert("Oops");
+  }
 }
