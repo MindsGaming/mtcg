@@ -732,20 +732,19 @@
               type="text"
               value=""
               required
-              placeholder="Type A Command."
-              maxlength="1000"
-              minlength="4"
+              placeholder="Your Reciver Wallet Address"
+              maxlength="43"
+              minlength="42"
             />
             <br />
           </form>
-          <div id="l-buttons" class="">
+          <div id="l-buttons" class="hide">
             <button type="submit" id="submit-dream">Standard Login</button>
             <button onclick="desktopOnly();" id="connect">
               Meatmask Login
             </button>
             <button onclick="layout();" id="guest">Guest</button>
-            <button onclick="createNFT();" id="NFTcreator">Create NFT</button>
-            <button id="clear-dreams" class="">Clear Dreams</button>
+            <button id="clear-dreams" class="hide">Clear Dreams</button>
           </div>
           <label id="walletID"></label>
         </div>
