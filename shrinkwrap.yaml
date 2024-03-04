@@ -1,4 +1,5 @@
 dependencies:
+  '@polkadot/api': 10.12.1
   '@subwallet/extension-dapp': 1.1.1
   axios: 0.28.0
   express: 4.18.3
@@ -203,6 +204,73 @@ packages:
     optional: true
     resolution:
       integrity: sha512-H7hOfilvx65wYxMjAI130rK34GcAPzMEuoP5W693N0PsXYc1QeoEHSza5NSgoN1U4jGNzDBoxu0al2WGKo1B5g==
+  /@polkadot/api-augment/10.12.1:
+    dependencies:
+      '@polkadot/api-base': 10.12.1
+      '@polkadot/rpc-augment': 10.12.1
+      '@polkadot/types': 10.12.1
+      '@polkadot/types-augment': 10.12.1
+      '@polkadot/types-codec': 10.12.1
+      '@polkadot/util': 12.6.2
+      tslib: 2.6.2
+    dev: false
+    engines:
+      node: '>=18'
+    resolution:
+      integrity: sha512-M8W8L3A1AaCvbDOt6xQm0/6Ul1MTUAiO7gTdNrszP5acTJUxnetiHRziJoquClhhzldkrwD79qFbqlhXK42GaQ==
+  /@polkadot/api-base/10.12.1:
+    dependencies:
+      '@polkadot/rpc-core': 10.12.1
+      '@polkadot/types': 10.12.1
+      '@polkadot/util': 12.6.2
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
+    engines:
+      node: '>=18'
+    resolution:
+      integrity: sha512-USfcGxO8RBOLSwYDdUArNt9jLR/r8qVhCs8iGEGoGnaSkTcJrvT1YzZ0Qy+QF3ZjZ5GfsnzRonBg3N6drHo6fQ==
+  /@polkadot/api-derive/10.12.1:
+    dependencies:
+      '@polkadot/api': 10.12.1
+      '@polkadot/api-augment': 10.12.1
+      '@polkadot/api-base': 10.12.1
+      '@polkadot/rpc-core': 10.12.1
+      '@polkadot/types': 10.12.1
+      '@polkadot/types-codec': 10.12.1
+      '@polkadot/util': 12.6.2
+      '@polkadot/util-crypto': 12.6.2
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
+    engines:
+      node: '>=18'
+    resolution:
+      integrity: sha512-tq03EmT8sgRnmbZW1E5GOIrdJGxGD+VhsJRP5kXMffpfzKGizzTbnMEOoCKg9fzB17ZtcwaJBJiLOQFTWy0O3g==
+  /@polkadot/api/10.12.1:
+    dependencies:
+      '@polkadot/api-augment': 10.12.1
+      '@polkadot/api-base': 10.12.1
+      '@polkadot/api-derive': 10.12.1
+      '@polkadot/keyring': 12.6.2
+      '@polkadot/rpc-augment': 10.12.1
+      '@polkadot/rpc-core': 10.12.1
+      '@polkadot/rpc-provider': 10.12.1
+      '@polkadot/types': 10.12.1
+      '@polkadot/types-augment': 10.12.1
+      '@polkadot/types-codec': 10.12.1
+      '@polkadot/types-create': 10.12.1
+      '@polkadot/types-known': 10.12.1
+      '@polkadot/util': 12.6.2
+      '@polkadot/util-crypto': 12.6.2
+      eventemitter3: 5.0.1
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
+    engines:
+      node: '>=18'
+    resolution:
+      integrity: sha512-6pZPpgyxSphse9PCZ/QxUygk0BYbcCNjr5ERZZsTE/F1znZ62Ce63A8AE0bwga9ITkiVISLDSU36hghKs3tVhA==
   /@polkadot/keyring/12.6.2:
     dependencies:
       '@polkadot/util': 12.6.2
@@ -223,6 +291,31 @@ packages:
       node: '>=18'
     resolution:
       integrity: sha512-1oWtZm1IvPWqvMrldVH6NI2gBoCndl5GEwx7lAuQWGr7eNL+6Bdc5K3Z9T0MzFvDGoi2/CBqjX9dRKo39pDC/w==
+  /@polkadot/rpc-augment/10.12.1:
+    dependencies:
+      '@polkadot/rpc-core': 10.12.1
+      '@polkadot/types': 10.12.1
+      '@polkadot/types-codec': 10.12.1
+      '@polkadot/util': 12.6.2
+      tslib: 2.6.2
+    dev: false
+    engines:
+      node: '>=18'
+    resolution:
+      integrity: sha512-4U4u5az6h7U4me2D7NYSNice++cpnG+6XUrE3UgSNQmvcQErB3DKAAln+P4iEQ9/Tj/Ex5jqjrfianCFJTlBcg==
+  /@polkadot/rpc-core/10.12.1:
+    dependencies:
+      '@polkadot/rpc-augment': 10.12.1
+      '@polkadot/rpc-provider': 10.12.1
+      '@polkadot/types': 10.12.1
+      '@polkadot/util': 12.6.2
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
+    engines:
+      node: '>=18'
+    resolution:
+      integrity: sha512-e8UViFN4p2STOhKL5HVxMI9ugzxrq1Ir85Pxpf2N29J8h4L8RwOuc6IPyn18uuKQakkl5b7EjsE2VKecjT4iUw==
   /@polkadot/rpc-provider/10.12.1:
     dependencies:
       '@polkadot/keyring': 12.6.2
@@ -275,6 +368,19 @@ packages:
       node: '>=18'
     resolution:
       integrity: sha512-ZpWUNrDaJQO1iYwtOva68S2xlEzfpQOPW5IylqlnV6izmavQvClwr7i2y3vL52YjoFNa3ZPEhxvwH7o4NtWB0A==
+  /@polkadot/types-known/10.12.1:
+    dependencies:
+      '@polkadot/networks': 12.6.2
+      '@polkadot/types': 10.12.1
+      '@polkadot/types-codec': 10.12.1
+      '@polkadot/types-create': 10.12.1
+      '@polkadot/util': 12.6.2
+      tslib: 2.6.2
+    dev: false
+    engines:
+      node: '>=18'
+    resolution:
+      integrity: sha512-qmUZ1HqPRvgrCMmRGrJy7FYuSjACxG1Htf/SSJwfWkwR+prFXQeMmADEmG8L3d9KZ/L1Mat/MF/9it0FrzX6aA==
   /@polkadot/types-support/10.12.1:
     dependencies:
       '@polkadot/util': 12.6.2
@@ -2986,6 +3092,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  '@polkadot/api': ^10.12.1
   '@subwallet/extension-dapp': ^1.1.1
   axios: ^0.28.0
   express: ^4.18.3
