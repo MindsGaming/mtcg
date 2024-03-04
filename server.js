@@ -106,6 +106,7 @@ const cleanseString = function (string) {
 };
 
 const OPENAI = process.env.OPENAI;
+const MYAPIKEY = process.env.MYAPIKEY;
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, () => {
