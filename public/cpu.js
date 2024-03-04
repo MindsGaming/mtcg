@@ -241,6 +241,7 @@ function viewLOGIN() {
 }
 
 function subwallet() {
+  closeside();
   if (subwallets.title == "subwallet") {
     infinity.title = "Subwallet";
     infinity.src = "https://web.subwallet.app/welcome";
