@@ -40,9 +40,20 @@ function HOME() {
 }
 
 function Supportbobdubloon() {
-  window.open("https://www.mintme.com/token/bobdubloon/MINTME/trade", "_blank");
+  window.open("https://www.mintme.com/token/bobdubbloon/MINTME/trade", "_blank");
 }
 
 function creatorConnectbobdubbloon() {
   window.open("https://minds.com/bobdub", "_blank");
+}
+
+function SupportSatoriD() {
+  window.open("https://www.mintme.com/token/SatoriD/MINTME/trade", "_blank");
+}
+
+function creatorConnectSatoriD() {
+  window.open(
+    "https://www.minds.com/group/604673111018713103/latest",
+    "_blank"
+  );
 }
