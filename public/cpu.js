@@ -250,6 +250,8 @@ function subwallet() {
     infinity.className = "apps";
     info.className = "hide";
     dreamslist.innerHTML = "Loading SubWallet...";
+    dreamInput.value = "Anonymous Subwallet O;";
+    appendNewDream(dreamInput.value);
   } else {
     infinity.title = "Infinity";
     infinity.src = "https://mindsgaming.glitch.me";
