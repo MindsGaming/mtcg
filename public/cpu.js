@@ -249,7 +249,7 @@ function subwallet() {
     splash.className = "splash";
     infinity.className = "apps";
     info.className = "hide";
-    dreamslist.innerHTML = "Loading Hubs...";
+    dreamslist.innerHTML = "Loading SubWallet...";
   } else {
     infinity.title = "Infinity";
     infinity.src = "https://mindsgaming.glitch.me";

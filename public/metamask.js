@@ -35,7 +35,7 @@ var connectWithMetaMask = async function () {
     var walletID = document.getElementById("walletID");
     var buttons = document.getElementById("l-buttons");
     walletID.innerHTML = placeaddy.value;
-    buttons.className = "hide";
+    closeside();
     dreamInput.value = "";
     dreamInput.focus();
   }
