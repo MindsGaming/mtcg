@@ -259,6 +259,10 @@ function subwallet() {
   }
 }
 
+function HOME() {
+  window.open("/", "_self");
+}
+
 /* HTTPS */
 
 var loc = window.location.href + "";
