@@ -23,7 +23,7 @@ fetch("/getDreams", {})
 // a helper function that creates a list item for a given dream
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
-  newListItem.innerText = dream + "Manual Login";
+  newListItem.innerText = dream;
   dreamsList.appendChild(newListItem);
 };
 
@@ -60,23 +60,3 @@ clearButton.addEventListener("click", (event) => {
     });
   dreamsList.innerHTML = "";
 });
-
-function hotfix() {
-  var fetchdream = document.getElementById("dream");
-
-  if (fetchdream.minlength < 42) {
-    alert("Not A Wallet Address.");
-  } else {
-    if (fetchdream.maxlength > 42) {
-      alert("Not A Wallet Address.");
-    } else {
-      // get dream value and add it to the list
-      dreams.push(dreamInput.value);
-      appendNewDream(dreamInput.value);
-
-      // reset form
-      dreamInput.value = "";
-      dreamInput.focus();
-    }
-  }
-}

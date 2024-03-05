@@ -3,8 +3,6 @@
 
 // init project
 const express = require("express");
-const axios = require("axios");
-
 const bodyParser = require("body-parser");
 const app = express();
 const fs = require("fs");
@@ -34,7 +32,7 @@ db.serialize(() => {
     // insert default dreams
     db.serialize(() => {
       db.run(
-        'INSERT INTO Dreams (dream) VALUES ("Charging Up"), ("Finding Games"), ("Loading #MindsGaming"), ("0x65b1b8c1ef939e4a36608c74e44d3278f9d23d9e-MindsGaming Reward: 100.00")'
+        'INSERT INTO Dreams (dream) VALUES ("Find and count some sheep"), ("Climb a really tall mountain"), ("Wash the dishes")'
       );
     });
   } else {
@@ -106,9 +104,6 @@ app.get("/clearDreams", (request, response) => {
 const cleanseString = function (string) {
   return string.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 };
-
-const OPENAI = process.env.OPENAI;
-const MYAPIKEY = process.env.MYAPIKEY;
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, () => {
