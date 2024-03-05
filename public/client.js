@@ -24,7 +24,6 @@ fetch("/getDreams", {})
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   newListItem.innerText = dream;
-  newListItem.id = "fetch-cpu-reply";
   dreamsList.appendChild(newListItem);
 };
 
@@ -45,7 +44,6 @@ dreamsForm.onsubmit = (event) => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
-  commands();
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
 
@@ -62,10 +60,3 @@ clearButton.addEventListener("click", (event) => {
     });
   dreamsList.innerHTML = "";
 });
-
-/* HTTPS */
-
-var loc = window.location.href + "";
-if (loc.indexOf("http://") == 0) {
-  window.location.href = loc.replace("http://", "https://");
-}
