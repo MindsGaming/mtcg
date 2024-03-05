@@ -39,7 +39,10 @@ function HOME() {
   window.open("/", "_self");
 }
 
+function Supportbobdubloon() {
+  window.open("https://www.mintme.com/token/bobdubloon/MINTME/trade", "_blank");
+}
 
-function Supportbobdubloon {
-  window.open("https://www.mintme.com/token/DWMWMINTME/trade", "_blank");
+function creatorConnectbobdubbloon() {
+  window.open("https://minds.com/bobdub", "_blank");
 }
