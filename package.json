@@ -17,10 +17,11 @@
     "axios": "^0.28.0",
     "socket.io-client": "^4.7.4",
     "@subwallet/extension-dapp": "^1.1.1",
-    "@polkadot/api": "^10.12.1"
+    "@polkadot/api": "^10.12.1",
+    "has-yarn": "^3.0.0"
   },
   "engines": {
-    "node": "12.x"
+    "node": "X.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/mtcg"
