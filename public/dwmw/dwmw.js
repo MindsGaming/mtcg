@@ -21,7 +21,7 @@ function watchDWMW() {
 }
 
 function DWMWdonate() {
-  window.open("https://www.mintme.com/token/DWMW", "_blank");
+  window.open("https://www.mintme.com/token/DWMW/MINTME/trade", "_blank");
 }
 
 function joinshow() {
