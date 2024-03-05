@@ -16,7 +16,6 @@ var cards = document.getElementById("APP");
 var hooks = document.getElementById("hooks");
 var dreamslist = document.getElementById("dream");
 var termframe = document.getElementById("termframe");
-var subwallets = document.getElementById("subwallet");
 
 function startview() {
   closeside();
@@ -201,7 +200,6 @@ function closeside() {
   launchgroup.className = "hide";
   groups.className = "show";
   infinity.title = "Infinity";
-  subwallet.title = "subwallet";
   info.title = "Information";
   rewards.title = "Closed";
   launchgroup.title = "Closed";
@@ -243,8 +241,7 @@ function viewLOGIN() {
 
 function subwallet() {
   closeside();
-   if (subwallets.title == "subwallet") {
-    subwallet.title = "Subwallet";
+  if (infinity.title == "Infinity") {
     infinity.title = "Subwallet";
     infinity.src = "https://web.subwallet.app/welcome";
     groups.className = "hide";
@@ -255,8 +252,7 @@ function subwallet() {
     dreamInput.value = "Anonymous Subwallet O;";
     appendNewDream(dreamInput.value);
   } else {
-    subwallet.title = "subwallet";
-    infinity.title = "";
+    infinity.title = "Infinity";
     infinity.src = "https://mindsgaming.glitch.me";
     groups.className = "show";
     splash.className = "hide";
