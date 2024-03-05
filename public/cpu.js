@@ -188,6 +188,11 @@ function launchgroupview() {
 }
 
 function closeside() {
+  infinity.title = "Infinity";
+  info.title = "Information";
+  rewards.title = "Closed";
+  launchgroup.title = "Closed";
+  termframe.title = "Login";
   tokens.className = "hide";
   wallets.className = "hide";
   groups.className = "show";
@@ -199,10 +204,6 @@ function closeside() {
   rewards.className = "hide";
   launchgroup.className = "hide";
   groups.className = "show";
-  infinity.title = "Infinity";
-  info.title = "Information";
-  rewards.title = "Closed";
-  launchgroup.title = "Closed";
   hooks.className = "hide";
   termframe.className = "hide";
 }
@@ -224,17 +225,14 @@ function viewLOGIN() {
     termframe.title = "Terminal";
     termframe.className = "terminalframe";
     groups.className = "hide";
-    splash.className = "hide";
     infinity.className = "hide";
     info.className = "hide";
-    dreamslist.innerHTML = "";
+    dreamsList.innerHTML = "";
     dreamInput.focus();
   } else {
     termframe.title = "Login";
     termframe.className = "hide";
     groups.className = "show";
-    splash.className = "hide";
-    infinity.className = "hide";
     info.className = "hide";
   }
 }
