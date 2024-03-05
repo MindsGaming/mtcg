@@ -62,11 +62,21 @@ clearButton.addEventListener("click", (event) => {
 });
 
 function hotfix() {
-  // get dream value and add it to the list
-  dreams.push(dreamInput.value);
-  appendNewDream(dreamInput.value);
+  var fetchdream = document.getElementById("dream");
 
-  // reset form
-  dreamInput.value = "";
-  dreamInput.focus();
+  if (fetchdream.minlength < 42) {
+    alert("Not A Wallet Address.");
+  } else {
+    if (fetchdream.maxlength > 42) {
+      alert("Not A Wallet Address.");
+    } else {
+      // get dream value and add it to the list
+      dreams.push(dreamInput.value);
+      appendNewDream(dreamInput.value);
+
+      // reset form
+      dreamInput.value = "";
+      dreamInput.focus();
+    }
+  }
 }
