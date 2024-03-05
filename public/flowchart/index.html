@@ -1,142 +1,192 @@
-That's fun! I'm looking to improve this flow chat with as much creativity as you can mustard! I'm looking for not only understanding but flair, up and down arrows and fun! <!DOCTYPE html>
-<html>
-<head>
-<style>
-  .flowchart-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    font-family: Arial, sans-serif;
-  }
-  .flowchart-row {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-  }
-  .flowchart-box {
-    border: 2px solid #333;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: background-color 0.3s;
-  }
-  .flowchart-box:hover {
-    background-color: #e8e8e8;
-  }
-  .arrow {
-    margin: 0 20px;
-    font-size: 24px;
-  }
-  .main-ecosystem {
-    background-color: #4CAF50;
-    color: white;
-  }
-  .creator-tokens {
-    background-color: #2196F3;
-    color: white;
-  }
-  .traders {
-    background-color: #f44336;
-    color: white;
-  }
-  .collector-cards {
-    background-color: #FFC107;
-    color: black;
-  }
-  .projects {
-    background-color: #9C27B0;
-    color: white;
-  }
-  .minds-ecosystem {
-    background-color: #00BCD4;
-    color: white;
-  }
-  .mintme-ecosystem {
-    background-color: #009688;
-    color: white;
-  }
-  .community-built {
-    background-color: #8BC34A;
-    color: black;
-  }
-  .gains {
-    background-color: #CDDC39;
-    color: black;
-  }
-  .loses {
-    background-color: #FF5722;
-    color: white;
-  }
-</style>
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>#MindsGaming -MTCG</title>
 
-<div class="flowchart-container">
-  <!-- Main Ecosystem -->
-  <div class="flowchart-row">
-    <div class="flowchart-box main-ecosystem">Main Ecosystem</div>
-  </div>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="web3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Community Groups & Resources" />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
 
-  <!-- Creator Tokens -->
-  <div class="flowchart-row">
-    <div class="flowchart-box creator-tokens">Creator Tokens (5 Creators)</div>
-  </div>
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.glitch.global/70ca8095-a01d-4d0a-a915-a742b0998958/Controller.jpeg?"
+      type="image/jpeg"
+    />
 
-  <!-- Traders to Creator Tokens -->
-  <div class="flowchart-row">
-    <div class="flowchart-box traders">Traders: ETH, MINTME (2 Traders)</div>
-    <div class="arrow">→</div>
-    <div class="flowchart-box creator-tokens">Creator Tokens</div>
-  </div>
+    <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/term/term.css" />
+    <script src="/script.js" defer></script>
+    <script src="/client.js" defer></script>
+    <script src="/cpu.js" defer></script>
+    <script src="/metamask.js" defer></script>
+    <script src="/term/term.js" defer></script>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      
+      wrap {
+        position: fixed;
+        width: 100%;
+        height: 90%;
+        boder-style: none;
+        overflow: scroll;
+      }
+      .flowchart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: grey;
+        overflow: scroll;
+      }
+      .box {
+        border: 2px solid #333;
+        padding: 15px;
+        margin: 10px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+      }
+      .box:hover {
+        transform: translateY(-5px);
+      }
+      .arrow {
+        margin: 0 15px;
+        font-size: 24px;
+      }
+      .main-ecosystem {
+        background-color: #4caf50;
+        color: white;
+      }
+      .creator-tokens {
+        background-color: #2196f3;
+        color: white;
+      }
+      .traders {
+        background-color: #f44336;
+        color: white;
+      }
+      .collector-cards {
+        background-color: #ffc107;
+        color: black;
+      }
+      .projects {
+        background-color: #9c27b0;
+        color: white;
+      }
+      .minds-ecosystem {
+        background-color: #00bcd4;
+        color: white;
+      }
+      .mintme-ecosystem {
+        background-color: #009688;
+        color: white;
+      }
+      .community-built {
+        background-color: #8bc34a;
+        color: black;
+      }
+      .gains {
+        background-color: #cddc39;
+        color: black;
+      }
+      .loses {
+        background-color: #ff5722;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <wrap>
+    <div class="flowchart">
+      <div class="box main-ecosystem">🌐 Main Ecosystem</div>
+      <div class="box creator-tokens">🎨 Creator Tokens (5 Creators)</div>
+      <div class="box traders">💱 Traders: ETH, MINTME (2 Traders)</div>
+      <span class="arrow">📉</span>
+      <div class="box collector-cards">
+        🃏 Collector Cards (NFT Ecosystem Collection)
+      </div>
+      <span class="arrow"></span>
+      <div class="box projects">🚀 Projects</div>
+      <span class="arrow">↓</span>
+      <div class="box minds-ecosystem">💡 Minds Ecosystem</div>
+      <div class="box mintme-ecosystem">🌱 MintMe Ecosystem</div>
+      <div class="box community-built">🌐 Community Built</div>
+      <div class="box gains">
+        📈 Gains: New Ecosystem Token, Active Ecosystem Trading, Minds.com
+        Activity, Community Trading, NFTs
+      </div>
+      <div class="box loses">📉 Loses: Projects, Community Trading</div>
+    </div>
+      <div id="termframe" class="hide" title="Login">
+        <label class="x" onclick="closeside();">X</label>
 
-  <!-- Collector Cards to Creator Tokens - Traders -->
-  <div class="flowchart-row">
-    <div class="flowchart-box collector-cards">Collector Cards (NFT Ecosystem Collection)</div>
-    <div class="arrow">→</div>
-    <div class="flowchart-box creator-tokens">Creator Tokens - Traders</div>
-  </div>
+        <label class="terminaltop"
+          >Game Terminal
+          <hr />
+        </label>
+        <br />
+        <br />
+        <ul class="term-command" id="dreams"></ul>
+        <label id="admin" class="hide"></label>
+        <iframe id="remix" class="hide" src="#"> </iframe>
 
-  <!-- Projects to Creators - Traders - Cards -->
-  <div class="flowchart-row">
-    <div class="flowchart-box projects">Projects</div>
-    <div class="arrow">→</div>
-    <div class="flowchart-box creator-tokens">Creators - Traders - Cards</div>
-  </div>
+        <form name="login">
+          <label id="l-preview" title="@MTCG" class="term-home"
+            >?!@MTCG/:</label
+          >
+          <input
+            class="term-command"
+            id="dream"
+            name="dream"
+            onmouseover="Rplaceholder();"
+            aria-label="a new dream"
+            type="text"
+            value=""
+            required
+            placeholder="Type A Command."
+            maxlength="43"
+            minlength="4"
+          />
+          <br />
+        </form>
+        <div id="l-buttons" class="hide">
+          <button type="submit" id="submit-dream">Standard Login</button>
+          <button onclick="desktopOnly();" id="connect">Meatmask Login</button>
+          <button onclick="layout();" id="guest">Guest</button>
+          <button id="clear-dreams" class="hide">Clear Dreams</button>
+        </div>
+        <label id="walletID"></label>
+      </div>
 
-  <!-- Minds Ecosystem -->
-  <div class="flowchart-row">
-    <div class="flowchart-box minds-ecosystem">Minds Ecosystem</div>
-  </div>
-
-  <!-- Trading and Support -->
-  <div class="flowchart-row">
-    <div class="flowchart-box">Trading</div>
-    <div class="flowchart-box">Support</div>
-  </div>
-
-  <!-- MintMe Ecosystem -->
-  <div class="flowchart-row">
-    <div class="flowchart-box mintme-ecosystem">MintMe Ecosystem</div>
-  </div>
-
-  <!-- Community Built -->
-  <div class="flowchart-row">
-    <div class="flowchart-box community-built">Community Built</div>
-  </div>
-
-  <!-- Gains -->
-  <div class="flowchart-row">
-    <div class="flowchart-box gains">Gains: New Ecosystem Token, Active Ecosystem Trading, Minds.com Activity, Community Trading, NFTs</div>
-  </div>
-
-  <!-- Loses -->
-  <div class="flowchart-row">
-    <div class="flowchart-box loses">Loses: Projects, Community Trading</div>
-  </div>
-</div>
-
-</body>
+      <div class="footer">
+        <div
+          class="start"
+          id="start"
+          title="Start Here"
+          onclick="HOME();"
+        ></div>
+        <div>
+          <a title="MTCG" href="#" onclick="Communityview();">
+            <img
+              class="footer-icon"
+              src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669052080420.png"
+            />
+          </a>
+        </div>
+      </div>
+    </wrap>
+  </body>
 </html>
