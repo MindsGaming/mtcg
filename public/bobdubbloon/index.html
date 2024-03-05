@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>#MindsGaming -DWMW</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dude Where's My Wallet?" />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/IMG_20230417_140324_Glitch2.jpg"
+      type="image/jpeg"
+    />
+    <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/term/term.css" />
+    <link rel="stylesheet" href="/dwmw/dwmw.css" />
+    <script src="/script.js" defer></script>
+    <script src="/client.js" defer></script>
+    <script src="/cpu.js" defer></script>
+    <script src="/metamask.js" defer></script>
+    <script src="/term/term.js" defer></script>
+    <script src="/dwmw/dwmw.js" defer></script>
+  </head>
+  <body>
+    <div align="center" class="movie" title="DWMW (Dude Where's My Wallet?)">
+      <h class="DWMWhead">bobdubbloon</h>
+      <img
+        class="DWMWimg"
+        src="https://www.mintme.com/media/cache/avatar_large/uploads/images/26555720-c495-11ed-8a37-78e3b517e592.jpeg"
+      />
+      <br />
+      <button
+        onclick="creatorConnect();"
+        class="watchDWMW"
+        title="Connect With The Creator"
+        id="connectbob"
+      >
+        Creator Connection
+      </button>
+      <button
+        onclick="Supportbobdubloon();"
+        class="watchDWMW"
+        title="Trade bobdubbloon"
+      >
+        Trade
+      </button>
+
+      <p class="DWMWinfo">
+        Among other podcast the creator of bobdubbloon covers behind the scenes
+        action of DWMW
+        <br />
+        <label class="crypto-text">
+          It's also a un-deployed cryptocurrency token you can trade and interat
+          with, <br />
+          with enough support it could launch on a blockchain.</label
+        >
+      </p>
+
+      <br />
+    </div>
+    <apps>
+      <div id="termframe" class="hide" title="Login">
+        <label class="x" onclick="closeside();">X</label>
+
+        <label class="terminaltop"
+          >Game Terminal
+          <hr />
+        </label>
+        <br />
+        <br />
+        <ul class="term-command" id="dreams"></ul>
+        <label id="admin" class="hide"></label>
+        <iframe id="remix" class="hide" src="#"> </iframe>
+
+        <form name="login">
+          <label id="l-preview" title="@MTCG" class="term-home"
+            >?!@MTCG/:</label
+          >
+          <input
+            class="term-command"
+            id="dream"
+            name="dream"
+            onmouseover="Rplaceholder();"
+            aria-label="a new dream"
+            type="text"
+            value=""
+            required
+            placeholder="Type A Command."
+            maxlength="43"
+            minlength="4"
+          />
+          <br />
+        </form>
+        <div id="l-buttons" class="hide">
+          <button type="submit" id="submit-dream">Standard Login</button>
+          <button onclick="desktopOnly();" id="connect">Meatmask Login</button>
+          <button onclick="layout();" id="guest">Guest</button>
+          <button id="clear-dreams" class="hide">Clear Dreams</button>
+        </div>
+        <label id="walletID"></label>
+      </div>
+
+      <div class="footer">
+        <div
+          class="start"
+          id="start"
+          title="Start Here"
+          onclick="HOME();"
+        ></div>
+        <div>
+          <a title="MTCG" href="#" onclick="Communityview();">
+            <img
+              class="footer-icon"
+              src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669052080420.png"
+            />
+          </a>
+        </div>
+      </div>
+    </apps>
+  </body>
+</html>

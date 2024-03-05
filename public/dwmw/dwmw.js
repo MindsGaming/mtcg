@@ -38,3 +38,8 @@ function DWMWgit() {
 function HOME() {
   window.open("/", "_self");
 }
+
+
+function Supportbobdubloon {
+  window.open("https://www.mintme.com/token/DWMWMINTME/trade", "_blank");
+}
