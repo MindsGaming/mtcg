@@ -14,12 +14,20 @@ function watchDWMW() {
       watch.innerHTML = "Eposide Three";
     } else {
       if (watch.title == "E3") {
-        watch.innerHTML = "Coming Soon...";
+        window.open(
+          "https://www.minds.com/embed/1611926182259855376",
+          "_blank"
+        );
+        watch.title = "E4";
+        watch.innerHTML = "Eposide Four";
+      } else {
+        if (watch.title == "E4") {
+          alert("coming Soon..");
+        }
       }
     }
   }
 }
-
 function DWMWdonate() {
   window.open("https://www.mintme.com/token/DWMW/MINTME/trade", "_blank");
 }
@@ -40,7 +48,10 @@ function HOME() {
 }
 
 function Supportbobdubloon() {
-  window.open("https://www.mintme.com/token/bobdubbloon/MINTME/trade", "_blank");
+  window.open(
+    "https://www.mintme.com/token/bobdubbloon/MINTME/trade",
+    "_blank"
+  );
 }
 
 function creatorConnectbobdubbloon() {
