@@ -66,10 +66,11 @@ body {
 
 token {
   position: relative;
-  display: block;
-  border-style: solid;
+  display:block;
   width: 20rem;
-  height: 10rem;
+  height: 20rem;
   background-color: gold;
   border-radius: 15px 60px 10px 80px;
+  text-align: center;
 }
+
