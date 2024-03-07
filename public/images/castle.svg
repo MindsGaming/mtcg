@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+    <!-- Castle 1 -->
+    <rect x="50" y="100" width="60" height="100" fill="gray" />
+    <polygon points="30,100 80,50 130,100" fill="gray" />
+    <!-- Castle 2 -->
+    <rect x="150" y="80" width="80" height="120" fill="purple" />
+    <polygon points="130,80 180,30 230,80" fill="purple" />
+    <!-- Castle 3 -->
+    <rect x="270" y="90" width="70" height="110" fill="blue" />
+    <polygon points="250,90 320,40 390,90" fill="blue" />
+    <!-- Castle 4 -->
+    <rect x="380" y="110" width="50" height="90" fill="pink" />
+    <polygon points="360,110 405,70 450,110" fill="pink" />
+    <!-- Castle 5 -->
+    <rect x="450" y="120" width="40" height="80" fill="green" />
+    <polygon points="430,120 470,80 510,120" fill="green" />
+</svg>
