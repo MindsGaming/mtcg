@@ -55,7 +55,7 @@ body {
 }
 
 .map {
-  position:fixed;
+  position: fixed;
   display: block;
   border-style: none;
   width: 100%;
@@ -66,7 +66,10 @@ body {
 
 token {
   position: relative;
-  width:  20%;
+  display: block;
+  border-style: solid;
+  width: 20rem;
   height: 10rem;
   background-color: gold;
+  border-radius: 15px 60px 10px 80px;
 }
