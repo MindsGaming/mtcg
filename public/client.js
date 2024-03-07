@@ -10,6 +10,7 @@ const dreams = [];
 // define variables that reference elements on our page
 const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
+const dreamCommand = dreamsForm.elements["command"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
 
@@ -49,13 +50,13 @@ dreamsForm.onsubmit = (event) => {
   loginID.id = dreamInput.value;
   loginID.innerHTML = dreamInput.value;
   dreamInput.placeholder = "Thanks For Logging In!";
-
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
 
   // reset form
   dreamInput.value = "";
   dreamInput.focus();
+  readyTerm();
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -66,3 +67,10 @@ clearButton.addEventListener("click", (event) => {
     });
   dreamsList.innerHTML = "";
 });
+
+// Term
+
+function readyTerm() {
+  dreamInput.classname = "hide";
+  dreamCommand.classname = "term-command";
+}

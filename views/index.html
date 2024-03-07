@@ -711,14 +711,14 @@
           <br />
           <br />
           <ul class="term-command" id="dreams"></ul>
-          <label id="admin" class="hide"></label>
-          <iframe id="remix" class="hide" src="#"> </iframe>
+          <ul class="term-command" id="commands"></ul>
 
           <label id="l-preview" title="@MTCG" class="term-home"
             >?!@MTCG/:
 
             <form>
               <input
+                id="dream"
                 name="dream"
                 aria-label="a new dream"
                 type="string"
@@ -728,6 +728,18 @@
                 maxlength="43"
                 minlength="42"
                 class="term-command"
+              />
+              <input
+                id="command"
+                name="command"
+                aria-label="a new dream"
+                type="string"
+                value=""
+                required
+                placeholder="Thanks For Logging In!"
+                maxlength="0"
+                minlength="0"
+                class="hide"
               />
               <button onclick="desktopOnly();" id="connect">
                 Meatmask Destop
