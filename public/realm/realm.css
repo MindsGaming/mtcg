@@ -39,8 +39,34 @@ body {
   width: 2rem;
   height: 1.2rem;
 }
-
+.slider-top {
+  float: right;
+  display: block;
+  border-style: solid;
+  border-radius: 15px 20px 40px 18px;
+  width: 2rem;
+  height: 1.2rem;
+  margin: 1.1rem;
+  background-color: white;
+}
 
 .hide {
   display: none;
+}
+
+.map {
+  position:fixed;
+  display: block;
+  border-style: none;
+  width: 100%;
+  margin-right: 5.5rem;
+  margin-top: 3rem;
+  margin-left: -0rem;
+}
+
+token {
+  position: relative;
+  width:  20%;
+  height: 10rem;
+  background-color: gold;
 }

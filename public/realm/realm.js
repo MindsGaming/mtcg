@@ -6,5 +6,13 @@ function slider() {
   if (sidebarRight.className == "sidebar-right") {
     sidebarRight.className = "hide";
     smile.innerHTML = sliderButton.innerHTML;
+    smile.className = "slider-top";
+    
+  } else {
+    if (sidebarRight.className == "hide") {
+      sidebarRight.className = "sidebar-right";
+      smile.innerHTML = "";
+      smile.className = "";
+    }
   }
 }
