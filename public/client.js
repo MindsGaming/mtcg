@@ -10,7 +10,6 @@ const dreams = [];
 // define variables that reference elements on our page
 const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
-const dreamCommand = dreamsForm.elements["command"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
 
@@ -28,6 +27,12 @@ const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   newListItem.innerText = dream;
   dreamsList.appendChild(newListItem);
+};
+
+const appendNewDreams = (dreamtwo) => {
+  const newListItems = document.createElement("li");
+  newListItems.innerText = dreamtwo;
+  dreamCommands.appendChild(newListItems);
 };
 
 // listen for the form to be submitted and add a new dream when it is
@@ -71,6 +76,9 @@ clearButton.addEventListener("click", (event) => {
 // Term
 
 function readyTerm() {
-  dreamInput.classname = "hide";
-  dreamCommand.classname = "term-command";
+  dreamInput.className = "hide";
+  dreamsList.className = "hide";
+  dreamCommand.className = "term-command";
+  dreamCommands.className = "term-command";
+  dreamCommands.title = "Terminal";
 }
