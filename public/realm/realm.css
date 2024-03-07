@@ -54,6 +54,7 @@ body {
   display: none;
 }
 
+
 .map {
   position: fixed;
   display: block;
@@ -74,3 +75,16 @@ token {
   text-align: center;
 }
 
+.castle {
+  width: 15rem;
+  height: 10rem;
+  display: block;
+  image
+  border-style: 15px 15px 15px 15px;
+}
+
+.mini-castle {
+  float: left;
+  width: 5rem;
+  height: 2rem;
+}
