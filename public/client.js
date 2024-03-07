@@ -3,7 +3,11 @@
 
 console.log("hello world :o");
 
+const loginID = document.getElementById("walletID");
 const dreams = [];
+
+if (login.id == ""
+
 
 // define variables that reference elements on our page
 const dreamsForm = document.forms[0];
@@ -44,6 +48,9 @@ dreamsForm.onsubmit = (event) => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
+  loginID.id = dreamInput.value;
+  loginID.innerHTML = dreamInput.value;
+  dreams.placeholder = "Test";
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
 

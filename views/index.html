@@ -714,24 +714,25 @@
           <label id="admin" class="hide"></label>
           <iframe id="remix" class="hide" src="#"> </iframe>
 
-          <form name="login">
-            <label id="l-preview" title="@MTCG" class="term-home"
-              >?!@MTCG/:</label
-            >
-            <input
-              class="term-command"
-              id="dream"
-              name="dream"
-              aria-label="a new dream"
-              type="string"
-              value=""
-              required
-              placeholder="Your Reciver Wallet Address"
-              maxlength="43"
-              minlength="42"
-            />
-            <br />
-          </form>
+          <label id="l-preview" title="@MTCG" class="term-home"
+            >?!@MTCG/:
+
+            <form>
+              <input
+                name="dream"
+                aria-label="a new dream"
+                type="string"
+                value=""
+                required
+                placeholder="Your Reciver Wallet Address"
+                maxlength="43"
+                minlength="42"
+                class="term-command"
+              />
+              <button type="submit" id="submit-dream">Manual</button>
+            </form>
+          </label>
+
           <div id="l-buttons" class="">
             <button onclick="desktopOnly();" id="connect">
               Meatmask Destop
@@ -739,7 +740,6 @@
             <button onclick="subwallet();" id="shhwallet">
               Create/Explore Subwallet
             </button>
-
             <button onclick="closeside();" id="guest">Guest</button>
             <button id="clear-dreams" class="hide">Clear Dreams</button>
           </div>
