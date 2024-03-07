@@ -2,8 +2,9 @@
 // run by the browser each time your view template referencing it is loaded
 
 console.log("hello world :o");
-
 const loginID = document.getElementById("walletID");
+const MTCGterm = document.getElementById("MTCG-term");
+
 const dreams = [];
 
 // define variables that reference elements on our page
@@ -47,9 +48,8 @@ dreamsForm.onsubmit = (event) => {
   // get dream value and add it to the list
   loginID.id = dreamInput.value;
   loginID.innerHTML = dreamInput.value;
-  
-  
-  
+  dreamInput.placeholder = "Thanks For Logging In!";
+
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
 

@@ -11,10 +11,8 @@ var connectWithMetaMask = async function () {
   const accounts = await ethereum.request({ method: "eth_requestAccounts" });
   const publicAddress = accounts[0];
   console.log("Address chosen is", publicAddress);
-  var placeaddy = document.getElementById("dream");
-  placeaddy.value = ethereum.selectedAddress;
 
-  if (placeaddy.value == ethereum.selectedAddress) {
+ 
     // CUstom
     const data = {
       dream: ethereum.selectedAddress + " Logged In",
@@ -35,7 +33,7 @@ var connectWithMetaMask = async function () {
     var walletID = document.getElementById("walletID");
     var buttons = document.getElementById("l-buttons");
     walletID.innerHTML = placeaddy.value;
-    closeside();
+    dreamInput.placeHolder = "Thanks For Using Metamask!";
     dreamInput.value = "";
     dreamInput.focus();
   }
