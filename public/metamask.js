@@ -1,6 +1,13 @@
 var enableLogin = function () {
   let connectButton = document.getElementById("connect");
   connectButton.addEventListener("click", connectWithMetaMask);
+  console.log("Connect button enabled");
+
+  let checkLink = document.getElementById("check");
+  checkLink.addEventListener("click", check);
+
+  let updateButton = document.getElementById("updateUserData");
+  updateButton.addEventListener("click", updateUserData);
 };
 
 var connectWithMetaMask = async function () {
@@ -11,11 +18,14 @@ var connectWithMetaMask = async function () {
   const accounts = await ethereum.request({ method: "eth_requestAccounts" });
   const publicAddress = accounts[0];
   console.log("Address chosen is", publicAddress);
+  var placeaddy = document.getElementById("walletID");
+  placeaddy.value = ethereum.selectedAddress;
 
- 
+  if (placeaddy.value == ethereum.selectedAddress) {
     // CUstom
+
     const data = {
-      dream: ethereum.selectedAddress + " Logged In",
+      dream: dreamInput.value + " Started Earning",
     };
 
     fetch("/addDream", {
@@ -28,14 +38,14 @@ var connectWithMetaMask = async function () {
         console.log(JSON.stringify(response));
       });
     // get dream value and add it to the list
-    dreams.push(dreamInput.value + "Logged In");
-    appendNewDream(dreamInput.value + "Logged In");
-    var walletID = document.getElementById("walletID");
-    var buttons = document.getElementById("l-buttons");
-    walletID.innerHTML = placeaddy.value;
-    dreamInput.placeHolder = "Thanks For Using Metamask!";
+    dreams.push(dreamInput.value + " Started Earning");
+    appendNewDream(dreamInput.value + " Started Earning");
+
+    // reset form
     dreamInput.value = "";
+    dreamInput.placeholder = "Thanks For Using Metamask!";
     dreamInput.focus();
+    //
   }
 
   async () => {
@@ -101,6 +111,7 @@ var createUser = async function (publicAddress) {
 var signMessage = async function (nonce, publicAddress) {
   web3.eth.personal.sign(nonce + "", publicAddress).then(async (signed) => {
     await authenticate(publicAddress, signed);
+    await closePOP();
     await greet();
     console.log(signed);
   });
