@@ -29,11 +29,7 @@ const appendNewDream = (dream) => {
   dreamsList.appendChild(newListItem);
 };
 
-const appendNewDreams = (dreamtwo) => {
-  const newListItems = document.createElement("li");
-  newListItems.innerText = dreamtwo;
-  dreamCommands.appendChild(newListItems);
-};
+
 
 // listen for the form to be submitted and add a new dream when it is
 dreamsForm.onsubmit = (event) => {
