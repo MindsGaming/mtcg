@@ -25,13 +25,22 @@
     <script src="/client.js" defer></script>
     <script src="/cpu.js" defer></script>
     <script src="/metamask.js" defer></script>
-    <script src="/term/term.js" defer></script>
+    <script src="/realm/realm.js" defer></script>
   </head>
   <wrap>
     <body>
       <app class="realm">
-        <div class="topper"></div>
-        <div class="sidebar-right"><textarea contenteditable='true></textarea></div>
+        <div class="topper"><label id="smile"></label></div>
+        <div id="sidebar-right" class="sidebar-right">
+          <textarea
+            id="slider"
+            class="slider"
+            contenteditable="true"
+            onclick="slider();"
+          >
+:)</textarea
+          >
+        </div>
         <div class="map">
           <token id="GAMER-kingdom" class="GAMER-kingdom" title="GAMER">
             <h2>GAMER</h2>

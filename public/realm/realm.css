@@ -31,3 +31,16 @@ body {
   overflow: scroll;
   opacity: 0.6;
 }
+.slider {
+  float: right;
+  display: block;
+  border-style: solid;
+  border-radius: 15px 20px 40px 18px;
+  width: 2rem;
+  height: 1.2rem;
+}
+
+
+.hide {
+  display: none;
+}
