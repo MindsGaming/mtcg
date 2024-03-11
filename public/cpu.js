@@ -259,6 +259,12 @@ function subwallet() {
   }
 }
 
+/* Points */
+
+function earnPoints() {
+  alert("Coming Soon..");
+}
+
 function HOME() {
   window.open("/", "_self");
 }

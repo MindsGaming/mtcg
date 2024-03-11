@@ -197,11 +197,11 @@
               >
 
               <label
-                onclick="openhubs();"
+                onclick="viewLOGIN();"
                 class="menu-item"
                 title="Hubs"
                 id="hubs"
-                >Hubs</label
+                >Points</label
               >
             </div>
           </div>
@@ -525,8 +525,8 @@
             <div class="shopitems">
               <h>Shop Items</h>
               <p style="font-size: 0.65rem; color: white">
-              Spend Your Earned   Launch Your Group, Promote Your Bounties And More <br />On This
-                Community Website<br />
+                Spend Your Earned Tokens Launching Your Group, Promoting Your
+                Bounties, Token And More <br />On Our MTCG Token Space<br />
               </p>
               <br />
               <div class="reward">
@@ -717,7 +717,7 @@
           <ul title="hidden" class="term-command" id="commands"></ul>
 
           <label id="l-preview" title="@MTCG" class="term-home"
-            >?!@MTCG/:
+            >?!@MTCG/:Points Coming Soon..
 
             <form>
               <input
@@ -732,23 +732,19 @@
                 minlength="42"
                 class="term-command"
               />
+            </form>
 
+            <div id="l-buttons" class="">
               <button onclick="desktopOnly();" id="connect">
                 Meatmask Destop
               </button>
               <button type="submit" id="submit-dream">Manual</button>
-            </form>
+              <button onclick="closeside();" id="guest">Guest</button>
+
+              <button id="clear-dreams" class="hide">Clear Dreams</button>
+            </div>
+            <label id="walletID"></label>
           </label>
-
-          <div id="l-buttons" class="">
-            <button onclick="closeside();" id="guest">Guest</button>
-
-            <button onclick="subwallet();" id="shhwallet">
-              Create A Subwallet
-            </button>
-            <button id="clear-dreams" class="hide">Clear Dreams</button>
-          </div>
-          <label id="walletID"></label>
         </div>
 
         <div class="footer">
