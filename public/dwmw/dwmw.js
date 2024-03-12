@@ -47,6 +47,15 @@ function HOME() {
   window.open("/", "_self");
 }
 
+function InfinityChat(){
+  var InfinityChat = document.getElementById("InfinityChat");
+  Infinity
+}
+
+
+/* Creator Pages */
+
+
 function Supportbobdubloon() {
   window.open(
     "https://www.mintme.com/token/bobdubbloon/MINTME/trade",
