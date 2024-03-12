@@ -47,14 +47,15 @@ function HOME() {
   window.open("/", "_self");
 }
 
-function InfinityChat(){
+function InfinityChat() {
   var InfinityChat = document.getElementById("InfinityChat");
-  Infinity
+  var Chatbox = document.getElementById("chat-box");
+  Chatbox.className = "chat-box";
+  InfinityChat.src =
+    "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=3e1d4ad6-cc87-45a3-b838-c88db6d736f0";
 }
 
-
 /* Creator Pages */
-
 
 function Supportbobdubloon() {
   window.open(
