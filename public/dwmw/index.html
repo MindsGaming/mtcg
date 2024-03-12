@@ -64,10 +64,13 @@
 
       <br />
       <button onclick="joinshow();" class="DWMWbuttons">Get Involved!</button>
-      <button onclick="DWMWgit()" class="DWMWbuttons">Improve The Git</button>
-      <button onclick="InfinityChat()" class="DWMWbuttons">Chat With AI</button>
+      <button onclick="DWMWgit();" class="DWMWbuttons">Improve The Git</button>
+      <button onclick="InfinityChat();" class="DWMWbuttons">
+        Chat With AI
+      </button>
 
-      <div id="chat-box" class="hide">
+      <div id="chat-box" class="hide" title="chatbox">
+        <label onclick="InfinityChat();" class="close">X</label>
         <iframe
           id="InfinityChat"
           src="https://mindsgaming.glitch.me"

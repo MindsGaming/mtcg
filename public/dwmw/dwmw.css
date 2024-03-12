@@ -67,8 +67,15 @@
   bottom: 0;
   right: 0;
   width: 20rem;
-  height: 40rem;
-  margin-bottom: 3.7rem;
+  height: 33.9rem;
+  margin-bottom: 6.5rem;
   opacity: 0.8;
   background-color: black;
+}
+
+.close {
+  float: right;
+  width: 3rem;
+  height: 2.5rem;
+  color: black;
 }

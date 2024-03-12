@@ -48,11 +48,22 @@ function HOME() {
 }
 
 function InfinityChat() {
-  var InfinityChat = document.getElementById("InfinityChat");
   var Chatbox = document.getElementById("chat-box");
-  Chatbox.className = "chat-box";
-  InfinityChat.src =
-    "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=3e1d4ad6-cc87-45a3-b838-c88db6d736f0";
+  if (Chatbox.title == "chatbox") {
+    var InfinityChat = document.getElementById("InfinityChat");
+    Chatbox.className = "chat-box";
+    InfinityChat.src =
+      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=42fd7e69-12d4-44df-8c92-9abfaccce072";
+    Chatbox.title = "Chatting";
+  } else {
+    if (Chatbox.title == "Chatting") {
+      var InfinityChat = document.getElementById("InfinityChat");
+      Chatbox.className = "hide";
+      InfinityChat.src =
+        "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=42fd7e69-12d4-44df-8c92-9abfaccce072";
+      Chatbox.title = "chatbox";
+    }
+  }
 }
 
 /* Creator Pages */
