@@ -89,3 +89,17 @@ function creatorConnectSatoriD() {
     "_blank"
   );
 }
+
+function SupportWTV() {
+  window.open(
+    "https://www.mintme.com/token/withinthevacuum/MINTME/trade",
+    "_blank"
+  );
+}
+
+function creatorConnectWTV() {
+  window.open(
+    "https://www.minds.com/group/1533662279625609229/latest",
+    "_blank"
+  );
+}
