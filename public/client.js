@@ -1,8 +1,6 @@
 // client-side js
 // run by the browser each time your view template referencing it is loaded
-
 console.log("hello world :o");
-
 const dreams = [];
 
 // define variables that reference elements on our page
@@ -28,17 +26,13 @@ fetch("/getDreams", {})
 // a helper function that creates a list item for a given dream
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
-  let currentBlocks = dreamsList.getElementsByTagName("li");
-  let numb = currentBlocks.length;
+  let numb = dreamsList.getElementsByTagName("li").length;
   let randomWarp = Math.floor(Math.random() * 5) + numb;
-  currentBLOCKS.innerHTML = numb;
+  newListItem.innerHTML = numb;
   newListItem.innerText = dream;
   newListItem.title = "DreamBlock";
   newListItem.id = numb;
   newListItem.value = randomWarp;
-  userAlert.title = "";
-  newListItem.addEventListener("click", miner);
-
   dreamsList.appendChild(newListItem);
 };
 
@@ -46,9 +40,7 @@ const appendNewDream = (dream) => {
 dreamsForm.onsubmit = (event) => {
   // stop our form submission from refreshing the page
   event.preventDefault();
-
   const data = { dream: dreamInput.value };
-
   fetch("/addDream", {
     method: "POST",
     body: JSON.stringify(data),
@@ -61,10 +53,10 @@ dreamsForm.onsubmit = (event) => {
   // get dream value and add it to the list
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
-
   // reset form
   userAccount.innerHTML = dreamInput.value;
   minerBTN.className = "account-list";
+  miner();
   dreamInput.value = "";
   dreamInput.focus();
 };
@@ -79,29 +71,24 @@ clearButton.addEventListener("click", (event) => {
 });
 
 function createBlock() {
-  let currentBlocks = dreamsList.getElementsByTagName("li");
-  let numb = currentBlocks.length;
-  currentBLOCKS.innerHTML = numb;
-  userAlert.title = "";
+  currentBLOCKS.innerHTML = dreamsList.getElementsByTagName("li").length;
 }
 
 function miner() {
   /* Mine Block*/
-
   let currentBlocks = dreamsList.getElementsByTagName("li");
   let numb = currentBlocks.length;
-  let warp = Math.floor(Math.random() * numb);
+  let warp = Math.floor(Math.random() * numb) + 0;
   var mineBLOCK = document.getElementById(warp);
   let pushmined = parseFloat(document.getElementById("minedBLOCKS").innerHTML);
   let pushvalue = parseFloat(mineBLOCK.value);
   let math = pushmined + pushvalue;
   var minedBLOCKS = document.getElementById("minedBLOCKS");
   minedBLOCKS.innerHTML = math;
-  if (math > currentBLOCKS.innerHTML) {
+  if (math > currentBlocks.length) {
     minerBTN.className = "hide";
-    minedBLOCKS.innerHTML = currentBLOCKS.innerHTML;
+    minedBLOCKS.innerHTML = currentBlocks.length;
   }
-
   /* Pull Points*/
   let minedPOINTS = mineBLOCK.value;
   let currentPOINTS = parseInt(POINTS.innerHTML);
@@ -112,5 +99,6 @@ function miner() {
 function loginNote() {
   var fetchLogin = document.getElementById("login-form");
   var fetchNote = document.getElementById("login-note");
-  fetchNote.innerHTML = fetchLogin.innerHTML;
+  fetchLogin.className = "wallet-article";
+  fetchNote.className = "hide";
 }
