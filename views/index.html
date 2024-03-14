@@ -711,10 +711,10 @@
         </div>
 
         <div id="termframe" class="hide" title="Login">
-          <label class="x" onclick="closeside();">X</label>
-
           <center>
             <div class="wallet">
+              <label class="x" onclick="closeside();">X</label>
+
               <div class="wallet-top">
                 <label class="MTCG-top">MTCG Rewards</label><br />
                 <label title="DreamBlocks" class="points" id="points-preview"
@@ -728,9 +728,8 @@
                     <label id="fetchLogin">
                       <h1>Login</h1>
                       <p>
-                        Login to start earning points with our website, <br />
-                        make sure to read about how they work, or presss buttons
-                        and figure it out!
+                        We are building a new rewards system. login to create a
+                        DreamBlock.
                       </p>
                       <button onclick="fetchLogin();">Login</button>
                     </label>
@@ -752,7 +751,6 @@
                     </form>
 
                     <section class="dreams">
-                      <ul class="" id="dreams"></ul>
                       <button class="hide" id="clear-dreams">
                         Clear Dreams
                       </button>
@@ -778,6 +776,9 @@
                   Testing!
                 </p>
                 <button onclick="fetchLearn();">Learn</button>
+                <ul class="fit" id="dreams"></ul>
+                <br />
+                <br />
               </center>
             </div>
           </center>
