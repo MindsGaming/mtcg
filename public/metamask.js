@@ -1,3 +1,15 @@
+var enableLogin = function () {
+  let connectButton = document.getElementById("connect");
+  connectButton.addEventListener("click", connectWithMetaMask);
+  console.log("Connect button enabled");
+
+  let checkLink = document.getElementById("connect");
+  checkLink.addEventListener("click", check);
+
+  let updateButton = document.getElementById("updateUserData");
+  updateButton.addEventListener("click", updateUserData);
+};
+
 var connectWithMetaMask = async function () {
   console.log("Connect with MetaMask");
   console.log("Network version", ethereum.networkVersion);
@@ -6,37 +18,6 @@ var connectWithMetaMask = async function () {
   const accounts = await ethereum.request({ method: "eth_requestAccounts" });
   const publicAddress = accounts[0];
   console.log("Address chosen is", publicAddress);
-  var placeaddy = document.getElementById("user-account");
-  placeaddy.value = ethereum.selectedAddress;
-  placeaddy.innerHTML = placeaddy.value;
-
-  if (placeaddy.value == ethereum.selectedAddress) {
-    // CUstom
-
-    const data = {
-      dream: dreamInput.value,
-    };
-
-    fetch("/addDream", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((res) => res.json())
-      .then((response) => {
-        console.log(JSON.stringify(response));
-      });
-
-    // get dream value and add it to the list
-    dreams.push(dreamInput.value + " Created Block");
-    appendNewDream(dreamInput.value + " Created Block");
-
-    // reset form
-
-    dreamInput.value = "";
-    dreamInput.focus();
-    //
-  }
 
   async () => {
     await ethereum.request({
