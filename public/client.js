@@ -37,17 +37,20 @@ const appendNewDream = (dream) => {
   dreamsList.appendChild(newListItem);
 
   /* DreamChain */
-  createBLOCK();
 
+  /* DreamChain */
+  createBLOCK();
   function createBLOCK() {
     function getRandomInteger(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    let customBlock = getRandomInteger(parseInt(pointsPreview.innerHTML), 100); // Parse the innerHTML value to an integer
-    DreamChain.value = customBlock;
+    let customBlock = getRandomInteger(1, 5);
+    let chain = DreamChain.value;
+    let link = customBlock + chain;
+    DreamChain.value = link;
     DreamChain.min = "0";
     DreamChain.max = "1000";
-    pointsPreview.innerHTML = customBlock;
+    pointsPreview.innerHTML = link;
   }
 };
 

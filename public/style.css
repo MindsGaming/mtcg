@@ -355,7 +355,7 @@ apps {
 }
 
 .wallet-name {
-  float: left;
+  float: right;
   color: gold;
   font-weight: bold;
   margin: 1px;
