@@ -41,20 +41,20 @@ const appendNewDream = (dream) => {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    var fetchBlocks = dreamsList.getElementsByTagName("li");
-    var rollover = document.getElementById("rollover");
-    let DREAMBLOCKS = fetchBlocks.length;
-    let customBlock = getRandomInteger(DREAMBLOCKS, 9);
-
-    let newBLOCKS = DREAMBLOCKS + "." + customBlock;
+    const fetchBlocks = dreamsList.getElementsByTagName("li");
+    const rollover = document.getElementById("rollover");
+    const DREAMBLOCKS = fetchBlocks.length;
+    const customBlock = getRandomInteger(DREAMBLOCKS, 9);
+    const newBLOCKS = `${DREAMBLOCKS}.${customBlock}`;
     rollover.innerHTML = customBlock;
     DreamChain.value = newBLOCKS;
     DreamChain.min = "0";
     DreamChain.max = "1000";
     pointsPreview.innerHTML = newBLOCKS;
 
-    if (rollover.innerHTML == 9) {
-      pointsPreview.innerHTML = newBLOCKS;
+    if (rollover.innerHTML === "9") {
+      const boostBlock = `${newBLOCKS}.1`;
+      pointsPreview.innerHTML = boostBlock;
     }
   }
 
@@ -110,18 +110,4 @@ function fetchLogin() {
       removearticle.className = "form";
     }
   }
-}
-
-/* DreamChain */
-function createBLOCKs() {
-  function getRandomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  let customBlock = getRandomInteger(1, 5);
-  let chain = DreamChain.value;
-  let link = customBlock + chain;
-  DreamChain.value = link;
-  DreamChain.min = "0";
-  DreamChain.max = "1000";
-  pointsPreview.innerHTML = link;
 }
