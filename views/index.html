@@ -711,83 +711,101 @@
         </div>
 
         <div id="termframe" class="hide" title="Login">
-          <center>
-            <div class="wallet">
-              <label class="x" onclick="closeside();">X</label>
-
-              <div class="wallet-top">
-                <label class="MTCG-top">MTCG Rewards</label><br />
-                <label title="DreamBlocks" class="points" id="points-preview"
-                  >0</label
-                >
-                <meter
-                  class="hide"
-                  id="POINTS"
-                  min="0"
-                  max="1000"
-                  value="0"
-                ></meter>
+          <label class="x" onclick="closeside();">X</label>
+          <div class="wallet">
+            <div class="wallet-top">
+              <label class="MTCG-rewards">MTCG Rewards</label>
+            </div>
+            <div class="account-menu">
+              <label class="account-list"
+                >Account: <label id="user-account">Login</label></label
+              ><br />
+              <label class="account-list"
+                >Current Blocks: <label id="currentBLOCKS">0</label></label
+              ><br />
+              <label class="account-list"
+                >Mined Blocks: <label id="minedBLOCKS">0</label></label
+              ><br />
+              <label class="account-list"
+                >Points Earned: <label id="POINTS">0</label></label
+              ><br />
+              <button
+                class="hide"
+                id="minerBTN"
+                type="button"
+                onclick="miner();"
+              >
+                Mine Block
+              </button>
+              <br />
+              <label title="" class="alert" id="userAlert"></label><br />
+            </div>
+            <center>
+              <div class="wallet-tabs">
+                <label class="TAB" onclick="infoTab();">?</label>
+                <label class="TAB" onclick="tokensTab();">Tokens</label>
+                <label class="TAB" onclick="gamesTab();">Games</label>
               </div>
-              <label id="newcomer-info">
-                <div class="wallet-article" id="wallet-info">
-                  <center>
-                    <label id="fetchLogin">
-                      <h1>Login</h1>
-                      <p>
-                        We are building a new rewards system. login to create a
-                        DreamBlock.
-                      </p>
-                      <button onclick="fetchLogin();">Login</button>
-                    </label>
-                    <form id="LOGIN" class="hide">
-                      <h1>Login</h1>
-                      <input
-                        name="dream"
-                        aria-label="a new dream"
-                        type="text"
-                        maxlength="43"
-                        minlength="42"
-                        placeholder="Deposit Address"
-                        required
-                      /><br />
-                      <button type="submit" id="submit-dream">Login</button>
-                      <button type="button" id="connect">
-                        Metamask Desktop
-                      </button>
-                    </form>
-
-                    <section class="dreams">
-                      <button class="hide" id="clear-dreams">
-                        Clear Dreams
-                      </button>
-                    </section>
-                  </center>
+              <div id="wallet-intro" class="wallet-tab">
+                <div id="login-note" class="wallet-article">
+                  <h1>Login</h1>
+                  <p>
+                    We are currently building a new reward system, login and
+                    press buttons to help test things, let us know of issues :)
+                  </p>
+                  <button type="button" onclick="loginNote();">Login</button
+                  ><br />
                 </div>
-
-                <div class="wallet-article" id="wallet-learn">
-                  <center>
-                    <h1>Learn About Rewards</h1>
-                    <p>Learn how our rewards work!</p>
-                    <button onclick="fetchLearn();">Learn</button>
-                  </center>
+                <div id="rewards-note" class="wallet-article">
+                  <h1>How Rewards Work</h1>
+                  <p>
+                    MTCG rewards are not blockchain tokens, think of them as
+                    in-house game points. <br />
+                    Each time a user logs in or interacts with a wallet activity
+                    (Coming soon), <br />
+                    the system crerates a block with a random number of in-house
+                    reward points inside.
+                    <br />
+                    You can then mine the block and earn the points inside.
+                    <br />
+                    Once you have earned enough points to claim blockchain
+                    tokens, in our community ecosystem.
+                    <br />
+                    <br />
+                    Using Reward Points: <br />
+                    Once you have enough reward points you can claim a
+                    blockchain token in our ecosystem, a claim button will
+                    appear under the token name. <br />
+                    Once you request a cliam your points will reset to zero, and
+                    your claim will be sent to the logged in deposit address
+                    depending on mining actitvity <br />
+                  </p>
                 </div>
-              </label>
-            </div>
+              </div>
 
-            <div class="hide" id="miner-info">
-              <center style="color: white">
-                <h1>Miner Disabled</h1>
-                <p style="color: gold">
-                  We are Creating A New Rewards System, You Created A Block For
-                  Testing!
-                </p>
-                <button onclick="fetchLearn();">Learn</button>
-                <ul class="fit" id="dreams"></ul>
-                <br />
-                <br />
-              </center>
-            </div>
-          </center>
+              <div class="hide" id="login-form">
+                <form>
+                  <label>We Are In Test Mode...</label><br />
+                  <input
+                    name="dream"
+                    aria-label="a new dream"
+                    type="text"
+                    maxlength="42"
+                    minlength="42"
+                    placeholder="Deposit Address"
+                    required
+                  /><br />
+                  <button type="submit" id="submit-dream">Login</button><br />
+                </form>
+                <button type="button" id="connect">Metamask Desktop</button>
+
+                <section class="dreams">
+                  <ul class="hide" id="dreams"></ul>
+                  <button class="hide" id="clear-dreams">Clear Dreams</button>
+                </section>
+              </div>
+            </center>
+          </div>
         </div>
 
         <div class="footer">
