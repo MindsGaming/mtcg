@@ -73,31 +73,37 @@ function createBlock() {
   let currentBlocks = dreamsList.getElementsByTagName("li");
   let numb = currentBlocks.length;
   currentBLOCKS.innerHTML = dreamsList.getElementsByTagName("li").length;
-  miner();
-  function miner() {
-    if (userAccount.innerHTML == "Login") {
-    } else {
-      /* Mine Block*/
-      minerBTN.className = "account-list";
-      let warp = Math.floor(Math.random() * numb);
-      var mineBLOCK = document.getElementById(warp);
-      let pushmined = parseFloat(
-        document.getElementById("minedBLOCKS").innerHTML
-      );
-      let pushvalue = parseFloat(mineBLOCK.value);
-      let math = pushmined + pushvalue;
-      var minedBLOCKS = document.getElementById("minedBLOCKS");
-      minedBLOCKS.innerHTML = math;
-      if (math > currentBlocks.length) {
-        minerBTN.className = "hide";
-        minedBLOCKS.innerHTML = currentBlocks.length;
-      }
-    }
+}
+function miner() {
+  let currentBlocks = dreamsList.getElementsByTagName("li");
+  let numb = currentBlocks.length;
+  let removeBlock = 1;
+  let math = numb - removeBlock;
+  currentBLOCKS.innerHTML = math;
+  if (userAccount.innerHTML == "Login") {
+  } else {
+    /* Mine Block*/
+    minerBTN.className = "account-list";
+    let warp = Math.floor(Math.random() * numb);
+    var mineBLOCK = document.getElementById(warp);
+    let pushmined = parseFloat(
+      document.getElementById("minedBLOCKS").innerHTML
+    );
+    let pushvalue = parseFloat(mineBLOCK.value);
+    let math = pushmined + pushvalue;
+    var minedBLOCKS = document.getElementById("minedBLOCKS");
+    minedBLOCKS.innerHTML = math;
+
     /* Pull Points*/
     let minedPOINTS = mineBLOCK.value;
     let currentPOINTS = parseInt(POINTS.innerHTML);
     let pointsmath = minedPOINTS + currentPOINTS;
     POINTS.innerHTML = pointsmath;
+
+    if (pointsmath > ) {
+      minerBTN.className = "hide";
+      minedBLOCKS.innerHTML = currentBlocks.length;
+    }
   }
 }
 
