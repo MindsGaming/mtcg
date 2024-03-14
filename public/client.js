@@ -110,3 +110,46 @@ function loginNote() {
   fetchLogin.className = "wallet-article";
   fetchNote.className = "hide";
 }
+
+
+/* Pagenation */
+var pagenation = document.getElementById("pagenation");
+var infoTAB = document.getElementById("infoBTN");
+var tokensTAB = document.getElementById("tokensBTN");
+var gamesTAB = document.getElementById("gamesBTN");
+var walletIntro = document.getElementById("wallet-intro");
+var gamesIntro = document.getElementById("wallet-games");
+var tokensIntro = document.getElementById("wallet-tokens");
+
+function walletHOME() {
+  pagenation.title = "Info";
+  TAB();
+}
+
+function walletGAMES() {
+  pagenation.title = "Games";
+  TAB();
+}
+function walletTOKENS() {
+  pagenation.title = "Tokens";
+  TAB();
+}
+function TAB() {
+  if (pagenation.title == "Info") {
+    walletIntro.className = "wallet-tab";
+    gamesIntro.className = "hide";
+    tokensIntro.className = "hide";
+  } else {
+    if (pagenation.title == "Games") {
+      walletIntro.className = "hide";
+      gamesIntro.className = "wallet-tab";
+      tokensIntro.className = "hide";
+    } else {
+      if (pagenation.title == "Tokens") {
+        walletIntro.className = "hide";
+        gamesIntro.className = "hide";
+        tokensIntro.className = "wallet-tab";
+      }
+    }
+  }
+}

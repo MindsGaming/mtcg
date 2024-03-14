@@ -742,9 +742,10 @@
             </div>
             <center>
               <div class="wallet-tabs">
-                <label class="TAB" onclick="infoTab();">?</label>
-                <label class="TAB" onclick="tokensTab();">Tokens</label>
-                <label class="TAB" onclick="gamesTab();">Games</label>
+                <label class="TAB" onclick="walletHOME();">?</label>
+                <label class="TAB" onclick="walletTOKENS();">Tokens</label>
+                <label class="TAB" onclick="walletGAMES();">Games</label>
+                <label class="hide" id="pagenation" title="info"></label>
               </div>
               <div id="wallet-intro" class="wallet-tab">
                 <div id="login-note" class="wallet-article">
@@ -808,6 +809,18 @@
                   <ul class="hide" id="dreams"></ul>
                   <button class="hide" id="clear-dreams">Clear Dreams</button>
                 </section>
+              </div>
+              <div class="hide" id="wallet-tokens">
+                <div id="game-note" class="wallet-article">
+                  <h1>Tokens</h1>
+                  <p>OOPS;( No Claim Button Found</p>
+                </div>
+              </div>
+              <div class="hide" id="wallet-games">
+                <div id="token-note" class="wallet-article">
+                  <h1>Games</h1>
+                  <p>Coming Soon</p>
+                </div>
               </div>
             </center>
           </div>
