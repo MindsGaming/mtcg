@@ -56,7 +56,6 @@ dreamsForm.onsubmit = (event) => {
   // reset form
   userAccount.innerHTML = dreamInput.value;
   minerBTN.className = "account-list";
-  miner();
   dreamInput.value = "";
   dreamInput.focus();
 };
@@ -71,36 +70,34 @@ clearButton.addEventListener("click", (event) => {
 });
 
 function createBlock() {
-  currentBLOCKS.innerHTML = dreamsList.getElementsByTagName("li").length;
-}
-
-function miner() {
   let currentBlocks = dreamsList.getElementsByTagName("li");
   let numb = currentBlocks.length;
-  if (userAccount.innerHTML == "Login") {
-    currentBLOCKS.innerHTML = numb;
-  } else {
+  currentBLOCKS.innerHTML = dreamsList.getElementsByTagName("li").length;
+  miner();
+  function miner() {
+    if (userAccount.innerHTML == "Login") {
+    } else {
+      /* Mine Block*/
+      minerBTN.className = "account-list";
+      let warp = Math.floor(Math.random() * numb);
+      var mineBLOCK = document.getElementById(warp);
+      let pushmined = parseFloat(
+        document.getElementById("minedBLOCKS").innerHTML
+      );
+      let pushvalue = parseFloat(mineBLOCK.value);
+      let math = pushmined + pushvalue;
+      var minedBLOCKS = document.getElementById("minedBLOCKS");
+      minedBLOCKS.innerHTML = math;
+      if (math > currentBlocks.length) {
+        minerBTN.className = "hide";
+        minedBLOCKS.innerHTML = currentBlocks.length;
+      }
+    }
     /* Pull Points*/
-    /* Mine Block*/
-
-    let warp = Math.floor(Math.random() * numb) + 0;
-    var mineBLOCK = document.getElementById(warp);
-    let pushmined = parseFloat(
-      document.getElementById("minedBLOCKS").innerHTML
-    );
-    let pushvalue = parseFloat(mineBLOCK.value);
-    let math = pushmined + pushvalue;
-    var minedBLOCKS = document.getElementById("minedBLOCKS");
-    minedBLOCKS.innerHTML = math;
-
     let minedPOINTS = mineBLOCK.value;
     let currentPOINTS = parseInt(POINTS.innerHTML);
     let pointsmath = minedPOINTS + currentPOINTS;
     POINTS.innerHTML = pointsmath;
-    if (math > currentBlocks.length) {
-      minerBTN.className = "hide";
-      minedBLOCKS.innerHTML = currentBlocks.length;
-    }
   }
 }
 
@@ -110,7 +107,6 @@ function loginNote() {
   fetchLogin.className = "wallet-article";
   fetchNote.className = "hide";
 }
-
 
 /* Pagenation */
 var pagenation = document.getElementById("pagenation");
