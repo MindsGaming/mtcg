@@ -3,7 +3,7 @@ var enableLogin = function () {
   connectButton.addEventListener("click", connectWithMetaMask);
   console.log("Connect button enabled");
 
-  let checkLink = document.getElementById("connect");
+  let checkLink = document.getElementById("check");
   checkLink.addEventListener("click", check);
 
   let updateButton = document.getElementById("updateUserData");
@@ -18,6 +18,35 @@ var connectWithMetaMask = async function () {
   const accounts = await ethereum.request({ method: "eth_requestAccounts" });
   const publicAddress = accounts[0];
   console.log("Address chosen is", publicAddress);
+  var placeaddy = document.getElementById("walletID");
+  placeaddy.value = ethereum.selectedAddress;
+
+  if (placeaddy.value == ethereum.selectedAddress) {
+    // CUstom
+
+    const data = {
+      dream: dreamInput.value + " Started Earning",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+    // get dream value and add it to the list
+    dreams.push(dreamInput.value + " Started Earning");
+    appendNewDream(dreamInput.value + " Started Earning");
+
+    // reset form
+    dreamInput.value = "";
+    dreamInput.placeholder = "Thanks For Using Metamask!";
+    dreamInput.focus();
+    //
+  }
 
   async () => {
     await ethereum.request({

@@ -10,11 +10,13 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
-const currentBLOCKS = document.getElementById("currentBLOCKS");
-const POINTS = document.getElementById("POINTS");
-const userAccount = document.getElementById("user-account");
-var userAlert = document.getElementById("userAlert");
-var minerBTN = document.getElementById("minerBTN");
+const accountID = document.getElementById("account-id");
+const DreamChain = document.createElement("POINTS");
+var removearticle = document.getElementById("fetchLogin");
+var removeALL = document.getElementById("newcomer-info");
+var pointsPreview = document.getElementById("points-preview");
+var loginarticle = document.getElementById("LOGIN");
+var minerarticle = document.getElementById("miner-info");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -28,18 +30,40 @@ fetch("/getDreams", {})
 // a helper function that creates a list item for a given dream
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
-  let currentBlocks = dreamsList.getElementsByTagName("li");
-  let numb = currentBlocks.length;
-  let randomWarp = Math.floor(Math.random() * 5) + numb;
-  currentBLOCKS.innerHTML = numb;
+  const newListItems = document.createElement("meter");
+  newListItems.innerText = parseFloat(DreamChain.value).toFixed(2); // Convert to float and round to 2 decimal places
+  newListItems.min = 0;
+  newListItems.max = 5;
+  newListItems.value = parseFloat(DreamChain.value).toFixed(2); // Same here
+  newListItems.id = dream; // Make sure 'dream' is a valid identifier
   newListItem.innerText = dream;
-  newListItem.title = "DreamBlock";
-  newListItem.id = numb;
-  newListItem.value = randomWarp;
-  userAlert.title = "";
-  newListItem.addEventListener("click", miner);
+  accountID.innerHTML = parseFloat(dreamInput.value).toFixed(2); // Convert input value to float and round
 
-  dreamsList.appendChild(newListItem);
+  dreamsList.appendChild(newListItem + newListItems);
+  /* DreamChain */
+  function createBLOCK() {
+    function getRandomInteger(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    const fetchBlocks = dreamsList.getElementsByTagName("li");
+    const rollover = document.getElementById("rollover");
+    const DREAMBLOCKS = fetchBlocks.length;
+    const customBlock = getRandomInteger(DREAMBLOCKS, 9);
+    const newBLOCKS = `${DREAMBLOCKS}.${customBlock}`;
+    rollover.innerHTML = customBlock;
+    DreamChain.value = newBLOCKS;
+    DreamChain.min = "0";
+    DreamChain.max = "1000";
+    pointsPreview.innerHTML = newBLOCKS;
+
+    if (rollover.innerHTML === "9") {
+      const boostBlock = `${newBLOCKS}.1`;
+      pointsPreview.innerHTML = boostBlock;
+    }
+  }
+
+  createBLOCK();
 };
 
 // listen for the form to be submitted and add a new dream when it is
@@ -47,7 +71,9 @@ dreamsForm.onsubmit = (event) => {
   // stop our form submission from refreshing the page
   event.preventDefault();
 
-  const data = { dream: dreamInput.value };
+  const data = {
+    dream: dreamInput.value + " Block Created: " + pointsPreview.innerHTML,
+  };
 
   fetch("/addDream", {
     method: "POST",
@@ -63,8 +89,8 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value);
 
   // reset form
-  userAccount.innerHTML = dreamInput.value;
-  minerBTN.className = "account-list";
+  removeALL.className = "hide";
+  minerarticle.className = "wallet-article";
   dreamInput.value = "";
   dreamInput.focus();
 };
@@ -78,39 +104,15 @@ clearButton.addEventListener("click", (event) => {
   dreamsList.innerHTML = "";
 });
 
-function createBlock() {
-  let currentBlocks = dreamsList.getElementsByTagName("li");
-  let numb = currentBlocks.length;
-  currentBLOCKS.innerHTML = numb;
-  userAlert.title = "";
-}
-
-function miner() {
-  /* Mine Block*/
-
-  let currentBlocks = dreamsList.getElementsByTagName("li");
-  let numb = currentBlocks.length;
-  let warp = Math.floor(Math.random() * numb);
-  var mineBLOCK = document.getElementById(warp);
-  let pushmined = parseFloat(document.getElementById("minedBLOCKS").innerHTML);
-  let pushvalue = parseFloat(mineBLOCK.value);
-  let math = pushmined + pushvalue;
-  var minedBLOCKS = document.getElementById("minedBLOCKS");
-  minedBLOCKS.innerHTML = math;
-  if (math > currentBLOCKS.innerHTML) {
-    minerBTN.className = "hide";
-    minedBLOCKS.innerHTML = currentBLOCKS.innerHTML;
+/* Wallet */
+function fetchLogin() {
+  if (loginarticle.className == "hide") {
+    loginarticle.className = "form";
+    removearticle.className = "hide";
+  } else {
+    if (loginarticle.classNam == "form") {
+      loginarticle.className = "hide";
+      removearticle.className = "form";
+    }
   }
-
-  /* Pull Points*/
-  let minedPOINTS = mineBLOCK.value;
-  let currentPOINTS = parseInt(POINTS.innerHTML);
-  let pointsmath = minedPOINTS + currentPOINTS;
-  POINTS.innerHTML = pointsmath;
-}
-
-function loginNote() {
-  var fetchLogin = document.getElementById("login-form");
-  var fetchNote = document.getElementById("login-note");
-  fetchNote.innerHTML = fetchLogin.innerHTML;
 }
