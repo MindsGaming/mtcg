@@ -2,8 +2,6 @@
 // run by the browser each time your view template referencing it is loaded
 
 console.log("hello world :o");
-const loginID = document.getElementById("walletID");
-const MTCGterm = document.getElementById("MTCG-term");
 
 const dreams = [];
 
@@ -12,6 +10,15 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
+const accountID = document.getElementById("account-id");
+const DreamChain = document.getElementById("POINTS");
+const POINTS = document.getElementById("POINTS");
+var removearticle = document.getElementById("fetchLogin");
+var removeALL = document.getElementById("newcomer-info");
+
+var pointsPreview = document.getElementById("points-preview");
+var loginarticle = document.getElementById("LOGIN");
+var minerarticle = document.getElementById("miner-info");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -26,17 +33,33 @@ fetch("/getDreams", {})
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   newListItem.innerText = dream;
+  accountID.innerHTML = dreamInput.value;
   dreamsList.appendChild(newListItem);
+
+  /* DreamChain */
+  createBLOCK();
+  function createBLOCK() {
+    function getRandomInteger(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    let customBlock = getRandomInteger(1, 5);
+    let chain = DreamChain.value;
+    let link = customBlock + chain;
+    DreamChain.value = link;
+    DreamChain.min = "0";
+    DreamChain.max = "1000";
+    pointsPreview.innerHTML = link;
+  }
 };
-
-
 
 // listen for the form to be submitted and add a new dream when it is
 dreamsForm.onsubmit = (event) => {
   // stop our form submission from refreshing the page
   event.preventDefault();
 
-  const data = { dream: dreamInput.value };
+  const data = {
+    dream: dreamInput.value + " Block Created: " + pointsPreview.innerHTML,
+  };
 
   fetch("/addDream", {
     method: "POST",
@@ -48,16 +71,14 @@ dreamsForm.onsubmit = (event) => {
       console.log(JSON.stringify(response));
     });
   // get dream value and add it to the list
-  loginID.id = dreamInput.value;
-  loginID.innerHTML = dreamInput.value;
-  dreamInput.placeholder = "Thanks For Logging In!";
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
 
   // reset form
+  removeALL.className = "hide";
+  minerarticle.className = "wallet-article";
   dreamInput.value = "";
   dreamInput.focus();
-  readyTerm();
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -69,12 +90,15 @@ clearButton.addEventListener("click", (event) => {
   dreamsList.innerHTML = "";
 });
 
-// Term
-
-function readyTerm() {
-  dreamInput.className = "hide";
-  dreamsList.className = "hide";
-  dreamCommand.className = "term-command";
-  dreamCommands.className = "term-command";
-  dreamCommands.title = "Terminal";
+/* Wallet */
+function fetchLogin() {
+  if (loginarticle.className == "hide") {
+    loginarticle.className = "form";
+    removearticle.className = "hide";
+  } else {
+    if (loginarticle.classNam == "form") {
+      loginarticle.className = "hide";
+      removearticle.className = "form";
+    }
+  }
 }

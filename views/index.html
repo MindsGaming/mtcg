@@ -710,48 +710,75 @@
           </div>
         </div>
 
-        <div id="subwallet" class="hide" title="subwallet"></div>
-
         <div id="termframe" class="hide" title="Login">
           <label class="x" onclick="closeside();">X</label>
 
-          <label class="terminaltop"
-            >Game Terminal
-            <hr />
-          </label>
-          <br />
-          <br />
-          <ul class="term-command" id="dreams"></ul>
-          <ul title="hidden" class="term-command" id="commands"></ul>
+          <center>
+            <div class="wallet">
+              <div class="wallet-top">
+                <label class="MTCG-top">MTCG Rewards</label><br />
+                <label class="wallet-name" id="account-id"></label>
+                <label class="points" id="points-preview"></label>
+                <meter class="hide" id="POINTS"></meter>
 
-          <label id="l-preview" title="@MTCG" class="term-home"
-            >?!@MTCG/:Points Coming Soon..
+                <div class="ecosystem-list">
+                  <label class="T-list">GAMER</label>
+                </div>
+              </div>
+              <label id="newcomer-info">
+                <div class="wallet-article" id="wallet-info">
+                  <center>
+                    <label id="fetchLogin">
+                      <h1>Login</h1>
+                      <p>
+                        Login to start earning points with our website, <br />
+                        make sure to read about how they work, or presss buttons
+                        and figure it out!
+                      </p>
+                      <button onclick="fetchLogin();">Login</button>
+                    </label>
+                    <form id="LOGIN" class="hide">
+                      <h1>Login</h1>
+                      <input
+                        name="dream"
+                        aria-label="a new dream"
+                        type="text"
+                        maxlength="43"
+                        minlength="42"
+                        placeholder="Deposit Address"
+                        required
+                      /><br />
+                      <button type="submit" id="submit-dream">Login</button>
+                    </form>
 
-            <form>
-              <input
-                id="dream"
-                name="dream"
-                aria-label="a new dream"
-                type="string"
-                value=""
-                required
-                placeholder="Your Reciver Wallet Address"
-                maxlength="43"
-                minlength="42"
-                class="term-command"
-              />
-              <button onclick="desktopOnly();" id="connect">
-                Meatmask Destop
-              </button>
-              <button type="submit" id="submit-dream">Manual</button>
-              <button onclick="closeside();" id="guest">Guest</button>
-            </form>
+                    <section class="dreams">
+                      <ul class="" id="dreams"></ul>
+                      <button class="" id="clear-dreams">Clear Dreams</button>
+                    </section>
+                  </center>
+                </div>
 
-            <div id="l-buttons" class="">
-              <button id="clear-dreams" class="hide">Clear Dreams</button>
+                <div class="wallet-article" id="wallet-learn">
+                  <center>
+                    <h1>Learn About Rewards</h1>
+                    <p>Learn how our rewards work and earn 5 points!</p>
+                    <button onclick="fetchLearn();">Learn</button>
+                  </center>
+                </div>
+              </label>
             </div>
-            <label id="walletID"></label>
-          </label>
+
+            <div class="hide" id="miner-info">
+              <center>
+                <h1>Miner Disabled</h1>
+                <p>
+                  We are Creating The Wallet, Please Login To Create A Block For
+                  Testing
+                </p>
+                <button onclick="fetchLearn();">Learn</button>
+              </center>
+            </div>
+          </center>
         </div>
 
         <div class="footer">
