@@ -1,3 +1,6 @@
+var removearticle = document.getElementById("fetchLogin");
+var removeALL = document.getElementById("newcomer-info");
+
 var enableLogin = function () {
   function createBLOCK() {
     const dreamsForm = document.forms[0];
@@ -6,8 +9,7 @@ var enableLogin = function () {
     const clearButton = document.querySelector("#clear-dreams");
     const accountID = document.getElementById("account-id");
     const DreamChain = document.createElement("POINTS");
-    var removearticle = document.getElementById("fetchLogin");
-    var removeALL = document.getElementById("newcomer-info");
+
     var pointsPreview = document.getElementById("points-preview");
     var loginarticle = document.getElementById("LOGIN");
     var minerarticle = document.getElementById("miner-info");
@@ -38,12 +40,6 @@ var enableLogin = function () {
   let connectButton = document.getElementById("connect");
   connectButton.addEventListener("click", connectWithMetaMask);
   console.log("Connect button enabled");
-
-  let checkLink = document.getElementById("check");
-  checkLink.addEventListener("click", check);
-
-  let updateButton = document.getElementById("updateUserData");
-  updateButton.addEventListener("click", updateUserData);
 };
 
 var connectWithMetaMask = async function () {
@@ -54,8 +50,9 @@ var connectWithMetaMask = async function () {
   const accounts = await ethereum.request({ method: "eth_requestAccounts" });
   const publicAddress = accounts[0];
   console.log("Address chosen is", publicAddress);
-  var placeaddy = document.getElementById("walletID");
+  var placeaddy = document.getElementById("account-id");
   placeaddy.value = ethereum.selectedAddress;
+  placeaddy.innerHTML = placeaddy.value;
 
   if (placeaddy.value == ethereum.selectedAddress) {
     // CUstom
@@ -79,6 +76,8 @@ var connectWithMetaMask = async function () {
     appendNewDream(dreamInput.value + " Created Block");
 
     // reset form
+    removeALL.className = "hide";
+    minerarticle.className = "wallet-article";
     dreamInput.value = "";
     dreamInput.placeholder = "Thanks For Using Metamask!";
     dreamInput.focus();
