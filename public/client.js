@@ -69,20 +69,18 @@ clearButton.addEventListener("click", (event) => {
   dreamsList.innerHTML = "";
 });
 
-function createBlock() {
-  let currentBlocks = dreamsList.getElementsByTagName("li");
-  let numb = currentBlocks.length;
-  currentBLOCKS.innerHTML = dreamsList.getElementsByTagName("li").length;
-}
 function miner() {
   let currentBlocks = dreamsList.getElementsByTagName("li");
   let numb = currentBlocks.length;
-  let removeBlock = 1;
-  let math = numb - removeBlock;
-  currentBLOCKS.innerHTML = math;
+  currentBLOCKS.innerHTML = dreamsList.getElementsByTagName("li").length;
+
   if (userAccount.innerHTML == "Login") {
   } else {
     /* Mine Block*/
+    let removeBlock = 1;
+    let math = numb - removeBlock;
+    currentBLOCKS.innerHTML = math;
+
     minerBTN.className = "account-list";
     let warp = Math.floor(Math.random() * numb);
     var mineBLOCK = document.getElementById(warp);
@@ -90,7 +88,7 @@ function miner() {
       document.getElementById("minedBLOCKS").innerHTML
     );
     let pushvalue = parseFloat(mineBLOCK.value);
-    let math = pushmined + pushvalue;
+    let POINTSmath = pushmined + pushvalue;
     var minedBLOCKS = document.getElementById("minedBLOCKS");
     minedBLOCKS.innerHTML = math;
 
@@ -100,7 +98,7 @@ function miner() {
     let pointsmath = minedPOINTS + currentPOINTS;
     POINTS.innerHTML = pointsmath;
 
-    if (pointsmath > ) {
+    if (pointsmath > numb) {
       minerBTN.className = "hide";
       minedBLOCKS.innerHTML = currentBlocks.length;
     }
