@@ -11,7 +11,7 @@ const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
 const accountID = document.getElementById("account-id");
-const DreamChain = document.getElementById("POINTS");
+const DreamChain = document.createElement("meter");
 const POINTS = document.getElementById("POINTS");
 var removearticle = document.getElementById("fetchLogin");
 var removeALL = document.getElementById("newcomer-info");
@@ -35,23 +35,24 @@ const appendNewDream = (dream) => {
   newListItem.innerText = dream;
   accountID.innerHTML = dreamInput.value;
   dreamsList.appendChild(newListItem);
-
   /* DreamChain */
-
-  /* DreamChain */
-  createBLOCK();
   function createBLOCK() {
     function getRandomInteger(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     let customBlock = getRandomInteger(1, 5);
-    let chain = DreamChain.value;
-    let link = customBlock + chain;
-    DreamChain.value = link;
+
+    var fetchBlocks = dreamsList.getElementsByTagName("li");
+    let DREAMBLOCKS = fetchBlocks.length;
+let newBLOCKS = DREAMBLOCKS + "." + cus
+    
+    DreamChain.value = ;
     DreamChain.min = "0";
     DreamChain.max = "1000";
     pointsPreview.innerHTML = link;
   }
+
+  createBLOCK();
 };
 
 // listen for the form to be submitted and add a new dream when it is
@@ -103,4 +104,18 @@ function fetchLogin() {
       removearticle.className = "form";
     }
   }
+}
+
+/* DreamChain */
+function createBLOCKs() {
+  function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  let customBlock = getRandomInteger(1, 5);
+  let chain = DreamChain.value;
+  let link = customBlock + chain;
+  DreamChain.value = link;
+  DreamChain.min = "0";
+  DreamChain.max = "1000";
+  pointsPreview.innerHTML = link;
 }
