@@ -1,47 +1,3 @@
-var removearticle = document.getElementById("fetchLogin");
-var removeALL = document.getElementById("newcomer-info");
-
-var enableLogin = function () {
-  function createBLOCK() {
-    const dreamsForm = document.forms[0];
-    const dreamInput = dreamsForm.elements["dream"];
-    const dreamsList = document.getElementById("dreams");
-    const clearButton = document.querySelector("#clear-dreams");
-    const accountID = document.getElementById("account-id");
-    const DreamChain = document.createElement("POINTS");
-
-    var pointsPreview = document.getElementById("points-preview");
-    var loginarticle = document.getElementById("LOGIN");
-    var minerarticle = document.getElementById("miner-info");
-
-    function getRandomInteger(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-    const fetchBlocks = dreamsList.getElementsByTagName("li");
-    const rollover = document.getElementById("rollover");
-    const DREAMBLOCKS = fetchBlocks.length;
-    const customBlock = getRandomInteger(DREAMBLOCKS, 9);
-    const newBLOCKS = `${DREAMBLOCKS}.${customBlock}`;
-    rollover.innerHTML = customBlock;
-    DreamChain.value = newBLOCKS;
-    DreamChain.min = "0";
-    DreamChain.max = "1000";
-    pointsPreview.innerHTML = newBLOCKS;
-
-    if (rollover.innerHTML === "9") {
-      const boostBlock = `${newBLOCKS}.1`;
-      pointsPreview.innerHTML = boostBlock;
-    }
-  }
-
-  createBLOCK();
-
-  let connectButton = document.getElementById("connect");
-  connectButton.addEventListener("click", connectWithMetaMask);
-  console.log("Connect button enabled");
-};
-
 var connectWithMetaMask = async function () {
   console.log("Connect with MetaMask");
   console.log("Network version", ethereum.networkVersion);
@@ -50,7 +6,7 @@ var connectWithMetaMask = async function () {
   const accounts = await ethereum.request({ method: "eth_requestAccounts" });
   const publicAddress = accounts[0];
   console.log("Address chosen is", publicAddress);
-  var placeaddy = document.getElementById("account-id");
+  var placeaddy = document.getElementById("user-account");
   placeaddy.value = ethereum.selectedAddress;
   placeaddy.innerHTML = placeaddy.value;
 
@@ -76,10 +32,8 @@ var connectWithMetaMask = async function () {
     appendNewDream(dreamInput.value + " Created Block");
 
     // reset form
-    removeALL.className = "hide";
-    minerarticle.className = "wallet-article";
+
     dreamInput.value = "";
-    dreamInput.placeholder = "Thanks For Using Metamask!";
     dreamInput.focus();
     //
   }
