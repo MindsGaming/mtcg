@@ -38,17 +38,16 @@ const appendNewDream = (dream) => {
 
   /* DreamChain */
   createBLOCK();
+
   function createBLOCK() {
     function getRandomInteger(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    let customBlock = getRandomInteger(1, 5);
-    let chain = DreamChain.value;
-    let link = customBlock + chain;
-    DreamChain.value = link;
+    let customBlock = getRandomInteger(parseInt(pointsPreview.innerHTML), 100); // Parse the innerHTML value to an integer
+    DreamChain.value = customBlock;
     DreamChain.min = "0";
     DreamChain.max = "1000";
-    pointsPreview.innerHTML = link;
+    pointsPreview.innerHTML = customBlock;
   }
 };
 
