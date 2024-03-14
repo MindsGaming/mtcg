@@ -307,12 +307,12 @@ apps {
 
 /* wallet */
 .wallet {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  margin: -1px;
   height: 92%;
-  border-style: groove;
   overflow: scroll;
   opacity: 0.8;
   background-color: grey;
@@ -359,7 +359,6 @@ apps {
   color: gold;
   font-weight: bold;
   margin: 1px;
-  padding: 0.5px;
   font-size: 10px;
 }
 
