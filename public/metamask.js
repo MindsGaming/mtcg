@@ -1,4 +1,40 @@
 var enableLogin = function () {
+  function createBLOCK() {
+    const dreamsForm = document.forms[0];
+    const dreamInput = dreamsForm.elements["dream"];
+    const dreamsList = document.getElementById("dreams");
+    const clearButton = document.querySelector("#clear-dreams");
+    const accountID = document.getElementById("account-id");
+    const DreamChain = document.createElement("POINTS");
+    var removearticle = document.getElementById("fetchLogin");
+    var removeALL = document.getElementById("newcomer-info");
+    var pointsPreview = document.getElementById("points-preview");
+    var loginarticle = document.getElementById("LOGIN");
+    var minerarticle = document.getElementById("miner-info");
+
+    function getRandomInteger(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    const fetchBlocks = dreamsList.getElementsByTagName("li");
+    const rollover = document.getElementById("rollover");
+    const DREAMBLOCKS = fetchBlocks.length;
+    const customBlock = getRandomInteger(DREAMBLOCKS, 9);
+    const newBLOCKS = `${DREAMBLOCKS}.${customBlock}`;
+    rollover.innerHTML = customBlock;
+    DreamChain.value = newBLOCKS;
+    DreamChain.min = "0";
+    DreamChain.max = "1000";
+    pointsPreview.innerHTML = newBLOCKS;
+
+    if (rollover.innerHTML === "9") {
+      const boostBlock = `${newBLOCKS}.1`;
+      pointsPreview.innerHTML = boostBlock;
+    }
+  }
+
+  createBLOCK();
+
   let connectButton = document.getElementById("connect");
   connectButton.addEventListener("click", connectWithMetaMask);
   console.log("Connect button enabled");
@@ -25,7 +61,7 @@ var connectWithMetaMask = async function () {
     // CUstom
 
     const data = {
-      dream: dreamInput.value + " Started Earning",
+      dream: dreamInput.value,
     };
 
     fetch("/addDream", {
@@ -37,9 +73,10 @@ var connectWithMetaMask = async function () {
       .then((response) => {
         console.log(JSON.stringify(response));
       });
+
     // get dream value and add it to the list
-    dreams.push(dreamInput.value + " Started Earning");
-    appendNewDream(dreamInput.value + " Started Earning");
+    dreams.push(dreamInput.value + " Created Block");
+    appendNewDream(dreamInput.value + " Created Block");
 
     // reset form
     dreamInput.value = "";

@@ -30,16 +30,7 @@ fetch("/getDreams", {})
 // a helper function that creates a list item for a given dream
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
-  const newListItems = document.createElement("meter");
-  newListItems.innerText = parseFloat(DreamChain.value).toFixed(2); // Convert to float and round to 2 decimal places
-  newListItems.min = 0;
-  newListItems.max = 5;
-  newListItems.value = parseFloat(DreamChain.value).toFixed(2); // Same here
-  newListItems.id = dream; // Make sure 'dream' is a valid identifier
-  newListItem.innerText = dream;
-  accountID.innerHTML = parseFloat(dreamInput.value).toFixed(2); // Convert input value to float and round
-
-  dreamsList.appendChild(newListItem + newListItems);
+  dreamsList.appendChild(newListItem);
   /* DreamChain */
   function createBLOCK() {
     function getRandomInteger(min, max) {
