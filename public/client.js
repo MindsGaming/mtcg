@@ -16,6 +16,7 @@ const currenteggs = document.getElementById("current-eggs");
 const hatchedeggs = document.getElementById("hatched-eggs");
 const userAccount = document.getElementById("user-account");
 const loginform = document.getElementById("login-form");
+var logininfo = document.getElementById("login-info");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -61,6 +62,7 @@ dreamsForm.onsubmit = (event) => {
 
   // reset form
   loginform.className = "hide";
+  userCHECK();
   dreamInput.value = "";
   dreamInput.focus();
 };
@@ -109,8 +111,19 @@ function hatchEGG() {
 }
 
 function fetchLoginForm() {
-  var loginform = document.getElementById("login-form");
-  var logininfo = document.getElementById("login-info");
   loginform.className = "game-article";
-  .className = "hide";
+  logininfo.className = "hide";
+}
+
+function userCHECK() {
+  if (userAccount.innerHTML == "Login") {
+    userAccount.innerHTML = dreamInput.value;
+  }
+  greatJOB();
+}
+
+function greatJOB() {
+  var greatJob = document.getElementById("great-job");
+  greatJob.className = "game-article";
+  loginform.className = "hide";
 }
