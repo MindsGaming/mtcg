@@ -358,7 +358,7 @@ li {
 
 .MTCG-game {
   float: left;
-  margin-left: 25px;
+  margin-left: 32px;
   margin-top: 4px;
   color: white;
   font-weight: bolder;
@@ -442,4 +442,10 @@ li {
   font-size: 5px;
   color: white;
   font-family: monospace;
+}
+
+.user-alert{
+  font-size: 10px;
+  margin-left: 30px;
+  color: red;
 }

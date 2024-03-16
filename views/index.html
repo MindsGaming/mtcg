@@ -27,7 +27,7 @@
     <script src="/cpu.js" defer></script>
     <script src="/metamask.js" defer></script>
   </head>
-  <body>
+  <body onload="counteggs();">
     <h1 class="cpuName" id="CPUname">MTCG Token Space</h1>
 
     <div id="MTCG-cpu" class="show">
@@ -715,7 +715,8 @@
 
           <div class="GAME" id="GAME">
             <div class="game-topper">
-              <label class="MTCG-game">MTCG Game Enviroment</label>
+              <label class="MTCG-game">MTCG Game Enviroment</label
+              ><label id="user-alert" class="user-alert"></label>
             </div>
             <div class="account-menu">
               <div class="account-list">

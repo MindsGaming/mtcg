@@ -15,6 +15,7 @@ const POINTS = document.getElementById("hatched-points");
 const currenteggs = document.getElementById("current-eggs");
 const hatchedeggs = document.getElementById("hatched-eggs");
 const userAccount = document.getElementById("user-account");
+const userAlert = document.getElementById("user-alert");
 const loginform = document.getElementById("login-form");
 var logininfo = document.getElementById("login-info");
 
@@ -83,29 +84,30 @@ function currentEGGS() {
 }
 
 function hatchEGG() {
-  if (currenteggs.innerHTML == 0) {
+  if (userAccount.innerHTML == "Login") {
+    userAlert.innerHTML = "Login To Play";
   } else {
-    // Calculate the total points after hatching
-    let numb = dreamsList.getElementsByTagName("li").length;
-    let randomWarp = Math.floor(Math.random() * numb);
-    let foundEgg = document.getElementById(randomWarp);
-    let hatchedPOINTS = parseFloat(foundEgg.value);
-    let currentPOINTS = parseFloat(POINTS.innerHTML);
-    let EGGmath = currentPOINTS + hatchedPOINTS;
-    POINTS.innerHTML = EGGmath;
+    if (currenteggs.innerHTML == 0) {
+    } else {
+      // Calculate the total points after hatching
+      let numb = dreamsList.getElementsByTagName("li").length;
+      let randomWarp = Math.floor(Math.random() * numb);
+      let foundEgg = document.getElementById(randomWarp);
+      let hatchedPOINTS = parseFloat(foundEgg.value);
+      let currentPOINTS = parseFloat(POINTS.innerHTML);
+      let EGGmath = currentPOINTS + hatchedPOINTS;
+      POINTS.innerHTML = EGGmath;
 
-    // Update the cracked egg count
-    let craked = parseFloat(hatchedeggs.innerHTML);
-    let goodegg = 1;
-    let crakedegg = goodegg + craked;
-    hatchedeggs.innerHTML = crakedegg;
+      // Update the cracked egg count
+      let craked = parseFloat(hatchedeggs.innerHTML);
+      let goodegg = 1;
+      let crakedegg = goodegg + craked;
+      hatchedeggs.innerHTML = crakedegg;
 
-    // Calculate the adjusted cooked egg count
-    let cooked = parseFloat(currenteggs.innerHTML) - 1;
-    currenteggs.innerHTML = cooked;
-
-    if (crakedegg > cooked) {
-      currenteggs.innerHTML = "0";
+      // Calculate the adjusted cooked egg count
+      let cooked = parseFloat(currenteggs.innerHTML) - 1;
+      currenteggs.innerHTML = cooked;
+      userAlert.className = "hide";
     }
   }
 }
@@ -126,4 +128,14 @@ function greatJOB() {
   var greatJob = document.getElementById("great-job");
   greatJob.className = "game-article";
   loginform.className = "hide";
+  userAlert.className = "hide";
+}
+
+function counteggs() {
+  let numb = dreamsList.getElementsByTagName("li").length;
+  if (currenteggs.innerHTML == "0") {
+    currenteggs.innerHTML = numb;
+  } else {
+    counteggs();
+  }
 }
