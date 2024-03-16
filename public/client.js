@@ -178,9 +178,12 @@ function checkPage() {
     playerfarm.className = "game-home";
     playermarket.className = "hide";
   } else {
-    if (checkpage == "Market") {
+    if (checkpage == "MARKET") {
       playerfarm.className = "hide";
-      playermarket.className = "game-article";
+      playermarket.className = "game-home";
     }
   }
 }
+
+
+const gamerpointsBTN = document.getEle
