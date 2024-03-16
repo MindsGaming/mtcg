@@ -445,8 +445,27 @@ li {
   font-family: monospace;
 }
 
-.user-alert{
+.user-alert {
   font-size: 10px;
   margin-left: 30px;
   color: red;
+}
+
+.tab-menu {
+  float: left;
+  display: block;
+  margin-left: 20%;
+  margin-top: 65px;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.tab-list {
+  float: left;
+  display: block;
+  border-style: groove;
+  margin: 6px;
+  text-align: center;
+  border-style: 20px 30px 40px 50px 60px;
+  background
 }
