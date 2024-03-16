@@ -25,10 +25,9 @@
     <script src="/script.js" defer></script>
     <script src="/client.js" defer></script>
     <script src="/cpu.js" defer></script>
-    <script src="/createEGGS.js" defer></script>
     <script src="/metamask.js" defer></script>
   </head>
-  <body onload="createEGGS();">
+  <body onload="miner();">
     <h1 class="cpuName" id="CPUname">MTCG Token Space</h1>
 
     <div id="MTCG-cpu" class="show">
@@ -713,96 +712,86 @@
 
         <div id="termframe" class="hide" title="Login">
           <label class="x" onclick="closeside();">X</label>
-          <div class="GAME" id="GAME">
-            <div class="game-topper">
-              <label class="MTCG-game">MTCG Game Enviroment</label>
+          <div class="wallet">
+            <div class="wallet-top">
+              <label class="MTCG-rewards">MTCG Rewards</label>
             </div>
             <div class="account-menu">
-              <div class="account-list">
-                Game Account:
-                <label class="list-flash" id="user-account">Login</label>
-              </div>
-              <div class="account-list">
-                Laid Eggs:
-                <label class="list-flash" id="current-eggs">0</label>
-              </div>
-              <div class="account-list">
-                Hatched Eggs:
-                <label class="list-flash" id="hatched-eggs">0</label>
-              </div>
-              <div class="account-list">
-                Points:
-                <label class="list-flash" id="hatched-points">0</label>
-              </div>
-              <div>
-                <button class="hatchBTN" onclick="hatchEGG();" id="hatchBTN">
-                  Hatch EGG
-                </button>
-              </div>
+              <label class="account-list"
+                >Account: <label id="user-account">Login</label></label
+              ><br />
+              <label class="account-list"
+                >Current Blocks: <label id="currentBLOCKS">0</label></label
+              ><br />
+              <label class="account-list"
+                >Mined Blocks: <label id="minedBLOCKS">0</label></label
+              ><br />
+              <label class="account-list"
+                >Points Earned: <label id="POINTS">0</label></label
+              ><br />
+              <button
+                class="hide"
+                id="minerBTN"
+                type="button"
+                onclick="miner();"
+              >
+                Mine Block
+              </button>
+              <br />
+              <label title="" class="alert" id="userAlert"></label><br />
             </div>
             <center>
-              <div class="game-home" id="game-home">
-                <div class="game-article" id="login-info">
-                  <h2>Ready To Play?</h2>
-                  <p class="article-text">
-                    Welcome to the gaming enviroment! <br />This is a fun place
-                    to learn about cryptocurrency! <br />
-                    This enviroment simulates a blockchain apllication, <br />
-                    where you can earn points.<br />
-                    To get started learn how to play or login!
+              <div class="wallet-tabs">
+                <label class="TAB" onclick="walletHOME();">?</label>
+                <label class="TAB" onclick="walletTOKENS();">Tokens</label>
+                <label class="TAB" onclick="walletGAMES();">Games</label>
+                <label class="hide" id="pagenation" title="info"></label>
+              </div>
+              <div id="wallet-intro" class="wallet-tab">
+                <div id="login-note" class="wallet-article">
+                  <h1>Login</h1>
+                  <p>
+                    We are currently building a new reward system, login and
+                    press buttons to help test things, let us know of issues :)
                   </p>
-                  <br />
-                  <button
-                    class="gamebuttons"
-                    type="button"
-                    onclick="fetchLogin();"
-                  >
-                    Lets Play!
-                  </button>
-                  <br />
-                  <button
-                    class="gamebuttons"
-                    type="button"
-                    onclick="fetchGameabout();"
-                  >
-                    How To Play
-                  </button>
-                  <br />
+                  <button type="button" onclick="loginNote();">Login</button
+                  ><br />
                 </div>
-
-                <div class="game-home" id="learn-more">
-                  <div class="hide" id="ready-up">
-                    <h2>How To Play</h2>
-                    <p class="article-text">
-                      Objecives: <br />
-                      Your goal is to collect laid eggs and hatch them! <br />
-                      Each egg has hidden points inside, when you hatch them you
-                      recive the points <br />
-                      Laid eggs are created by the magic chicken each time you
-                      do an activity.<br />
-                      You can use collected points in the farmers market, <br />
-                      the farmers market changes frequently so make sure to chek
-                      in often!<br />
-                      Items collected in the farmers market show on your home
-                      page until you leave the website :)
-                    </p>
-                    <button class="gamebuttons" onclick="fetchLogin();">
-                      I'm Ready!
-                    </button>
+                <div id="rewards-note" class="wallet-article">
+                  <h1>How Rewards Work</h1>
+                  <p style="font-family: cursive">
+                    MTCG rewards are not blockchain tokens, think of them as
+                    in-house game points. <br />
+                    Each time a user logs in or interacts with a wallet activity
+                    (Coming soon), <br />
+                    the system creates a block with a random number of in-house
+                    reward points inside.
                     <br />
-                  </div>
-                </div>
-
-                <form id="login-form" class="hide">
-                  <h1>Ready To Find Some Eggs?</h1>
-                  <p class="article-text">
-                    Just enter a wallet address below. <br />
-                    If you don't know your what a wallet or deposit address is,
-                    it's a great time to learn! <br />
-                    <label class="mini-note"
-                      >You can also just enter a random 42 digit number</label
-                    >
+                    <br />
+                    Using Reward Points: <br />
+                    Once you have enough reward points you can claim a
+                    blockchain token in our ecosystem, a claim button will
+                    appear under the token name. <br />
+                    Once you request a cliam your points will reset to zero, and
+                    your claim will be sent to the logged in deposit address
+                    depending on mining actitvity <br /><br />
+                    Mining Process: <br />
+                    When you mine a block the miner picks a random created block
+                    and unwarps the rewards inside.
+                    <br />
+                    Rewards can be between one and the current block count.
+                    <br />
+                    Blocks are reset to zero when claims are sent.
+                    <br />
+                    Claim values are changed depeing on community holdings, not
+                    token value.
                   </p>
+                </div>
+              </div>
+
+              <div class="hide" id="login-form">
+                <form>
+                  <label>We Are In Test Mode...</label><br />
                   <input
                     name="dream"
                     aria-label="a new dream"
@@ -810,51 +799,27 @@
                     maxlength="42"
                     minlength="42"
                     placeholder="Deposit Address"
-                  />
-                  <button type="submit" id="submit-dream">Game On!</button
-                  ><br /><br />
-                  <button
-                    type="button"
-                    class="gamebuttons"
-                    style="margin-bottom: 5px"
-                  >
-                    <a
-                      target="_blank"
-                      style="text-decoration: none; margin-bottom: 5px"
-                      href="https://crypto.com/university/crypto-wallets"
-                      >What's A Wallet</a
-                    >
-                  </button>
-                  <button
-                    type="button"
-                    class="gamebuttons"
-                    style="margin-bottom: 5px"
-                    id="connect"
-                  >
-                    Metamask Desktop
-                  </button>
+                    required
+                  /><br />
+                  <button type="submit" id="submit-dream">Login</button><br />
                 </form>
-                <section class="hide">
+                <button type="button" id="connect">Metamask Desktop</button>
+
+                <section class="dreams">
                   <ul class="hide" id="dreams"></ul>
                   <button class="hide" id="clear-dreams">Clear Dreams</button>
                 </section>
-                <br />
-                <br />
               </div>
-              <div class="home-page" id="home-page">
-                <div class="hide" id="great-job">
-                  <h2>Great Job!</h2>
-                  <p class="article-text">
-                    You logged into the game!<br />
-                    This means you know what a blockchain wallet is!<br />
-                    Now you can start laying eggs by playing games or<br />
-                    doing some learning activities.
-                  </p>
-
-                  <button type="button" onclick="learnMore();">
-                    Learning Activities
-                  </button>
-                  <br />
+              <div class="hide" id="wallet-tokens">
+                <div id="game-note" class="wallet-article">
+                  <h1>Tokens</h1>
+                  <p>OOPS;( No Claim Button Found</p>
+                </div>
+              </div>
+              <div class="hide" id="wallet-games">
+                <div id="token-note" class="wallet-article">
+                  <h1>Games</h1>
+                  <p>Coming Soon</p>
                 </div>
               </div>
             </center>
@@ -894,6 +859,5 @@
         </div>
       </wrap>
     </div>
-    <label id="click"></label>
   </body>
 </html>
