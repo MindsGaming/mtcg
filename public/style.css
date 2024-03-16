@@ -338,7 +338,7 @@ apps {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   background-color: grey;
   overflow: scroll;
 }
@@ -467,5 +467,8 @@ li {
   margin: 6px;
   text-align: center;
   border-style: 20px 30px 40px 50px 60px;
-  background
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  font-size: 10px;
 }

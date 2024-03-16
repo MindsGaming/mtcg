@@ -18,6 +18,7 @@ const userAccount = document.getElementById("user-account");
 const userAlert = document.getElementById("user-alert");
 const loginform = document.getElementById("login-form");
 var logininfo = document.getElementById("login-info");
+var readyUp = document.getElementById("ready-up");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -117,6 +118,11 @@ function hatchEGG() {
 function fetchLoginForm() {
   loginform.className = "game-article";
   logininfo.className = "hide";
+  readyUp.className = "hide";
+}
+
+function fetchGameabout() {
+  readyUp.className = "game-article";
 }
 
 function userCHECK() {
@@ -131,6 +137,12 @@ function greatJOB() {
   greatJob.className = "game-article";
   loginform.className = "hide";
   userAlert.className = "hide";
+}
+
+
+function gotIt(){
+  var gotit = document.getElementById("got-it");
+
 }
 
 function counteggs() {
