@@ -95,7 +95,7 @@ function hatchEGG() {
     } else {
       // Calculate the total points after hatching
       let numb = dreamsList.getElementsByTagName("li").length;
-      let randomWarp = Math.floor(Math.random() * numb);
+      let randomWarp = Math.floor(Math.random() * numb) + 1;
       let foundEgg = document.getElementById(randomWarp);
       let hatchedPOINTS = parseFloat(foundEgg.value);
       let currentPOINTS = parseFloat(POINTS.innerHTML);
