@@ -88,6 +88,8 @@ function hatchEGG() {
     userAlert.innerHTML = "Login To Play";
   } else {
     if (currenteggs.innerHTML == 0) {
+      userAlert.innerHTML = "No Eggs Found :(";
+      userAlert.className = "user-alert";
     } else {
       // Calculate the total points after hatching
       let numb = dreamsList.getElementsByTagName("li").length;

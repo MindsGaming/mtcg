@@ -396,15 +396,16 @@ li {
 }
 
 .hatchBTN {
-  float: left;
+  float: right;
   display: block;
-  width: 5.3%;
+  width: 15%;
+  margin-top: -0px;
   height: 34px;
   border-style: groove;
   font-size: 15px;
   text-align: center;
   overflow: scroll;
-  background-color: silver;
+  background-color: gold;
   border-color: green;
   color: white;
   font-weight: bold;
