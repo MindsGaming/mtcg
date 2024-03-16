@@ -1,6 +1,8 @@
 // client-side js
 // run by the browser each time your view template referencing it is loaded
+
 console.log("hello world :o");
+
 const dreams = [];
 
 // define variables that reference elements on our page
@@ -8,11 +10,12 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements["dream"];
 const dreamsList = document.getElementById("dreams");
 const clearButton = document.querySelector("#clear-dreams");
-const currentBLOCKS = document.getElementById("currentBLOCKS");
-const POINTS = document.getElementById("POINTS");
+const currentUser = document.getElementById("current-user");
+const POINTS = document.getElementById("hatched-points");
+const currenteggs = document.getElementById("current-eggs");
+const hatchedeggs = document.getElementById("hatched-eggs");
 const userAccount = document.getElementById("user-account");
-var userAlert = document.getElementById("userAlert");
-var minerBTN = document.getElementById("minerBTN");
+const loginform = document.getElementById("login-form");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -27,12 +30,12 @@ fetch("/getDreams", {})
 const appendNewDream = (dream) => {
   const newListItem = document.createElement("li");
   let numb = dreamsList.getElementsByTagName("li").length;
-  let randomWarp = Math.floor(Math.random() * 5) + numb;
-  newListItem.innerHTML = numb;
+  let randomWarp = Math.floor(Math.random() * numb) + 1;
   newListItem.innerText = dream;
-  newListItem.title = "DreamBlock";
+  newListItem.title = "DreamEGG";
   newListItem.id = numb;
   newListItem.value = randomWarp;
+  newListItem.className = "hide";
   dreamsList.appendChild(newListItem);
 };
 
@@ -40,7 +43,9 @@ const appendNewDream = (dream) => {
 dreamsForm.onsubmit = (event) => {
   // stop our form submission from refreshing the page
   event.preventDefault();
+
   const data = { dream: dreamInput.value };
+
   fetch("/addDream", {
     method: "POST",
     body: JSON.stringify(data),
@@ -53,9 +58,10 @@ dreamsForm.onsubmit = (event) => {
   // get dream value and add it to the list
   dreams.push(dreamInput.value);
   appendNewDream(dreamInput.value);
+
   // reset form
-  userAccount.innerHTML = dreamInput.value;
-  minerBTN.className = "account-list";
+  loginform.className = "hide";
+  fetchLOGIN();
   dreamInput.value = "";
   dreamInput.focus();
 };
@@ -69,87 +75,45 @@ clearButton.addEventListener("click", (event) => {
   dreamsList.innerHTML = "";
 });
 
-function miner() {
-  let currentBlocks = dreamsList.getElementsByTagName("li");
-  let numb = currentBlocks.length;
-  currentBLOCKS.innerHTML = dreamsList.getElementsByTagName("li").length;
+function currentEGGS() {
+  let numb = dreamsList.getElementsByTagName("li").length;
+  let randomWarp = Math.floor(Math.random() * numb) + 1;
+  currenteggs.innerHTML = numb;
+}
 
-  if (userAccount.innerHTML == "Login") {
+function fetchLOGIN() {
+  if (userAccount.innerHTML == "LOGIN") {
   } else {
-    /* Mine Block*/
-    let removeBlock = 1;
-    let math = numb - removeBlock;
-    currentBLOCKS.innerHTML = math;
-
-    minerBTN.className = "account-list";
-    let warp = Math.floor(Math.random() * numb);
-    var mineBLOCK = document.getElementById(warp);
-    let pushmined = parseFloat(
-      document.getElementById("minedBLOCKS").innerHTML
-    );
-    let pushvalue = parseFloat(mineBLOCK.value);
-    let POINTSmath = pushmined + pushvalue;
-    var minedBLOCKS = document.getElementById("minedBLOCKS");
-    minedBLOCKS.innerHTML = math;
-
-    /* Pull Points*/
-    let minedPOINTS = mineBLOCK.value;
-    let currentPOINTS = parseInt(POINTS.innerHTML);
-    let pointsmath = minedPOINTS + currentPOINTS;
-    POINTS.innerHTML = pointsmath;
-
-    if (pointsmath > numb) {
-      minerBTN.className = "hide";
-      minedBLOCKS.innerHTML = currentBlocks.length;
-    }
+    userAccount.innerHTML = dreamInput.value;
+    userAccount.style = "font-size: 10px; text-align: left; float:right;";
+    greatJOB();
   }
 }
 
-function loginNote() {
-  var fetchLogin = document.getElementById("login-form");
-  var fetchNote = document.getElementById("login-note");
-  fetchLogin.className = "wallet-article";
-  fetchNote.className = "hide";
-}
-
-/* Pagenation */
-var pagenation = document.getElementById("pagenation");
-var infoTAB = document.getElementById("infoBTN");
-var tokensTAB = document.getElementById("tokensBTN");
-var gamesTAB = document.getElementById("gamesBTN");
-var walletIntro = document.getElementById("wallet-intro");
-var gamesIntro = document.getElementById("wallet-games");
-var tokensIntro = document.getElementById("wallet-tokens");
-
-function walletHOME() {
-  pagenation.title = "Info";
-  TAB();
-}
-
-function walletGAMES() {
-  pagenation.title = "Games";
-  TAB();
-}
-function walletTOKENS() {
-  pagenation.title = "Tokens";
-  TAB();
-}
-function TAB() {
-  if (pagenation.title == "Info") {
-    walletIntro.className = "wallet-tab";
-    gamesIntro.className = "hide";
-    tokensIntro.className = "hide";
+function hatchEGG() {
+  if (currenteggs.innerHTML == 0) {
   } else {
-    if (pagenation.title == "Games") {
-      walletIntro.className = "hide";
-      gamesIntro.className = "wallet-tab";
-      tokensIntro.className = "hide";
-    } else {
-      if (pagenation.title == "Tokens") {
-        walletIntro.className = "hide";
-        gamesIntro.className = "hide";
-        tokensIntro.className = "wallet-tab";
-      }
+    // Calculate the total points after hatching
+    let numb = dreamsList.getElementsByTagName("li").length;
+    let randomWarp = Math.floor(Math.random() * numb);
+    let foundEgg = document.getElementById(randomWarp);
+    let hatchedPOINTS = parseFloat(foundEgg.value);
+    let currentPOINTS = parseFloat(POINTS.innerHTML);
+    let EGGmath = currentPOINTS + hatchedPOINTS;
+    POINTS.innerHTML = EGGmath;
+
+    // Update the cracked egg count
+    let craked = parseFloat(hatchedeggs.innerHTML);
+    let goodegg = 1;
+    let crakedegg = goodegg + craked;
+    hatchedeggs.innerHTML = crakedegg;
+
+    // Calculate the adjusted cooked egg count
+    let cooked = parseFloat(currenteggs.innerHTML) - 1;
+    currenteggs.innerHTML = cooked;
+
+    if (crakedegg > cooked) {
+      currenteggs.innerHTML = "0";
     }
   }
 }
