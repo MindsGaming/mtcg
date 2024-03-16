@@ -142,7 +142,7 @@ function greatJOB() {
 function gotIt() {
   var tabmenu = document.getElementById("tab-menu");
   var gotit = document.getElementById("got-it");
-  gotit.className = "creator-badge"
+  gotit.className = "creator-badge";
   tabmenu.className = "tab-menu";
 }
 
@@ -155,7 +155,32 @@ function counteggs() {
   }
 }
 
-
 /* pagenation */
+var pagenation = document.getElementById("pagenation");
+var playerfarm = document.getElementById("farm-home");
+var playermarket = document.getElementById("farmers-market");
+function playersFarm() {
+  pagenation.innerHTML = "FARM";
+  checkPage();
+}
 
-function pagenation("pag")
+function playersMarket() {
+  pagenation.innerHTML = "MARKET";
+  checkPage();
+}
+function playerGames() {
+  pagenation.innerHTML = "GAMES";
+}
+
+function checkPage() {
+  let checkpage = pagenation.innerHTML;
+  if (checkpage == "FARM") {
+    playerfarm.className = "game-home";
+    playermarket.className = "hide";
+  } else {
+    if (checkpage == "Market") {
+      playerfarm.className = "hide";
+      playermarket.className = "game-article";
+    }
+  }
+}
