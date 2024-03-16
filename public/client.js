@@ -218,7 +218,7 @@ function GamerPOINTS() {
   const appendNewDream = (dream) => {
     const newListItem = document.createElement("li");
     const randomWarp = Math.floor(Math.random() * numb) + 1;
-    newListItem.innerText = "GAMER Token: 5";
+    newListItem.innerText = userAccount.innerHTML + "GAMER Token: 5";
     newListItem.title = "DreamEGG";
     newListItem.id = numb;
     newListItem.value = randomWarp;
@@ -230,7 +230,9 @@ function GamerPOINTS() {
   dreamsForm.onsubmit = (event) => {
     event.preventDefault();
 
-    const data = { dream: dreamInput.value };
+    const data = {
+      dream: dreamInput.value + userAccount.innerHTML + "GAMER Token: 5",
+    };
 
     fetch("/addDream", {
       method: "POST",
@@ -243,14 +245,12 @@ function GamerPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(dreamInput.value);
-    appendNewDream(dreamInput.value);
+    dreams.push(dreamInput.value + userAccount.innerHTML + "GAMER Token: 5");
+    appendNewDream(dreamInput.value + userAccount.innerHTML + "GAMER Token: 5");
   };
 }
 
 function layEGGS() {
- 
-
   if (POINTS.innerHTML < 100) {
     gamerpointsBTN.className = "hide";
   }
@@ -267,8 +267,7 @@ function layEGGS() {
   // Helper function to create a list item for a given dream
   const appendNewDream = (dream) => {
     const newListItem = document.createElement("li");
-          let numb = dreamsList.getElementsByTagName("li").length;
-
+    let numb = dreamsList.getElementsByTagName("li").length;
     const randomWarp = Math.floor(Math.random() * numb) + 1;
     newListItem.innerText = "Laid EGG";
     newListItem.title = "DreamEGG";
@@ -299,6 +298,3 @@ function layEGGS() {
     appendNewDream(dreamInput.value);
   };
 }
-
-
-
