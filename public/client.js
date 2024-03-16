@@ -60,7 +60,6 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value);
 
   // reset form
-  loginform.className = "hide";
   fetchLOGIN();
   dreamInput.value = "";
   dreamInput.focus();
@@ -117,3 +116,25 @@ function hatchEGG() {
     }
   }
 }
+
+
+function fetchLogin() {
+  var currentarticle = document.getElementById("login-info");
+  var readyUp = document.getElementById("ready-up");
+  currentarticle.className = "hide";
+  readyUp.className = "hide";
+  loginform.className = "login-form";
+}
+
+function fetchGameabout() {
+  var gameHome = document.getElementById("game-home");
+  var readyUp = document.getElementById("ready-up");
+  readyUp.className = "game-article";
+  window.open("/#ready-up", "_self");
+}
+
+function greatJOB() {
+  var greatJob = document.getElementById("great-job");
+  greatJob.className = "game-article";
+}
+
