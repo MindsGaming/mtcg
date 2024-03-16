@@ -70,6 +70,6 @@ function fetchGameabout() {
 }
 
 function greatJOB() {
-  var greatJob = document.getElementById("greatJob");
+  var greatJob = document.getElementById("great-job");
   greatJob.className = "game-article";
 }
