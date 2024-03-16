@@ -505,5 +505,6 @@ li {
   bottom: 0;
   right: 0;
   margin-right: 10px;
-  margin-bottom: 35px;
+  margin-bottom: 86px;
+  opacity: .5;
 }

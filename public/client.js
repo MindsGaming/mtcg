@@ -19,6 +19,7 @@ const userAlert = document.getElementById("user-alert");
 const loginform = document.getElementById("login-form");
 var logininfo = document.getElementById("login-info");
 var readyUp = document.getElementById("ready-up");
+chicken.addEventListener("click", CHICKEN);
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -64,6 +65,7 @@ dreamsForm.onsubmit = (event) => {
 
   // reset form
   loginform.className = "hide";
+  currenteggs();
   userCHECK();
   dreamInput.value = "";
   dreamInput.focus();
@@ -167,4 +169,14 @@ function whosTrading() {
   } else {
     userAlert.innerHTML = "OOPD";
   }
+}
+
+const chicken = document.getElementById("CHICKEN");
+chicken.addEventListener("click", CHICKEN);
+
+function CHICKEN() {
+  dremInput.value = "Laid EGG";
+  // get dream value and add it to the list
+  dreams.push(dreamInput.value);
+  appendNewDream(dreamInput.value);
 }
