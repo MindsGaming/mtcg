@@ -472,3 +472,14 @@ li {
   font-weight: bolder;
   font-size: 10px;
 }
+
+.creator-badge {
+  float: right;
+  margin: 2px;
+  padding: 1px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-image: contain;
+  background-repeat: no-repeat;
+}

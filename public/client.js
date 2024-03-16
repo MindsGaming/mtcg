@@ -139,10 +139,11 @@ function greatJOB() {
   userAlert.className = "hide";
 }
 
-
-function gotIt(){
+function gotIt() {
+  var tabmenu = document.getElementById("tab-menu");
   var gotit = document.getElementById("got-it");
-
+  gotit.className = "creator-badge"
+  tabmenu.className = "tab-menu";
 }
 
 function counteggs() {
