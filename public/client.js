@@ -61,7 +61,6 @@ dreamsForm.onsubmit = (event) => {
 
   // reset form
   loginform.className = "hide";
-  fetchLOGIN();
   dreamInput.value = "";
   dreamInput.focus();
 };
@@ -79,15 +78,6 @@ function currentEGGS() {
   let numb = dreamsList.getElementsByTagName("li").length;
   let randomWarp = Math.floor(Math.random() * numb) + 1;
   currenteggs.innerHTML = numb;
-}
-
-function fetchLOGIN() {
-  if (userAccount.innerHTML == "LOGIN") {
-  } else {
-    userAccount.innerHTML = dreamInput.value;
-    userAccount.style = "font-size: 10px; text-align: left; float:right;";
-    greatJOB();
-  }
 }
 
 function hatchEGG() {
@@ -116,4 +106,11 @@ function hatchEGG() {
       currenteggs.innerHTML = "0";
     }
   }
+}
+
+function fetchLoginForm() {
+  var loginform = document.getElementById("login-form");
+  var logininfo = document.getElementById("login-info");
+  loginform.className = "game-article";
+  .className = "hide";
 }
