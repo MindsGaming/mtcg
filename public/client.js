@@ -194,9 +194,18 @@ function thefarmers() {
   }
 }
 
-
 function GamerPOINTS() {
-  // Request the dreams from our app's SQLite database
+  const numb = dreamsList.getElementsByTagName("li").length;
+  const checkPOINTS = parseFloat(POINTS.innerHTML);
+  const removePOINTS = 100;
+  const EGGmath = Math.round(checkPOINTS - removePOINTS);
+  POINTS.innerHTML = EGGmath;
+
+  if (POINTS.innerHTML < 100) {
+    gamerpointsBTN.className = "hide";
+  }
+
+  // Request dreams from the app's SQLite database
   fetch("/getDreams", {})
     .then((res) => res.json())
     .then((response) => {
@@ -205,12 +214,11 @@ function GamerPOINTS() {
       });
     });
 
-  // A helper function that creates a list item for a given dream
+  // Helper function to create a list item for a given dream
   const appendNewDream = (dream) => {
     const newListItem = document.createElement("li");
-    const numb = dreamsList.getElementsByTagName("li").length;
     const randomWarp = Math.floor(Math.random() * numb) + 1;
-    newListItem.innerText = "Laid Egg";
+    newListItem.innerText = "GAMER Token: 5";
     newListItem.title = "DreamEGG";
     newListItem.id = numb;
     newListItem.value = randomWarp;
@@ -218,9 +226,8 @@ function GamerPOINTS() {
     dreamsList.appendChild(newListItem);
   };
 
-  // Listen for the form to be submitted and add a new dream when it is
+  // Listen for the form submission and add a new dream
   dreamsForm.onsubmit = (event) => {
-    // Stop our form submission from refreshing the page
     event.preventDefault();
 
     const data = { dream: dreamInput.value };
@@ -235,13 +242,63 @@ function GamerPOINTS() {
         console.log(JSON.stringify(response));
       });
 
-    // Get dream value and add it to the list
+    // Add the dream value to the list
     dreams.push(dreamInput.value);
     appendNewDream(dreamInput.value);
-let numb = dreamsList.getElementsByTagName("li").length;
-let checkPOINTS = parseFloat(POINTS.innerHTML);
-const removePOINTS = 1;
-const EGGmath = checktPOINTS - removePOINTS;
-POINTS.innerHTML = EGGmath;
   };
 }
+
+function layEGGS() {
+ 
+
+  if (POINTS.innerHTML < 100) {
+    gamerpointsBTN.className = "hide";
+  }
+
+  // Request dreams from the app's SQLite database
+  fetch("/getDreams", {})
+    .then((res) => res.json())
+    .then((response) => {
+      response.forEach((row) => {
+        appendNewDream(row.dream);
+      });
+    });
+
+  // Helper function to create a list item for a given dream
+  const appendNewDream = (dream) => {
+    const newListItem = document.createElement("li");
+          let numb = dreamsList.getElementsByTagName("li").length;
+
+    const randomWarp = Math.floor(Math.random() * numb) + 1;
+    newListItem.innerText = "Laid EGG";
+    newListItem.title = "DreamEGG";
+    newListItem.id = numb;
+    newListItem.value = randomWarp;
+    newListItem.className = "hide";
+    dreamsList.appendChild(newListItem);
+  };
+
+  // Listen for the form submission and add a new dream
+  dreamsForm.onsubmit = (event) => {
+    event.preventDefault();
+
+    const data = { dream: dreamInput.value };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push(dreamInput.value);
+    appendNewDream(dreamInput.value);
+  };
+}
+
+
+
