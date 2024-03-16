@@ -321,96 +321,125 @@ apps {
 }
 
 /* wallet */
-.wallet {
+.gamebuttons {
+  margin: 3px;
+  border-style: solid;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 9px;
+  font-weight: bolder;
+  color: blue;
+}
+
+.GAME {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 90%;
+  height: 100%;
   background-color: grey;
   overflow: scroll;
 }
 
-.wallet-top {
+li {
+  list-style-type: none;
+}
+
+.game-topper {
   position: fixed;
   display: block;
   border-style: solid;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 40px;
   background-color: black;
-  opacity: 0.6;
 }
 
-.MTCG-rewards {
+.MTCG-game {
   float: left;
-  margin-left: 35px;
-  margin-top: 13px;
+  margin-left: 25px;
+  margin-top: 4px;
   color: white;
   font-weight: bolder;
-}
-
-.wallet-tabs {
-  display: block;
-  width: 100%;
-  height: 25px;
-  margin-left: 200px;
-  margin-top: 50px;
-  background-color: transparent;
-  opacity: 0.5;
+  font-size: 14px;
+  opacity: 0.8;
+  padding: 0.2;
 }
 
 .account-menu {
   position: fixed;
   display: block;
-  border-style: groove;
   left: 0;
-  top: 0;
-  margin-top: 6%;
-  overflow: scroll;
-  width: 150px;
+  width: 100%;
+  height: 34px;
+  display: block;
+  margin-top: 32px;
+  background-color: silver;
 }
 
 .account-list {
   float: left;
-  width: 100%;
-  height: 35px;
-  border-style: solid;
-  margin: 1px;
+  display: block;
+  width: 20%;
+  height: 28px;
+  border-style: groove;
+  font-size: 15px;
   text-align: center;
   overflow: scroll;
+  color: green;
 }
 
-.wallet-tab {
-  position: relative;
-  margin-left: 135px;
-  width: 73%;
+.list-flash {
+  color: white;
+  font-weight: bold;
 }
 
-.TAB {
+.hatchBTN {
   float: left;
   display: block;
-  border-radius: 50%;
-  color: white;
-  margin-left: 5px;
-  margin-top: 5px;
-  padding: 0.1px;
-  background-color: black;
+  width: 5.3%;
+  height: 34px;
   border-style: groove;
+  font-size: 15px;
   text-align: center;
-  height: 25px;
-  width: 50px;
-  font-size: 10px;
+  overflow: scroll;
+  background-color: silver;
+  border-color: green;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.wallet-article {
+.game-article {
+  position: relative;
   display: block;
-  width: 80%;
+  width: 35%;
+  margin-top: 100px;
   border-style: groove;
-  margin: 15px;
+  background-color: black;
+  opacity: 0.6;
 }
 
-.hide {
-  display: none;
+.login-form {
+  position: relative;
+  display: block;
+  width: 35%;
+  height: 285px;
+  margin-top: 100px;
+  border-style: groove;
+  background-color: blue;
+}
+
+.article-text {
+  font-size: 18px;
+  font-family: cursive;
+  font-weight: bold;
+  color: white;
+}
+
+.mini-note {
+  font-size: 5px;
+  color: white;
+  font-family: monospace;
 }
