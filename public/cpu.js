@@ -237,28 +237,6 @@ function viewLOGIN() {
   }
 }
 
-function subwallet() {
-  closeside();
-  if (infinity.title == "Infinity") {
-    infinity.title = "Subwallet";
-    infinity.src = "https://web.subwallet.app/welcome";
-    groups.className = "hide";
-    splash.className = "splash";
-    infinity.className = "apps";
-    info.className = "hide";
-    dreamslist.innerHTML = "Loading SubWallet...";
-    dreamInput.value = "Anonymous Subwallet O;";
-    appendNewDream(dreamInput.value);
-  } else {
-    infinity.title = "Infinity";
-    infinity.src = "https://mindsgaming.glitch.me";
-    groups.className = "show";
-    splash.className = "hide";
-    infinity.className = "hide";
-    info.className = "hide";
-  }
-}
-
 /* Points */
 
 function earnPoints() {

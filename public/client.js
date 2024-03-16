@@ -36,6 +36,7 @@ const appendNewDream = (dream) => {
   newListItem.id = numb;
   newListItem.value = randomWarp;
   newListItem.className = "hide";
+  loginform.className = "hide";
   dreamsList.appendChild(newListItem);
 };
 
@@ -60,7 +61,6 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value);
 
   // reset form
-  loginform.className = "hide";
   fetchLOGIN();
   dreamInput.value = "";
   dreamInput.focus();

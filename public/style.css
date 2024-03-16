@@ -321,6 +321,7 @@ apps {
 }
 
 /* wallet */
+
 .gamebuttons {
   margin: 3px;
   border-style: solid;
@@ -398,7 +399,7 @@ li {
 .hatchBTN {
   float: left;
   display: block;
-  width: 17.3%;
+  width: 15.3%;
   height: 34px;
   border-style: groove;
   font-size: 15px;

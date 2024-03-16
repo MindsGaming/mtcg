@@ -1,5 +1,4 @@
 function createEGGS() {
-
   const dreams = [];
 
   // define variables that reference elements on our page
@@ -48,6 +47,7 @@ function createEGGS() {
     // get dream value and add it to the list
     dreams.push(dreamInput.value);
     appendNewDream(dreamInput.value);
+
     // reset form
     dreamInput.value = "";
     dreamInput.focus();
