@@ -483,3 +483,10 @@ li {
   background-image: contain;
   background-repeat: no-repeat;
 }
+
+.hen-house {
+  width: 100%;
+  float: left;
+  height: 100%;
+  background-image: cover;
+}
