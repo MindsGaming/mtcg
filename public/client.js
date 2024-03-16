@@ -160,10 +160,11 @@ function learnTrading() {
 }
 
 function whosTrading() {
-  let farmerPoints = POINTS.innerHTML;
-  var farmerGAMER = document.getElementById("farmer-gamer");
+  var farmerGAMER = document.getElementById("farmer-GAMER");
 
-  if (farmerPoints > farmerGAMER.value) {
-    farmerGAMER.c = "game-article";
+  if (POINTS.innerHTML > 10) {
+    farmerGAMER.className = "game-article";
+  } else {
+    userAlert.innerHTML = "OOPD";
   }
 }
