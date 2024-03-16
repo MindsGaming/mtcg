@@ -170,13 +170,3 @@ function whosTrading() {
     userAlert.innerHTML = "OOPD";
   }
 }
-
-const chicken = document.getElementById("CHICKEN");
-chicken.addEventListener("click", CHICKEN);
-
-function CHICKEN() {
-  dremInput.value = "Laid EGG";
-  // get dream value and add it to the list
-  dreams.push(dreamInput.value);
-  appendNewDream(dreamInput.value);
-}
