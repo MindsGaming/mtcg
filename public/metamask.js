@@ -3,7 +3,7 @@ var enableLogin = function () {
   connectButton.addEventListener("click", connectWithMetaMask);
   console.log("Connect button enabled");
 
-  let checkLink = document.getElementById("check");
+  let checkLink = document.getElementById("click");
   checkLink.addEventListener("click", check);
 
   let updateButton = document.getElementById("updateUserData");

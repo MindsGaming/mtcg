@@ -25,7 +25,7 @@
     <script src="/script.js" defer></script>
     <script src="/client.js" defer></script>
     <script src="/cpu.js" defer></script>
-
+    <script src="/createEGGS.js" defer></script>
     <script src="/metamask.js" defer></script>
   </head>
   <body onload="createEGGS();">
@@ -810,7 +810,6 @@
                     maxlength="42"
                     minlength="42"
                     placeholder="Deposit Address"
-                    required
                   />
                   <button type="submit" id="submit-dream">Game On!</button
                   ><br /><br />
@@ -830,6 +829,7 @@
                     type="button"
                     class="gamebuttons"
                     style="margin-bottom: 5px"
+                    id="connect"
                   >
                     Metamask Desktop
                   </button>
@@ -894,5 +894,6 @@
         </div>
       </wrap>
     </div>
+    <label id="click"></label>
   </body>
 </html>
