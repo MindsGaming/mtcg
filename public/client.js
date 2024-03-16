@@ -142,7 +142,7 @@ function greatJOB() {
 function gotIt() {
   var tabmenu = document.getElementById("tab-menu");
   var gotit = document.getElementById("got-it");
-  gotit.className = "creator-badge"
+  gotit.className = "creator-badge";
   tabmenu.className = "tab-menu";
 }
 
@@ -152,5 +152,18 @@ function counteggs() {
     currenteggs.innerHTML = numb;
   } else {
     counteggs();
+  }
+}
+
+function learnTrading() {
+  alert("Coming Soon...");
+}
+
+function whosTrading() {
+  let farmerPoints = POINTS.innerHTML;
+  var farmerGAMER = document.getElementById("farmer-gamer");
+
+  if (farmerPoints > farmerGAMER.value) {
+    farmerGAMER.c = "game-article";
   }
 }
