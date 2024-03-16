@@ -36,6 +36,7 @@ const appendNewDream = (dream) => {
   newListItem.id = numb;
   newListItem.value = randomWarp;
   newListItem.className = "hide";
+  loginform.className = "hide";
   dreamsList.appendChild(newListItem);
 };
 
@@ -117,7 +118,6 @@ function hatchEGG() {
   }
 }
 
-
 function fetchLogin() {
   var currentarticle = document.getElementById("login-info");
   var readyUp = document.getElementById("ready-up");
@@ -130,11 +130,9 @@ function fetchGameabout() {
   var gameHome = document.getElementById("game-home");
   var readyUp = document.getElementById("ready-up");
   readyUp.className = "game-article";
-  window.open("/#ready-up", "_self");
 }
 
 function greatJOB() {
   var greatJob = document.getElementById("great-job");
   greatJob.className = "game-article";
 }
-
