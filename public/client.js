@@ -17,6 +17,7 @@ const hatchedeggs = document.getElementById("hatched-eggs");
 const userAccount = document.getElementById("user-account");
 const userAlert = document.getElementById("user-alert");
 const loginform = document.getElementById("login-form");
+const gamerpointsBTN = document.getElementById("farmer-GAMERBTN");
 var logininfo = document.getElementById("login-info");
 var readyUp = document.getElementById("ready-up");
 
@@ -183,7 +184,12 @@ function checkPage() {
       playermarket.className = "game-home";
     }
   }
+  thefarmers();
 }
 
-
-const gamerpointsBTN = document.getEle
+function thefarmers() {
+  let checkpoints = parseInt(POINTS.innerHTML);
+  if (checkpoints > 100) {
+    gamerpointsBTN.className = "";
+  }
+}
