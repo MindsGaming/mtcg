@@ -203,7 +203,7 @@ function checkPage() {
 
 function thefarmers() {
   let checkpoints = parseInt(POINTS.innerHTML);
-  if (checkpoints > 100) {
+  if (checkpoints > 2000) {
     gamerpointsBTN.className = "";
   }
 }
@@ -211,11 +211,11 @@ function thefarmers() {
 function GamerPOINTS() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 100;
+  const removePOINTS = 2000;
   const EGGmath = Math.round(checkPOINTS - removePOINTS);
   POINTS.innerHTML = EGGmath;
 
-  if (POINTS.innerHTML < 100) {
+  if (POINTS.innerHTML < 2000) {
     gamerpointsBTN.className = "hide";
   }
 
@@ -322,6 +322,13 @@ function PlayChicken() {
     function newChicken() {
       chicken.className = "chicken";
     }
-    newChicken(), 2000;
+    setTimeout(newChicken, 20000);
+  } else {
+    if (pagenation.innerHTML == "MARKET") {
+      function newChicken() {
+        chicken.className = "chicken";
+      }
+      setTimeout(newChicken, 80000);
+    }
   }
 }
