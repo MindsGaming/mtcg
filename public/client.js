@@ -180,6 +180,7 @@ function playersMarket() {
   farmBackground.src =
     "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
   chicken.className = "hide";
+  PlayChicken();
 }
 
 function playerGames() {
@@ -317,9 +318,10 @@ function layEGGS() {
 
 function PlayChicken() {
   chicken.className = "hide"; // Initially hide the chicken
-
-  // After 20 seconds, remove the "hide" class
-  setTimeout(function () {
-    chicken.className = "chicken";
-  }, 20000); // 20 seconds in milliseconds
+  if (pagenation.innerHTML == "FARM") {
+    // After 20 seconds, remove the "hide" class
+    setTimeout(function () {
+      chicken.className = "chicken";
+    }, 20000); // 20 seconds in milliseconds
+  }
 }
