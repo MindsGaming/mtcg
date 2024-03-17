@@ -142,9 +142,13 @@ function greatJOB() {
 
 function gotIt() {
   var tabmenu = document.getElementById("tab-menu");
+  var gotitBTN = document.getElementById("gotitBTN");
   var gotit = document.getElementById("got-it");
   gotit.className = "creator-badge";
   tabmenu.className = "tab-menu";
+  gotitBTN.className = "hide";
+  gotit.src =
+    "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/GOt-it.webp";
 }
 
 function counteggs() {
