@@ -22,6 +22,7 @@ const farmBackground = document.getElementById("farm-background");
 const chicken = document.getElementById("chicken");
 var logininfo = document.getElementById("login-info");
 var readyUp = document.getElementById("ready-up");
+var energy = document.getElementById("farmer-energy");
 
 // request the dreams from our app's sqlite database
 fetch("/getDreams", {})
@@ -115,6 +116,36 @@ function hatchEGG() {
       currenteggs.innerHTML = cooked;
       userAlert.className = "hide";
     }
+  }
+  pullENERGY();
+}
+
+function pullENERGY() {
+  let hatchBTN = document.getElementById("hatchBTN");
+  let sleepBTN = document.getElementById("sleepBTN");
+  let foundEnergy = parseFloat(energy.value);
+  let sleepmath = foundEnergy - 1;
+  energy.value = sleepmath;
+
+  if (sleepmath == 0) {
+    hatchBTN.className = "hide";
+  }
+  if (sleepmath < 0) {
+    hatchBTN.className = "hide";
+  }
+}
+
+function sleepBTN() {
+  let hatchBTN = document.getElementById("hatchBTN");
+  let sleepBTN = document.getElementById("sleepBTN");
+  let foundEnergy = parseFloat(energy.value);
+  let sleepmath = foundEnergy + 0.5;
+  energy.value = sleepmath;
+  if (sleepmath == 50) {
+    hatchBTN.className = "hatchBTN";
+  }
+  if (sleepmath > 50) {
+    hatchBTN.className = "hatchBTN";
   }
 }
 

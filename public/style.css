@@ -505,3 +505,13 @@ li {
   background-size: cover;
   opacity: 0.6;
 }
+
+.sleepBTN {
+  position: fixed;
+  background-color: transparent;
+  margin-top: 10%;
+  margin-left: 5%;
+  text-align: center;
+  font-size: 9px;
+  color: blue;
+}

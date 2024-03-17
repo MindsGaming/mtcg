@@ -756,7 +756,7 @@
             <img
               src="https://cdn.glitch.global/5db93dce-ff3d-4634-bad9-fb685b29d11d/henhouse.webp"
               class="farm-background"
-                 id="farm-background"
+              id="farm-background"
             />
             <div id="chicken" onclick="layEGGS();">
               <img
@@ -764,7 +764,18 @@
                 class="chicken"
               />
             </div>
-
+            <label class="sleepBTN"
+              >Energy
+              <meter id="farmer-energy" value="50" min="0" max="50"></meter>
+              <div
+                id="sleepBTN"
+                class="gamebuttons"
+                type="button"
+                onclick="sleepBTN();"
+              >
+                Sleep
+              </div>
+            </label>
             <center>
               <div class="game-home" id="game-home">
                 <div class="game-article" id="login-info">
