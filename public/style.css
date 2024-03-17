@@ -396,7 +396,7 @@ li {
 }
 
 .hatchBTN {
- position: fixed;
+  position: fixed;
   top: 0;
   right: 0;
   display: block;
@@ -512,7 +512,7 @@ li {
   position: fixed;
   background-color: transparent;
   margin-top: 23%;
-  margin-left: 5%;
+  margin-left: 3.5%;
   text-align: center;
   font-size: 9px;
   color: blue;
