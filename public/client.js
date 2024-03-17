@@ -20,6 +20,7 @@ const loginform = document.getElementById("login-form");
 const gamerpointsBTN = document.getElementById("farmer-GAMERBTN");
 const farmBackground = document.getElementById("farm-background");
 const chicken = document.getElementById("chicken");
+const feed = document.getElementById("farmer-feed");
 var logininfo = document.getElementById("login-info");
 var readyUp = document.getElementById("ready-up");
 var energy = document.getElementById("farmer-energy");
@@ -202,7 +203,6 @@ function playersFarm() {
   checkPage();
   farmBackground.src =
     "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
-  chicken.className = "chicken";
 }
 
 function playersMarket() {
@@ -211,7 +211,6 @@ function playersMarket() {
   farmBackground.src =
     "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
   chicken.className = "hide";
-  PlayChicken();
 }
 
 function playerGames() {
@@ -347,19 +346,42 @@ function layEGGS() {
   }
 }
 
+function feedCHICKEN() {
+  let yolkstofeed = parseFloat(POINTS.innerHTML);
+
+  if (yolkstofeed < 100) {
+    userAlert.innerHTML = "Not Enough Yolks";
+    userAlert.className = "user-alert";
+  } else {
+    if (yolkstofeed > 100) {
+      let feedmath = yolkstofeed - 100;
+      POINTS.innerHTML = feedmath;
+      let farmerfeed = parseFloat(feed.value);
+      let morefeedmath = farmerfeed + 1;
+      feed.value = morefeedmath;
+      userAlert.innerHTML = "Cluck!";
+      userAlert.className = "user-alert";
+    }
+  }
+}
+
 function PlayChicken() {
   chicken.className = "hide";
-  if (pagenation.innerHTML == "FARM") {
-    function newChicken() {
-      chicken.className = "chicken";
-    }
-    setTimeout(newChicken, 20000);
-  } else {
-    if (pagenation.innerHTML == "MARKET") {
-      function newChicken() {
+  setTimeout(newChicken, 20000);
+  let farmerfeed = parseFloat(feed.value);
+  let morefeedmath = farmerfeed - 1;
+  feed.value = morefeedmath;
+  userAlert = "";
+  function newChicken() {
+    if (feed.value == 0) {
+      userAlert.innerHTML = "Your Chicken Is Hungry";
+      userAlert.className = "user-alert";
+    } else {
+      if (feed.value > 0) {
         chicken.className = "chicken";
+        userAlert.innerHTML = "Cluck!";
+        userAlert.className = "user-alert";
       }
-      setTimeout(newChicken, 80000);
     }
   }
 }

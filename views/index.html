@@ -775,6 +775,16 @@
               >
                 Sleep
               </div>
+              Chicken Feed
+              <meter
+                id="farmer-feed"
+                low="20"
+                high="31"
+                value="25"
+                min="0"
+                max="50"
+              ></meter>
+              <div id="feedBTN" class="gamebuttons" type="button">Feed</div>
             </div>
             <center>
               <div class="game-home" id="game-home">
@@ -901,6 +911,21 @@
                 <div class="game-article">
                   <h2>Buy Some Things At The Farmers Market</h2>
                   <p class="article-text">Traders Come And Go...</p>
+                </div>
+
+                <div class="game-article">
+                  <h2>Chicken Feed</h2>
+                  <p class="article-text">
+                    Don't let your chicken go hungry, grab some feed!
+                  </p>
+                  <button
+                    class="gamebuttons"
+                    onclick="feedCHICKEN();"
+                    id="feed-chicken"
+                  >
+                    Shop's Open
+                  </button>
+                  <br />
                 </div>
 
                 <div class="game-article">
