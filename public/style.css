@@ -396,10 +396,12 @@ li {
 }
 
 .hatchBTN {
-  float: right;
+ position: fixed;
+  top: 0;
+  right: 0;
   display: block;
-  width: 15%;
-  margin-top: -0px;
+  width: 12%;
+  margin-top: 32px;
   height: 34px;
   border-style: groove;
   font-size: 15px;
@@ -509,7 +511,7 @@ li {
 .sleepBTN {
   position: fixed;
   background-color: transparent;
-  margin-top: 10%;
+  margin-top: 23%;
   margin-left: 5%;
   text-align: center;
   font-size: 9px;
