@@ -317,11 +317,11 @@ function layEGGS() {
 }
 
 function PlayChicken() {
-  chicken.className = "hide"; // Initially hide the chicken
+  chicken.className = "hide";
   if (pagenation.innerHTML == "FARM") {
-    // After 20 seconds, remove the "hide" class
-    setTimeout(function () {
+    function newChicken() {
       chicken.className = "chicken";
-    }, 20000); // 20 seconds in milliseconds
+    }
+    newChicken(), 2000;
   }
 }
