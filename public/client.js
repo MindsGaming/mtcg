@@ -18,6 +18,8 @@ const userAccount = document.getElementById("user-account");
 const userAlert = document.getElementById("user-alert");
 const loginform = document.getElementById("login-form");
 const gamerpointsBTN = document.getElementById("farmer-GAMERBTN");
+const farmBackground = document.getElementById("farm-background");
+const chicken = document.getElementById("chicken");
 var logininfo = document.getElementById("login-info");
 var readyUp = document.getElementById("ready-up");
 
@@ -167,12 +169,19 @@ var playermarket = document.getElementById("farmers-market");
 function playersFarm() {
   pagenation.innerHTML = "FARM";
   checkPage();
+  farmBackground.src =
+    "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
+  chicken.className = "chicken";
 }
 
 function playersMarket() {
   pagenation.innerHTML = "MARKET";
   checkPage();
+  farmBackground.src =
+    "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
+  chicken.className = "hide";
 }
+
 function playerGames() {
   pagenation.innerHTML = "GAMES";
 }
@@ -182,7 +191,6 @@ function checkPage() {
   if (checkpage == "FARM") {
     playerfarm.className = "game-home";
     playermarket.className = "hide";
-    
   } else {
     if (checkpage == "MARKET") {
       playerfarm.className = "hide";
@@ -308,11 +316,10 @@ function layEGGS() {
 }
 
 function PlayChicken() {
-  var chicken = document.getElementById("chicken");
-  chicken.classList.add("hide"); // Initially hide the chicken
+  chicken.className = "hide"; // Initially hide the chicken
 
   // After 20 seconds, remove the "hide" class
   setTimeout(function () {
-    chicken.classList.remove("hide");
+    chicken.className = "chicken";
   }, 20000); // 20 seconds in milliseconds
 }
