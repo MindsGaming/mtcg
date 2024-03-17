@@ -182,6 +182,7 @@ function checkPage() {
   if (checkpage == "FARM") {
     playerfarm.className = "game-home";
     playermarket.className = "hide";
+    
   } else {
     if (checkpage == "MARKET") {
       playerfarm.className = "hide";
