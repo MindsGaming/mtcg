@@ -255,37 +255,39 @@ function GamerPOINTS() {
 }
 
 function layEGGS() {
-  if (POINTS.innerHTML < 100) {
-    gamerpointsBTN.className = "hide";
-  }
-
-  // Request dreams from the app's SQLite database
-  fetch("/getDreams", {})
-    .then((res) => res.json())
-    .then((response) => {
-      response.forEach((row) => {
-        appendNewDream(row.dream);
+  if (userAccount.innerHTML == "Login") {
+    userAlert.innerHTML = "Login To Play";
+  } else {
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
       });
-    });
 
-  // Helper function to create a list item for a given dream
-  const appendNewDream = (dream) => {
-    const newListItem = document.createElement("li");
+    // Helper function to create a list item for a given dream
     let numb = dreamsList.getElementsByTagName("li").length;
-    const randomWarp = Math.floor(Math.random() * numb) + 1;
-    newListItem.innerText = "Laid EGG";
-    newListItem.title = "DreamEGG";
-    newListItem.id = numb;
-    newListItem.value = randomWarp;
-    newListItem.className = "hide";
-    dreamsList.appendChild(newListItem);
-  };
+    const layingEGG = parseFloat(currenteggs.innerHTML);
+    const goldenEGG = 1;
+    let goldenEGGmath = layingEGG + goldenEGG;
+    currenteggs.innerHTML = goldenEGGmath;
 
-  // Listen for the form submission and add a new dream
-  dreamsForm.onsubmit = (event) => {
-    event.preventDefault();
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = "Laid EGG";
+      newListItem.title = "DreamEGG";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
 
-    const data = { dream: dreamInput.value };
+    const data = {
+      dream: dreamInput.value,
+    };
 
     fetch("/addDream", {
       method: "POST",
@@ -300,5 +302,16 @@ function layEGGS() {
     // Add the dream value to the list
     dreams.push(dreamInput.value);
     appendNewDream(dreamInput.value);
-  };
+    PlayChicken();
+  }
+}
+
+function PlayChicken() {
+  var chicken = document.getElementById("chicken");
+  chicken.classList.add("hide"); // Initially hide the chicken
+
+  // After 20 seconds, remove the "hide" class
+  setTimeout(function () {
+    chicken.classList.remove("hide");
+  }, 20000); // 20 seconds in milliseconds
 }

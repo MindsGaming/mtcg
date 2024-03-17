@@ -483,3 +483,25 @@ li {
   background-image: contain;
   background-repeat: no-repeat;
 }
+
+.farm-background {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.chicken {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 6%;
+  padding: 0.5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+}
