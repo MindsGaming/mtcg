@@ -203,6 +203,7 @@ function playersFarm() {
   checkPage();
   farmBackground.src =
     "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
+  PlayChicken();
 }
 
 function playersMarket() {
