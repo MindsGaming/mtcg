@@ -43,7 +43,7 @@ const appendNewDream = (dream) => {
   newListItem.title = "DreamEGG";
   newListItem.id = numb;
   newListItem.value = randomWarp;
-  newListItem.className = "hide";
+  newListItem.className = "";
   dreamsList.appendChild(newListItem);
 };
 
