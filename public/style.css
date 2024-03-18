@@ -531,3 +531,13 @@ li {
   font-size: 9px;
   color: blue;
 }
+
+.log {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: silver;
+  border-style: groove;
+  color: blue;
+}

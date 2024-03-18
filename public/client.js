@@ -383,3 +383,8 @@ function PlayChicken() {
     }
   }
 }
+
+function LOGS() {
+  const show = dreamsList.className;
+  show.className = "show";
+}
