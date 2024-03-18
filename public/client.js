@@ -43,7 +43,7 @@ const appendNewDream = (dream) => {
   newListItem.title = "DreamEGG";
   newListItem.id = numb;
   newListItem.value = randomWarp;
-  newListItem.className = "";
+  newListItem.className = "hide";
   dreamsList.appendChild(newListItem);
 };
 
@@ -83,60 +83,6 @@ clearButton.addEventListener("click", (event) => {
   dreamsList.innerHTML = "";
 });
 
-/* EGG Creation */
-
-function layEGGS() {
-  if (userAccount.innerHTML == "Login") {
-    userAlert.innerHTML = "Login To Play";
-  } else {
-    // Request dreams from the app's SQLite database
-    fetch("/getDreams", {})
-      .then((res) => res.json())
-      .then((response) => {
-        response.forEach((row) => {
-          appendNewDream(row.dream);
-        });
-      });
-
-    // Helper function to create a list item for a given dream
-    let numb = dreamsList.getElementsByTagName("li").length;
-    const layingEGG = parseFloat(currenteggs.innerHTML);
-    const goldenEGG = 1;
-    let goldenEGGmath = layingEGG + goldenEGG;
-    currenteggs.innerHTML = goldenEGGmath;
-
-    const appendNewDreamss = (dream) => {
-      const newListItem = document.createElement("li");
-      const randomWarp = Math.floor(Math.random() * numb) + 1;
-      newListItem.innerText = "Laid EGG";
-      newListItem.title = "DreamEGG";
-      newListItem.id = numb;
-      newListItem.value = randomWarp;
-      newListItem.className = "hide";
-      dreamsList.appendChild(newListItem);
-    };
-
-    const data = {
-      dream: dreamInput.value,
-    };
-
-    fetch("/addDream", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((res) => res.json())
-      .then((response) => {
-        console.log(JSON.stringify(response));
-      });
-
-    // Add the dream value to the list
-    dreams.push(dreamInput.value);
-    appendNewDream(dreamInput.value);
-    PlayChicken();
-  }
-}
-
 function currentEGGS() {
   let numb = dreamsList.getElementsByTagName("li").length;
   let randomWarp = Math.floor(Math.random() * numb) + 1;
@@ -173,8 +119,6 @@ function hatchEGG() {
   }
   pullENERGY();
 }
-
-/* Tasks */
 
 function pullENERGY() {
   let hatchBTN = document.getElementById("hatchBTN");
@@ -288,8 +232,6 @@ function checkPage() {
   pullENERGY();
 }
 
-/* Market */
-
 function thefarmers() {
   let checkpoints = parseInt(POINTS.innerHTML);
   if (checkpoints > 2000) {
@@ -353,7 +295,57 @@ function GamerPOINTS() {
   };
 }
 
-/* Chicken */
+function layEGGS() {
+  if (userAccount.innerHTML == "Login") {
+    userAlert.innerHTML = "Login To Play";
+  } else {
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    // Helper function to create a list item for a given dream
+    let numb = dreamsList.getElementsByTagName("li").length;
+    const layingEGG = parseFloat(currenteggs.innerHTML);
+    const goldenEGG = 1;
+    let goldenEGGmath = layingEGG + goldenEGG;
+    currenteggs.innerHTML = goldenEGGmath;
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = "Laid EGG";
+      newListItem.title = "DreamEGG";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: dreamInput.value,
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push(dreamInput.value);
+    appendNewDream(dreamInput.value);
+    PlayChicken();
+  }
+}
 
 function feedCHICKEN() {
   let yolkstofeed = parseFloat(POINTS.innerHTML);
@@ -390,4 +382,10 @@ function PlayChicken() {
       }
     }
   }
+}
+
+function LOGS() {
+ 
+
+  dreams.className = "";
 }
