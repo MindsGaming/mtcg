@@ -339,12 +339,13 @@ apps {
   text-decoration: none;
   cursor: pointer;
   text-align: center;
-  font-size: 9px;
-  font-weight: bolder;
+  font-size: 7px;
+  font-weight: bold;
   color: blue;
   width: 50px;
+  background-color: silver;
+  opacity: 0.8;
 }
-
 
 .GAME {
   position: fixed;
