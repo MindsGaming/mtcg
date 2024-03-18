@@ -137,11 +137,6 @@ function layEGGS() {
   }
 }
 
-/* Chicken */
-
-
-
-
 function currentEGGS() {
   let numb = dreamsList.getElementsByTagName("li").length;
   let randomWarp = Math.floor(Math.random() * numb) + 1;
@@ -180,7 +175,6 @@ function hatchEGG() {
 }
 
 /* Tasks */
-
 
 function pullENERGY() {
   let hatchBTN = document.getElementById("hatchBTN");
@@ -246,8 +240,6 @@ function gotIt() {
     "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/GOt-it.webp";
 }
 
-
-
 function counteggs() {
   let numb = dreamsList.getElementsByTagName("li").length;
   if (currenteggs.innerHTML == "0") {
@@ -297,7 +289,6 @@ function checkPage() {
 }
 
 /* Market */
-
 
 function thefarmers() {
   let checkpoints = parseInt(POINTS.innerHTML);
@@ -362,9 +353,7 @@ function GamerPOINTS() {
   };
 }
 
-
 /* Chicken */
-
 
 function feedCHICKEN() {
   let yolkstofeed = parseFloat(POINTS.innerHTML);
@@ -402,5 +391,3 @@ function PlayChicken() {
     }
   }
 }
-
-
