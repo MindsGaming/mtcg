@@ -95,7 +95,6 @@ function hatchEGG() {
   } else {
     if (currenteggs.innerHTML == 0) {
       userAlert.innerHTML = "No Eggs Found :(";
-      userAlert.className = "user-alert";
     } else {
       // Calculate the total points after hatching
       let numb = dreamsList.getElementsByTagName("li").length;
@@ -115,7 +114,7 @@ function hatchEGG() {
       // Calculate the adjusted cooked egg count
       let cooked = parseFloat(currenteggs.innerHTML) - 1;
       currenteggs.innerHTML = cooked;
-      userAlert.className = "hide";
+      userAlert.innerHTML = "";
     }
   }
   pullENERGY();
@@ -130,6 +129,7 @@ function pullENERGY() {
 
   if (sleepmath == 0) {
     hatchBTN.className = "hide";
+    userAlert.innerHTML = "You're To Tired.";
   }
   if (sleepmath < 0) {
     hatchBTN.className = "hide";
@@ -171,7 +171,6 @@ function greatJOB() {
   var greatJob = document.getElementById("great-job");
   greatJob.className = "game-article";
   loginform.className = "hide";
-  userAlert.className = "hide";
 }
 
 function gotIt() {
@@ -352,7 +351,6 @@ function feedCHICKEN() {
 
   if (yolkstofeed < 100) {
     userAlert.innerHTML = "Not Enough Yolks";
-    userAlert.className = "user-alert";
   } else {
     if (yolkstofeed > 100) {
       let feedmath = yolkstofeed - 100;
@@ -361,7 +359,6 @@ function feedCHICKEN() {
       let morefeedmath = farmerfeed + 1;
       feed.value = morefeedmath;
       userAlert.innerHTML = "Cluck!";
-      userAlert.className = "user-alert";
     }
   }
 }
@@ -376,12 +373,10 @@ function PlayChicken() {
   function newChicken() {
     if (feed.value == 0) {
       userAlert.innerHTML = "Your Chicken Is Hungry";
-      userAlert.className = "user-alert";
     } else {
       if (feed.value > 0) {
         chicken.className = "chicken";
         userAlert.innerHTML = "Cluck!";
-        userAlert.className = "user-alert";
       }
     }
   }
