@@ -20,7 +20,6 @@
     />
 
     <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
-    <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/term/term.css" />
     <script src="/script.js" defer></script>
     <script src="/client.js" defer></script>
@@ -29,7 +28,11 @@
 
     <script src="/metamask.js" defer></script>
   </head>
-
+  <style>
+    .hide {
+      display: none;
+    }
+  </style>
   <body>
     <header>
       <h1>A Dream of the Future</h1>
@@ -53,7 +56,7 @@
 
       <section class="dreams">
         <ul id="dreams"></ul>
-        <button id="clear-dreams">Clear Dreams</button>
+        <button id="clear-dreams" class="hide">Clear Dreams</button>
       </section>
     </main>
 
