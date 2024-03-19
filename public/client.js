@@ -371,7 +371,7 @@ function PlayChicken() {
   let farmerfeed = parseFloat(feed.value);
   let morefeedmath = farmerfeed - 1;
   feed.value = morefeedmath;
-  userAlert.innerHTML = "";
+  userAlert = "";
   function newChicken() {
     if (feed.value == 0) {
       userAlert.innerHTML = "Your Chicken Is Hungry";
@@ -385,5 +385,6 @@ function PlayChicken() {
 }
 
 function LOGS() {
-  dreams.className = "";
+  const show = dreamsList.className;
+  show.className = "show";
 }
