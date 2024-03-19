@@ -304,51 +304,56 @@ function GamerPOINTS() {
 
   if (POINTS.innerHTML < 2000) {
     gamerpointsBTN.className = "hide";
-  }
+  } else {
+    const dreams = [];
 
-  // Request dreams from the app's SQLite database
-  fetch("/getDreams", {})
-    .then((res) => res.json())
-    .then((response) => {
-      response.forEach((row) => {
-        appendNewDream(row.dream);
-      });
-    });
+    // define variables that reference elements on our page
+    const dreamsForm = document.forms[0];
+    const dreamInput = dreamsForm.elements["dream"];
+    const dreamsList = document.getElementById("dreams");
+    const clearButton = document.querySelector("#clear-dreams");
 
-  // Helper function to create a list item for a given dream
-  const appendNewDream = (dream) => {
-    const newListItem = document.createElement("li");
-    const randomWarp = Math.floor(Math.random() * numb) + 1;
-    newListItem.innerText = userAccount.innerHTML + "GAMER Token: 5";
-    newListItem.title = "DreamEGG";
-    newListItem.id = numb;
-    newListItem.value = randomWarp;
-    newListItem.className = "hide";
-    dreamsList.appendChild(newListItem);
-  };
-
-  // Listen for the form submission and add a new dream
-  dreamsForm.onsubmit = (event) => {
-    event.preventDefault();
-
-    const data = {
-      dream: dreamInput.value + userAccount.innerHTML + "GAMER Token: 5",
-    };
-
-    fetch("/addDream", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
-    })
+    // request the dreams from our app's sqlite database
+    fetch("/getDreams", {})
       .then((res) => res.json())
       .then((response) => {
-        console.log(JSON.stringify(response));
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
       });
 
-    // Add the dream value to the list
-    dreams.push(dreamInput.value + userAccount.innerHTML + "GAMER Token: 5");
-    appendNewDream(dreamInput.value + userAccount.innerHTML + "GAMER Token: 5");
-  };
+    // a helper function that creates a list item for a given dream
+    const appendNewDream = (dream) => {
+      const newListItem = document.createElement("li");
+      newListItem.innerText = dream;
+      dreamsList.appendChild(newListItem);
+    };
+
+    // listen for the form to be submitted and add a new dream when it is
+    dreamsForm.onsubmit = (event) => {
+      // stop our form submission from refreshing the page
+      event.preventDefault();
+
+      const data = { dream: dreamInput.value + " :5 GAMER" };
+
+      fetch("/addDream", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          console.log(JSON.stringify(response));
+        });
+      // get dream value and add it to the list
+      dreams.push(dreamInput.value);
+      appendNewDream(dreamInput.value);
+
+      // reset form
+      dreamInput.value = "";
+      dreamInput.focus();
+    };
+  }
 }
 
 /* Chicken */
