@@ -385,7 +385,5 @@ function PlayChicken() {
 }
 
 function LOGS() {
- 
-
   dreams.className = "";
 }
