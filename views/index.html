@@ -904,6 +904,25 @@
                   </button>
                   <br />
                 </div>
+                <div class="hide" id="farming-rewards">
+                  <img id="got-rewards" class="hide" src="#" />
+                  <h2>Sweet Change!</h2>
+                  <p class="article-text">
+                    You got something in the Farmers Market! <br />
+                    Don't forget to make a request!
+                    <br />
+                    <label>GAMER: <label id="GAMER-change">0</label></label>
+                    <button onclick="GamerPOINTS();">Request GAMER</button>
+                    <label>
+                      withinthevacuum: <label id="WTV-change">0</label></label
+                    >
+                    <button onclick="GamerPOINTS();">
+                      Request withinthevacuum
+                    </button>
+                  </p>
+
+                  <br />
+                </div>
               </div>
               <div class="hide" id="farmers-market">
                 <div class="game-article">
@@ -933,8 +952,8 @@
                     another realm.
                   </p>
                   <button
-                    class="hide"
-                    onclick="GamerPOINTS();"
+                    class="gamebuttons"
+                    onclick="GAMERchange();"
                     id="farmer-GAMERBTN"
                   >
                     Shop's Open
@@ -948,8 +967,8 @@
                     music for you.
                   </p>
                   <button
-                    class="hide"
-                    onclick="WTVPOINTS();"
+                    class="gamebuttons"
+                    onclick="WTVchange();"
                     id="farmer-wtvBTN"
                   >
                     Shop's Open

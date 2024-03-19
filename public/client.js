@@ -282,69 +282,161 @@ function checkPage() {
       playermarket.className = "game-home";
     }
   }
-  thefarmers();
   pullENERGY();
+}
+
+/* Market Throttels */
+
+function GAMERchange() {
+  const numb = dreamsList.getElementsByTagName("li").length;
+  const checkPOINTS = parseFloat(POINTS.innerHTML);
+  const removePOINTS = 2000;
+  const trackers = document.getElementById("farming-rewards");
+
+  if (checkPOINTS < removePOINTS) {
+    userAlert.innerHTML = "Not enough Yolks";
+  } else {
+    const EGGmath = Math.round(checkPOINTS - removePOINTS);
+    POINTS.innerHTML = EGGmath;
+    const request = document.getElementById("GAMER-change");
+    let currentchange = parseInt(request.innerHTML);
+    let boostrequest = 5;
+    let requestmath = currentchange + boostrequest;
+    request.innerHTML = requestmath;
+    trackers.className = "game-article";
+  }
+}
+
+function WTVchange() {
+  const numb = dreamsList.getElementsByTagName("li").length;
+  const checkPOINTS = parseFloat(POINTS.innerHTML);
+  const removePOINTS = 2000;
+  const trackers = document.getElementById("farming-rewards");
+
+  if (checkPOINTS < removePOINTS) {
+    userAlert.innerHTML = "Not enough Yolks";
+  } else {
+    const EGGmath = Math.round(checkPOINTS - removePOINTS);
+    POINTS.innerHTML = EGGmath;
+    const request = document.getElementById("WTV-change");
+    let currentchange = parseInt(request.innerHTML);
+    let boostrequest = 8;
+    let requestmath = currentchange + boostrequest;
+    request.innerHTML = requestmath;
+    trackers.className = "game-article";
+  }
 }
 
 /* Market */
 
-function thefarmers() {
-  let checkpoints = parseInt(POINTS.innerHTML);
-  if (checkpoints > 2000) {
-    gamerpointsBTN.className = "";
+function GamerPOINTS() {
+  const numb = dreamsList.getElementsByTagName("li").length;
+  const request = document.getElementById("GAMER-change");
+  let currentchange = parseInt(request.innerHTML);
+
+  if (currentchange < 100) {
+    userAlert.innerHTML = "100 GAMER to send requests";
+  } else {
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    // Helper function to create a list item for a given dream
+    const layingEGG = parseFloat(currenteggs.innerHTML);
+    const goldenEGG = 1;
+    let goldenEGGmath = layingEGG + goldenEGG;
+    currenteggs.innerHTML = goldenEGGmath;
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: userAccount.innerHTML + ": " + currentchange,
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push(userAccount.innerHTML + ": " + currentchange);
+    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    request.innerHTML = "0";
   }
 }
 
-function GamerPOINTS() {
+function WTVPOINTS() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 2000;
-  const EGGmath = Math.round(checkPOINTS - removePOINTS);
-  POINTS.innerHTML = EGGmath;
+  const request = document.getElementById("WTV-change");
+  let currentchange = parseInt(request.innerHTML);
 
-  // Request dreams from the app's SQLite database
-  fetch("/getDreams", {})
-    .then((res) => res.json())
-    .then((response) => {
-      response.forEach((row) => {
-        appendNewDream(row.dream);
+  if (currentchange < 88) {
+    userAlert.innerHTML = "100 WTV to send requests";
+  } else {
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
       });
-    });
 
-  // Helper function to create a list item for a given dream
-  const layingEGG = parseFloat(currenteggs.innerHTML);
-  const goldenEGG = 1;
-  let goldenEGGmath = layingEGG + goldenEGG;
-  currenteggs.innerHTML = goldenEGGmath;
+    // Helper function to create a list item for a given dream
+    const layingEGG = parseFloat(currenteggs.innerHTML);
+    const goldenEGG = 1;
+    let goldenEGGmath = layingEGG + goldenEGG;
+    currenteggs.innerHTML = goldenEGGmath;
 
-  const appendNewDreamss = (dream) => {
-    const newListItem = document.createElement("li");
-    const randomWarp = Math.floor(Math.random() * numb) + 1;
-    newListItem.innerText = dream;
-    newListItem.title = "Request";
-    newListItem.id = numb;
-    newListItem.value = randomWarp;
-    newListItem.className = "hide";
-    dreamsList.appendChild(newListItem);
-  };
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
 
-  const data = {
-    dream: userAccount.innerHTML + ":5 GAMER",
-  };
+    const data = {
+      dream: userAccount.innerHTML + ": " + currentchange,
+    };
 
-  fetch("/addDream", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: { "Content-Type": "application/json" },
-  })
-    .then((res) => res.json())
-    .then((response) => {
-      console.log(JSON.stringify(response));
-    });
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
 
-  // Add the dream value to the list
-  dreams.push(userAccount.innerHTML + " :5 GAMER");
-  appendNewDream(userAccount.innerHTML + " :5 GAMER");
+    // Add the dream value to the list
+    dreams.push(userAccount.innerHTML + ": " + currentchange);
+    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    request.innerHTML = "0";
+  }
 }
 
 /* Chicken */
