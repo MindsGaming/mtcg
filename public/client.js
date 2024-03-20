@@ -407,7 +407,7 @@ function WTVchange() {
   }
 }
 
-function DarkMakchange() {
+function DARKMARKchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const checkPOINTS = parseFloat(POINTS.innerHTML);
   const removePOINTS = 2000;
@@ -427,7 +427,7 @@ function DarkMakchange() {
   }
 }
 
-function DRAGONTOKENchange() {
+function DRAGONchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const checkPOINTS = parseFloat(POINTS.innerHTML);
   const removePOINTS = 2000;
