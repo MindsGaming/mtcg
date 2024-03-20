@@ -943,7 +943,7 @@ function CANDYSPOINTS() {
   let currentchange = parseInt(request.innerHTML);
 
   if (currentchange < 100) {
-    userAlert.innerHTML = "100 Casndys to send requests";
+    userAlert.innerHTML = "100 Candys to send requests";
   } else {
     // Request dreams from the app's SQLite database
     fetch("/getDreams", {})
