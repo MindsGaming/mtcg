@@ -958,8 +958,8 @@ function CANDYSPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + ": " + currentchange);
-    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    dreams.push(userAccount.innerHTML + "CANDYS: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "CANDYS: " + currentchange);
     request.innerHTML = "0";
   }
 }
@@ -969,11 +969,11 @@ function CANDYSPOINTS() {
 function feedCHICKEN() {
   let yolkstofeed = parseFloat(POINTS.innerHTML);
 
-  if (yolkstofeed < 100) {
+  if (yolkstofeed < 1000) {
     userAlert.innerHTML = "Not Enough Yolks";
   } else {
-    if (yolkstofeed > 100) {
-      let feedmath = yolkstofeed - 100;
+    if (yolkstofeed > 1000) {
+      let feedmath = yolkstofeed - 1000;
       POINTS.innerHTML = feedmath;
       let farmerfeed = parseFloat(feed.value);
       let morefeedmath = farmerfeed + 1;
