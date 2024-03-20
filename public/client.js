@@ -304,6 +304,7 @@ function GAMERchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    pullENERGY();
   }
 }
 
@@ -324,6 +325,7 @@ function ECLIPSEchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    pullENERGY();
   }
 }
 
@@ -344,6 +346,7 @@ function DooBetterchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    pullENERGY();
   }
 }
 
@@ -364,6 +367,8 @@ function GTPCchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+      pullENERGY();
+
   }
 }
 
