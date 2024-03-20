@@ -504,7 +504,7 @@ function GamerPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + ": " + currentchange,
+      dream: userAccount.innerHTML + "GAMER: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -518,8 +518,8 @@ function GamerPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + ": " + currentchange);
-    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    dreams.push(userAccount.innerHTML + "GAMER: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "GAMER: " + currentchange);
     request.innerHTML = "0";
   }
 }
@@ -559,7 +559,7 @@ function ECLIPSEPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + ": " + currentchange,
+      dream: userAccount.innerHTML + "ECLIPSE: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -573,8 +573,8 @@ function ECLIPSEPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + ": " + currentchange);
-    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    dreams.push(userAccount.innerHTML + "ECLIPSE: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "ECLIPSE: " + currentchange);
     request.innerHTML = "0";
   }
 }
@@ -614,7 +614,7 @@ function DOOBETTERPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + ": " + currentchange,
+      dream: userAccount.innerHTML + "DooBetter: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -628,8 +628,8 @@ function DOOBETTERPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + ": " + currentchange);
-    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    dreams.push(userAccount.innerHTML + "DooBetter: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "DooBetter: " + currentchange);
     request.innerHTML = "0";
   }
 }
@@ -669,7 +669,7 @@ function GTPCPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + ": " + currentchange,
+      dream: userAccount.innerHTML + "GTPC: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -683,8 +683,8 @@ function GTPCPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + ": " + currentchange);
-    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    dreams.push(userAccount.innerHTML + "GTPC: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "GTPC: " + currentchange);
     request.innerHTML = "0";
   }
 }
@@ -724,7 +724,7 @@ function PINNPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + ": " + currentchange,
+      dream: userAccount.innerHTML + "PINN: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -738,8 +738,8 @@ function PINNPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + ": " + currentchange);
-    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    dreams.push(userAccount.innerHTML + "PINN: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "PINN: " + currentchange);
     request.innerHTML = "0";
   }
 }
@@ -779,7 +779,7 @@ function WTVPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + ": " + currentchange,
+      dream: userAccount.innerHTML + "WTV: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -793,8 +793,8 @@ function WTVPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + ": " + currentchange);
-    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    dreams.push(userAccount.innerHTML + "WTV: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "WTV: " + currentchange);
     request.innerHTML = "0";
   }
 }
@@ -834,7 +834,7 @@ function DARKMARKPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + ": " + currentchange,
+      dream: userAccount.innerHTML + "DarkMark: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -848,8 +848,8 @@ function DARKMARKPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + ": " + currentchange);
-    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    dreams.push(userAccount.innerHTML + "DarkMark: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "DarkMark: " + currentchange);
     request.innerHTML = "0";
   }
 }
@@ -889,7 +889,7 @@ function DRAGONTOKENPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + ": " + currentchange,
+      dream: userAccount.innerHTML + "DragonToken: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -903,8 +903,8 @@ function DRAGONTOKENPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + ": " + currentchange);
-    appendNewDream(userAccount.innerHTML + " :" + currentchange);
+    dreams.push(userAccount.innerHTML + "DragonToken: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "DragonToken: " + currentchange);
     request.innerHTML = "0";
   }
 }
@@ -944,7 +944,7 @@ function CANDYSPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + ": " + currentchange,
+      dream: userAccount.innerHTML + "CANDYS: " + currentchange,
     };
 
     fetch("/addDream", {
