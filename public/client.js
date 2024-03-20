@@ -141,6 +141,9 @@ function currentEGGS() {
   let numb = dreamsList.getElementsByTagName("li").length;
   let randomWarp = Math.floor(Math.random() * numb) + 1;
   currenteggs.innerHTML = numb;
+  if (currenteggs.innerHTML == 0) {
+    currentEGGS();
+  }
 }
 
 function hatchEGG() {
@@ -367,8 +370,7 @@ function GTPCchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
-      pullENERGY();
-
+    pullENERGY();
   }
 }
 
@@ -389,6 +391,7 @@ function PINNchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    pullENERGY();
   }
 }
 
@@ -409,6 +412,7 @@ function WTVchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    pullENERGY();
   }
 }
 
@@ -429,6 +433,7 @@ function DARKMARKchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    pullENERGY();
   }
 }
 
@@ -449,6 +454,7 @@ function DRAGONchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    pullENERGY();
   }
 }
 
@@ -469,6 +475,7 @@ function CANDYSchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    pullENERGY();
   }
 }
 
@@ -527,6 +534,7 @@ function GamerPOINTS() {
     appendNewDream(userAccount.innerHTML + "GAMER: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
   }
 }
 
@@ -583,6 +591,7 @@ function ECLIPSEPOINTS() {
     appendNewDream(userAccount.innerHTML + "ECLIPSE: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
   }
 }
 
@@ -639,6 +648,7 @@ function DOOBETTERPOINTS() {
     appendNewDream(userAccount.innerHTML + "DooBetter: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
   }
 }
 
@@ -695,6 +705,7 @@ function GTPCPOINTS() {
     appendNewDream(userAccount.innerHTML + "GTPC: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
   }
 }
 
@@ -751,6 +762,7 @@ function PINNPOINTS() {
     appendNewDream(userAccount.innerHTML + "PINN: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
   }
 }
 
@@ -807,6 +819,7 @@ function WTVPOINTS() {
     appendNewDream(userAccount.innerHTML + "WTV: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
   }
 }
 
@@ -863,6 +876,7 @@ function DARKMARKPOINTS() {
     appendNewDream(userAccount.innerHTML + "DarkMark: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
   }
 }
 
@@ -919,6 +933,7 @@ function DRAGONTOKENPOINTS() {
     appendNewDream(userAccount.innerHTML + "DragonToken: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
   }
 }
 
@@ -975,6 +990,7 @@ function CANDYSPOINTS() {
     appendNewDream(userAccount.innerHTML + "CANDYS: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
   }
 }
 
@@ -986,8 +1002,8 @@ function feedCHICKEN() {
   if (yolkstofeed < 1000) {
     userAlert.innerHTML = "Not Enough Yolks";
   } else {
-    if (yolkstofeed > 1000) {
-      let feedmath = yolkstofeed - 1000;
+    if (yolkstofeed > 500) {
+      let feedmath = yolkstofeed - 500;
       POINTS.innerHTML = feedmath;
       let farmerfeed = parseFloat(feed.value);
       let morefeedmath = farmerfeed + 1;
