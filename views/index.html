@@ -904,8 +904,12 @@
                   </button>
                   <br />
                 </div>
-                <div class="hide" id="farming-rewards">
-                  <img id="got-rewards" class="hide" src="#" />
+                <div class="creator-badge" id="farming-rewards">
+                  <img
+                    id="got-rewards"
+                    class="hide"
+                    src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/thumbnails%2FRabbit.jpg"
+                  />
                   <h2>Sweet Change!</h2>
                   <p class="article-text">
                     You got something in the Farmers Market! <br />
@@ -919,19 +923,59 @@
                     <button onclick="WTVPOINTS();">
                       Request withinthevacuum
                     </button>
+                    <label>
+                      DooBetter: <label id="DOOBETTER-change">0</label></label
+                    >
+                    <button onclick="DOOBETTERPOINTS();">
+                      Request DooBetter
+                    </button>
+                    <label> GTPC: <label id="GTPC-change">0</label></label>
+                    <button onclick="GTPCPOINTS();">Request GTPC</button>
+                    <label>
+                      ECLIPSE:
+                      <label id="ECLIPSE-change">0</label></label
+                    >
+                    <button onclick="ECLIPSEPOINTS();">Request ECLIPSE</button>
+                    <label>
+                      PINN:
+                      <label id="PINN-change">0</label></label
+                    >
+                    <button onclick="ECLIPSEPOINTS();">Request ECLIPSE</button>
+                    <label>
+                      DragonToken:
+                      <label id="DRAGONTOKEN-change">0</label></label
+                    >
+                    <button onclick="DRAGONTOKENPOINTS();">
+                      Request DragonToken
+                    </button>
+                    <label>
+                      DarkMark: <label id="DARKMARK-change">0</label></label
+                    >
+                    <button onclick="DARKMARKPOINTS();">
+                      Request withinthevacuum
+                    </button>
+                    <label>Candys: <label id="CANDYS-change">0</label></label>
+                    <button onclick="CANDYSPOINTS();">Request Candys</button>
                   </p>
-
                   <br />
                 </div>
               </div>
               <div class="hide" id="farmers-market">
                 <div class="game-article">
-                  <h2>Buy Some Things At The Farmers Market</h2>
-                  <p class="article-text">Traders Come And Go...</p>
+                  <h2>Welcome To The Farmers Market</h2>
+                  <p class="article-text">
+                    The market is a place to learn about swaping,<br />
+                    here you can trade your gamed Yolks for other things. <br />
+                    Each trade in the Farmers market requires 2,000 Yolks,
+                    <br />
+                    The amount you get is shown before the item,
+                    <br />Items you get in the shop show on your farm page.
+                    <br />
+                  </p>
                 </div>
 
                 <div class="game-article">
-                  <h2>Chicken Feed</h2>
+                  <h2>One Chicken Feed</h2>
                   <p class="article-text">
                     Don't let your chicken go hungry, grab some feed!
                   </p>
@@ -946,22 +990,55 @@
                 </div>
 
                 <div class="game-article">
-                  <h2>GAMER</h2>
+                  <h2>10 DragonToken</h2>
                   <p class="article-text">
-                    GAMER needs some Yolks for some GAMER, they say it's from
-                    another realm.
+                    A relic to ride a Dragon, if you stack enough they say the
+                    Dragon sticks around.
                   </p>
                   <button
                     class="gamebuttons"
-                    onclick="GAMERchange();"
-                    id="farmer-GAMERBTN"
+                    onclick="DRAGONchange();"
+                    id="farmer-DRAGONTOKENBTN"
                   >
                     Shop's Open
                   </button>
                   <br />
                 </div>
+
                 <div class="game-article">
-                  <h2>withinthevacuum</h2>
+                  <label class="a-pirce">10</label>
+                  <h2>9 DarkMark</h2>
+                  <p class="article-text">
+                    When it's a dark journey you might need some DarkMark.
+                  </p>
+                  <button
+                    class="gamebuttons"
+                    onclick="DARKMARKchange();"
+                    id="farmer-DARKMARKBTN"
+                  >
+                    Shop's Open
+                  </button>
+                  <br />
+                </div>
+
+                <div class="game-article">
+                  <label class="a-pirce">10</label>
+                  <h2>8 Candys</h2>
+                  <p class="article-text">
+                    Don't feed your chicken Candys, just eat them yourself.
+                  </p>
+                  <button
+                    class="gamebuttons"
+                    onclick="CANDYSchange();"
+                    id="farmer-CANDYSBTN"
+                  >
+                    Shop's Open
+                  </button>
+                  <br />
+                </div>
+
+                <div class="game-article">
+                  <h2>8 withinthevacuum</h2>
                   <p class="article-text">
                     withinthevacuum will accept some Yolks as he plays some
                     music for you.
@@ -975,11 +1052,77 @@
                   </button>
                   <br />
                 </div>
+
+                <div class="game-article">
+                  <h2>7 PINN</h2>
+                  <p class="article-text">Nothing is here, or is there?</p>
+                  <button
+                    class="gamebuttons"
+                    onclick="PINNchange();"
+                    id="farmer-PINNBTN"
+                  >
+                    Shop's Open
+                  </button>
+                  <br />
+                </div>
+
+                <div class="game-article">
+                  <h2>7 Eclipse</h2>
+                  <p class="article-text">
+                    ECLIPSE is gaming while jamming to some tunes, <br />
+                    grab some while you can.
+                  </p>
+                  <button
+                    class="gamebuttons"
+                    onclick="ECLIPSEchange();"
+                    id="farmer-ECLIPSEBTN"
+                  >
+                    Shop's Open
+                  </button>
+                  <br />
+                </div>
+                <div class="game-article">
+                  <h2>6 GTPC</h2>
+                  <p class="article-text">Testing to see if this works...</p>
+                  <button
+                    class="gamebuttons"
+                    onclick="GTPCchange();"
+                    id="farmer-GTPCBTN"
+                  >
+                    Shop's Open
+                  </button>
+                  <br />
+                </div>
+                <div class="game-article">
+                  <h2>5 DooBetter</h2>
+                  <p class="article-text">
+                    The name says it all, any questions?
+                  </p>
+                  <button
+                    class="gamebuttons"
+                    onclick="DooBetterchange();"
+                    id="farmer-DooBetterBTN"
+                  >
+                    Shop's Open
+                  </button>
+                  <br />
+                </div>
+                <div class="game-article">
+                  <h2>4 GAMER</h2>
+                  <p class="article-text">Don't Rage, just be a GAMER</p>
+                  <button
+                    class="gamebuttons"
+                    onclick="GAMERchange();"
+                    id="farmer-GAMERBTN"
+                  >
+                    Shop's Open
+                  </button>
+                  <br />
+                </div>
               </div>
             </center>
           </div>
         </div>
-
         <div class="footer">
           <div
             class="start"
