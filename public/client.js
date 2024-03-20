@@ -521,6 +521,7 @@ function GamerPOINTS() {
     dreams.push(userAccount.innerHTML + "GAMER: " + currentchange);
     appendNewDream(userAccount.innerHTML + "GAMER: " + currentchange);
     request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
   }
 }
 
@@ -576,6 +577,7 @@ function ECLIPSEPOINTS() {
     dreams.push(userAccount.innerHTML + "ECLIPSE: " + currentchange);
     appendNewDream(userAccount.innerHTML + "ECLIPSE: " + currentchange);
     request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
   }
 }
 
@@ -631,6 +633,7 @@ function DOOBETTERPOINTS() {
     dreams.push(userAccount.innerHTML + "DooBetter: " + currentchange);
     appendNewDream(userAccount.innerHTML + "DooBetter: " + currentchange);
     request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
   }
 }
 
@@ -686,6 +689,7 @@ function GTPCPOINTS() {
     dreams.push(userAccount.innerHTML + "GTPC: " + currentchange);
     appendNewDream(userAccount.innerHTML + "GTPC: " + currentchange);
     request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
   }
 }
 
@@ -741,6 +745,7 @@ function PINNPOINTS() {
     dreams.push(userAccount.innerHTML + "PINN: " + currentchange);
     appendNewDream(userAccount.innerHTML + "PINN: " + currentchange);
     request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
   }
 }
 
@@ -796,6 +801,7 @@ function WTVPOINTS() {
     dreams.push(userAccount.innerHTML + "WTV: " + currentchange);
     appendNewDream(userAccount.innerHTML + "WTV: " + currentchange);
     request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
   }
 }
 
@@ -851,6 +857,7 @@ function DARKMARKPOINTS() {
     dreams.push(userAccount.innerHTML + "DarkMark: " + currentchange);
     appendNewDream(userAccount.innerHTML + "DarkMark: " + currentchange);
     request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
   }
 }
 
@@ -906,6 +913,7 @@ function DRAGONTOKENPOINTS() {
     dreams.push(userAccount.innerHTML + "DragonToken: " + currentchange);
     appendNewDream(userAccount.innerHTML + "DragonToken: " + currentchange);
     request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
   }
 }
 
@@ -961,6 +969,7 @@ function CANDYSPOINTS() {
     dreams.push(userAccount.innerHTML + "CANDYS: " + currentchange);
     appendNewDream(userAccount.innerHTML + "CANDYS: " + currentchange);
     request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
   }
 }
 
