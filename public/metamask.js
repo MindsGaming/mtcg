@@ -18,45 +18,46 @@ var connectWithMetaMask = async function () {
   const accounts = await ethereum.request({ method: "eth_requestAccounts" });
   const publicAddress = accounts[0];
   console.log("Address chosen is", publicAddress);
-  var placeaddy = document.getElementById("walletID");
+  var placeaddy = document.getElementById("user-account");
   placeaddy.value = ethereum.selectedAddress;
 
   if (placeaddy.value == ethereum.selectedAddress) {
-    // CUstom
+    // Helper function to create a list item for a given dream
+    let numb = dreamsList.getElementsByTagName("li").length;
+    const layingEGG = parseFloat(currenteggs.innerHTML);
+    const goldenEGG = 1;
+    let goldenEGGmath = layingEGG + goldenEGG;
+    currenteggs.innerHTML = goldenEGGmath;
 
-    // a helper function that creates a list item for a given dream
-    const appendNewDream = (dream) => {
+    const appendNewDreamss = (dream) => {
       const newListItem = document.createElement("li");
-      const newListItems = document.createElement("meter");
-      newListItems.innerText = parseFloat(DreamChain.value).toFixed(2); // Convert to float and round to 2 decimal places
-      newListItems.min = 0;
-      newListItems.max = 5;
-      newListItems.value = parseFloat(DreamChain.value).toFixed(2); // Same here
-      newListItems.id = dream; // Make sure 'dream' is a valid identifier
-      newListItem.innerText = dream;
-      accountID.innerHTML = parseFloat(dreamInput.value).toFixed(2); // Convert input value to float and round
-
-      dreamsList.appendChild(newListItem + newListItems);
-      /* DreamChain */
-      function createBLOCK() {
-        // a helper function that creates a list item for a given dream
-        const appendNewDream = (dream) => {
-          const newListItem = document.createElement("li");
-          let currentBlocks = dreamsList.getElementsByTagName("li");
-          let numb = currentBlocks.length;
-          let randomWarp = Math.floor(Math.random() * 5) + numb;
-          currentBLOCKS.innerHTML = numb;
-          newListItem.innerText = dream;
-          newListItem.title = "DreamBlock";
-          newListItem.id = numb;
-          newListItem.value = randomWarp;
-          userAlert.title = "";
-          newListItem.addEventListener("click", miner);
-
-          dreamsList.appendChild(newListItem);
-        };
-      }
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = "Laid EGG";
+      newListItem.title = "DreamEGG";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
     };
+
+    const data = {
+      dream: dreamInput.value,
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push(dreamInput.value);
+    appendNewDream(dreamInput.value);
+    PlayChicken();
   }
 
   async () => {
