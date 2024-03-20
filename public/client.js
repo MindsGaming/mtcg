@@ -695,7 +695,7 @@ function PINNPOINTS() {
   let currentchange = parseInt(request.innerHTML);
 
   if (currentchange < 100) {
-    userAlert.innerHTML = "100 ECLIPSE to send requests";
+    userAlert.innerHTML = "100 PINN to send requests";
   } else {
     // Request dreams from the app's SQLite database
     fetch("/getDreams", {})

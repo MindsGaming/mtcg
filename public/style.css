@@ -522,6 +522,18 @@ li {
   opacity: 0.6;
 }
 
+.list-egg {
+  float: right;
+  margin: 2px;
+  padding: 1px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-image: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/EGG.webp");
+}
+
 .sleepBTN {
   position: fixed;
   background-color: transparent;
