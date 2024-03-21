@@ -1072,6 +1072,8 @@ function PlayChicken() {
 
 function playPacman() {
   var gameframe = document.getElementById("playPacman");
+  var iframe = document.getElementById("pacmanFrame");
+
   var pacfeed = document.getElementById("pacmanfeedBTN");
   let yolkstofeed = parseFloat(POINTS.innerHTML);
 
@@ -1087,6 +1089,7 @@ function playPacman() {
     pullENERGY();
     gameframe.className = "pacman";
     pacfeed.className = "gamebuttons";
+    iframe.src="/games/pacman";
     pullENERGY();
   }
 }
@@ -1098,7 +1101,8 @@ function pacmanFEED() {
   var ret = "Score:0".replace("Score:", "");
   let scorefeed = parseFloat(ret);
   let farmerfeed = parseFloat(feed.value);
-  let morefeedmath = farmerfeed + 0.5;
+  let scoremath = scorefeed % 10;
+  let morefeedmath = farmerfeed + scoremath;
   feed.value = morefeedmath;
   userAlert.innerHTML = "Cluck!";
   gameframe.className = "hide";
