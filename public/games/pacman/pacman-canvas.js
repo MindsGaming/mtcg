@@ -1558,8 +1558,4 @@ function checkAppCache() {
 		}
 }
 
-
-const newListItem = document.createElement("li");
-  let numb = dreamsList.getElementsByTagName("li").length;
-
 geronimo();
