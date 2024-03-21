@@ -1089,7 +1089,7 @@ function playPacman() {
     pullENERGY();
     gameframe.className = "pacman";
     pacfeed.className = "gamebuttons";
-    iframe.src="/games/pacman";
+    iframe.src = "/games/pacman";
     pullENERGY();
   }
 }
@@ -1101,7 +1101,7 @@ function pacmanFEED() {
   var ret = "Score:0".replace("Score:", "");
   let scorefeed = parseFloat(ret);
   let farmerfeed = parseFloat(feed.value);
-  let scoremath = scorefeed % 10;
+  let scoremath = scorefeed + 0.2;
   let morefeedmath = farmerfeed + scoremath;
   feed.value = morefeedmath;
   userAlert.innerHTML = "Cluck!";
