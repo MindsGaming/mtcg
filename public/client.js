@@ -1075,10 +1075,10 @@ function playPacman() {
   var pacfeed = document.getElementById("pacmanfeedBTN");
   let yolkstofeed = parseFloat(POINTS.innerHTML);
 
-  if (yolkstofeed < 100) {
+  if (yolkstofeed < 1000) {
     userAlert.innerHTML = "Not Enough Yolks";
   } else {
-    let feedmath = yolkstofeed - 100;
+    let feedmath = yolkstofeed - 1000;
     POINTS.innerHTML = feedmath;
     let farmerfeed = parseFloat(feed.value);
     let morefeedmath = farmerfeed + 1;
@@ -1103,5 +1103,4 @@ function pacmanFEED() {
   userAlert.innerHTML = "Cluck!";
   gameframe.className = "hide";
   pacfeed.className = "hide";
-  pullENERGY();
 }
