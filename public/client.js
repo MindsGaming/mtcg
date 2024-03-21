@@ -295,6 +295,7 @@ function checkPage() {
     if (checkpage == "FARM") {
       playerfarm.className = "game-home";
       playermarket.className = "hide";
+      playerarcade.className = "hide";
       farmBackground.src =
         "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
       sleepBTN.className = "meterbuttons";
@@ -302,6 +303,7 @@ function checkPage() {
       if (checkpage == "MARKET") {
         playerfarm.className = "hide";
         playermarket.className = "game-home";
+        playerarcade.className = "hide";
         farmBackground.src =
           "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
         sleepBTN.className = "hide";
