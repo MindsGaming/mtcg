@@ -253,10 +253,8 @@ function fillEnergy() {
   let yolkstofeed = parseFloat(POINTS.innerHTML);
   if (yolkstofeed < 2000) {
     userAlert.innerHTML = "Not Enough Yolks";
-  }
-  if (feed.value == 0) {
-    if (currenteggs.innerHTML == 0) {
-      userAlert.innerHTML = "You Crashed The Farm";
+    if (energy.value == 0) {
+      userAlert.innerHTML = "Game Over, You Died Exhaustion";
     }
   } else {
     let feedmath = yolkstofeed - 2000;
