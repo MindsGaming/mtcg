@@ -141,7 +141,8 @@ function counteggs() {
   let numb = dreamsList.getElementsByTagName("li").length;
   let randomWarp = Math.floor(Math.random() * numb) + 1;
   currenteggs.innerHTML = numb;
-  if (currenteggs.innerHTML == 0) {
+  let blockchecker = document.getElementById("current-eggs");
+  if (blockchecker.innerHTML == 0) {
     counteggs();
   }
 }
