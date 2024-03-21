@@ -1167,13 +1167,28 @@
 
                 <div class="game-article">
                   <h2>Pacman</h2>
-                  <p class="article-text">Play Pacman for chiken feed.</p>
+                  <p class="article-text">
+                    Play Pacman for chiken feed.
+                    <br />
+                  </p>
+                  <div id="playPacman" class="hide">
+                    <iframe src="/games/pacman" width="100%;" height="100%;">
+                    </iframe>
+                  </div>
+
                   <button
                     class="gamebuttons"
-                    onclick="playPackMan();"
+                    onclick="playPacman();"
                     id="pacmanBTN"
                   >
-                    Coming Soon
+                    Insert Yolks (100)
+                  </button>
+                  <button
+                    class="hide"
+                    onclick="pacmanFEED();"
+                    id="pacmanfeedBTN"
+                  >
+                    Earn Feed
                   </button>
                   <br />
                 </div>

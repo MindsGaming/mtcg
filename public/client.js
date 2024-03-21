@@ -142,7 +142,7 @@ function counteggs() {
   let randomWarp = Math.floor(Math.random() * numb) + 1;
   currenteggs.innerHTML = numb;
   let blockchecker = document.getElementById("current-eggs");
-  if (blockchecker.innerHTML == 0) {
+  if (blockchecker.innerHTML == "0") {
     counteggs();
   }
 }
@@ -1069,12 +1069,39 @@ function PlayChicken() {
 }
 
 /* GAMES */
-const stockpacfeed = function pacmanFEED() {
+
+function playPacman() {
+  var gameframe = document.getElementById("playPacman");
+  var pacfeed = document.getElementById("pacmanfeedBTN");
+  let yolkstofeed = parseFloat(POINTS.innerHTML);
+
+  if (yolkstofeed < 100) {
+    userAlert.innerHTML = "Not Enough Yolks";
+  } else {
+    let feedmath = yolkstofeed - 100;
+    POINTS.innerHTML = feedmath;
+    let farmerfeed = parseFloat(feed.value);
+    let morefeedmath = farmerfeed + 1;
+    feed.value = morefeedmath;
+    userAlert.innerHTML = "Cluck!";
+    pullENERGY();
+    gameframe.className = "pacman";
+    pacfeed.className = "gamebuttons";
+    pullENERGY();
+  }
+}
+
+function pacmanFEED() {
+  var gameframe = document.getElementById("playPacman");
+  var pacfeed = document.getElementById("pacmanfeedBTN");
   const pushfeed = document.getElementById("pacman-score");
   var ret = "Score:0".replace("Score:", "");
   let scorefeed = parseFloat(ret);
   let farmerfeed = parseFloat(feed.value);
-  let morefeedmath = farmerfeed + 0.25;
+  let morefeedmath = farmerfeed + 0.5;
   feed.value = morefeedmath;
   userAlert.innerHTML = "Cluck!";
-};
+  gameframe.className = "hide";
+  pacfeed.className = "hide";
+  pullENERGY();
+}
