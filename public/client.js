@@ -137,12 +137,12 @@ function layEGGS() {
   }
 }
 
-function currentEGGS() {
+function counteggs() {
   let numb = dreamsList.getElementsByTagName("li").length;
   let randomWarp = Math.floor(Math.random() * numb) + 1;
   currenteggs.innerHTML = numb;
   if (currenteggs.innerHTML == 0) {
-    currentEGGS();
+    counteggs();
   }
 }
 
@@ -201,11 +201,16 @@ function sleepBTN() {
   let foundEnergy = parseFloat(energy.value);
   let sleepmath = foundEnergy + 0.5;
   energy.value = sleepmath;
+  sleepBTN.className = "hide";
+
   if (sleepmath == 50) {
     hatchBTN.className = "hatchBTN";
-  }
-  if (sleepmath > 50) {
+  } else if (sleepmath > 50) {
     hatchBTN.className = "hatchBTN";
+  }
+  setTimeout(flashBTN, 1000);
+  function flashBTN() {
+    sleepBTN.className = "meterbuttons";
   }
 }
 
@@ -243,12 +248,20 @@ function gotIt() {
     "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/GOt-it.webp";
 }
 
-function counteggs() {
-  let numb = dreamsList.getElementsByTagName("li").length;
-  if (currenteggs.innerHTML == "0") {
-    currenteggs.innerHTML = numb;
+function fillEnergy() {
+  let yolkstofeed = parseFloat(POINTS.innerHTML);
+  if (yolkstofeed < 2000) {
+    userAlert.innerHTML = "Not Enough Yolks";
+  }
+  if (feed.value == 0) {
+    if (currenteggs.innerHTML == 0) {
+      userAlert.innerHTML = "You Crashed The Farm";
+    }
   } else {
-    counteggs();
+    let feedmath = yolkstofeed - 2000;
+    POINTS.innerHTML = feedmath;
+    energy.value = 50;
+    userAlert.innerHTML = "Charged Up!";
   }
 }
 
@@ -256,36 +269,55 @@ function counteggs() {
 var pagenation = document.getElementById("pagenation");
 var playerfarm = document.getElementById("farm-home");
 var playermarket = document.getElementById("farmers-market");
+var playerarcade = document.getElementById("farmers-arcade");
+
 function playersFarm() {
   pagenation.innerHTML = "FARM";
   checkPage();
-  farmBackground.src =
-    "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
 }
 
 function playersMarket() {
   pagenation.innerHTML = "MARKET";
   checkPage();
-  farmBackground.src =
-    "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
 }
 
 function playerGames() {
   pagenation.innerHTML = "GAMES";
+  checkPage();
 }
 
 function checkPage() {
-  let checkpage = pagenation.innerHTML;
-  if (checkpage == "FARM") {
-    playerfarm.className = "game-home";
-    playermarket.className = "hide";
-  } else {
-    if (checkpage == "MARKET") {
-      playerfarm.className = "hide";
-      playermarket.className = "game-home";
+  let sleepBTN = document.getElementById("sleepBTN");
+  if (energy.value == 0) {
+    userAlert.innerHTML = "You're To Tired To Travel..";
+  } else if (energy.value > 0) {
+    let checkpage = pagenation.innerHTML;
+    if (checkpage == "FARM") {
+      playerfarm.className = "game-home";
+      playermarket.className = "hide";
+      farmBackground.src =
+        "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
+      sleepBTN.className = "meterbuttons";
+    } else {
+      if (checkpage == "MARKET") {
+        playerfarm.className = "hide";
+        playermarket.className = "game-home";
+        farmBackground.src =
+          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
+        sleepBTN.className = "hide";
+      } else {
+        if (checkpage == "GAMES") {
+          playerarcade.className = "game-home";
+          playerfarm.className = "hide";
+          playermarket.className = "hide";
+          farmBackground.src =
+            "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Arcade%20ONE.webp";
+          sleepBTN.className = "hide";
+        }
+      }
     }
+    pullENERGY();
   }
-  pullENERGY();
 }
 
 /* Market Throttels */

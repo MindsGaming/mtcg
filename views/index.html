@@ -749,7 +749,9 @@
               <label onclick="playersMarket();" id="market-tab" class="tab-list"
                 >Farmers Market</label
               >
-              <label id="games-tab" class="tab-list">Games</label>
+              <label onclick="playerGames();" id="games-tab" class="tab-list"
+                >Games</label
+              >
               <label id="pagenation" class="hide">FARM</label>
             </div>
             <img
@@ -765,7 +767,14 @@
             </div>
             <div class="sleepBTN">
               Energy
-              <meter id="farmer-energy" value="50" min="0" max="50"></meter>
+              <meter
+                id="farmer-energy"
+                low="20"
+                high="40"
+                value="50"
+                min="0"
+                max="50"
+              ></meter>
               <div
                 id="sleepBTN"
                 class="meterbuttons"
@@ -774,6 +783,7 @@
               >
                 Sleep
               </div>
+              <br />
               Chicken Feed
               <meter
                 id="farmer-feed"
@@ -1117,6 +1127,57 @@
                     id="farmer-GAMERBTN"
                   >
                     Shop's Open
+                  </button>
+                  <br />
+                </div>
+                <div class="game-article">
+                  <h2>Bed No Breakfast</h2>
+                  <p class="article-text">Fill Your Energy Meter</p>
+                  <button
+                    class="gamebuttons"
+                    onclick="fillEnergy();"
+                    id="farmer-fillenergyBTN"
+                  >
+                    Shop's Open
+                  </button>
+                  <br />
+                </div>
+              </div>
+              <div id="farmers-arcade" class="hide">
+                <div class="game-article">
+                  <h2>Welcome To The Arcade!</h2>
+                  <p class="article-text">
+                    Here you can play games for chicken feed! <br />
+                    Each game mi
+                  </p>
+                  <br />
+                </div>
+
+                <div class="game-article">
+                  <h2>Pacman</h2>
+                  <p class="article-text">Play Pacman for chiken feed.</p>
+                  <button
+                    class="gamebuttons"
+                    onclick="playPackMan();"
+                    id="pacmanBTN"
+                  >
+                  Coming Soon
+                  </button>
+                  <br />
+                </div>
+
+                <div class="game-article">
+                  <h2>Virtual Bed</h2>
+                  <p class="article-text">
+                    Need Some Rest, Sleep In This Virtual Bed. <br />
+                  </p>
+                  <code>2,000 Yolks </code>
+                  <button
+                    class="gamebuttons"
+                    onclick="fillEnergy();"
+                    id="farmer-virtualenergyBTN"
+                  >
+                   Shops Open
                   </button>
                   <br />
                 </div>
