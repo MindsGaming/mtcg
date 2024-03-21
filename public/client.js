@@ -1067,3 +1067,14 @@ function PlayChicken() {
     }
   }
 }
+
+/* GAMES */
+const stockpacfeed = function pacmanFEED() {
+  const pushfeed = document.getElementById("pacman-score");
+  var ret = "Score:0".replace("Score:", "");
+  let scorefeed = parseFloat(ret);
+  let farmerfeed = parseFloat(feed.value);
+  let morefeedmath = farmerfeed + 0.25;
+  feed.value = morefeedmath;
+  userAlert.innerHTML = "Cluck!";
+};

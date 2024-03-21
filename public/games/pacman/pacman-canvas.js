@@ -377,8 +377,7 @@ function geronimo() {
 				});
 			});
 			
-			const pushfeed = document.getElementById("pacman-score");
-      pushfeed.innerHTML = temp;
+			
       this.pillCount = temp;
       
 	
@@ -1562,8 +1561,6 @@ function checkAppCache() {
 }
 
 geronimo();
-
-
 
 
 
