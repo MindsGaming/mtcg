@@ -68,10 +68,10 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value);
 
   // reset form
-  loginform.className = "hide";
   userCHECK();
   dreamInput.value = "";
   dreamInput.focus();
+  loginform.className = "hide";
 };
 
 clearButton.addEventListener("click", (event) => {
