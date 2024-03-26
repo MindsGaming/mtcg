@@ -1165,3 +1165,69 @@ function EggMaker() {
     }
   }
 }
+
+function recoveryHack() {
+  if (userAccount.innerHTML == "Login") {
+    userAlert.innerHTML = "Login To Play";
+  } else {
+    if (POINTS.innerHTML < 1000) {
+      userAlert.innerHTML = "Not Enough Yolks";
+    } else {
+      var hackID = document.getElementById("recover-account");
+      const numb = dreamsList.getElementsByTagName("li").length;
+      const buildstring = userAccount.innerHTML + POINTS.innerHTML;
+
+      if (hackID.value == "") {
+        // Request dreams from the app's SQLite database
+        fetch("/getDreams", {})
+          .then((res) => res.json())
+          .then((response) => {
+            response.forEach((row) => {
+              appendNewDream(row.dream);
+            });
+          });
+
+        const appendNewDreamss = (dream) => {
+          const newListItem = document.createElement("li");
+          const randomWarp = Math.floor(Math.random() * numb) + 1;
+          newListItem.innerText = buildstring;
+          newListItem.title = "DreamEGG";
+          newListItem.id = numb;
+          newListItem.value = randomWarp;
+          newListItem.className = "hide";
+          dreamsList.appendChild(newListItem);
+        };
+
+        const data = {
+          dream: buildstring,
+        };
+
+        fetch("/addDream", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log(JSON.stringify(response));
+          });
+
+        // Add the dream value to the list
+        userAlert.innerHTML = "Your Recover Id: " + numb;
+        hackID.value = "";
+        dreams.push(buildstring);
+        appendNewDream(buildstring);
+        POINTS.innerHTML = 0;
+      } else {
+        var foundEgg = document.getElementById(hackID.value);
+        let hack = foundEgg.innerHTML;
+        let current = userAccount.innerHTML;
+        POINTS.innerHTML = hack.replace(current, "");
+        const data = {
+          dream:
+            userAccount.innerHTML + "Recovered:" + hack.replace(current, ""),
+        };
+      }
+    }
+  }
+}
