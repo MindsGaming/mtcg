@@ -173,9 +173,17 @@ function hatchEGG() {
       let cooked = parseFloat(currenteggs.innerHTML) - 1;
       currenteggs.innerHTML = cooked;
       userAlert.innerHTML = "";
+
+      if (foundEgg.innerHTML == "") {
+      } else {
+        if (foundEgg.innerHTML == userAccount.innerHTML) {
+        } else {
+          userAlert.innerHTML = foundEgg.innerHTML;
+        }
+      }
     }
+    pullENERGY();
   }
-  pullENERGY();
 }
 
 /* Tasks */
@@ -1103,4 +1111,57 @@ function pacmanFEED() {
   userAlert.innerHTML = "Cluck!";
   gameframe.className = "hide";
   pacfeed.className = "hide";
+}
+
+function EggMaker() {
+  if (userAccount.innerHTML == "Login") {
+    userAlert.innerHTML = "Login To Play";
+  } else {
+    if (POINTS.innerHTML < 1000) {
+      userAlert.innerHTML = "Not Enough Yolks";
+    } else {
+      var customEgg = document.getElementById("egg-maker");
+      const numb = dreamsList.getElementsByTagName("li").length;
+
+      // Request dreams from the app's SQLite database
+      fetch("/getDreams", {})
+        .then((res) => res.json())
+        .then((response) => {
+          response.forEach((row) => {
+            appendNewDream(row.dream);
+          });
+        });
+
+      const appendNewDreamss = (dream) => {
+        const newListItem = document.createElement("li");
+        const randomWarp = Math.floor(Math.random() * numb) + 1;
+        newListItem.innerText = customEgg.value;
+        newListItem.title = "DreamEGG";
+        newListItem.id = numb;
+        newListItem.value = randomWarp;
+        newListItem.className = "hide";
+        dreamsList.appendChild(newListItem);
+      };
+
+      const data = {
+        dream: customEgg.value,
+      };
+
+      fetch("/addDream", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          console.log(JSON.stringify(response));
+        });
+
+      // Add the dream value to the list
+      userAlert.innerHTML = "Your Message: " + customEgg.value;
+      customEgg.value = "";
+      dreams.push(customEgg.value);
+      appendNewDream(customEgg.value);
+    }
+  }
 }

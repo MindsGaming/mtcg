@@ -25,8 +25,6 @@
     <script src="/script.js" defer></script>
     <script src="/client.js" defer></script>
     <script src="/cpu.js" defer></script>
-    <script src="/GAMERPOINTS.js" defer></script>
-
     <script src="/metamask.js" defer></script>
   </head>
   <body onload="counteggs();">
@@ -1196,6 +1194,33 @@
                     id="pacmanfeedBTN"
                   >
                     Earn Feed
+                  </button>
+                  <br />
+                </div>
+                <div class="game-article">
+                  <h2>Egg Maker</h2>
+                  <p class="article-text">
+                    Create A custom egg message, <br />
+                    you wil not be able to hatch this egg this game. <br />
+                    When hatched a user message will appear!
+                    <br />
+                    <br />
+                    <label
+                      >Hatch Alert:
+                      <input
+                        class="hatchalert"
+                        id="egg-maker"
+                        placeholder="Custom Egg"
+                    /></label>
+                  </p>
+                  <div id="Eggmaker" class="hide"></div>
+
+                  <button
+                    class="gamebuttons"
+                    onclick="EggMaker();"
+                    id="EggmakerBTN"
+                  >
+                    Insert Yolks (1000)
                   </button>
                   <br />
                 </div>
