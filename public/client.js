@@ -147,16 +147,16 @@ function counteggs() {
 }
 
 function hatchEGG() {
-  if (userAccount.innerHTML == "Login") {
+  if (userAccount.innerHTML === "Login") {
     userAlert.innerHTML = "Login To Play";
   } else {
-    if (currenteggs.innerHTML == 0) {
+    if (currenteggs.innerHTML === "0") {
       userAlert.innerHTML = "No Eggs Found :(";
     } else {
       // Calculate the total points after hatching
       let numb = dreamsList.getElementsByTagName("li").length;
-      let randomWarp = Math.floor(Math.random() * numb) + 1;
-      let foundEgg = document.getElementById(randomWarp);
+      let randomWarp = Math.floor(Math.random() * numb);
+      let foundEgg = document.getElementById("egg" + randomWarp);
       let hatchedPOINTS = parseFloat(foundEgg.value);
       let currentPOINTS = parseFloat(POINTS.innerHTML);
       let EGGmath = currentPOINTS + hatchedPOINTS;
@@ -173,18 +173,17 @@ function hatchEGG() {
       currenteggs.innerHTML = cooked;
       userAlert.innerHTML = "";
       let textCheck = foundEgg.innerHTML;
-      if (textCheck.length == 42 || textCheck.length == "") {
-        userAlert.innerHTML == "You Cracked:" + crakedegg;
-        +" Yolks";
+      if (textCheck.length > 42 || !textCheck) {
+        userAlert.innerHTML = "You Cracked: " + crakedegg + " Yolks";
       } else {
         if (textCheck.length < 42) {
           userAlert.innerHTML =
-            foundEgg.innerHTML + " You Cracked:" + crakedegg + " Yolks";
+            foundEgg.innerHTML + " You Cracked: " + crakedegg + " Yolks";
         }
       }
+      pullENERGY();
     }
   }
-  pullENERGY();
 }
 
 /* Tasks */
