@@ -172,19 +172,19 @@ function hatchEGG() {
       let cooked = parseFloat(currenteggs.innerHTML) - 1;
       currenteggs.innerHTML = cooked;
       userAlert.innerHTML = "";
-let textCheck = foundEgg.innerHTML
-      
-      if (textCheck.length > 42) {
+      let textCheck = foundEgg.innerHTML;
+      if (textCheck.length == 42 || textCheck.length == "") {
+        userAlert.innerHTML == "You Cracked:" + crakedegg;
+        +" Yolks";
       } else {
-        
-        if (foundEgg.innerHTML == userAccount.innerHTML) {
-        } else {
-          userAlert.innerHTML = foundEgg.innerHTML;
+        if (textCheck.length < 42) {
+          userAlert.innerHTML =
+            foundEgg.innerHTML + " You Cracked:" + crakedegg + " Yolks";
         }
       }
     }
-    pullENERGY();
   }
+  pullENERGY();
 }
 
 /* Tasks */
