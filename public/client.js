@@ -178,7 +178,7 @@ function hatchEGG() {
         userAlert.innerHTML = "You Cracked: " + crakedegg + " Yolks";
       } else {
         userAlert.innerHTML =
-          foun.innerHTML + " You Cracked: " + crakedegg + " Yolks";
+          foundEgg.innerHTML + " You Cracked: " + crakedegg + " Yolks";
       }
     }
     pullENERGY();
