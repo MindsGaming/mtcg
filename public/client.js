@@ -40,7 +40,6 @@ const appendNewDream = (dream) => {
   let numb = dreamsList.getElementsByTagName("li").length;
   let randomWarp = Math.floor(Math.random() * numb) + 1;
   newListItem.innerText = dream;
-  newListItem.title = "";
   newListItem.id = numb;
   newListItem.value = randomWarp;
   newListItem.className = "";
@@ -173,9 +172,11 @@ function hatchEGG() {
       let cooked = parseFloat(currenteggs.innerHTML) - 1;
       currenteggs.innerHTML = cooked;
       userAlert.innerHTML = "";
-
-      if (foundEgg.innerHTML == "") {
+let textCheck = foundEgg.innerHTML
+      
+      if (textCheck.length > 42) {
       } else {
+        
         if (foundEgg.innerHTML == userAccount.innerHTML) {
         } else {
           userAlert.innerHTML = foundEgg.innerHTML;
@@ -1122,6 +1123,11 @@ function EggMaker() {
     } else {
       var customEgg = document.getElementById("egg-maker");
       const numb = dreamsList.getElementsByTagName("li").length;
+
+      const checkPOINTS = parseFloat(POINTS.innerHTML);
+      const removePOINTS = 1000;
+      const quickMath = checkPOINTS - removePOINTS;
+      POINTS.innerHTML = quickMath;
 
       // Request dreams from the app's SQLite database
       fetch("/getDreams", {})
