@@ -40,6 +40,7 @@ const appendNewDream = (dream) => {
   let numb = dreamsList.getElementsByTagName("li").length;
   let randomWarp = Math.floor(Math.random() * numb) + 1;
   newListItem.innerText = dream;
+  newListItem.title = "DreamEGG";
   newListItem.id = numb;
   newListItem.value = randomWarp;
   newListItem.className = "";
@@ -147,16 +148,16 @@ function counteggs() {
 }
 
 function hatchEGG() {
-  if (userAccount.innerHTML === "Login") {
+  if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
   } else {
-    if (currenteggs.innerHTML === "0") {
+    if (currenteggs.innerHTML == 0) {
       userAlert.innerHTML = "No Eggs Found :(";
     } else {
       // Calculate the total points after hatching
       let numb = dreamsList.getElementsByTagName("li").length;
-      let randomWarp = Math.floor(Math.random() * numb);
-      let foundEgg = document.getElementById("egg" + randomWarp);
+      let randomWarp = Math.floor(Math.random() * numb) + 1;
+      let foundEgg = document.getElementById(randomWarp);
       let hatchedPOINTS = parseFloat(foundEgg.value);
       let currentPOINTS = parseFloat(POINTS.innerHTML);
       let EGGmath = currentPOINTS + hatchedPOINTS;
@@ -172,17 +173,16 @@ function hatchEGG() {
       let cooked = parseFloat(currenteggs.innerHTML) - 1;
       currenteggs.innerHTML = cooked;
       userAlert.innerHTML = "";
-      let textCheck = foundEgg.innerHTML;
-      if (textCheck.length > 42 || !textCheck) {
-        userAlert.innerHTML = "You Cracked: " + crakedegg + " Yolks";
+
+      if (foundEgg.innerHTML == "") {
       } else {
-        if (textCheck.length < 42) {
-          userAlert.innerHTML =
-            foundEgg.innerHTML + " You Cracked: " + crakedegg + " Yolks";
+        if (foundEgg.innerHTML == userAccount.innerHTML) {
+        } else {
+          userAlert.innerHTML = foundEgg.innerHTML;
         }
       }
-      pullENERGY();
     }
+    pullENERGY();
   }
 }
 
@@ -1123,11 +1123,6 @@ function EggMaker() {
       var customEgg = document.getElementById("egg-maker");
       const numb = dreamsList.getElementsByTagName("li").length;
 
-      const checkPOINTS = parseFloat(POINTS.innerHTML);
-      const removePOINTS = 1000;
-      const quickMath = checkPOINTS - removePOINTS;
-      POINTS.innerHTML = quickMath;
-
       // Request dreams from the app's SQLite database
       fetch("/getDreams", {})
         .then((res) => res.json())
@@ -1167,72 +1162,6 @@ function EggMaker() {
       customEgg.value = "";
       dreams.push(customEgg.value);
       appendNewDream(customEgg.value);
-    }
-  }
-}
-
-function recoveryHack() {
-  if (userAccount.innerHTML == "Login") {
-    userAlert.innerHTML = "Login To Play";
-  } else {
-    if (POINTS.innerHTML < 1000) {
-      userAlert.innerHTML = "Not Enough Yolks";
-    } else {
-      var hackID = document.getElementById("recover-account");
-      const numb = dreamsList.getElementsByTagName("li").length;
-      const buildstring = userAccount.innerHTML + POINTS.innerHTML;
-
-      if (hackID.value == "") {
-        // Request dreams from the app's SQLite database
-        fetch("/getDreams", {})
-          .then((res) => res.json())
-          .then((response) => {
-            response.forEach((row) => {
-              appendNewDream(row.dream);
-            });
-          });
-
-        const appendNewDreamss = (dream) => {
-          const newListItem = document.createElement("li");
-          const randomWarp = Math.floor(Math.random() * numb) + 1;
-          newListItem.innerText = buildstring;
-          newListItem.title = "DreamEGG";
-          newListItem.id = numb;
-          newListItem.value = randomWarp;
-          newListItem.className = "hide";
-          dreamsList.appendChild(newListItem);
-        };
-
-        const data = {
-          dream: buildstring,
-        };
-
-        fetch("/addDream", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: { "Content-Type": "application/json" },
-        })
-          .then((res) => res.json())
-          .then((response) => {
-            console.log(JSON.stringify(response));
-          });
-
-        // Add the dream value to the list
-        userAlert.innerHTML = "Your Recover Id: " + numb;
-        hackID.value = "";
-        dreams.push(buildstring);
-        appendNewDream(buildstring);
-        POINTS.innerHTML = 0;
-      } else {
-        var foundEgg = document.getElementById(hackID.value);
-        let hack = foundEgg.innerHTML;
-        let current = userAccount.innerHTML;
-        POINTS.innerHTML = hack.replace(current, "");
-        const data = {
-          dream:
-            userAccount.innerHTML + "Recovered:" + hack.replace(current, ""),
-        };
-      }
     }
   }
 }
