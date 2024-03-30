@@ -40,7 +40,7 @@ const appendNewDream = (dream) => {
   let numb = dreamsList.getElementsByTagName("li").length;
   let randomWarp = Math.floor(Math.random() * numb) + 1;
   newListItem.innerText = dream;
-  newListItem.title = "DreamEGG";
+  newListItem.title = "";
   newListItem.id = numb;
   newListItem.value = randomWarp;
   newListItem.className = "";
