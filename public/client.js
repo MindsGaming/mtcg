@@ -174,12 +174,11 @@ function hatchEGG() {
       currenteggs.innerHTML = cooked;
       userAlert.innerHTML = "";
 
-      if (foundEgg.innerHTML == "") {
+      if (foundEgg.innerHTML.length == 42 || !foundEgg.innerHTML) {
+        userAlert.innerHTML = "You Cracked: " + crakedegg + " Yolks";
       } else {
-        if (foundEgg.innerHTML == userAccount.innerHTML) {
-        } else {
-          userAlert.innerHTML = foundEgg.innerHTML;
-        }
+        userAlert.innerHTML =
+          foun.innerHTML + " You Cracked: " + crakedegg + " Yolks";
       }
     }
     pullENERGY();
