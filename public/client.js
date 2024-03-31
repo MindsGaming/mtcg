@@ -175,10 +175,12 @@ function hatchEGG() {
       userAlert.innerHTML = "";
 
       if (foundEgg.innerHTML.length == 42 || !foundEgg.innerHTML) {
-        userAlert.innerHTML = "You Cracked: " + crakedegg + " Yolks";
+        userAlert.innerHTML = "You Cracked: " + hatchedPOINTS + " Yolks";
+        userAlert.style = "color:gold;";
       } else {
         userAlert.innerHTML =
-          foundEgg.innerHTML + " You Cracked: " + crakedegg + " Yolks";
+          foundEgg.innerHTML + " You Cracked: " + hatchedPOINTS + " Yolks";
+        userAlert.style = "color:gold;";
       }
     }
     pullENERGY();
