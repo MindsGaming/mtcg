@@ -143,7 +143,7 @@ function counteggs() {
   currenteggs.innerHTML = numb;
   let blockchecker = document.getElementById("current-eggs");
   if (blockchecker.innerHTML == "0") {
-    counteggs();
+    currenteggs.innerHTML = numb;
   }
 }
 
