@@ -238,13 +238,16 @@ function viewLOGIN() {
 function createDreamblock() {
   let dreamCatcher = document.getElementsByTagName("li");
 
-  let numb = Math.floor(Math.random())+ 5000;
+  let numb = Math.floor(Math.random() * 5000);
   let fish = numb - 1;
-  let dreamID =fish;
+
+  let dreamvalue = dreamCatcher.length - 1;
+  let dreamID = document.getElementById(dreamvalue);
 
   let theDate = new Date();
   const dreamBlock = document.createElement("block");
-  dreamBlock.id = numb + "‽";
+  dreamBlock.id =
+    numb + "‽" + fish + "‽" + document.getElementsByTagName("li").length;
   dreamBlock.innerHTML =
     "DreamBlock: #" + dreamBlock.id + "‽" + theDate + "‽" + dreamID.value;
   dreamBlock.value = dreamBlock.innerHTML;
