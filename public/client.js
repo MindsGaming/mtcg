@@ -176,7 +176,11 @@ function hatchEGG() {
       currenteggs.innerHTML = cooked;
       userAlert.innerHTML = "";
 
-      if (foundEgg.innerHTML.length == 42 || !foundEgg.innerHTML) {
+      if (
+        foundEgg.innerHTML.length == 42 ||
+        foundEgg.innerHTML.length > 42 ||
+        !foundEgg.innerHTML
+      ) {
         userAlert.innerHTML = "You Cracked: " + hatchedPOINTS + " Yolks";
         userAlert.style = "color:gold;";
       } else {

@@ -276,7 +276,6 @@ function createDreamblock() {
   // Add the dream value to the list
   dreams.push(dreamBlock.value);
   appendNewDream(dreamBlock.value);
-  alert(dreamID.value);
 }
 
 function HOME() {

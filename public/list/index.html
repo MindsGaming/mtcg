@@ -32,19 +32,26 @@
     .hide {
       display: none;
     }
-    
-    li{list-style}
+
+    li {
+      list-style-type: none;
+      margin: 3px;
+      font-family: italic;
+      font-weight: bolder;
+    }
   </style>
   <body>
     <center>
       <header>
-        <h1>Pulic Logs</h1>
+        <h1>Public Logs</h1>
       </header>
 
       <main>
         <p class="bold">Oh hi,</p>
 
         <p>Here is a list of the public logs:</p>
+        <hr>
+        <br>
 
         <form class="hide">
           <input
@@ -56,7 +63,6 @@
           />
           <button type="submit" id="submit-dream">Submit Dream</button>
         </form>
-
         <section class="dreams">
           <ul id="dreams"></ul>
           <button id="clear-dreams" class="hide">Clear Dreams</button>
