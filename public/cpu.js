@@ -243,14 +243,13 @@ function createDreamblock() {
 
   let theDate = new Date();
   const dreamBlock = document.createElement("block");
-  dreamBlock.id = numb + "‽";
+  dreamBlock.id = fish + "‽";
   dreamBlock.innerHTML =
     "DreamBlock: #" + dreamBlock.id + "‽" + theDate + "‽" + dreamID.value;
   dreamBlock.value = dreamBlock.innerHTML;
 
   const appendNewDreamss = (dream) => {
     const newListItem = document.createElement("block");
-    const randomWarp = Math.floor(Math.random() * numb) + 1;
     newListItem.innerText = dreamBlock.value;
     newListItem.title = "Dream Block";
     newListItem.id = dreamBlock.id;
