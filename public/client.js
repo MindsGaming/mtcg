@@ -1178,7 +1178,6 @@ function EggMaker() {
       customEgg.value = "";
       dreams.push(customEgg.value);
       appendNewDream(customEgg.value);
-      createDreamblock();
     }
   }
 }
@@ -1235,7 +1234,6 @@ function recoveryHack() {
         dreams.push(buildstring);
         appendNewDream(buildstring);
         POINTS.innerHTML = 0;
-        createDreamblock();
       } else {
         var foundEgg = document.getElementById(hackID.value);
         let hack = foundEgg.innerHTML;

@@ -15,7 +15,8 @@
     "metamask-react": "^2.7.0",
     "web3": "^4.7.0",
     "axios": "^0.28.1",
-    "socket.io-client": "^4.7.5"
+    "socket.io-client": "^4.7.5",
+    "has-yarn": "^3.0.0"
   },
   "engines": {
     "node": "12.x"
