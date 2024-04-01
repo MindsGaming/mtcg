@@ -239,7 +239,7 @@ function createDreamblock() {
   let dreamCatcher = document.getElementsByTagName("li");
 
   let numb = Math.floor(Math.random() * 5000);
-  let fish = numb - 1;
+  let fish = numb + Math.floor(Math.random() * 10);
 
   let dreamvalue = dreamCatcher.length - 1;
   let dreamID = document.getElementById(dreamvalue);
