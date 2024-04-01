@@ -68,6 +68,7 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value);
 
   // reset form
+  createDreamblock();
   userCHECK();
   dreamInput.value = "";
   dreamInput.focus();
@@ -131,6 +132,7 @@ function layEGGS() {
       });
 
     // Add the dream value to the list
+    createDreamblock();
     dreams.push(dreamInput.value);
     appendNewDream(dreamInput.value);
     PlayChicken();
@@ -577,6 +579,7 @@ function GamerPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
+    createDreamblock();
   }
 }
 
@@ -634,6 +637,7 @@ function ECLIPSEPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
+    createDreamblock();
   }
 }
 
@@ -691,6 +695,7 @@ function DOOBETTERPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
+    createDreamblock();
   }
 }
 
@@ -748,6 +753,7 @@ function GTPCPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
+    createDreamblock();
   }
 }
 
@@ -805,6 +811,7 @@ function PINNPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
+    createDreamblock();
   }
 }
 
@@ -862,6 +869,7 @@ function WTVPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
+    createDreamblock();
   }
 }
 
@@ -919,6 +927,7 @@ function DARKMARKPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
+    createDreamblock();
   }
 }
 
@@ -976,6 +985,7 @@ function DRAGONTOKENPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
+    createDreamblock();
   }
 }
 
@@ -1033,6 +1043,7 @@ function CANDYSPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
+    createDreamblock();
   }
 }
 

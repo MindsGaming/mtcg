@@ -32,43 +32,47 @@
     .hide {
       display: none;
     }
+    
+    li{list-style}
   </style>
   <body>
-    <header>
-      <h1>A Dream of the Future</h1>
-    </header>
+    <center>
+      <header>
+        <h1>Pulic Logs</h1>
+      </header>
 
-    <main>
-      <p class="bold">Oh hi,</p>
+      <main>
+        <p class="bold">Oh hi,</p>
 
-      <p>Tell me your hopes and dreams:</p>
+        <p>Here is a list of the public logs:</p>
 
-      <form>
-        <input
-          name="dream"
-          aria-label="a new dream"
-          type="text"
-          maxlength="100"
-          placeholder="Dreams!"
-        />
-        <button type="submit" id="submit-dream">Submit Dream</button>
-      </form>
+        <form class="hide">
+          <input
+            name="dream"
+            aria-label="a new dream"
+            type="text"
+            maxlength="100"
+            placeholder="Dreams!"
+          />
+          <button type="submit" id="submit-dream">Submit Dream</button>
+        </form>
 
-      <section class="dreams">
-        <ul id="dreams"></ul>
-        <button id="clear-dreams" class="hide">Clear Dreams</button>
-        <label id="user-account" class="hide">Login</label>
-      </section>
-    </main>
+        <section class="dreams">
+          <ul id="dreams"></ul>
+          <button id="clear-dreams" class="hide">Clear Dreams</button>
+          <label id="user-account" class="hide">Login</label>
+        </section>
+      </main>
 
-    <footer>Made with <a href="https://glitch.com">Glitch</a>!</footer>
-    <div id="login-form"></div>
-    <!-- include the Glitch button to show what the webpage is about and
+      <footer>Made with <a href="https://glitch.com">Glitch</a>!</footer>
+      <div id="login-form"></div>
+      <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
-    <div
-      class="glitchButton"
-      style="position: fixed; top: 20px; right: 20px"
-    ></div>
-    <script src="https://button.glitch.me/button.js" defer></script>
+      <div
+        class="glitchButton"
+        style="position: fixed; top: 20px; right: 20px"
+      ></div>
+      <script src="https://button.glitch.me/button.js" defer></script>
+    </center>
   </body>
 </html>

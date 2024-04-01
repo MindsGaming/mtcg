@@ -235,10 +235,48 @@ function viewLOGIN() {
   }
 }
 
-/* Points */
+function createDreamblock() {
+  let dreamCatcher = document.getElementsByTagName("li");
+  let numb = dreamCatcher.length;
+  let fish = numb - 1;
+  let dreamID = document.getElementById(fish);
 
-function earnPoints() {
-  alert("Coming Soon..");
+  let theDate = new Date();
+  const dreamBlock = document.createElement("block");
+  dreamBlock.id = numb + "‽";
+  dreamBlock.innerHTML =
+    "DreamBlock: #" + dreamBlock.id + "‽" + theDate + "‽" + dreamID.value;
+  dreamBlock.value = dreamBlock.innerHTML;
+
+  const appendNewDreamss = (dream) => {
+    const newListItem = document.createElement("block");
+    const randomWarp = Math.floor(Math.random() * numb) + 1;
+    newListItem.innerText = dreamBlock.value;
+    newListItem.title = "Dream Block";
+    newListItem.id = dreamBlock.id;
+    newListItem.value = dreamBlock.value;
+    newListItem.className = "hide";
+    dreamsList.appendChild(newListItem);
+  };
+
+  const data = {
+    dream: dreamBlock.value,
+  };
+
+  fetch("/addDream", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "Content-Type": "application/json" },
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      console.log(JSON.stringify(response));
+    });
+
+  // Add the dream value to the list
+  dreams.push(dreamBlock.value);
+  appendNewDream(dreamBlock.value);
+  alert(dreamID.value);
 }
 
 function HOME() {
