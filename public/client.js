@@ -1228,7 +1228,7 @@ function recoveryHack() {
   if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
   } else {
-    if (POINTS.innerHTML < 1000) {
+    if (POINTS.innerHTML < 1) {
       userAlert.innerHTML = "Not Enough Yolks";
     } else {
       var hackID = document.getElementById("recover-account");
@@ -1271,23 +1271,30 @@ function recoveryHack() {
           });
 
         // Add the dream value to the list
-        userAlert.innerHTML = "Your Recover Id: " + numb;
-        hackID.value = "";
-        dreams.push(buildstring);
-        appendNewDream(buildstring);
-        POINTS.innerHTML = 0;
-        createDreamblock();
+        if (numb > currenteggs.innerHTML) {
+          userAlert.innerHTML = "Block Not Stable, Try Again";
+        } else {
+          userAlert.innerHTML = "Your Recover Id: " + numb;
+          hackID.value = "";
+          dreams.push(buildstring);
+          appendNewDream(buildstring);
+          POINTS.innerHTML = 0;
+          createDreamblock();
+        }
       } else {
         var foundEgg = document.getElementById(hackID.value);
         let hack = foundEgg.innerHTML;
         let current = userAccount.innerHTML;
         let phaseRecovery = parseFloat(POINTS.innerHTML);
-        hack.replace("Microsoft", "W3Schools");
-
-        POINTS.innerHTML = hack.replace(current, "");
+        let phaseTwo = hack.replace(current, "");
+        let phasetwoRecovery = parseFloat(phaseTwo);
+        let phasemath = phasetwoRecovery + phaseRecovery;
+        POINTS.innerHTML = phasemath;
+        foundEgg.remove();
+        hackID.value = "";
+        userAlert.innerHTML = "You Recovered: " + phasemath + " Yolks!";
         const data = {
-          dream:
-            userAccount.innerHTML + "Recovered:" + hack.replace(current, ""),
+          dream: userAccount.innerHTML + "Recovered:" + phasemath,
         };
       }
     }
