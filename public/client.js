@@ -167,6 +167,18 @@ function hatchEGG() {
       let currentPOINTS = parseFloat(POINTS.innerHTML);
       let catchEGGS = parseFloat(currenteggs.innerHTML);
 
+      if (hatchedPOINTS > catchEGGS) {
+        let softenEgg = hatchedPOINTS % 2;
+        let softegg = Math.round(softenEgg);
+        hatchedPOINTS = softegg;
+
+        if (softegg == 0) {
+          let harder = currentPOINTS % 2;
+          let harderegg = Math.round(currentPOINTS);
+          hatchedPOINTS = harderegg + 1;
+        }
+      }
+
       let EGGmath = currentPOINTS + hatchedPOINTS;
       POINTS.innerHTML = EGGmath;
 
@@ -205,6 +217,7 @@ function hatchEGG() {
   }
   pullENERGY();
 }
+
 /* Tasks */
 
 function pullENERGY() {
