@@ -168,12 +168,11 @@ function hatchEGG() {
       let currentPOINTS = parseFloat(POINTS.innerHTML);
 
       if (hatchedPOINTS > currenteggs.innerHTML) {
-        if(userAlert.innerHTML == "Bad Egg :("){
-          user
+        if (userAlert.innerHTML == "Bad Egg :(") {
+          userAlert.innerHTML = "Try laying More Eggs..";
+        } else {
+          userAlert.innerHTML = "Bad Egg :(";
         }
-        
-        
-        userAlert.innerHTML = "Bad Egg :(";
       } else {
         let EGGmath = currentPOINTS + hatchedPOINTS;
         POINTS.innerHTML = EGGmath;
