@@ -409,7 +409,7 @@ function checkPage() {
             playerfarm.className = "hide";
             playermarket.className = "hide";
             farmBackground.src =
-              "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Arcade%20ONE.webp";
+              "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/upgradezone.webp";
             sleepBTN.className = "hide";
           }
         }
