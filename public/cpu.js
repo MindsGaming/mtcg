@@ -333,7 +333,7 @@ function wrapImage() {
         createIMG.src = dreamURL.value;
         createIMG.className = "creator-wrap";
         document.getElementById("wraped-images").appendChild(createIMG);
-
+        createIMG.id = dreamvalue + "‽";
         // Add the dream value to the list
         userAlert.innerHTML =
           "You Wrapped Block #" + dreamvalue + " with: " + dreamURL.value;
