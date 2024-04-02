@@ -69,6 +69,10 @@ dreamsForm.onsubmit = (event) => {
 
   // reset form
   createDreamblock();
+  if (currenteggs.innerHTML == "0") {
+    counteggs();
+  }
+
   userCHECK();
   dreamInput.value = "";
   dreamInput.focus();
@@ -220,6 +224,43 @@ function hatchEGG() {
     }
   }
   pullENERGY();
+}
+
+/* Chicken */
+
+function feedCHICKEN() {
+  let yolkstofeed = parseFloat(POINTS.innerHTML);
+
+  if (yolkstofeed < 1000) {
+    userAlert.innerHTML = "Not Enough Yolks";
+  } else {
+    let feedmath = yolkstofeed - 1000;
+    POINTS.innerHTML = feedmath;
+    let farmerfeed = parseFloat(feed.value);
+    let morefeedmath = farmerfeed + 1;
+    feed.value = morefeedmath;
+    userAlert.innerHTML = "Cluck!";
+    pullENERGY();
+  }
+}
+
+function PlayChicken() {
+  chicken.className = "hide";
+  setTimeout(newChicken, 20000);
+  let farmerfeed = parseFloat(feed.value);
+  let morefeedmath = farmerfeed - 1;
+  feed.value = morefeedmath;
+  userAlert.innerHTML = "";
+  function newChicken() {
+    if (feed.value == 0) {
+      userAlert.innerHTML = "Your Chicken Is Hungry";
+    } else {
+      if (feed.value > 0) {
+        chicken.className = "chicken";
+        userAlert.innerHTML = "Cluck!";
+      }
+    }
+  }
 }
 
 /* Tasks */
@@ -1089,43 +1130,6 @@ function CANDYSPOINTS() {
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
     createDreamblock();
-  }
-}
-
-/* Chicken */
-
-function feedCHICKEN() {
-  let yolkstofeed = parseFloat(POINTS.innerHTML);
-
-  if (yolkstofeed < 1000) {
-    userAlert.innerHTML = "Not Enough Yolks";
-  } else {
-    let feedmath = yolkstofeed - 1000;
-    POINTS.innerHTML = feedmath;
-    let farmerfeed = parseFloat(feed.value);
-    let morefeedmath = farmerfeed + 1;
-    feed.value = morefeedmath;
-    userAlert.innerHTML = "Cluck!";
-    pullENERGY();
-  }
-}
-
-function PlayChicken() {
-  chicken.className = "hide";
-  setTimeout(newChicken, 20000);
-  let farmerfeed = parseFloat(feed.value);
-  let morefeedmath = farmerfeed - 1;
-  feed.value = morefeedmath;
-  userAlert.innerHTML = "";
-  function newChicken() {
-    if (feed.value == 0) {
-      userAlert.innerHTML = "Your Chicken Is Hungry";
-    } else {
-      if (feed.value > 0) {
-        chicken.className = "chicken";
-        userAlert.innerHTML = "Cluck!";
-      }
-    }
   }
 }
 
