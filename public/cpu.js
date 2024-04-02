@@ -358,18 +358,21 @@ function wrapImage() {
 
 function downloadImg() {
   const request = document.getElementById("img-grabber");
+  const createIMG = document.createElement("img");
+  const downloadBTN = document.createElement("a");
   let requestIMG = request.value;
   let grabber = document.getElementById(requestIMG);
   let img = grabber.innerHTML;
-  alert(img)
 
-  const createIMG = document.createElement("img");
+  downloadBTN.href = img;
+  downloadBTN.textContent = grabber.innerHTML; // Set the link text
+  downloadBTN.background = createIMG;
+
   createIMG.src = img;
   createIMG.className = "creator-wrap";
+  createIMG.outterHTML = downloadBTN;
 
-  const downloadBTN = document.createElement("a");
-  downloadBTN.href = img;
-  downloadBTN.innerHTML = createIMG;
+  document.getElementById("wraped-images").appendChild(createIMG);
 }
 
 function HOME() {
