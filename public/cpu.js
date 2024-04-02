@@ -364,13 +364,8 @@ function downloadImg() {
   let grabber = document.getElementById(requestIMG);
   let img = grabber.innerHTML;
   let temp = document.getElementById("wraped-images");
-
-  downloadBTN.href = img;
-  downloadBTN.textContent = img; // Set the link text
-  downloadBTN.background = createIMG;
-  downloadBTN.download = img;
-  
-  document.getElementById("wraped-images").appendChild(downloadBTN);
+  window.open(img, "_blank");
+  request.value = "";
 }
 
 function HOME() {
