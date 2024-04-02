@@ -306,12 +306,13 @@ function wrapImage() {
         extension == ".webp"
       ) {
         const appendNewDreamss = (dream) => {
-          const newListItem = document.createElement("block");
+          const newListItem = document.createElement("a");
           newListItem.innerText = dreamURL.value;
           newListItem.title = "Dream Block";
           newListItem.id = dreamvalue;
           newListItem.value = dreamURL.value;
           newListItem.className = "hide";
+          newListItem.href = dreamURL.value;
           dreamsList.appendChild(newListItem);
         };
 
@@ -361,16 +362,10 @@ function downloadImg() {
   let grabIMG = document.getElementById(request);
   let download = grabIMG.innerHTML;
 
-  // Using fetch
-
-  const link = document.createElement("a");
-  link.href = download;
-  link.download = "image file name here";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-
-  window.open(download);
+  let create = document.createElement("a");
+  create.href = download;
+  create.className = "creator-wrap";
+  document.getElementById("wraped-images").appendChild(create);
 }
 
 function HOME() {
