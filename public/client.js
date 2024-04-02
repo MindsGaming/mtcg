@@ -1281,6 +1281,9 @@ function recoveryHack() {
         var foundEgg = document.getElementById(hackID.value);
         let hack = foundEgg.innerHTML;
         let current = userAccount.innerHTML;
+        let phaseRecovery = parseFloat(POINTS.innerHTML);
+        hack.replace("Microsoft", "W3Schools");
+
         POINTS.innerHTML = hack.replace(current, "");
         const data = {
           dream:
