@@ -715,7 +715,8 @@
           <div class="GAME" id="GAME">
             <div class="game-topper">
               <label class="MTCG-game">MTCG Game Enviroment (Alpha)</label
-              ><label id="wraped-images"></label>   <label id="user-alert" class="user-alert"></label>
+              ><label id="wraped-images"></label>
+              <label id="user-alert" class="user-alert"></label>
             </div>
             <div class="account-menu">
               <div class="account-list">
@@ -1259,7 +1260,7 @@
                 <div class="game-article">
                   <h2>Image Wrapper</h2>
                   <p class="article-text">
-                    Wrap Your Images In A Yolk
+                    Wrap And Download Images Inside An Egg
                     <br />
                     <br />
                     <label
@@ -1270,11 +1271,25 @@
                         type="url"
                         placeholder="Image URL"
                     /></label>
+                    <input
+                      class="hatchalert"
+                      id="img-grabber"
+                      type="number"
+                      placeholder="Download #"
+                    />
                   </p>
                   <button
                     class="gamebuttons"
                     onclick="wrapImage();"
                     id="imgwrapperBTN"
+                  >
+                    Insert Yolks (1000)
+                  </button>
+                  
+                  <button
+                    class="gamebuttons"
+                    onclick="dwnload();"
+                    id="imggrabberBTN"
                   >
                     Insert Yolks (1000)
                   </button>

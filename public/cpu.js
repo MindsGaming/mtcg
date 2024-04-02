@@ -355,6 +355,13 @@ function wrapImage() {
   }
 }
 
+
+function downloadIMG(){
+ const imgGrabber = document.getElementById("img-grabber");
+  let download = imgGrabber.value;
+  window.open(download, "_blank") 
+}
+
 function HOME() {
   window.open("/", "_self");
 }
