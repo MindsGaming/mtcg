@@ -167,50 +167,39 @@ function hatchEGG() {
       let currentPOINTS = parseFloat(POINTS.innerHTML);
       let catchEGGS = parseFloat(currenteggs.innerHTML);
 
-      if (hatchedPOINTS > catchEGGS) {
-        let newEGG = catchEGGS + 1;
-        currenteggs.innerHTML = newEGG;
-        createDreamblock();
-        if (userAlert.innerHTML == "EGG Hatched") {
-          userAlert.innerHTML = "Bad Egg :(";
-        } else {
-          userAlert.innerHTML = "EGG Hatched";
-        }
-      } else if (hatchedPOINTS < catchEGGS) {
-        let EGGmath = currentPOINTS + hatchedPOINTS;
-        POINTS.innerHTML = EGGmath;
+      let EGGmath = currentPOINTS + hatchedPOINTS;
+      POINTS.innerHTML = EGGmath;
 
-        // Update the cracked egg count
-        let craked = parseFloat(hatchedeggs.innerHTML);
-        let goodegg = 1;
-        let crakedegg = goodegg + craked;
-        hatchedeggs.innerHTML = crakedegg;
+      // Update the cracked egg count
+      let craked = parseFloat(hatchedeggs.innerHTML);
+      let goodegg = 1;
+      let crakedegg = goodegg + craked;
+      hatchedeggs.innerHTML = crakedegg;
 
-        // Calculate the adjusted cooked egg count
-        let cooked = parseFloat(currenteggs.innerHTML) - 1;
-        currenteggs.innerHTML = cooked;
-        userAlert.innerHTML = "";
+      // Calculate the adjusted cooked egg count
+      let cooked = parseFloat(currenteggs.innerHTML) - 1;
+      currenteggs.innerHTML = cooked;
+      userAlert.innerHTML = "";
 
-        if (
-          foundEgg.innerHTML.length == 42 ||
-          foundEgg.innerHTML.length > 42 ||
-          !foundEgg.innerHTML
-        ) {
-          userAlert.innerHTML = "You Cracked: " + hatchedPOINTS + " Yolks";
-          userAlert.style = "color:gold;";
-        } else {
-          userAlert.innerHTML =
-            foundEgg.innerHTML + " You Cracked: " + hatchedPOINTS + " Yolks";
-          userAlert.style = "color:gold;";
-        }
-        let liText = foundEgg.textContent.trim();
-        if (liText.startsWith("https://")) {
-          let createIMG = document.createElement("img");
-          createIMG.src = foundEgg.innerHTML;
-          createIMG.className = "creator-wrap";
-          document.getElementById("wraped-images").appendChild(createIMG);
-          createIMG.id = hatchedPOINTS + "‽";
-        }
+      if (
+        foundEgg.innerHTML.length == 42 ||
+        foundEgg.innerHTML.length > 42 ||
+        !foundEgg.innerHTML
+      ) {
+        userAlert.innerHTML = "You Cracked: " + hatchedPOINTS + " Yolks";
+        userAlert.style = "color:gold;";
+      } else {
+        userAlert.innerHTML =
+          foundEgg.innerHTML + " You Cracked: " + hatchedPOINTS + " Yolks";
+        userAlert.style = "color:gold;";
+      }
+      let liText = foundEgg.textContent.trim();
+      if (liText.startsWith("https://")) {
+        let createIMG = document.createElement("img");
+        createIMG.src = foundEgg.innerHTML;
+        createIMG.className = "creator-wrap";
+        document.getElementById("wraped-images").appendChild(createIMG);
+        createIMG.id = hatchedPOINTS + "‽";
       }
     }
   }
