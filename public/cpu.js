@@ -336,7 +336,10 @@ function wrapImage() {
         createIMG.id = dreamvalue + "‽";
         // Add the dream value to the list
         userAlert.innerHTML =
-          "You Wrapped Block #" + dreamvalue + " with: " + dreamURL.value;
+          "You Wrapped Block #" +
+          dreamCatcher.length +
+          " with: " +
+          dreamURL.value;
         const checkPOINTS = parseFloat(POINTS.innerHTML);
         const removePOINTS = 1000;
         const EGGmath = Math.round(checkPOINTS - removePOINTS);
