@@ -162,12 +162,18 @@ function hatchEGG() {
       let foundEgg = document.getElementById(randomWarp);
       let wrapedIMG = document.getElementById("wraped-images");
       wrapedIMG.innerHTML = "";
+      userAlert.innerHTML = "";
       let hatchedPOINTS = parseFloat(foundEgg.value);
 
       let currentPOINTS = parseFloat(POINTS.innerHTML);
 
-      if (currentPOINTS > currenteggs.innerHTML) {
-        userAlert.innerHTML = "To Hard To Crack!";
+      if (hatchedPOINTS > currenteggs.innerHTML) {
+        if(userAlert.innerHTML == "Bad Egg :("){
+          user
+        }
+        
+        
+        userAlert.innerHTML = "Bad Egg :(";
       } else {
         let EGGmath = currentPOINTS + hatchedPOINTS;
         POINTS.innerHTML = EGGmath;
