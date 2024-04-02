@@ -1271,16 +1271,13 @@ function recoveryHack() {
           });
 
         // Add the dream value to the list
-        if (numb > currenteggs.innerHTML) {
-          userAlert.innerHTML = "Block Not Stable, Try Again";
-        } else {
-          userAlert.innerHTML = "Your Recover Id: " + numb;
-          hackID.value = "";
-          dreams.push(buildstring);
-          appendNewDream(buildstring);
-          POINTS.innerHTML = 0;
-          createDreamblock();
-        }
+
+        userAlert.innerHTML = "Your Recover Id: " + numb;
+        hackID.value = "";
+        dreams.push(buildstring);
+        appendNewDream(buildstring);
+        POINTS.innerHTML = 0;
+        createDreamblock();
       } else {
         var foundEgg = document.getElementById(hackID.value);
         let hack = foundEgg.innerHTML;
