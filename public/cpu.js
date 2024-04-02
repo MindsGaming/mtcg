@@ -357,15 +357,19 @@ function wrapImage() {
 }
 
 function downloadImg() {
-  const imgGrabber = document.getElementById("img-grabber");
-  let request = imgGrabber.value;
-  let grabIMG = document.getElementById(request);
-  let download = grabIMG.innerHTML;
+  const request = document.getElementById("img-grabber");
+  let requestIMG = request.value;
+  let grabber = document.getElementById(requestIMG);
+  let img = grabber.innerHTML;
+  alert(img)
 
-  let create = document.createElement("a");
-  create.href = download;
-  create.className = "creator-wrap";
-  document.getElementById("wraped-images").appendChild(create);
+  const createIMG = document.createElement("img");
+  createIMG.src = img;
+  createIMG.className = "creator-wrap";
+
+  const downloadBTN = document.createElement("a");
+  downloadBTN.href = img;
+  downloadBTN.innerHTML = createIMG;
 }
 
 function HOME() {
