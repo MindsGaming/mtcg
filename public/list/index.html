@@ -41,11 +41,11 @@
     }
   </style>
   <script>
-    let fetchList = document.getElementById("dreams");
-    fetchList.addEventListener("onmouseover", scrub);
-
-    let scrub = document.getElementById(fetchList.id);
-    scrub.id = "";
+    const fetchList = document.getElementById("dreams");
+    const eggList = fetchList.getElementsByTagName("li");
+    for (let i = 0; i < eggList.length; i++) {
+      eggList.id = "oops";
+    }
   </script>
   <body>
     <center>
