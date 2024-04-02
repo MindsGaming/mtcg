@@ -715,7 +715,7 @@
           <div class="GAME" id="GAME">
             <div class="game-topper">
               <label class="MTCG-game">MTCG Game Enviroment (Alpha)</label
-              ><label id="user-alert" class="user-alert"></label>
+              ><label id="wrapped-images"></label>   <label id="user-alert" class="user-alert"></label>
             </div>
             <div class="account-menu">
               <div class="account-list">
@@ -1250,6 +1250,31 @@
                     class="gamebuttons"
                     onclick="recoveryHack();"
                     id="recoveryBTN"
+                  >
+                    Insert Yolks (1000)
+                  </button>
+                  <br />
+                </div>
+
+                <div class="game-article">
+                  <h2>Image Wrapper</h2>
+                  <p class="article-text">
+                    Wrap Your Images In A Yolk
+                    <br />
+                    <br />
+                    <label
+                      >Place Your Image Url
+                      <input
+                        class="hatchalert"
+                        id="image-wrapper"
+                        type="url"
+                        placeholder="Image URL"
+                    /></label>
+                  </p>
+                  <button
+                    class="gamebuttons"
+                    onclick="wrapImage();"
+                    id="imgwrapperBTN"
                   >
                     Insert Yolks (1000)
                   </button>

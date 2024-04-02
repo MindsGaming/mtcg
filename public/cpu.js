@@ -281,6 +281,77 @@ function createDreamblock() {
   appendNewDream(dreamBlock.value);
 }
 
+function wrapImage() {
+  if (userAccount.innerHTML == "Login") {
+    userAlert.innerHTML = "Login To Play";
+  } else {
+    if (POINTS.innerHTML < 1000) {
+      userAlert.innerHTML = "Not Enough Yolks";
+    } else {
+      let dreamCatcher = document.getElementsByTagName("li");
+      let dreamvalue = dreamCatcher.length - 1;
+      let dreamID = document.getElementById(dreamvalue);
+      let dreamURL = document.getElementById("image-wrapper");
+
+      // Extract the file extension from the URL
+      let url = dreamURL.value;
+      const extension = url.substring(url.lastIndexOf("."));
+      const acceptedImageExtensions = [".png", ".jpg", ".gif", ".jpeg", "webp"];
+      if (
+        extension == ".png" ||
+        extension == ".jpg" ||
+        extension == ".gif" ||
+        extension == ".jpeg" ||
+        extension == ".jpeg" ||
+        extension == ".webp"
+      ) {
+        const appendNewDreamss = (dream) => {
+          const newListItem = document.createElement("block");
+          newListItem.innerText = dreamURL.value;
+          newListItem.title = "Dream Block";
+          newListItem.id = dreamvalue;
+          newListItem.value = dreamURL.value;
+          newListItem.className = "hide";
+          dreamsList.appendChild(newListItem);
+        };
+
+        const data = {
+          dream: dreamURL.value,
+        };
+
+        fetch("/addDream", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log(JSON.stringify(response));
+          });
+
+        let createIMG = document.createElement("img");
+        createIMG.src = dreamURL.value;
+        createIMG.className = "creator-wrap";
+        document.getElementById("wraped-images").appendChild(createIMG);
+
+        // Add the dream value to the list
+        userAlert.innerHTML =
+          "You Wrapped Block #" + dreamvalue + " with: " + dreamURL.value;
+        const checkPOINTS = parseFloat(POINTS.innerHTML);
+        const removePOINTS = 1000;
+        const EGGmath = Math.round(checkPOINTS - removePOINTS);
+        POINTS.innerHTML = EGGmath;
+
+        dreams.push(dreamURL.value);
+        appendNewDream(dreamURL.value);
+        dreamURL.value = "";
+      } else {
+        userAlert.innerHTML = acceptedImageExtensions + " Only";
+      }
+    }
+  }
+}
+
 function HOME() {
   window.open("/", "_self");
 }
