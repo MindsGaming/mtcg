@@ -359,14 +359,8 @@ function wrapImage() {
 function downloadImg() {
   const request = document.getElementById("img-grabber");
   let requestIMG = request.value;
-
-  if (request.value == "") {
-    requestIMG = crackedWrap;
-  } else {
-    requestIMG = request.value;
-  }
   const image = document.getElementById(requestIMG);
-  const imageURL = image.innerHTML;
+  let imageURL = image.innerHTML;
 
   function build(blob) {
     const link = document.createElement("a");
