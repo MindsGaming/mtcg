@@ -363,16 +363,14 @@ function downloadImg() {
   let requestIMG = request.value;
   let grabber = document.getElementById(requestIMG);
   let img = grabber.innerHTML;
+  let temp = document.getElementById("wraped-images");
 
   downloadBTN.href = img;
-  downloadBTN.textContent = grabber.innerHTML; // Set the link text
+  downloadBTN.textContent = img; // Set the link text
   downloadBTN.background = createIMG;
-
-  createIMG.src = img;
-  createIMG.className = "creator-wrap";
-  createIMG.outterHTML = downloadBTN;
-
-  document.getElementById("wraped-images").appendChild(createIMG);
+  downloadBTN.download = img;
+  
+  document.getElementById("wraped-images").appendChild(downloadBTN);
 }
 
 function HOME() {
