@@ -21,11 +21,10 @@
 
     <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/term/term.css" />
-    <script src="/script.js" defer></script>
     <script src="/client.js" defer></script>
     <script src="/cpu.js" defer></script>
     <script src="/metamask.js" defer></script>
+    <script src="/upgrades.js" defer></script>
   </head>
   <body onload="counteggs();">
     <h1 class="cpuName" id="CPUname">MTCG Token Space</h1>
@@ -798,6 +797,14 @@
                 min="0"
                 max="50"
               ></meter>
+              <div
+                id="supplyfeedBTN"
+                class="hide"
+                type="button"
+                onclick="supplyFeed();"
+              >
+                Feed
+              </div>
             </div>
             <center>
               <div class="game-home" id="game-home">
@@ -1317,6 +1324,36 @@
                     id="farmer-virtualenergyBTN"
                   >
                     Insert Yolks (2000)
+                  </button>
+                  <br />
+                </div>
+              </div>
+
+              <div id="farmers-upgrades" class="hide">
+                <label id="upgrades" class="hide"> </label>
+                <div class="game-article">
+                  <h2>Upgrade Your Farm!</h2>
+                  <p class="article-text">
+                    Use your yolks to upgrade your farm!
+                    <br />
+                  </p>
+                  <br />
+                </div>
+
+                <div class="game-article">
+                  <h2>Chicken Feed Supply</h2>
+                  <p class="article-text">
+                    Tired of going to the market for a little feed? <br />
+                    Stock up on chicken feed from your farm and get more feed
+                    for less yolks!
+                    <br />
+                  </p>
+                  <button
+                    class="gamebuttons"
+                    onclick="farmerChickenSupply();"
+                    id="farmer-chikenSupply"
+                  >
+                    Upgrade (10,000 Yolks)
                   </button>
                   <br />
                 </div>

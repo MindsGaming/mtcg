@@ -354,7 +354,7 @@ var pagenation = document.getElementById("pagenation");
 var playerfarm = document.getElementById("farm-home");
 var playermarket = document.getElementById("farmers-market");
 var playerarcade = document.getElementById("farmers-arcade");
-
+var playerupgrades = document.getElementById("farmers-upgrades");
 function playersFarm() {
   pagenation.innerHTML = "FARM";
   checkPage();
@@ -369,7 +369,10 @@ function playerGames() {
   pagenation.innerHTML = "GAMES";
   checkPage();
 }
-
+function playerUpgrades() {
+  pagenation.innerHTML = "UPGRADES";
+  checkPage();
+}
 function checkPage() {
   let sleepBTN = document.getElementById("sleepBTN");
   if (energy.value == 0) {
@@ -399,6 +402,16 @@ function checkPage() {
           farmBackground.src =
             "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Arcade%20ONE.webp";
           sleepBTN.className = "hide";
+        } else {
+          if (checkpage == "UPGRADES") {
+            playerupgrades.className = "game-home";
+            playerarcade.className = "hide";
+            playerfarm.className = "hide";
+            playermarket.className = "hide";
+            farmBackground.src =
+              "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Arcade%20ONE.webp";
+            sleepBTN.className = "hide";
+          }
         }
       }
     }
