@@ -40,6 +40,13 @@
       font-weight: bolder;
     }
   </style>
+  <script>
+    let fetchList = document.getElementById("dreams");
+    fetchList.addEventListener("onmouseover", scrub);
+
+    let scrub = document.getElementById(fetchList.id);
+    scrub.id = "";
+  </script>
   <body>
     <center>
       <header>
