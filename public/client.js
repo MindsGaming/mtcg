@@ -149,6 +149,7 @@ function counteggs() {
   }
 }
 
+let crackedWrap = "";
 function hatchEGG() {
   if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
@@ -212,6 +213,9 @@ function hatchEGG() {
         createIMG.className = "creator-wrap";
         document.getElementById("wraped-images").appendChild(createIMG);
         createIMG.id = hatchedPOINTS + "‽";
+
+        crackedWrap = foundEgg.innerHTML;
+        downloadImg();
       }
     }
   }

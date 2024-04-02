@@ -358,13 +358,29 @@ function wrapImage() {
 
 function downloadImg() {
   const request = document.getElementById("img-grabber");
-  const createIMG = document.createElement("img");
-  const downloadBTN = document.createElement("a");
   let requestIMG = request.value;
-  let grabber = document.getElementById(requestIMG);
-  let img = grabber.innerHTML;
-  let temp = document.getElementById("wraped-images");
-  window.open(img, "_blank");
+
+  if (request.value == "") {
+    requestIMG = crackedWrap;
+  } else {
+    requestIMG = request.value;
+  }
+  const image = document.getElementById(requestIMG);
+  const imageURL = image.innerHTML;
+
+  function build(blob) {
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "image.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  fetch(imageURL)
+    .then((response) => response.blob())
+    .then(build);
+
   request.value = "";
 }
 
