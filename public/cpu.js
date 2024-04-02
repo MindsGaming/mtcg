@@ -355,11 +355,22 @@ function wrapImage() {
   }
 }
 
+function downloadImg() {
+  const imgGrabber = document.getElementById("img-grabber");
+  let request = imgGrabber.value;
+  let grabIMG = document.getElementById(request);
+  let download = grabIMG.innerHTML;
 
-function downloadIMG(){
- const imgGrabber = document.getElementById("img-grabber");
-  let download = imgGrabber.value;
-  window.open(download, "_blank") 
+  // Using fetch
+
+  const link = document.createElement("a");
+  link.href = download;
+  link.download = "image file name here";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  window.open(download);
 }
 
 function HOME() {
