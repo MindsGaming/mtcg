@@ -174,8 +174,8 @@ function hatchEGG() {
         hatchedPOINTS = softegg;
 
         if (softegg == 0) {
-          let harder = currentPOINTS % 2;
-          let harderegg = Math.round(currentPOINTS);
+          let harder = catchEGGS % 2;
+          let harderegg = Math.round(catchEGGS);
           hatchedPOINTS = harderegg + 1;
         }
       }
