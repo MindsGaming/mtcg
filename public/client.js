@@ -169,7 +169,7 @@ function hatchEGG() {
       let catchEGGS = parseFloat(currenteggs.innerHTML);
 
       if (hatchedPOINTS > catchEGGS) {
-        let softenEgg = hatchedPOINTS % 2;
+        let softenEgg = hatchedPOINTS % catchEGGS;
         let softegg = Math.round(softenEgg);
         hatchedPOINTS = softegg;
 
@@ -1100,15 +1100,13 @@ function feedCHICKEN() {
   if (yolkstofeed < 1000) {
     userAlert.innerHTML = "Not Enough Yolks";
   } else {
-    if (yolkstofeed > 500) {
-      let feedmath = yolkstofeed - 500;
-      POINTS.innerHTML = feedmath;
-      let farmerfeed = parseFloat(feed.value);
-      let morefeedmath = farmerfeed + 1;
-      feed.value = morefeedmath;
-      userAlert.innerHTML = "Cluck!";
-      pullENERGY();
-    }
+    let feedmath = yolkstofeed - 1000;
+    POINTS.innerHTML = feedmath;
+    let farmerfeed = parseFloat(feed.value);
+    let morefeedmath = farmerfeed + 1;
+    feed.value = morefeedmath;
+    userAlert.innerHTML = "Cluck!";
+    pullENERGY();
   }
 }
 
