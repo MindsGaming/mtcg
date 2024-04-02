@@ -378,6 +378,7 @@ function GAMERchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    userAlert.innerHTML = "Sent To Farm";
     pullENERGY();
   }
 }
@@ -399,6 +400,8 @@ function ECLIPSEchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    userAlert.innerHTML = "Sent To Farm";
+
     pullENERGY();
   }
 }
@@ -420,6 +423,8 @@ function DooBetterchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    userAlert.innerHTML = "Sent To Farm";
+
     pullENERGY();
   }
 }
@@ -441,6 +446,8 @@ function GTPCchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    userAlert.innerHTML = "Sent To Farm";
+
     pullENERGY();
   }
 }
@@ -462,6 +469,7 @@ function PINNchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    userAlert.innerHTML = "Sent To Farm";
     pullENERGY();
   }
 }
@@ -483,6 +491,7 @@ function WTVchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    userAlert.innerHTML = "Sent To Farm";
     pullENERGY();
   }
 }
@@ -504,6 +513,7 @@ function DARKMARKchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    userAlert.innerHTML = "Sent To Farm";
     pullENERGY();
   }
 }
@@ -525,6 +535,7 @@ function DRAGONchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    userAlert.innerHTML = "Sent To Farm";
     pullENERGY();
   }
 }
@@ -546,6 +557,7 @@ function CANDYSchange() {
     let requestmath = currentchange + boostrequest;
     request.innerHTML = requestmath;
     trackers.className = "game-article";
+    userAlert.innerHTML = "Sent To Farm";
     pullENERGY();
   }
 }
