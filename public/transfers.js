@@ -387,7 +387,6 @@ function getMyEggs() {
       let yourHatchedEggs = document.getElementById("yourHatched-eggs");
       yourHatchedEggs.style = "color: gold; font-size: 15px;";
       yourHatchedEggs.innerHTML = "You Start With: " + "15" + " Eggs" + "<br>";
-      gotIt();
     } else {
       // Open Tabs
       playerEGGS.innerHTML = "15";

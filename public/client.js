@@ -1255,6 +1255,7 @@ function EggMaker() {
       customEgg.value = "";
       dreams.push(customEgg.value);
       appendNewDream(customEgg.value);
+      layEGGS();
     }
   }
 }
