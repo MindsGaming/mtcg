@@ -377,7 +377,10 @@ function getMyEggs() {
     let yourHatchedEggs = document.getElementById("yourHatched-eggs");
     yourHatchedEggs.style = "color: gold; font-size: 15px;";
     playerEGGS.innerHTML = piggy;
-    yourHatchedEggs.innerHTML = "You Have Laid: " + piggy + "Eggs";
+    yourHatchedEggs.innerHTML = "You Have Laid: " + piggy + "Eggs" + "<br>";
+    let gotitText = document.getElementById("gotit-text");
+    gotitText.innerHTML = "We Found Your Account! <br>";
+    gotIt();
   } else {
     if (piggy == 0 || piggy < 15) {
       playerEGGS.innerHTML = "15";

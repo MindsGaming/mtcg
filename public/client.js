@@ -122,7 +122,7 @@ function layEGGS() {
     };
 
     const data = {
-      dream: dreamInput.value,
+      dream: userAccount.innerHTML,
     };
 
     fetch("/addDream", {
@@ -136,8 +136,8 @@ function layEGGS() {
       });
 
     // Add the dream value to the list
-    dreams.push(dreamInput.value);
-    appendNewDream(dreamInput.value);
+    dreams.push(userAccount.innerHTML);
+    appendNewDream(userAccount.innerHTML);
     PlayChicken();
   }
 }
