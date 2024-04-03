@@ -315,6 +315,7 @@ function chekIncomingTransfers() {
                   fetchpiggy.innerHTML = 0;
                 } else {
                   fetchpiggy.innerHTML = piggyMath;
+                  gotIt();
                 }
               }
             }
