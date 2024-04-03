@@ -245,6 +245,8 @@ function feedCHICKEN() {
 }
 
 function PlayChicken() {
+  var playerupgrades = document.getElementById("farmers-upgrades");
+
   chicken.className = "hide";
   setTimeout(newChicken, 20000);
   let farmerfeed = parseFloat(feed.value);
@@ -355,6 +357,8 @@ var playerfarm = document.getElementById("farm-home");
 var playermarket = document.getElementById("farmers-market");
 var playerarcade = document.getElementById("farmers-arcade");
 var playerupgrades = document.getElementById("farmers-upgrades");
+var playerstage = document.getElementById("farmer-stage");
+
 function playersFarm() {
   pagenation.innerHTML = "FARM";
   checkPage();
@@ -383,16 +387,30 @@ function checkPage() {
       playerfarm.className = "game-home";
       playermarket.className = "hide";
       playerarcade.className = "hide";
-      farmBackground.src =
-        "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
+      if (playerstage.title == "FARM") {
+        farmBackground.src =
+          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
+      } else if (playerstage.title == "CASTLE") {
+        farmBackground.src =
+          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Castle.webp";
+      } else if (playerstage.title == "SPACE") {
+        farmBackground.src =
+          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/sapce.webp";
+      }
       sleepBTN.className = "meterbuttons";
     } else {
       if (checkpage == "MARKET") {
         playerfarm.className = "hide";
         playermarket.className = "game-home";
         playerarcade.className = "hide";
-        farmBackground.src =
-          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
+
+        if (playerstage.title == "FARM") {
+          farmBackground.src =
+            "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
+        } else if (playerstage.title == "CASTLE") {
+          farmBackground.src =
+            "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
+        }
         sleepBTN.className = "hide";
       } else {
         if (checkpage == "GAMES") {
