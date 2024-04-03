@@ -25,6 +25,7 @@
     <script src="/cpu.js" defer></script>
     <script src="/metamask.js" defer></script>
     <script src="/upgrades.js" defer></script>
+    <script src="/transfers.js" defer></script>
   </head>
   <body onload="counteggs();">
     <h1 class="cpuName" id="CPUname">MTCG Token Space</h1>
@@ -944,52 +945,187 @@
                     class="creator-badge"
                     src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/thumbnails%2FRabbit.jpg"
                   />
+                  <div onclick="hidebank();">
+                    <img
+                      id="bank-eye"
+                      style="
+                        float: left;
+                        width: 32px;
+                        height: 32px;
+                        margin: 3px;
+                        padding: 1px;
+                      "
+                      src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
+                    />
+                  </div>
+
                   <h2>Sweet Change!</h2>
                   <p class="article-text">
                     You got something in the Farmers Market! <br />
                     Don't forget to make a request!
                     <br />
-                    <label>GAMER: <label id="GAMER-change">0</label></label>
-                    <button onclick="GamerPOINTS();">Request GAMER</button>
-                    <label>
-                      withinthevacuum: <label id="WTV-change">0</label></label
-                    >
-                    <button onclick="WTVPOINTS();">
-                      Request withinthevacuum
-                    </button>
-                    <label>
-                      DooBetter: <label id="DOOBETTER-change">0</label></label
-                    >
-                    <button onclick="DOOBETTERPOINTS();">
-                      Request DooBetter
-                    </button>
-                    <label> GTPC: <label id="GTPC-change">0</label></label>
-                    <button onclick="GTPCPOINTS();">Request GTPC</button>
-                    <label>
-                      ECLIPSE:
-                      <label id="ECLIPSE-change">0</label></label
-                    >
-                    <button onclick="ECLIPSEPOINTS();">Request ECLIPSE</button>
-                    <label>
-                      PINN:
-                      <label id="PINN-change">0</label></label
-                    >
-                    <button onclick="ECLIPSEPOINTS();">Request ECLIPSE</button>
-                    <label>
-                      DragonToken:
-                      <label id="DRAGONTOKEN-change">0</label></label
-                    >
-                    <button onclick="DRAGONTOKENPOINTS();">
-                      Request DragonToken
-                    </button>
-                    <label>
-                      DarkMark: <label id="DARKMARK-change">0</label></label
-                    >
-                    <button onclick="DARKMARKPOINTS();">
-                      Request DarkMark
-                    </button>
-                    <label>Candys: <label id="CANDYS-change">0</label></label>
-                    <button onclick="CANDYSPOINTS();">Request Candys</button>
+                    <label class="piggybank" id="piggy-bank">
+                      <label>GAMER: <label id="GAMER-change">0</label></label
+                      ><br />
+                      <button class="piggybuttons" onclick="GamerPOINTS();">
+                        Request GAMER
+                      </button>
+                      <button
+                        class="piggybuttons"
+                        onclick="sendGamerTransfer();"
+                      >
+                        Transfer Gamer
+                      </button>
+                      <br />
+                      <label>
+                        withinthevacuum: <label id="WTV-change">0</label></label
+                      >
+                      <button class="piggybuttons" onclick="WTVPOINTS();">
+                        Request WTV
+                      </button>
+                      <button class="piggybuttons" onclick="sendWtvTransfer();">
+                        Transfer WTV
+                      </button>
+                      <br />
+                      <label>
+                        DooBetter: <label id="DOOBETTER-change">0</label></label
+                      >
+                      <button class="piggybuttons" onclick="DOOBETTERPOINTS();">
+                        Request DooBetter
+                      </button>
+                      <button
+                        class="piggybuttons"
+                        onclick="sendDoobetterTransfer();"
+                      >
+                        Transfer DooBetter
+                      </button>
+                      <br />
+                      <label> GTPC: <label id="GTPC-change">0</label></label>
+                      <button class="piggybuttons" onclick="GTPCPOINTS();">
+                        Request GTPC
+                      </button>
+                      <button
+                        class="piggybuttons"
+                        onclick="sendGtpcTransfer();"
+                      >
+                        Transfer GTPC
+                      </button>
+                      <br />
+                      <label>
+                        ECLIPSE:
+                        <label id="ECLIPSE-change">0</label></label
+                      >
+                      <button class="piggybuttons" onclick="ECLIPSEPOINTS();">
+                        Request ECLIPSE
+                      </button>
+                      <button
+                        class="piggybuttons"
+                        onclick="sendEclipseTransfer();"
+                      >
+                        Transfer ECLIPSE
+                      </button>
+                      <br />
+                      <label>
+                        PINN:
+                        <label id="PINN-change">0</label></label
+                      >
+                      <button class="piggybuttons" onclick="PINNPOINTS();">
+                        Request PINN
+                      </button>
+                      <button
+                        class="piggybuttons"
+                        onclick="sendPinnTransfer();"
+                      >
+                        Transfer PINN
+                      </button>
+                      <br />
+                      <label>
+                        DragonToken:
+                        <label id="DRAGONTOKEN-change">0</label></label
+                      >
+                      <button
+                        class="piggybuttons"
+                        onclick="DRAGONTOKENPOINTS();"
+                      >
+                        Request DragonToken
+                      </button>
+                      <button
+                        class="piggybuttons"
+                        onclick="sendDragonTokenTransfer();"
+                      >
+                        Transfer DragonToken
+                      </button>
+                      <br />
+                      <label>
+                        DarkMark: <label id="DARKMARK-change">0</label></label
+                      >
+                      <button class="piggybuttons" onclick="DARKMARKPOINTS();">
+                        Request DarkMark
+                      </button>
+                      <button
+                        class="piggybuttons"
+                        onclick="sendDarkmarkTransfer();"
+                      >
+                        Transfer DarkMark
+                      </button>
+                      <br />
+                      <label>Candys: <label id="CANDYS-change">0</label></label>
+                      <button class="piggybuttons" onclick="CANDYSPOINTS();">
+                        Request Candys
+                      </button>
+                      <button
+                        class="piggybuttons"
+                        onclick="sendCandysTransfer();"
+                      >
+                        Transfer Candys
+                      </button>
+                    </label>
+                    <br />
+
+                    <label id="transfer-form" class="hide">
+                      You are transfering
+                      <label id="get-transferToken">Yolks</label> <br />
+                      Game Account:
+                      <input
+                        id="transfer-tokenaccount"
+                        name="transfer"
+                        aria-label="a new dream"
+                        type="text"
+                        maxlength="42"
+                        minlength="42"
+                        style="width: 53%"
+                        placeholder="Game Account"
+                        required
+                      /><br />
+                      Amount
+                      <input
+                        id="transfer-tokenamount"
+                        name="transfer"
+                        aria-label="a new dream"
+                        type="number"
+                        placeholder="Amount"
+                        style="width: 23%"
+                        required
+                      />
+                      <input
+                        id="transfer-tokenname"
+                        name="transfer"
+                        aria-label="a new dream"
+                        type="text"
+                        placeholder="Name"
+                        class="hide"
+                      /><br />
+
+                      <button onclick="sendTransfer();">
+                        Send Transfer <label style="gold">(5 Eggs)</label>
+                      </button>
+
+                      <button onclick="cancelTransfer();">Cancel</button>
+
+                      <label style="color: red; font-size: 13px"
+                        >Only Send To Game Accounts</label
+                      >
+                    </label>
                   </p>
                   <br />
                 </div>

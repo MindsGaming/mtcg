@@ -569,6 +569,19 @@ li {
   color: blue;
 }
 
+.piggybank {
+  width: 60%;
+}
+.piggybuttons {
+  width: 15%;
+  margin: 2px;
+  padding: 4px;
+  background-color: green;
+  color: black;
+  border-style: solid;
+  font-size: 8px;
+}
+
 .pacman {
   width: 100%;
   height: 365px;
