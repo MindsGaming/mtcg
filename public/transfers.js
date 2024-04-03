@@ -316,15 +316,16 @@ function chekIncomingTransfers() {
         //
         function deductrequests() {
           for (let j = 0; j < targetWordss.length; j++) {
-            let concatenatedString =
+            let concatenatedStrings =
               userAccountContent + "Request:" + targetWordss[j];
             for (let i = 0; i < listcount.length; i++) {
               let listItemText = listcount[i].textContent;
-              if (listItemText.includes(concatenatedString)) {
+              if (listItemText.includes(concatenatedStrings)) {
                 let newAlert = listItemText.replace(
                   userAccount.innerHTML + "Request:" + targetWordss[j] + ":",
                   ""
                 );
+
                 let tack = parseFloat(newAlert);
                 let piggy = targetWords[j] + "-change";
                 let fetchpiggy = document.getElementById(piggy);
@@ -338,12 +339,15 @@ function chekIncomingTransfers() {
                   let openPIGGY = document.getElementById("farming-rewards");
                   openPIGGY.className = "game-article";
                 }
+              } else {
+                // Open Tabs
+                let openPIGGY = document.getElementById("farming-rewards");
+                openPIGGY.className = "game-article";
               }
             }
           }
         }
         deductrequests();
-
         //
       }
     }
