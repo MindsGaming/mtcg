@@ -387,9 +387,10 @@ function checkPage() {
       playerfarm.className = "game-home";
       playermarket.className = "hide";
       playerarcade.className = "hide";
+      playerupgrades.className = "hide";
       if (playerstage.title == "FARM") {
         farmBackground.src =
-          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
+          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
       } else if (playerstage.title == "CASTLE") {
         farmBackground.src =
           "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Castle.webp";
@@ -403,6 +404,7 @@ function checkPage() {
         playerfarm.className = "hide";
         playermarket.className = "game-home";
         playerarcade.className = "hide";
+        playerupgrades.className = "hide";
 
         if (playerstage.title == "FARM") {
           farmBackground.src =
@@ -417,6 +419,8 @@ function checkPage() {
           playerarcade.className = "game-home";
           playerfarm.className = "hide";
           playermarket.className = "hide";
+          playerupgrades.className = "hide";
+
           farmBackground.src =
             "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Arcade%20ONE.webp";
           sleepBTN.className = "hide";
