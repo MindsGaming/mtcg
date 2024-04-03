@@ -68,7 +68,6 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value);
 
   // reset form
-  createDreamblock();
   if (currenteggs.innerHTML == "0") {
     counteggs();
   }
@@ -136,7 +135,6 @@ function layEGGS() {
       });
 
     // Add the dream value to the list
-    createDreamblock();
     dreams.push(dreamInput.value);
     appendNewDream(dreamInput.value);
     PlayChicken();
@@ -700,7 +698,6 @@ function GamerPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
-    createDreamblock();
   }
 }
 
@@ -758,7 +755,6 @@ function ECLIPSEPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
-    createDreamblock();
   }
 }
 
@@ -816,7 +812,6 @@ function DOOBETTERPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
-    createDreamblock();
   }
 }
 
@@ -874,7 +869,6 @@ function GTPCPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
-    createDreamblock();
   }
 }
 
@@ -932,7 +926,6 @@ function PINNPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
-    createDreamblock();
   }
 }
 
@@ -990,7 +983,6 @@ function WTVPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
-    createDreamblock();
   }
 }
 
@@ -1048,7 +1040,6 @@ function DARKMARKPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
-    createDreamblock();
   }
 }
 
@@ -1106,7 +1097,6 @@ function DRAGONTOKENPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
-    createDreamblock();
   }
 }
 
@@ -1164,7 +1154,6 @@ function CANDYSPOINTS() {
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
-    createDreamblock();
   }
 }
 
@@ -1256,7 +1245,6 @@ function EggMaker() {
       customEgg.value = "";
       dreams.push(customEgg.value);
       appendNewDream(customEgg.value);
-      createDreamblock();
     }
   }
 }
@@ -1314,7 +1302,6 @@ function recoveryHack() {
         dreams.push(buildstring);
         appendNewDream(buildstring);
         POINTS.innerHTML = 0;
-        createDreamblock();
       } else {
         var foundEgg = document.getElementById(hackID.value);
         let hack = foundEgg.innerHTML;
