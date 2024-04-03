@@ -3,13 +3,13 @@ function farmerChickenSupply() {
   let checking = parseFloat(yolkCheck.innerHTML);
   var farmerstage = document.getElementById("farmer-stage");
 
-  if (checking < 10000) {
+  if (checking < 1) {
     userAlert.innerHTML = "Not Enough Yolks";
   } else {
     if (farmerstage.title == "FARM") {
       userAlert.innerHTML = "You Need A Castle";
     } else {
-      let upgradeFarm = checking - 10000;
+      let upgradeFarm = checking - 1;
       yolkCheck.innerHTML = upgradeFarm;
 
       const upgrade = document.getElementById("supplyfeedBTN");
@@ -35,13 +35,13 @@ function supplyFeed() {
   const feedmyChicken = document.getElementById("supplyfeedBTN");
   feedmyChicken.className = "hide";
   let gatherSeeds = document.getElementById("hatched-points");
-  let gatherCost = 1000;
+  let gatherCost = 1;
   let gather = parseFloat(gatherSeeds.innerHTML);
 
-  if (gather < 1000) {
+  if (gather < 1) {
     userAlert.innerHTML = "Not Enough Yolks";
   } else {
-    let gathering = gather - 1000;
+    let gathering = gather - 1;
     gatherSeeds.innerHTML = gathering;
 
     let stockSupply = document.getElementById("farmer-feed");
