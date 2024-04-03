@@ -352,4 +352,42 @@ function chekIncomingTransfers() {
       }
     }
   }
+  getMyEggs();
+}
+
+function getMyEggs() {
+  let targetWordss = userAccount.innerHTML;
+  const newCurrent = document.getElementById("current-eggs");
+  newCurrent.id = "player-eggs";
+  let playerEGGS = document.getElementById("player-eggs");
+  let piggy = 0;
+  let mylist = document.getElementById("ul");
+  let listcount = document.getElementsByTagName("li");
+
+  let concatenatedStrings = targetWordss;
+  for (let i = 0; i < listcount.length; i++) {
+    let listItemText = listcount[i].textContent;
+    if (listItemText.includes(concatenatedStrings)) {
+      let targetpiggy = piggy + 1;
+      let piggyMath = targetpiggy;
+      piggy = piggyMath;
+    }
+  }
+  if (piggy > 15 || piggy == 15) {
+    let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+    yourHatchedEggs.style = "color: gold; font-size: 15px;";
+    playerEGGS.innerHTML = piggy;
+    yourHatchedEggs.innerHTML = "You Have Laid: " + piggy + "Eggs";
+  } else {
+    if (piggy == 0 || piggy < 15) {
+      playerEGGS.innerHTML = "15";
+      let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+      yourHatchedEggs.style = "color: gold; font-size: 15px;";
+      yourHatchedEggs.innerHTML = "You Start With: " + "15" + " Eggs" + "<br>";
+      gotIt();
+    } else {
+      // Open Tabs
+      playerEGGS.innerHTML = "15";
+    }
+  }
 }
