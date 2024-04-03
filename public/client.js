@@ -76,6 +76,7 @@ dreamsForm.onsubmit = (event) => {
   dreamInput.value = "";
   dreamInput.focus();
   loginform.className = "hide";
+  chekIncomingTransfers();
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -679,7 +680,7 @@ function GamerPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "GAMER: " + currentchange,
+      dream: userAccount.innerHTML + "Gamer: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -693,8 +694,8 @@ function GamerPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "GAMER: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "GAMER: " + currentchange);
+    dreams.push(userAccount.innerHTML + "Gamer: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "Gamer: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -737,7 +738,7 @@ function ECLIPSEPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "ECLIPSE: " + currentchange,
+      dream: userAccount.innerHTML + "Eclipse: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -751,8 +752,8 @@ function ECLIPSEPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "ECLIPSE: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "ECLIPSE: " + currentchange);
+    dreams.push(userAccount.innerHTML + "Eclipse: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "Eclipse: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -853,7 +854,7 @@ function GTPCPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "GTPC: " + currentchange,
+      dream: userAccount.innerHTML + "Gtpc: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -867,8 +868,8 @@ function GTPCPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "GTPC: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "GTPC: " + currentchange);
+    dreams.push(userAccount.innerHTML + "Gtpc: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "Gtpc: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -911,7 +912,7 @@ function PINNPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "PINN: " + currentchange,
+      dream: userAccount.innerHTML + "Pinn: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -925,8 +926,8 @@ function PINNPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "PINN: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "PINN: " + currentchange);
+    dreams.push(userAccount.innerHTML + "Pinn: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "Pinn: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -969,7 +970,7 @@ function WTVPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "WTV: " + currentchange,
+      dream: userAccount.innerHTML + "Wtv: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -983,8 +984,8 @@ function WTVPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "WTV: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "WTV: " + currentchange);
+    dreams.push(userAccount.innerHTML + "Wtv: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "Wtv: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -1143,7 +1144,7 @@ function CANDYSPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "CANDYS: " + currentchange,
+      dream: userAccount.innerHTML + "Candys: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -1157,8 +1158,8 @@ function CANDYSPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "CANDYS: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "CANDYS: " + currentchange);
+    dreams.push(userAccount.innerHTML + "Candys: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "Candys: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();

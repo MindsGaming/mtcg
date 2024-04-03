@@ -272,9 +272,9 @@ function chekIncomingTransfers() {
   let mylist = document.getElementById("ul");
   let listcount = document.getElementsByTagName("li");
   let numb = listcount.length;
-  let targetWords = ["GAMER", "WTV", "PINN"];
+  let targetWords = ["GAMER", "ECLIPSE", "DOOBETTER", "GTPC", "PINN", "WTV", "DARKMARK", ];
   let userAccountContent = userAccount.innerHTML;
-  let targetWordss = ["Gamer", "Wtv", "Pinn"];
+  let targetWordss = ["Gamer", "Eclipse", "DooBetter", "Gtpc", "Pinn", "Wtv", "DarkMark"];
   let calc = "";
 
   for (let j = 0; j < targetWords.length; j++) {
