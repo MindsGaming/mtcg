@@ -272,9 +272,29 @@ function chekIncomingTransfers() {
   let mylist = document.getElementById("ul");
   let listcount = document.getElementsByTagName("li");
   let numb = listcount.length;
-  let targetWords = ["GAMER", "ECLIPSE", "DOOBETTER", "GTPC", "PINN", "WTV", "DARKMARK", ];
+  let targetWords = [
+    "GAMER",
+    "ECLIPSE",
+    "DOOBETTER",
+    "GTPC",
+    "PINN",
+    "WTV",
+    "DARKMARK",
+    "DRAGONTOKEN",
+    "CANDYS",
+  ];
   let userAccountContent = userAccount.innerHTML;
-  let targetWordss = ["Gamer", "Eclipse", "DooBetter", "Gtpc", "Pinn", "Wtv", "DarkMark"];
+  let targetWordss = [
+    "Gamer",
+    "Eclipse",
+    "DooBetter",
+    "Gtpc",
+    "Pinn",
+    "Wtv",
+    "DarkMark",
+    "DragonToken",
+    "Candys",
+  ];
   let calc = "";
 
   for (let j = 0; j < targetWords.length; j++) {
@@ -315,7 +335,8 @@ function chekIncomingTransfers() {
                   fetchpiggy.innerHTML = 0;
                 } else {
                   fetchpiggy.innerHTML = piggyMath;
-                  gotIt();
+                  let openPIGGY = document.getElementById("farming-rewards");
+                  openPIGGY.className = "game-article";
                 }
               }
             }
