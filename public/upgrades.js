@@ -3,13 +3,13 @@ function farmerChickenSupply() {
   let checking = parseFloat(yolkCheck.innerHTML);
   var farmerstage = document.getElementById("farmer-stage");
 
-  if (checking < 1) {
+  if (checking < 10000) {
     userAlert.innerHTML = "Not Enough Yolks";
   } else {
     if (farmerstage.title == "FARM") {
       userAlert.innerHTML = "You Need A Castle";
     } else {
-      let upgradeFarm = checking - 1;
+      let upgradeFarm = checking - 10000;
       yolkCheck.innerHTML = upgradeFarm;
 
       const upgrade = document.getElementById("supplyfeedBTN");
@@ -38,10 +38,10 @@ function supplyFeed() {
   let gatherCost = 1;
   let gather = parseFloat(gatherSeeds.innerHTML);
 
-  if (gather < 1) {
+  if (gather < 10000) {
     userAlert.innerHTML = "Not Enough Yolks";
   } else {
-    let gathering = gather - 1;
+    let gathering = gather - 10000;
     gatherSeeds.innerHTML = gathering;
 
     let stockSupply = document.getElementById("farmer-feed");
@@ -74,11 +74,11 @@ function farmerStages() {
   let yolkCheck = document.getElementById("hatched-points");
   let checking = parseFloat(yolkCheck.innerHTML);
 
-  if (checking < 1) {
+  if (checking < 10000) {
     userAlert.innerHTML = "Not Enough Yolks";
   } else {
     if (farmerstage.title == "FARM") {
-      let upgradeFarm = checking - 1;
+      let upgradeFarm = checking - 10000;
       yolkCheck.innerHTML = upgradeFarm;
 
       farmerstage.title = "CASTLE";
@@ -86,7 +86,6 @@ function farmerStages() {
     } else if (farmerstage.title == "CASTLE") {
       let upgradeFarm = checking - 10000;
       yolkCheck.innerHTML = upgradeFarm;
-
       farmerstage.title = "SPACE";
       farmerstageBracket.className = "hide";
     }
