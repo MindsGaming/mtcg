@@ -96,7 +96,7 @@ function wrapImage() {
   if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
   } else {
-    if (POINTS.innerHTML < 10) {
+    if (POINTS.innerHTML < 1) {
       userAlert.innerHTML = "Not Enough Yolks";
     } else {
       let dreamCatcher = document.getElementsByTagName("li");
@@ -107,7 +107,7 @@ function wrapImage() {
       // Extract the file extension from the URL
       let url = dreamURL.value;
       const extension = url.substring(url.lastIndexOf("."));
-      const acceptedImageExtensions = [".png", ".jpg", ".gif", ".jpeg", "webp"];
+      const acceptedImageExtensions = [".png ", ".jpg ", ".gif ", ".jpeg ", "webp "];
       if (
         extension == ".png" ||
         extension == ".jpg" ||
@@ -158,10 +158,8 @@ function wrapImage() {
           // self Downloads
           function myImageDownloads() {
             let textmerge = placeholder.id;
-            let swoshID = textmerge.replace("?", "");
-          
-            
-            let imageURL = ;
+            const image = document.getElementById(textmerge);
+            let imageURL = image.title;
 
             function build(blob) {
               const link = document.createElement("a");
@@ -175,8 +173,6 @@ function wrapImage() {
             fetch(imageURL)
               .then((response) => response.blob())
               .then(build);
-
-            request.value = "";
           }
         }
         transferImageEgg();
