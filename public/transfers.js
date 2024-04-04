@@ -554,7 +554,6 @@ function getMyImageEggs() {
       }
     }
   }
-  noDubs();
 }
 
 function transferMyImage(placeholderId) {
@@ -584,17 +583,23 @@ function myImageDownloads() {
     .then(build);
 }
 
-function noDubs() {
+function removeDuplicateImagesAndButtons() {
   let dubList = document.getElementById("myegg-images");
   let checkDubs = dubList.getElementsByTagName("img");
-  let imgSrcList = [];
-  
+  let imgSrcList = {};
+
   for (let i = 0; i < checkDubs.length; i++) {
     let imgSrc = checkDubs[i].src;
-    if (!imgSrcList.includes(imgSrc)) {
-      imgSrcList.push(imgSrc);
+    if (!imgSrcList[imgSrc]) {
+      imgSrcList[imgSrc] = true;
     } else {
-      dubList.removeChild(checkDubs[i]);
+      checkDubs[i].remove(); // Remove duplicate image
+      let correspondingButtons = document.querySelectorAll(
+        `button[data-image="${imgSrc}"]`
+      );
+      correspondingButtons.forEach((button) => {
+        button.remove(); // Remove corresponding buttons
+      });
     }
   }
 }
