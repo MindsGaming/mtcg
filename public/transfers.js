@@ -402,6 +402,7 @@ function getMyEggs() {
       }
     }
   }
+  getMyRefferal();
   getMyImageEggs();
 }
 
@@ -566,7 +567,6 @@ function getMyImageEggs() {
         }
         let yourdisplay = document.getElementById("farmerimages");
         yourdisplay.className = "game-article";
-        alert(yourdisplay.className);
       }
     }
   }
