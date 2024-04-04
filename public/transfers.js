@@ -584,18 +584,17 @@ function myImageDownloads() {
     .then(build);
 }
 
-function noDubs(placeholderId) {
+function noDubs() {
+  let dubList = document.getElementById("myegg-images");
+  let checkDubs = dubList.getElementsByTagName("img");
+  let imgSrcList = [];
   
-  let 
-  
-  
-  let concatenatedStrings = targetWordss;
-  for (let i = 0; i < listcount.length; i++) {
-    let listItemText = listcount[i].textContent;
-    if (listItemText.includes(concatenatedStrings)) {
-      let targetpiggy = piggy + 1;
-      let piggyMath = targetpiggy;
-      piggy = piggyMath;
+  for (let i = 0; i < checkDubs.length; i++) {
+    let imgSrc = checkDubs[i].src;
+    if (!imgSrcList.includes(imgSrc)) {
+      imgSrcList.push(imgSrc);
+    } else {
+      dubList.removeChild(checkDubs[i]);
     }
   }
 }
