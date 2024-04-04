@@ -652,8 +652,6 @@ function sendImageTransfer() {
   }
 }
 
-let checkDubs = [];
-
 let addedImages = []; // Keep track of added images
 
 function getMyImageEggs() {
@@ -687,11 +685,20 @@ function getMyImageEggs() {
           buildWrapIMG.style = "width: 60px; height: 60px;";
           buildWrapIMG.addEventListener("click", myImageDownloads);
           document.getElementById(placeholder.id).appendChild(buildWrapIMG);
+          /*
           const buildImgButton = document.createElement("button");
           buildImgButton.className = "piggybuttons";
           buildImgButton.innerHTML = "Transfer";
           buildImgButton.addEventListener("click", transferMyImage);
-          document.getElementById(placeholder.id).appendChild(buildImgButton);
+          document.getElementById(placeholder.id).appendChild(buildImgButton);*/
+
+          function buildButtons() {
+            const buildImgButton = document.createElement("button");
+            buildImgButton.className = "piggybuttons";
+            buildImgButton.innerHTML = "Transfer";
+            buildImgButton.addEventListener("click", transferMyImage);
+            document.getElementById(placeholder.id).appendChild(buildImgButton);
+          }
 
           function transferMyImage() {
             let textmerge = placeholder.id;
@@ -708,6 +715,7 @@ function getMyImageEggs() {
             let textmerge = placeholder.id;
             const image = document.getElementById(textmerge);
             let imageURL = image.title;
+            buildButtons();
 
             function build(blob) {
               const link = document.createElement("a");
@@ -724,15 +732,8 @@ function getMyImageEggs() {
           }
           let yourdisplay = document.getElementById("farmerimages");
           yourdisplay.className = "game-article";
-          
-          
-          
-          
         }
       }
     }
   }
 }
-
-
-/* 
