@@ -556,16 +556,15 @@ function getMyImageEggs() {
   }
 }
 
-//transfer Image
 function transferMyImage(placeholderId) {
-  const image = document.getElementById(placeholderId);
-  let imageURL = image.src;
+  let textmerge = placeholderId.id;
+  const image = document.getElementById(textmerge);
+  let imageURL = image.title;
 
   const openForm = document.getElementById("eggimage-form");
   openForm.className = "display";
   let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = image.src;
-  alert(image.src)
+  eggformImage.value = imageURL;
 }
 
 function myImageDownloads() {
