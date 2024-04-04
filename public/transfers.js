@@ -505,6 +505,225 @@ function sendImageTransfer() {
   }
 }
 
+function wrapImage() {
+  if (userAccount.innerHTML == "Login") {
+    userAlert.innerHTML = "Login To Play";
+  } else {
+    if (POINTS.innerHTML < 1000) {
+      userAlert.innerHTML = "Not Enough Yolks";
+    } else {
+      let dreamCatcher = document.getElementsByTagName("li");
+      let dreamvalue = dreamCatcher.length - 1;
+      let dreamID = document.getElementById(dreamvalue);
+      let dreamURL = document.getElementById("image-wrapper");
+
+      // Extract the file extension from the URL
+      let url = dreamURL.value;
+      const extension = url.substring(url.lastIndexOf("."));
+      const acceptedImageExtensions = [
+        ".png ",
+        ".jpg ",
+        ".gif ",
+        ".jpeg ",
+        "webp ",
+      ];
+      if (
+        extension == ".png" ||
+        extension == ".jpg" ||
+        extension == ".gif" ||
+        extension == ".jpeg" ||
+        extension == ".jpeg" ||
+        extension == ".webp"
+      ) {
+        const appendNewDreamss = (dream) => {
+          const newListItem = document.createElement("a");
+          newListItem.innerText = dreamURL.value;
+          newListItem.title = "Dream Block";
+          newListItem.id = dreamvalue;
+          newListItem.value = dreamURL.value;
+          newListItem.className = "hide";
+          newListItem.href = dreamURL.value;
+          dreamsList.appendChild(newListItem);
+        };
+
+        const data = {
+          dream: userAccount.innerHTML + dreamURL.value,
+        };
+
+        fetch("/addDream", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log(JSON.stringify(response));
+          });
+
+        //Transfer
+        function transferImageEgg() {
+          const theWrapper = document.getElementById("image-wrapper");
+          const placeholder = document.createElement("label");
+          let wrapperString = theWrapper.value;
+          placeholder.id = dreamvalue + "?";
+          placeholder.title = wrapperString;
+          document.getElementById("myegg-images").appendChild(placeholder);
+          const buildWrapIMG = document.createElement("img");
+          buildWrapIMG.src = theWrapper.value;
+          buildWrapIMG.style = "width: 60px; height: 60px;";
+          buildWrapIMG.addEventListener("click", myImageDownloads);
+          document.getElementById(placeholder.id).appendChild(buildWrapIMG);
+          const buildImgButton = document.createElement("button");
+          buildImgButton.className = "piggybuttons";
+          buildImgButton.innerHTML = "Transfer";
+          buildImgButton.addEventListener("click", transferMyImage);
+          document.getElementById(placeholder.id).appendChild(buildImgButton);
+
+          /*
+          //transfer Image
+          function transferMyImage() {
+            let textmerge = placeholder.id;
+            const image = document.getElementById(textmerge);
+            let imageURL = image.title;
+
+            const openForm = document.getElementById("eggimage-form");
+            openForm.className = "display";
+            let eggformImage = document.getElementById("eggform-image");
+            eggformImage.value = imageURL;
+          }
+
+          // self Downloads
+          function myImageDownloads() {
+            let textmerge = placeholder.id;
+            const image = document.getElementById(textmerge);
+            let imageURL = image.title;
+
+            function build(blob) {
+              const link = document.createElement("a");
+              link.href = URL.createObjectURL(blob);
+              link.download = "image.jpg";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }
+
+            fetch(imageURL)
+              .then((response) => response.blob())
+              .then(build);
+          }
+          */
+        }
+        transferImageEgg();
+        let yourdisplay = document.getElementById("farmerimages");
+        yourdisplay.className = "game-article";
+        let createIMG = document.createElement("img");
+        createIMG.src = dreamURL.value;
+        createIMG.className = "creator-wrap";
+        document.getElementById("wraped-images").appendChild(createIMG);
+        createIMG.id = dreamvalue + "‽";
+        // Add the dream value to the list
+        userAlert.innerHTML =
+          "You Wrapped Block #" +
+          dreamCatcher.length +
+          " with: " +
+          dreamURL.value;
+        const checkPOINTS = parseFloat(POINTS.innerHTML);
+        const removePOINTS = 1000;
+        const EGGmath = Math.round(checkPOINTS - removePOINTS);
+        POINTS.innerHTML = EGGmath;
+        dreams.push(dreamURL.value);
+        appendNewDream(dreamURL.value);
+        dreamURL.value = "";
+        createDreamblock();
+      } else {
+        userAlert.innerHTML = acceptedImageExtensions + " Only";
+      }
+    }
+  }
+}
+
+// Define transferMyImage and myImageDownloads functions outside of getMyImageEggs
+function transferMyImage(placeholderId) {
+  let textmerge = placeholderId;
+  const image = document.getElementById(textmerge);
+  let imageURL = image.title;
+
+  const openForm = document.getElementById("eggimage-form");
+  openForm.className = "display";
+  let eggformImage = document.getElementById("eggform-image");
+  eggformImage.value = imageURL;
+}
+
+function myImageDownloads() {
+  let textmerge = this.parentElement.id;
+  const image = document.getElementById(textmerge);
+  let imageURL = image.title;
+
+  function build(blob) {
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "image.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  fetch(imageURL)
+    .then((response) => response.blob())
+    .then(build);
+}
+
+function downloadImg() {
+  const request = document.getElementById("img-grabber");
+
+  if (request.value == "") {
+  } else {
+    let requestIMG = request.value;
+    const image = document.getElementById(requestIMG);
+    let imageURL = image.innerHTML;
+
+    function build(blob) {
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "image.jpg";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    fetch(imageURL)
+      .then((response) => response.blob())
+      .then(build);
+
+    request.value = "";
+  }
+}
+
+function cancelImageTransfer() {
+  let closeImgForm = document.getElementById("eggimage-form");
+
+  if (closeImgForm.className == "display") {
+    closeImgForm.className = "hide";
+    let hideImages = document.getElementById("myegg-images");
+    hideImages.className = "display";
+  } else {
+    closeImgForm.className = "display";
+  }
+}
+
+function hideEggImages() {
+  let hiding = document.getElementById("myegg-images");
+
+  if (hiding.className == "") {
+    hiding.className = "hide";
+  } else {
+    hiding.className = "";
+  }
+}
+
+let hideEggImageEye = document.getElementById("eggimage-eye");
+hideEggImageEye.addEventListener("click", hideEggImages);
+
 let addedImages = [];
 
 function getMyImageEggs() {
@@ -552,82 +771,6 @@ function getMyImageEggs() {
           eggimageform.className = "game-article";
         }
       }
-    }
-  }
-}
-
-function transferMyImage(placeholderID) {
-  const placeholder = this.parentElement;
-  const imageURL = placeholder.title;
-
-  const openForm = document.getElementById("eggimage-form");
-  openForm.className = "display";
-  let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = imageURL;
-}
-
-
-/*
-
-function transferMyImage(placeholderId) {
-  const image = document.getElementById(placeholderId).querySelector("img");
-  let imageURL = image.src;
-  const openForm = document.getElementById("eggimage-form");
-  openForm.className = "display";
-  let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = imageURL;
-
-  let hideImages = document.getElementById("myegg-images");
-  hideImages.className = "hide";
-  
-  let eggImagePreview = document.getElementById("eggimageform-preview");
-  eggImagePreview.src = imageURL;
-}
-*/
-
-function myImageDownloads() {
-  let placeholderId = this.parentNode.id;
-  let placeholder = document.getElementById(placeholderId);
-  let imageURL = placeholder.getElementsByTagName("img")[0].title;
-  function build(blob) {
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "image.jpg";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-  fetch(imageURL)
-    .then((response) => response.blob())
-    .then(build);
-}
-
-function noDubs() {
-  let dubList = document.getElementById("myegg-images");
-  let checkDubs = dubList.getElementsByTagName("img");
-  let imgSrcList = [];
-
-  for (let i = 0; i < checkDubs.length; i++) {
-    let imgSrc = checkDubs[i].src;
-    if (!imgSrcList.includes(imgSrc)) {
-      imgSrcList.push(imgSrc);
-    } else {
-      checkDubs[i].className = "hide";
-    }
-  }
-  noDubButtons();
-}
-function noDubButtons() {
-  let dubList = document.getElementById("myegg-images");
-  let checkDubs = dubList.getElementsByTagName("button");
-  let imgSrcList = [];
-
-  for (let i = 0; i < checkDubs.length; i++) {
-    let imgSrc = checkDubs[i].className;
-    if (!imgSrcList.includes(imgSrc)) {
-      imgSrcList.push(imgSrc);
-    } else {
-      checkDubs[i].remove();
     }
   }
 }
