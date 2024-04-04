@@ -134,7 +134,7 @@ function wrapImage() {
         };
 
         const data = {
-          dream: dreamURL.value,
+          dream: userAccount.innerHTML + dreamURL.value,
         };
 
         fetch("/addDream", {
@@ -199,7 +199,8 @@ function wrapImage() {
           }
         }
         transferImageEgg();
-
+        let yourdisplay = document.getElementById("farmerimages");
+        yourdisplay.className = "game-article";
         let createIMG = document.createElement("img");
         createIMG.src = dreamURL.value;
         createIMG.className = "creator-wrap";
