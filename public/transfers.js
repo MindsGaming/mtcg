@@ -448,6 +448,8 @@ function getMyRefferal() {
   }
 }
 
+
+let removeimageEGG = "";
 function openRefferal() {
   const openRefferal = document.getElementById("my-refferal");
 
@@ -497,6 +499,8 @@ function sendImageTransfer() {
 }
 
 function getMyImageEggs() {
+  let numb = dreamsList.getElementsByTagName("li").length;
+
   let userAccountContent = userAccount.innerHTML;
   let listItems = document.getElementsByTagName("li");
   let targetWords = ["http", "https", "HTTP", "HTTPS"];
@@ -527,6 +531,37 @@ function getMyImageEggs() {
         buildImgButton.innerHTML = "Transfer";
         buildImgButton.addEventListener("click", transferMyImage);
         document.getElementById(placeholder.id).appendChild(buildImgButton);
+
+        function transferMyImage() {
+          let textmerge = placeholder.id;
+          const image = document.getElementById(textmerge);
+          let imageURL = image.title;
+
+          const openForm = document.getElementById("eggimage-form");
+          openForm.className = "display";
+          let eggformImage = document.getElementById("eggform-image");
+          eggformImage.value = imageURL;
+        }
+
+        // self Downloads
+        function myImageDownloads() {
+          let textmerge = placeholder.id;
+          const image = document.getElementById(textmerge);
+          let imageURL = image.title;
+
+          function build(blob) {
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "image.jpg";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }
+
+          fetch(imageURL)
+            .then((response) => response.blob())
+            .then(build);
+        }
       }
     }
   }
