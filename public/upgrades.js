@@ -96,7 +96,7 @@ function wrapImage() {
   if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
   } else {
-    if (POINTS.innerHTML < 1000) {
+    if (POINTS.innerHTML < 10) {
       userAlert.innerHTML = "Not Enough Yolks";
     } else {
       let dreamCatcher = document.getElementsByTagName("li");
@@ -188,4 +188,17 @@ function downloadImg() {
     .then(build);
 
   request.value = "";
+}
+
+function transferImageEgg() {
+  const theWrapper = document.getElementById("image-wrapper");
+  const theGrabber = document.getElementById("img-grabber");
+  const placeholder = document.createElement("label");
+  placeholder.id = theWrapper.value;
+  placeholder.title = theGrabber.value;
+  document.getElementById("myegg-images").appendChild(theWrapper);
+  const buildWrapIMG = document.createElement("img");
+  buildWrapIMG.src = theWrapper.value;
+  buildWrapIMG.style = "width: 60px; height: 60px;";
+  document.getElementById(theWrapper.value).appendChild(theWrapper);
 }
