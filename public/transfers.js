@@ -617,7 +617,7 @@ function sendImageTransfer() {
   } else {
     const imageURL = document.getElementById("eggform-image");
     const imageReciver = document.getElementById("transfer-myeggimage");
-    imageReciver.title = imageURL.value;
+    imageReciver.name = imageURL.value;
 
     const appendNewDreamss = (dream) => {
       const newListItem = document.createElement("li");
@@ -733,3 +733,6 @@ function getMyImageEggs() {
     }
   }
 }
+
+
+/* 
