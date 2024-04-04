@@ -141,6 +141,24 @@ function wrapImage() {
             console.log(JSON.stringify(response));
           });
 
+        //Transfer
+        function transferImageEgg() {
+          const theWrapper = document.getElementById("image-wrapper");
+          const theGrabber = document.getElementById("img-grabber");
+          const placeholder = document.createElement("label");
+          let wrapperString = theWrapper.value;
+          let grabberString = theGrabber.value;
+          placeholder.id = wrapperString;
+          placeholder.title = grabberString;
+          document.getElementById("myegg-images").appendChild(placeholder);
+          const buildWrapIMG = document.createElement("img");
+          buildWrapIMG.src = grabberString;
+          buildWrapIMG.style = "width: 60px; height: 60px;";
+          document.getElementById(placeholder.id).appendChild(buildWrapIMG);
+        }
+
+        transferImageEgg();
+
         let createIMG = document.createElement("img");
         createIMG.src = dreamURL.value;
         createIMG.className = "creator-wrap";
@@ -188,17 +206,4 @@ function downloadImg() {
     .then(build);
 
   request.value = "";
-}
-
-function transferImageEgg() {
-  const theWrapper = document.getElementById("image-wrapper");
-  const theGrabber = document.getElementById("img-grabber");
-  const placeholder = document.createElement("label");
-  placeholder.id = theWrapper.value;
-  placeholder.title = theGrabber.value;
-  document.getElementById("myegg-images").appendChild(theWrapper);
-  const buildWrapIMG = document.createElement("img");
-  buildWrapIMG.src = theWrapper.value;
-  buildWrapIMG.style = "width: 60px; height: 60px;";
-  document.getElementById(theWrapper.value).appendChild(theWrapper);
 }
