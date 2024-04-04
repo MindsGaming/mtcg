@@ -154,6 +154,23 @@ function wrapImage() {
           buildWrapIMG.style = "width: 60px; height: 60px;";
           buildWrapIMG.addEventListener("click", myImageDownloads);
           document.getElementById(placeholder.id).appendChild(buildWrapIMG);
+          const buildImgButton = document.createElement("button");
+          buildImgButton.className = "piggybuttons";
+          buildImgButton.innerHTML = "Transfer";
+          buildImgButton.addEventListener("click", transferMyImage);
+          
+          
+          //transfer Image
+          
+          function transferMyImage(){
+            const openForm = document.getElementById("trasferegg-images");
+            openForm.className = "display";
+            let eggformImage = document.getElementById("eggform-image");
+            let eggformImage
+            
+          }
+          
+          
 
           // self Downloads
           function myImageDownloads() {
