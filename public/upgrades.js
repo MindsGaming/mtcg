@@ -251,3 +251,13 @@ function downloadImg() {
     request.value = "";
   }
 }
+
+function cancelImageTransfer() {
+  let closeImgForm = document.getElementById("eggimage-form");
+
+  if (closeImgForm.className == "display") {
+    closeImgForm.className = "hide";
+  } else {
+    closeImgForm.className = "display";
+  }
+}
