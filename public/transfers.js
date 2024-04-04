@@ -564,6 +564,9 @@ function getMyImageEggs() {
             .then((response) => response.blob())
             .then(build);
         }
+        let yourdisplay = document.getElementById("farmerimages");
+        yourdisplay.className = "game-article";
+        alert(yourdisplay.className);
       }
     }
   }
