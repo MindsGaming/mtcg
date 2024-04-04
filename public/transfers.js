@@ -556,28 +556,19 @@ function getMyImageEggs() {
   }
 }
 
+function transferMyImage(placeholderID) {
+  const placeholder = this.parentElement;
+  const imageURL = placeholder.title;
 
-function transferMyImage(placeholderId) {
-  const placeholder = document.getElementById(placeholderId);
-  if (placeholder) {
-    const image = placeholder.querySelector("img");
-    if (image) {
-      let imageURL = image.src;
-      const openForm = document.getElementById("eggimage-form");
-      openForm.className = "display";
-      let eggformImage = document.getElementById("eggform-image");
-      eggformImage.value = imageURL;
-
-      let hideImages = document.getElementById("myegg-images");
-      hideImages.className = "hide";
-
-      let eggImagePreview = document.getElementById("eggimageform-preview");
-      eggImagePreview.src = imageURL;
-    }
-  }
+  const openForm = document.getElementById("eggimage-form");
+  openForm.className = "display";
+  let eggformImage = document.getElementById("eggform-image");
+  eggformImage.value = imageURL;
 }
 
+
 /*
+
 function transferMyImage(placeholderId) {
   const image = document.getElementById(placeholderId).querySelector("img");
   let imageURL = image.src;
@@ -593,6 +584,7 @@ function transferMyImage(placeholderId) {
   eggImagePreview.src = imageURL;
 }
 */
+
 function myImageDownloads() {
   let placeholderId = this.parentNode.id;
   let placeholder = document.getElementById(placeholderId);
