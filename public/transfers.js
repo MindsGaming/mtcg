@@ -85,8 +85,8 @@ function sendTransfer() {
   ) {
     userAlert.innerHTML = "Complete The Form";
   } else {
-    if (transferTokenAmount.value < 50) {
-      userAlert.innerHTML = "Transfer 50 or More";
+    if (transferTokenAmount.value < 5) {
+      userAlert.innerHTML = "Transfer 5 or More";
     } else {
       let tCost = parseFloat(currenteggs.innerHTML);
 

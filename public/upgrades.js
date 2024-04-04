@@ -92,7 +92,6 @@ function farmerStages() {
   }
 }
 
-
 function wrapImage() {
   if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
