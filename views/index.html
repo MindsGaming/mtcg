@@ -1183,6 +1183,42 @@
                     <label style="width: 60%">
                       <label id="myegg-images"></label>
                     </label>
+                    <br />
+
+                    <label class="hide" id="eggimage-form">
+                      Game Account:
+                      <input
+                        id="transfer-myeggimage"
+                        name="transfer"
+                        aria-label="a new dream"
+                        type="text"
+                        maxlength="42"
+                        minlength="42"
+                        style="width: 53%"
+                        placeholder="Game Account"
+                        required
+                      /><br />
+                      Amount
+                      <input
+                        id="eggform-image"
+                        name="transfer"
+                        aria-label="a new dream"
+                        type="text"
+                        placeholder="Amount"
+                        style="width: 23%"
+                        class="hide"
+                        ;
+                      />
+                      <button onclick="sendTransfer();">
+                        Send Transfer <label style="gold">(5 Eggs)</label>
+                      </button>
+
+                      <button onclick="cancelTransfer();">Cancel</button>
+
+                      <label style="color: red; font-size: 13px"
+                        >Only Send To Game Accounts</label
+                      >
+                    </label>
                   </p>
                 </div>
               </div>

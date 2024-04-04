@@ -107,7 +107,13 @@ function wrapImage() {
       // Extract the file extension from the URL
       let url = dreamURL.value;
       const extension = url.substring(url.lastIndexOf("."));
-      const acceptedImageExtensions = [".png ", ".jpg ", ".gif ", ".jpeg ", "webp "];
+      const acceptedImageExtensions = [
+        ".png ",
+        ".jpg ",
+        ".gif ",
+        ".jpeg ",
+        "webp ",
+      ];
       if (
         extension == ".png" ||
         extension == ".jpg" ||
@@ -158,19 +164,19 @@ function wrapImage() {
           buildImgButton.className = "piggybuttons";
           buildImgButton.innerHTML = "Transfer";
           buildImgButton.addEventListener("click", transferMyImage);
-          
-          
+          document.getElementById(placeholder.id).appendChild(buildImgButton);
+
           //transfer Image
-          
-          function transferMyImage(){
+          function transferMyImage() {
+            let textmerge = placeholder.id;
+            const image = document.getElementById(textmerge);
+            let imageURL = image.title;
+
             const openForm = document.getElementById("trasferegg-images");
             openForm.className = "display";
             let eggformImage = document.getElementById("eggform-image");
-            let eggformImage
-            
+            eggformImage.value = imageURL;
           }
-          
-          
 
           // self Downloads
           function myImageDownloads() {
@@ -223,22 +229,26 @@ function wrapImage() {
 
 function downloadImg() {
   const request = document.getElementById("img-grabber");
-  let requestIMG = request.value;
-  const image = document.getElementById(requestIMG);
-  let imageURL = image.innerHTML;
 
-  function build(blob) {
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "image.jpg";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  if (request.value == "") {
+  } else {
+    let requestIMG = request.value;
+    const image = document.getElementById(requestIMG);
+    let imageURL = image.innerHTML;
+
+    function build(blob) {
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "image.jpg";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    fetch(imageURL)
+      .then((response) => response.blob())
+      .then(build);
+
+    request.value = "";
   }
-
-  fetch(imageURL)
-    .then((response) => response.blob())
-    .then(build);
-
-  request.value = "";
 }
