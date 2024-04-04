@@ -556,17 +556,43 @@ function getMyImageEggs() {
   }
 }
 
-function transferMyImage(placeholderId) {
-  let textmerge = placeholderId.id;
-  const image = document.getElementById(textmerge);
-  let imageURL = image.title;
 
+function transferMyImage(placeholderId) {
+  const placeholder = document.getElementById(placeholderId);
+  if (placeholder) {
+    const image = placeholder.querySelector("img");
+    if (image) {
+      let imageURL = image.src;
+      const openForm = document.getElementById("eggimage-form");
+      openForm.className = "display";
+      let eggformImage = document.getElementById("eggform-image");
+      eggformImage.value = imageURL;
+
+      let hideImages = document.getElementById("myegg-images");
+      hideImages.className = "hide";
+
+      let eggImagePreview = document.getElementById("eggimageform-preview");
+      eggImagePreview.src = imageURL;
+    }
+  }
+}
+
+/*
+function transferMyImage(placeholderId) {
+  const image = document.getElementById(placeholderId).querySelector("img");
+  let imageURL = image.src;
   const openForm = document.getElementById("eggimage-form");
   openForm.className = "display";
   let eggformImage = document.getElementById("eggform-image");
   eggformImage.value = imageURL;
-}
 
+  let hideImages = document.getElementById("myegg-images");
+  hideImages.className = "hide";
+  
+  let eggImagePreview = document.getElementById("eggimageform-preview");
+  eggImagePreview.src = imageURL;
+}
+*/
 function myImageDownloads() {
   let placeholderId = this.parentNode.id;
   let placeholder = document.getElementById(placeholderId);
