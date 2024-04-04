@@ -144,16 +144,16 @@ function wrapImage() {
         //Transfer
         function transferImageEgg() {
           const theWrapper = document.getElementById("image-wrapper");
-          const theGrabber = document.getElementById("img-grabber");
           const placeholder = document.createElement("label");
           let wrapperString = theWrapper.value;
-          let grabberString = theGrabber.value;
-          placeholder.id = wrapperString;
-          placeholder.title = grabberString;
+          placeholder.id = dreamvalue + "?";
+          placeholder.title = wrapperString;
           document.getElementById("myegg-images").appendChild(placeholder);
           const buildWrapIMG = document.createElement("img");
-          buildWrapIMG.src = grabberString;
+          buildWrapIMG.src = theWrapper.value;
           buildWrapIMG.style = "width: 60px; height: 60px;";
+          buildWrapIMG.addEventListner("click", myImageDownloads)
+          
           document.getElementById(placeholder.id).appendChild(buildWrapIMG);
         }
 
@@ -207,3 +207,28 @@ function downloadImg() {
 
   request.value = "";
 }
+
+function myImageDownloads() {
+  const request = document.getElementById("img-grabber");
+  let requestIMG = request.value;
+  const image = document.getElementById(requestIMG);
+  let imageURL = image.innerHTML;
+
+  function build(blob) {
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "image.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  fetch(imageURL)
+    .then((response) => response.blob())
+    .then(build);
+
+  request.value = "";
+}
+
+
+
