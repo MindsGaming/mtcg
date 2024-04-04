@@ -76,6 +76,7 @@ dreamsForm.onsubmit = (event) => {
   dreamInput.value = "";
   dreamInput.focus();
   loginform.className = "hide";
+  PlayChicken();
   chekIncomingTransfers();
 };
 
