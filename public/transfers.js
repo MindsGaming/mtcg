@@ -554,16 +554,20 @@ function getMyImageEggs() {
       }
     }
   }
+  noDubs();
 }
-
-function transferMyImage(placeholderId) {
-  let placeholder = document.getElementById(placeholderId);
-  let imageURL = placeholder.getElementsByTagName("img")[0].title;
+//transfer Image
+function transferMyImage(placeholder) {
+  let textmerge = placeholder.id;
+  const image = document.getElementById(textmerge);
+  let imageURL = placeholder.src;
   const openForm = document.getElementById("eggimage-form");
   openForm.className = "display";
   let eggformImage = document.getElementById("eggform-image");
   eggformImage.value = imageURL;
-  cancelImageTransfer();
+
+  let hideImages = document.getElementById("myegg-images");
+  hideImages.className = "hide";
 }
 
 function myImageDownloads() {
@@ -589,13 +593,14 @@ function noDubs() {
   let imgSrcList = [];
 
   for (let i = 0; i < checkDubs.length; i++) {
-    let imgSrc = checkDubs[i].id;
+    let imgSrc = checkDubs[i].src;
     if (!imgSrcList.includes(imgSrc)) {
       imgSrcList.push(imgSrc);
     } else {
-      checkDubs[i].remove();
+      checkDubs[i].className = "hide";
     }
   }
+  noDubButtons();
 }
 function noDubButtons() {
   let dubList = document.getElementById("myegg-images");

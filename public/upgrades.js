@@ -258,6 +258,8 @@ function cancelImageTransfer() {
 
   if (closeImgForm.className == "display") {
     closeImgForm.className = "hide";
+    let hideImages = document.getElementById("myegg-images");
+    hideImages.className = "display";
   } else {
     closeImgForm.className = "display";
   }
