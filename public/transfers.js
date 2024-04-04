@@ -403,3 +403,56 @@ function getMyEggs() {
     }
   }
 }
+
+function getMyRefferal() {
+  let refferal = document.getElementById("my-refferal");
+
+  if (refferal.value == "") {
+  } else {
+    if (refferal.value == userAccount.innerHTML) {
+      userAlert.innerHTML = "You Can't Refer Yourself :(";
+    } else {
+      let targetWordss = refferal.value;
+      let playerEGGS = document.getElementById("player-eggs");
+      let piggy = 0;
+      let mylist = document.getElementById("ul");
+      let listcount = document.getElementsByTagName("li");
+
+      let concatenatedStrings = targetWordss;
+      for (let i = 0; i < listcount.length; i++) {
+        let listItemText = listcount[i].textContent;
+        if (listItemText.includes(concatenatedStrings)) {
+          let targetpiggy = piggy + 1;
+          let piggyMath = targetpiggy;
+          piggy = piggyMath;
+        }
+      }
+
+      let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+      yourHatchedEggs.style = "color: gold; font-size: 15px;";
+      let refferalPhase = parseFloat(playerEGGS.innerHTML);
+      let rMath = refferalPhase + piggy;
+      playerEGGS.innerHTML = rMath;
+      yourHatchedEggs.innerHTML =
+        "Your Magic Chicken Started You With: " + "25" + " Eggs" + "<br>";
+      let gotitText = document.getElementById("gotit-text");
+      gotitText.innerHTML =
+        "Your Refferal Gave You: " +
+        piggy +
+        " Eggs" +
+        "<br> You Start With: " +
+        rMath +
+        " Eggs <br>";
+    }
+  }
+}
+
+function openRefferal() {
+  const openRefferal = document.getElementById("my-refferal");
+
+  if (openRefferal.className == "hide") {
+    openRefferal.className = "display";
+  } else {
+    openRefferal.className = "hide";
+  }
+}

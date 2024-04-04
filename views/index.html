@@ -904,8 +904,33 @@
                     placeholder="Deposit Address"
                     required
                   />
-                  <button type="submit" id="submit-dream">Game On!</button
-                  ><br /><br />
+                  <input
+                    id="my-refferal"
+                    aria-label="a new dream"
+                    type="text"
+                    maxlength="42"
+                    minlength="42"
+                    placeholder="Refferal Address"
+                    style="margin: 2px; width: 60%"
+                    class="hide"
+                  />
+                  <button type="submit" id="submit-dream">Game On!</button>
+                  <label
+                    id="openReffeal"
+                    onclick="openRefferal();"
+                    style="
+                      float: right;
+                      color: gold;
+                      margin-right: 5px;
+                      margin-top: -25px;
+                      font-size: 9px;
+                      font-weight: bolder;
+                      cursor: pointer;
+                    "
+                    >Refferal?</label
+                  >
+
+                  <br /><br />
                   <button
                     type="button"
                     class="gamebuttons"
