@@ -461,7 +461,7 @@ function openRefferal() {
 
 function sendImageTransfer() {
   const imageURL = document.getElementById("eggform-image");
-  const imageReciver = document.getElementById("transfermyegg-image");
+  const imageReciver = document.getElementById("transfer-myeggimage");
 
   const appendNewDreamss = (dream) => {
     const newListItem = document.createElement("li");
@@ -491,4 +491,29 @@ function sendImageTransfer() {
   // Add the dream value to the list
   dreams.push("Transfer:" + imageReciver.value + imageURL.value);
   appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
+  imageURL.value = "";
+  imageReciver.value = "";
+}
+
+function getMyImageEggs() {
+  let userAccountContent = userAccount.innerHTML;
+  let mylist = document.getElementById("ul");
+  let listcount = document.getElementsByTagName("li");
+  let targetWords = ["http", "https", "HTTP", "HTTPS"];
+
+  let concatenatedStrings = targetWords;
+  for (let j = 0; j < targetWords.length; j++) {
+    let concatenatedString = userAccountContent + targetWords[j];
+    for (let i = 0; i < listcount.length; i++) {
+      let listItemText = listcount[i].textContent;
+      if (listItemText.includes(concatenatedString)) {
+        
+        
+        
+        
+        
+        
+      }
+    }
+  }
 }
