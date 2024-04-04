@@ -502,9 +502,6 @@ function sendImageTransfer() {
     appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
     imageURL.value = "";
     imageReciver.value = "";
-
-    let eggimageform = document.getElementById("eggimage-form");
-    eggimageform.className = "game-article";
   }
 }
 
@@ -550,8 +547,8 @@ function getMyImageEggs() {
           });
           placeholder.appendChild(buildImgButton);
 
-          let yourdisplay = document.getElementById("farmerimages");
-          yourdisplay.className = "game-article";
+          let eggimageform = document.getElementById("farmerimages");
+          eggimageform.className = "game-article";
         }
       }
     }
@@ -560,11 +557,15 @@ function getMyImageEggs() {
 
 function transferMyImage(placeholderId) {
   let placeholder = document.getElementById(placeholderId);
-  let imageURL = placeholder.getElementsByTagName("img")[0].title;
-  const openForm = document.getElementById("eggimage-form");
-  openForm.className = "display";
-  let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = imageURL;
+
+ 
+    let imageURL = placeholder.getElementsByTagName("img")[0].title;
+    const openForm = document.getElementById("eggimage-form");
+    openForm.className = "display";
+    let eggformImage = document.getElementById("eggform-image");
+    eggformImage.value = imageURL;
+    cancelImageTransfer();
+  
 }
 
 function myImageDownloads() {
@@ -583,5 +584,3 @@ function myImageDownloads() {
     .then((response) => response.blob())
     .then(build);
 }
-
-
