@@ -695,7 +695,6 @@ let addedImages = [];
 
 function getMyImageEggs() {
   let userAccount = document.getElementById("user-account");
-  let numb = dreamsList.getElementsByTagName("li").length;
   let userAccountContent = userAccount.innerHTML;
   let listItems = document.getElementsByTagName("li");
   let targetWords = ["http", "https", "HTTP", "HTTPS"];
@@ -711,9 +710,9 @@ function getMyImageEggs() {
         );
 
         if (!addedImages.includes(extractedWord)) {
-          addedImages.push(numb + "?");
+          addedImages.push(extractedWord);
 
-          let placeholderId = numb + "?";
+          let placeholderId = "placeholder-" + i;
           let placeholder = document.createElement("div");
           placeholder.id = placeholderId;
           document.getElementById("myegg-images").appendChild(placeholder);
@@ -722,15 +721,17 @@ function getMyImageEggs() {
           buildWrapIMG.src = extractedWord;
           buildWrapIMG.style.width = "60px";
           buildWrapIMG.style.height = "60px";
-          buildWrapIMG.id = placeholderId;
-          buildWrapIMG.addEventListener("click", myImageDownloads);
+          buildWrapIMG.id = "image-" + i;
+          buildWrapIMG.addEventListener("click", function () {
+            myImageDownloads(extractedWord);
+          });
           placeholder.appendChild(buildWrapIMG);
 
           const buildImgButton = document.createElement("button");
           buildImgButton.className = "piggybuttons";
           buildImgButton.innerHTML = "Transfer";
           buildImgButton.addEventListener("click", function () {
-            transferMyImage(placeholderId);
+            transferMyImage(extractedWord);
           });
           placeholder.appendChild(buildImgButton);
 
@@ -742,23 +743,20 @@ function getMyImageEggs() {
   }
 }
 
-//Define transferMyImage and myImageDownloads functions outside of getMyImageEggs
-function transferMyImage(placeholderId) {
-  let textmerge = placeholderId;
-  const image = document.getElementById(textmerge);
-  let imageURL = image.title;
-
+function transferMyImage(imageSrc) {
   const openForm = document.getElementById("eggimage-form");
   openForm.className = "display";
   let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = imageURL;
+  eggformImage.value = imageSrc;
+  
+  let hideImages = document.getElementById("myegg-images");
+  hideImages.className = "hide";
+  
+  let previewIMG = document.getElementById("")
+  
 }
 
-function myImageDownloads() {
-  let textmerge = this.parentElement.id;
-  const image = document.getElementById(textmerge);
-  let imageURL = image.title;
-
+function myImageDownloads(imageSrc) {
   function build(blob) {
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
@@ -768,7 +766,7 @@ function myImageDownloads() {
     document.body.removeChild(link);
   }
 
-  fetch(imageURL)
+  fetch(imageSrc)
     .then((response) => response.blob())
     .then(build);
 }
