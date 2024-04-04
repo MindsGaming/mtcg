@@ -215,11 +215,10 @@ function wrapImage() {
         const removePOINTS = 1000;
         const EGGmath = Math.round(checkPOINTS - removePOINTS);
         POINTS.innerHTML = EGGmath;
-
         dreams.push(dreamURL.value);
         appendNewDream(dreamURL.value);
         dreamURL.value = "";
-        layEGGS();
+        createDreamblock();
       } else {
         userAlert.innerHTML = acceptedImageExtensions + " Only";
       }

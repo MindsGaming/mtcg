@@ -448,8 +448,6 @@ function getMyRefferal() {
   }
 }
 
-
-let removeimageEGG = "";
 function openRefferal() {
   const openRefferal = document.getElementById("my-refferal");
 
@@ -514,8 +512,6 @@ function getMyImageEggs() {
         let extractedWord = listItemText.substring(
           startIndex + userAccountContent.length
         );
-        alert(extractedWord);
-
         const placeholder = document.createElement("label");
         let wrapperString = extractedWord;
         placeholder.id = numb + "?";
