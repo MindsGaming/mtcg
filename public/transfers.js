@@ -303,7 +303,7 @@ function chekIncomingTransfers() {
       let listItemText = listcount[i].textContent;
       if (listItemText.includes(concatenatedString)) {
         let newAlert = listItemText.replace(
-          "Transfer:" + userAccount.innerHTML + targetWords[j],
+          userAccount.innerHTML + targetWords[j],
           ""
         );
         let tack = parseFloat(newAlert);
