@@ -502,6 +502,8 @@ function sendImageTransfer() {
     appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
     imageURL.value = "";
     imageReciver.value = "";
+    cancelImageTransfer();
+    createDreamblock();
   }
 }
 
@@ -748,12 +750,13 @@ function transferMyImage(imageSrc) {
   openForm.className = "display";
   let eggformImage = document.getElementById("eggform-image");
   eggformImage.value = imageSrc;
-  
+
   let hideImages = document.getElementById("myegg-images");
   hideImages.className = "hide";
-  
-  let previewIMG = document.getElementById("")
-  
+
+  let previewIMG = document.getElementById("eggimageform-preview");
+  previewIMG.src = imageSrc;
+  previewIMG.style = "width: 32px; height: 32px; border-raduis: 50%;";
 }
 
 function myImageDownloads(imageSrc) {
