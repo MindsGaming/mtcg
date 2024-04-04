@@ -402,6 +402,7 @@ function getMyEggs() {
       }
     }
   }
+  getMyImageEggs();
 }
 
 function getMyRefferal() {
@@ -505,12 +506,27 @@ function getMyImageEggs() {
     for (let i = 0; i < listItems.length; i++) {
       let listItemText = listItems[i].textContent;
       if (listItemText.includes(userAccountContent + keyword)) {
-        let wordIndex = listItemText.indexOf(keyword);
+        let startIndex = listItemText.indexOf(userAccountContent + keyword);
         let extractedWord = listItemText.substring(
-          wordIndex,
-          wordIndex + keyword.length
+          startIndex + userAccountContent.length
         );
         alert(extractedWord);
+
+        const placeholder = document.createElement("label");
+        let wrapperString = extractedWord;
+        placeholder.id = numb + "?";
+        placeholder.title = wrapperString;
+        document.getElementById("myegg-images").appendChild(placeholder);
+        const buildWrapIMG = document.createElement("img");
+        buildWrapIMG.src = extractedWord;
+        buildWrapIMG.style = "width: 60px; height: 60px;";
+        buildWrapIMG.addEventListener("click", myImageDownloads);
+        document.getElementById(placeholder.id).appendChild(buildWrapIMG);
+        const buildImgButton = document.createElement("button");
+        buildImgButton.className = "piggybuttons";
+        buildImgButton.innerHTML = "Transfer";
+        buildImgButton.addEventListener("click", transferMyImage);
+        document.getElementById(placeholder.id).appendChild(buildImgButton);
       }
     }
   }
