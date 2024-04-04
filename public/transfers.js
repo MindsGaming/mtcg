@@ -503,9 +503,161 @@ function sendImageTransfer() {
   }
 }
 
+function getMyEggs() {
+  let targetWordss = userAccount.innerHTML;
+  const newCurrent = document.getElementById("current-eggs");
+  newCurrent.id = "player-eggs";
+  let playerEGGS = document.getElementById("player-eggs");
+  let piggy = 0;
+  let mylist = document.getElementById("ul");
+  let listcount = document.getElementsByTagName("li");
+
+  let concatenatedStrings = targetWordss;
+  for (let i = 0; i < listcount.length; i++) {
+    let listItemText = listcount[i].textContent;
+    if (listItemText.includes(concatenatedStrings)) {
+      let targetpiggy = piggy + 1;
+      let piggyMath = targetpiggy;
+      piggy = piggyMath;
+    }
+  }
+  if (piggy > 25 || piggy == 25) {
+    let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+    yourHatchedEggs.style = "color: gold; font-size: 15px;";
+    playerEGGS.innerHTML = piggy;
+    yourHatchedEggs.innerHTML =
+      "Your Magic Chicken Started You With: " + piggy + " Eggs" + "<br>";
+    let gotitText = document.getElementById("gotit-text");
+    gotitText.innerHTML = "We Found Your Account! <br>";
+    gotIt();
+  } else {
+    if (piggy < 25) {
+      if (piggy == 0) {
+      } else {
+        playerEGGS.innerHTML = "25";
+        let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+        yourHatchedEggs.style = "color: gold; font-size: 15px;";
+        yourHatchedEggs.innerHTML =
+          "Your Magic Chicken Found: " + "25" + " Eggs" + "<br>";
+      }
+    } else {
+      if (piggy == 0) {
+        playerEGGS.innerHTML = "25";
+        let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+        yourHatchedEggs.style = "color: gold; font-size: 15px;";
+        yourHatchedEggs.innerHTML =
+          "You Start The Game With: " + "25" + " Eggs" + "<br>";
+      }
+    }
+  }
+  getMyRefferal();
+}
+
+function getMyRefferal() {
+  let refferal = document.getElementById("my-refferal");
+
+  if (refferal.value == "") {
+  } else {
+    if (refferal.value == userAccount.innerHTML) {
+      userAlert.innerHTML = "You Can't Refer Yourself :(";
+    } else {
+      let targetWordss = refferal.value;
+      let playerEGGS = document.getElementById("player-eggs");
+      let piggy = 0;
+      let mylist = document.getElementById("ul");
+      let listcount = document.getElementsByTagName("li");
+
+      let concatenatedStrings = targetWordss;
+      for (let i = 0; i < listcount.length; i++) {
+        let listItemText = listcount[i].textContent;
+        if (listItemText.includes(concatenatedStrings)) {
+          let targetpiggy = piggy + 1;
+          let piggyMath = targetpiggy;
+          piggy = piggyMath;
+        }
+      }
+
+      let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+      yourHatchedEggs.style = "color: gold; font-size: 15px;";
+      let refferalPhase = parseFloat(playerEGGS.innerHTML);
+      let rMath = refferalPhase + piggy;
+      playerEGGS.innerHTML = rMath;
+      yourHatchedEggs.innerHTML =
+        "Your Magic Chicken Started You With: " + "25" + " Eggs" + "<br>";
+      let gotitText = document.getElementById("gotit-text");
+      gotitText.innerHTML =
+        "Your Refferal Gave You: " +
+        piggy +
+        " Eggs" +
+        "<br> You Start With: " +
+        rMath +
+        " Eggs <br>";
+    }
+  }
+  getMyImageEggs();
+}
+
+function openRefferal() {
+  const openRefferal = document.getElementById("my-refferal");
+
+  if (openRefferal.className == "hide") {
+    openRefferal.className = "display";
+  } else {
+    openRefferal.className = "hide";
+  }
+}
+
+////Image Transfers
+
+function sendImageTransfer() {
+  let tCost = parseFloat(currenteggs.innerHTML);
+
+  if (tCost < 5) {
+    userAlert.innerHTML = "5 Eggs Reqired";
+  } else {
+    const imageURL = document.getElementById("eggform-image");
+    const imageReciver = document.getElementById("transfer-myeggimage");
+    imageReciver.title = imageURL.value;
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: imageReciver.value + imageURL.value,
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push(imageReciver.value + imageURL.value);
+    appendNewDream(imageReciver.value + imageURL.value);
+    imageURL.value = "";
+    imageReciver.value = "";
+  }
+}
+
+let checkDubs = [];
+
+let addedImages = []; // Keep track of added images
+
 function getMyImageEggs() {
   let numb = dreamsList.getElementsByTagName("li").length;
-
   let userAccountContent = userAccount.innerHTML;
   let listItems = document.getElementsByTagName("li");
   let targetWords = ["http", "https", "HTTP", "HTTPS"];
@@ -519,12 +671,15 @@ function getMyImageEggs() {
         let extractedWord = listItemText.substring(
           startIndex + userAccountContent.length
         );
-        const placeholder = document.createElement("label");
-        let wrapperString = extractedWord;
-        placeholder.id = numb + "?";
 
-        let noDubs = document.getElementById(placeholder.id);
-        if (!noDubs) {
+        if (!addedImages.includes(extractedWord)) {
+          // Check if the image has not been added
+          addedImages.push(extractedWord); // Add the image to the list of added images
+
+          let placeholder = document.createElement("label");
+          let wrapperString = extractedWord;
+          placeholder.id = numb + "?";
+          checkDubs = placeholder.id;
           placeholder.title = wrapperString;
           document.getElementById("myegg-images").appendChild(placeholder);
           const buildWrapIMG = document.createElement("img");
@@ -542,7 +697,6 @@ function getMyImageEggs() {
             let textmerge = placeholder.id;
             const image = document.getElementById(textmerge);
             let imageURL = image.title;
-
             const openForm = document.getElementById("eggimage-form");
             openForm.className = "display";
             let eggformImage = document.getElementById("eggform-image");
@@ -568,11 +722,13 @@ function getMyImageEggs() {
               .then((response) => response.blob())
               .then(build);
           }
-        } else {
+          let yourdisplay = document.getElementById("farmerimages");
+          yourdisplay.className = "game-article";
+          
+          
+          
+          
         }
-
-        let yourdisplay = document.getElementById("farmerimages");
-        yourdisplay.className = "game-article";
       }
     }
   }
