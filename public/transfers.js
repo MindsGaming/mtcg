@@ -554,20 +554,20 @@ function getMyImageEggs() {
       }
     }
   }
-  noDubs();
 }
 //transfer Image
-function transferMyImage(placeholder) {
-  let textmerge = placeholder.id;
-  const image = document.getElementById(textmerge);
-  let imageURL = placeholder.src;
+function transferMyImage(placeholderId) {
+  const placeholder = document.getElementById(placeholderId);
+  const imageURL = placeholder.querySelector('img').src;
   const openForm = document.getElementById("eggimage-form");
-  openForm.className = "display";
-  let eggformImage = document.getElementById("eggform-image");
+  openForm.classList = "display";
+  const eggformImage = document.getElementById("eggform-image");
   eggformImage.value = imageURL;
-
-  let hideImages = document.getElementById("myegg-images");
-  hideImages.className = "hide";
+  const hideImages = document.getElementById("myegg-images");
+  hideImages.classList.add("hide");
+  const preview = document.getElementById("eggimageform-preview");
+  preview.src = imageURL;
+  preview.style =" float: right: width: 40px; height: 40px; border-radius: 50%;"
 }
 
 function myImageDownloads() {
