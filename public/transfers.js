@@ -445,6 +445,7 @@ function getMyRefferal() {
         " Eggs <br>";
     }
   }
+  getMyImageEggs();
 }
 
 function openRefferal() {
@@ -502,33 +503,18 @@ function getMyImageEggs() {
 
   for (let j = 0; j < targetWords.length; j++) {
     let keyword = targetWords[j];
-    let concatenatedString = userAccountContent + keyword;
     for (let i = 0; i < listItems.length; i++) {
       let listItemText = listItems[i].textContent;
-      if (listItemText.includes(concatenatedString)) {
-        // Trigger another function or perform additional actions
-        transferMyImage();
-        
-        
-         function transferMyImage() {
-            let textmerge = /// HTTPS://.... WORD FOUND ;
-            const image = document.getElementById(textmerge);
-            let imageURL = image.title;
-
-            const openForm = document.getElementById("eggimage-form");
-            openForm.className = "display";
-            let eggformImage = document.getElementById("eggform-image");
-            eggformImage.value = imageURL;
-          }
-  
-        
-        
-        
+      if (listItemText.includes(userAccountContent + keyword)) {
+        let wordIndex = listItemText.indexOf(keyword);
+        let extractedWord = listItemText.substring(
+          wordIndex,
+          wordIndex + keyword.length
+        );
+        function transferMyImage() {
+          alert(extractedWord);
+        }
       }
     }
   }
 }
-
-      
-          //transfer Image
-         
