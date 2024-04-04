@@ -454,6 +454,8 @@ function openRefferal() {
 
   if (openRefferal.className == "hide") {
     openRefferal.className = "display";
+    let eggimageform = document.getElementById("eggimage-form");
+    eggimageform.className = "game-article";
   } else {
     openRefferal.className = "hide";
   }
@@ -500,6 +502,9 @@ function sendImageTransfer() {
     appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
     imageURL.value = "";
     imageReciver.value = "";
+
+    let eggimageform = document.getElementById("eggimage-form");
+    eggimageform.className = "game-article";
   }
 }
 
@@ -578,3 +583,5 @@ function myImageDownloads() {
     .then((response) => response.blob())
     .then(build);
 }
+
+
