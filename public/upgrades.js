@@ -152,11 +152,33 @@ function wrapImage() {
           const buildWrapIMG = document.createElement("img");
           buildWrapIMG.src = theWrapper.value;
           buildWrapIMG.style = "width: 60px; height: 60px;";
-          buildWrapIMG.addEventListner("click", myImageDownloads)
-          
+          buildWrapIMG.addEventListener("click", myImageDownloads);
           document.getElementById(placeholder.id).appendChild(buildWrapIMG);
-        }
 
+          // self Downloads
+          function myImageDownloads() {
+            let textmerge = placeholder.id;
+            let swoshID = textmerge.replace("?", "");
+          
+            
+            let imageURL = ;
+
+            function build(blob) {
+              const link = document.createElement("a");
+              link.href = URL.createObjectURL(blob);
+              link.download = "image.jpg";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }
+
+            fetch(imageURL)
+              .then((response) => response.blob())
+              .then(build);
+
+            request.value = "";
+          }
+        }
         transferImageEgg();
 
         let createIMG = document.createElement("img");
@@ -207,28 +229,3 @@ function downloadImg() {
 
   request.value = "";
 }
-
-function myImageDownloads() {
-  const request = document.getElementById("img-grabber");
-  let requestIMG = request.value;
-  const image = document.getElementById(requestIMG);
-  let imageURL = image.innerHTML;
-
-  function build(blob) {
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "image.jpg";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-
-  fetch(imageURL)
-    .then((response) => response.blob())
-    .then(build);
-
-  request.value = "";
-}
-
-
-
