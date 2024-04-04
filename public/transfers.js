@@ -567,7 +567,7 @@ function transferMyImage(placeholderId) {
   eggformImage.value = imageURL;
 
   let previewImg = document.getElementById("eggimage-preview");
-  previewImg.src = eggformImage.value;
+  previewImg.src = placeholder.getElementsByTagName("img")[0].src;
 
   let closeImgTransfer = document.getElementById("myegg-images");
   closeImgTransfer.className = "hide";
