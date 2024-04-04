@@ -446,6 +446,7 @@ function getMyRefferal() {
         " Eggs <br>";
     }
   }
+  getMyImageEggs();
 }
 
 function openRefferal() {
@@ -502,4 +503,78 @@ function sendImageTransfer() {
   }
 }
 
+let addedImages = [];
 
+function getMyImageEggs() {
+  let userAccount = document.getElementById("user-account");
+  let numb = dreamsList.getElementsByTagName("li").length;
+  let userAccountContent = userAccount.innerHTML;
+  let listItems = document.getElementsByTagName("li");
+  let targetWords = ["http", "https", "HTTP", "HTTPS"];
+
+  for (let j = 0; j < targetWords.length; j++) {
+    let keyword = targetWords[j];
+    for (let i = 0; i < listItems.length; i++) {
+      let listItemText = listItems[i].textContent;
+      if (listItemText.includes(userAccountContent + keyword)) {
+        let startIndex = listItemText.indexOf(userAccountContent + keyword);
+        let extractedWord = listItemText.substring(
+          startIndex + userAccountContent.length
+        );
+
+        if (!addedImages.includes(extractedWord)) {
+          addedImages.push(numb + "?");
+
+          let placeholderId = numb + "?";
+          let placeholder = document.createElement("div");
+          placeholder.id = placeholderId;
+          document.getElementById("myegg-images").appendChild(placeholder);
+
+          const buildWrapIMG = document.createElement("img");
+          buildWrapIMG.src = extractedWord;
+          buildWrapIMG.style.width = "60px";
+          buildWrapIMG.style.height = "60px";
+          buildWrapIMG.addEventListener("click", myImageDownloads);
+          placeholder.appendChild(buildWrapIMG);
+
+          const buildImgButton = document.createElement("button");
+          buildImgButton.className = "piggybuttons";
+          buildImgButton.innerHTML = "Transfer";
+          buildImgButton.addEventListener("click", function () {
+            transferMyImage(placeholderId);
+          });
+          placeholder.appendChild(buildImgButton);
+
+          let yourdisplay = document.getElementById("farmerimages");
+          yourdisplay.className = "game-article";
+        }
+      }
+    }
+  }
+}
+
+function transferMyImage(placeholderId) {
+  let placeholder = document.getElementById(placeholderId);
+  let imageURL = placeholder.getElementsByTagName("img")[0].title;
+  const openForm = document.getElementById("eggimage-form");
+  openForm.className = "display";
+  let eggformImage = document.getElementById("eggform-image");
+  eggformImage.value = imageURL;
+}
+
+function myImageDownloads() {
+  let placeholderId = this.parentNode.id;
+  let placeholder = document.getElementById(placeholderId);
+  let imageURL = placeholder.getElementsByTagName("img")[0].title;
+  function build(blob) {
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "image.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+  fetch(imageURL)
+    .then((response) => response.blob())
+    .then(build);
+}

@@ -262,3 +262,6 @@ function cancelImageTransfer() {
     closeImgForm.className = "display";
   }
 }
+
+
+
