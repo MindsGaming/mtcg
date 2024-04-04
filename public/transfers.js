@@ -521,7 +521,10 @@ function getMyImageEggs() {
         );
         const placeholder = document.createElement("label");
         let wrapperString = extractedWord;
-        placeholder.id = numb + "?";
+         placeholder.id = numb + "?";
+        
+        let chec
+        
         placeholder.title = wrapperString;
         document.getElementById("myegg-images").appendChild(placeholder);
         const buildWrapIMG = document.createElement("img");
@@ -565,6 +568,9 @@ function getMyImageEggs() {
             .then((response) => response.blob())
             .then(build);
         }
+        
+        
+        
         let yourdisplay = document.getElementById("farmerimages");
         yourdisplay.className = "game-article";
       }
