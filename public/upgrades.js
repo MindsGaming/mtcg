@@ -260,8 +260,7 @@ function cancelImageTransfer() {
     closeImgForm.className = "hide";
   } else {
     closeImgForm.className = "display";
+    let closeImgTransfer = document.getElementById("myegg-images");
+    closeImgTransfer.className = "";
   }
 }
-
-
-

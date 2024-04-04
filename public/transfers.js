@@ -482,7 +482,11 @@ function sendImageTransfer() {
     };
 
     const data = {
-      dream: "Transfer:" + imageReciver.value + imageURL.value,
+      dream:
+        "Transfer:" +
+        userAccount.innerHTML +
+        imageReciver.value +
+        imageURL.value,
     };
 
     fetch("/addDream", {
@@ -500,6 +504,7 @@ function sendImageTransfer() {
     appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
     imageURL.value = "";
     imageReciver.value = "";
+    cancelImageTransfer();
   }
 }
 
@@ -560,6 +565,12 @@ function transferMyImage(placeholderId) {
   openForm.className = "display";
   let eggformImage = document.getElementById("eggform-image");
   eggformImage.value = imageURL;
+
+  let previewImg = document.getElementById("eggimage-preview");
+  previewImg.src = eggformImage.value;
+
+  let closeImgTransfer = document.getElementById("myegg-images");
+  closeImgTransfer.className = "hide";
 }
 
 function myImageDownloads() {
