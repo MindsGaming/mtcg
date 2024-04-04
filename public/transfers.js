@@ -554,6 +554,7 @@ function getMyImageEggs() {
       }
     }
   }
+  noDubs();
 }
 
 function transferMyImage(placeholderId) {
@@ -583,23 +584,32 @@ function myImageDownloads() {
     .then(build);
 }
 
-function removeDuplicateImagesAndButtons() {
+function noDubs() {
   let dubList = document.getElementById("myegg-images");
   let checkDubs = dubList.getElementsByTagName("img");
-  let imgSrcList = {};
+  let imgSrcList = [];
 
   for (let i = 0; i < checkDubs.length; i++) {
-    let imgSrc = checkDubs[i].src;
-    if (!imgSrcList[imgSrc]) {
-      imgSrcList[imgSrc] = true;
+    let imgSrc = checkDubs[i].id;
+    if (!imgSrcList.includes(imgSrc)) {
+      imgSrcList.push(imgSrc);
     } else {
-      checkDubs[i].remove(); // Remove duplicate image
-      let correspondingButtons = document.querySelectorAll(
-        `button[data-image="${imgSrc}"]`
-      );
-      correspondingButtons.forEach((button) => {
-        button.remove(); // Remove corresponding buttons
-      });
+      checkDubs[i].remove();
+    }
+  }
+  noDubButtons();
+}
+function noDubButtons() {
+  let dubList = document.getElementById("myegg-images");
+  let checkDubs = dubList.getElementsByTagName("button");
+  let imgSrcList = [];
+
+  for (let i = 0; i < checkDubs.length; i++) {
+    let imgSrc = checkDubs[i].className;
+    if (!imgSrcList.includes(imgSrc)) {
+      imgSrcList.push(imgSrc);
+    } else {
+      checkDubs[i].remove();
     }
   }
 }
