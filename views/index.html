@@ -1188,24 +1188,13 @@
                     class="creator-badge"
                     src="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fthumbnails%2Fpixel.png"
                   />
-                  <img
-                    id="eggimage-eye"
-                    style="
-                      float: left;
-                      width: 32px;
-                      height: 32px;
-                      margin: 3px;
-                      padding: 1px;
-                    "
-                    src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
-                  />
+
                   <h2>Wrapped Eggs!</h2>
 
                   <p class="article-text">
                     You have Image Eggs!
                     <br />
                     Just click on them to download! <br />
-                    Or send them to your in game friends!
                     <br />
                     <br />
                     <label style="width: 60%">
@@ -1214,18 +1203,6 @@
                     <br />
 
                     <label class="hide" id="eggimage-form">
-                      <img
-                        id="eggimageform-preview"
-                        style="
-                          float: left;
-                          width: 32px;
-                          height: 32px;
-                          margin: 3px;
-                          padding: 1px;
-                        "
-                        src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
-                      />
-                      <br>
                       Game Account:
                       <input
                         id="transfer-myeggimage"
@@ -1485,49 +1462,6 @@
                   </button>
                   <br />
                 </div>
-
-                <div class="game-article">
-                  <h2>Image Wrapper</h2>
-                  <p class="article-text">
-                    Wrap Your Image Inside An Egg
-                    <br />
-                    Once you wrap an image, you can download it from your farm.
-                    <br />
-                    <label
-                      >Wrap Image URL
-                      <input
-                        class="hatchalert"
-                        id="image-wrapper"
-                        type="url"
-                        placeholder="Image URL"
-                    /></label>
-                    <label>Download Image Block</label>
-                    <input
-                      class="hide"
-                      id="img-grabber"
-                      type="number"
-                      placeholder="Download #"
-                      style="width: 20%"
-                    />
-                  </p>
-                  <button
-                    class="gamebuttons"
-                    onclick="wrapImage();"
-                    id="imgwrapperBTN"
-                  >
-                    Wrap (1000 Yolks)
-                  </button>
-
-                  <button
-                    class="hide"
-                    onclick="downloadImg();"
-                    id="imggrabberBTN"
-                  >
-                    Download (Free)
-                  </button>
-                  <br />
-                </div>
-
                 <div class="game-article">
                   <h2>Egg Maker</h2>
                   <p class="article-text">
@@ -1559,7 +1493,7 @@
                 <div class="game-article">
                   <h2>Recovery Hack</h2>
                   <p class="article-text">
-                    Save or recover Yolks! <br />
+                    Save or recover yolks! <br />
                     To save just insert the required yolks! <br />
                     Your revoery ID will display!<br />
                     To recover an old account enter your recovery ID before
@@ -1584,6 +1518,49 @@
                     id="recoveryBTN"
                   >
                     Insert Yolks (1000)
+                  </button>
+                  <br />
+                </div>
+
+                <div class="game-article">
+                  <h2>Image Wrapper</h2>
+                  <p class="article-text">
+                    Wrap And Retrive Images Inside An Egg
+                    <br />
+                    Just enter the image url to wrap and the block number of
+                    your image to retrive
+                    <br />
+                    <label
+                      >Wrap Image URL
+                      <input
+                        class="hatchalert"
+                        id="image-wrapper"
+                        type="url"
+                        placeholder="Image URL"
+                    /></label>
+                    <label>Download Image Block</label>
+                    <input
+                      class="hatchalert"
+                      id="img-grabber"
+                      type="number"
+                      placeholder="Download #"
+                      style="width: 20%"
+                    />
+                  </p>
+                  <button
+                    class="gamebuttons"
+                    onclick="wrapImage();"
+                    id="imgwrapperBTN"
+                  >
+                    Wrap (1000 Yolks)
+                  </button>
+
+                  <button
+                    class="gamebuttons"
+                    onclick="downloadImg();"
+                    id="imggrabberBTN"
+                  >
+                    Download (Free)
                   </button>
                   <br />
                 </div>

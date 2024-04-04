@@ -258,22 +258,10 @@ function cancelImageTransfer() {
 
   if (closeImgForm.className == "display") {
     closeImgForm.className = "hide";
-    let hideImages = document.getElementById("myegg-images");
-    hideImages.className = "display";
   } else {
     closeImgForm.className = "display";
   }
 }
 
-function hideEggImages() {
-  let hiding = document.getElementById("myegg-images");
 
-  if (hiding.className == "") {
-    hiding.className = "hide";
-  } else {
-    hiding.className = "";
-  }
-}
 
-let hideEggImageEye = document.getElementById("eggimage-eye");
-hideEggImageEye.addEventListener("click", hideEggImages);

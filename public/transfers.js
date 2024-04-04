@@ -454,8 +454,6 @@ function openRefferal() {
 
   if (openRefferal.className == "hide") {
     openRefferal.className = "display";
-    let eggimageform = document.getElementById("eggimage-form");
-    eggimageform.className = "game-article";
   } else {
     openRefferal.className = "hide";
   }
@@ -536,7 +534,6 @@ function getMyImageEggs() {
           buildWrapIMG.src = extractedWord;
           buildWrapIMG.style.width = "60px";
           buildWrapIMG.style.height = "60px";
-          buildWrapIMG.id = placeholderId;
           buildWrapIMG.addEventListener("click", myImageDownloads);
           placeholder.appendChild(buildWrapIMG);
 
@@ -548,24 +545,21 @@ function getMyImageEggs() {
           });
           placeholder.appendChild(buildImgButton);
 
-          let eggimageform = document.getElementById("farmerimages");
-          eggimageform.className = "game-article";
+          let yourdisplay = document.getElementById("farmerimages");
+          yourdisplay.className = "game-article";
         }
       }
     }
   }
 }
 
-//transfer Image
 function transferMyImage(placeholderId) {
-  const image = document.getElementById(placeholderId);
-  let imageURL = image.src;
-
+  let placeholder = document.getElementById(placeholderId);
+  let imageURL = placeholder.getElementsByTagName("img")[0].title;
   const openForm = document.getElementById("eggimage-form");
   openForm.className = "display";
   let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = image.src;
-  alert(image.src)
+  eggformImage.value = imageURL;
 }
 
 function myImageDownloads() {
@@ -583,34 +577,4 @@ function myImageDownloads() {
   fetch(imageURL)
     .then((response) => response.blob())
     .then(build);
-}
-
-function noDubs() {
-  let dubList = document.getElementById("myegg-images");
-  let checkDubs = dubList.getElementsByTagName("img");
-  let imgSrcList = [];
-
-  for (let i = 0; i < checkDubs.length; i++) {
-    let imgSrc = checkDubs[i].src;
-    if (!imgSrcList.includes(imgSrc)) {
-      imgSrcList.push(imgSrc);
-    } else {
-      checkDubs[i].className = "hide";
-    }
-  }
-  noDubButtons();
-}
-function noDubButtons() {
-  let dubList = document.getElementById("myegg-images");
-  let checkDubs = dubList.getElementsByTagName("button");
-  let imgSrcList = [];
-
-  for (let i = 0; i < checkDubs.length; i++) {
-    let imgSrc = checkDubs[i].className;
-    if (!imgSrcList.includes(imgSrc)) {
-      imgSrcList.push(imgSrc);
-    } else {
-      checkDubs[i].remove();
-    }
-  }
 }
