@@ -580,6 +580,7 @@ li {
   color: black;
   border-style: solid;
   font-size: 8px;
+  cursor:pointer;
 }
 
 .pacman {
