@@ -268,6 +268,98 @@ function cancelTransfer() {
   piggybank.className = "piggybank";
 }
 
+function checkIncomingTransfers() {
+  let myList = document.getElementById("ul");
+  let listCount = document.getElementsByTagName("li");
+  let targetWords = [
+    "GAMER",
+    "ECLIPSE",
+    "DOOBETTER",
+    "GTPC",
+    "PINN",
+    "WTV",
+    "DARKMARK",
+    "DRAGONTOKEN",
+    "CANDYS",
+  ];
+  let userAccountContent = userAccount.innerHTML;
+  let targetWordss = [
+    "Gamer",
+    "Eclipse",
+    "DooBetter",
+    "Gtpc",
+    "Pinn",
+    "Wtv",
+    "DarkMark",
+    "DragonToken",
+    "Candys",
+  ];
+
+  for (let j = 0; j < targetWords.length; j++) {
+    let concatenatedString = userAccountContent + targetWords[j];
+    for (let i = 0; i < listCount.length; i++) {
+      let listItemText = listCount[i].textContent;
+      if (listItemText.includes(concatenatedString)) {
+        let newAlert = listItemText.replace(
+          userAccount.innerHTML + targetWords[j],
+          ""
+        );
+        let amount = parseFloat(newAlert);
+        let piggy = targetWords[j] + "-change";
+        let fetchPiggy = document.getElementById(piggy);
+        let targetPiggy = parseFloat(fetchPiggy.innerHTML);
+        let piggyMath = amount + targetPiggy;
+        fetchPiggy.innerHTML = piggyMath;
+        deductRequests(
+          userAccountContent,
+          targetWordss,
+          listCount,
+          piggy,
+          amount
+        );
+      }
+    }
+  }
+  // getMyEggs(); // Assuming getMyEggs is defined elsewhere
+}
+
+function deductRequests(
+  userAccountContent,
+  targetWordss,
+  listCount,
+  piggy,
+  amount
+) {
+  for (let k = 0; k < targetWordss.length; k++) {
+    let concatenatedStrings = userAccountContent + "Request:" + targetWordss[k];
+    for (let l = 0; l < listCount.length; l++) {
+      let listItemText = listCount[l].textContent;
+      if (listItemText.includes(concatenatedStrings)) {
+        let newAlert = listItemText.replace(
+          userAccount.innerHTML + "Request:" + targetWordss[k] + ":",
+          ""
+        );
+        let requestAmount = parseFloat(newAlert);
+        let fetchPiggy = document.getElementById(piggy);
+        let targetPiggy = parseFloat(fetchPiggy.innerHTML);
+        let piggyMath = targetPiggy - requestAmount;
+        if (piggyMath <= 0) {
+          fetchPiggy.innerHTML = 0;
+        } else {
+          fetchPiggy.innerHTML = piggyMath;
+          let openPiggy = document.getElementById("farming-rewards");
+          openPiggy.className = "game-article";
+        }
+      } else {
+        let openPiggy = document.getElementById("farming-rewards");
+        openPiggy.className = "game-article";
+      }
+    }
+  }
+}
+
+/*
+
 function chekIncomingTransfers() {
   let mylist = document.getElementById("ul");
   let listcount = document.getElementsByTagName("li");
@@ -355,6 +447,7 @@ function chekIncomingTransfers() {
   getMyEggs();
 }
 
+*/
 function getMyEggs() {
   let targetWordss = userAccount.innerHTML;
   const newCurrent = document.getElementById("current-eggs");
