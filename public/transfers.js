@@ -523,7 +523,8 @@ function getMyImageEggs() {
         let wrapperString = extractedWord;
          placeholder.id = numb + "?";
         
-        let chec
+        let noDubs = document.getElementById(placeholder.id);
+        if(!noDubs){
         
         placeholder.title = wrapperString;
         document.getElementById("myegg-images").appendChild(placeholder);
@@ -569,7 +570,7 @@ function getMyImageEggs() {
             .then(build);
         }
         
-        
+        }else{}
         
         let yourdisplay = document.getElementById("farmerimages");
         yourdisplay.className = "game-article";
