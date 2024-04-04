@@ -209,7 +209,7 @@ function sendTransfer() {
         }
 
         if (transferTokenName.value == "DragonToken") {
-          let currentGAMER = document.getElementById("DragonToken-change");
+          let currentGAMER = document.getElementById("DRAGONTOKEN-change");
           let phaseChange = parseFloat(currentGAMER.innerHTML);
           let phasemath = phaseChange - transferTokenAmount.value;
           currentGAMER.innerHTML = phasemath;
@@ -298,7 +298,7 @@ function chekIncomingTransfers() {
   let calc = "";
 
   for (let j = 0; j < targetWords.length; j++) {
-    let concatenatedString = userAccountContent + targetWords[j];
+    let concatenatedString = "Transfer:" + userAccountContent + targetWords[j];
     for (let i = 0; i < listcount.length; i++) {
       let listItemText = listcount[i].textContent;
       if (listItemText.includes(concatenatedString)) {
