@@ -1205,6 +1205,7 @@
                     You have Image Eggs!
                     <br />
                     Just click on them to download! <br />
+                    Or send them to your in game friends!
                     <br />
                     <br />
                     <label style="width: 60%">
@@ -1472,6 +1473,49 @@
                   </button>
                   <br />
                 </div>
+
+                <div class="game-article">
+                  <h2>Image Wrapper</h2>
+                  <p class="article-text">
+                    Wrap Your Image Inside An Egg
+                    <br />
+                    Once you wrap an image, you can download it from your farm.
+                    <br />
+                    <label
+                      >Wrap Image URL
+                      <input
+                        class="hatchalert"
+                        id="image-wrapper"
+                        type="url"
+                        placeholder="Image URL"
+                    /></label>
+                    <label>Download Image Block</label>
+                    <input
+                      class="hide"
+                      id="img-grabber"
+                      type="number"
+                      placeholder="Download #"
+                      style="width: 20%"
+                    />
+                  </p>
+                  <button
+                    class="gamebuttons"
+                    onclick="wrapImage();"
+                    id="imgwrapperBTN"
+                  >
+                    Wrap (1000 Yolks)
+                  </button>
+
+                  <button
+                    class="hide"
+                    onclick="downloadImg();"
+                    id="imggrabberBTN"
+                  >
+                    Download (Free)
+                  </button>
+                  <br />
+                </div>
+
                 <div class="game-article">
                   <h2>Egg Maker</h2>
                   <p class="article-text">
@@ -1503,7 +1547,7 @@
                 <div class="game-article">
                   <h2>Recovery Hack</h2>
                   <p class="article-text">
-                    Save or recover yolks! <br />
+                    Save or recover Yolks! <br />
                     To save just insert the required yolks! <br />
                     Your revoery ID will display!<br />
                     To recover an old account enter your recovery ID before
@@ -1528,48 +1572,6 @@
                     id="recoveryBTN"
                   >
                     Insert Yolks (1000)
-                  </button>
-                  <br />
-                </div>
-
-                <div class="game-article">
-                  <h2>Image Wrapper</h2>
-                  <p class="article-text">
-                    Wrap Your Image Inside An Egg
-                    <br />
-                Enter 
-                    <br />
-                    <label
-                      >Wrap Image URL
-                      <input
-                        class="hatchalert"
-                        id="image-wrapper"
-                        type="url"
-                        placeholder="Image URL"
-                    /></label>
-                    <label>Download Image Block</label>
-                    <input
-                      class="hatchalert"
-                      id="img-grabber"
-                      type="number"
-                      placeholder="Download #"
-                      style="width: 20%"
-                    />
-                  </p>
-                  <button
-                    class="gamebuttons"
-                    onclick="wrapImage();"
-                    id="imgwrapperBTN"
-                  >
-                    Wrap (1000 Yolks)
-                  </button>
-
-                  <button
-                    class="gamebuttons"
-                    onclick="downloadImg();"
-                    id="imggrabberBTN"
-                  >
-                    Download (Free)
                   </button>
                   <br />
                 </div>
