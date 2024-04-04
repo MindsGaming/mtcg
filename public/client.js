@@ -68,16 +68,11 @@ dreamsForm.onsubmit = (event) => {
   appendNewDream(dreamInput.value);
 
   // reset form
-  if (currenteggs.innerHTML == "0") {
-    counteggs();
-  }
-
+  createDreamblock();
   userCHECK();
   dreamInput.value = "";
   dreamInput.focus();
   loginform.className = "hide";
-  PlayChicken();
-  chekIncomingTransfers();
 };
 
 clearButton.addEventListener("click", (event) => {
@@ -123,7 +118,7 @@ function layEGGS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML,
+      dream: dreamInput.value,
     };
 
     fetch("/addDream", {
@@ -137,8 +132,9 @@ function layEGGS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML);
-    appendNewDream(userAccount.innerHTML);
+    createDreamblock();
+    dreams.push(dreamInput.value);
+    appendNewDream(dreamInput.value);
     PlayChicken();
   }
 }
@@ -173,13 +169,13 @@ function hatchEGG() {
       let catchEGGS = parseFloat(currenteggs.innerHTML);
 
       if (hatchedPOINTS > catchEGGS) {
-        let softenEgg = hatchedPOINTS % catchEGGS;
+        let softenEgg = hatchedPOINTS % 2;
         let softegg = Math.round(softenEgg);
         hatchedPOINTS = softegg;
 
         if (softegg == 0) {
-          let harder = catchEGGS % 2;
-          let harderegg = Math.round(catchEGGS);
+          let harder = currentPOINTS % 2;
+          let harderegg = Math.round(currentPOINTS);
           hatchedPOINTS = harderegg + 1;
         }
       }
@@ -224,45 +220,6 @@ function hatchEGG() {
     }
   }
   pullENERGY();
-}
-
-/* Chicken */
-
-function feedCHICKEN() {
-  let yolkstofeed = parseFloat(POINTS.innerHTML);
-
-  if (yolkstofeed < 1000) {
-    userAlert.innerHTML = "Not Enough Yolks";
-  } else {
-    let feedmath = yolkstofeed - 1000;
-    POINTS.innerHTML = feedmath;
-    let farmerfeed = parseFloat(feed.value);
-    let morefeedmath = farmerfeed + 1;
-    feed.value = morefeedmath;
-    userAlert.innerHTML = "Cluck!";
-    pullENERGY();
-  }
-}
-
-function PlayChicken() {
-  var playerupgrades = document.getElementById("farmers-upgrades");
-
-  chicken.className = "hide";
-  setTimeout(newChicken, 20000);
-  let farmerfeed = parseFloat(feed.value);
-  let morefeedmath = farmerfeed - 1;
-  feed.value = morefeedmath;
-  userAlert.innerHTML = "";
-  function newChicken() {
-    if (feed.value == 0) {
-      userAlert.innerHTML = "Your Chicken Is Hungry";
-    } else {
-      if (feed.value > 0) {
-        chicken.className = "chicken";
-        userAlert.innerHTML = "Cluck!";
-      }
-    }
-  }
 }
 
 /* Tasks */
@@ -356,8 +313,6 @@ var pagenation = document.getElementById("pagenation");
 var playerfarm = document.getElementById("farm-home");
 var playermarket = document.getElementById("farmers-market");
 var playerarcade = document.getElementById("farmers-arcade");
-var playerupgrades = document.getElementById("farmers-upgrades");
-var playerstage = document.getElementById("farmer-stage");
 
 function playersFarm() {
   pagenation.innerHTML = "FARM";
@@ -373,10 +328,7 @@ function playerGames() {
   pagenation.innerHTML = "GAMES";
   checkPage();
 }
-function playerUpgrades() {
-  pagenation.innerHTML = "UPGRADES";
-  checkPage();
-}
+
 function checkPage() {
   let sleepBTN = document.getElementById("sleepBTN");
   if (energy.value == 0) {
@@ -387,53 +339,25 @@ function checkPage() {
       playerfarm.className = "game-home";
       playermarket.className = "hide";
       playerarcade.className = "hide";
-      playerupgrades.className = "hide";
-      if (playerstage.title == "FARM") {
-        farmBackground.src =
-          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
-      } else if (playerstage.title == "CASTLE") {
-        farmBackground.src =
-          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Castle.webp";
-      } else if (playerstage.title == "SPACE") {
-        farmBackground.src =
-          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/sapce.webp";
-      }
+      farmBackground.src =
+        "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
       sleepBTN.className = "meterbuttons";
     } else {
       if (checkpage == "MARKET") {
         playerfarm.className = "hide";
         playermarket.className = "game-home";
         playerarcade.className = "hide";
-        playerupgrades.className = "hide";
-
-        if (playerstage.title == "FARM") {
-          farmBackground.src =
-            "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
-        } else if (playerstage.title == "CASTLE") {
-          farmBackground.src =
-            "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
-        }
+        farmBackground.src =
+          "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Farmersmarket.webp";
         sleepBTN.className = "hide";
       } else {
         if (checkpage == "GAMES") {
           playerarcade.className = "game-home";
           playerfarm.className = "hide";
           playermarket.className = "hide";
-          playerupgrades.className = "hide";
-
           farmBackground.src =
             "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Arcade%20ONE.webp";
           sleepBTN.className = "hide";
-        } else {
-          if (checkpage == "UPGRADES") {
-            playerupgrades.className = "game-home";
-            playerarcade.className = "hide";
-            playerfarm.className = "hide";
-            playermarket.className = "hide";
-            farmBackground.src =
-              "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/upgradezone.webp";
-            sleepBTN.className = "hide";
-          }
         }
       }
     }
@@ -681,7 +605,7 @@ function GamerPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "Gamer: " + currentchange,
+      dream: userAccount.innerHTML + "GAMER: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -695,8 +619,8 @@ function GamerPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Gamer: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "Gamer: " + currentchange);
+    dreams.push(userAccount.innerHTML + "GAMER: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "GAMER: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -739,7 +663,7 @@ function ECLIPSEPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "Eclipse: " + currentchange,
+      dream: userAccount.innerHTML + "ECLIPSE: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -753,8 +677,8 @@ function ECLIPSEPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Eclipse: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "Eclipse: " + currentchange);
+    dreams.push(userAccount.innerHTML + "ECLIPSE: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "ECLIPSE: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -855,7 +779,7 @@ function GTPCPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "Gtpc: " + currentchange,
+      dream: userAccount.innerHTML + "GTPC: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -869,8 +793,8 @@ function GTPCPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Gtpc: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "Gtpc: " + currentchange);
+    dreams.push(userAccount.innerHTML + "GTPC: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "GTPC: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -913,7 +837,7 @@ function PINNPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "Pinn: " + currentchange,
+      dream: userAccount.innerHTML + "PINN: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -927,8 +851,8 @@ function PINNPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Pinn: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "Pinn: " + currentchange);
+    dreams.push(userAccount.innerHTML + "PINN: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "PINN: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -971,7 +895,7 @@ function WTVPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "Wtv: " + currentchange,
+      dream: userAccount.innerHTML + "WTV: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -985,8 +909,8 @@ function WTVPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Wtv: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "Wtv: " + currentchange);
+    dreams.push(userAccount.innerHTML + "WTV: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "WTV: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -1145,7 +1069,7 @@ function CANDYSPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "Candys: " + currentchange,
+      dream: userAccount.innerHTML + "CANDYS: " + currentchange,
     };
 
     fetch("/addDream", {
@@ -1159,12 +1083,51 @@ function CANDYSPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Candys: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "Candys: " + currentchange);
+    dreams.push(userAccount.innerHTML + "CANDYS: " + currentchange);
+    appendNewDream(userAccount.innerHTML + "CANDYS: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
     createDreamblock();
+  }
+}
+
+/* Chicken */
+
+function feedCHICKEN() {
+  let yolkstofeed = parseFloat(POINTS.innerHTML);
+
+  if (yolkstofeed < 1000) {
+    userAlert.innerHTML = "Not Enough Yolks";
+  } else {
+    if (yolkstofeed > 500) {
+      let feedmath = yolkstofeed - 500;
+      POINTS.innerHTML = feedmath;
+      let farmerfeed = parseFloat(feed.value);
+      let morefeedmath = farmerfeed + 1;
+      feed.value = morefeedmath;
+      userAlert.innerHTML = "Cluck!";
+      pullENERGY();
+    }
+  }
+}
+
+function PlayChicken() {
+  chicken.className = "hide";
+  setTimeout(newChicken, 20000);
+  let farmerfeed = parseFloat(feed.value);
+  let morefeedmath = farmerfeed - 1;
+  feed.value = morefeedmath;
+  userAlert.innerHTML = "";
+  function newChicken() {
+    if (feed.value == 0) {
+      userAlert.innerHTML = "Your Chicken Is Hungry";
+    } else {
+      if (feed.value > 0) {
+        chicken.className = "chicken";
+        userAlert.innerHTML = "Cluck!";
+      }
+    }
   }
 }
 
@@ -1256,7 +1219,7 @@ function EggMaker() {
       customEgg.value = "";
       dreams.push(customEgg.value);
       appendNewDream(customEgg.value);
-      layEGGS();
+      createDreamblock();
     }
   }
 }
@@ -1308,12 +1271,16 @@ function recoveryHack() {
           });
 
         // Add the dream value to the list
-
-        userAlert.innerHTML = "Your Recover Id: " + numb;
-        hackID.value = "";
-        dreams.push(buildstring);
-        appendNewDream(buildstring);
-        POINTS.innerHTML = 0;
+        if (numb > currenteggs.innerHTML) {
+          userAlert.innerHTML = "Block Not Stable, Try Again";
+        } else {
+          userAlert.innerHTML = "Your Recover Id: " + numb;
+          hackID.value = "";
+          dreams.push(buildstring);
+          appendNewDream(buildstring);
+          POINTS.innerHTML = 0;
+          createDreamblock();
+        }
       } else {
         var foundEgg = document.getElementById(hackID.value);
         let hack = foundEgg.innerHTML;

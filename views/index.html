@@ -21,11 +21,11 @@
 
     <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/term/term.css" />
+    <script src="/script.js" defer></script>
     <script src="/client.js" defer></script>
     <script src="/cpu.js" defer></script>
     <script src="/metamask.js" defer></script>
-    <script src="/upgrades.js" defer></script>
-    <script src="/transfers.js" defer></script>
   </head>
   <body onload="counteggs();">
     <h1 class="cpuName" id="CPUname">MTCG Token Space</h1>
@@ -794,18 +794,10 @@
                 id="farmer-feed"
                 low="20"
                 high="31"
-                value="50"
+                value="25"
                 min="0"
                 max="50"
               ></meter>
-              <div
-                id="supplyfeedBTN"
-                class="hide"
-                type="button"
-                onclick="supplyFeed();"
-              >
-                Feed
-              </div>
             </div>
             <center>
               <div class="game-home" id="game-home">
@@ -865,17 +857,6 @@
                       Your chicken won’t come back to you if it’s hungry and you
                       have no feed, make sure you have feed for your chicken to
                       follow you around, you can get feed in the farmers market.
-                      <br />
-                      <br />
-                      Tips: <br />
-                      - The more eggs you have the more Yolks you can earn from
-                      cracking.
-                      <br />
-                      - You can save your farmers market items by transfering
-                      them your yourself.
-                      <br />
-                      - Once you lay enough eggs your progress will update the
-                      next time you login the game.
                     </p>
                     <button class="gamebuttons" onclick="fetchLoginForm();">
                       I'm Ready!
@@ -904,39 +885,8 @@
                     placeholder="Deposit Address"
                     required
                   />
-                  <input
-                    id="my-refferal"
-                    aria-label="a new dream"
-                    type="text"
-                    maxlength="42"
-                    minlength="42"
-                    placeholder="Farm Address"
-                    style="margin: 2px; width: 60%"
-                    class="hide"
-                  />
-                  <button
-                    style="cursor: pointer"
-                    type="submit"
-                    id="submit-dream"
-                  >
-                    Game On!
-                  </button>
-                  <label
-                    id="openReffeal"
-                    onclick="openRefferal();"
-                    style="
-                      float: right;
-                      color: gold;
-                      margin-right: 5px;
-                      margin-top: -5.9px;
-                      font-size: 9px;
-                      font-weight: bolder;
-                      cursor: pointer;
-                    "
-                    >Community Farm?</label
-                  >
-
-                  <br /><br />
+                  <button type="submit" id="submit-dream">Game On!</button
+                  ><br /><br />
                   <button
                     type="button"
                     class="gamebuttons"
@@ -970,15 +920,10 @@
                   <img id="got-it" class="hide" src="#" />
                   <h2>Great Job!</h2>
                   <p class="article-text">
-                    <label id="gotit-text">
-                      You logged into the game!<br />
-                      This means you know what a blockchain wallet is!<br />
-                      Now you can start laying eggs by clicking your magic
-                      chicken or using hacks, <br />
-                      once you have stocked up on Yolks check out the upgrades!
-                      <br
-                    /></label>
-                    <label id="yourHatched-eggs"></label>
+                    You logged into the game!<br />
+                    This means you know what a blockchain wallet is!<br />
+                    Now you can start laying eggs by playing games or<br />
+                    doing some learning activities.
                   </p>
 
                   <button id="gotitBTN" type="button" onclick="gotIt();">
@@ -992,258 +937,54 @@
                     class="creator-badge"
                     src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/thumbnails%2FRabbit.jpg"
                   />
-                  <div onclick="hidebank();">
-                    <img
-                      id="bank-eye"
-                      style="
-                        float: left;
-                        width: 32px;
-                        height: 32px;
-                        margin: 3px;
-                        padding: 1px;
-                      "
-                      src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
-                    />
-                  </div>
-
                   <h2>Sweet Change!</h2>
                   <p class="article-text">
                     You got something in the Farmers Market! <br />
                     Don't forget to make a request!
                     <br />
-                    <label class="piggybank" id="piggy-bank">
-                      <label>GAMER: <label id="GAMER-change">0</label></label
-                      ><br />
-                      <button class="piggybuttons" onclick="GamerPOINTS();">
-                        Request GAMER
-                      </button>
-                      <button
-                        class="piggybuttons"
-                        onclick="sendGamerTransfer();"
-                      >
-                        Transfer Gamer
-                      </button>
-                      <br />
-                      <label>
-                        withinthevacuum: <label id="WTV-change">0</label></label
-                      >
-                      <button class="piggybuttons" onclick="WTVPOINTS();">
-                        Request WTV
-                      </button>
-                      <button class="piggybuttons" onclick="sendWtvTransfer();">
-                        Transfer WTV
-                      </button>
-                      <br />
-                      <label>
-                        DooBetter: <label id="DOOBETTER-change">0</label></label
-                      >
-                      <button class="piggybuttons" onclick="DOOBETTERPOINTS();">
-                        Request DooBetter
-                      </button>
-                      <button
-                        class="piggybuttons"
-                        onclick="sendDoobetterTransfer();"
-                      >
-                        Transfer DooBetter
-                      </button>
-                      <br />
-                      <label> GTPC: <label id="GTPC-change">0</label></label>
-                      <button class="piggybuttons" onclick="GTPCPOINTS();">
-                        Request GTPC
-                      </button>
-                      <button
-                        class="piggybuttons"
-                        onclick="sendGtpcTransfer();"
-                      >
-                        Transfer GTPC
-                      </button>
-                      <br />
-                      <label>
-                        ECLIPSE:
-                        <label id="ECLIPSE-change">0</label></label
-                      >
-                      <button class="piggybuttons" onclick="ECLIPSEPOINTS();">
-                        Request ECLIPSE
-                      </button>
-                      <button
-                        class="piggybuttons"
-                        onclick="sendEclipseTransfer();"
-                      >
-                        Transfer ECLIPSE
-                      </button>
-                      <br />
-                      <label>
-                        PINN:
-                        <label id="PINN-change">0</label></label
-                      >
-                      <button class="piggybuttons" onclick="PINNPOINTS();">
-                        Request PINN
-                      </button>
-                      <button
-                        class="piggybuttons"
-                        onclick="sendPinnTransfer();"
-                      >
-                        Transfer PINN
-                      </button>
-                      <br />
-                      <label>
-                        DragonToken:
-                        <label id="DRAGONTOKEN-change">0</label></label
-                      >
-                      <button
-                        class="piggybuttons"
-                        onclick="DRAGONTOKENPOINTS();"
-                      >
-                        Request DragonToken
-                      </button>
-                      <button
-                        class="piggybuttons"
-                        onclick="sendDragonTokenTransfer();"
-                      >
-                        Transfer DragonToken
-                      </button>
-                      <br />
-                      <label>
-                        DarkMark: <label id="DARKMARK-change">0</label></label
-                      >
-                      <button class="piggybuttons" onclick="DARKMARKPOINTS();">
-                        Request DarkMark
-                      </button>
-                      <button
-                        class="piggybuttons"
-                        onclick="sendDarkmarkTransfer();"
-                      >
-                        Transfer DarkMark
-                      </button>
-                      <br />
-                      <label>Candys: <label id="CANDYS-change">0</label></label>
-                      <button class="piggybuttons" onclick="CANDYSPOINTS();">
-                        Request Candys
-                      </button>
-                      <button
-                        class="piggybuttons"
-                        onclick="sendCandysTransfer();"
-                      >
-                        Transfer Candys
-                      </button>
-                    </label>
-                    <br />
-
-                    <label id="transfer-form" class="hide">
-                      You can send
-                      <label id="get-transferToken">Yolks</label> to your
-                      freinds in game! <br />
-                      Game Account:
-                      <input
-                        id="transfer-tokenaccount"
-                        name="transfer"
-                        aria-label="a new dream"
-                        type="text"
-                        maxlength="42"
-                        minlength="42"
-                        style="width: 53%"
-                        placeholder="Game Account"
-                        required
-                      /><br />
-                      Amount
-                      <input
-                        id="transfer-tokenamount"
-                        name="transfer"
-                        aria-label="a new dream"
-                        type="number"
-                        placeholder="Amount"
-                        style="width: 23%"
-                        required
-                      />
-                      <input
-                        id="transfer-tokenname"
-                        name="transfer"
-                        aria-label="a new dream"
-                        type="text"
-                        placeholder="Name"
-                        class="hide"
-                      /><br />
-
-                      <button style="cursor: pointer" onclick="sendTransfer();">
-                        Send Transfer <label style="gold">(5 Eggs)</label>
-                      </button>
-
-                      <button
-                        style="cursor: pointer"
-                        onclick="cancelTransfer();"
-                      >
-                        Cancel
-                      </button>
-
-                      <label style="color: red; font-size: 13px"
-                        >Only Send To Game Accounts</label
-                      >
-                    </label>
+                    <label>GAMER: <label id="GAMER-change">0</label></label>
+                    <button onclick="GamerPOINTS();">Request GAMER</button>
+                    <label>
+                      withinthevacuum: <label id="WTV-change">0</label></label
+                    >
+                    <button onclick="WTVPOINTS();">
+                      Request withinthevacuum
+                    </button>
+                    <label>
+                      DooBetter: <label id="DOOBETTER-change">0</label></label
+                    >
+                    <button onclick="DOOBETTERPOINTS();">
+                      Request DooBetter
+                    </button>
+                    <label> GTPC: <label id="GTPC-change">0</label></label>
+                    <button onclick="GTPCPOINTS();">Request GTPC</button>
+                    <label>
+                      ECLIPSE:
+                      <label id="ECLIPSE-change">0</label></label
+                    >
+                    <button onclick="ECLIPSEPOINTS();">Request ECLIPSE</button>
+                    <label>
+                      PINN:
+                      <label id="PINN-change">0</label></label
+                    >
+                    <button onclick="ECLIPSEPOINTS();">Request ECLIPSE</button>
+                    <label>
+                      DragonToken:
+                      <label id="DRAGONTOKEN-change">0</label></label
+                    >
+                    <button onclick="DRAGONTOKENPOINTS();">
+                      Request DragonToken
+                    </button>
+                    <label>
+                      DarkMark: <label id="DARKMARK-change">0</label></label
+                    >
+                    <button onclick="DARKMARKPOINTS();">
+                      Request DarkMark
+                    </button>
+                    <label>Candys: <label id="CANDYS-change">0</label></label>
+                    <button onclick="CANDYSPOINTS();">Request Candys</button>
                   </p>
                   <br />
-                </div>
-                <div class="hide" id="farmerimages">
-                  <img
-                    id="got-rewardimages"
-                    class="creator-badge"
-                    src="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fthumbnails%2Fpixel.png"
-                  />
-
-                  <h2>Wrapped Eggs!</h2>
-
-                  <p class="article-text">
-                    You have Image Eggs!
-                    <br />
-                    Just click on them to download! <br />
-                    <br />
-                    <br />
-                    <label style="width: 60%">
-                      <label id="myegg-images"></label>
-                    </label>
-                    <br />
-
-                    <label class="hide" id="eggimage-form">
-                      Game Account:
-                      <input
-                        id="transfer-myeggimage"
-                        name="transfer"
-                        aria-label="a new dream"
-                        type="text"
-                        maxlength="42"
-                        minlength="42"
-                        style="width: 53%"
-                        placeholder="Game Account"
-                        required
-                      /><br />
-                      <input
-                        id="eggform-image"
-                        name="transfer"
-                        aria-label="a new dream"
-                        type="text"
-                        placeholder="Amount"
-                        style="width: 23%"
-                        class="hide"
-                        ;
-                      />
-                      <button
-                        style="cursor: pointer"
-                        onclick="sendImageTransfer();"
-                      >
-                        Send Transfer <label style="gold">(5 Eggs)</label>
-                      </button>
-
-                      <button
-                        style="cursor: pointer"
-                        onclick="cancelImageTransfer();"
-                      >
-                        Cancel
-                      </button>
-
-                      <label style="color: red; font-size: 13px"
-                        >Only Send To Game Accounts</label
-                      >
-                    </label>
-                  </p>
                 </div>
               </div>
               <div class="hide" id="farmers-market">
@@ -1264,6 +1005,7 @@
                   <h2>One Chicken Feed</h2>
                   <p class="article-text">
                     Don't let your chicken go hungry, grab some feed!<br />
+                    ** Tester Sale 500 Yolks per seed! **
                   </p>
                   <button
                     class="gamebuttons"
@@ -1576,55 +1318,6 @@
                     id="farmer-virtualenergyBTN"
                   >
                     Insert Yolks (2000)
-                  </button>
-                  <br />
-                </div>
-              </div>
-
-              <div id="farmers-upgrades" class="hide">
-                <label id="upgrades" class="hide">
-                  <label id="farmer-stage" title="FARM"></label>
-                </label>
-                <div class="game-article">
-                  <h2>Upgrade Your Farm!</h2>
-                  <p class="article-text">
-                    Use your Yolks to upgrade your farm!
-                    <br />
-                  </p>
-                  <br />
-                </div>
-
-                <div class="game-article" id="farmerstage-bracket">
-                  <h2>Farm Upgrades</h2>
-                  <p class="article-text">
-                    Level Up Your Farm! <br />
-                    <br />
-                    <code>
-                      <label id="stage-text">Castle Stage</label>
-                    </code>
-                  </p>
-                  <br />
-                  <button
-                    class="gamebuttons"
-                    onclick="farmerStages();"
-                    id="farmerstagesBTN"
-                  >
-                    Upgrade (10,000 Yolks)
-                  </button>
-                </div>
-                <div class="game-article">
-                  <h2>Chicken Feed Supply</h2>
-                  <p class="article-text">
-                    Feed your chicken from anywhere and get more feed for the
-                    same amount of Yolks!
-                    <br />
-                  </p>
-                  <button
-                    class="gamebuttons"
-                    onclick="farmerChickenSupply();"
-                    id="farmer-chikenSupply"
-                  >
-                    Upgrade (10,000 Yolks)
                   </button>
                   <br />
                 </div>

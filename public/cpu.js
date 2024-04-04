@@ -101,7 +101,6 @@ function openhubs() {
     infinity.className = "apps";
     info.className = "hide";
     dreamslist.innerHTML = "Loading Hubs...";
-    termframe.className = "hide";
   } else {
     infinity.title = "Infinity";
     infinity.src = "https://mindsgaming.glitch.me";
@@ -109,7 +108,6 @@ function openhubs() {
     splash.className = "hide";
     infinity.className = "hide";
     info.className = "hide";
-    termframe.className = "hide";
   }
 }
 
@@ -126,7 +124,6 @@ function chatbotview() {
     splash.className = "splash";
     infinity.className = "apps";
     info.className = "hide";
-    termframe.className = "hide";
   } else {
     infinity.title = "Infinity";
     infinity.src =
@@ -135,7 +132,6 @@ function chatbotview() {
     infinity.className = "hide";
     splash.className = "hide";
     info.className = "hide";
-    termframe.className = "hide";
   }
 }
 
@@ -283,6 +279,103 @@ function createDreamblock() {
   // Add the dream value to the list
   dreams.push(dreamBlock.value);
   appendNewDream(dreamBlock.value);
+}
+
+function wrapImage() {
+  if (userAccount.innerHTML == "Login") {
+    userAlert.innerHTML = "Login To Play";
+  } else {
+    if (POINTS.innerHTML < 1000) {
+      userAlert.innerHTML = "Not Enough Yolks";
+    } else {
+      let dreamCatcher = document.getElementsByTagName("li");
+      let dreamvalue = dreamCatcher.length - 1;
+      let dreamID = document.getElementById(dreamvalue);
+      let dreamURL = document.getElementById("image-wrapper");
+
+      // Extract the file extension from the URL
+      let url = dreamURL.value;
+      const extension = url.substring(url.lastIndexOf("."));
+      const acceptedImageExtensions = [".png", ".jpg", ".gif", ".jpeg", "webp"];
+      if (
+        extension == ".png" ||
+        extension == ".jpg" ||
+        extension == ".gif" ||
+        extension == ".jpeg" ||
+        extension == ".jpeg" ||
+        extension == ".webp"
+      ) {
+        const appendNewDreamss = (dream) => {
+          const newListItem = document.createElement("a");
+          newListItem.innerText = dreamURL.value;
+          newListItem.title = "Dream Block";
+          newListItem.id = dreamvalue;
+          newListItem.value = dreamURL.value;
+          newListItem.className = "hide";
+          newListItem.href = dreamURL.value;
+          dreamsList.appendChild(newListItem);
+        };
+
+        const data = {
+          dream: dreamURL.value,
+        };
+
+        fetch("/addDream", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log(JSON.stringify(response));
+          });
+
+        let createIMG = document.createElement("img");
+        createIMG.src = dreamURL.value;
+        createIMG.className = "creator-wrap";
+        document.getElementById("wraped-images").appendChild(createIMG);
+        createIMG.id = dreamvalue + "‽";
+        // Add the dream value to the list
+        userAlert.innerHTML =
+          "You Wrapped Block #" +
+          dreamCatcher.length +
+          " with: " +
+          dreamURL.value;
+        const checkPOINTS = parseFloat(POINTS.innerHTML);
+        const removePOINTS = 1000;
+        const EGGmath = Math.round(checkPOINTS - removePOINTS);
+        POINTS.innerHTML = EGGmath;
+
+        dreams.push(dreamURL.value);
+        appendNewDream(dreamURL.value);
+        dreamURL.value = "";
+      } else {
+        userAlert.innerHTML = acceptedImageExtensions + " Only";
+      }
+    }
+  }
+}
+
+function downloadImg() {
+  const request = document.getElementById("img-grabber");
+  let requestIMG = request.value;
+  const image = document.getElementById(requestIMG);
+  let imageURL = image.innerHTML;
+
+  function build(blob) {
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "image.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  fetch(imageURL)
+    .then((response) => response.blob())
+    .then(build);
+
+  request.value = "";
 }
 
 function HOME() {
