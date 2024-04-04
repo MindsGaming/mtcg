@@ -384,17 +384,17 @@ function getMyEggs() {
     gotIt();
   } else {
     if (piggy < 25) {
-      playerEGGS.innerHTML = "25";
-      let yourHatchedEggs = document.getElementById("yourHatched-eggs");
-      yourHatchedEggs.style = "color: gold; font-size: 15px;";
-      yourHatchedEggs.innerHTML =
-        "Your Magic Chicken Only Found: " + "25" + " Eggs" + "<br>";
-      let gotitText = document.getElementById("gotit-text");
-      gotitText.innerHTML = "We Found Your Account! <br>";
-      gotIt();
+      if (piggy == 0) {
+      } else {
+        playerEGGS.innerHTML = "25";
+        let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+        yourHatchedEggs.style = "color: gold; font-size: 15px;";
+        yourHatchedEggs.innerHTML =
+          "Your Magic Chicken Found: " + "25" + " Eggs" + "<br>";
+      }
     } else {
-      if (piggy > 0 || piggy == 0) {
-        playerEGGS.innerHTML = "15";
+      if (piggy == 0) {
+        playerEGGS.innerHTML = "25";
         let yourHatchedEggs = document.getElementById("yourHatched-eggs");
         yourHatchedEggs.style = "color: gold; font-size: 15px;";
         yourHatchedEggs.innerHTML =
