@@ -579,7 +579,6 @@ function wrapImage() {
           buildImgButton.addEventListener("click", transferMyImage);
           document.getElementById(placeholder.id).appendChild(buildImgButton);
 
-          /*
           //transfer Image
           function transferMyImage() {
             let textmerge = placeholder.id;
@@ -611,7 +610,6 @@ function wrapImage() {
               .then((response) => response.blob())
               .then(build);
           }
-          */
         }
         transferImageEgg();
         let yourdisplay = document.getElementById("farmerimages");
@@ -640,37 +638,6 @@ function wrapImage() {
       }
     }
   }
-}
-
-// Define transferMyImage and myImageDownloads functions outside of getMyImageEggs
-function transferMyImage(placeholderId) {
-  let textmerge = placeholderId;
-  const image = document.getElementById(textmerge);
-  let imageURL = image.title;
-
-  const openForm = document.getElementById("eggimage-form");
-  openForm.className = "display";
-  let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = imageURL;
-}
-
-function myImageDownloads() {
-  let textmerge = this.parentElement.id;
-  const image = document.getElementById(textmerge);
-  let imageURL = image.title;
-
-  function build(blob) {
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "image.jpg";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-
-  fetch(imageURL)
-    .then((response) => response.blob())
-    .then(build);
 }
 
 function downloadImg() {
@@ -773,4 +740,35 @@ function getMyImageEggs() {
       }
     }
   }
+}
+
+//Define transferMyImage and myImageDownloads functions outside of getMyImageEggs
+function transferMyImage(placeholderId) {
+  let textmerge = placeholderId;
+  const image = document.getElementById(textmerge);
+  let imageURL = image.title;
+
+  const openForm = document.getElementById("eggimage-form");
+  openForm.className = "display";
+  let eggformImage = document.getElementById("eggform-image");
+  eggformImage.value = imageURL;
+}
+
+function myImageDownloads() {
+  let textmerge = this.parentElement.id;
+  const image = document.getElementById(textmerge);
+  let imageURL = image.title;
+
+  function build(blob) {
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "image.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  fetch(imageURL)
+    .then((response) => response.blob())
+    .then(build);
 }
