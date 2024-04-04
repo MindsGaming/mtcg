@@ -521,57 +521,56 @@ function getMyImageEggs() {
         );
         const placeholder = document.createElement("label");
         let wrapperString = extractedWord;
-         placeholder.id = numb + "?";
-        
+        placeholder.id = numb + "?";
+
         let noDubs = document.getElementById(placeholder.id);
-        if(!noDubs){
-        
-        placeholder.title = wrapperString;
-        document.getElementById("myegg-images").appendChild(placeholder);
-        const buildWrapIMG = document.createElement("img");
-        buildWrapIMG.src = extractedWord;
-        buildWrapIMG.style = "width: 60px; height: 60px;";
-        buildWrapIMG.addEventListener("click", myImageDownloads);
-        document.getElementById(placeholder.id).appendChild(buildWrapIMG);
-        const buildImgButton = document.createElement("button");
-        buildImgButton.className = "piggybuttons";
-        buildImgButton.innerHTML = "Transfer";
-        buildImgButton.addEventListener("click", transferMyImage);
-        document.getElementById(placeholder.id).appendChild(buildImgButton);
+        if (!noDubs) {
+          placeholder.title = wrapperString;
+          document.getElementById("myegg-images").appendChild(placeholder);
+          const buildWrapIMG = document.createElement("img");
+          buildWrapIMG.src = extractedWord;
+          buildWrapIMG.style = "width: 60px; height: 60px;";
+          buildWrapIMG.addEventListener("click", myImageDownloads);
+          document.getElementById(placeholder.id).appendChild(buildWrapIMG);
+          const buildImgButton = document.createElement("button");
+          buildImgButton.className = "piggybuttons";
+          buildImgButton.innerHTML = "Transfer";
+          buildImgButton.addEventListener("click", transferMyImage);
+          document.getElementById(placeholder.id).appendChild(buildImgButton);
 
-        function transferMyImage() {
-          let textmerge = placeholder.id;
-          const image = document.getElementById(textmerge);
-          let imageURL = image.title;
+          function transferMyImage() {
+            let textmerge = placeholder.id;
+            const image = document.getElementById(textmerge);
+            let imageURL = image.title;
 
-          const openForm = document.getElementById("eggimage-form");
-          openForm.className = "display";
-          let eggformImage = document.getElementById("eggform-image");
-          eggformImage.value = imageURL;
-        }
-
-        // self Downloads
-        function myImageDownloads() {
-          let textmerge = placeholder.id;
-          const image = document.getElementById(textmerge);
-          let imageURL = image.title;
-
-          function build(blob) {
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(blob);
-            link.download = "image.jpg";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            const openForm = document.getElementById("eggimage-form");
+            openForm.className = "display";
+            let eggformImage = document.getElementById("eggform-image");
+            eggformImage.value = imageURL;
           }
 
-          fetch(imageURL)
-            .then((response) => response.blob())
-            .then(build);
+          // self Downloads
+          function myImageDownloads() {
+            let textmerge = placeholder.id;
+            const image = document.getElementById(textmerge);
+            let imageURL = image.title;
+
+            function build(blob) {
+              const link = document.createElement("a");
+              link.href = URL.createObjectURL(blob);
+              link.download = "image.jpg";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }
+
+            fetch(imageURL)
+              .then((response) => response.blob())
+              .then(build);
+          }
+        } else {
         }
-        
-        }else{}
-        
+
         let yourdisplay = document.getElementById("farmerimages");
         yourdisplay.className = "game-article";
       }
