@@ -555,23 +555,17 @@ function getMyImageEggs() {
     }
   }
 }
-//transfer Image
 
+//transfer Image
 function transferMyImage(placeholderId) {
-  const placeholder = document.getElementById(placeholderId);
-  const imageURL = placeholder.querySelector("img").src;
-  const eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = imageURL;
-  const eggimageForm = document.getElementById("eggimage-form");
-  eggimageForm.classList.add("show");
-  const hideImages = document.getElementById("myegg-images");
-  hideImages.classList.add("hide");
-  const preview = document.getElementById("eggimageform-preview");
-  preview.src = imageURL;
-  preview.style.float = "right";
-  preview.style.width = "40px";
-  preview.style.height = "40px";
-  preview.style.borderRadius = "50%";
+  const image = document.getElementById(placeholderId);
+  let imageURL = image.src;
+
+  const openForm = document.getElementById("eggimage-form");
+  openForm.className = "display";
+  let eggformImage = document.getElementById("eggform-image");
+  eggformImage.value = image.src;
+  alert(image.src)
 }
 
 function myImageDownloads() {
