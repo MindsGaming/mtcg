@@ -101,6 +101,7 @@ function openhubs() {
     infinity.className = "apps";
     info.className = "hide";
     dreamslist.innerHTML = "Loading Hubs...";
+    termframe.className = "hide";
   } else {
     infinity.title = "Infinity";
     infinity.src = "https://mindsgaming.glitch.me";
@@ -108,6 +109,7 @@ function openhubs() {
     splash.className = "hide";
     infinity.className = "hide";
     info.className = "hide";
+    termframe.className = "hide";
   }
 }
 
@@ -124,6 +126,7 @@ function chatbotview() {
     splash.className = "splash";
     infinity.className = "apps";
     info.className = "hide";
+    termframe.className = "hide";
   } else {
     infinity.title = "Infinity";
     infinity.src =
@@ -132,6 +135,7 @@ function chatbotview() {
     infinity.className = "hide";
     splash.className = "hide";
     info.className = "hide";
+    termframe.className = "hide";
   }
 }
 

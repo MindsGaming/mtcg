@@ -461,39 +461,45 @@ function openRefferal() {
 ////Image Transfers
 
 function sendImageTransfer() {
-  const imageURL = document.getElementById("eggform-image");
-  const imageReciver = document.getElementById("transfer-myeggimage");
+  let tCost = parseFloat(currenteggs.innerHTML);
 
-  const appendNewDreamss = (dream) => {
-    const newListItem = document.createElement("li");
-    const randomWarp = Math.floor(Math.random() * numb) + 1;
-    newListItem.innerText = dream;
-    newListItem.title = "Request";
-    newListItem.id = numb;
-    newListItem.value = randomWarp;
-    newListItem.className = "hide";
-    dreamsList.appendChild(newListItem);
-  };
+  if (tCost < 5) {
+    userAlert.innerHTML = "5 Eggs Reqired";
+  } else {
+    const imageURL = document.getElementById("eggform-image");
+    const imageReciver = document.getElementById("transfer-myeggimage");
 
-  const data = {
-    dream: "Transfer:" + imageReciver.value + imageURL.value,
-  };
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
 
-  fetch("/addDream", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: { "Content-Type": "application/json" },
-  })
-    .then((res) => res.json())
-    .then((response) => {
-      console.log(JSON.stringify(response));
-    });
+    const data = {
+      dream: "Transfer:" + imageReciver.value + imageURL.value,
+    };
 
-  // Add the dream value to the list
-  dreams.push("Transfer:" + imageReciver.value + imageURL.value);
-  appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
-  imageURL.value = "";
-  imageReciver.value = "";
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + imageReciver.value + imageURL.value);
+    appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
+    imageURL.value = "";
+    imageReciver.value = "";
+  }
 }
 
 function getMyImageEggs() {
