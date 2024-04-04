@@ -497,19 +497,30 @@ function sendImageTransfer() {
 
 function getMyImageEggs() {
   let userAccountContent = userAccount.innerHTML;
-  let mylist = document.getElementById("ul");
-  let listcount = document.getElementsByTagName("li");
+  let listItems = document.getElementsByTagName("li");
   let targetWords = ["http", "https", "HTTP", "HTTPS"];
 
-  let concatenatedStrings = targetWords;
   for (let j = 0; j < targetWords.length; j++) {
-    let concatenatedString = userAccountContent + targetWords[j];
-    for (let i = 0; i < listcount.length; i++) {
-      let listItemText = listcount[i].textContent;
+    let keyword = targetWords[j];
+    let concatenatedString = userAccountContent + keyword;
+    for (let i = 0; i < listItems.length; i++) {
+      let listItemText = listItems[i].textContent;
       if (listItemText.includes(concatenatedString)) {
+        // Trigger another function or perform additional actions
+        transferMyImage();
         
         
-        
+         function transferMyImage() {
+            let textmerge = /// HTTPS://.... WORD FOUND ;
+            const image = document.getElementById(textmerge);
+            let imageURL = image.title;
+
+            const openForm = document.getElementById("eggimage-form");
+            openForm.className = "display";
+            let eggformImage = document.getElementById("eggform-image");
+            eggformImage.value = imageURL;
+          }
+  
         
         
         
@@ -517,3 +528,7 @@ function getMyImageEggs() {
     }
   }
 }
+
+      
+          //transfer Image
+         
