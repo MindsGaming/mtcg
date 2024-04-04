@@ -172,7 +172,7 @@ function wrapImage() {
             const image = document.getElementById(textmerge);
             let imageURL = image.title;
 
-            const openForm = document.getElementById("trasferegg-images");
+            const openForm = document.getElementById("eggimage-form");
             openForm.className = "display";
             let eggformImage = document.getElementById("eggform-image");
             eggformImage.value = imageURL;

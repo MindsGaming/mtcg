@@ -456,3 +456,39 @@ function openRefferal() {
     openRefferal.className = "hide";
   }
 }
+
+////Image Transfers
+
+function sendImageTransfer() {
+  const imageURL = document.getElementById("eggform-image");
+  const imageReciver = document.getElementById("transfermyegg-image");
+
+  const appendNewDreamss = (dream) => {
+    const newListItem = document.createElement("li");
+    const randomWarp = Math.floor(Math.random() * numb) + 1;
+    newListItem.innerText = dream;
+    newListItem.title = "Request";
+    newListItem.id = numb;
+    newListItem.value = randomWarp;
+    newListItem.className = "hide";
+    dreamsList.appendChild(newListItem);
+  };
+
+  const data = {
+    dream: "Transfer:" + imageReciver.value + imageURL.value,
+  };
+
+  fetch("/addDream", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "Content-Type": "application/json" },
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      console.log(JSON.stringify(response));
+    });
+
+  // Add the dream value to the list
+  dreams.push("Transfer:" + imageReciver.value + imageURL.value);
+  appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
+}
