@@ -536,6 +536,7 @@ function getMyImageEggs() {
           buildWrapIMG.src = extractedWord;
           buildWrapIMG.style.width = "60px";
           buildWrapIMG.style.height = "60px";
+          buildWrapIMG.id = placeholderId;
           buildWrapIMG.addEventListener("click", myImageDownloads);
           placeholder.appendChild(buildWrapIMG);
 
@@ -553,19 +554,17 @@ function getMyImageEggs() {
       }
     }
   }
+  noDubs();
 }
 
 function transferMyImage(placeholderId) {
   let placeholder = document.getElementById(placeholderId);
-
- 
-    let imageURL = placeholder.getElementsByTagName("img")[0].title;
-    const openForm = document.getElementById("eggimage-form");
-    openForm.className = "display";
-    let eggformImage = document.getElementById("eggform-image");
-    eggformImage.value = imageURL;
-    cancelImageTransfer();
-  
+  let imageURL = placeholder.getElementsByTagName("img")[0].title;
+  const openForm = document.getElementById("eggimage-form");
+  openForm.className = "display";
+  let eggformImage = document.getElementById("eggform-image");
+  eggformImage.value = imageURL;
+  cancelImageTransfer();
 }
 
 function myImageDownloads() {
@@ -583,4 +582,20 @@ function myImageDownloads() {
   fetch(imageURL)
     .then((response) => response.blob())
     .then(build);
+}
+
+function noDubs(placeholderId) {
+  
+  let 
+  
+  
+  let concatenatedStrings = targetWordss;
+  for (let i = 0; i < listcount.length; i++) {
+    let listItemText = listcount[i].textContent;
+    if (listItemText.includes(concatenatedStrings)) {
+      let targetpiggy = piggy + 1;
+      let piggyMath = targetpiggy;
+      piggy = piggyMath;
+    }
+  }
 }
