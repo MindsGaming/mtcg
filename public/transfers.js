@@ -373,23 +373,33 @@ function getMyEggs() {
       piggy = piggyMath;
     }
   }
-  if (piggy > 15 || piggy == 15) {
+  if (piggy > 25 || piggy == 25) {
     let yourHatchedEggs = document.getElementById("yourHatched-eggs");
     yourHatchedEggs.style = "color: gold; font-size: 15px;";
     playerEGGS.innerHTML = piggy;
-    yourHatchedEggs.innerHTML = "You Have Laid: " + piggy + " Eggs" + "<br>";
+    yourHatchedEggs.innerHTML =
+      "Your Magic Chicken Started You With: " + piggy + " Eggs" + "<br>";
     let gotitText = document.getElementById("gotit-text");
     gotitText.innerHTML = "We Found Your Account! <br>";
     gotIt();
   } else {
-    if (piggy == 0 || piggy < 15) {
-      playerEGGS.innerHTML = "15";
+    if (piggy < 25) {
+      playerEGGS.innerHTML = "25";
       let yourHatchedEggs = document.getElementById("yourHatched-eggs");
       yourHatchedEggs.style = "color: gold; font-size: 15px;";
-      yourHatchedEggs.innerHTML = "You Start With: " + "15" + " Eggs" + "<br>";
+      yourHatchedEggs.innerHTML =
+        "Your Magic Chicken Only Found: " + "25" + " Eggs" + "<br>";
+      let gotitText = document.getElementById("gotit-text");
+      gotitText.innerHTML = "We Found Your Account! <br>";
+      gotIt();
     } else {
-      // Open Tabs
-      playerEGGS.innerHTML = "15";
+      if (piggy > 0 || piggy == 0) {
+        playerEGGS.innerHTML = "15";
+        let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+        yourHatchedEggs.style = "color: gold; font-size: 15px;";
+        yourHatchedEggs.innerHTML =
+          "You Start The Game With: " + "25" + " Eggs" + "<br>";
+      }
     }
   }
 }
