@@ -445,7 +445,6 @@ function getMyRefferal() {
         " Eggs <br>";
     }
   }
-  getMyImageEggs();
 }
 
 function openRefferal() {
@@ -511,9 +510,7 @@ function getMyImageEggs() {
           wordIndex,
           wordIndex + keyword.length
         );
-        function transferMyImage() {
-          alert(extractedWord);
-        }
+        alert(extractedWord);
       }
     }
   }
