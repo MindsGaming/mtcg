@@ -262,3 +262,16 @@ function cancelImageTransfer() {
     closeImgForm.className = "display";
   }
 }
+
+function hideEggImages() {
+  let hiding = document.getElementById("myegg-images");
+
+  if (hiding.className == "") {
+    hiding.className = "hide";
+  } else {
+    hiding.className = "";
+  }
+}
+
+let hideEggImageEye = document.getElementById("eggimage-eye");
+hideEggImageEye.addEventListener("click", hideEggImages);

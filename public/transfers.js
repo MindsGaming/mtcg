@@ -554,7 +554,6 @@ function getMyImageEggs() {
       }
     }
   }
-  noDubs();
 }
 
 function transferMyImage(placeholderId) {
@@ -597,7 +596,6 @@ function noDubs() {
       checkDubs[i].remove();
     }
   }
-  noDubButtons();
 }
 function noDubButtons() {
   let dubList = document.getElementById("myegg-images");
