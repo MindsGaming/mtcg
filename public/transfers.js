@@ -269,6 +269,8 @@ function cancelTransfer() {
 }
 
 function chekIncomingTransfers() {
+  /*
+  
   let mylist = document.getElementById("ul");
   let listcount = document.getElementsByTagName("li");
   let numb = listcount.length;
@@ -298,7 +300,7 @@ function chekIncomingTransfers() {
   let calc = "";
 
   for (let j = 0; j < targetWords.length; j++) {
-    let concatenatedString = userAccountContent + targetWords[j];
+    let concatenatedString = "Transfer:" + userAccountContent + targetWords[j];
     for (let i = 0; i < listcount.length; i++) {
       let listItemText = listcount[i].textContent;
       if (listItemText.includes(concatenatedString)) {
@@ -312,7 +314,6 @@ function chekIncomingTransfers() {
         let targetpiggy = parseFloat(fetchpiggy.innerHTML);
         let piggyMath = tack + targetpiggy;
         fetchpiggy.innerHTML = piggyMath;
-
         //
         function deductrequests() {
           for (let j = 0; j < targetWordss.length; j++) {
@@ -352,7 +353,88 @@ function chekIncomingTransfers() {
       }
     }
   }
+  
+  
   getMyEggs();
+}
+*/
+
+  let mylist = document.getElementById("ul");
+  let listcount = document.getElementsByTagName("li");
+  let userAccount = document.getElementById("userAccount"); // Assuming userAccount is an element with this ID
+  let targetWords = [
+    "GAMER",
+    "ECLIPSE",
+    "DOOBETTER",
+    "GTPC",
+    "PINN",
+    "WTV",
+    "DARKMARK",
+    "DRAGONTOKEN",
+    "CANDYS",
+  ];
+  let targetWordss = [
+    "Gamer",
+    "Eclipse",
+    "DooBetter",
+    "Gtpc",
+    "Pinn",
+    "Wtv",
+    "DarkMark",
+    "DragonToken",
+    "Candys",
+  ];
+
+  for (let j = 0; j < targetWords.length; j++) {
+    let concatenatedString =
+      "Transfer:" + userAccount.innerHTML + targetWords[j];
+    for (let i = 0; i < listcount.length; i++) {
+      let listItemText = listcount[i].textContent;
+      if (listItemText.includes(concatenatedString)) {
+        let newAlert = listItemText.replace(
+          "Transfer:" + userAccount.innerHTML + targetWords[j],
+          ""
+        );
+        let tack = parseFloat(newAlert);
+        let piggy = targetWords[j] + "-change";
+        let fetchpiggy = document.getElementById(piggy);
+        let targetpiggy = parseFloat(fetchpiggy.innerHTML);
+        let piggyMath = tack + targetpiggy;
+        fetchpiggy.innerHTML = piggyMath;
+      }
+    }
+  }
+
+  function deductrequests() {
+    for (let j = 0; j < targetWordss.length; j++) {
+      let concatenatedStrings =
+        userAccount.innerHTML + "Request:" + targetWordss[j];
+      for (let i = 0; i < listcount.length; i++) {
+        let listItemText = listcount[i].textContent;
+        if (listItemText.includes(concatenatedStrings)) {
+          let newAlert = listItemText.replace(
+            userAccount.innerHTML + "Request:" + targetWordss[j] + ":",
+            ""
+          );
+          let tack = parseFloat(newAlert);
+          let piggy = targetWords[j] + "-change";
+          let fetchpiggy = document.getElementById(piggy);
+          let targetpiggy = parseFloat(fetchpiggy.innerHTML);
+          let piggyMath = targetpiggy - tack;
+          if (piggyMath <= 0) {
+            fetchpiggy.innerHTML = 0;
+          } else {
+            fetchpiggy.innerHTML = piggyMath;
+            let openPIGGY = document.getElementById("farming-rewards");
+            openPIGGY.className = "game-article";
+          }
+        } else {
+          let openPIGGY = document.getElementById("farming-rewards");
+          openPIGGY.className = "game-article";
+        }
+      }
+    }
+  }
 }
 
 function getMyEggs() {
