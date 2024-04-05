@@ -347,6 +347,100 @@ function chekIncomingTransfers() {
       }
     }
   }
+  getMyEggs();
+}
+
+function getMyEggs() {
+  let targetWordss = userAccount.innerHTML;
+  const newCurrent = document.getElementById("current-eggs");
+  newCurrent.id = "player-eggs";
+  let playerEGGS = document.getElementById("player-eggs");
+  let piggy = 0;
+  let mylist = document.getElementById("ul");
+  let listcount = document.getElementsByTagName("li");
+
+  let concatenatedStrings = targetWordss;
+  for (let i = 0; i < listcount.length; i++) {
+    let listItemText = listcount[i].textContent;
+    if (listItemText.includes(concatenatedStrings)) {
+      let targetpiggy = piggy + 1;
+      let piggyMath = targetpiggy;
+      piggy = piggyMath;
+    }
+  }
+  if (piggy > 25 || piggy == 25) {
+    let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+    yourHatchedEggs.style = "color: gold; font-size: 15px;";
+    playerEGGS.innerHTML = piggy;
+    yourHatchedEggs.innerHTML =
+      "Your Magic Chicken Started You With: " + piggy + " Eggs" + "<br>";
+    let gotitText = document.getElementById("gotit-text");
+    gotitText.innerHTML = "We Found Your Account! <br>";
+    gotIt();
+  } else {
+    if (piggy < 25) {
+      if (piggy == 0) {
+      } else {
+        playerEGGS.innerHTML = "25";
+        let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+        yourHatchedEggs.style = "color: gold; font-size: 15px;";
+        yourHatchedEggs.innerHTML =
+          "Your Magic Chicken Found: " + "25" + " Eggs" + "<br>";
+      }
+    } else {
+      if (piggy == 0) {
+        playerEGGS.innerHTML = "25";
+        let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+        yourHatchedEggs.style = "color: gold; font-size: 15px;";
+        yourHatchedEggs.innerHTML =
+          "You Start The Game With: " + "25" + " Eggs" + "<br>";
+      }
+    }
+  }
+  getMyRefferal();
+}
+
+function getMyRefferal() {
+  let refferal = document.getElementById("my-refferal");
+
+  if (refferal.value == "") {
+  } else {
+    if (refferal.value == userAccount.innerHTML) {
+      userAlert.innerHTML = "You Can't Refer Yourself :(";
+    } else {
+      let targetWordss = refferal.value;
+      let playerEGGS = document.getElementById("player-eggs");
+      let piggy = 0;
+      let mylist = document.getElementById("ul");
+      let listcount = document.getElementsByTagName("li");
+
+      let concatenatedStrings = targetWordss;
+      for (let i = 0; i < listcount.length; i++) {
+        let listItemText = listcount[i].textContent;
+        if (listItemText.includes(concatenatedStrings)) {
+          let targetpiggy = piggy + 1;
+          let piggyMath = targetpiggy;
+          piggy = piggyMath;
+        }
+      }
+
+      let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+      yourHatchedEggs.style = "color: gold; font-size: 15px;";
+      let refferalPhase = parseFloat(playerEGGS.innerHTML);
+      let rMath = refferalPhase + piggy;
+      playerEGGS.innerHTML = rMath;
+      yourHatchedEggs.innerHTML =
+        "Your Magic Chicken Started You With: " + "25" + " Eggs" + "<br>";
+      let gotitText = document.getElementById("gotit-text");
+      gotitText.innerHTML =
+        "Your Refferal Gave You: " +
+        piggy +
+        " Eggs" +
+        "<br> You Start With: " +
+        rMath +
+        " Eggs <br>";
+    }
+  }
   getMyImageEggs();
 }
 
