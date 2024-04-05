@@ -490,7 +490,7 @@ function wrapImage() {
 
             const openForm = document.getElementById("eggimage-form");
             openForm.className = "display";
-            let eggformImage = document.getElementById("eggform-image");
+            let eggformImage = document.getElementbyId("eggform-image");
             eggformImage.value = imageURL;
           }
 

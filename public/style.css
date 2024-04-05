@@ -573,13 +573,14 @@ li {
   width: 60%;
 }
 .piggybuttons {
-  width: 15%;
+  width: 25%;
   margin: 2px;
   padding: 4px;
   background-color: green;
   color: black;
   border-style: solid;
   font-size: 8px;
+  cursor: pointer;
 }
 
 .pacman {

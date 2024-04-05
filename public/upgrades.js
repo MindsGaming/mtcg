@@ -97,7 +97,7 @@ function wrapImage() {
   if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
   } else {
-    if (POINTS.innerHTML < 1000) {
+    if (POINTS.innerHTML < 1) {
       userAlert.innerHTML = "Not Enough Yolks";
     } else {
       let dreamCatcher = document.getElementsByTagName("li");
