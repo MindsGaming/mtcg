@@ -1165,7 +1165,12 @@
                   <br />
                 </div>
 
-                <div class="hide" id="farmer-images">
+                <div class="hide" id="farmerimages">
+                  <img
+                    id="got-rewardimages"
+                    class="creator-badge"
+                    src="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fthumbnails%2Fpixel.png"
+                  />
                   <img
                     id="eggimage-eye"
                     style="
@@ -1177,9 +1182,73 @@
                     "
                     src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
                   />
-                  <h2>Egg Images</h2>
+                  <h2>Wrapped Eggs!</h2>
+
                   <p class="article-text">
-                    <label id="myegg-images"> </label>
+                    You have Image Eggs!
+                    <br />
+                    Just click on them to download! <br />
+                    Or send them to your in game friends!
+                    <br />
+                    <br />
+                    <label style="width: 60%">
+                      <label id="myegg-images"></label>
+                    </label>
+                    <br />
+
+                    <label class="hide" id="eggimage-form">
+                      <img
+                        id="eggimageform-preview"
+                        style="
+                          width: 32px;
+                          height: 32px;
+                          margin: 3px;
+                          padding: 1px;
+                        "
+                        src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
+                      />
+                      <br />
+
+                      Game Account:
+                      <input
+                        id="transfer-myeggimage"
+                        name="transfer"
+                        aria-label="a new dream"
+                        type="text"
+                        maxlength="42"
+                        minlength="42"
+                        style="width: 53%"
+                        placeholder="Game Account"
+                        required
+                      /><br />
+                      <input
+                        id="eggform-image"
+                        name="transfer"
+                        aria-label="a new dream"
+                        type="text"
+                        placeholder="Amount"
+                        style="width: 23%"
+                        class="hide"
+                        ;
+                      />
+                      <button
+                        style="cursor: pointer"
+                        onclick="sendImageTransfer();"
+                      >
+                        Send Transfer <label style="gold">(5 Eggs)</label>
+                      </button>
+
+                      <button
+                        style="cursor: pointer"
+                        onclick="cancelImageTransfer();"
+                      >
+                        Cancel
+                      </button>
+
+                      <label style="color: red; font-size: 13px"
+                        >Only Send To Game Accounts</label
+                      >
+                    </label>
                   </p>
                 </div>
               </div>
