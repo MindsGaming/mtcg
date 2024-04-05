@@ -289,6 +289,7 @@ function chekIncomingTransfers() {
     "DarkMark",
     "DragonToken",
     "Candys",
+    "Send",
   ];
   let calc = "";
 
