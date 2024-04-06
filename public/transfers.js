@@ -574,11 +574,12 @@ function sendImageTransfer() {
         console.log(JSON.stringify(response));
       });
 
-    
     let deductEggs = document.getElementById("player-eggs");
-            let tack = parseFloat(playerEGGS.innerHTML);
+    let removetack = parseFloat(deductEggs.innerHTML);
+    let transferCost = 5;
+    let transferMath = removetack - transferCost;
+    deductEggs.innerHTML = transferMath;
 
-    
     // Add the dream value to the list
     dreams.push("Transfer:" + imageReciver.value + imageURL.value);
     appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
@@ -586,9 +587,7 @@ function sendImageTransfer() {
     imageReciver.value = "";
     cancelImageTransfer();
     createDreamblock();
-    
-    
-    
+    userAlert.innerHTML = "You Sent An Image Egg! 🎉";
   }
 }
 
