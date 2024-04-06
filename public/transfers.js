@@ -6,6 +6,9 @@ const transferTokenName = document.getElementById("transfer-tokenname");
 const piggybank = document.getElementById("piggy-bank");
 
 function sendGamerTransfer() {
+  
+  
+  
   transferForm.className = "display";
   getTransferToken.innerHTML = "GAMER";
   transferTokenName.title = "GAMER";
@@ -88,6 +91,16 @@ function sendTransfer() {
     if (transferTokenAmount.value < 5) {
       userAlert.innerHTML = "Transfer 5 or More";
     } else {
+      
+      let catchOverdraft = transferTokenName.valule + "-change";
+      let draftView = document.getlElementById(catchOverdraft);
+      
+      
+      
+      
+      
+      
+      
       let tCost = parseFloat(currenteggs.innerHTML);
 
       if (tCost < 5) {
@@ -434,22 +447,24 @@ function getMyEggs() {
         let newcomerEggs = 24;
         let tack = parseFloat(playerEGGS.innerHTML);
         let newcomerMath = tack + newcomerEggs;
-alert(playerEGGS.innerHTML)
         playerEGGS.innerHTML = newcomerMath;
         let yourHatchedEggs = document.getElementById("yourHatched-eggs");
         yourHatchedEggs.style = "color: gold; font-size: 15px;";
+        let newcomermath = piggy + 25;
         yourHatchedEggs.innerHTML =
-          "Your Magic Chicken Found: " + newcomerMath + " Eggs" + "<br>";
+          "Your Magic Chicken Found: " +
+          newcomermath +
+          " Eggs" +
+          "<br>" +
+          "Once you lay 25 of your own eggs well take back your starting eggs!";
+        PlayChicken();
       }
     } else {
       if (piggy == 0) {
         playerEGGS.innerHTML = "25";
-        alert(playerEGGS.innerHTML)
-
         let yourHatchedEggs = document.getElementById("yourHatched-eggs");
         yourHatchedEggs.style = "color: gold; font-size: 15px;";
         let newcomermath = piggy + 25;
-
         yourHatchedEggs.innerHTML =
           "Your Magic Chicken Found: " +
           newcomermath +
