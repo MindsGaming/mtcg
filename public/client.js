@@ -682,7 +682,7 @@ function PINNchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const request = document.getElementById("PINN-change");
   let currentchange = parseInt(POINTS.innerHTML);
-  let removePOINTS = 100;
+  let removePOINTS = 1000;
 
   if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
@@ -741,7 +741,7 @@ function WTVchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const request = document.getElementById("WTV-change");
   let currentchange = parseInt(POINTS.innerHTML);
-  let removePOINTS = 100;
+  let removePOINTS = 1000;
 
   if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
@@ -800,7 +800,7 @@ function DARKMARKchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const request = document.getElementById("DARKMARK-change");
   let currentchange = parseInt(POINTS.innerHTML);
-  let removePOINTS = 100;
+  let removePOINTS = 1000;
 
   if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
@@ -859,7 +859,7 @@ function DRAGONchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const request = document.getElementById("DRAGONTOKEN-change");
   let currentchange = parseInt(POINTS.innerHTML);
-  let removePOINTS = 100;
+  let removePOINTS = 1000;
 
   if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
@@ -918,7 +918,7 @@ function CANDYSchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const request = document.getElementById("CANDYS-change");
   let currentchange = parseInt(POINTS.innerHTML);
-  let removePOINTS = 100;
+  let removePOINTS = 1000;
 
   if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
