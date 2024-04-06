@@ -574,6 +574,11 @@ function sendImageTransfer() {
         console.log(JSON.stringify(response));
       });
 
+    
+    let deductEggs = document.getElementById("player-eggs");
+            let tack = parseFloat(playerEGGS.innerHTML);
+
+    
     // Add the dream value to the list
     dreams.push("Transfer:" + imageReciver.value + imageURL.value);
     appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
@@ -581,6 +586,9 @@ function sendImageTransfer() {
     imageReciver.value = "";
     cancelImageTransfer();
     createDreamblock();
+    
+    
+    
   }
 }
 
