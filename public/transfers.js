@@ -510,10 +510,10 @@ function getMyRefferal() {
         "<br> You Start With: " +
         rMath +
         " Eggs <br>";
-      
-        let  = document.getElementById("eggimage-form");
-    eggimageform.className = "game-article";
-      
+
+      let farmingrewards = document.getElementById("farming-rewards");
+      farmingrewards.className = "game-article";
+      refferal.value = "";
     }
   }
   getMyImageEggs();
