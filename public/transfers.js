@@ -289,7 +289,6 @@ function sendTransfer() {
             transferForm.className = "hide";
             userAlert.innerHTML = "Transfer Sent!";
           }
-          hidebank();
 
           let removetCost = 5;
           let tmath = tCost - 5;
@@ -298,8 +297,22 @@ function sendTransfer() {
       }
     }
   }
-
+  hidebank();
+  cancelTransfer();
   pullENERGY();
+}
+
+function cancelTransfer() {
+  let transformForm = document.getElementById("transfer-form");
+
+  if (transformForm.className == "display") {
+    transformForm.className = "hide";
+    piggybank.className = "piggybank";
+  } else {
+    if (transformForm.className == "hide") {
+      transformForm.className = "display";
+    }
+  }
 }
 
 function hidebank() {
@@ -390,6 +403,8 @@ function checkSentTransfers() {
         let targetpiggy = parseFloat(fetchpiggy.innerHTML);
         let piggyMath = targetpiggy - tack;
         fetchpiggy.innerHTML = piggyMath;
+        let openPIGGY = document.getElementById("farming-rewards");
+        openPIGGY.className = "game-article";
 
         if (piggyMath == 0 || piggyMath < 0) {
           fetchpiggy.innerHTML = 0;
