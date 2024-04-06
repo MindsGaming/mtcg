@@ -1,4 +1,18 @@
-/ http:/ / expressjs.com / en / starter / static - files.html;
+// server.js
+// where your node app starts
+
+// init project
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
+const fs = require("fs");
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// we've started you off with Express,
+// but feel free to use whatever libs or frameworks you'd like through `package.json`.
+
+// http://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));
 
 // init sqlite db
@@ -18,7 +32,7 @@ db.serialize(() => {
     // insert default dreams
     db.serialize(() => {
       db.run(
-        'INSERT INTO Dreams (dream) VALUES ("#MindsGaming"), ("Booting Realm..."), ("0xffD25e260C329253b8BEb1eBcF6fE6eeD215923d Requested: 100YourCoin")'
+        'INSERT INTO Dreams (dream) VALUES ("Find and count some sheep"), ("Climb a really tall mountain"), ("Wash the dishes")'
       );
     });
   } else {
