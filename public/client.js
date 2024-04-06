@@ -1299,7 +1299,7 @@ function WTVPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "Wtv: " + currentchange,
+      dream: "Sent:" + userAccount.innerHTML + "WTV" + currentchange,
     };
 
     fetch("/addDream", {
@@ -1313,8 +1313,8 @@ function WTVPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Wtv: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "Wtv: " + currentchange);
+    dreams.push(userAccount.innerHTML + "WTV" + currentchange);
+    appendNewDream(userAccount.innerHTML + "WTV" + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
