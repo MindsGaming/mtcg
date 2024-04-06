@@ -427,8 +427,15 @@ function getMyEggs() {
         playerEGGS.innerHTML = "25";
         let yourHatchedEggs = document.getElementById("yourHatched-eggs");
         yourHatchedEggs.style = "color: gold; font-size: 15px;";
+        let newcomermath = piggy + 24;
+
         yourHatchedEggs.innerHTML =
-          "Your Magic Chicken Found: " + "25" + " Eggs" + "<br>";
+          "Your Magic Chicken Found: " +
+          newcomermath +
+          " Eggs" +
+          "<br>" +
+          "Once you lay 25 of your own eggs well take back your starting eggs!";
+        PlayChicken();
       }
     } else {
       if (piggy == 0) {
