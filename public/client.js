@@ -856,7 +856,7 @@ function DARKMARKchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "GAMER" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "DARKMARK" + "5",
     };
 
     fetch("/addDream", {
@@ -873,11 +873,11 @@ function DARKMARKchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "DARKMARK" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "DARKMARK" + "5");
 
-     let yolkstofeed = parseFloat(POINTS.innerHTML);
+    let yolkstofeed = parseFloat(POINTS.innerHTML);
     let transferCost = 1000;
     let transferMath = yolkstofeed - transferCost;
     POINTS.innerHTML = transferMath;
-    
+
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
     let mathChange = pushchange + addchange;
@@ -936,6 +936,11 @@ function DRAGONchange() {
     // Add the dream value to the list
     dreams.push("Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "5");
+
+    let yolkstofeed = parseFloat(POINTS.innerHTML);
+    let transferCost = 1000;
+    let transferMath = yolkstofeed - transferCost;
+    POINTS.innerHTML = transferMath;
 
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
@@ -996,6 +1001,11 @@ function CANDYSchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "CANDYS" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "CANDYS" + "5");
 
+    let yolkstofeed = parseFloat(POINTS.innerHTML);
+    let transferCost = 1000;
+    let transferMath = yolkstofeed - transferCost;
+    POINTS.innerHTML = transferMath;
+
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
     let mathChange = pushchange + addchange;
@@ -1014,7 +1024,7 @@ function GamerPOINTS() {
   const request = document.getElementById("GAMER-change");
   let currentchange = parseInt(request.innerHTML);
 
-  if (currentchange < 100) {
+  if (currentchange < 1) {
     userAlert.innerHTML = "100 GAMER to send requests";
   } else {
     // Request dreams from the app's SQLite database
@@ -1044,7 +1054,7 @@ function GamerPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "Gamer: " + currentchange,
+      dream: "Request:" + userAccount.innerHTML + "GAMER" + currentchange,
     };
 
     fetch("/addDream", {
@@ -1058,8 +1068,10 @@ function GamerPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Gamer: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "Gamer: " + currentchange);
+    dreams.push("Request:" + userAccount.innerHTML + "GAMER" + currentchange);
+    appendNewDream(
+      "Request:" + userAccount.innerHTML + "GAMER" + currentchange
+    );
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
