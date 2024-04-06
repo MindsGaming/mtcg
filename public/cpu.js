@@ -94,8 +94,7 @@ function hooksview() {
 function openhubs() {
   if (infinity.title == "Infinity") {
     infinity.title = "Hubs";
-    infinity.src =
-      "https://hubs.mozilla.com/EJFaEcZ?embed_token=d4f6c2c54a1a684be3668b366724fb05";
+    infinity.src = "https://hubs-mtcg.glitch.me/";
     groups.className = "hide";
     splash.className = "splash";
     infinity.className = "apps";
