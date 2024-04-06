@@ -446,7 +446,7 @@ function GAMERchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const request = document.getElementById("GAMER-change");
   let currentchange = parseInt(POINTS.innerHTML);
-  let removePOINTS = 1;
+  let removePOINTS = 1000;
 
   if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
@@ -489,8 +489,8 @@ function GAMERchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "GAMER" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "GAMER" + "5");
 
-    let transferCost = 1;
-    let transferMath = currentchange - 1;
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
     POINTS.innerHTML = transferMath;
 
     let pushchange = parseInt(request.innerHTML);
@@ -1015,7 +1015,7 @@ function GamerPOINTS() {
   const request = document.getElementById("GAMER-change");
   let currentchange = parseInt(request.innerHTML);
 
-  if (currentchange < 1) {
+  if (currentchange < 100) {
     userAlert.innerHTML = "100 GAMER to send requests";
   } else {
     // Request dreams from the app's SQLite database
