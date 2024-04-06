@@ -456,21 +456,7 @@ function getMyEggs() {
         playerEGGS.innerHTML = newcomerMath;
         let yourHatchedEggs = document.getElementById("yourHatched-eggs");
         yourHatchedEggs.style = "color: gold; font-size: 15px;";
-        let newcomermath = piggy + 25;
-        yourHatchedEggs.innerHTML =
-          "Your Magic Chicken Found: " +
-          newcomermath +
-          " Eggs" +
-          "<br>" +
-          "Once you lay 25 of your own eggs well take back your starting eggs!";
-        PlayChicken();
-      }
-    } else {
-      if (piggy == 0) {
-        playerEGGS.innerHTML = "25";
-        let yourHatchedEggs = document.getElementById("yourHatched-eggs");
-        yourHatchedEggs.style = "color: gold; font-size: 15px;";
-        let newcomermath = piggy + 25;
+        let newcomermath = piggy + 24;
         yourHatchedEggs.innerHTML =
           "Your Magic Chicken Found: " +
           newcomermath +
@@ -508,21 +494,26 @@ function getMyRefferal() {
         }
       }
 
-      let yourHatchedEggs = document.getElementById("yourHatched-eggs");
-      yourHatchedEggs.style = "color: gold; font-size: 15px;";
       let refferalPhase = parseFloat(playerEGGS.innerHTML);
       let rMath = refferalPhase + piggy;
       playerEGGS.innerHTML = rMath;
-      yourHatchedEggs.innerHTML =
-        "Your Magic Chicken Started You With: " + "25" + " Eggs" + "<br>";
+
+      let tackRefferal = refferalPhase - 2;
+      let magicChikenstring =
+        "Your Magic Chicken Found: " + tackRefferal + " Eggs" + "<br>";
       let gotitText = document.getElementById("gotit-text");
       gotitText.innerHTML =
         "Your Refferal Gave You: " +
         piggy +
-        " Eggs" +
+        " Eggs <br>" +
+        magicChikenstring +
         "<br> You Start With: " +
         rMath +
         " Eggs <br>";
+      
+        let  = document.getElementById("eggimage-form");
+    eggimageform.className = "game-article";
+      
     }
   }
   getMyImageEggs();
@@ -533,8 +524,6 @@ function openRefferal() {
 
   if (openRefferal.className == "hide") {
     openRefferal.className = "display";
-    let eggimageform = document.getElementById("eggimage-form");
-    eggimageform.className = "game-article";
   } else {
     openRefferal.className = "hide";
   }
