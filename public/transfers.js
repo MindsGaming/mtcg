@@ -390,13 +390,35 @@ function checkSentTransfers() {
       }
     }
   }
+  deductMyEggs();
+}
+
+function deductMyEggs() {
+  let userAccount = document.getElementById("user-account");
+  const newCurrent = document.getElementById("current-eggs");
+  newCurrent.id = "player-eggs";
+  let targetWords = userAccount.innerHTML;
+  let playerEGGS = document.getElementById("player-eggs");
+  let piggy = 0;
+  let mylist = document.getElementById("ul");
+  let listcount = document.getElementsByTagName("li");
+  let concatenatedStrings = userAccount.innerHTML;
+  for (let i = 0; i < listcount.length; i++) {
+    let listItemText = listcount[i].textContent;
+    if (listItemText.includes("Request:" + concatenatedStrings)) {
+      piggy += 1;
+      let piggyRequest = piggy * 10;
+      let playerEggsValue = parseFloat(playerEGGS.innerHTML);
+      let piggyMath = playerEggsValue - piggyRequest;
+      alert(piggyMath);
+      playerEGGS.innerHTML = piggyMath;
+    }
+  }
   getMyEggs();
 }
 
 function getMyEggs() {
   let targetWordss = userAccount.innerHTML;
-  const newCurrent = document.getElementById("current-eggs");
-  newCurrent.id = "player-eggs";
   let playerEGGS = document.getElementById("player-eggs");
   let piggy = 0;
   let mylist = document.getElementById("ul");
@@ -434,7 +456,7 @@ function getMyEggs() {
           newcomermath +
           " Eggs" +
           "<br>" +
-          "Once you lay 25 of your own eggs well take back your starting eggs!";
+          "Once you lay 25 of your own eggs we will take back your starting eggs!";
         PlayChicken();
       }
     } else {
@@ -824,4 +846,10 @@ function myImageDownloads(imageSrc) {
   fetch(imageSrc)
     .then((response) => response.blob())
     .then(build);
+}
+
+
+
+function cancelTransfer(){
+  let cancelTransfer = 
 }
