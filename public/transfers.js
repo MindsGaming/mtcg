@@ -380,12 +380,13 @@ function checkSentTransfers() {
         let targetpiggy = parseFloat(fetchpiggy.innerHTML);
         let piggyMath = targetpiggy - tack;
         fetchpiggy.innerHTML = piggyMath;
-        
-        
-        let eggDedecut = tack * 5;
-      POINTS.innerHTML = -eggDeduct; 
-        
-        
+
+        let newCurrent = document.getElementById("current-eggs");
+        let eggDeduct = parseFloat(newCurrent.innerHTML);
+        let eggCost = tack * 5; 
+        let eggMath = eggDeduct - 
+        POINTS.innerHTML = -eggDeduct;
+
         if (piggyMath == 0 || piggyMath < 0) {
           fetchpiggy.innerHTML = 0;
         } else {
@@ -430,11 +431,15 @@ function getMyEggs() {
     if (piggy < 25) {
       if (piggy == 0) {
       } else {
-        playerEGGS.innerHTML = "25";
+        let newcomerEggs = 24;
+        let tack = parseFloat(playerEGGS.innerHTML);
+        let newcomerMath = tack + newcomerEggs;
+
+        playerEGGS.innerHTML = newcomerMath;
         let yourHatchedEggs = document.getElementById("yourHatched-eggs");
         yourHatchedEggs.style = "color: gold; font-size: 15px;";
         yourHatchedEggs.innerHTML =
-          "Your Magic Chicken Found: " + "25" + " Eggs" + "<br>";
+          "Your Magic Chicken Found: " + newcomerMath + " Eggs" + "<br>";
       }
     } else {
       if (piggy == 0) {
