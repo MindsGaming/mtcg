@@ -365,12 +365,13 @@ function checkSentTransfers() {
   let userAccountContent = userAccount.innerHTML;
   let calc = "";
   for (let j = 0; j < targetWords.length; j++) {
-    let concatenatedString = "Sent:" + userAccountContent + targetWords[j];
+    let concatenatedString =
+      "Sent:" + "Refferal:" + userAccountContent + targetWords[j];
     for (let i = 0; i < listcount.length; i++) {
       let listItemText = listcount[i].textContent;
       if (listItemText.includes(concatenatedString)) {
         let newAlert = listItemText.replace(
-          "Sent:" + userAccount.innerHTML + targetWords[j],
+          "Sent:" + "Refferal:" + userAccount.innerHTML + targetWords[j],
           ""
         );
 
@@ -410,7 +411,6 @@ function deductMyEggs() {
       let piggyRequest = piggy * 10;
       let playerEggsValue = parseFloat(playerEGGS.innerHTML);
       let piggyMath = playerEggsValue - piggyRequest;
-      alert(piggyMath);
       playerEGGS.innerHTML = piggyMath;
     }
   }
