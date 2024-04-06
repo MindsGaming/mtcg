@@ -446,7 +446,7 @@ function GAMERchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const request = document.getElementById("GAMER-change");
   let currentchange = parseInt(POINTS.innerHTML);
-  let removePOINTS = 1000;
+  let removePOINTS = 1;
 
   if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
@@ -489,6 +489,10 @@ function GAMERchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "GAMER" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "GAMER" + "5");
 
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+    
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
     let mathChange = pushchange + addchange;
@@ -548,6 +552,10 @@ function ECLIPSEchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "ECLIPSE" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "ECLIPSE" + "5");
 
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+    
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
     let mathChange = pushchange + addchange;
@@ -607,6 +615,10 @@ function DooBetterchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "DOOBETTER" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "DOOBETTER" + "5");
 
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+    
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
     let mathChange = pushchange + addchange;
@@ -672,6 +684,10 @@ function GTPCchange() {
     request.innerHTML = mathChange;
     userAlert.innerHTML = "Sent To Your Farm!";
 
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+    
     let farmingrewards = document.getElementById("farming-rewards");
     farmingrewards.className = "game-article";
     pullENERGY();
@@ -725,6 +741,10 @@ function PINNchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "PINN" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "PINN" + "5");
 
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+    
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
     let mathChange = pushchange + addchange;
@@ -784,6 +804,10 @@ function WTVchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "WTV" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "WTV" + "5");
 
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+    
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
     let mathChange = pushchange + addchange;
@@ -843,6 +867,10 @@ function DARKMARKchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "DARKMARK" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "DARKMARK" + "5");
 
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+    
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
     let mathChange = pushchange + addchange;
@@ -902,6 +930,10 @@ function DRAGONchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "5");
 
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+    
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
     let mathChange = pushchange + addchange;
@@ -961,6 +993,10 @@ function CANDYSchange() {
     dreams.push("Transfer:" + userAccount.innerHTML + "CANDYS" + "5");
     appendNewDream("Transfer:" + userAccount.innerHTML + "CANDYS" + "5");
 
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+    
     let pushchange = parseInt(request.innerHTML);
     let addchange = 5;
     let mathChange = pushchange + addchange;
@@ -1009,7 +1045,7 @@ function GamerPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "Gamer: " + currentchange,
+      dream: "Sent:" + userAccount.innerHTML + "GAMER" + currentchange,
     };
 
     fetch("/addDream", {
@@ -1023,8 +1059,11 @@ function GamerPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Gamer: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "Gamer: " + currentchange);
+    
+    
+    
+    dreams.push("Sent:" + userAccount.innerHTML + "GAMER" + currentchange);
+    appendNewDream("Sent:" + userAccount.innerHTML + "GAMER" + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -1067,7 +1106,7 @@ function ECLIPSEPOINTS() {
     };
 
     const data = {
-      dream: userAccount.innerHTML + "Eclipse: " + currentchange,
+      dream: "Sent:" + userAccount.innerHTML + "ECLIPSE" + currentchange,
     };
 
     fetch("/addDream", {
@@ -1081,7 +1120,7 @@ function ECLIPSEPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Eclipse: " + currentchange);
+    dreams.push("Sent:" + userAccount.innerHTML + "ECLIPSE" + currentchange);
     appendNewDream(userAccount.innerHTML + "Eclipse: " + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
