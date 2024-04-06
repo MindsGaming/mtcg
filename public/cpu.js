@@ -281,6 +281,27 @@ function createDreamblock() {
   appendNewDream(dreamBlock.value);
 }
 
+function myChain() {
+  const chainFinder = document.getElementById("dreams");
+  let chainLink = chainFinder.getElementsByTagName("li").length;
+  let chainLength = chainLink + 1;
+  let chainLock = 10000;
+  let chainMath = chainLock / chainLength;
+
+  for (let DreamChain = 0; DreamChain < chainLength; DreamChain++) {
+    for (let i = 0; i < [DreamChain]; i++) {
+      let grabber = document.getElementById([DreamChain]);
+      let toggleMath = Math.floor(Math.random() * chainMath);
+
+      if (toggleMath == 0) {
+        toggleMath = 1;
+      }
+      grabber.value = toggleMath;
+    }
+  }
+}
+setTimeout(myChain, 5000);
+
 function HOME() {
   window.open("/", "_self");
 }
