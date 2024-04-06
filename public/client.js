@@ -850,7 +850,7 @@ function DARKMARKchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "GAMER" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "DARKMARK" + "5",
     };
 
     fetch("/addDream", {
