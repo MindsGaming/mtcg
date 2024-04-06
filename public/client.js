@@ -444,205 +444,534 @@ function checkPage() {
 
 function GAMERchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 2000;
-  const trackers = document.getElementById("farming-rewards");
+  const request = document.getElementById("GAMER-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 1000;
 
-  if (checkPOINTS < removePOINTS) {
+  if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
   } else {
-    const EGGmath = Math.round(checkPOINTS - removePOINTS);
-    POINTS.innerHTML = EGGmath;
-    const request = document.getElementById("GAMER-change");
-    let currentchange = parseInt(request.innerHTML);
-    let boostrequest = 5;
-    let requestmath = currentchange + boostrequest;
-    request.innerHTML = requestmath;
-    trackers.className = "game-article";
-    userAlert.innerHTML = "Sent To Farm";
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "GAMER" + "5",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "GAMER" + "5");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "GAMER" + "5");
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 5;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
     pullENERGY();
   }
 }
 
 function ECLIPSEchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 2000;
-  const trackers = document.getElementById("farming-rewards");
+  const request = document.getElementById("ECLIPSE-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 1000;
 
-  if (checkPOINTS < removePOINTS) {
+  if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
   } else {
-    const EGGmath = Math.round(checkPOINTS - removePOINTS);
-    POINTS.innerHTML = EGGmath;
-    const request = document.getElementById("ECLIPSE-change");
-    let currentchange = parseInt(request.innerHTML);
-    let boostrequest = 7;
-    let requestmath = currentchange + boostrequest;
-    request.innerHTML = requestmath;
-    trackers.className = "game-article";
-    userAlert.innerHTML = "Sent To Farm";
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
 
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "ECLIPSE" + "5",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "ECLIPSE" + "5");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "ECLIPSE" + "5");
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 5;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
     pullENERGY();
   }
 }
 
 function DooBetterchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 2000;
-  const trackers = document.getElementById("farming-rewards");
+  const request = document.getElementById("DOOBETTER-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 1000;
 
-  if (checkPOINTS < removePOINTS) {
+  if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
   } else {
-    const EGGmath = Math.round(checkPOINTS - removePOINTS);
-    POINTS.innerHTML = EGGmath;
-    const request = document.getElementById("DOOBETTER-change");
-    let currentchange = parseInt(request.innerHTML);
-    let boostrequest = 5;
-    let requestmath = currentchange + boostrequest;
-    request.innerHTML = requestmath;
-    trackers.className = "game-article";
-    userAlert.innerHTML = "Sent To Farm";
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
 
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "DOOBETTER" + "5",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "DOOBETTER" + "5");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "DOOBETTER" + "5");
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 5;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
     pullENERGY();
   }
 }
 
 function GTPCchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 2000;
-  const trackers = document.getElementById("farming-rewards");
+  const request = document.getElementById("GTPC-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 1000;
 
-  if (checkPOINTS < removePOINTS) {
+  if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
   } else {
-    const EGGmath = Math.round(checkPOINTS - removePOINTS);
-    POINTS.innerHTML = EGGmath;
-    const request = document.getElementById("GTPC-change");
-    let currentchange = parseInt(request.innerHTML);
-    let boostrequest = 6;
-    let requestmath = currentchange + boostrequest;
-    request.innerHTML = requestmath;
-    trackers.className = "game-article";
-    userAlert.innerHTML = "Sent To Farm";
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
 
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "GTPC" + "5",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "GTPC" + "5");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "GTPC" + "5");
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 5;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
     pullENERGY();
   }
 }
 
 function PINNchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 2000;
-  const trackers = document.getElementById("farming-rewards");
+  const request = document.getElementById("PINN-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 100;
 
-  if (checkPOINTS < removePOINTS) {
+  if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
   } else {
-    const EGGmath = Math.round(checkPOINTS - removePOINTS);
-    POINTS.innerHTML = EGGmath;
-    const request = document.getElementById("PINN-change");
-    let currentchange = parseInt(request.innerHTML);
-    let boostrequest = 5;
-    let requestmath = currentchange + boostrequest;
-    request.innerHTML = requestmath;
-    trackers.className = "game-article";
-    userAlert.innerHTML = "Sent To Farm";
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "PINN" + "5",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "PINN" + "5");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "PINN" + "5");
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 5;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
     pullENERGY();
   }
 }
 
 function WTVchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 2000;
-  const trackers = document.getElementById("farming-rewards");
+  const request = document.getElementById("WTV-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 100;
 
-  if (checkPOINTS < removePOINTS) {
+  if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
   } else {
-    const EGGmath = Math.round(checkPOINTS - removePOINTS);
-    POINTS.innerHTML = EGGmath;
-    const request = document.getElementById("WTV-change");
-    let currentchange = parseInt(request.innerHTML);
-    let boostrequest = 8;
-    let requestmath = currentchange + boostrequest;
-    request.innerHTML = requestmath;
-    trackers.className = "game-article";
-    userAlert.innerHTML = "Sent To Farm";
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "WTV" + "5",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "WTV" + "5");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "WTV" + "5");
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 5;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
     pullENERGY();
   }
 }
 
 function DARKMARKchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 2000;
-  const trackers = document.getElementById("farming-rewards");
+  const request = document.getElementById("DARKMARK-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 100;
 
-  if (checkPOINTS < removePOINTS) {
+  if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
   } else {
-    const EGGmath = Math.round(checkPOINTS - removePOINTS);
-    POINTS.innerHTML = EGGmath;
-    const request = document.getElementById("DARKMARK-change");
-    let currentchange = parseInt(request.innerHTML);
-    let boostrequest = 9;
-    let requestmath = currentchange + boostrequest;
-    request.innerHTML = requestmath;
-    trackers.className = "game-article";
-    userAlert.innerHTML = "Sent To Farm";
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "GAMER" + "5",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "DARKMARK" + "5");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "DARKMARK" + "5");
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 5;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
     pullENERGY();
   }
 }
 
 function DRAGONchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 2000;
-  const trackers = document.getElementById("farming-rewards");
+  const request = document.getElementById("DRAGONTOKEN-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 100;
 
-  if (checkPOINTS < removePOINTS) {
+  if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
   } else {
-    const EGGmath = Math.round(checkPOINTS - removePOINTS);
-    POINTS.innerHTML = EGGmath;
-    const request = document.getElementById("DRAGONTOKEN-change");
-    let currentchange = parseInt(request.innerHTML);
-    let boostrequest = 10;
-    let requestmath = currentchange + boostrequest;
-    request.innerHTML = requestmath;
-    trackers.className = "game-article";
-    userAlert.innerHTML = "Sent To Farm";
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "5",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "5");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "5");
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 5;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
     pullENERGY();
   }
 }
 
 function CANDYSchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const checkPOINTS = parseFloat(POINTS.innerHTML);
-  const removePOINTS = 2000;
-  const trackers = document.getElementById("farming-rewards");
+  const request = document.getElementById("CANDYS-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 100;
 
-  if (checkPOINTS < removePOINTS) {
+  if (currentchange < removePOINTS) {
     userAlert.innerHTML = "Not enough Yolks";
   } else {
-    const EGGmath = Math.round(checkPOINTS - removePOINTS);
-    POINTS.innerHTML = EGGmath;
-    const request = document.getElementById("CANDYS-change");
-    let currentchange = parseInt(request.innerHTML);
-    let boostrequest = 5;
-    let requestmath = currentchange + boostrequest;
-    request.innerHTML = requestmath;
-    trackers.className = "game-article";
-    userAlert.innerHTML = "Sent To Farm";
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "CANDYS" + "5",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "CANDYS" + "5");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "CANDYS" + "5");
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 5;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
     pullENERGY();
   }
 }
-
 /* Market */
 
 function GamerPOINTS() {
