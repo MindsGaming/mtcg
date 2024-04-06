@@ -848,8 +848,15 @@ function myImageDownloads(imageSrc) {
     .then(build);
 }
 
-
-
-function cancelTransfer(){
-  let cancelTransfer = 
+function cancelTransfer() {
+  let cancelTransfer = document.getElementById("transfer-form");
+  let openPiggy = document.getElementById("piggy-bank");
+  if (cancelTransfer.className == "display") {
+    cancelTransfer.className = "hide";
+    openPiggy.className = "piggybank";
+  } else {
+    if (cancelTransfer.className == "hide") {
+      cancelTransfer.className = "display";
+    }
+  }
 }
