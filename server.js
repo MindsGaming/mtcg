@@ -32,7 +32,7 @@ db.serialize(() => {
     // insert default dreams
     db.serialize(() => {
       db.run(
-        'INSERT INTO Dreams (dream) VALUES ("Find and count some sheep"), ("Climb a really tall mountain"), ("Wash the dishes")'
+        'INSERT INTO Dreams (dream) VALUES ("#MindsGaming"), ("Booting Realm..."), ("0xffD25e260C329253b8BEb1eBcF6fE6eeD215923d Requested: 100YourCoin")'
       );
     });
   } else {
