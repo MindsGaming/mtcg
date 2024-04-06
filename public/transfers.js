@@ -311,6 +311,7 @@ function cancelTransfer() {
   } else {
     if (transformForm.className == "hide") {
       transformForm.className = "display";
+      transformForm.focus();
     }
   }
 }
