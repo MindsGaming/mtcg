@@ -11,6 +11,7 @@ function sendGamerTransfer() {
   transferTokenName.title = "GAMER";
   transferTokenName.value = "GAMER";
   piggybank.className = "hide";
+  transferForm.focus();
 }
 
 function sendWtvTransfer() {
@@ -19,6 +20,7 @@ function sendWtvTransfer() {
   transferTokenName.title = "WTV";
   transferTokenName.value = "WTV";
   piggybank.className = "hide";
+  transferForm.focus();
 }
 
 function sendDoobetterTransfer() {
@@ -27,6 +29,7 @@ function sendDoobetterTransfer() {
   transferTokenName.title = "DooBetter";
   transferTokenName.value = "DooBetter";
   piggybank.className = "hide";
+  transferForm.focus();
 }
 
 function sendEclipseTransfer() {
@@ -35,6 +38,7 @@ function sendEclipseTransfer() {
   transferTokenName.title = "ECLIPSE";
   transferTokenName.value = "ECLIPSE";
   piggybank.className = "hide";
+  transferForm.focus();
 }
 
 function sendGtpcTransfer() {
@@ -43,6 +47,8 @@ function sendGtpcTransfer() {
   transferTokenName.title = "GTPC";
   transferTokenName.value = "GTPC";
   piggybank.className = "hide";
+  transferForm.focus();
+  transferForm.focus();
 }
 
 function sendPinnTransfer() {
@@ -51,6 +57,7 @@ function sendPinnTransfer() {
   transferTokenName.title = "PINN";
   transferTokenName.value = "PINN";
   piggybank.className = "hide";
+  transferForm.focus();
 }
 
 function sendDragonTokenTransfer() {
@@ -59,6 +66,7 @@ function sendDragonTokenTransfer() {
   transferTokenName.title = "DragonToken";
   transferTokenName.value = "DragonToken";
   piggybank.className = "hide";
+  transferForm.focus();
 }
 
 function sendDarkmarkTransfer() {
@@ -67,6 +75,7 @@ function sendDarkmarkTransfer() {
   transferTokenName.title = "DarkMark";
   transferTokenName.value = "DarkMark";
   piggybank.className = "hide";
+  transferForm.focus();
 }
 
 function sendCandysTransfer() {
@@ -75,6 +84,7 @@ function sendCandysTransfer() {
   transferTokenName.title = "Candys";
   transferTokenName.value = "Candys";
   piggybank.className = "hide";
+  transferForm.focus();
 }
 
 function sendTransfer() {

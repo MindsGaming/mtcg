@@ -500,6 +500,7 @@ li {
   border-radius: 50%;
   background-image: contain;
   background-repeat: no-repeat;
+  background-size:cover;
 }
 
 .creator-wrap {
