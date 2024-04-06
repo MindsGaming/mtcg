@@ -380,6 +380,12 @@ function checkSentTransfers() {
         let targetpiggy = parseFloat(fetchpiggy.innerHTML);
         let piggyMath = targetpiggy - tack;
         fetchpiggy.innerHTML = piggyMath;
+        
+        
+        let eggDedecut = tack * 5;
+      POINTS.innerHTML = -eggDeduct; 
+        
+        
         if (piggyMath == 0 || piggyMath < 0) {
           fetchpiggy.innerHTML = 0;
         } else {
