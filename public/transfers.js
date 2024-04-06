@@ -91,14 +91,13 @@ function sendTransfer() {
       let catchOverdraft = transferTokenName.value + "-change";
       let draftView = document.getElementById(catchOverdraft);
       let phaseView = parseFloat(draftView.innerHTML);
-      let phaseRequesting = parseFloat(transferTokenAmount.value);
+      let phaseRequesting = transferTokenAmount.value;
       let draftOutcome = phaseView - phaseRequesting;
-
-      if (draftOutcome < phaseRequesting) {
+      if (draftOutcome < 0) {
         userAlert.innerHTML = "More Than Current Stock";
       } else {
+        catchOverdraft = "";
         let tCost = parseFloat(currenteggs.innerHTML);
-
         if (tCost < 5) {
           userAlert.innerHTML = "5 Eggs Reqired";
         } else {
@@ -298,7 +297,6 @@ function sendTransfer() {
     }
   }
   hidebank();
-  cancelTransfer();
   pullENERGY();
 }
 
