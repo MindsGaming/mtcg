@@ -383,9 +383,9 @@ function checkSentTransfers() {
 
         let newCurrent = document.getElementById("current-eggs");
         let eggDeduct = parseFloat(newCurrent.innerHTML);
-        let eggCost = tack * 5; 
-        let eggMath = eggDeduct - 
-        POINTS.innerHTML = -eggDeduct;
+        let eggCost = tack * 5;
+        let eggMath = eggDeduct - eggCost;
+        currenteggs.innerHTML = -eggMath;
 
         if (piggyMath == 0 || piggyMath < 0) {
           fetchpiggy.innerHTML = 0;
@@ -434,7 +434,7 @@ function getMyEggs() {
         let newcomerEggs = 24;
         let tack = parseFloat(playerEGGS.innerHTML);
         let newcomerMath = tack + newcomerEggs;
-
+alert(playerEGGS.innerHTML)
         playerEGGS.innerHTML = newcomerMath;
         let yourHatchedEggs = document.getElementById("yourHatched-eggs");
         yourHatchedEggs.style = "color: gold; font-size: 15px;";
@@ -444,6 +444,8 @@ function getMyEggs() {
     } else {
       if (piggy == 0) {
         playerEGGS.innerHTML = "25";
+        alert(playerEGGS.innerHTML)
+
         let yourHatchedEggs = document.getElementById("yourHatched-eggs");
         yourHatchedEggs.style = "color: gold; font-size: 15px;";
         let newcomermath = piggy + 25;
