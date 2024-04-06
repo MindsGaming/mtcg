@@ -6,9 +6,6 @@ const transferTokenName = document.getElementById("transfer-tokenname");
 const piggybank = document.getElementById("piggy-bank");
 
 function sendGamerTransfer() {
-  
-  
-  
   transferForm.className = "display";
   getTransferToken.innerHTML = "GAMER";
   transferTokenName.title = "GAMER";
@@ -91,71 +88,37 @@ function sendTransfer() {
     if (transferTokenAmount.value < 5) {
       userAlert.innerHTML = "Transfer 5 or More";
     } else {
-      
-      let catchOverdraft = transferTokenName.valule + "-change";
-      let draftView = document.getlElementById(catchOverdraft);
-      
-      
-      
-      
-      
-      
-      
-      let tCost = parseFloat(currenteggs.innerHTML);
+      let catchOverdraft = transferTokenName.value + "-change";
+      let draftView = document.getElementById(catchOverdraft);
+      let phaseView = parseFloat(draftView.innerHTML);
+      let phaseRequesting = parseFloat(transferTokenAmount.value);
+      let draftOutcome = phaseView - phaseRequesting;
 
-      if (tCost < 5) {
-        userAlert.innerHTML = "5 Eggs Reqired";
+      if (draftOutcome < phaseRequesting) {
+        userAlert.innerHTML = "More Than Current Stock";
       } else {
-        const appendNewDreamss = (dream) => {
-          const newListItem = document.createElement("li");
-          const randomWarp = Math.floor(Math.random() * numb) + 1;
-          newListItem.innerText = dream;
-          newListItem.title = "Request";
-          newListItem.id = numb;
-          newListItem.value = randomWarp;
-          newListItem.className = "hide";
-          dreamsList.appendChild(newListItem);
-        };
+        let tCost = parseFloat(currenteggs.innerHTML);
 
-        let data = "";
+        if (tCost < 5) {
+          userAlert.innerHTML = "5 Eggs Reqired";
+        } else {
+          const appendNewDreamss = (dream) => {
+            const newListItem = document.createElement("li");
+            const randomWarp = Math.floor(Math.random() * numb) + 1;
+            newListItem.innerText = dream;
+            newListItem.title = "Request";
+            newListItem.id = numb;
+            newListItem.value = randomWarp;
+            newListItem.className = "hide";
+            dreamsList.appendChild(newListItem);
+          };
 
-        data = {
-          dream:
-            "Transfer:" +
-            transferTokenAccount.value +
-            transferTokenName.value +
-            transferTokenAmount.value,
-        };
+          let data = "";
 
-        fetch("/addDream", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: { "Content-Type": "application/json" },
-        })
-          .then((res) => res.json())
-          .then((response) => {
-            console.log(JSON.stringify(response));
-          });
-
-        // Add the dream value to the list
-        dreams.push(
-          "Transfer:" +
-            transferTokenAccount.value +
-            transferTokenName.value +
-            transferTokenAmount.value
-        );
-        appendNewDream(
-          "Transfer:" +
-            transferTokenAccount.value +
-            transferTokenName.value +
-            transferTokenAmount.value
-        );
-
-        function touchback() {
           data = {
             dream:
-              "Sent:" +
-              userAccount.innerHTML +
+              "Transfer:" +
+              transferTokenAccount.value +
               transferTokenName.value +
               transferTokenAmount.value,
           };
@@ -183,121 +146,155 @@ function sendTransfer() {
               transferTokenName.value +
               transferTokenAmount.value
           );
-        }
-        touchback();
 
-        if (transferTokenName.value == "GAMER") {
-          let currentGAMER = document.getElementById("GAMER-change");
-          let phaseChange = parseFloat(currentGAMER.innerHTML);
-          let phasemath = phaseChange - transferTokenAmount.value;
-          currentGAMER.innerHTML = phasemath;
-          transferTokenAmount.value = "";
-          transferTokenAccount.value = "";
-          transferTokenName.value = "";
-          transferForm.className = "hide";
-          userAlert.innerHTML = "Transfer Sent!";
-        }
+          function touchback() {
+            data = {
+              dream:
+                "Sent:" +
+                userAccount.innerHTML +
+                transferTokenName.value +
+                transferTokenAmount.value,
+            };
 
-        if (transferTokenName.value == "WTV") {
-          let currentGAMER = document.getElementById("WTV-change");
-          let phaseChange = parseFloat(currentGAMER.innerHTML);
-          let phasemath = phaseChange - transferTokenAmount.value;
-          currentGAMER.innerHTML = phasemath;
-          transferTokenAmount.value = "";
-          transferTokenAccount.value = "";
-          transferTokenName.value = "";
-          transferForm.className = "hide";
-          userAlert.innerHTML = "Transfer Sent!";
-        }
+            fetch("/addDream", {
+              method: "POST",
+              body: JSON.stringify(data),
+              headers: { "Content-Type": "application/json" },
+            })
+              .then((res) => res.json())
+              .then((response) => {
+                console.log(JSON.stringify(response));
+              });
 
-        if (transferTokenName.value == "DooBetter") {
-          let currentGAMER = document.getElementById("DOOBETTER-change");
-          let phaseChange = parseFloat(currentGAMER.innerHTML);
-          let phasemath = phaseChange - transferTokenAmount.value;
-          currentGAMER.innerHTML = phasemath;
-          transferTokenAmount.value = "";
-          transferTokenAccount.value = "";
-          transferTokenName.value = "";
-          transferForm.className = "hide";
-          userAlert.innerHTML = "Transfer Sent!";
-        }
+            // Add the dream value to the list
+            dreams.push(
+              "Transfer:" +
+                transferTokenAccount.value +
+                transferTokenName.value +
+                transferTokenAmount.value
+            );
+            appendNewDream(
+              "Transfer:" +
+                transferTokenAccount.value +
+                transferTokenName.value +
+                transferTokenAmount.value
+            );
+          }
+          touchback();
 
-        if (transferTokenName.value == "GTPC") {
-          let currentGAMER = document.getElementById("GTPC-change");
-          let phaseChange = parseFloat(currentGAMER.innerHTML);
-          let phasemath = phaseChange - transferTokenAmount.value;
-          currentGAMER.innerHTML = phasemath;
-          transferTokenAmount.value = "";
-          transferTokenAccount.value = "";
-          transferTokenName.value = "";
-          transferForm.className = "hide";
-          userAlert.innerHTML = "Transfer Sent!";
-        }
+          if (transferTokenName.value == "GAMER") {
+            let currentGAMER = document.getElementById("GAMER-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
 
-        if (transferTokenName.value == "ECLIPSE") {
-          let currentGAMER = document.getElementById("ECLIPSE-change");
-          let phaseChange = parseFloat(currentGAMER.innerHTML);
-          let phasemath = phaseChange - transferTokenAmount.value;
-          currentGAMER.innerHTML = phasemath;
-          transferTokenAmount.value = "";
-          transferTokenAccount.value = "";
-          transferTokenName.value = "";
-          transferForm.className = "hide";
-          userAlert.innerHTML = "Transfer Sent!";
-        }
+          if (transferTokenName.value == "WTV") {
+            let currentGAMER = document.getElementById("WTV-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
 
-        if (transferTokenName.value == "PINN") {
-          let currentGAMER = document.getElementById("PINN-change");
-          let phaseChange = parseFloat(currentGAMER.innerHTML);
-          let phasemath = phaseChange - transferTokenAmount.value;
-          currentGAMER.innerHTML = phasemath;
-          transferTokenAmount.value = "";
-          transferTokenAccount.value = "";
-          transferTokenName.value = "";
-          transferForm.className = "hide";
-          userAlert.innerHTML = "Transfer Sent!";
-        }
+          if (transferTokenName.value == "DooBetter") {
+            let currentGAMER = document.getElementById("DOOBETTER-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
 
-        if (transferTokenName.value == "DragonToken") {
-          let currentGAMER = document.getElementById("DragonToken-change");
-          let phaseChange = parseFloat(currentGAMER.innerHTML);
-          let phasemath = phaseChange - transferTokenAmount.value;
-          currentGAMER.innerHTML = phasemath;
-          transferTokenAmount.value = "";
-          transferTokenAccount.value = "";
-          transferTokenName.value = "";
-          transferForm.className = "hide";
-          userAlert.innerHTML = "Transfer Sent!";
-        }
+          if (transferTokenName.value == "GTPC") {
+            let currentGAMER = document.getElementById("GTPC-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
 
-        if (transferTokenName.value == "DarkMark") {
-          let currentGAMER = document.getElementById("DARKMARK-change");
-          let phaseChange = parseFloat(currentGAMER.innerHTML);
-          let phasemath = phaseChange - transferTokenAmount.value;
-          currentGAMER.innerHTML = phasemath;
-          transferTokenAmount.value = "";
-          transferTokenAccount.value = "";
-          transferTokenName.value = "";
-          transferForm.className = "hide";
-          userAlert.innerHTML = "Transfer Sent!";
-        }
+          if (transferTokenName.value == "ECLIPSE") {
+            let currentGAMER = document.getElementById("ECLIPSE-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
 
-        if (transferTokenName.value == "Candys") {
-          let currentGAMER = document.getElementById("CANDYS-change");
-          let phaseChange = parseFloat(currentGAMER.innerHTML);
-          let phasemath = phaseChange - transferTokenAmount.value;
-          currentGAMER.innerHTML = phasemath;
-          transferTokenAmount.value = "";
-          transferTokenAccount.value = "";
-          transferTokenName.value = "";
-          transferForm.className = "hide";
-          userAlert.innerHTML = "Transfer Sent!";
-        }
-        hidebank();
+          if (transferTokenName.value == "PINN") {
+            let currentGAMER = document.getElementById("PINN-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
 
-        let removetCost = 5;
-        let tmath = tCost - 5;
-        currenteggs.innerHTML = tmath;
+          if (transferTokenName.value == "DragonToken") {
+            let currentGAMER = document.getElementById("DragonToken-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
+
+          if (transferTokenName.value == "DarkMark") {
+            let currentGAMER = document.getElementById("DARKMARK-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
+
+          if (transferTokenName.value == "Candys") {
+            let currentGAMER = document.getElementById("CANDYS-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
+          hidebank();
+
+          let removetCost = 5;
+          let tmath = tCost - 5;
+          currenteggs.innerHTML = tmath;
+        }
       }
     }
   }
@@ -393,12 +390,6 @@ function checkSentTransfers() {
         let targetpiggy = parseFloat(fetchpiggy.innerHTML);
         let piggyMath = targetpiggy - tack;
         fetchpiggy.innerHTML = piggyMath;
-
-        let newCurrent = document.getElementById("current-eggs");
-        let eggDeduct = parseFloat(newCurrent.innerHTML);
-        let eggCost = tack * 5;
-        let eggMath = eggDeduct - eggCost;
-        currenteggs.innerHTML = -eggMath;
 
         if (piggyMath == 0 || piggyMath < 0) {
           fetchpiggy.innerHTML = 0;
