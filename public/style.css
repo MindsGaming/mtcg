@@ -438,6 +438,7 @@ li {
   border-style: groove;
   background-color: black;
   opacity: 0.6;
+  overflow:scroll;
 }
 
 .login-form {
@@ -500,7 +501,7 @@ li {
   border-radius: 50%;
   background-image: contain;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
 }
 
 .creator-wrap {
@@ -582,6 +583,12 @@ li {
   border-style: solid;
   font-size: 8px;
   cursor: pointer;
+}
+
+.myegg-music {
+  position: relative;
+  display: block;
+  overflow: scoll;
 }
 
 .pacman {

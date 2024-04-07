@@ -934,6 +934,7 @@ function wrapMusic() {
         let embed = embedpreview.innerHTML;
         const createLabel = document.createElement("label");
         createLabel.innerHTML = embed;
+        createLabel.className = "audio-file";
         const layerEmbed = document.getElementById("myegg-music");
         layerEmbed.appendChild(createLabel);
         const buildImgButton = document.createElement("button");
@@ -1040,4 +1041,8 @@ function transferMyMusic(imageSrc) {
   previewIMG.className = "hide";
   previewIMG.src = imageSrc;
   previewIMG.style = "width: 32px; height: 32px; border-raduis: 50%;";
+  
+  
+  
+  
 }
