@@ -806,31 +806,41 @@ function getMyImageEggs() {
         if (!addedImages.includes(extractedWord)) {
           addedImages.push(extractedWord);
 
-          let placeholderId = "placeholder-" + i;
-          let placeholder = document.createElement("div");
-          placeholder.id = placeholderId;
-          document.getElementById("myegg-images").appendChild(placeholder);
+          let extensionVideo = extractedWord.substring(
+            extractedWord.lastIndexOf(".")
+          );
+          if (
+            extensionVideo == ".mp3" ||
+            extensionVideo == ".ogg" ||
+            extensionVideo == ".wav"
+          ) {
+          } else {
+            let placeholderId = "placeholder-" + i;
+            let placeholder = document.createElement("div");
+            placeholder.id = placeholderId;
+            document.getElementById("myegg-images").appendChild(placeholder);
 
-          const buildWrapIMG = document.createElement("img");
-          buildWrapIMG.src = extractedWord;
-          buildWrapIMG.style.width = "60px";
-          buildWrapIMG.style.height = "60px";
-          buildWrapIMG.id = "image-" + i;
-          buildWrapIMG.addEventListener("click", function () {
-            myImageDownloads(extractedWord);
-          });
-          placeholder.appendChild(buildWrapIMG);
+            const buildWrapIMG = document.createElement("img");
+            buildWrapIMG.src = extractedWord;
+            buildWrapIMG.style.width = "60px";
+            buildWrapIMG.style.height = "60px";
+            buildWrapIMG.id = "image-" + i;
+            buildWrapIMG.addEventListener("click", function () {
+              myImageDownloads(extractedWord);
+            });
+            placeholder.appendChild(buildWrapIMG);
 
-          const buildImgButton = document.createElement("button");
-          buildImgButton.className = "piggybuttons";
-          buildImgButton.innerHTML = "Transfer";
-          buildImgButton.addEventListener("click", function () {
-            transferMyImage(extractedWord);
-          });
-          placeholder.appendChild(buildImgButton);
+            const buildImgButton = document.createElement("button");
+            buildImgButton.className = "piggybuttons";
+            buildImgButton.innerHTML = "Transfer";
+            buildImgButton.addEventListener("click", function () {
+              transferMyImage(extractedWord);
+            });
+            placeholder.appendChild(buildImgButton);
 
-          let eggimageform = document.getElementById("farmerimages");
-          eggimageform.className = "game-article";
+            let eggimageform = document.getElementById("farmerimages");
+            eggimageform.className = "game-article";
+          }
         }
       }
     }
