@@ -77,6 +77,7 @@ dreamsForm.onsubmit = (event) => {
   dreamInput.focus();
   loginform.className = "hide";
   chekIncomingTransfers();
+  getMyMusicEggs();
 };
 
 clearButton.addEventListener("click", (event) => {
