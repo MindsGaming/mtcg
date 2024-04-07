@@ -1193,10 +1193,29 @@
                     <br />
                     <label style="width: 60%">
                       <label id="myegg-images"></label>
+
+                      <br />
+                      <br />
+                      <label id="myegg-music"></label>
                     </label>
                     <br />
 
                     <label class="hide" id="eggimage-form">
+                      <label id="audio-float" class="">
+                        <audio controls>
+                          <source
+                            id="audioPreview-one"
+                            src="horse.ogg"
+                            type="audio/ogg"
+                          />
+                          <source
+                            id="audioPreview-two"
+                            src="audioPreview-two"
+                            type="audio/mpeg"
+                          />
+                          Your browser does not support the audio element.
+                        </audio>
+                      </label>
                       <img
                         id="eggimageform-preview"
                         style="
@@ -1207,6 +1226,7 @@
                         "
                         src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
                       />
+
                       <br />
 
                       Game Account:
@@ -1509,9 +1529,9 @@
                   />
                   <h2>Image Wrapper</h2>
                   <p class="article-text">
-                    Wrap And Retrive Images Inside An Egg
+                    Wrap And Send Images Inside An Egg
                     <br />
-                    Wrap your image inside an egg and send it yo your in-game
+                    Wrap your image inside an egg and send it to your in-game
                     friends <br />
                     or download it from your farm!
 
@@ -1548,6 +1568,49 @@
                   >
                     Download (Free)
                   </button>
+                  <br />
+                </div>
+
+                <div class="game-article">
+                  <img
+                    id="displaymusicwrapper-image"
+                    class="creator-badge"
+                    src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/thumbnails%2FAlien%20Astronaut%20.jpg"
+                  />
+                  <h2>Music Wrapper</h2>
+                  <p class="article-text">
+                    Wrap Your Music Inside An Egg
+                    <br />
+                    Wrap your music inside an egg and send it to your in-game
+                    friends <br />
+                    they can listen to it from thier farm!
+
+                    <br />
+                    <label
+                      >Wrap Music URL
+                      <input
+                        class="hatchalert"
+                        id="music-wrapper"
+                        type="url"
+                        placeholder="Music URL"
+                        style="width: 60%"
+                    /></label>
+                    <input
+                      class="hide"
+                      id="music-grabber"
+                      type="number"
+                      placeholder="Download #"
+                      style="width: 20%"
+                    />
+                  </p>
+                  <button
+                    class="gamebuttons"
+                    onclick="wrapMusic();"
+                    id="musicwrapperBTN"
+                  >
+                    Wrap (1000 Yolks)
+                  </button>
+
                   <br />
                 </div>
 
