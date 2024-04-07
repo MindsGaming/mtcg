@@ -993,11 +993,15 @@ function getMyMusicEggs() {
           const pushpreview = document.getElementById("audioPreview-one");
           const pushpreviewTwo = document.getElementById("audioPreview-two");
           pushpreview.src = extractedWord;
+          pushpreview.id = "previewSource-One" + listItems.length;
           pushpreviewTwo.src = extractedWord;
+          pushpreviewTwo.id = "previewSource-Tne" + listItems.length;
+
           const embedpreview = document.getElementById("audio-float");
           let embed = embedpreview.innerHTML;
           const createLabel = document.createElement("label");
           createLabel.innerHTML = embed;
+          createLabel.id = listItems.length + "?";
           const layerEmbed = document.getElementById("myegg-music");
           layerEmbed.appendChild(createLabel);
 
@@ -1021,12 +1025,13 @@ function transferMyMusic(imageSrc) {
   const openForm = document.getElementById("eggimage-form");
   openForm.className = "display";
   let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = imageSrc;
+  eggformImage.value = "Musc:" + imageSrc;
 
   let hideImages = document.getElementById("myegg-images");
   hideImages.className = "hide";
 
   let previewIMG = document.getElementById("eggimageform-preview");
+  previewIMG.className = "hide";
   previewIMG.src = imageSrc;
   previewIMG.style = "width: 32px; height: 32px; border-raduis: 50%;";
 }
