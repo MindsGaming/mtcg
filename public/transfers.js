@@ -666,15 +666,23 @@ function wrapImage() {
           document.getElementById(placeholder.id).appendChild(buildImgButton);
 
           //transfer Image
+          let imageSRC = dreamURL.value;
+
           function transferMyImage() {
-            let textmerge = placeholder.id;
-            const image = document.getElementById(textmerge);
-            let imageURL = image.title;
+            const buildImgButton = document.createElement("button");
+            buildImgButton.className = "piggybuttons";
+            buildImgButton.innerHTML = "Transfer";
 
             const openForm = document.getElementById("eggimage-form");
             openForm.className = "display";
-            let eggformImage = document.getElementbyId("eggform-image");
-            eggformImage.value = imageURL;
+            let eggformImage = document.getElementById("eggform-image");
+            eggformImage.value = imageSRC.toString();
+
+            let previewIMG = document.getElementById("eggimageform-preview");
+            previewIMG.src = imageSRC.toString();
+
+            let hideImages = document.getElementById("myegg-images");
+            hideImages.className = "hide";
           }
 
           // self Downloads
