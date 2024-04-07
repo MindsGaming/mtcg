@@ -810,13 +810,12 @@ function getMyImageEggs() {
             extractedWord.lastIndexOf(".")
           );
           const acceptedImageExtensions = [".ogg ", ".mp3 ", ".wav "];
-          alert(Musicextension);
-
           if (
             Musicextension == ".ogg" ||
             Musicextension == ".mp3" ||
             Musicextension == ".wav"
           ) {
+          } else {
             let placeholderId = "placeholder-" + i;
             let placeholder = document.createElement("div");
             placeholder.id = placeholderId;
@@ -847,6 +846,7 @@ function getMyImageEggs() {
       }
     }
   }
+    getMyMusicEggs();
 }
 
 function transferMyImage(imageSrc) {
@@ -896,7 +896,6 @@ function wrapMusic() {
       let url = dreamURL.value;
       const Musicextension = url.substring(url.lastIndexOf("."));
       const acceptedImageExtensions = [".ogg ", ".mp3 ", ".wav "];
-      alert(Musicextension);
 
       if (
         Musicextension == ".ogg" ||
