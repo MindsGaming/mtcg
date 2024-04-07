@@ -473,6 +473,7 @@ function getMyEggs() {
           "<br>" +
           "Once you lay 25 of your own eggs well take back your starting eggs!";
         PlayChicken();
+        createDreamblock();
       }
     }
   }
@@ -726,7 +727,6 @@ function wrapImage() {
         dreams.push(dreamURL.value);
         appendNewDream(dreamURL.value);
         dreamURL.value = "";
-        createDreamblock();
       } else {
         userAlert.innerHTML = acceptedImageExtensions + " Only";
       }
