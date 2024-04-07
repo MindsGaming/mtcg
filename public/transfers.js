@@ -865,3 +865,71 @@ function myImageDownloads(imageSrc) {
     .then((response) => response.blob())
     .then(build);
 }
+
+// Music
+let addedMusic = [];
+
+function getMyMusicEggs() {
+  let userAccount = document.getElementById("user-account");
+  let userAccountContent = userAccount.innerHTML;
+  let listItems = document.getElementsByTagName("li");
+  let targetWords = ["http", "https", "HTTP", "HTTPS"];
+
+  for (let j = 0; j < targetWords.length; j++) {
+    let keyword = targetWords[j];
+    for (let i = 0; i < listItems.length; i++) {
+      let listItemText = listItems[i].textContent;
+      if (listItemText.includes("Music:" + userAccountContent + keyword)) {
+        let startIndex = listItemText.indexOf(userAccountContent + keyword);
+        let extractedWord = listItemText.substring(
+          startIndex + userAccountContent.length
+        );
+
+        if (!addedMusic.includes(extractedWord)) {
+          addedMusic.push(extractedWord);
+
+          let placeholderId = "placeholder-" + i;
+          let placeholder = document.createElement("div");
+          placeholder.id = placeholderId;
+          document.getElementById("myegg-music").appendChild(placeholder);
+
+          const pushpreview = document.getElementById("audioPreview-one");
+          const pushpreviewTwo = document.getElementById("audioPreview-two");
+          pushpreview.src = extractedWord;
+          pushpreviewTwo.src = extractedWord;
+          const embedpreview = document.getElementById("audio-float");
+          let embed = embedpreview.innerHTML;
+          const createLabel = document.createElement("label");
+          createLabel.innerHTML = embed;
+          const layerEmbed = document.getElementById("myegg-music");
+          layerEmbed.appendChild(createLabel);
+
+          const buildImgButton = document.createElement("button");
+          buildImgButton.className = "piggybuttons";
+          buildImgButton.innerHTML = "Transfer";
+          buildImgButton.addEventListener("click", function () {
+            transferMyMusic(extractedWord);
+          });
+          placeholder.appendChild(buildImgButton);
+
+          let eggimageform = document.getElementById("farmerimages");
+          eggimageform.className = "game-article";
+        }
+      }
+    }
+  }
+}
+
+function transferMyMusic(imageSrc) {
+  const openForm = document.getElementById("eggimage-form");
+  openForm.className = "display";
+  let eggformImage = document.getElementById("eggform-image");
+  eggformImage.value = imageSrc;
+
+  let hideImages = document.getElementById("myegg-images");
+  hideImages.className = "hide";
+
+  let previewIMG = document.getElementById("eggimageform-preview");
+  previewIMG.src = imageSrc;
+  previewIMG.style = "width: 32px; height: 32px; border-raduis: 50%;";
+}
