@@ -684,6 +684,9 @@ function wrapImage() {
 
             let hideImages = document.getElementById("myegg-images");
             hideImages.className = "hide";
+
+            let closeVideos = document.getElementById("myegg-music");
+            closeVideos.className = "hide";
           }
 
           // self Downloads
@@ -862,6 +865,9 @@ function transferMyImage(imageSrc) {
   let previewIMG = document.getElementById("eggimageform-preview");
   previewIMG.src = imageSrc;
   previewIMG.style = "width: 32px; height: 32px; border-raduis: 50%;";
+
+  let closeVideos = document.getElementById("myegg-music");
+  closeVideos.className = "hide";
 }
 
 function myImageDownloads(imageSrc) {
@@ -895,7 +901,7 @@ function wrapMusic() {
 
       // Extract the file extension from the URL
       let url = dreamURL.value;
-      musicURL = dreamURL.value;
+      musicURL = url.toString();
       const Musicextension = url.substring(url.lastIndexOf("."));
       const acceptedImageExtensions = [".ogg ", ".mp3 ", ".wav "];
 
@@ -1052,7 +1058,6 @@ function transferMyMusic(musicURL) {
   let replaceViewtwo = document.getElementById("audioPreview-two");
   let currentVideo = "previewSource-One" + "?";
   replaceView.src = musicURL;
-  alert(musicURL);
   replaceViewtwo.src = musicURL;
   let openAudio = document.getElementById("audio-float");
   openAudio.className = "display";
