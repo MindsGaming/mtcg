@@ -446,7 +446,7 @@ function getMyEggs() {
     }
   }
   if (piggy > 25 || piggy == 25) {
-    let yourHatchedEggs = document.getElementById("yourhatched-eggs");
+    let yourHatchedEggs = document.getElementById("yourHatched-eggs");
     yourHatchedEggs.style = "color: gold; font-size: 15px;";
     playerEGGS.innerHTML = piggy;
     yourHatchedEggs.innerHTML =
@@ -458,19 +458,18 @@ function getMyEggs() {
     if (piggy < 25) {
       if (piggy == 0) {
       } else {
-        let newcomerEggs = 24;
-        let tack = parseFloat(playerEGGS.innerHTML);
-        let newcomerMath = tack + newcomerEggs;
-        newCurrent.innerHTML = newcomerMath;
-        let yourHatchedEggs = document.getElementById("yourhatched-eggs");
+        let yourHatchedEggs = document.getElementById("yourHatched-eggs");
         yourHatchedEggs.style = "color: gold; font-size: 15px;";
-        let newcomermath = piggy + 24;
+        playerEGGS.innerHTML = piggy + 24;
         yourHatchedEggs.innerHTML =
-          "Your Magic Chicken Found: " +
-          newcomermath +
+          "Your Magic Chicken Started You With: " +
+          playerEGGS.innerHTML +
           " Eggs" +
-          "<br>" +
-          "Once you lay 25 of your own eggs well take back your starting eggs!";
+          "<br>";
+        let gotitText = document.getElementById("gotit-text");
+        gotitText.innerHTML =
+          "You Start The Game With 25 Eggs, <br> When You Hatch 25, We Will Take The Staring Eggs back :) <br>";
+        gotIt();
         PlayChicken();
         createDreamblock();
       }
