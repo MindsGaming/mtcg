@@ -425,7 +425,6 @@ function checkSentTransfers() {
       }
     }
   }
-  getMyEggs();
 }
 
 function getMyEggs() {
@@ -447,7 +446,7 @@ function getMyEggs() {
     }
   }
   if (piggy > 25 || piggy == 25) {
-    let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+    let yourHatchedEggs = document.getElementById("yourhatched-eggs");
     yourHatchedEggs.style = "color: gold; font-size: 15px;";
     playerEGGS.innerHTML = piggy;
     yourHatchedEggs.innerHTML =
@@ -462,8 +461,8 @@ function getMyEggs() {
         let newcomerEggs = 24;
         let tack = parseFloat(playerEGGS.innerHTML);
         let newcomerMath = tack + newcomerEggs;
-        playerEGGS.innerHTML = newcomerMath;
-        let yourHatchedEggs = document.getElementById("yourHatched-eggs");
+        newCurrent.innerHTML = newcomerMath;
+        let yourHatchedEggs = document.getElementById("yourhatched-eggs");
         yourHatchedEggs.style = "color: gold; font-size: 15px;";
         let newcomermath = piggy + 24;
         yourHatchedEggs.innerHTML =
