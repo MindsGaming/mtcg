@@ -1041,8 +1041,15 @@ function transferMyMusic(imageSrc) {
   previewIMG.className = "hide";
   previewIMG.src = imageSrc;
   previewIMG.style = "width: 32px; height: 32px; border-raduis: 50%;";
-  
-  
-  
-  
+
+  let closeVideos = document.getElementById("myegg-music");
+  closeVideos.className = "hide";
+
+  let catchpreview = imageSrc + "?";
+  let replaceView = document.getElementById("audioPreview-one");
+  let replaceViewtwo = document.getElementById("audioPreview-two");
+  replaceView.src = imageSrc;
+  replaceViewtwo.src = imageSrc;
+  let openAudio = document.getElementById("audio-float");
+  openAudio.className = "display";
 }
