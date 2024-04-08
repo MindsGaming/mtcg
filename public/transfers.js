@@ -547,9 +547,18 @@ function sendImageTransfer() {
   if (tCost < 5) {
     userAlert.innerHTML = "5 Eggs Reqired";
   } else {
-    const imageURL = document.getElementById("eggform-image");
-    const imageReciver = document.getElementById("transfer-myeggimage");
+    let imageURL = "";
+    let checkImage = document.getElementById("eggform-image");
+    if (checkImage.value == "") {
+      imageURL = document.getElementById("eggform-music");
+    }
 
+    let imageReciver = "";
+    let checkReciver = document.getElementById("eggform-image");
+
+    if (checkReciver.value == "") {
+      imageReciver = document.getElementById("transfer-mymusicimage");
+    }
     const appendNewDreamss = (dream) => {
       const newListItem = document.createElement("li");
       const randomWarp = Math.floor(Math.random() * numb) + 1;
@@ -579,6 +588,8 @@ function sendImageTransfer() {
     let removetack = parseFloat(deductEggs.innerHTML);
     let transferCost = 5;
     let transferMath = removetack - transferCost;
+    let mymusicTransfer = document.getElementById("transfer-mymusicimage");
+    mymusicTransfer.value = "";
     deductEggs.innerHTML = transferMath;
 
     // Add the dream value to the list
@@ -586,6 +597,7 @@ function sendImageTransfer() {
     appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
     imageURL.value = "";
     imageReciver.value = "";
+
     cancelImageTransfer();
     createDreamblock();
     userAlert.innerHTML = "You Sent An Image Egg! 🎉";
@@ -770,8 +782,6 @@ function cancelImageTransfer() {
     closeImgForm.className = "hide";
     let hideImages = document.getElementById("myegg-images");
     hideImages.className = "display";
-    let closeVideos = document.getElementById("myegg-music");
-    closeVideos.className = "display";
   } else {
     closeImgForm.className = "display";
   }
@@ -891,13 +901,14 @@ function wrapMusic() {
   if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
   } else {
-    if (POINTS.innerHTML < 100) {
+    if (POINTS.innerHTML < 1) {
       userAlert.innerHTML = "Not Enough Yolks";
     } else {
       let dreamCatcher = document.getElementsByTagName("li");
       let dreamvalue = dreamCatcher.length - 1;
       let dreamID = document.getElementById(dreamvalue);
       let dreamURL = document.getElementById("music-wrapper");
+      sources = dreamvalue.toString();
 
       // Extract the file extension from the URL
       let url = dreamURL.value;
@@ -952,7 +963,7 @@ function wrapMusic() {
         buildImgButton.addEventListener("click", transferMyMusic);
         createLabel.appendChild(buildImgButton);
 
-        let eggimageform = document.getElementById("farmerimages");
+        let eggimageform = document.getElementById("farmermusic");
         eggimageform.className = "game-article";
         // Add the dream value to the list
         userAlert.innerHTML =
@@ -975,7 +986,7 @@ function wrapMusic() {
 }
 
 let addedMusic = [];
-
+let sources = "";
 function getMyMusicEggs() {
   let userAccount = document.getElementById("user-account");
   let userAccountContent = userAccount.innerHTML;
@@ -1005,12 +1016,14 @@ function getMyMusicEggs() {
             placeholder.id = placeholderId;
             document.getElementById("myegg-music").appendChild(placeholder);
 
-            const pushpreview = document.getElementById("audioPreview-one");
-            const pushpreviewTwo = document.getElementById("audioPreview-two");
+            const pushpreview = document.getElementById("sourceOne");
+            const pushpreviewTwo = document.getElementById("sourceTwo");
             pushpreview.src = extractedWord;
-            pushpreview.id = "previewSource-One" + listItems.length;
+            pushpreview.id = "sourceOne" + listItems.length;
             pushpreviewTwo.src = extractedWord;
-            pushpreviewTwo.id = "previewSource-Two" + listItems.length;
+            pushpreviewTwo.id = "sourceTwo" + listItems.length;
+
+            sources = listItems.length;
 
             const embedpreview = document.getElementById("audio-float");
             let embed = embedpreview.innerHTML;
@@ -1018,6 +1031,7 @@ function getMyMusicEggs() {
             createLabel.innerHTML = embed;
             createLabel.id = listItems.length + "?";
             const layerEmbed = document.getElementById("myegg-music");
+            layerEmbed.className = "display";
             layerEmbed.appendChild(createLabel);
 
             const buildImgButton = document.createElement("button");
@@ -1028,7 +1042,7 @@ function getMyMusicEggs() {
             });
             placeholder.appendChild(buildImgButton);
 
-            let eggimageform = document.getElementById("farmerimages");
+            let eggimageform = document.getElementById("farmermusic");
             eggimageform.className = "game-article";
             musicURL = extractedWord;
           }
@@ -1039,26 +1053,41 @@ function getMyMusicEggs() {
 }
 
 function transferMyMusic(musicURL) {
-
-  const openForm = document.getElementById("eggimage-form");
+  const openForm = document.getElementById("eggmusic-form");
   openForm.className = "display";
-  let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value =  musicURL.toString();
 
-  let hideImages = document.getElementById("myegg-images");
-  hideImages.className = "hide";
+  let eggformImage = document.getElementById("eggform-music");
+  eggformImage.value = musicURL;
 
   let previewIMG = document.getElementById("eggimageform-preview");
   previewIMG.className = "hide";
-  previewIMG.style = "width: 32px; height: 32px; border-raduis: 50%;";
+  previewIMG.style.width = "32px";
+  previewIMG.style.height = "32px";
+  previewIMG.style.borderRadius = "50%";
 
   let closeVideos = document.getElementById("myegg-music");
   closeVideos.className = "hide";
 
-  let replaceView = document.getElementById("audioPreview-one");
-  let replaceViewtwo = document.getElementById("audioPreview-two");
-  replaceView.src =  musicURL.toString();
-  replaceViewtwo.src =  musicURL.toString();
+  let dreamCatcher = document.getElementsByTagName("li");
+  let replaceviewid = "sourceOne" + sources;
+  let replaceviewidTwo = "sourceTwo" + sources;
+  let replaceView = document.getElementById(replaceviewid);
+  let replaceViewtwo = document.getElementById(replaceviewidTwo);
+  replaceView.src = musicURL;
+  replaceViewtwo.src = musicURL;
+
   let openAudio = document.getElementById("audio-float");
   openAudio.className = "display";
+}
+
+function cancelMusicTransfer() {
+  let closeImgForm = document.getElementById("eggmusic-form");
+
+  if (closeImgForm.className == "display") {
+    closeImgForm.className = "hide";
+    let hideImages = document.getElementById("myegg-music");
+    hideImages.className = "display";
+  } else {
+    closeImgForm.className = "display";
+  }
 }

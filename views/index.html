@@ -1196,27 +1196,10 @@
                       <label id="myegg-images"></label>
 
                       <br />
-                      <br />
-                      <label id="myegg-music" class="myegg-music"></label>
                     </label>
                     <br />
 
                     <label class="hide" id="eggimage-form">
-                      <label id="audio-float" class="hide">
-                        <audio  controls>
-                          <source
-                            id="audioPreview-one"
-                            src="horse.ogg"
-                            type="audio/ogg"
-                          />
-                          <source
-                            id="audioPreview-two"
-                            src="horse.mp3"
-                            type="audio/mpeg"
-                          />
-                          Your browser does not support the audio element.
-                        </audio>
-                      </label>
                       <img
                         id="eggimageform-preview"
                         style="
@@ -1262,6 +1245,98 @@
                       <button
                         style="cursor: pointer"
                         onclick="cancelImageTransfer();"
+                      >
+                        Cancel
+                      </button>
+
+                      <label style="color: red; font-size: 13px"
+                        >Only Send To Game Accounts</label
+                      >
+                    </label>
+                  </p>
+                </div>
+
+                <div class="hide" id="farmermusic">
+                  <img
+                    id="got-rewardmusic"
+                    class="creator-badge"
+                    src="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fthumbnails%2Fpixel.png"
+                  />
+                  <img
+                    id="eggmusic-eye"
+                    style="
+                      float: left;
+                      width: 32px;
+                      height: 32px;
+                      margin: 3px;
+                      padding: 1px;
+                    "
+                    src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
+                  />
+                  <h2>Wrapped Eggs!</h2>
+
+                  <p class="article-text">
+                    You have Audio Eggs!
+                    <br />
+                    Just click on them to listen <br />
+                    Or send them to your in game friends!
+                    <br />
+                    <br />
+                    <label style="width: 60%">
+                      <label id="myegg-music" class="myegg-music"></label>
+                    </label>
+                    <br />
+
+                    <label class="hide" id="eggmusic-form">
+                      <label id="audio-float" class="hide">
+                        <audio controls>
+                          <source
+                            id="sourceOne"
+                            src="horse.ogg"
+                            type="audio/ogg"
+                          />
+                          <source
+                            id="sourceTwo"
+                            src="horse.mp3"
+                            type="audio/mpeg"
+                          />
+                          Your browser does not support the audio element.
+                        </audio>
+                      </label>
+                      <br />
+
+                      Game Account:
+                      <input
+                        id="transfer-mymusicimage"
+                        name="transfer"
+                        aria-label="a new dream"
+                        type="text"
+                        maxlength="42"
+                        minlength="42"
+                        style="width: 53%"
+                        placeholder="Game Account"
+                        required
+                      /><br />
+                      <input
+                        id="eggform-music"
+                        name="transfer"
+                        aria-label="a new dream"
+                        type="text"
+                        placeholder="Amount"
+                        style="width: 23%"
+                        class="hide"
+                        ;
+                      />
+                      <button
+                        style="cursor: pointer"
+                        onclick="sendImageTransfer();"
+                      >
+                        Send Transfer <label style="gold">(5 Eggs)</label>
+                      </button>
+
+                      <button
+                        style="cursor: pointer"
+                        onclick="cancelMusicTransfer();"
                       >
                         Cancel
                       </button>
