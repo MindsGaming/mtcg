@@ -767,6 +767,8 @@ function cancelImageTransfer() {
     closeImgForm.className = "hide";
     let hideImages = document.getElementById("myegg-images");
     hideImages.className = "display";
+    let closeVideos = document.getElementById("myegg-music");
+    closeVideos.className = "display";
   } else {
     closeImgForm.className = "display";
   }
@@ -878,7 +880,7 @@ function myImageDownloads(imageSrc) {
 }
 
 // Music
-
+let musicURL = "";
 function wrapMusic() {
   if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
@@ -893,6 +895,7 @@ function wrapMusic() {
 
       // Extract the file extension from the URL
       let url = dreamURL.value;
+      musicURL = dreamURL.value;
       const Musicextension = url.substring(url.lastIndexOf("."));
       const acceptedImageExtensions = [".ogg ", ".mp3 ", ".wav "];
 
@@ -1028,28 +1031,29 @@ function getMyMusicEggs() {
   }
 }
 
-function transferMyMusic(imageSrc) {
+function transferMyMusic(musicURL) {
   const openForm = document.getElementById("eggimage-form");
   openForm.className = "display";
   let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = imageSrc;
+  eggformImage.value = musicURL;
 
   let hideImages = document.getElementById("myegg-images");
   hideImages.className = "hide";
 
   let previewIMG = document.getElementById("eggimageform-preview");
   previewIMG.className = "hide";
-  previewIMG.src = imageSrc;
   previewIMG.style = "width: 32px; height: 32px; border-raduis: 50%;";
 
   let closeVideos = document.getElementById("myegg-music");
   closeVideos.className = "hide";
 
-  let catchpreview = imageSrc + "?";
+  let catchpreview = musicURL + "?";
   let replaceView = document.getElementById("audioPreview-one");
   let replaceViewtwo = document.getElementById("audioPreview-two");
-  replaceView.src = imageSrc;
-  replaceViewtwo.src = imageSrc;
+  let currentVideo = "previewSource-One" + "?";
+  replaceView.src = musicURL;
+  alert(musicURL);
+  replaceViewtwo.src = musicURL;
   let openAudio = document.getElementById("audio-float");
   openAudio.className = "display";
 }
