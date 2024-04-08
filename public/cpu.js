@@ -239,15 +239,14 @@ function createDreamblock() {
 
   let numb = Math.floor(Math.random() * 5000);
   let fish = numb + Math.floor(Math.random() * 10);
-
   let dreamvalue = dreamCatcher.length - 1;
   let dreamID = document.getElementById(dreamvalue);
-
   let theDate = new Date();
-
-  let timeLength = theDate.length;
-
-  let activeShh = Math.floor(Math.random() * timeLength);
+  let timeLength = theDate.toString();
+  let fishTime = parseFloat(timeLength.length);
+  let drawlShh = Math.floor(Math.random() * fishTime);
+  let activeDrawl = Math.floor(Math.random() * 100000);
+  let activeShh = drawlShh + activeDrawl;
 
   const dreamBlock = document.createElement("block");
   dreamBlock.id =
