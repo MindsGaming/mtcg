@@ -164,7 +164,7 @@ function hatchEGG() {
     } else {
       function eggIncubation() {
         let incubation = document.getElementById("hatchBTN");
-        let Qincubation = Math.floor(Math.random() * 5);
+        let Qincubation = Math.floor(Math.random() * 9);
         let effect = Math.floor(Math.random() * 4);
         let Qchance = parseFloat(Qincubation);
         let effectChance = parseFloat(effect);
