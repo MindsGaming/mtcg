@@ -468,7 +468,7 @@ function getMyEggs() {
           "<br>";
         let gotitText = document.getElementById("gotit-text");
         gotitText.innerHTML =
-          "You Start The Game With 25 Eggs, <br> When You Hatch 25, We Will Take The Staring Eggs back :) <br>";
+          "You Start The Game With 25 Eggs, <br> When You Hatch 25, We Will Take The Starting Eggs back :) <br>";
         gotIt();
         PlayChicken();
         createDreamblock();
