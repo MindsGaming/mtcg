@@ -1030,6 +1030,7 @@ function getMyMusicEggs() {
 
             let eggimageform = document.getElementById("farmerimages");
             eggimageform.className = "game-article";
+            musicURL = extractedWord;
           }
         }
       }
@@ -1038,10 +1039,11 @@ function getMyMusicEggs() {
 }
 
 function transferMyMusic(musicURL) {
+
   const openForm = document.getElementById("eggimage-form");
   openForm.className = "display";
   let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = musicURL;
+  eggformImage.value =  musicURL.toString();
 
   let hideImages = document.getElementById("myegg-images");
   hideImages.className = "hide";
@@ -1053,12 +1055,10 @@ function transferMyMusic(musicURL) {
   let closeVideos = document.getElementById("myegg-music");
   closeVideos.className = "hide";
 
-  let catchpreview = musicURL + "?";
   let replaceView = document.getElementById("audioPreview-one");
   let replaceViewtwo = document.getElementById("audioPreview-two");
-  let currentVideo = "previewSource-One" + "?";
-  replaceView.src = musicURL;
-  replaceViewtwo.src = musicURL;
+  replaceView.src =  musicURL.toString();
+  replaceViewtwo.src =  musicURL.toString();
   let openAudio = document.getElementById("audio-float");
   openAudio.className = "display";
 }
