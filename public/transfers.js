@@ -425,6 +425,7 @@ function checkSentTransfers() {
       }
     }
   }
+  getMyEggs();
 }
 
 function getMyEggs() {
