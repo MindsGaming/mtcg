@@ -1010,7 +1010,7 @@ function getMyMusicEggs() {
             pushpreview.src = extractedWord;
             pushpreview.id = "previewSource-One" + listItems.length;
             pushpreviewTwo.src = extractedWord;
-            pushpreviewTwo.id = "previewSource-Tne" + listItems.length;
+            pushpreviewTwo.id = "previewSource-Two" + listItems.length;
 
             const embedpreview = document.getElementById("audio-float");
             let embed = embedpreview.innerHTML;
