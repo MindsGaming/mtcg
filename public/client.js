@@ -162,71 +162,90 @@ function hatchEGG() {
     if (currenteggs.innerHTML == 0) {
       userAlert.innerHTML = "No Eggs Found :(";
     } else {
-      // Calculate the total points after hatching
-      let numb = dreamsList.getElementsByTagName("li").length;
-      let randomWarp = Math.floor(Math.random() * numb) + 1;
-      let foundEgg = document.getElementById(randomWarp);
-      let wrapedIMG = document.getElementById("wraped-images");
-      wrapedIMG.innerHTML = "";
-      userAlert.innerHTML = "";
-      let hatchedPOINTS = parseFloat(foundEgg.value);
-      let currentPOINTS = parseFloat(POINTS.innerHTML);
-      let catchEGGS = parseFloat(currenteggs.innerHTML);
+      function eggIncubation() {
+        let incubation = document.getElementById("hatchBTN");
+        let Qincubation = Math.floor(Math.random() * 5);
+        let effect = Math.floor(Math.random() * 4);
+        let Qchance = parseFloat(Qincubation);
+        let effectChance = parseFloat(effect);
 
-      if (hatchedPOINTS > catchEGGS) {
-        let softenEgg = hatchedPOINTS % catchEGGS;
-        let softegg = Math.round(softenEgg);
-        hatchedPOINTS = softegg;
+        if (Qchance == effect) {
+          incubation.innerHTML = "Incubation";
+          incubation.className = "hide";
+          userAlert.innerHTML = "Egg Incubation...";
+          setTimeout(eggIncubation, 5000);
+        } else {
+          incubation.innerHTML = "Crack";
+          incubation.style = "background:gold;";
+          incubation.className = "hatchBTN";
 
-        if (softegg == 0) {
-          let harder = catchEGGS % 2;
-          let harderegg = Math.round(catchEGGS);
-          hatchedPOINTS = harderegg + 1;
+          // Calculate the total points after hatching
+          let numb = dreamsList.getElementsByTagName("li").length;
+          let randomWarp = Math.floor(Math.random() * numb) + 1;
+          let foundEgg = document.getElementById(randomWarp);
+          let wrapedIMG = document.getElementById("wraped-images");
+          wrapedIMG.innerHTML = "";
+          userAlert.innerHTML = "";
+          let hatchedPOINTS = parseFloat(foundEgg.value);
+          let currentPOINTS = parseFloat(POINTS.innerHTML);
+          let catchEGGS = parseFloat(currenteggs.innerHTML);
+
+          if (hatchedPOINTS > catchEGGS) {
+            let softenEgg = hatchedPOINTS % catchEGGS;
+            let softegg = Math.round(softenEgg);
+            hatchedPOINTS = softegg;
+
+            if (softegg == 0) {
+              let harder = catchEGGS % 2;
+              let harderegg = Math.round(catchEGGS);
+              hatchedPOINTS = harderegg + 1;
+            }
+          }
+
+          let EGGmath = currentPOINTS + hatchedPOINTS;
+          POINTS.innerHTML = EGGmath;
+
+          // Update the cracked egg count
+          let craked = parseFloat(hatchedeggs.innerHTML);
+          let goodegg = 1;
+          let crakedegg = goodegg + craked;
+          hatchedeggs.innerHTML = crakedegg;
+
+          // Calculate the adjusted cooked egg count
+          let cooked = parseFloat(currenteggs.innerHTML) - 1;
+          currenteggs.innerHTML = cooked;
+          userAlert.innerHTML = "";
+
+          if (
+            foundEgg.innerHTML.length == 42 ||
+            foundEgg.innerHTML.length > 42 ||
+            !foundEgg.innerHTML
+          ) {
+            userAlert.innerHTML = "You Cracked: " + hatchedPOINTS + " Yolks";
+            userAlert.style = "color:gold;";
+          } else {
+            userAlert.innerHTML =
+              foundEgg.innerHTML + " You Cracked: " + hatchedPOINTS + " Yolks";
+            userAlert.style = "color:gold;";
+          }
+          let liText = foundEgg.textContent.trim();
+          if (liText.startsWith("https://")) {
+            let createIMG = document.createElement("img");
+            createIMG.src = foundEgg.innerHTML;
+            createIMG.className = "creator-wrap";
+            document.getElementById("wraped-images").appendChild(createIMG);
+            createIMG.id = hatchedPOINTS + "‽";
+
+            crackedWrap = foundEgg.innerHTML;
+            downloadImg();
+          }
         }
       }
-
-      let EGGmath = currentPOINTS + hatchedPOINTS;
-      POINTS.innerHTML = EGGmath;
-
-      // Update the cracked egg count
-      let craked = parseFloat(hatchedeggs.innerHTML);
-      let goodegg = 1;
-      let crakedegg = goodegg + craked;
-      hatchedeggs.innerHTML = crakedegg;
-
-      // Calculate the adjusted cooked egg count
-      let cooked = parseFloat(currenteggs.innerHTML) - 1;
-      currenteggs.innerHTML = cooked;
-      userAlert.innerHTML = "";
-
-      if (
-        foundEgg.innerHTML.length == 42 ||
-        foundEgg.innerHTML.length > 42 ||
-        !foundEgg.innerHTML
-      ) {
-        userAlert.innerHTML = "You Cracked: " + hatchedPOINTS + " Yolks";
-        userAlert.style = "color:gold;";
-      } else {
-        userAlert.innerHTML =
-          foundEgg.innerHTML + " You Cracked: " + hatchedPOINTS + " Yolks";
-        userAlert.style = "color:gold;";
-      }
-      let liText = foundEgg.textContent.trim();
-      if (liText.startsWith("https://")) {
-        let createIMG = document.createElement("img");
-        createIMG.src = foundEgg.innerHTML;
-        createIMG.className = "creator-wrap";
-        document.getElementById("wraped-images").appendChild(createIMG);
-        createIMG.id = hatchedPOINTS + "‽";
-
-        crackedWrap = foundEgg.innerHTML;
-        downloadImg();
-      }
+      eggIncubation();
     }
   }
   pullENERGY();
 }
-
 /* Chicken */
 
 function feedCHICKEN() {
