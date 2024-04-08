@@ -244,11 +244,16 @@ function createDreamblock() {
   let dreamID = document.getElementById(dreamvalue);
 
   let theDate = new Date();
+
+  let timeLength = theDate.length;
+
+  let activeShh = Math.floor(Math.random() * timeLength);
+
   const dreamBlock = document.createElement("block");
   dreamBlock.id =
     numb + "‽" + fish + "‽" + document.getElementsByTagName("li").length;
   dreamBlock.innerHTML =
-    "DreamBlock: #" + dreamBlock.id + "‽" + theDate + "‽" + dreamID.value;
+    "DreamBlock: #" + dreamBlock.id + "‽" + activeShh + "‽" + dreamID.value;
   dreamBlock.value = dreamBlock.innerHTML;
 
   const appendNewDreamss = (dream) => {
@@ -299,7 +304,6 @@ function myChain() {
     }
   }
 }
-setTimeout(myChain, 5000);
 
 function HOME() {
   window.open("/", "_self");
