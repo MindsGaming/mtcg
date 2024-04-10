@@ -549,15 +549,20 @@ function sendImageTransfer() {
     let imageURL = "";
     let checkImage = document.getElementById("eggform-image");
     if (checkImage.value == "") {
-      imageURL = document.getElementById("eggform-music");
+      imageURL = document.getElementById("eggform-music").value;
+    } else {
+      imageURL = checkImage.value;
     }
 
     let imageReciver = "";
-    let checkReciver = document.getElementById("eggform-image");
+    let checkReciver = document.getElementById("transfer-myeggimage");
 
     if (checkReciver.value == "") {
-      imageReciver = document.getElementById("transfer-mymusicimage");
+      imageReciver = document.getElementById("transfer-mymusicimage").value;
+    } else {
+      imageReciver = checkReciver.value;
     }
+
     const appendNewDreamss = (dream) => {
       const newListItem = document.createElement("li");
       const randomWarp = Math.floor(Math.random() * numb) + 1;
@@ -570,7 +575,7 @@ function sendImageTransfer() {
     };
 
     const data = {
-      dream: "Transfer:" + imageReciver.value + imageURL.value,
+      dream: "Transfer:" + imageReciver + imageURL.value,
     };
 
     fetch("/addDream", {
