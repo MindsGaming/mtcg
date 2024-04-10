@@ -167,8 +167,8 @@ function hatchEGG() {
       } else {
         function eggIncubation() {
           let incubation = document.getElementById("hatchBTN");
-          let Qincubation = Math.floor(Math.random() * 10);
-          let effect = Math.floor(Math.random() * 5);
+          let Qincubation = Math.floor(Math.random() * 11);
+          let effect = Math.floor(Math.random() * 11);
           let Qchance = parseFloat(Qincubation);
           let effectChance = parseFloat(effect);
           let clickCrack = "hatchEGG()";
