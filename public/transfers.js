@@ -1127,13 +1127,12 @@ musicEye.addEventListener("click", hideMusic);
 
 function hideMusic() {
   const hidemusic = document.getElementById("myegg-music");
-musicEye.className = "hide";
-  if (hideMusic.className == "myegg-music") {
-    alert("test")
-    hideMusic.className = "hide";
+
+  if (hidemusic.className == "myegg-music") {
+    hidemusic.className = "hide";
   } else {
-    if (hideMusic.className == "hide") {
-      hideMusic.className = "myegg-music";
+    if (hidemusic.className == "hide") {
+      hidemusic.className = "myegg-music";
     }
   }
 }
