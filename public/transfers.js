@@ -1115,7 +1115,7 @@ function cancelMusicTransfer() {
   if (closeImgForm.className == "display") {
     closeImgForm.className = "hide";
     let hideImages = document.getElementById("myegg-music");
-    hideImages.className = "display";
+    hideImages.className = "myegg-music";
   } else {
     closeImgForm.className = "display";
   }
