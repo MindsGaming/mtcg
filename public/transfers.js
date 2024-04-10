@@ -991,6 +991,8 @@ function wrapMusic() {
         let eggimageform = document.getElementById("farmermusic");
         eggimageform.className = "game-article";
         musicURL = dreamURL.value;
+        pushpreview.id = "sourceOne";
+        pushpreviewTwo.id = "sourceTwo";
 
         // Add the dream value to the list
         userAlert.innerHTML =
@@ -1074,6 +1076,8 @@ function getMyMusicEggs() {
             let eggimageform = document.getElementById("farmermusic");
             eggimageform.className = "game-article";
             musicURL = extractedWord;
+            pushpreview.id = "sourceOne";
+            pushpreviewTwo.id = "sourceTwo";
           }
         }
       }
