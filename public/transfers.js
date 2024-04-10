@@ -947,8 +947,9 @@ function wrapMusic() {
 
         const pushpreview = document.getElementById("sourceOne");
         const pushpreviewTwo = document.getElementById("sourceTwo");
-        pushpreview.src = dreamURL.toString();
-        pushpreviewTwo.src = dreamURL.toString();
+        let forceSave = dreamURL.value;
+        pushpreview.src = forceSave.toString();
+        pushpreviewTwo.src = forceSave.toString();
         const embedpreview = document.getElementById("audio-float");
         let embed = embedpreview.innerHTML;
         const createLabel = document.createElement("label");
