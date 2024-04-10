@@ -546,17 +546,21 @@ function sendImageTransfer() {
     userAlert.innerHTML = "5 Eggs Reqired";
   } else {
     let imageURL = "";
+    imageURL.value = "";
     let goingTo = "";
+    goingTo.value = "";
 
     if (imageURL.value == "") {
-      imageURL = document.getElementById("eggform-music");
+      imageURL.value = document.getElementById("eggform-music").value;
+      alert(imageURL.value);
     } else {
-      imageURL = document.getElementById("eggform-image");
+      imageURL.value = document.getElementById("eggform-image").value;
     }
     if (goingTo.value == "") {
-      goingTo = document.getElementById("transfer-mymusicimage");
+      goingTo = document.getElementById("transfer-mymusicimage").value;
     } else {
-      goingTo = document.getElementById("transfer-myeggimage");
+      goingTo = document.getElementById("transfer-myeggimage").value;
+      alert(goingTo.value);
     }
 
     const appendNewDreamss = (dream) => {
