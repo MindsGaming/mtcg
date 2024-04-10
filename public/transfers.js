@@ -545,22 +545,20 @@ function sendImageTransfer() {
   if (tCost < 1) {
     userAlert.innerHTML = "5 Eggs Reqired";
   } else {
-    let imageURL = "";
-    imageURL.value = "";
-    let goingTo = "";
-    goingTo.value = "";
+    let imageURL = document.getElementById("eggform-image");
+    let musicURL = document.getElementById("eggform-music");
+    let imageGoing = document.getElementById("transfer-myeggimage");
+    let musicGoing = document.getElementById("transfer-mymusicimage");
 
     if (imageURL.value == "") {
-      imageURL.value = document.getElementById("eggform-music").value;
-      alert(imageURL.value);
+      imageURL.value = musicURL.value;
     } else {
-      imageURL.value = document.getElementById("eggform-image").value;
+      imageURL.value = imageURL.value;
     }
-    if (goingTo.value == "") {
-      goingTo = document.getElementById("transfer-mymusicimage").value;
+    if (imageGoing.value == "") {
+      imageGoing.value = musicGoing.value;
     } else {
-      goingTo = document.getElementById("transfer-myeggimage").value;
-      alert(goingTo.value);
+      imageGoing.value = imageGoing.value;
     }
 
     const appendNewDreamss = (dream) => {
@@ -575,7 +573,7 @@ function sendImageTransfer() {
     };
 
     const data = {
-      dream: "Transfer:" + goingTo.value + imageURL.value,
+      dream: "Transfer:" + imageGoing.value + imageURL.value,
     };
 
     fetch("/addDream", {
@@ -597,10 +595,10 @@ function sendImageTransfer() {
     deductEggs.innerHTML = transferMath;
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + goingTo.value + imageURL.value);
-    appendNewDream("Transfer:" + goingTo.value + imageURL.value);
+    dreams.push("Transfer:" + imageGoing.value + imageURL.value);
+    appendNewDream("Transfer:" + imageGoing.value + imageURL.value);
     imageURL.value = "";
-    goingTo.value = "";
+    imageGoing.value = "";
     cancelImageTransfer();
     createDreamblock();
     userAlert.innerHTML = "You Sent An Image Egg! 🎉";
@@ -1036,6 +1034,7 @@ function getMyMusicEggs() {
             createLabel.id = listItems.length + "?";
             const layerEmbed = document.getElementById("myegg-music");
             layerEmbed.className = "myegg-music";
+            embedpreview.className = "";
             layerEmbed.appendChild(createLabel);
 
             const buildImgButton = document.createElement("button");
