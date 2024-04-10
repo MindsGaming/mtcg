@@ -945,10 +945,10 @@ function wrapMusic() {
             console.log(JSON.stringify(response));
           });
 
-        const pushpreview = document.getElementById("audioPreview-one");
-        const pushpreviewTwo = document.getElementById("audioPreview-two");
-        pushpreview.src = url.toString();
-        pushpreviewTwo.src = url.toString();
+        const pushpreview = document.getElementById("sourceOne");
+        const pushpreviewTwo = document.getElementById("sourceTwo");
+        pushpreview.src = dreamURL.toString();
+        pushpreviewTwo.src = dreamURL.toString();
         const embedpreview = document.getElementById("audio-float");
         let embed = embedpreview.innerHTML;
         const createLabel = document.createElement("label");
@@ -1030,7 +1030,7 @@ function getMyMusicEggs() {
             createLabel.innerHTML = embed;
             createLabel.id = listItems.length + "?";
             const layerEmbed = document.getElementById("myegg-music");
-            layerEmbed.className = "display";
+            layerEmbed.className = "myegg-music";
             layerEmbed.appendChild(createLabel);
 
             const buildImgButton = document.createElement("button");
