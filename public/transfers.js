@@ -1020,6 +1020,9 @@ function getMyMusicEggs() {
 
             const pushpreview = document.getElementById("sourceOne");
             const pushpreviewTwo = document.getElementById("sourceTwo");
+            
+            
+            
             pushpreview.src = extractedWord;
             pushpreview.id = "sourceOne" + listItems.length;
             pushpreviewTwo.src = extractedWord;
