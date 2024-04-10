@@ -539,28 +539,24 @@ function openRefferal() {
 }
 
 ////Image Transfers
-
 function sendImageTransfer() {
   let tCost = parseFloat(currenteggs.innerHTML);
 
-  if (tCost < 5) {
+  if (tCost < 1) {
     userAlert.innerHTML = "5 Eggs Reqired";
   } else {
     let imageURL = "";
-    let checkImage = document.getElementById("eggform-image");
-    if (checkImage.value == "") {
-      imageURL = document.getElementById("eggform-music").value;
+    let goingTo = "";
+
+    if (imageURL.value == "") {
+      imageURL = document.getElementById("eggform-music");
     } else {
-      imageURL = checkImage.value;
+      imageURL = document.getElementById("eggform-image");
     }
-
-    let imageReciver = "";
-    let checkReciver = document.getElementById("transfer-myeggimage");
-
-    if (checkReciver.value == "") {
-      imageReciver = document.getElementById("transfer-mymusicimage").value;
+    if (goingTo.value == "") {
+      goingTo = document.getElementById("transfer-mymusicimage");
     } else {
-      imageReciver = checkReciver.value;
+      goingTo = document.getElementById("transfer-myeggimage");
     }
 
     const appendNewDreamss = (dream) => {
@@ -575,7 +571,7 @@ function sendImageTransfer() {
     };
 
     const data = {
-      dream: "Transfer:" + imageReciver + imageURL.value,
+      dream: "Transfer:" + goingTo.value + imageURL.value,
     };
 
     fetch("/addDream", {
@@ -597,11 +593,10 @@ function sendImageTransfer() {
     deductEggs.innerHTML = transferMath;
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + imageReciver.value + imageURL.value);
-    appendNewDream("Transfer:" + imageReciver.value + imageURL.value);
+    dreams.push("Transfer:" + goingTo.value + imageURL.value);
+    appendNewDream("Transfer:" + goingTo.value + imageURL.value);
     imageURL.value = "";
-    imageReciver.value = "";
-
+    goingTo.value = "";
     cancelImageTransfer();
     createDreamblock();
     userAlert.innerHTML = "You Sent An Image Egg! 🎉";
