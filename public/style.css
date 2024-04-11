@@ -157,7 +157,6 @@ apps {
   background-color: black;
   margin-left: -10px;
   margin-top: -5px;
-  opacity: 0.7;
   overflow: auto;
   z-index: 2;
 }
@@ -438,7 +437,7 @@ li {
   border-style: groove;
   background-color: black;
   opacity: 0.6;
-  overflow:scroll;
+  overflow: scroll;
 }
 
 .login-form {
