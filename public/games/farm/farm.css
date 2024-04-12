@@ -472,6 +472,7 @@ li {
 
 .tab-menu {
   position: fixed;
+  width: 90%;
   display: block;
   left: 0;
   top: 0;
