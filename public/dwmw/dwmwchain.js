@@ -7,17 +7,17 @@ function startMine() {
   const userAlert = document.getElementById("userAlert");
   let checkStart = mining.title;
 
-  if (checkStart == "Start") {
+  if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "You Need To Login";
   } else {
-    if (mining.innerHTML == "Start") {
+    if (checkStart == "Start") {
       mining.innerHTML = "Stop";
       activeMiner = "Yes";
-      mining.title = "Stop Hack";
-      setTimeout(dwmwChain(), 3000);
+      mining.title = "Stop";
+      dwmwChain();
       userAlert.innerHTML = "";
     } else {
-      if (mining.innerHTML == "Stop") {
+      if (checkStart == "Stop") {
         activeMiner = "No";
         mining.title = "Start";
         mining.innerHTML = "Hack Game";
@@ -91,7 +91,7 @@ function dwmwChain() {
       }
     }
   }
-  setTimeout(requestMine(), 5000);
+  setTimeout(requestMine(), 3000);
 }
 function requestMine() {
   const mining = document.getElementById("startMine");
