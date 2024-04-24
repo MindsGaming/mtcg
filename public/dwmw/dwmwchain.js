@@ -11,7 +11,7 @@ function startMine() {
     userAlert.innerHTML = "You Need To Login";
   } else {
     if (checkStart == "Start") {
-      mining.innerHTML = "Stop";
+      mining.innerHTML = "Stop Hack";
       activeMiner = "Yes";
       mining.title = "Stop";
       dwmwChain();
