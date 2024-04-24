@@ -58,6 +58,8 @@ var connectWithMetaMask = async function () {
     dreams.push(dreamInput.value);
     appendNewDream(dreamInput.value);
     PlayChicken();
+    loginform.className = "hide";
+    gotIT();
   }
 
   async () => {
