@@ -20,14 +20,13 @@
     />
     <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/term/term.css" />
     <link rel="stylesheet" href="/dwmw/dwmw.css" />
     <script src="/script.js" defer></script>
     <script src="/client.js" defer></script>
     <script src="/cpu.js" defer></script>
     <script src="/metamask.js" defer></script>
-    <script src="/term/term.js" defer></script>
     <script src="/dwmw/dwmw.js" defer></script>
+    <script src="/dwmw/dwmwchain.js" defer></script>
   </head>
   <body>
     <div align="center" class="movie" title="DWMW (Dude Where's My Wallet?)">
@@ -54,13 +53,69 @@
         their wallet inside the multiverse. <br />Get lost in their wacky
         adventures with friends and a trusty conscious artificial intelligence
         agent.
+
         <br />
-        <label class="crypto-text">
-          It's also a un-deployed cryptocurrency token you can trade and interat
-          with, <br />
-          with enough support it could launch on a blockchain.</label
-        >
       </p>
+
+      <form id="login-form" class="game-article">
+        <h1 style="color: gold; font-size: 23px">Login To Earn DWMW</h1>
+        <p class="article-text">
+          Earned DWMW goes to your game account, you can request it in the farm!
+        </p>
+        <input
+          name="dream"
+          aria-label="a new dream"
+          type="text"
+          maxlength="42"
+          minlength="42"
+          placeholder="Deposit Address"
+          required
+        />
+
+        <button style="cursor: pointer" type="submit" id="submit-dream">
+          Game On!
+        </button>
+
+        <br /><br />
+        <button type="button" class="gamebuttons" style="margin-bottom: 5px">
+          <a
+            target="_self"
+            style="text-decoration: none; margin-bottom: 5px"
+            href="/games/farm"
+            >Where's The Game?</a
+          >
+        </button>
+        <button
+          type="button"
+          class="gamebuttons"
+          style="margin-bottom: 5px"
+          id="connect"
+        >
+          Metamask Desktop
+        </button>
+        <br />
+        <label class="hide" id="user-account">Login</label>
+      </form>
+      <section class="hide">
+        <ul class="hide" id="dreams"></ul>
+        <button class="hide" id="clear-dreams">Clear Dreams</button>
+      </section>
+
+      <label class="crypto-text">
+        DWMW is a deployed cryptocurrency token you can trade and interat
+        with!<br />
+        <label>Mined: <label id="minedX">0</label></label>
+        <br />
+        <label
+          >Value:
+          <label id="DWMW-change">0</label>
+        </label>
+        <br />
+        <label>Trys: <label id="minedT">0</label></label
+        ><br />
+        <button id="startMine" onclick="startMine()">Start</button>
+        <label id="userAlert" style="color: red"></label>
+      </label>
 
       <br />
       <button onclick="joinshow();" class="DWMWbuttons">Get Involved!</button>
@@ -367,44 +422,6 @@
           <br />
         </div>
       </div>
-    </div>
-    <div id="termframe" class="hide" title="Login">
-      <label class="x" onclick="closeside();">X</label>
-
-      <label class="terminaltop"
-        >Game Terminal
-        <hr />
-      </label>
-      <br />
-      <br />
-      <ul class="term-command" id="dreams"></ul>
-      <label id="admin" class="hide"></label>
-      <iframe id="remix" class="hide" src="#"> </iframe>
-
-      <form name="login">
-        <label id="l-preview" title="@MTCG" class="term-home">?!@MTCG/:</label>
-        <input
-          class="term-command"
-          id="dream"
-          name="dream"
-          onmouseover="Rplaceholder();"
-          aria-label="a new dream"
-          type="text"
-          value=""
-          required
-          placeholder="Type A Command."
-          maxlength="43"
-          minlength="4"
-        />
-        <br />
-      </form>
-      <div id="l-buttons" class="hide">
-        <button type="submit" id="submit-dream">Standard Login</button>
-        <button onclick="desktopOnly();" id="connect">Meatmask Login</button>
-        <button onclick="layout();" id="guest">Guest</button>
-        <button id="clear-dreams" class="hide">Clear Dreams</button>
-      </div>
-      <label id="walletID"></label>
     </div>
 
     <div class="footer">
