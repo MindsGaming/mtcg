@@ -137,7 +137,7 @@ function requestMine() {
           let collapseMath = collapseCurrent - currentValue;
 
           if (collapseMath > 0) {
-            pingValue.innerHTML = mathTry;
+            pingValue.innerHTML = mathValue;
           } else {
             pingValue.innerHTML = collapseMath;
           }
