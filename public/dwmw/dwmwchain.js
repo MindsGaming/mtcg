@@ -15,6 +15,7 @@ function startMine() {
       activeMiner = "Yes";
       mining.title = "Stop";
       dwmwChain();
+      setTimeout(requestMine(), 3000);
       userAlert.innerHTML = "";
     } else {
       if (checkStart == "Stop") {
@@ -91,13 +92,12 @@ function dwmwChain() {
       }
     }
   }
-  setTimeout(requestMine(), 3000);
 }
 function requestMine() {
   const mining = document.getElementById("startMine");
   const userAccount = document.getElementById("user-account");
   const userAlert = document.getElementById("userAlert");
-
+  fource = "OFF";
   if (activeMiner == "Yes") {
     let chainLink = dreamsList.getElementsByTagName("li").length;
     let rGrab = Math.floor(Math.random() * chainLink);
