@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>#MindsGaming -DWMW</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dude Where's My Wallet?" />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/IMG_20230417_140324_Glitch2.jpg"
+      type="image/jpeg"
+    />
+    <link rel="stylesheet" href="https://ipack.glitch.me/mgicons.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/dwmw/dwmw.css" />
+    <script src="/script.js" defer></script>
+    <script src="/client.js" defer></script>
+    <script src="/cpu.js" defer></script>
+    <script src="/metamask.js" defer></script>
+    <script src="/dwmw/dwmw.js" defer></script>
+    <script src="/dwmw/dwmwchain.js" defer></script>
+  </head>
+  <body>
+    <div align="center" class="movie" title="DWMW (Dude Where's My Wallet?)">
+      <h class="DWMWhead">DWMW</h>
+      <img
+        class="DWMWimg"
+        src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/IMG_20230417_140324_Glitch2.jpg?"
+      />
+      <br />
+      <button
+        onclick="watchDWMW();"
+        class="watchDWMW"
+        title="E1"
+        id="watchDWMW"
+      >
+        Watch E1
+      </button>
+      <button onclick="DWMWdonate();" class="watchDWMW" title="Trade DWMW">
+        Trade
+      </button>
+
+      <p class="DWMWinfo">
+        Dude Where's My Wallet is a virtual web series about two dudes who lose
+        their wallet inside the multiverse. <br />Get lost in their wacky
+        adventures with friends and a trusty conscious artificial intelligence
+        agent.
+
+        <br />
+      </p>
+
+      <form id="login-form" class="game-article">
+        <h1 style="color: gold; font-size: 23px">Login To Earn DWMW</h1>
+        <p class="article-text">
+          Earned DWMW goes to your game account, you can request it in the farm!
+        </p>
+        <input
+          name="dream"
+          aria-label="a new dream"
+          type="text"
+          maxlength="42"
+          minlength="42"
+          placeholder="Deposit Address"
+          required
+        />
+
+        <button style="cursor: pointer" type="submit" id="submit-dream">
+          Game On!
+        </button>
+
+        <br /><br />
+        <button type="button" class="gamebuttons" style="margin-bottom: 5px">
+          <a
+            target="_self"
+            style="text-decoration: none; margin-bottom: 5px"
+            href="/games/farm"
+            >Where's The Game?</a
+          >
+        </button>
+        <button
+          type="button"
+          class="gamebuttons"
+          style="margin-bottom: 5px"
+          id="connect"
+        >
+          Metamask Desktop
+        </button>
+        <br />
+        <label class="hide" id="user-account">Login</label>
+      </form>
+      <section class="hide">
+        <ul class="hide" id="dreams"></ul>
+        <button class="hide" id="clear-dreams">Clear Dreams</button>
+      </section>
+
+      <label class="crypto-text">
+        DWMW is a deployed cryptocurrency token you can trade and interat
+        with!<br />
+        <br />
+        Try The DWMW Game Hack! <br /><br />
+        <label>Hacked Eggs: <label id="minedX">0</label></label>
+        <br />
+        <label
+          >DWMW Value:
+          <label id="DWMW-change">0</label>
+        </label>
+        <br />
+        <label>Trys: <label id="minedT">0</label></label
+        ><br />
+        <button
+          id="startMine"
+          onclick="startMine()"
+          style="pointer: cursor"
+          title="Start"
+        >
+          Hack Game
+        </button>
+        <label id="userAlert" style="color: red"></label>
+      </label>
+
+      <br />
+      <button onclick="joinshow();" class="DWMWbuttons">Get Involved!</button>
+      <button onclick="DWMWgit();" class="DWMWbuttons">Improve The Git</button>
+      <button onclick="InfinityChat();" class="DWMWbuttons">
+        Chat With AI
+      </button>
+
+      <div id="chat-box" class="hide" title="chatbox">
+        <label onclick="InfinityChat();" class="close">X</label>
+        <iframe
+          id="InfinityChat"
+          src="https://mindsgaming.glitch.me"
+          width="100%"
+          height="100%"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <div id="rewards" class="hide" title="Closed">
+      <label class="x" onclick="closeside();">X</label>
+      <center>
+        <h>Community Rewards</h>
+        <p style="font-size: 0.65rem; color: white">
+          Earn our community token MTCG <br />
+          Just help with the community or be active in projects!
+          <br />
+          <button
+            onclick="learnHow();"
+            id="learnBTN"
+            title="Learn How"
+            style="
+              font-size: 0.65rem;
+              color: white;
+              border-color: green;
+              background-color: white;
+              color: blue;
+            "
+          >
+            Learn How
+          </button>
+        </p>
+        <br />
+        <div id="learn-how" class="hide">
+          <p style="font-size: 0.65rem; color: white">
+            <b>Step #1</b><br />
+            Travel to the MTCG token page, scroll down to bounties/shop.
+            <br />
+            <img
+              src="https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/Screenshot%202024-01-23%20at%2014-47-55%20Information%20about%20MTCG%20token%20mintMe.png"
+              class="helpimg"
+            />
+            <br />
+            <b>Step #2</b><br />
+            Select the bounty/shop item you want to claim.
+            <br />
+            <br />
+            <br />
+            <b>Step #3</b><br />
+            Complete the claim/buy form with the required information and click
+            participate/buy!
+            <br />
+            <img
+              src="https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/Screenshot%202024-01-23%20at%2014-50-31%20Information%20about%20MTCG%20token%20mintMe.png"
+              class="helpimg"
+            />
+            <br />
+          </p>
+          <br />
+        </div>
+
+        <div class="reward" style="border-color: gold">
+          <h2>Add Your Bounty/Reward</h2>
+          <p style="font-size: 0.55rem; color: white">
+            Add your bounties and rewards to our MTCG voting and you may see it
+            here in the future!
+          </p>
+          <button>
+            <a href="https://www.mintme.com/token/MTCG/voting" target="_blank"
+              >Propose Your Bounty</a
+            >
+          </button>
+        </div>
+        <div class="reward">
+          <h2>Group Moderation</h2>
+          <p style="font-size: 0.55rem; color: white">
+            5 tokens a month for helping approve posts in community groups!
+          </p>
+          <button>
+            <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+              >Claim</a
+            >
+          </button>
+        </div>
+
+        <div class="reward">
+          <h2>Original Content</h2>
+          <p style="font-size: 0.55rem; color: white">
+            2 token a month for uploading original content in a community group!
+          </p>
+          <button>
+            <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+              >Claim</a
+            >
+          </button>
+        </div>
+
+        <div class="reward">
+          <h2>Promote Our Community</h2>
+          <p style="font-size: 0.55rem; color: white">
+            1 token a month for promoting our community!
+          </p>
+          <button>
+            <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+              >Claim</a
+            >
+          </button>
+        </div>
+        <div class="reward">
+          <h2>Join Or Start An Activity</h2>
+          <p style="font-size: 0.55rem; color: white">
+            6 tokens every month you hold or join a community activity.
+          </p>
+          <button>
+            <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+              >Claim</a
+            >
+          </button>
+        </div>
+        <div class="reward">
+          <h2>Start Your Token</h2>
+          <p style="font-size: 0.55rem; color: white">
+            Start your own token for a one time reward of 10 MTCG
+          </p>
+          <button>
+            <a href="https://www.mintme.com/token/MTCG/sign-up" target="_blank"
+              >Sign Up</a
+            >
+          </button>
+        </div>
+        <br />
+        <div class="shopitems">
+          <h>Shop Items</h>
+          <p style="font-size: 0.65rem; color: white">
+            Launch Your Group, Promote Your Bounties And More <br />On This
+            Community Website<br />
+          </p>
+          <br />
+          <div class="reward">
+            <h2>Collect MTCG Cards</h2>
+            <p style="font-size: 0.55rem; color: white">
+              Use MTCG to get you custom NFT collector card!
+            </p>
+            <button>
+              <a href="#" onclick="cardsview();">View Cards</a>
+            </button>
+          </div>
+          <div class="reward">
+            <h2>Launch Your Group</h2>
+            <p style="font-size: 0.55rem; color: white">
+              Get a spot on this website with MTCG!
+            </p>
+            <button>
+              <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+                >Shop Items</a
+              >
+            </button>
+          </div>
+          <div class="reward">
+            <h2>Promote Your Bounty</h2>
+            <p style="font-size: 0.55rem; color: white">
+              Don't rely on chance and buy a bounty spot!
+            </p>
+            <button>
+              <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+                >Shop Items</a
+              >
+            </button>
+          </div>
+          <div class="reward">
+            <h2>Become a VIP</h2>
+            <p style="font-size: 0.55rem; color: white">
+              Promote Your Content Links In Groups By Becoming A Moderator.
+            </p>
+            <button>
+              <a href="https://www.mintme.com/token/MTCG/" target="_blank"
+                >Shop Items</a
+              >
+            </button>
+          </div>
+        </div>
+      </center>
+    </div>
+
+    <div id="splash" class="hide">
+      <label class="x" id="close" onclick="closeside();">X</label>
+      <iframe
+        id="Infinity"
+        style="width: 100%; height: 90%; margin-bottom: 3rem"
+        src="https://mindsgaming.glitch.me"
+        title="Infinity"
+      ></iframe>
+    </div>
+    <div id="info" class="hide">
+      <label class="x" onclick="closeside();">X</label>
+
+      <div class="notepad">
+        <h1>Welcome to MindsGaming</h1>
+        <hr />
+        <br />
+        <p style="font-family: Cursive">
+          Explore a universe where creativity and open source empowerment come
+          together to unfold a world of possibilities. <br />
+          From socail group topics, cryptocurrency, virtual hubs and more
+          <br />Start exploring the community today.
+        </p>
+        <div>
+          <hr />
+          <br />
+          <strong>Join the Journey:</strong>
+          <p style="font-family: Cursive">
+            Immerse yourself in social group topics, <br />
+            create your own group topics and promote your creator content on
+            <a
+              href="https://www.minds.com/MindsGaming/?referrer=MindsGaming"
+              target="_blank"
+              >Minds.com</a
+            >
+            <br />with our community.
+            <br />
+          </p>
+          <hr />
+          <br />
+          <strong>Community Moderation:</strong>
+          <p style="font-family: Cursive">
+            Shape your experience by joining community groups moderated by
+            passionate members, ensuring a curated and enjoyable environment.
+          </p>
+          <hr />
+          <br />
+          <strong>Tokens:</strong>
+          <p style="font-family: Cursive">
+            Elevate your experience with our
+            <a href="https://www.mintme.com/token/MTCG/invite">MTCG token</a>
+            – a gateway to personal group promotions, shop items, and more.
+            <br />
+            Or <br />
+            Grow your brand or community and start crafting your unique social
+            token
+            <a href="https://www.mintme.com/token/MTCG/sign-up">here</a>.
+          </p>
+
+          <hr />
+          <br />
+
+          <strong>MTCG Rewards:</strong>
+          <p style="font-family: Cursive">
+            Get recognized for your community-building activities with
+            <a href="#" onclick="rewardsview();"> MTCG rewards.</a>
+            <br />It's not just a community; it's a rewarding journey!
+          </p>
+          <hr />
+          <br />
+          <strong>Open Source Empowerment:</strong>
+          <p style="font-family: Cursive">
+            Embrace the power of open source!
+            <a href="https://glitch.com/~mindsgaming">Remix</a> the MindsGaming
+            website, start your own community, and explore resources freely. The
+            possibilities are limitless!
+          </p>
+          <hr />
+          <br />
+
+          <p style="font-family: Cursive">
+            <br />Let your imagination soar, and let's build vibrant communities
+            together! ✨🛠️ <br />
+            To infinity and beyond! <br />
+            <a href="https://www.minds.com/MindsGaming/?referrer=MindsGaming"
+              >Subscribe To Community Channel!</a
+            >
+            <br />
+          </p>
+          <hr />
+          <br />
+          <div id="launchgroup" class="hide" title="Closed">
+            <h>Launching A Group</h>
+            <p>
+              You can add a personal group hosted on Minds.com to our website
+              with MTCG!<br />
+              Invite us to your group, then head over to our token page and find
+              the shop. <br />
+              Launch Your Group Today!
+              <br />
+              <button>
+                <a href="https://mintme.com/token/MTCG" target="_blank"
+                  >Token Page</a
+                >
+              </button>
+            </p>
+            <br />
+          </div>
+
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="start" id="start" title="Start Here" onclick="HOME();"></div>
+      <div>
+        <a title="MTCG" href="#" onclick="Communityview();">
+          <img
+            class="footer-icon"
+            src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669052080420.png"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
