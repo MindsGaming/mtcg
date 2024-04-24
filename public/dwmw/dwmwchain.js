@@ -1,6 +1,6 @@
 let mychain = "";
 let activeMiner = "";
-
+let hardness = 8;
 function startMine() {
   const mining = document.getElementById("startMine");
   const userAccount = document.getElementById("user-account");
@@ -43,8 +43,8 @@ function dwmwChain() {
         grabber.value = toggleMath;
 
         let square = document.getElementById("dreams");
-        let width = 25;
-        let height = 25;
+        let width = hardness;
+        let height = hardness;
         let topM = Math.floor(Math.random() * height);
         let leftM = Math.floor(Math.random() * width);
         let style = "float: left; top:" + topM + "px; left:" + leftM + "px;";
@@ -79,8 +79,8 @@ function dwmwChain() {
 
       let zero = document.getElementById(0);
       if (zero) {
-        let width = 25;
-        let height = 25;
+        let width = hardness;
+        let height = hardness;
         let topM = Math.floor(Math.random() * height);
         let leftM = Math.floor(Math.random() * width);
         let style = "float: left; top:" + topM + "px; left:" + leftM + "px;";
@@ -104,8 +104,8 @@ function requestMine() {
     let grabber = document.getElementById(rGrab);
 
     let square = document.getElementById("dreams");
-    let width = 25;
-    let height = 25;
+    let width = hardness;
+    let height = hardness;
     let topM = Math.floor(Math.random() * height);
     let leftM = Math.floor(Math.random() * width);
     let entangle = topM + leftM * 10000;
@@ -140,7 +140,7 @@ function requestMine() {
           let collapseCurrent = parseFloat(collapseValue);
           let collapseMath = collapseCurrent - currentValue;
 
-          if (collapseMath > 0) {
+          if (collapseMath < 0) {
             pingValue.innerHTML = mathValue;
           } else {
             pingValue.innerHTML = collapseMath;
@@ -177,6 +177,7 @@ function requestMine() {
   }
   if (activeMiner == "No") {
     activeMiner = "";
+  } else {
+    setTimeout(requestMine, 5000);
   }
-  setTimeout(requestMine, 5000);
 }
