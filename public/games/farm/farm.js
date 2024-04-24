@@ -501,7 +501,7 @@ function GAMERchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "GAMER" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "GAMER" + "4",
     };
 
     fetch("/addDream", {
@@ -515,15 +515,15 @@ function GAMERchange() {
       });
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + userAccount.innerHTML + "GAMER" + "5");
-    appendNewDream("Transfer:" + userAccount.innerHTML + "GAMER" + "5");
+    dreams.push("Transfer:" + userAccount.innerHTML + "GAMER" + "4");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "GAMER" + "4");
 
     let transferCost = 1000;
     let transferMath = currentchange - 1000;
     POINTS.innerHTML = transferMath;
 
     let pushchange = parseInt(request.innerHTML);
-    let addchange = 5;
+    let addchange = 4;
     let mathChange = pushchange + addchange;
     request.innerHTML = mathChange;
     userAlert.innerHTML = "Sent To Your Farm!";
@@ -564,7 +564,7 @@ function ECLIPSEchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "ECLIPSE" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "ECLIPSE" + "7",
     };
 
     fetch("/addDream", {
@@ -578,15 +578,15 @@ function ECLIPSEchange() {
       });
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + userAccount.innerHTML + "ECLIPSE" + "5");
-    appendNewDream("Transfer:" + userAccount.innerHTML + "ECLIPSE" + "5");
+    dreams.push("Transfer:" + userAccount.innerHTML + "ECLIPSE" + "7");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "ECLIPSE" + "7");
 
     let transferCost = 1000;
     let transferMath = currentchange - 1000;
     POINTS.innerHTML = transferMath;
 
     let pushchange = parseInt(request.innerHTML);
-    let addchange = 5;
+    let addchange = 7;
     let mathChange = pushchange + addchange;
     request.innerHTML = mathChange;
     userAlert.innerHTML = "Sent To Your Farm!";
@@ -690,7 +690,7 @@ function GTPCchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "GTPC" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "GTPC" + "6",
     };
 
     fetch("/addDream", {
@@ -704,11 +704,11 @@ function GTPCchange() {
       });
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + userAccount.innerHTML + "GTPC" + "5");
-    appendNewDream("Transfer:" + userAccount.innerHTML + "GTPC" + "5");
+    dreams.push("Transfer:" + userAccount.innerHTML + "GTPC" + "6");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "GTPC" + "6");
 
     let pushchange = parseInt(request.innerHTML);
-    let addchange = 5;
+    let addchange = 6;
     let mathChange = pushchange + addchange;
     request.innerHTML = mathChange;
     userAlert.innerHTML = "Sent To Your Farm!";
@@ -753,7 +753,7 @@ function PINNchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "PINN" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "PINN" + "7",
     };
 
     fetch("/addDream", {
@@ -767,15 +767,15 @@ function PINNchange() {
       });
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + userAccount.innerHTML + "PINN" + "5");
-    appendNewDream("Transfer:" + userAccount.innerHTML + "PINN" + "5");
+    dreams.push("Transfer:" + userAccount.innerHTML + "PINN" + "7");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "PINN" + "7");
 
     let transferCost = 1000;
     let transferMath = currentchange - 1000;
     POINTS.innerHTML = transferMath;
 
     let pushchange = parseInt(request.innerHTML);
-    let addchange = 5;
+    let addchange = 7;
     let mathChange = pushchange + addchange;
     request.innerHTML = mathChange;
     userAlert.innerHTML = "Sent To Your Farm!";
@@ -816,7 +816,7 @@ function WTVchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "WTV" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "WTV" + "8",
     };
 
     fetch("/addDream", {
@@ -830,15 +830,15 @@ function WTVchange() {
       });
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + userAccount.innerHTML + "WTV" + "5");
-    appendNewDream("Transfer:" + userAccount.innerHTML + "WTV" + "5");
+    dreams.push("Transfer:" + userAccount.innerHTML + "WTV" + "8");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "WTV" + "8");
 
     let transferCost = 1000;
     let transferMath = currentchange - 1000;
     POINTS.innerHTML = transferMath;
 
     let pushchange = parseInt(request.innerHTML);
-    let addchange = 5;
+    let addchange = 8;
     let mathChange = pushchange + addchange;
     request.innerHTML = mathChange;
     userAlert.innerHTML = "Sent To Your Farm!";
@@ -879,7 +879,7 @@ function DARKMARKchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "GAMER" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "GAMER" + "9",
     };
 
     fetch("/addDream", {
@@ -893,15 +893,15 @@ function DARKMARKchange() {
       });
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + userAccount.innerHTML + "DARKMARK" + "5");
-    appendNewDream("Transfer:" + userAccount.innerHTML + "DARKMARK" + "5");
+    dreams.push("Transfer:" + userAccount.innerHTML + "DARKMARK" + "9");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "DARKMARK" + "9");
 
     let transferCost = 1000;
     let transferMath = currentchange - 1000;
     POINTS.innerHTML = transferMath;
 
     let pushchange = parseInt(request.innerHTML);
-    let addchange = 5;
+    let addchange = 9;
     let mathChange = pushchange + addchange;
     request.innerHTML = mathChange;
     userAlert.innerHTML = "Sent To Your Farm!";
@@ -942,7 +942,7 @@ function DRAGONchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "10",
     };
 
     fetch("/addDream", {
@@ -956,15 +956,15 @@ function DRAGONchange() {
       });
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "5");
-    appendNewDream("Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "5");
+    dreams.push("Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "10");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "DRAGONTOKEN" + "10");
 
     let transferCost = 1000;
     let transferMath = currentchange - 1000;
     POINTS.innerHTML = transferMath;
 
     let pushchange = parseInt(request.innerHTML);
-    let addchange = 5;
+    let addchange = 10;
     let mathChange = pushchange + addchange;
     request.innerHTML = mathChange;
     userAlert.innerHTML = "Sent To Your Farm!";
@@ -1005,7 +1005,7 @@ function CANDYSchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "CANDYS" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "CANDYS" + "8",
     };
 
     fetch("/addDream", {
@@ -1019,15 +1019,15 @@ function CANDYSchange() {
       });
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + userAccount.innerHTML + "CANDYS" + "5");
-    appendNewDream("Transfer:" + userAccount.innerHTML + "CANDYS" + "5");
+    dreams.push("Transfer:" + userAccount.innerHTML + "CANDYS" + "8");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "CANDYS" + "8");
 
     let transferCost = 1000;
     let transferMath = currentchange - 1000;
     POINTS.innerHTML = transferMath;
 
     let pushchange = parseInt(request.innerHTML);
-    let addchange = 5;
+    let addchange = 8;
     let mathChange = pushchange + addchange;
     request.innerHTML = mathChange;
     userAlert.innerHTML = "Sent To Your Farm!";
@@ -1068,7 +1068,7 @@ function Bdbchange() {
     };
 
     const data = {
-      dream: "Transfer:" + userAccount.innerHTML + "BDB" + "5",
+      dream: "Transfer:" + userAccount.innerHTML + "BDB" + "4",
     };
 
     fetch("/addDream", {
@@ -1082,15 +1082,78 @@ function Bdbchange() {
       });
 
     // Add the dream value to the list
-    dreams.push("Transfer:" + userAccount.innerHTML + "BDB" + "5");
-    appendNewDream("Transfer:" + userAccount.innerHTML + "BDB" + "5");
+    dreams.push("Transfer:" + userAccount.innerHTML + "BDB" + "4");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "BDB" + "4");
 
     let transferCost = 1000;
     let transferMath = currentchange - 1000;
     POINTS.innerHTML = transferMath;
 
     let pushchange = parseInt(request.innerHTML);
-    let addchange = 5;
+    let addchange = 4;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
+    pullENERGY();
+  }
+}
+
+function Dwmwchange() {
+  const numb = dreamsList.getElementsByTagName("li").length;
+  const request = document.getElementById("DWMW-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 1000;
+
+  if (currentchange < removePOINTS) {
+    userAlert.innerHTML = "Not enough Yolks";
+  } else {
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "DWMW" + "1",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "DWMW" + "1");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "DWMW" + "1");
+
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 1;
     let mathChange = pushchange + addchange;
     request.innerHTML = mathChange;
     userAlert.innerHTML = "Sent To Your Farm!";
@@ -1624,8 +1687,8 @@ function CANDYSPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "Candys: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "Candys: " + currentchange);
+    dreams.push(userAccount.innerHTML + "Candys" + currentchange);
+    appendNewDream(userAccount.innerHTML + "Candys" + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
@@ -1682,8 +1745,66 @@ function BDBPOINTS() {
       });
 
     // Add the dream value to the list
-    dreams.push(userAccount.innerHTML + "BDB: " + currentchange);
-    appendNewDream(userAccount.innerHTML + "BDB: " + currentchange);
+    dreams.push(userAccount.innerHTML + "BDB" + currentchange);
+    appendNewDream(userAccount.innerHTML + "BDB" + currentchange);
+    request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
+    createDreamblock();
+  }
+}
+
+function DWMWPOINTS() {
+  const numb = dreamsList.getElementsByTagName("li").length;
+  const request = document.getElementById("DWMW-change");
+  let currentchange = parseInt(request.innerHTML);
+
+  if (currentchange < 100) {
+    userAlert.innerHTML = "100 DWMW to send requests";
+  } else {
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    // Helper function to create a list item for a given dream
+    const layingEGG = parseFloat(currenteggs.innerHTML);
+    const goldenEGG = 1;
+    let goldenEGGmath = layingEGG + goldenEGG;
+    currenteggs.innerHTML = goldenEGGmath;
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Sent:" + userAccount.innerHTML + "DWMW" + currentchange,
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push(userAccount.innerHTML + "DWMW" + currentchange);
+    appendNewDream(userAccount.innerHTML + "DWMW" + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();

@@ -96,6 +96,15 @@ function sendBDBTransfer() {
   transferForm.focus();
 }
 
+function sendDWMWTransfer() {
+  transferForm.className = "display";
+  getTransferToken.innerHTML = "DWMW";
+  transferTokenName.title = "DWMW";
+  transferTokenName.value = "DWMW";
+  piggybank.className = "hide";
+  transferForm.focus();
+}
+
 function sendTransfer() {
   if (
     transferTokenAccount.value == "" ||
@@ -356,6 +365,7 @@ function chekIncomingTransfers() {
     "DRAGONTOKEN",
     "CANDYS",
     "BDB",
+    "DWMW",
   ];
   let userAccountContent = userAccount.innerHTML;
 
@@ -404,6 +414,7 @@ function checkSentTransfers() {
     "DRAGONTOKEN",
     "CANDYS",
     "BDB",
+    "DWMW",
   ];
   let userAccountContent = userAccount.innerHTML;
   let calc = "";
