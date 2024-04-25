@@ -64,7 +64,6 @@ function chekIncomingTransfers() {
           chainLock = 10000;
         } else {
           chainLock = 10000 - piggyMath;
-          alert(chainLock);
         }
       }
     }
