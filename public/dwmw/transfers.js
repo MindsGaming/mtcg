@@ -422,14 +422,26 @@ function checkSentTransfers() {
         let piggyMath = targetpiggy - tack;
         fetchpiggy.innerHTML = piggyMath;
 
+        let openPIGGY = document.getElementById("farming-rewards");
+        if (openPIGGY) {
+          openPIGGY.className = "game-article";
+        }
+
         if (piggyMath == 0 || piggyMath < 0) {
           fetchpiggy.innerHTML = 0;
         } else {
           fetchpiggy.innerHTML = piggyMath;
+
+          let openPIGGY = document.getElementById("farming-rewards");
+
+          if (openPIGGY) {
+            openPIGGY.className = "game-article";
+          }
         }
       }
     }
   }
+  getMyImageEggs();
 }
 
 ////Image Transfers
@@ -499,202 +511,6 @@ function sendImageTransfer() {
   }
 }
 
-function wrapImage() {
-  if (userAccount.innerHTML == "Login") {
-    userAlert.innerHTML = "Login To Play";
-  } else {
-    if (POINTS.innerHTML < 1000) {
-      userAlert.innerHTML = "Not Enough Yolks";
-    } else {
-      let dreamCatcher = document.getElementsByTagName("li");
-      let dreamvalue = dreamCatcher.length - 1;
-      let dreamID = document.getElementById(dreamvalue);
-      let dreamURL = document.getElementById("image-wrapper");
-
-      // Extract the file extension from the URL
-      let url = dreamURL.value;
-      const extension = url.substring(url.lastIndexOf("."));
-      const acceptedImageExtensions = [
-        ".png ",
-        ".jpg ",
-        ".gif ",
-        ".jpeg ",
-        "webp ",
-      ];
-      if (
-        extension == ".png" ||
-        extension == ".jpg" ||
-        extension == ".gif" ||
-        extension == ".jpeg" ||
-        extension == ".jpeg" ||
-        extension == ".webp"
-      ) {
-        const appendNewDreamss = (dream) => {
-          const newListItem = document.createElement("a");
-          newListItem.innerText = dreamURL.value;
-          newListItem.title = "Dream Block";
-          newListItem.id = dreamvalue;
-          newListItem.value = dreamURL.value;
-          newListItem.className = "hide";
-          newListItem.href = dreamURL.value;
-          dreamsList.appendChild(newListItem);
-        };
-
-        const data = {
-          dream: userAccount.innerHTML + dreamURL.value,
-        };
-
-        fetch("/addDream", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: { "Content-Type": "application/json" },
-        })
-          .then((res) => res.json())
-          .then((response) => {
-            console.log(JSON.stringify(response));
-          });
-
-        //Transfer
-        function transferImageEgg() {
-          const theWrapper = document.getElementById("image-wrapper");
-          const placeholder = document.createElement("label");
-          let wrapperString = theWrapper.value;
-          placeholder.id = dreamvalue + "?";
-          placeholder.title = wrapperString;
-          document.getElementById("myegg-images").appendChild(placeholder);
-          const buildWrapIMG = document.createElement("img");
-          buildWrapIMG.src = theWrapper.value;
-          buildWrapIMG.style = "width: 60px; height: 60px;";
-          buildWrapIMG.addEventListener("click", myImageDownloads);
-          document.getElementById(placeholder.id).appendChild(buildWrapIMG);
-          const buildImgButton = document.createElement("button");
-          buildImgButton.className = "piggybuttons";
-          buildImgButton.innerHTML = "Transfer";
-          buildImgButton.addEventListener("click", transferMyImage);
-          document.getElementById(placeholder.id).appendChild(buildImgButton);
-
-          //transfer Image
-          let imageSRC = dreamURL.value;
-
-          function transferMyImage() {
-            const buildImgButton = document.createElement("button");
-            buildImgButton.className = "piggybuttons";
-            buildImgButton.innerHTML = "Transfer";
-
-            const openForm = document.getElementById("eggimage-form");
-            openForm.className = "display";
-            let eggformImage = document.getElementById("eggform-image");
-            eggformImage.value = imageSRC.toString();
-
-            let previewIMG = document.getElementById("eggimageform-preview");
-            previewIMG.src = imageSRC.toString();
-
-            let hideImages = document.getElementById("myegg-images");
-            hideImages.className = "hide";
-
-            let closeVideos = document.getElementById("myegg-music");
-            closeVideos.className = "hide";
-          }
-
-          // self Downloads
-          function myImageDownloads() {
-            let textmerge = placeholder.id;
-            const image = document.getElementById(textmerge);
-            let imageURL = image.title;
-
-            function build(blob) {
-              const link = document.createElement("a");
-              link.href = URL.createObjectURL(blob);
-              link.download = "image.jpg";
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            }
-
-            fetch(imageURL)
-              .then((response) => response.blob())
-              .then(build);
-          }
-        }
-        transferImageEgg();
-        let yourdisplay = document.getElementById("farmerimages");
-        yourdisplay.className = "game-article";
-        let createIMG = document.createElement("img");
-        createIMG.src = dreamURL.value;
-        createIMG.className = "creator-wrap";
-        document.getElementById("wraped-images").appendChild(createIMG);
-        createIMG.id = dreamvalue + "‽";
-        // Add the dream value to the list
-        userAlert.innerHTML =
-          "You Wrapped Block #" +
-          dreamCatcher.length +
-          " with: " +
-          dreamURL.value;
-        const checkPOINTS = parseFloat(POINTS.innerHTML);
-        const removePOINTS = 1000;
-        const EGGmath = Math.round(checkPOINTS - removePOINTS);
-        POINTS.innerHTML = EGGmath;
-        dreams.push(dreamURL.value);
-        appendNewDream(dreamURL.value);
-        dreamURL.value = "";
-      } else {
-        userAlert.innerHTML = acceptedImageExtensions + " Only";
-      }
-    }
-  }
-}
-
-function downloadImg() {
-  const request = document.getElementById("img-grabber");
-
-  if (request.value == "") {
-  } else {
-    let requestIMG = request.value;
-    const image = document.getElementById(requestIMG);
-    let imageURL = image.innerHTML;
-
-    function build(blob) {
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = "image.jpg";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-
-    fetch(imageURL)
-      .then((response) => response.blob())
-      .then(build);
-
-    request.value = "";
-  }
-}
-
-function cancelImageTransfer() {
-  let closeImgForm = document.getElementById("eggimage-form");
-
-  if (closeImgForm.className == "display") {
-    closeImgForm.className = "hide";
-    let hideImages = document.getElementById("myegg-images");
-    hideImages.className = "display";
-  } else {
-    closeImgForm.className = "display";
-  }
-}
-
-function hideEggImages() {
-  let hiding = document.getElementById("myegg-images");
-
-  if (hiding.className == "") {
-    hiding.className = "hide";
-  } else {
-    hiding.className = "";
-  }
-}
-
-let hideEggImageEye = document.getElementById("eggimage-eye");
-hideEggImageEye.addEventListener("click", hideEggImages);
-
 let addedImages = [];
 
 function getMyImageEggs() {
@@ -756,156 +572,6 @@ function getMyImageEggs() {
     }
   }
   getMyMusicEggs();
-}
-
-function transferMyImage(imageSrc) {
-  const openForm = document.getElementById("eggimage-form");
-  openForm.className = "display";
-  let eggformImage = document.getElementById("eggform-image");
-  eggformImage.value = imageSrc;
-
-  let hideImages = document.getElementById("myegg-images");
-  hideImages.className = "hide";
-
-  let previewIMG = document.getElementById("eggimageform-preview");
-  previewIMG.src = imageSrc;
-  previewIMG.style = "width: 32px; height: 32px; border-raduis: 50%;";
-
-  let closeVideos = document.getElementById("myegg-music");
-  closeVideos.className = "hide";
-}
-
-function myImageDownloads(imageSrc) {
-  function build(blob) {
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "image.jpg";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-
-  fetch(imageSrc)
-    .then((response) => response.blob())
-    .then(build);
-}
-
-// Music
-let musicURL = "";
-function wrapMusic() {
-  if (userAccount.innerHTML == "Login") {
-    userAlert.innerHTML = "Login To Play";
-  } else {
-    if (POINTS.innerHTML < 1) {
-      userAlert.innerHTML = "Not Enough Yolks";
-    } else {
-      let dreamCatcher = document.getElementsByTagName("li");
-      let dreamvalue = dreamCatcher.length - 1;
-      let dreamID = document.getElementById(dreamvalue);
-      let dreamURL = document.getElementById("music-wrapper");
-      sources = dreamvalue.toString();
-
-      // Extract the file extension from the URL
-      let url = dreamURL.value;
-      musicURL = url.toString();
-      const Musicextension = url.substring(url.lastIndexOf("."));
-      const acceptedImageExtensions = [".ogg ", ".mp3 ", ".wav "];
-
-      let numb = document.getElementsByTagName("li").length;
-
-      if (
-        Musicextension == ".ogg" ||
-        Musicextension == ".mp3" ||
-        Musicextension == ".wav"
-      ) {
-        const appendNewDreamss = (dream) => {
-          const newListItem = document.createElement("a");
-          newListItem.innerText = dreamURL.value;
-          newListItem.title = "Dream Block";
-          newListItem.id = dreamvalue;
-          newListItem.value = dreamURL.value;
-          newListItem.className = "hide";
-          newListItem.href = dreamURL.value;
-          dreamsList.appendChild(newListItem);
-        };
-
-        const data = {
-          dream: userAccount.innerHTML + dreamURL.value,
-        };
-
-        fetch("/addDream", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: { "Content-Type": "application/json" },
-        })
-          .then((res) => res.json())
-          .then((response) => {
-            console.log(JSON.stringify(response));
-          });
-
-        let placeholderId = "placeholder-" + dreamURL.value;
-        let placeholder = document.createElement("div");
-        placeholder.id = placeholderId;
-        document.getElementById("myegg-music").appendChild(placeholder);
-
-        const pushpreview = document.getElementById("sourceOne");
-        const pushpreviewTwo = document.getElementById("sourceTwo");
-
-        if (!pushpreview) {
-          userAlert.innerHTML = "You Already Wrapped This Image...";
-          dreamURL.value = "";
-        }
-
-        pushpreview.src = dreamURL.value;
-        pushpreview.id = "sourceOne" + numb;
-        pushpreviewTwo.src = dreamURL.value;
-        pushpreviewTwo.id = "sourceTwo" + numb;
-
-        let listItems = "";
-        listItems.length = numb;
-
-        const embedpreview = document.getElementById("audio-float");
-        let embed = embedpreview.innerHTML;
-        const createLabel = document.createElement("label");
-        createLabel.innerHTML = embed;
-        createLabel.id = listItems.length + "?";
-        const layerEmbed = document.getElementById("myegg-music");
-        layerEmbed.className = "myegg-music";
-        embedpreview.className = "";
-        layerEmbed.appendChild(createLabel);
-
-        const buildImgButton = document.createElement("button");
-        buildImgButton.className = "piggybuttons";
-        buildImgButton.innerHTML = "Transfer";
-        buildImgButton.addEventListener("click", function () {
-          transferMyMusic(dreamURL.value);
-        });
-        placeholder.appendChild(buildImgButton);
-
-        let eggimageform = document.getElementById("farmermusic");
-        eggimageform.className = "game-article";
-        musicURL = dreamURL.value;
-        pushpreview.id = "sourceOne";
-        pushpreviewTwo.id = "sourceTwo";
-
-        // Add the dream value to the list
-        userAlert.innerHTML =
-          "You Wrapped Block #" +
-          dreamCatcher.length +
-          " with: " +
-          dreamURL.value;
-        const checkPOINTS = parseFloat(POINTS.innerHTML);
-        const removePOINTS = 1000;
-        const EGGmath = Math.round(checkPOINTS - removePOINTS);
-        POINTS.innerHTML = EGGmath;
-        dreams.push(dreamURL.value);
-        appendNewDream(dreamURL.value);
-        dreamURL.value = "";
-      } else {
-        userAlert.innerHTML = acceptedImageExtensions + " Only";
-      }
-    }
-  }
 }
 
 let addedMusic = [];
@@ -975,62 +641,6 @@ function getMyMusicEggs() {
           }
         }
       }
-    }
-  }
-}
-
-function transferMyMusic(musicURL) {
-  const openForm = document.getElementById("eggmusic-form");
-  openForm.className = "display";
-
-  let eggformImage = document.getElementById("eggform-music");
-  eggformImage.value = musicURL;
-
-  let previewIMG = document.getElementById("eggimageform-preview");
-  previewIMG.className = "hide";
-  previewIMG.style.width = "32px";
-  previewIMG.style.height = "32px";
-  previewIMG.style.borderRadius = "50%";
-
-  let closeVideos = document.getElementById("myegg-music");
-  closeVideos.className = "hide";
-
-  let dreamCatcher = document.getElementsByTagName("li");
-  let replaceviewid = "sourceOne" + sources;
-  let replaceviewidTwo = "sourceTwo" + sources;
-  let replaceView = document.getElementById(replaceviewid);
-  let replaceViewtwo = document.getElementById(replaceviewidTwo);
-  replaceView.src = musicURL;
-  replaceViewtwo.src = musicURL;
-
-  let openAudio = document.getElementById("audio-float");
-  openAudio.className = "display";
-}
-
-function cancelMusicTransfer() {
-  let closeImgForm = document.getElementById("eggmusic-form");
-
-  if (closeImgForm.className == "display") {
-    closeImgForm.className = "hide";
-    let hideImages = document.getElementById("myegg-music");
-    hideImages.className = "myegg-music";
-  } else {
-    closeImgForm.className = "display";
-  }
-}
-
-let musicEye = document.getElementById("eggmusic-eye");
-
-musicEye.addEventListener("click", hideMusic);
-
-function hideMusic() {
-  const hidemusic = document.getElementById("myegg-music");
-
-  if (hidemusic.className == "myegg-music") {
-    hidemusic.className = "hide";
-  } else {
-    if (hidemusic.className == "hide") {
-      hidemusic.className = "myegg-music";
     }
   }
 }
