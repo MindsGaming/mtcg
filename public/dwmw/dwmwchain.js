@@ -1,6 +1,8 @@
 let mychain = "";
 let activeMiner = "";
-let hardness = 8;
+let chainLock = "";
+let hardness = 15;
+
 function startMine() {
   const mining = document.getElementById("startMine");
   const userAccount = document.getElementById("user-account");
@@ -11,27 +13,70 @@ function startMine() {
     userAlert.innerHTML = "You Need To Login";
   } else {
     if (checkStart == "Start") {
-      mining.innerHTML = "Stop Hack";
       activeMiner = "Yes";
       mining.title = "Stop";
-      dwmwChain();
-      setTimeout(requestMine(), 3000);
+      mining.className = "loader";
+      mining.innerHTML = "Stop Hack";
       userAlert.innerHTML = "";
+      chekIncomingTransfers();
     } else {
       if (checkStart == "Stop") {
         activeMiner = "No";
         mining.title = "Start";
+        mining.className = "";
         mining.innerHTML = "Hack Game";
       }
     }
   }
 }
 
+function chekIncomingTransfers() {
+  const mining = document.getElementById("startMine");
+  const userAccount = document.getElementById("user-account");
+  const userAlert = document.getElementById("userAlert");
+
+  let mylist = document.getElementById("ul");
+  let listcount = document.getElementsByTagName("li");
+  let numb = listcount.length;
+  let targetWords = ["DWMW"];
+  let userAccountContent = userAccount.innerHTML;
+
+  let calc = "";
+
+  for (let j = 0; j < targetWords.length; j++) {
+    let concatenatedString = "Transfer:" + userAccountContent + targetWords[j];
+    for (let i = 0; i < listcount.length; i++) {
+      let listItemText = listcount[i].textContent;
+      if (listItemText.includes(concatenatedString)) {
+        let newAlert = listItemText.replace(
+          "Transfer:" + userAccount.innerHTML + targetWords[j],
+          ""
+        );
+        let tack = parseFloat(newAlert);
+        let piggy = targetWords[j] + "-change";
+        let fetchpiggy = document.getElementById(piggy);
+        let targetpiggy = parseFloat(fetchpiggy.innerHTML);
+        let piggyMath = tack + targetpiggy;
+        fetchpiggy.innerHTML = piggyMath;
+
+        if (piggyMath == 0 || piggyMath < 0) {
+          fetchpiggy.innerHTML = 0;
+          chainLock = 10000;
+        } else {
+          chainLock = 10000 - piggyMath;
+          alert(chainLock);
+        }
+      }
+    }
+  }
+  dwmwChain();
+}
+
 function dwmwChain() {
   let chainLink = dreamsList.getElementsByTagName("li").length;
   let chainLength = chainLink;
-  let chainLock = 10000;
   let chainMath = chainLock / chainLength;
+
   for (let DreamChain = -1; DreamChain < chainLength; DreamChain++) {
     for (let i = 0; i < [DreamChain]; i++) {
       let grabber = document.getElementById([DreamChain]);
@@ -92,12 +137,14 @@ function dwmwChain() {
       }
     }
   }
+
+  setTimeout(requestMine, 3000);
 }
 function requestMine() {
   const mining = document.getElementById("startMine");
   const userAccount = document.getElementById("user-account");
   const userAlert = document.getElementById("userAlert");
-  fource = "OFF";
+
   if (activeMiner == "Yes") {
     let chainLink = dreamsList.getElementsByTagName("li").length;
     let rGrab = Math.floor(Math.random() * chainLink);
@@ -113,6 +160,12 @@ function requestMine() {
     if (grabber) {
       let checkGrab = grabber.getAttribute("entangle");
       if (checkGrab == entangle) {
+        let pingTrys = document.getElementById("minedT");
+        let currentTrys = parseFloat(pingTrys.innerHTML);
+        let addTry = 1;
+        let mathTry = currentTrys + addTry;
+        pingTrys.innerHTML = mathTry;
+
         let pingMined = document.getElementById("minedX");
         let currentMined = parseFloat(pingMined.innerHTML);
         let addMined = 1;
@@ -123,13 +176,6 @@ function requestMine() {
         let currentValue = parseFloat(pingValue.innerHTML);
         let addValue = grabber.value;
         let mathValue = currentValue + addValue;
-        pingValue.innerHTML = mathValue;
-
-        let pingTrys = document.getElementById("minedT");
-        let currentTrys = parseFloat(pingTrys.innerHTML);
-        let addTry = 1;
-        let mathTry = currentTrys + addTry;
-        pingTrys.innerHTML = mathTry;
 
         let collapse = rGrab - 1;
         let collapsePing = parseFloat(collapse);
@@ -140,7 +186,7 @@ function requestMine() {
           let collapseCurrent = parseFloat(collapseValue);
           let collapseMath = collapseCurrent - currentValue;
 
-          if (collapseMath < 0) {
+          if (collapseMath < 0 || collapseMath == 0) {
             pingValue.innerHTML = mathValue;
           } else {
             pingValue.innerHTML = collapseMath;
