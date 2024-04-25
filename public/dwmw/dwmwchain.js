@@ -33,8 +33,8 @@ function startMine() {
 }
 
 function dwmwChain() {
-  
-  chainLink = 
+  let fetchChange = document.getElementById("DWMW-change");
+  chainLink = fetchChange.innerHTML;
   let chainLink = dreamsList.getElementsByTagName("li").length;
   let chainLength = chainLink;
   let chainMath = chainLock / chainLength;

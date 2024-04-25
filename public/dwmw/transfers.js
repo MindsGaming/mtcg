@@ -422,135 +422,13 @@ function checkSentTransfers() {
         let piggyMath = targetpiggy - tack;
         fetchpiggy.innerHTML = piggyMath;
 
-        let openPIGGY = document.getElementById("farming-rewards");
-        if (openPIGGY) {
-          openPIGGY.className = "game-article";
-        }
-
         if (piggyMath == 0 || piggyMath < 0) {
           fetchpiggy.innerHTML = 0;
         } else {
           fetchpiggy.innerHTML = piggyMath;
-
-          let openPIGGY = document.getElementById("farming-rewards");
-
-          if (openPIGGY) {
-            openPIGGY.className = "game-article";
-          }
         }
       }
     }
-  }
-  getMyEggs();
-}
-
-function getMyEggs() {
-  let targetWordss = userAccount.innerHTML;
-  const newCurrent = document.getElementById("current-eggs");
-  newCurrent.id = "player-eggs";
-  let playerEGGS = document.getElementById("player-eggs");
-  let piggy = 0;
-  let mylist = document.getElementById("ul");
-  let listcount = document.getElementsByTagName("li");
-
-  let concatenatedStrings = targetWordss;
-  for (let i = 0; i < listcount.length; i++) {
-    let listItemText = listcount[i].textContent;
-    if (listItemText.includes(concatenatedStrings)) {
-      let targetpiggy = piggy + 1;
-      let piggyMath = targetpiggy;
-      piggy = piggyMath;
-    }
-  }
-  if (piggy > 25 || piggy == 25) {
-    let yourHatchedEggs = document.getElementById("yourHatched-eggs");
-    yourHatchedEggs.style = "color: gold; font-size: 15px;";
-    playerEGGS.innerHTML = piggy;
-    yourHatchedEggs.innerHTML =
-      "Your Magic Chicken Started You With: " + piggy + " Eggs" + "<br>";
-    let gotitText = document.getElementById("gotit-text");
-    gotitText.innerHTML = "We Found Your Account! <br>";
-    gotIt();
-  } else {
-    if (piggy < 25) {
-      if (piggy == 0) {
-      } else {
-        let yourHatchedEggs = document.getElementById("yourHatched-eggs");
-        yourHatchedEggs.style = "color: gold; font-size: 15px;";
-        playerEGGS.innerHTML = piggy + 24;
-        yourHatchedEggs.innerHTML =
-          "Your Magic Chicken Started You With: " +
-          playerEGGS.innerHTML +
-          " Eggs" +
-          "<br>";
-        let gotitText = document.getElementById("gotit-text");
-        gotitText.innerHTML =
-          "You Start The Game With 25 Eggs, <br> When You Hatch 25, We Will Take The Starting Eggs back :) <br>";
-        gotIt();
-        PlayChicken();
-        createDreamblock();
-      }
-    }
-  }
-  getMyRefferal();
-}
-
-function getMyRefferal() {
-  let refferal = document.getElementById("my-refferal");
-
-  if (refferal.value == "") {
-  } else {
-    if (refferal.value == userAccount.innerHTML) {
-      userAlert.innerHTML = "You Can't Refer Yourself :(";
-    } else {
-      let targetWordss = refferal.value;
-      let playerEGGS = document.getElementById("player-eggs");
-      let piggy = 0;
-      let mylist = document.getElementById("ul");
-      let listcount = document.getElementsByTagName("li");
-
-      let concatenatedStrings = targetWordss;
-      for (let i = 0; i < listcount.length; i++) {
-        let listItemText = listcount[i].textContent;
-        if (listItemText.includes(concatenatedStrings)) {
-          let targetpiggy = piggy + 1;
-          let piggyMath = targetpiggy;
-          piggy = piggyMath;
-        }
-      }
-
-      let refferalPhase = parseFloat(playerEGGS.innerHTML);
-      let rMath = refferalPhase + piggy;
-      playerEGGS.innerHTML = rMath;
-
-      let tackRefferal = refferalPhase - 2;
-      let magicChikenstring =
-        "Your Magic Chicken Found: " + tackRefferal + " Eggs" + "<br>";
-      let gotitText = document.getElementById("gotit-text");
-      gotitText.innerHTML =
-        "Your Refferal Gave You: " +
-        piggy +
-        " Eggs <br>" +
-        magicChikenstring +
-        "<br> You Start With: " +
-        rMath +
-        " Eggs <br>";
-
-      let farmingrewards = document.getElementById("farming-rewards");
-      farmingrewards.className = "game-article";
-      refferal.value = "";
-    }
-  }
-  getMyImageEggs();
-}
-
-function openRefferal() {
-  const openRefferal = document.getElementById("my-refferal");
-
-  if (openRefferal.className == "hide") {
-    openRefferal.className = "display";
-  } else {
-    openRefferal.className = "hide";
   }
 }
 
