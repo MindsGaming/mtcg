@@ -27,6 +27,7 @@
     <script src="/metamask.js" defer></script>
     <script src="/dwmw/dwmw.js" defer></script>
     <script src="/dwmw/dwmwchain.js" defer></script>
+    <script src="/dwmw/transfers.js" defer></script>
   </head>
   <body>
     <div align="center" class="movie" title="DWMW (Dude Where's My Wallet?)">
@@ -106,7 +107,8 @@
         with!<br />
         <br />
         <div class="hide">
-          Try The DWMW Game Hack! <br /><br />
+          You Can Earn It Playing Our Community Game Our Try Clicking This
+          Button <br /><br />
           <label>Hacked Eggs: <label id="minedX">0</label></label>
           <br />
           <label
@@ -144,305 +146,314 @@
         </iframe>
       </div>
     </div>
+    <label class="hide" id="piggy-bank">
+      <br />
 
-    <div id="rewards" class="hide" title="Closed">
-      <label class="x" onclick="closeside();">X</label>
-      <center>
-        <h>Community Rewards</h>
-        <p style="font-size: 0.65rem; color: white">
-          Earn our community token MTCG <br />
-          Just help with the community or be active in projects!
-          <br />
-          <button
-            onclick="learnHow();"
-            id="learnBTN"
-            title="Learn How"
-            style="
-              font-size: 0.65rem;
-              color: white;
-              border-color: green;
-              background-color: white;
-              color: blue;
-            "
-          >
-            Learn How
-          </button>
-        </p>
+      <label>GAMER: <label id="GAMER-change">0</label></label
+      ><br />
+      <button class="piggybuttons" onclick="GamerPOINTS();">
+        Request GAMER
+      </button>
+      <button class="piggybuttons" onclick="sendGamerTransfer();">
+        Transfer Gamer
+      </button>
+      <br />
+      <label> withinthevacuum: <label id="WTV-change">0</label></label>
+      <button class="piggybuttons" onclick="WTVPOINTS();">Request WTV</button>
+      <button class="piggybuttons" onclick="sendWtvTransfer();">
+        Transfer WTV
+      </button>
+      <br />
+      <label> DooBetter: <label id="DOOBETTER-change">0</label></label>
+      <button class="piggybuttons" onclick="DOOBETTERPOINTS();">
+        Request DooBetter
+      </button>
+      <button class="piggybuttons" onclick="sendDoobetterTransfer();">
+        Transfer DooBetter
+      </button>
+      <br />
+      <label> GTPC: <label id="GTPC-change">0</label></label>
+      <button class="piggybuttons" onclick="GTPCPOINTS();">Request GTPC</button>
+      <button class="piggybuttons" onclick="sendGtpcTransfer();">
+        Transfer GTPC
+      </button>
+      <br />
+      <label>
+        ECLIPSE:
+        <label id="ECLIPSE-change">0</label></label
+      >
+      <button class="piggybuttons" onclick="ECLIPSEPOINTS();">
+        Request ECLIPSE
+      </button>
+      <button class="piggybuttons" onclick="sendEclipseTransfer();">
+        Transfer ECLIPSE
+      </button>
+      <br />
+      <label>
+        PINN:
+        <label id="PINN-change">0</label></label
+      >
+      <button class="piggybuttons" onclick="PINNPOINTS();">Request PINN</button>
+      <button class="piggybuttons" onclick="sendPinnTransfer();">
+        Transfer PINN
+      </button>
+      <br />
+      <label>
+        DragonToken:
+        <label id="DRAGONTOKEN-change">0</label></label
+      >
+      <button class="piggybuttons" onclick="DRAGONTOKENPOINTS();">
+        Request DragonToken
+      </button>
+      <button class="piggybuttons" onclick="sendDragonTokenTransfer();">
+        Transfer DragonToken
+      </button>
+      <br />
+      <label> DarkMark: <label id="DARKMARK-change">0</label></label>
+      <button class="piggybuttons" onclick="DARKMARKPOINTS();">
+        Request DarkMark
+      </button>
+      <button class="piggybuttons" onclick="sendDarkmarkTransfer();">
+        Transfer DarkMark
+      </button>
+      <br />
+      <label>Candys: <label id="CANDYS-change">0</label></label>
+      <button class="piggybuttons" onclick="CANDYSPOINTS();">
+        Request Candys
+      </button>
+      <button class="piggybuttons" onclick="sendCandysTransfer();">
+        Transfer Candys
+      </button>
+      <br />
+      <label>bobdubbloon: <label id="BDB-change">0</label></label>
+      <button class="piggybuttons" onclick="BDBPOINTS();">Request BDB</button>
+      <button class="piggybuttons" onclick="sendBDBTransfer();">
+        Transfer BDB
+      </button>
+      <br />
+    </label>
+    <br />
+
+    <label id="transfer-form" class="hide">
+      You can send
+      <label id="get-transferToken">Yolks</label> to your freinds in game!
+      <br />
+      Game Account:
+      <input
+        id="transfer-tokenaccount"
+        name="transfer"
+        aria-label="a new dream"
+        type="text"
+        maxlength="42"
+        minlength="42"
+        style="width: 53%"
+        placeholder="Game Account"
+        required
+      /><br />
+      Amount
+      <input
+        id="transfer-tokenamount"
+        name="transfer"
+        aria-label="a new dream"
+        type="number"
+        placeholder="Amount"
+        style="width: 23%"
+        required
+      />
+      <input
+        id="transfer-tokenname"
+        name="transfer"
+        aria-label="a new dream"
+        type="text"
+        placeholder="Name"
+        class="hide"
+      /><br />
+
+      <button onclick="sendTransfer();">
+        Send Transfer <label style="gold">(5 Eggs)</label>
+      </button>
+
+      <button onclick="cancelTransfer();">Cancel</button>
+
+      <label style="color: red; font-size: 13px"
+        >Only Send To Game Accounts</label
+      >
+    </label>
+
+    <div class="hide" id="farmerimages">
+      <img
+        id="got-rewardimages"
+        class="creator-badge"
+        src="https://cdn.glitch.me/f23d0d76-dc88-4f4e-afe2-9bd56ac40b28%2Fthumbnails%2Fpixel.png"
+      />
+      <img
+        id="eggimage-eye"
+        style="
+          float: left;
+          width: 32px;
+          height: 32px;
+          margin: 3px;
+          padding: 1px;
+        "
+        src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
+      />
+      <h2>Wrapped Eggs!</h2>
+
+      <p class="article-text">
+        You have Image Eggs!
         <br />
-        <div id="learn-how" class="hide">
-          <p style="font-size: 0.65rem; color: white">
-            <b>Step #1</b><br />
-            Travel to the MTCG token page, scroll down to bounties/shop.
-            <br />
-            <img
-              src="https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/Screenshot%202024-01-23%20at%2014-47-55%20Information%20about%20MTCG%20token%20mintMe.png"
-              class="helpimg"
-            />
-            <br />
-            <b>Step #2</b><br />
-            Select the bounty/shop item you want to claim.
-            <br />
-            <br />
-            <br />
-            <b>Step #3</b><br />
-            Complete the claim/buy form with the required information and click
-            participate/buy!
-            <br />
-            <img
-              src="https://cdn.glitch.global/6ca1674b-a03a-4e9c-9563-ed6203267aba/Screenshot%202024-01-23%20at%2014-50-31%20Information%20about%20MTCG%20token%20mintMe.png"
-              class="helpimg"
-            />
-            <br />
-          </p>
-          <br />
-        </div>
-
-        <div class="reward" style="border-color: gold">
-          <h2>Add Your Bounty/Reward</h2>
-          <p style="font-size: 0.55rem; color: white">
-            Add your bounties and rewards to our MTCG voting and you may see it
-            here in the future!
-          </p>
-          <button>
-            <a href="https://www.mintme.com/token/MTCG/voting" target="_blank"
-              >Propose Your Bounty</a
-            >
-          </button>
-        </div>
-        <div class="reward">
-          <h2>Group Moderation</h2>
-          <p style="font-size: 0.55rem; color: white">
-            5 tokens a month for helping approve posts in community groups!
-          </p>
-          <button>
-            <a href="https://www.mintme.com/token/MTCG/" target="_blank"
-              >Claim</a
-            >
-          </button>
-        </div>
-
-        <div class="reward">
-          <h2>Original Content</h2>
-          <p style="font-size: 0.55rem; color: white">
-            2 token a month for uploading original content in a community group!
-          </p>
-          <button>
-            <a href="https://www.mintme.com/token/MTCG/" target="_blank"
-              >Claim</a
-            >
-          </button>
-        </div>
-
-        <div class="reward">
-          <h2>Promote Our Community</h2>
-          <p style="font-size: 0.55rem; color: white">
-            1 token a month for promoting our community!
-          </p>
-          <button>
-            <a href="https://www.mintme.com/token/MTCG/" target="_blank"
-              >Claim</a
-            >
-          </button>
-        </div>
-        <div class="reward">
-          <h2>Join Or Start An Activity</h2>
-          <p style="font-size: 0.55rem; color: white">
-            6 tokens every month you hold or join a community activity.
-          </p>
-          <button>
-            <a href="https://www.mintme.com/token/MTCG/" target="_blank"
-              >Claim</a
-            >
-          </button>
-        </div>
-        <div class="reward">
-          <h2>Start Your Token</h2>
-          <p style="font-size: 0.55rem; color: white">
-            Start your own token for a one time reward of 10 MTCG
-          </p>
-          <button>
-            <a href="https://www.mintme.com/token/MTCG/sign-up" target="_blank"
-              >Sign Up</a
-            >
-          </button>
-        </div>
+        Just click on them to download! <br />
+        Or send them to your in game friends!
         <br />
-        <div class="shopitems">
-          <h>Shop Items</h>
-          <p style="font-size: 0.65rem; color: white">
-            Launch Your Group, Promote Your Bounties And More <br />On This
-            Community Website<br />
-          </p>
-          <br />
-          <div class="reward">
-            <h2>Collect MTCG Cards</h2>
-            <p style="font-size: 0.55rem; color: white">
-              Use MTCG to get you custom NFT collector card!
-            </p>
-            <button>
-              <a href="#" onclick="cardsview();">View Cards</a>
-            </button>
-          </div>
-          <div class="reward">
-            <h2>Launch Your Group</h2>
-            <p style="font-size: 0.55rem; color: white">
-              Get a spot on this website with MTCG!
-            </p>
-            <button>
-              <a href="https://www.mintme.com/token/MTCG/" target="_blank"
-                >Shop Items</a
-              >
-            </button>
-          </div>
-          <div class="reward">
-            <h2>Promote Your Bounty</h2>
-            <p style="font-size: 0.55rem; color: white">
-              Don't rely on chance and buy a bounty spot!
-            </p>
-            <button>
-              <a href="https://www.mintme.com/token/MTCG/" target="_blank"
-                >Shop Items</a
-              >
-            </button>
-          </div>
-          <div class="reward">
-            <h2>Become a VIP</h2>
-            <p style="font-size: 0.55rem; color: white">
-              Promote Your Content Links In Groups By Becoming A Moderator.
-            </p>
-            <button>
-              <a href="https://www.mintme.com/token/MTCG/" target="_blank"
-                >Shop Items</a
-              >
-            </button>
-          </div>
-        </div>
-      </center>
-    </div>
-
-    <div id="splash" class="hide">
-      <label class="x" id="close" onclick="closeside();">X</label>
-      <iframe
-        id="Infinity"
-        style="width: 100%; height: 90%; margin-bottom: 3rem"
-        src="https://mindsgaming.glitch.me"
-        title="Infinity"
-      ></iframe>
-    </div>
-    <div id="info" class="hide">
-      <label class="x" onclick="closeside();">X</label>
-
-      <div class="notepad">
-        <h1>Welcome to MindsGaming</h1>
-        <hr />
         <br />
-        <p style="font-family: Cursive">
-          Explore a universe where creativity and open source empowerment come
-          together to unfold a world of possibilities. <br />
-          From socail group topics, cryptocurrency, virtual hubs and more
-          <br />Start exploring the community today.
-        </p>
-        <div>
-          <hr />
-          <br />
-          <strong>Join the Journey:</strong>
-          <p style="font-family: Cursive">
-            Immerse yourself in social group topics, <br />
-            create your own group topics and promote your creator content on
-            <a
-              href="https://www.minds.com/MindsGaming/?referrer=MindsGaming"
-              target="_blank"
-              >Minds.com</a
-            >
-            <br />with our community.
-            <br />
-          </p>
-          <hr />
-          <br />
-          <strong>Community Moderation:</strong>
-          <p style="font-family: Cursive">
-            Shape your experience by joining community groups moderated by
-            passionate members, ensuring a curated and enjoyable environment.
-          </p>
-          <hr />
-          <br />
-          <strong>Tokens:</strong>
-          <p style="font-family: Cursive">
-            Elevate your experience with our
-            <a href="https://www.mintme.com/token/MTCG/invite">MTCG token</a>
-            – a gateway to personal group promotions, shop items, and more.
-            <br />
-            Or <br />
-            Grow your brand or community and start crafting your unique social
-            token
-            <a href="https://www.mintme.com/token/MTCG/sign-up">here</a>.
-          </p>
-
-          <hr />
-          <br />
-
-          <strong>MTCG Rewards:</strong>
-          <p style="font-family: Cursive">
-            Get recognized for your community-building activities with
-            <a href="#" onclick="rewardsview();"> MTCG rewards.</a>
-            <br />It's not just a community; it's a rewarding journey!
-          </p>
-          <hr />
-          <br />
-          <strong>Open Source Empowerment:</strong>
-          <p style="font-family: Cursive">
-            Embrace the power of open source!
-            <a href="https://glitch.com/~mindsgaming">Remix</a> the MindsGaming
-            website, start your own community, and explore resources freely. The
-            possibilities are limitless!
-          </p>
-          <hr />
-          <br />
-
-          <p style="font-family: Cursive">
-            <br />Let your imagination soar, and let's build vibrant communities
-            together! ✨🛠️ <br />
-            To infinity and beyond! <br />
-            <a href="https://www.minds.com/MindsGaming/?referrer=MindsGaming"
-              >Subscribe To Community Channel!</a
-            >
-            <br />
-          </p>
-          <hr />
-          <br />
-          <div id="launchgroup" class="hide" title="Closed">
-            <h>Launching A Group</h>
-            <p>
-              You can add a personal group hosted on Minds.com to our website
-              with MTCG!<br />
-              Invite us to your group, then head over to our token page and find
-              the shop. <br />
-              Launch Your Group Today!
-              <br />
-              <button>
-                <a href="https://mintme.com/token/MTCG" target="_blank"
-                  >Token Page</a
-                >
-              </button>
-            </p>
-            <br />
-          </div>
+        <label style="width: 60%">
+          <label id="myegg-images"></label>
 
           <br />
-        </div>
-      </div>
-    </div>
+        </label>
+        <br />
 
-    <div class="footer">
-      <div class="start" id="start" title="Start Here" onclick="HOME();"></div>
-      <div>
-        <a title="MTCG" href="#" onclick="Communityview();">
+        <label class="hide" id="eggimage-form">
           <img
-            class="footer-icon"
-            src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669052080420.png"
+            id="eggimageform-preview"
+            style="width: 32px; height: 32px; margin: 3px; padding: 1px"
+            src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
           />
-        </a>
-      </div>
+
+          <br />
+
+          Game Account:
+          <input
+            id="transfer-myeggimage"
+            name="transfer"
+            aria-label="a new dream"
+            type="text"
+            maxlength="42"
+            minlength="42"
+            style="width: 53%"
+            placeholder="Game Account"
+            required
+          /><br />
+          <input
+            id="eggform-image"
+            name="transfer"
+            aria-label="a new dream"
+            type="text"
+            placeholder="Amount"
+            style="width: 23%"
+            class="hide"
+            ;
+          />
+          <button style="cursor: pointer" onclick="sendImageTransfer();">
+            Send Transfer <label style="gold">(5 Eggs)</label>
+          </button>
+
+          <button style="cursor: pointer" onclick="cancelImageTransfer();">
+            Cancel
+          </button>
+
+          <label style="color: red; font-size: 13px"
+            >Only Send To Game Accounts</label
+          >
+        </label>
+      </p>
     </div>
+
+    <div class="hide" id="farmermusic">
+      <img
+        id="got-rewardmusic"
+        class="creator-badge"
+        src="https://cdn.glitch.global/0b074a7d-1fb5-4eca-b20f-76c8d5a403a9/Music.png"
+      />
+      <img
+        id="eggmusic-eye"
+        style="
+          float: left;
+          width: 32px;
+          height: 32px;
+          margin: 3px;
+          padding: 1px;
+        "
+        src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
+      />
+      <h2>Wrapped Eggs!</h2>
+
+      <p class="article-text">
+        You have Audio Eggs!
+        <br />
+        Just click on them to listen <br />
+        Or send them to your in game friends!
+        <br />
+        <br />
+        <label style="width: 60%">
+          <label id="myegg-music" class="myegg-music"></label>
+        </label>
+        <br />
+
+        <label class="hide" id="eggmusic-form">
+          <label id="audio-float" class="hide">
+            <audio controls>
+              <source id="sourceOne" src="horse.ogg" type="audio/ogg" />
+              <source id="sourceTwo" src="horse.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </label>
+          <br />
+
+          Game Account:
+          <input
+            id="transfer-mymusicimage"
+            name="transfer"
+            aria-label="a new dream"
+            type="text"
+            maxlength="42"
+            minlength="42"
+            style="width: 53%"
+            placeholder="Game Account"
+            required
+          /><br />
+          <input
+            id="eggform-music"
+            name="transfer"
+            aria-label="a new dream"
+            type="text"
+            placeholder="Amount"
+            style="width: 23%"
+            class="hide"
+            ;
+          />
+          <button style="cursor: pointer" onclick="sendImageTransfer();">
+            Send Transfer <label style="gold">(5 Eggs)</label>
+          </button>
+
+          <button style="cursor: pointer" onclick="cancelMusicTransfer();">
+            Cancel
+          </button>
+
+          <label style="color: red; font-size: 13px"
+            >Only Send To Game Accounts</label
+          >
+        </label>
+      </p>
+    </div>
+
+    <apps>
+      <div class="footer">
+        <div
+          class="start"
+          id="start"
+          title="Start Here"
+          onclick="HOME();"
+        ></div>
+        <div>
+          <a title="MTCG" href="#" onclick="Communityview();">
+            <img
+              class="footer-icon"
+              src="https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/1669052080420.png"
+            />
+          </a>
+        </div>
+      </div>
+    </apps>
   </body>
 </html>

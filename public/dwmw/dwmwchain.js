@@ -18,7 +18,9 @@ function startMine() {
       mining.className = "loader";
       mining.innerHTML = "Stop Hack";
       userAlert.innerHTML = "";
+      checkSentTransfers();
       chekIncomingTransfers();
+      setTimeout(dwmwChain, 3000);
     } else {
       if (checkStart == "Stop") {
         activeMiner = "No";
@@ -31,6 +33,8 @@ function startMine() {
 }
 
 function dwmwChain() {
+  
+  chainLink = 
   let chainLink = dreamsList.getElementsByTagName("li").length;
   let chainLength = chainLink;
   let chainMath = chainLock / chainLength;
@@ -185,6 +189,3 @@ function requestMine() {
     setTimeout(requestMine, 5000);
   }
 }
-
-
-
