@@ -34,9 +34,10 @@ function startMine() {
 
 function dwmwChain() {
   let fetchChange = document.getElementById("DWMW-change");
-  chainLink = fetchChange.innerHTML;
   let chainLink = dreamsList.getElementsByTagName("li").length;
   let chainLength = chainLink;
+  chainLock = fetchChange.innerHTML;
+
   let chainMath = chainLock / chainLength;
 
   for (let DreamChain = -1; DreamChain < chainLength; DreamChain++) {
