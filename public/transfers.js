@@ -87,6 +87,15 @@ function sendCandysTransfer() {
   transferForm.focus();
 }
 
+function sendDWMWTransfer() {
+  transferForm.className = "display";
+  getTransferToken.innerHTML = "DWMW";
+  transferTokenName.title = "DWMW";
+  transferTokenName.value = "DWMW";
+  piggybank.className = "hide";
+  transferForm.focus();
+}
+
 function sendTransfer() {
   if (
     transferTokenAccount.value == "" ||

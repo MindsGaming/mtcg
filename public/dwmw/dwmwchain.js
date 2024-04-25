@@ -30,47 +30,6 @@ function startMine() {
   }
 }
 
-function chekIncomingTransfers() {
-  const mining = document.getElementById("startMine");
-  const userAccount = document.getElementById("user-account");
-  const userAlert = document.getElementById("userAlert");
-
-  let mylist = document.getElementById("ul");
-  let listcount = document.getElementsByTagName("li");
-  let numb = listcount.length;
-  let targetWords = ["DWMW"];
-  let userAccountContent = userAccount.innerHTML;
-
-  let calc = "";
-
-  for (let j = 0; j < targetWords.length; j++) {
-    let concatenatedString = "Transfer:" + userAccountContent + targetWords[j];
-    for (let i = 0; i < listcount.length; i++) {
-      let listItemText = listcount[i].textContent;
-      if (listItemText.includes(concatenatedString)) {
-        let newAlert = listItemText.replace(
-          "Transfer:" + userAccount.innerHTML + targetWords[j],
-          ""
-        );
-        let tack = parseFloat(newAlert);
-        let piggy = targetWords[j] + "-change";
-        let fetchpiggy = document.getElementById(piggy);
-        let targetpiggy = parseFloat(fetchpiggy.innerHTML);
-        let piggyMath = tack + targetpiggy;
-        fetchpiggy.innerHTML = piggyMath;
-
-        if (piggyMath == 0 || piggyMath < 0) {
-          fetchpiggy.innerHTML = 0;
-          chainLock = 10000;
-        } else {
-          chainLock = 10000 - piggyMath;
-        }
-      }
-    }
-  }
-  dwmwChain();
-}
-
 function dwmwChain() {
   let chainLink = dreamsList.getElementsByTagName("li").length;
   let chainLength = chainLink;
@@ -226,3 +185,6 @@ function requestMine() {
     setTimeout(requestMine, 5000);
   }
 }
+
+
+
