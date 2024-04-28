@@ -1255,3 +1255,79 @@ function hideMusic() {
     }
   }
 }
+
+/* Posting */
+function createPOST() {
+  if (userAccount.innerHTML == "Login") {
+    userAlert.innerHTML = "Login To Play";
+  } else {
+    if (POINTS.innerHTML < 1) {
+      userAlert.innerHTML = "Not Enough Yolks";
+    } else {
+      var customEgg = document.getElementById("post-maker");
+      var customEggDisplay = document.getElementById("Newfarmer-posts");
+
+      const numb = dreamsList.getElementsByTagName("li").length;
+
+      // Request dreams from the app's SQLite database
+      fetch("/getDreams", {})
+        .then((res) => res.json())
+        .then((response) => {
+          response.forEach((row) => {
+            appendNewDream(row.dream);
+          });
+        });
+
+      const appendNewDreamss = (dream) => {
+        const newListItem = document.createElement("li");
+        const randomWarp = Math.floor(Math.random() * numb) + 1;
+        newListItem.innerText = customEgg.value;
+        newListItem.title = "DreamEGG";
+        newListItem.id = numb;
+        newListItem.value = randomWarp;
+        newListItem.className = "hide";
+        dreamsList.appendChild(newListItem);
+      };
+
+      const data = {
+        dream: userAccount.innerHTML + " " + "Posted: " + customEgg.value,
+      };
+
+      fetch("/addDream", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          console.log(JSON.stringify(response));
+        });
+
+      // Add the dream value to the list
+
+      let newPost = document.createElement("div");
+      newPost.innerHTML =
+        "POST:" + " " + userAccount.innerHTML + "<br>" + customEgg.value;
+
+      customEgg.value = "";
+
+      customEggDisplay.appendChild(newPost);
+      appendNewDream("POST" + userAccount.innerHTML + customEgg.value);
+      layEGGS();
+    }
+  }
+}
+
+function chekIncomingPOSTS() {
+  let listcount = document.getElementsByTagName("li");
+  let customEggDisplay = document.getElementById("Newfarmer-posts");
+
+  for (let i = 0; i < listcount.length; i++) {
+    let listItemText = listcount[i].textContent;
+    if (listItemText.includes("Posted:")) {
+      let newPost = document.createElement("div");
+      newPost.innerHTML = listItemText;
+      customEggDisplay.appendChild(newPost);
+    }
+  }
+}

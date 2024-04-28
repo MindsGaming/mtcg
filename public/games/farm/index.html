@@ -279,6 +279,48 @@
             </button>
             <br />
           </div>
+
+          <div class="game-article" id="farmer-posts">
+            <img
+              id="got-posts"
+              class="creator-badge"
+              src="https://cdn.glitch.global/0b074a7d-1fb5-4eca-b20f-76c8d5a403a9/MonkeyMTCG.png?v=1712438337482"
+            />
+            <div onclick="hidebank();">
+              <img
+                id="post-eye"
+                style="
+                  float: left;
+                  width: 32px;
+                  height: 32px;
+                  margin: 3px;
+                  padding: 1px;
+                "
+                src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
+              />
+            </div>
+
+            <h2>Create Posts Below!</h2>
+            <p class="article-text">
+              Create and view public posts below :)
+              <br />
+              <br />
+              <label>
+                <input
+                  class="hatchalert"
+                  id="post-maker"
+                  placeholder="What's Up?"
+                  style="width: 40%"
+              /></label>
+              <button type="button" onclick="createPOST();">
+                Create Post (1,000 Yolks)
+              </button>
+              <br />
+              <br />
+              <label id="Newfarmer-posts" class="display"></label>
+            </p>
+          </div>
+
           <div class="hide" id="farming-rewards">
             <img
               id="got-rewards"
