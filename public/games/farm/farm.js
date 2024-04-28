@@ -265,7 +265,7 @@ function feedCHICKEN() {
     let feedmath = yolkstofeed - 1000;
     POINTS.innerHTML = feedmath;
     let farmerfeed = parseFloat(feed.value);
-    let morefeedmath = farmerfeed + 1;
+    let morefeedmath = farmerfeed + 5;
     feed.value = morefeedmath;
     userAlert.innerHTML = "Cluck!";
     pullENERGY();
