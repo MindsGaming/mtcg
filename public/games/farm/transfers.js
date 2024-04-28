@@ -123,6 +123,15 @@ function sendOTTOKENTransfer() {
   transferForm.focus();
 }
 
+function sendSatoriDTransfer() {
+  transferForm.className = "display";
+  getTransferToken.innerHTML = "SATORID";
+  transferTokenName.title = "SATORID";
+  transferTokenName.value = "SATORID";
+  piggybank.className = "hide";
+  transferForm.focus();
+}
+
 function sendTransfer() {
   if (
     transferTokenAccount.value == "" ||
@@ -383,6 +392,18 @@ function sendTransfer() {
             userAlert.innerHTML = "Transfer Sent!";
           }
 
+          if (transferTokenName.value == "SATORID") {
+            let currentGAMER = document.getElementById("SATORID-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
+
           let removetCost = 5;
           let tmath = tCost - 5;
           currenteggs.innerHTML = tmath;
@@ -434,6 +455,7 @@ function chekIncomingTransfers() {
     "DWMW",
     "WOWW",
     "OTTOKEN",
+    "SATORID",
   ];
   let userAccountContent = userAccount.innerHTML;
 
@@ -485,6 +507,7 @@ function checkSentTransfers() {
     "DWMW",
     "WOWW",
     "OTTOKEN",
+    "SATORID",
   ];
   let userAccountContent = userAccount.innerHTML;
   let calc = "";
