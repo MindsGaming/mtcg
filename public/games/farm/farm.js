@@ -167,8 +167,8 @@ function hatchEGG() {
       } else {
         function eggIncubation() {
           let incubation = document.getElementById("hatchBTN");
-          let Qincubation = Math.floor(Math.random() * 11);
-          let effect = Math.floor(Math.random() * 11);
+          let Qincubation = Math.floor(Math.random() * 15);
+          let effect = Math.floor(Math.random() * 15);
           let Qchance = parseFloat(Qincubation);
           let effectChance = parseFloat(effect);
           let clickCrack = "hatchEGG()";
@@ -1227,7 +1227,7 @@ function Wowwchange() {
   }
 }
 
-function Ottokenchange() {
+function OTTOKENchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const request = document.getElementById("OTTOKEN-change");
   let currentchange = parseInt(POINTS.innerHTML);
