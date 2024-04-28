@@ -105,6 +105,24 @@ function sendDWMWTransfer() {
   transferForm.focus();
 }
 
+function sendWWOWTransfer() {
+  transferForm.className = "display";
+  getTransferToken.innerHTML = "WWOW";
+  transferTokenName.title = "WWOW";
+  transferTokenName.value = "WWOW";
+  piggybank.className = "hide";
+  transferForm.focus();
+}
+
+function sendOTTOKENTransfer() {
+  transferForm.className = "display";
+  getTransferToken.innerHTML = "OTTOKEN";
+  transferTokenName.title = "OTTOKEN";
+  transferTokenName.value = "OTTOKEN";
+  piggybank.className = "hide";
+  transferForm.focus();
+}
+
 function sendTransfer() {
   if (
     transferTokenAccount.value == "" ||
@@ -330,7 +348,31 @@ function sendTransfer() {
           }
 
           if (transferTokenName.value == "BDB") {
-            let currentGAMER = document.getElementById("CANDYS-change");
+            let currentGAMER = document.getElementById("BDB-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
+
+          if (transferTokenName.value == "OTTOKEN") {
+            let currentGAMER = document.getElementById("OTTOKEN-change");
+            let phaseChange = parseFloat(currentGAMER.innerHTML);
+            let phasemath = phaseChange - transferTokenAmount.value;
+            currentGAMER.innerHTML = phasemath;
+            transferTokenAmount.value = "";
+            transferTokenAccount.value = "";
+            transferTokenName.value = "";
+            transferForm.className = "hide";
+            userAlert.innerHTML = "Transfer Sent!";
+          }
+
+          if (transferTokenName.value == "WWOW") {
+            let currentGAMER = document.getElementById("WWOW-change");
             let phaseChange = parseFloat(currentGAMER.innerHTML);
             let phasemath = phaseChange - transferTokenAmount.value;
             currentGAMER.innerHTML = phasemath;
@@ -390,6 +432,8 @@ function chekIncomingTransfers() {
     "CANDYS",
     "BDB",
     "DWMW",
+    "WOWW",
+    "OTTOKEN",
   ];
   let userAccountContent = userAccount.innerHTML;
 
@@ -439,6 +483,8 @@ function checkSentTransfers() {
     "CANDYS",
     "BDB",
     "DWMW",
+    "WOWW",
+    "OTTOKEN",
   ];
   let userAccountContent = userAccount.innerHTML;
   let calc = "";

@@ -412,9 +412,24 @@
                   Transfer BDB
                 </button>
                 <br />
+                <label>WWOW: <label id="WWOW-change">0</label></label>
+                <button class="piggybuttons" onclick="WWOWPOINTS();">
+                  Request WWOW
+                </button>
+                <button class="piggybuttons" onclick="sendWWOWTransfer();">
+                  Transfer WWOW
+                </button>
+                <br />
+                <label>Ottoken: <label id="OTTOKEN-change">0</label></label>
+                <button class="piggybuttons" onclick="OTTOKENPOINTS();">
+                  Request OTTOKEN
+                </button>
+                <button class="piggybuttons" onclick="sendOTTOKENTransfer();">
+                  Transfer OTTOKEN
+                </button>
+                <br />
               </label>
               <br />
-
               <label id="transfer-form" class="hide">
                 You can send
                 <label id="get-transferToken">Yolks</label> to your freinds in
@@ -876,6 +891,43 @@
             </button>
             <br />
           </div>
+
+          <div class="game-article">
+            <img
+              id="WOWW-image"
+              class="creator-badge"
+              src="https://www.mintme.com/media/cache/avatar_large/uploads/images/1d73499c-0322-11ef-bb48-ac162db679ce.png"
+            />
+            <h2>4 WWOW</h2>
+            <p class="article-text">A Coopertive Web Show</p>
+            <button
+              class="gamebuttons"
+              onclick="Wwowchange();"
+              id="farmer-WWOWBTN"
+            >
+              Shop's Open
+            </button>
+            <br />
+          </div>
+
+          <div class="game-article">
+            <img
+              id="OTTOKEN-image"
+              class="creator-badge"
+              src="https://www.mintme.com/media/cache/avatar_large/media/token_avatars/O.png"
+            />
+            <h2>3 OTTOKEN</h2>
+            <p class="article-text">A Coopertive Web Show</p>
+            <button
+              class="gamebuttons"
+              onclick="OTTOKENchange();"
+              id="farmer-OTTOKENBTN"
+            >
+              Shop's Open
+            </button>
+            <br />
+          </div>
+
           <div class="game-article">
             <img
               id="bed-image"
