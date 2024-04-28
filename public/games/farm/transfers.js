@@ -1198,6 +1198,7 @@ function getMyMusicEggs() {
       }
     }
   }
+  chekIncomingPOSTS();
 }
 
 function transferMyMusic(musicURL) {
@@ -1261,7 +1262,7 @@ function createPOST() {
   if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
   } else {
-    if (POINTS.innerHTML < 1) {
+    if (POINTS.innerHTML < 1000) {
       userAlert.innerHTML = "Not Enough Yolks";
     } else {
       var customEgg = document.getElementById("post-maker");
@@ -1329,5 +1330,16 @@ function chekIncomingPOSTS() {
       newPost.innerHTML = listItemText;
       customEggDisplay.appendChild(newPost);
     }
+  }
+}
+
+function hideFarmingPosts() {
+  let farmersPosts = document.getElementById("Newfarmer-posts");
+
+  if (farmersPosts.className == "display") {
+    farmersPosts.className = "hide";
+  } else {
+    if (farmersPosts.className == "hide");
+    farmersPosts == "display";
   }
 }
