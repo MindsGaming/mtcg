@@ -1331,15 +1331,19 @@ function chekIncomingPOSTS() {
       customEggDisplay.appendChild(newPost);
     }
   }
+  hideFarmingPosts();
 }
 
 function hideFarmingPosts() {
   let farmersPosts = document.getElementById("Newfarmer-posts");
+  let farmersPost = document.getElementById("farmer-posts");
 
-  if (farmersPosts.className == "display") {
-    farmersPosts.className = "hide";
-  } else {
-    if (farmersPosts.className == "hide");
-    farmersPosts == "display";
+  if (farmersPosts.className == "hide") {
+    farmersPosts.className = "display";
+  } else if (farmersPosts.className == "display");
+  farmersPosts == "hide";
+
+  if (farmersPost.className == "hide") {
+    farmersPost.className = "game-article";
   }
 }
