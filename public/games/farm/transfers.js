@@ -453,7 +453,7 @@ function chekIncomingTransfers() {
     "CANDYS",
     "BDB",
     "DWMW",
-    "WOWW",
+    "WWOW",
     "OTTOKEN",
     "SATORID",
   ];
@@ -505,7 +505,7 @@ function checkSentTransfers() {
     "CANDYS",
     "BDB",
     "DWMW",
-    "WOWW",
+    "WWOW",
     "OTTOKEN",
     "SATORID",
   ];

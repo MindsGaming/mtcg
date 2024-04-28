@@ -534,6 +534,69 @@ function GAMERchange() {
   }
 }
 
+function SatoriDchange() {
+  const numb = dreamsList.getElementsByTagName("li").length;
+  const request = document.getElementById("SATORID-change");
+  let currentchange = parseInt(POINTS.innerHTML);
+  let removePOINTS = 1000;
+
+  if (currentchange < removePOINTS) {
+    userAlert.innerHTML = "Not enough Yolks";
+  } else {
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Transfer:" + userAccount.innerHTML + "SATORID" + "2",
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+    dreams.push("Transfer:" + userAccount.innerHTML + "SATORID" + "2");
+    appendNewDream("Transfer:" + userAccount.innerHTML + "SATORID" + "2");
+
+    let transferCost = 1000;
+    let transferMath = currentchange - 1000;
+    POINTS.innerHTML = transferMath;
+
+    let pushchange = parseInt(request.innerHTML);
+    let addchange = 2;
+    let mathChange = pushchange + addchange;
+    request.innerHTML = mathChange;
+    userAlert.innerHTML = "Sent To Your Farm!";
+
+    let farmingrewards = document.getElementById("farming-rewards");
+    farmingrewards.className = "game-article";
+    pullENERGY();
+  }
+}
+
 function ECLIPSEchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
   const request = document.getElementById("ECLIPSE-change");
@@ -1344,6 +1407,65 @@ function GamerPOINTS() {
 
     dreams.push("Sent:" + userAccount.innerHTML + "GAMER" + currentchange);
     appendNewDream("Sent:" + userAccount.innerHTML + "GAMER" + currentchange);
+    request.innerHTML = "0";
+    userAlert.innerHTML = "Request Sent!";
+    pullENERGY();
+    createDreamblock();
+  }
+}
+
+function SatoriDPOINTS() {
+  const numb = dreamsList.getElementsByTagName("li").length;
+  const request = document.getElementById("SatoriD-change");
+  let currentchange = parseInt(request.innerHTML);
+
+  if (currentchange < 23) {
+    userAlert.innerHTML = "23 SatoriD to send requests";
+  } else {
+    // Request dreams from the app's SQLite database
+    fetch("/getDreams", {})
+      .then((res) => res.json())
+      .then((response) => {
+        response.forEach((row) => {
+          appendNewDream(row.dream);
+        });
+      });
+
+    // Helper function to create a list item for a given dream
+    const layingEGG = parseFloat(currenteggs.innerHTML);
+    const goldenEGG = 1;
+    let goldenEGGmath = layingEGG + goldenEGG;
+    currenteggs.innerHTML = goldenEGGmath;
+
+    const appendNewDreamss = (dream) => {
+      const newListItem = document.createElement("li");
+      const randomWarp = Math.floor(Math.random() * numb) + 1;
+      newListItem.innerText = dream;
+      newListItem.title = "Request";
+      newListItem.id = numb;
+      newListItem.value = randomWarp;
+      newListItem.className = "hide";
+      dreamsList.appendChild(newListItem);
+    };
+
+    const data = {
+      dream: "Sent:" + userAccount.innerHTML + "SATORID" + currentchange,
+    };
+
+    fetch("/addDream", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        console.log(JSON.stringify(response));
+      });
+
+    // Add the dream value to the list
+
+    dreams.push("Sent:" + userAccount.innerHTML + "SATORID" + currentchange);
+    appendNewDream("Sent:" + userAccount.innerHTML + "SATORID" + currentchange);
     request.innerHTML = "0";
     userAlert.innerHTML = "Request Sent!";
     pullENERGY();
