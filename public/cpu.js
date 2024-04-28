@@ -288,7 +288,7 @@ function myChain() {
   const chainFinder = document.getElementById("dreams");
   let chainLink = chainFinder.getElementsByTagName("li").length;
   let chainLength = chainLink + 1;
-  let chainLock = 10000;
+  let chainLock = 100000;
   let chainMath = chainLock / chainLength;
 
   for (let DreamChain = 0; DreamChain < chainLength; DreamChain++) {

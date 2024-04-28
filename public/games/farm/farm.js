@@ -1164,9 +1164,9 @@ function Dwmwchange() {
   }
 }
 
-function Wowwchange() {
+function WWOWchange() {
   const numb = dreamsList.getElementsByTagName("li").length;
-  const request = document.getElementById("WOWW-change");
+  const request = document.getElementById("WWOW-change");
   let currentchange = parseInt(POINTS.innerHTML);
   let removePOINTS = 1000;
 
