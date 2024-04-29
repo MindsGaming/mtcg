@@ -467,7 +467,6 @@ function checkPage() {
     }
     pullENERGY();
   }
-  chekIncomingTransfers();
 }
 
 /* Market Throttels */
