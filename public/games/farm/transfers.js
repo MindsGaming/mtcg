@@ -1337,13 +1337,13 @@ function chekIncomingPOSTS() {
 function hideFarmingPosts() {
   let farmersPosts = document.getElementById("Newfarmer-posts");
   let farmersPost = document.getElementById("farmer-posts");
+  if (farmersPost.className == "hide") {
+    farmersPost.className = "game-article";
+  }
 
   if (farmersPosts.className == "hide") {
     farmersPosts.className = "display";
-  } else if (farmersPosts.className == "display");
-  farmersPosts == "hide";
-
-  if (farmersPost.className == "hide") {
-    farmersPost.className = "game-article";
+  } else if (farmersPosts.className == "display") {
+    farmersPosts.className = "hide";
   }
 }
