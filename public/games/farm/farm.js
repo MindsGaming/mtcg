@@ -407,8 +407,6 @@ function playerUpgrades() {
 }
 function checkPage() {
   let sleepBTN = document.getElementById("sleepBTN");
-  chekIncomingTransfers();
-
   if (energy.value == 0) {
     userAlert.innerHTML = "You're To Tired To Travel..";
   } else if (energy.value > 0) {
@@ -469,6 +467,7 @@ function checkPage() {
     }
     pullENERGY();
   }
+  chekIncomingTransfers();
 }
 
 /* Market Throttels */
