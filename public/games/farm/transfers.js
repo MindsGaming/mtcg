@@ -1258,6 +1258,7 @@ function hideMusic() {
 }
 
 /* Posting */
+/* Posting */
 function createPOST() {
   if (userAccount.innerHTML == "Login") {
     userAlert.innerHTML = "Login To Play";
@@ -1266,6 +1267,15 @@ function createPOST() {
       userAlert.innerHTML = "Not Enough Yolks";
     } else {
       var customEgg = document.getElementById("post-maker");
+      var customTitle = document.getElementById("post-title");
+      var customURL = document.getElementById("post-url");
+
+      if (!customURL) {
+        customURL.value = "";
+      } else {
+        customURL.value = customURL.value;
+      }
+
       var customEggDisplay = document.getElementById("Newfarmer-posts");
 
       const numb = dreamsList.getElementsByTagName("li").length;
@@ -1291,7 +1301,14 @@ function createPOST() {
       };
 
       const data = {
-        dream: userAccount.innerHTML + " " + "Posted: " + customEgg.value,
+        dream:
+          "00000000" +
+          "TITLE:" +
+          customTitle.value +
+          "Posted: " +
+          customEgg.value +
+          "URL:" +
+          customURL.value,
       };
 
       fetch("/addDream", {
@@ -1307,31 +1324,141 @@ function createPOST() {
       // Add the dream value to the list
 
       let newPost = document.createElement("div");
-      newPost.innerHTML =
-        "POST:" + " " + userAccount.innerHTML + "<br>" + customEgg.value;
+      newPost.id = numb + "POST";
+      newPost.style =
+        "width: 250px; border-style: groove; margin: 5px; padding: 6px; background-color: black; opacity:.7; text-align:center;";
+      customEggDisplay.appendChild(newPost);
+
+      let newTitle = document.createElement("h");
+      newTitle.style = "font-size:30px; text-align: center; color: blue;";
+      newTitle.innerHTML = customTitle.value;
+      newPost.appendChild(newTitle);
+
+      let newTxt = document.createElement("p");
+      newTxt.style = "font-size:18px; color: white; text-align: left;";
+      newTxt.innerHTML = customEgg.value;
+      newTitle.appendChild(newTxt);
+
+      if (customURL.value == "") {
+      } else {
+        let newURL = document.createElement("img");
+        newURL.style = "width: 100%; height: 60px; ";
+        newURL.src = customURL.value;
+        newTxt.appendChild(newURL);
+      }
 
       customEgg.value = "";
+      customTitle.value = "";
+      customURL.value = "";
+    }
+  }
+}
 
+function chekIncomingPOSTSs() {
+  let listItems = document.getElementsByTagName("li");
+  let customEggDisplay = document.getElementById("Newfarmer-posts");
+  let numb = dreamsList.getElementsByTagName("li").length;
+
+  for (let i = 0; i < listItems.length; i++) {
+    let listItemText = listItems[i].textContent;
+    if (listItemText.includes("Posted:")) {
+      let parts = listItemText.split("Posted:");
+      let postedText = parts[1].trim(); // Extract the posted text
+
+      // Extract the title, egg, and URL from the postedText
+      let title = postedText.substring(
+        postedText.indexOf("TITLE:") + 6,
+        postedText.indexOf("Posted:")
+      );
+      let egg = postedText.substring(
+        postedText.indexOf("Posted:") + 7,
+        postedText.indexOf("URL:")
+      );
+      let url = postedText.substring(postedText.indexOf("URL:") + 4);
+
+      // Create new elements and assign the extracted information
+      let newPost = document.createElement("div");
+      newPost.style =
+        "width: 250px; border-style: groove; margin: 5px; padding: 6px; background-color: black; opacity:.7; text-align:center;";
+
+      newPost.id = "new-post-" + i; // Assign a unique ID
+
+      let newTitle = document.createElement("h");
+      newTitle.style = "font-size:30px; text-align: center; color: blue;";
+      newTitle.innerHTML = title; // Assign the extracted title
+      newPost.appendChild(newTitle);
+
+      let newTxt = document.createElement("p");
+      newTxt.style = "font-size:18px; color: white; text-align: left;";
+      newTxt.innerHTML = egg; // Assign the extracted egg
+      newTitle.appendChild(newTxt);
+
+      if (url !== "") {
+        let newURL = document.createElement("img");
+        newURL.style = "width: 100%; height: 60px; ";
+        newURL.src = url; // Assign the extracted URL
+        newTxt.appendChild(newURL);
+      }
+
+      // Add the new post to the customEggDisplay
       customEggDisplay.appendChild(newPost);
-      appendNewDream("POST" + userAccount.innerHTML + customEgg.value);
-      layEGGS();
     }
   }
 }
 
 function chekIncomingPOSTS() {
-  let listcount = document.getElementsByTagName("li");
-  let customEggDisplay = document.getElementById("Newfarmer-posts");
+  // Clear the existing posts
+  const customEggDisplay = document.getElementById("Newfarmer-posts");
+  customEggDisplay.innerHTML = "";
 
-  for (let i = 0; i < listcount.length; i++) {
-    let listItemText = listcount[i].textContent;
-    if (listItemText.includes("Posted:")) {
-      let newPost = document.createElement("div");
-      newPost.innerHTML = listItemText;
+  // Get all list items
+  let listItems = document.getElementsByTagName("li");
+
+  // Filter out the list items that contain the word "Posted:"
+  let postedListItems = Array.from(listItems).filter((item) =>
+    item.textContent.includes("Posted:")
+  );
+
+  // Process and display the filtered posts
+  postedListItems.forEach((item, index) => {
+    let postedText = item.textContent;
+
+    // Use regular expressions to extract the title, egg, and URL from the postedText
+    let regex = /TITLE:(.*?)Posted:(.*?)URL:(.*)/;
+    let match = regex.exec(postedText);
+
+    if (match) {
+      let title = match[1].trim();
+      let egg = match[2].trim();
+      let url = match[3].trim();
+
+      // Create new elements and assign the extracted information
+      const newPost = document.createElement("div");
+      newPost.style =
+        "width: 250px; border-style: groove; margin: 5px; padding: 6px; background-color: black; opacity:.7; text-align:center;";
+      newPost.id = "new-post-" + index; // Assign a unique ID
+
+      const newTitle = document.createElement("h");
+      newTitle.style = "font-size:30px; text-align: center; color: blue;";
+      newTitle.innerHTML = title; // Assign the extracted title
+      newPost.appendChild(newTitle);
+
+      const newTxt = document.createElement("p");
+      newTxt.style = "font-size:18px; color: white; text-align: left;";
+      newTxt.innerHTML = egg; // Assign the extracted egg
+      newTitle.appendChild(newTxt);
+
+      if (url !== "") {
+        const newURL = document.createElement("img");
+        newURL.style = "width: 100%; height: 60px; ";
+        newURL.src = url; // Assign the extracted URL
+        newTxt.appendChild(newURL);
+      }
+
+      // Add the new post to the customEggDisplay
       customEggDisplay.appendChild(newPost);
     }
-  }
-  hideFarmingPosts();
+  });
 }
 
 function hideFarmingPosts() {

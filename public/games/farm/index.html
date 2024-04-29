@@ -296,30 +296,47 @@
                   margin: 3px;
                   padding: 1px;
                 "
-                   onclick="hideFarmingPosts();"
+                onclick="hideFarmingPosts();"
                 src="https://cdn.glitch.global/3355b073-b968-4a0a-b6b7-f50eb3919075/eye.webp"
               />
             </div>
 
             <h2>Create Posts Below!</h2>
-            <p class="article-text">
-              Create and view public posts below :)
-              <br />
-              <br />
-              <label>
-                <input
-                  class="hatchalert"
-                  id="post-maker"
-                  placeholder="What's Up?"
-                  style="width: 40%"
-              /></label>
-              <button type="button" onclick="createPOST();">
-                Create Post (1,000 Yolks)
-              </button>
-              <br />
-              <br />
-              <label id="Newfarmer-posts" class="hide" title="hide"></label>
-            </p>
+            <p class="article-text">Create and view public posts below :)</p>
+            <div class="post-box">
+              <input
+                id="post-title"
+                name="createTitle"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                placeholder="Title"
+                width="65%"
+              />
+              <input
+                id="post-maker"
+                name="createPOST"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                placeholder="What's Up?"
+                width="65%"
+              />
+              <button type="button" onclick="createPOST();">Create Post</button>
+              <input
+                id="post-url"
+                name="createPOST"
+                class="URL-post"
+                type="url"
+                maxlength="100"
+                placeholder="URL"
+                width="65%"
+                title="Image URL"
+              />
+              <button type="button" onclick="chekIncomingPOSTS();">Find</button>
+            </div>
+            <br />
+            <label id="Newfarmer-posts"></label>
           </div>
 
           <div class="hide" id="farming-rewards">
