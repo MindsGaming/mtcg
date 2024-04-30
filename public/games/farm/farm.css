@@ -602,8 +602,7 @@ li {
 }
 .social-box {
   position: relative;
-  width: 65%;
-  min-width: 
+  width: 30rem;
   margin-top: 150px;
   overflow:scroll;
 }
