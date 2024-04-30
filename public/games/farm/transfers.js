@@ -1324,8 +1324,7 @@ function createPOST() {
 
       let newPost = document.createElement("div");
       newPost.id = numb + "POST";
-      newPost.style =
-        "width: 250px; border-style: groove; margin: 5px; padding: 6px; background-color: black; opacity:.7; text-align:center;";
+      newPost.className = "post-article";
       customEggDisplay.appendChild(newPost);
 
       let newTitle = document.createElement("h");
@@ -1333,22 +1332,26 @@ function createPOST() {
       newTitle.innerHTML = customTitle.value;
       newPost.appendChild(newTitle);
 
+      if (customURL.value == "") {
+      } else {
+        let newURL = document.createElement("iframe");
+        newURL.style = "width: 98%; height: 65%;";
+        newURL.src = customURL.value;
+        newTitle.appendChild(newURL);
+      }
       let newTxt = document.createElement("p");
       newTxt.style = "font-size:18px; color: white; text-align: left;";
       newTxt.innerHTML = customEgg.value;
       newTitle.appendChild(newTxt);
 
-      if (customURL.value == "") {
-      } else {
-        let newURL = document.createElement("img");
-        newURL.style = "width: 100%; height: 60px; ";
-        newURL.src = customURL.value;
-        newTxt.appendChild(newURL);
-      }
-
       customEgg.value = "";
       customTitle.value = "";
       customURL.value = "";
+
+      let transferCost = 1000;
+      let transferMath = currentchange - 1000;
+      POINTS.innerHTML = transferMath;
+      userAlert.innerHTML = "You  Created A Post!";
     }
   }
 }
@@ -1381,8 +1384,7 @@ function chekIncomingPOSTS() {
 
       // Create new elements and assign the extracted information
       const newPost = document.createElement("div");
-      newPost.style =
-        "width: 250px; border-style: groove; margin: 5px; padding: 6px; background-color: black; opacity:.7; text-align:center;";
+      newPost.className = "post-article";
       newPost.id = "new-post-" + index; // Assign a unique ID
 
       const newTitle = document.createElement("h");
@@ -1390,23 +1392,22 @@ function chekIncomingPOSTS() {
       newTitle.innerHTML = title; // Assign the extracted title
       newPost.appendChild(newTitle);
 
+      if (url !== "") {
+        const newURL = document.createElement("iframe");
+        newURL.style =
+          "width: 98%; height: 80%; background-size:cover; background-repeat:no-repeat; border-color:transparent;";
+        newURL.src = url; // Assign the extracted URL
+        newTitle.appendChild(newURL);
+      }
       const newTxt = document.createElement("p");
       newTxt.style = "font-size:18px; color: white; text-align: left;";
       newTxt.innerHTML = egg; // Assign the extracted egg
       newTitle.appendChild(newTxt);
 
-      if (url !== "") {
-        const newURL = document.createElement("img");
-        newURL.style = "width: 100%; height: 60px; ";
-        newURL.src = url; // Assign the extracted URL
-        newTxt.appendChild(newURL);
-      }
-
       // Add the new post to the customEggDisplay
       customEggDisplay.appendChild(newPost);
     }
   });
-  hideFarmingPosts();
 }
 
 function hideFarmingPosts() {

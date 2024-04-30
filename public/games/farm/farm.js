@@ -386,6 +386,7 @@ var playermarket = document.getElementById("farmers-market");
 var playerarcade = document.getElementById("farmers-arcade");
 var playerupgrades = document.getElementById("farmers-upgrades");
 var playerstage = document.getElementById("farmer-stage");
+var playerposts = document.getElementById("farmer-posts");
 
 function playersFarm() {
   pagenation.innerHTML = "FARM";
@@ -405,6 +406,11 @@ function playerUpgrades() {
   pagenation.innerHTML = "UPGRADES";
   checkPage();
 }
+
+function playersPosts() {
+  pagenation.innerHTML = "SOCIAL";
+  checkPage();
+}
 function checkPage() {
   let sleepBTN = document.getElementById("sleepBTN");
   if (energy.value == 0) {
@@ -416,6 +422,8 @@ function checkPage() {
       playermarket.className = "hide";
       playerarcade.className = "hide";
       playerupgrades.className = "hide";
+      playerposts.className = "hide";
+
       if (playerstage.title == "FARM") {
         farmBackground.src =
           "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/henhouse.webp";
@@ -433,6 +441,7 @@ function checkPage() {
         playermarket.className = "game-home";
         playerarcade.className = "hide";
         playerupgrades.className = "hide";
+        playerposts.className = "hide";
 
         if (playerstage.title == "FARM") {
           farmBackground.src =
@@ -448,6 +457,7 @@ function checkPage() {
           playerfarm.className = "hide";
           playermarket.className = "hide";
           playerupgrades.className = "hide";
+          playerposts.className = "hide";
 
           farmBackground.src =
             "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/Arcade%20ONE.webp";
@@ -458,9 +468,22 @@ function checkPage() {
             playerarcade.className = "hide";
             playerfarm.className = "hide";
             playermarket.className = "hide";
+            playerposts.className = "hide";
+
             farmBackground.src =
               "https://cdn.glitch.global/558f6dbc-00e1-4ebb-b404-7bcb911067fc/upgradezone.webp";
             sleepBTN.className = "hide";
+          } else {
+            if (checkpage == "SOCIAL") {
+              playerposts.className = "social-box";
+              playerupgrades.className = "hide";
+              playerarcade.className = "hide";
+              playerfarm.className = "hide";
+              playermarket.className = "hide";
+              farmBackground.src =
+                "https://cdn.glitch.global/4d28a5f0-4bec-4873-9059-3319b8398254/space.gif";
+              sleepBTN.className = "hide";
+            }
           }
         }
       }
