@@ -1348,9 +1348,11 @@ function createPOST() {
       customTitle.value = "";
       customURL.value = "";
 
+      let currentchanges = document.getElementById("hatched-points");
+      let currentchange = parseInt(currentchanges.innerHTML);
       let transferCost = 1000;
       let transferMath = currentchange - 1000;
-      POINTS.innerHTML = transferMath;
+      currentchanges.innerHTML = transferMath;
       userAlert.innerHTML = "You  Created A Post!";
     }
   }

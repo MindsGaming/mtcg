@@ -603,7 +603,9 @@ li {
 .social-box {
   position: relative;
   width: 65%;
+  min-width: 
   margin-top: 150px;
+  overflow:scroll;
 }
 .post-box {
   position: fixed;
