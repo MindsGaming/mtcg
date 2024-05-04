@@ -72,12 +72,7 @@ dreamsForm.onsubmit = (event) => {
     counteggs();
   }
 
-  userCHECK();
-  dreamInput.value = "";
-  dreamInput.focus();
-  loginform.className = "hide";
-  chekIncomingTransfers();
-  myChain();
+  myuseraccount();
 };
 
 clearButton.addEventListener("click", (event) => {
