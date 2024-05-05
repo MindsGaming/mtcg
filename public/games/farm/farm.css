@@ -602,16 +602,19 @@ li {
 }
 .social-box {
   position: relative;
-  width: 90%;
-  margin: 8px;
+  width: 30rem;
+  margin-top: 150px;
+  overflow:scroll;
 }
 .post-box {
-  position: relative;
-
-  width: 90%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
   margin-top: 72px;
   margin-right: 5px;
   padding: 4px;
+  background-color: blue;
 }
 
 .post-article {

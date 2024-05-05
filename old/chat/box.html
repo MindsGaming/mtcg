@@ -1,0 +1,67 @@
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>#MindsGaming - MTCG</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Community & Member Groups" />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/6ca1674b-a03a-4e9c-9563-ed6203267aba%2FMGLogo.jpeg"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="./client.js" defer></script>
+    <script src="./web3.js" defer></script>
+  </head>
+  <body>
+    <form class="chatformBOX">
+      <label class="user" id="myUSER" title="MG Post"
+        ><a href="/chat" target="_blank">Live Feed</a></label
+      ><br />
+      <br />
+      <input
+        id="dream"
+        name="dream"
+        aria-label="a new dream"
+        type="text"
+        maxlength="200"
+        onclick="createPOST();"
+        placeholder="What's Up?"
+        required
+      />
+      <button class="POSTBTN" type="submit" id="submit-dream">Comment</button>
+      <button class="hide" id="connect" title="connect">Connect Network</button>
+      <label class="desktoponly" title="Desktop Feature"
+        >(Desktop Feature)</label
+      >
+    </form>
+
+    <section class="hide">
+      <ul class="POST" id="last" title="0"></ul>
+      <br />
+      <ul id="dreams"></ul>
+    </section>
+    <button class="hide" id="clear-dreams">Clear Dreams</button>
+    <br />
+
+    <meter
+      id="totalPOSTS"
+      min="0"
+      low="0"
+      high="15"
+      max="250000"
+      value="0"
+      class="hide"
+    ></meter>
+  </body>
+</html>

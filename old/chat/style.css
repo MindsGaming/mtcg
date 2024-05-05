@@ -1,0 +1,165 @@
+wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  overflow: scroll;
+  z-index: 1;
+}
+
+.chatform {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  width: 10.3rem;
+  height: 4rem;
+  background-color: silver;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.chatformBOX {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: silver;
+  opacity: 0.8;
+  z-index: 5;
+}
+
+input {
+  width: 90%;
+}
+
+.postBTN {
+  margin-left: 70%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 0.5px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: green;
+  border-style: groove;
+  border-color: blue;
+  border-radius: 15px 15px 15px 15px;
+  background-color: blue;
+}
+.POSTBTN {
+  margin-left: 70%;
+  margin-top: 35px;
+  margin-bottom: 3px;
+  padding: 0.5px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: green;
+  border-style: groove;
+  border-color: blue;
+  border-radius: 15px 15px 15px 15px;
+  background-color: blue;
+  width: 20%;
+}
+
+ul {
+  position: relative;
+  list-style-type: none;
+  z-index: 1;
+  color: blue;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 15px;
+  width: 80%;
+  overflow: scroll;
+}
+
+.POST {
+  position: relative;
+  text-align: center;
+  bottom: 0;
+  border-style: groove;
+  border-color: silver;
+  border-radius: 25px 25px 10px 10px;
+  margin: 15px;
+  max-width: 60%;
+  max-height: 21%;
+  overflow: scroll;
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.POST {
+  float: left;
+  width: 85%;
+  margin-top: 80px;
+  margin-left: 80px;
+  border-style: groove;
+}
+
+.user {
+  float: left;
+  margin: 2px;
+  color: black;
+  font-weight: bolder;
+  font-size: 12px;
+  overflow: scroll;
+}
+
+.dreams {
+  margin-top: 5.6rem;
+}
+
+.hide {
+  display: none;
+}
+
+.POP {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: red;
+  color: blue;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+}
+
+.X {
+  float: left;
+  margin: 3px;
+  color: green;
+  background-color: gold;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.goHOME {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 30px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.desktoponly{
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4.8%;
+  font-size:8px;
+  color: red;
+  font-weight: bold;
+}
