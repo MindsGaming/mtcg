@@ -26,8 +26,7 @@
     <script src="/metamask.js" defer></script>
     <script src="/games/farm/upgrades.js" defer></script>
     <script src="/games/farm/transfers.js" defer></script>
-    <script src="/games/farm/audio.js" defer></script>
-    <script src="/games/farm/account.js" defer></script>
+    <script src="games/farm/audio.js" defer></script>
   </head>
   <body onload="counteggs();">
     <div class="GAME" id="GAME">
@@ -199,16 +198,6 @@
               >
             </p>
             <input
-              id="my-username"
-              name="username"
-              aria-label="a new dream"
-              type="text"
-              minlength="1"
-              placeholder="Username"
-              required
-            />
-            <input
-              id="myuser-account"
               name="dream"
               aria-label="a new dream"
               type="text"
@@ -217,20 +206,6 @@
               placeholder="Deposit Address"
               required
             />
-            <input
-              id="myuser-password"
-              name="password"
-              aria-label="a new dream"
-              type="password"
-              minlength="18"
-              placeholder="Password"
-              required
-            />
-            <label
-              title=""
-              id="pswd-alert"
-              style="color: red; font-sixe: 9px"
-            ></label>
             <input
               id="my-refferal"
               aria-label="a new dream"
@@ -241,24 +216,8 @@
               style="margin: 2px; width: 60%"
               class="hide"
             />
-            <button
-              name="dream"
-              style="cursor: pointer"
-              type="submit"
-              title="Create"
-              id="submit-dream"
-            >
-              Game On
-            </button>
-
-            <button
-              style="cursor: pointer"
-              type="button"
-              title="Create"
-              id="create-accountBTN"
-              onclick="newAccount();"
-            >
-              Create Account
+            <button style="cursor: pointer" type="submit" id="submit-dream">
+              Game On!
             </button>
             <label
               id="openReffeal"
