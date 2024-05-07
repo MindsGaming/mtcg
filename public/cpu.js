@@ -308,6 +308,23 @@ function HOME() {
   window.open("/", "_self");
 }
 
+function hideSettings() {
+  let hideSet = document.getElementById("dom-overlay");
+  let newSet =document.getElementById("virtual")
+
+  if (hideSet.title == "settings") {
+    hideSet.className = "hide";
+    hideSet.title = "closed";
+    newSet.className = "display";
+  } else {
+    if (hideSet.title == "closed") {
+      hideSet.title = "settings";
+      hideSet.className = "";
+      newSet.className = "hide";
+    }
+  }
+}
+
 /* HTTPS */
 
 var loc = window.location.href + "";
