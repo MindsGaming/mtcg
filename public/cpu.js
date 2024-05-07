@@ -310,17 +310,17 @@ function HOME() {
 
 function hideSettings() {
   let hideSet = document.getElementById("dom-overlay");
-  let newSet =document.getElementById("virtual")
+  let virtualSet = document.getElementById("v-settings");
 
   if (hideSet.title == "settings") {
     hideSet.className = "hide";
     hideSet.title = "closed";
-    newSet.className = "display";
+    virtualSet.className = "display";
   } else {
     if (hideSet.title == "closed") {
       hideSet.title = "settings";
       hideSet.className = "";
-      newSet.className = "hide";
+      virtualSet.className = "hide";
     }
   }
 }
