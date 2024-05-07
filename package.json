@@ -16,7 +16,23 @@
     "web3": "^4.7.0",
     "axios": "^0.28.1",
     "socket.io-client": "^4.7.5",
-    "has-yarn": "^3.0.0"
+    "has-yarn": "^3.0.0",
+    "@sentry/integrations": "^7.46.0",
+    "@sentry/node": "^7.46.0",
+    "body-parser": "^1.20.2",
+    "colors": "^1.4.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "ngrok": "^4.3.3",
+    "qs": "^6.11.1",
+    "socket.io": "^4.6.1",
+    "swagger-ui-express": "^4.6.2",
+    "uuid": "9.0.0",
+    "xss": "^1.0.14",
+    "yamljs": "^0.3.0"
   },
   "engines": {
     "node": "12.x"
