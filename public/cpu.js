@@ -94,7 +94,7 @@ function hooksview() {
 function openhubs() {
   if (infinity.title == "Infinity") {
     infinity.title = "Hubs";
-    infinity.src = "https://hubs-mtcg.glitch.me/";
+    infinity.src = "/mtcg-hubs";
     groups.className = "hide";
     splash.className = "splash";
     infinity.className = "apps";
@@ -102,7 +102,7 @@ function openhubs() {
     dreamslist.innerHTML = "Loading Hubs...";
   } else {
     infinity.title = "Infinity";
-    infinity.src = "https://mindsgaming.glitch.me";
+    infinity.src = "/mtcg-hubs/loading.html";
     groups.className = "show";
     splash.className = "hide";
     infinity.className = "hide";
