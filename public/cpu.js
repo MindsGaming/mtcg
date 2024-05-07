@@ -313,7 +313,9 @@ function hideSettings() {
   let virtualSet = document.getElementById("v-settings");
 
   if (hideSet.title == "settings") {
-    hideSet.className = "hide";
+    hideSet.className = "footer-icon";
+    hideSet.style = "background-color:blue; width: 50px; height: 50px; background-image:url("/")";
+
     hideSet.title = "closed";
     virtualSet.className = "display";
   } else {
