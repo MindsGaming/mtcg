@@ -94,7 +94,7 @@ function hooksview() {
 function openhubs() {
   if (infinity.title == "Infinity") {
     infinity.title = "Hubs";
-    infinity.src = "/mtcg-hubs";
+    infinity.src = "https://app.vircadia.com/#/antares.digisomni.com:40102/-24.21,1.95,-21.59/0.00,0.41,0.00,0.91";
     groups.className = "hide";
     splash.className = "splash";
     infinity.className = "apps";
