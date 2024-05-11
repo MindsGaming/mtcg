@@ -53,14 +53,14 @@ function InfinityChat() {
     var InfinityChat = document.getElementById("InfinityChat");
     Chatbox.className = "chat-box";
     InfinityChat.src =
-      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=98e33ab0-0b73-4ffc-9482-26afddba1565";
+      "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=42fd7e69-12d4-44df-8c92-9abfaccce072";
     Chatbox.title = "Chatting";
   } else {
     if (Chatbox.title == "Chatting") {
       var InfinityChat = document.getElementById("InfinityChat");
       Chatbox.className = "hide";
       InfinityChat.src =
-        "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=98e33ab0-0b73-4ffc-9482-26afddba1565";
+        "https://opengpts-example-vz4y4ooboq-uc.a.run.app/?shared_id=42fd7e69-12d4-44df-8c92-9abfaccce072";
       Chatbox.title = "chatbox";
     }
   }
