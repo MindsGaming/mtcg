@@ -94,7 +94,7 @@ function hooksview() {
 function openhubs() {
   if (infinity.title == "Infinity") {
     infinity.title = "Hubs";
-    infinity.src = "/mtcg-hubs/";
+    infinity.src = "https://mtcg-hubs.glitch.me/";
     groups.className = "hide";
     splash.className = "splash";
     infinity.className = "apps";
