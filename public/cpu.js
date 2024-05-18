@@ -94,12 +94,11 @@ function hooksview() {
 function openhubs() {
   if (infinity.title == "Infinity") {
     infinity.title = "Hubs";
-    infinity.src = "/mtcg-hubs/";
-    infinity.allow =
-      "geolocation; microphone; camera; midi; encrypted-media; xr-spatial-tracking; fullscreen";
+    window.open("/mtcg-hubs/", "_self");
+
     groups.className = "hide";
-    splash.className = "splash";
-    infinity.className = "apps";
+    splash.className = "hubs";
+    infinity.className = "hide";
     info.className = "hide";
     dreamslist.innerHTML = "Loading Hubs...";
   } else {
