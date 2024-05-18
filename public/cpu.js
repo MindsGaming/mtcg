@@ -94,8 +94,9 @@ function hooksview() {
 function openhubs() {
   if (infinity.title == "Infinity") {
     infinity.title = "Hubs";
-    infinity.src = "https://mtcg-hubs.glitch.me/";
-    infinity.allow = "geolocation; microphone; camera; midi; encrypted-media; xr-spatial-tracking; fullscreen";
+    infinity.src = "/mtcg-hubs/";
+    infinity.allow =
+      "geolocation; microphone; camera; midi; encrypted-media; xr-spatial-tracking; fullscreen";
     groups.className = "hide";
     splash.className = "splash";
     infinity.className = "apps";
