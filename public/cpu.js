@@ -95,7 +95,6 @@ function openhubs() {
   if (infinity.title == "Infinity") {
     infinity.title = "Hubs";
     window.open("/mtcg-hubs/", "_self");
-
     groups.className = "hide";
     splash.className = "hubs";
     infinity.className = "hide";
