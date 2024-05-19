@@ -72,6 +72,7 @@ dreamsForm.onsubmit = (event) => {
     counteggs();
   }
 
+  chatMode();
   userCHECK();
   dreamInput.value = "";
   dreamInput.focus();
