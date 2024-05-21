@@ -245,7 +245,9 @@ function createDreamblock() {
   let timeLength = theDate.toString();
   let fishTime = parseFloat(timeLength.length);
   let drawlShh = Math.floor(Math.random() * fishTime);
-  let activeDrawl = Math.floor(Math.random() * 100000);
+  
+  
+  let activeDrawl = Math.floor(Math.random() * 4300000000000);
   let activeShh = drawlShh + activeDrawl;
 
   const dreamBlock = document.createElement("block");
