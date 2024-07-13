@@ -313,6 +313,8 @@ apps {
 
 .show {
   display: block;
+  overflow:scroll;
+  margin-bottom: 1rem;
 }
 .x {
   position: fixed;
