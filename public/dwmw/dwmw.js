@@ -48,7 +48,7 @@ function HOME() {
 }
 
 function InfinityChat() {
-  window.open = ("/Mintme/User-Guide/", "_self");
+  window.open("/MintMe-User-Guide/", "_self");
 }
 
 /* Creator Pages */

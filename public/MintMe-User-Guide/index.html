@@ -1,0 +1,94 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A cool thing made with Glitch" />
+
+    <title>MintMe User Guide</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.glitch.global/69ea0015-2bf5-4b25-88ee-ff8fe6374178/MTCG.jpeg"
+      type="image/x-icon"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+    <script src="/next.js" defer></script>
+    <script src="MintMe/sponsor.js" defer></script>
+  </head>
+  <body>
+    <div class="mode">
+      <center>
+        <article>
+          <label class="h1">Mintme User Guide</label>
+          <p>Start Learning With A Guide Made By Users On MintMe</p>
+          <iframe
+            id="next"
+            title="One"
+            width="99%"
+            height="350px"
+            style="opacity: 1.2"
+            src="https://www.youtube.com/embed/ryPIIDtyHTQ?si=CxaTLsUfnR8ankti"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe
+          ><br />
+          <button id="nextBTN" class="next" onclick="nextVideo();">Next</button>
+        </article>
+
+        <div class="sponsor" id="sponsor" title="Open">
+          <label clas="spuns">
+            <token
+              class="gamer"
+              id="GAMER"
+              onclick="getGamerSponsor();"
+            ></token>
+            <token class="bob" id="bobdub" onclick="getBobSponsor();"></token>
+            <token class="dwmw" id="dwmw" onclick="getDwmwSponsor();"></token>
+          </label>
+          <br />
+          <div id="bonusTab" class="hide">
+            <label style="color: black; font-weight: bolder">Attempts:</label>
+            <label id="attempts">0</label>
+            <br />
+            <label style="color: black; font-weight: bolder">Sponsored:</label>
+            <label id="sponsored">0</label>
+          </div>
+          <br />
+          <div>
+            <form id="form" class="hide">
+              <label style="font-weight: bolder; color: black; font-sixe: 13px"
+                >Claim Sponsorship:
+              </label>
+              <input
+                name="dream"
+                aria-label="a new dream"
+                type="text"
+                maxlength="100"
+                placeholder=" Wallet Deposit Address"
+                required
+              />
+              <button type="submit" id="submit-dream">Claim</button>
+            </form>
+            <br />
+            <br />
+            <section class="hide">
+              <ul id="dreams"></ul>
+              <button id="clear-dreams">Clear Dreams</button>
+            </section>
+          </div>
+        </div>
+      </center>
+    </div>
+  </body>
+</html>
