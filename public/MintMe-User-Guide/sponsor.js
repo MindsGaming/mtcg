@@ -4,7 +4,7 @@ let rollReward = 0;
 let attempts = 0;
 let tracker = document.getElementById("attempts");
 let sponsored = document.getElementById("sponsored");
-let setdelay = 100;
+let setdelay = 1;
 
 function rollingOut() {
   if (sponsor.title == "Open") {
@@ -46,7 +46,7 @@ function rollingOut() {
 
       let rollTimer = setTimeout(delay, setdelay);
       function delay() {
-        if (setdelay == 100 || setdelay > 100) {
+        if (setdelay == 1 || setdelay > 1) {
           let delaymath = setdelay + 100;
           setdelay = delaymath;
         }
