@@ -43,9 +43,16 @@ function rollingOut() {
       attempts = attemptMath;
       tracker.innerHTML = attemptMath;
 
-      let rollTimer = setTimeout(delay, 5500);
+      let setdelay;
+
+      let rollTimer = setTimeout(delay, setdelay);
       function delay() {
         rollingOut();
+        if (setdelay == 1000 || setdelay < 1000) {
+          let delaymath = setdelay + 1000;
+          setdelay = delaymath;
+          alert(setdelay);
+        }
       }
     }
   }
