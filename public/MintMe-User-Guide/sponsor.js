@@ -4,6 +4,7 @@ let rollReward = 0;
 let attempts = 0;
 let tracker = document.getElementById("attempts");
 let sponsored = document.getElementById("sponsored");
+let setdelay = 100;
 
 function rollingOut() {
   if (sponsor.title == "Open") {
@@ -43,16 +44,13 @@ function rollingOut() {
       attempts = attemptMath;
       tracker.innerHTML = attemptMath;
 
-      let setdelay;
-
       let rollTimer = setTimeout(delay, setdelay);
       function delay() {
-        rollingOut();
-        if (setdelay == 1000 || setdelay < 1000) {
-          let delaymath = setdelay + 1000;
+        if (setdelay == 100 || setdelay > 100) {
+          let delaymath = setdelay + 100;
           setdelay = delaymath;
-          alert(setdelay);
         }
+        rollingOut();
       }
     }
   }
