@@ -1,14 +1,9 @@
-var sponsor = document.getElementById("sponsor");
-
-let rollReward = 0;
-let attempts = 0;
-let tracker = document.getElementById("attempts");
 let sponsored = document.getElementById("sponsored");
-let setdelay = 1;
+let sponsor 
+
 
 function rollingOut() {
   let pushAlert = document.getElementById("pushAlert");
-
   if (sponsored.title == "Open") {
     pushAlert.innerHTML = "Sponsored Haulted.";
     pushAlert.style = "color:red; font-weight: bolder;";
