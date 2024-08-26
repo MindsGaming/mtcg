@@ -37,7 +37,8 @@ function rollingOut() {
         let current = rollReward + 1;
         let mathRoll = current;
         rollReward = mathRoll;
-        sponsored.innerHTML = rollReward;
+        sponsor.innerHTML = rollReward;
+        alert(rollReward);
       }
 
       rollingOut();
@@ -46,7 +47,6 @@ function rollingOut() {
       let attemptMath = newAttempt;
       attempts = attemptMath;
       tracker.innerHTML = attemptMath;
-
       let rollTimer = setTimeout(delay, setdelay);
       function delay() {
         if (setdelay == 1 || setdelay > 1) {
