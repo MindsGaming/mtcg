@@ -47,7 +47,7 @@ function rollingOut() {
       let rollTimer = setTimeout(delay, setdelay);
       function delay() {
         if (setdelay == 1 || setdelay > 1) {
-          let delaymath = setdelay + 100;
+          let delaymath = setdelay + 25;
           setdelay = delaymath;
         }
         rollingOut();
