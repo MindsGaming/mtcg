@@ -9,8 +9,8 @@ let setdelay = 1;
 function rollingOut() {
   if (sponsor.title == "Open") {
   } else {
-    let floating = Math.floor(Math.random() * 100);
-    let blockTester = Math.floor(Math.random() * 100);
+    let floating = Math.floor(Math.random() * 25);
+    let blockTester = Math.floor(Math.random() * 25);
 
     let hardness = blockTester;
 
