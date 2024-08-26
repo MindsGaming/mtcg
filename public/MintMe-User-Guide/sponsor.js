@@ -10,8 +10,10 @@ function rollingOut() {
   let pushAlert = document.getElementById("pushAlert");
 
   if (sponsored.title == "Open") {
-    pushAlert.innerHTMl = "Sponsored Haulted.";
+    pushAlert.innerHTML = "Sponsored Haulted.";
+    pushAlert.style = "color:red; font-weight: bolder;";
   } else {
+    pushAlert.innerHTML = "";
     let floating = Math.floor(Math.random() * 25);
     let blockTester = Math.floor(Math.random() * 25);
 
