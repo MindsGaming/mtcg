@@ -67,6 +67,30 @@ token {
   height: 50px;
 }
 
+.w8w {
+  background-image: url("https://mtcg.glitch.me/images/WTV.png");
+  width: 50px;
+  height: 50px;
+}
+
+.wwow {
+  background-image: url("https://mtcg.glitch.me/images/WWOW.png");
+  width: 50px;
+  height: 50px;
+}
+
+.satorid {
+  background-image: url("https://mtcg.glitch.me/images/SatoriD.png");
+  width: 50px;
+  height: 50px;
+}
+
+.candys {
+  background-image: url("https://www.mintme.com/media/cache/resolve/avatar_large/uploads/images/21feb9f2-e775-11ed-be75-ac162db679ce.png");
+  width: 50px;
+  height: 50px;
+}
+
 .next {
   border-style: groove;
   background-color: red;

@@ -13,7 +13,7 @@ function rollingOut() {
   } else {
     var fetchSponsor = sponsored.title;
     let picker = ["0", "1", "2"];
-    let fetchPick = Math.floor(Math.random() * 3);
+    let fetchPick = Math.floor(Math.random() * 7);
 
     if (fetchPick == 0) {
       myPick = "bob";
@@ -23,6 +23,22 @@ function rollingOut() {
       } else {
         if (fetchPick == 2) {
           myPick = "dwmw";
+        } else {
+          if (fetchPick == 3) {
+            myPick = "w8w";
+          } else {
+            if (fetchPick == 4) {
+              myPick = "wwow";
+            } else {
+              if (fetchPick == 5) {
+                myPick = "satorid";
+              } else {
+                if (fetchPick == 6) {
+                  myPick = "candys";
+                }
+              }
+            }
+          }
         }
       }
     }

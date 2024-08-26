@@ -64,6 +64,7 @@ function getGamerSponsor() {
   let sponsors = document.getElementById("sponsored");
   if (sponsors.title == "Open") {
     sponsors.title = "gamer";
+    bonusTab.className = "";
     rollingOut();
   } else {
     if (sponsors.title == "gamer") {
@@ -77,6 +78,7 @@ function getBobSponsor() {
   let sponsors = document.getElementById("sponsored");
   if (sponsors.title == "Open") {
     sponsors.title = "bob";
+    bonusTab.className = "";
     rollingOut();
   } else {
     if (sponsors.title == "bob") {
@@ -90,6 +92,7 @@ function getDwmwSponsor() {
   let sponsor = document.getElementById("sponsored");
   if (sponsor.title == "Open") {
     sponsor.title = "dwmw";
+    bonusTab.className = "";
     rollingOut();
   } else {
     if (sponsor.title == "dwmw") {
