@@ -62,43 +62,26 @@ function delayBTN() {
 
 function getGamerSponsor() {
   let sponsor = document.getElementById("sponsored");
-
-  if (sponsor.title == "Open") {
-    sponsor.title = "gamer";
-    rollingOut();
-  } else {
-    if (sponsor.title == "gamer") {
-      sponsor.title = "Open";
-      rollingOut();
-    }
-  }
+  sponsor.title = "gamer";
+  bonusTab.className = "";
+  rollingOut();
 }
 
 function getBobSponsor() {
-  let sponsor = document.getElementById("sponsore");
-
-  if (sponsor.title == "Open") {
-    sponsor.title = "bob";
-    rollingOut();
-  } else {
-    if (sponsor.title == "bob") {
-      sponsor.title = "Open";
-      rollingOut();
-    }
-  }
+  let sponsor = document.getElementById("sponsored");
+  sponsor.title = "bob";
+  
+  
+  
+  bonusTab.className = "";
+  rollingOut();
 }
 
 function getDwmwSponsor() {
   let sponsor = document.getElementById("sponsored");
-  if (sponsor.title == "Open") {
-    sponsor.title = "dwmw";
-    rollingOut();
-  } else {
-    if (sponsor.title == "dwmw") {
-      sponsor.title = "Open";
-      rollingOut();
-    }
-  }
+  sponsor.title = "dwmw";
+  bonusTab.className = "";
+  rollingOut();
 }
 
 /* HTTPS */
