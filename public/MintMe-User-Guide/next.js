@@ -102,6 +102,62 @@ function getDwmwSponsor() {
   }
 }
 
+function getW8wSponsor() {
+  let sponsor = document.getElementById("sponsored");
+  if (sponsor.title == "Open") {
+    sponsor.title = "w8w";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsor.title == "w8w") {
+      sponsor.title = "Open";
+      rollingOut();
+    }
+  }
+}
+
+function getWwowSponsor() {
+  let sponsor = document.getElementById("sponsored");
+  if (sponsor.title == "Open") {
+    sponsor.title = "wwow";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsor.title == "wwow") {
+      sponsor.title = "Open";
+      rollingOut();
+    }
+  }
+}
+
+function getSatoridSponsor() {
+  let sponsor = document.getElementById("sponsored");
+  if (sponsor.title == "Open") {
+    sponsor.title = "satorid";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsor.title == "satorid") {
+      sponsor.title = "Open";
+      rollingOut();
+    }
+  }
+}
+
+function getCandysSponsor() {
+  let sponsor = document.getElementById("sponsored");
+  if (sponsor.title == "Open") {
+    sponsor.title = "candys";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsor.title == "candys") {
+      sponsor.title = "Open";
+      rollingOut();
+    }
+  }
+}
+
 /* HTTPS */
 
 var loc = window.location.href + "";

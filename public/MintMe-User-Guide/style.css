@@ -56,13 +56,13 @@ token {
   cursor: pointer;
 }
 .bob {
-  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/26555720-c495-11ed-8a37-78e3b517e592.jpeg");
+  background-image: url("https://mtcg.glitch.me/images/BDB.jpeg");
 }
 .gamer {
-  background-image: url("https://www.mintme.com/media/cache/avatar_large/uploads/images/e4c457fa-16aa-11ec-ad28-78e3b517e592.jpeg");
+  background-image: url("https://mtcg.glitch.me/images/GAMER.jpeg");
 }
 .dwmw {
-  background-image: url("https://www.mintme.com/media/cache/resolve/avatar_large/uploads/images/21feb9f2-e775-11ed-be75-ac162db679ce.png");
+  background-image: url("https://mtcg.glitch.me/images/DWMW.png");
   width: 50px;
   height: 50px;
 }
@@ -86,7 +86,7 @@ token {
 }
 
 .candys {
-  background-image: url("https://www.mintme.com/media/cache/resolve/avatar_large/uploads/images/21feb9f2-e775-11ed-be75-ac162db679ce.png");
+  background-image: url("https://mtcg.glitch.me/images/Candys.png");
   width: 50px;
   height: 50px;
 }

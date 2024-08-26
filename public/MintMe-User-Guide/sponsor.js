@@ -9,8 +9,12 @@ let setdelay = 1;
 let myPick = "Open";
 function rollingOut() {
   if (sponsored.title == "Open") {
-    pushAlert.innerHTMl = "Sponsored Haulted.";
+    pushAlert.innerHTML = "Sponsored Haulted.";
+    pushAlert.style = "color: red; font-weight: bolder; font-size:14.2px;";
   } else {
+    pushAlert.innerHTML = "Looking For Membership Points...";
+    pushAlert.style = "color: gold; font-weight: bolder; font-size:8.2px;";
+
     var fetchSponsor = sponsored.title;
     let picker = ["0", "1", "2"];
     let fetchPick = Math.floor(Math.random() * 7);
@@ -46,6 +50,9 @@ function rollingOut() {
       let pushOne = rollReward + 1;
       rollReward = pushOne;
       sponsor.innerHTML = rollReward;
+      let pushAttempt = attempts + 1;
+      attempts = pushAttempt;
+      tracker.innerHTML = attempts;
       setTimeout(delay, setdelay);
     } else {
       let pushAttempt = attempts + 1;
