@@ -61,21 +61,24 @@ function delayBTN() {
 }
 
 function getGamerSponsor() {
-  let sponsor = document.getElementById("sponsor");
+  let sponsor = document.getElementById("sponsored");
   sponsor.title = "gamer";
   bonusTab.className = "";
   rollingOut();
 }
 
 function getBobSponsor() {
-  let sponsor = document.getElementById("sponsor");
+  let sponsor = document.getElementById("sponsored");
   sponsor.title = "bob";
+  
+  
+  
   bonusTab.className = "";
   rollingOut();
 }
 
 function getDwmwSponsor() {
-  let sponsor = document.getElementById("sponsor");
+  let sponsor = document.getElementById("sponsored");
   sponsor.title = "dwmw";
   bonusTab.className = "";
   rollingOut();
