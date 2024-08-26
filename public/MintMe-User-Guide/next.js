@@ -10,7 +10,7 @@ function nextVideo() {
   } else {
     if (next.title == "Two") {
       next.src =
-        "https://youtube.com/shorts/CiIRz7JGKcE?feature=share";
+        "https://www.youtube.com/embed/yBu_Bmvqp8M?si=pUGqMGRv1qh9I935";
       next.title = "Three";
       delayBTN();
     } else {
