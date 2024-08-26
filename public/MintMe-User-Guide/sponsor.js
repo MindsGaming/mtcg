@@ -9,6 +9,10 @@ let setdelay = 1;
 function rollingOut() {
   if (sponsor.title == "Open") {
   } else {
+    
+    if(sponsor.title == "bob" || sponsor.title == "gamer" || sponsor.title == "dwmw" )
+    
+    
     let floating = Math.floor(Math.random() * 25);
     let blockTester = Math.floor(Math.random() * 25);
 
