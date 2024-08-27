@@ -119,10 +119,7 @@ function questVideos() {
     home.className = "hide";
     quest.className = "home";
   } else {
-    if (home.className == "home") {
-          quest.className = "hide";
-    home.className = "h";
-
+    if (home.className == "hide") {
     }
   }
 }

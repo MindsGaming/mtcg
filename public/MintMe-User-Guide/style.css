@@ -59,6 +59,12 @@
   width: 80%;
   overflow: scroll;
 }
+.quest-playlist {
+  margin-top: 7rem;
+  width: 80%;
+  overflow: scroll;
+}
+
 
 .playme {
   display: block;
