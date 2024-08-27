@@ -67,11 +67,18 @@ p {
   text-align: center;
 }
 
+.playlist {
+  float: left;
+  width: 40%;
+  height: 99%;
+  overflow: scroll;
+}
+
 .playme {
   float: left;
   display: block;
   width: 30%;
-  height: 1.9rem;
+  height: 2.3rem;
   border-style: solid;
   margin: 5px;
   padding: 4px;

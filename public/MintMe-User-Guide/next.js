@@ -74,8 +74,28 @@ function creatingAtoken() {
   nextVideo();
 }
 
-function settingYo() {
-  next.title = "One";
+function settingYourmarket() {
+  next.title = "Two";
+  nextVideo();
+}
+
+function wheresYourwallet() {
+  next.title = "Three";
+  nextVideo();
+}
+
+function sellBuydonate() {
+  next.title = "Four";
+  nextVideo();
+}
+
+function ladderTrading() {
+  next.title = "Five";
+  nextVideo();
+}
+
+function mintmeTometa() {
+  next.title = "Six";
   nextVideo();
 }
 
