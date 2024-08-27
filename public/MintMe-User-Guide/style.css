@@ -61,9 +61,25 @@ p {
 .h2 {
   margin: 5px;
   padding: 4px;
-  font-size: 16px;
-  color: black;
+  font-size: 25px;
+  color: gold;
   font-weight: bolder;
+  text-align: center;
+}
+
+.playme {
+  float: left;
+  display: block;
+  width: 30%;
+  height: 1.9rem;
+  border-style: solid;
+  margin: 5px;
+  padding: 4px;
+  font-size: 16px;
+  color: white;
+  background-color: grey;
+  font-weight: bolder;
+  cursor: pointer;
 }
 .sponsor {
   padding: 4px;

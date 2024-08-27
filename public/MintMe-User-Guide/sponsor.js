@@ -68,3 +68,101 @@ function rollingOut() {
     }
   }
 }
+
+function getGamerSponsor() {
+  let sponsors = document.getElementById("sponsored");
+  if (sponsors.title == "Open") {
+    sponsors.title = "gamer";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsors.title == "gamer") {
+      sponsors.title = "Open";
+      rollingOut();
+    }
+  }
+}
+
+function getBobSponsor() {
+  let sponsors = document.getElementById("sponsored");
+  if (sponsors.title == "Open") {
+    sponsors.title = "bob";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsors.title == "bob") {
+      sponsors.title = "Open";
+      rollingOut();
+    }
+  }
+}
+
+function getDwmwSponsor() {
+  let sponsor = document.getElementById("sponsored");
+  if (sponsor.title == "Open") {
+    sponsor.title = "dwmw";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsor.title == "dwmw") {
+      sponsor.title = "Open";
+      rollingOut();
+    }
+  }
+}
+
+function getW8wSponsor() {
+  let sponsor = document.getElementById("sponsored");
+  if (sponsor.title == "Open") {
+    sponsor.title = "w8w";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsor.title == "w8w") {
+      sponsor.title = "Open";
+      rollingOut();
+    }
+  }
+}
+
+function getWwowSponsor() {
+  let sponsor = document.getElementById("sponsored");
+  if (sponsor.title == "Open") {
+    sponsor.title = "wwow";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsor.title == "wwow") {
+      sponsor.title = "Open";
+      rollingOut();
+    }
+  }
+}
+
+function getSatoridSponsor() {
+  let sponsor = document.getElementById("sponsored");
+  if (sponsor.title == "Open") {
+    sponsor.title = "satorid";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsor.title == "satorid") {
+      sponsor.title = "Open";
+      rollingOut();
+    }
+  }
+}
+
+function getCandysSponsor() {
+  let sponsor = document.getElementById("sponsored");
+  if (sponsor.title == "Open") {
+    sponsor.title = "candys";
+    bonusTab.className = "";
+    rollingOut();
+  } else {
+    if (sponsor.title == "candys") {
+      sponsor.title = "Open";
+      rollingOut();
+    }
+  }
+}
