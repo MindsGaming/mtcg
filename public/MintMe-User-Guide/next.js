@@ -99,6 +99,33 @@ function mintmeTometa() {
   nextVideo();
 }
 
+/* Tabs */
+
+let home = document.getElementById("home-page");
+let quest = document.getElementById("quest-page");
+
+function helpVideos() {
+  if (home.className == "home") {
+  } else {
+    if (home.className == "hide") {
+      home.className = "home";
+      quest.className = "hide";
+    }
+  }
+}
+
+function questVideos() {
+  if (home.className == "home") {
+    home.className = "hide";
+    quest.className = "home";
+  } else {
+    if (home.className == "home") {
+          quest.className = "hide";
+    home.className = "h";
+
+    }
+  }
+}
 
 /* HTTPS */
 

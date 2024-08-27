@@ -1,0 +1,114 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A cool thing made with Glitch" />
+
+    <title>MintMe User Guide</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.glitch.global/69ea0015-2bf5-4b25-88ee-ff8fe6374178/MTCG.jpeg"
+      type="image/x-icon"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+    <script src="next.js" defer></script>
+    <script src="sponsor.js" defer></script>
+  </head>
+  <body>
+    <div class="mode">
+      <center>
+        <div class="tabs">
+          <label class="tab" id="helpVideos">Home</label>
+          <label class="tab" id="questVideos">Quests</label>
+
+          <label class="h1"
+            >Mintme User Guide
+
+            <p class="p">Start Learning With A Guide Made By Users On MintMe</p>
+          </label>
+        </div>
+
+        <div id="home-page" class="home">
+          <article class="preview">
+            <iframe
+              id="next"
+              title="One"
+              width="70%"
+              height="350px"
+              style="margin: 24px; padding: 3px; opacity: 1.2"
+              src="https://www.youtube.com/embed/ryPIIDtyHTQ?si=CxaTLsUfnR8ankti"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
+            </iframe>
+            <br />
+            <button id="nextBTN" class="next" onclick="nextVideo();">
+              Next
+            </button>
+            <br />
+
+            <div class="playlist">
+              <h1 class="h2">
+                Help Videos
+                <hr />
+              </h1>
+              <label class="playme" onclick="creatingAtoken();"
+                >Creating A Token</label
+              >
+              <label class="playme" onclick="settingYourmarket();"
+                >Setting Your Market</label
+              >
+              <label class="playme" onclick="wheresYourwallet();"
+                >Where's Your Wallet</label
+              >
+              <label class="playme" onclick="sellBuydonate();"
+                >Sell Buy Donate</label
+              >
+              <label class="playme" onclick="ladderTrading();"
+                >Ladder Trading</label
+              >
+              <label class="playme" onclick="mintmeTometa();"
+                >Adding Mintme To Metamask</label
+              ><br />
+            </div>
+          </article>
+        </div>
+
+        <div id="quest-page" class="hide">
+          <div class="playlist">
+            <label class="playme" onclick="creatingAtoken();"
+              >Creating A Token</label
+            >
+            <label class="playme" onclick="settingYourmarket();"
+              >Setting Your Market</label
+            >
+            <label class="playme" onclick="wheresYourwallet();"
+              >Where's Your Wallet</label
+            >
+            <label class="playme" onclick="sellBuydonate();"
+              >Sell Buy Donate</label
+            >
+            <label class="playme" onclick="ladderTrading();"
+              >Ladder Trading</label
+            >
+            <label class="playme" onclick="mintmeTometa();"
+              >Adding Mintme To Metamask</label
+            ><br />
+          </div>
+        </div>
+      </center>
+    </div>
+  </body>
+</html>
