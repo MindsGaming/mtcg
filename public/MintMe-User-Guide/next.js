@@ -4,13 +4,14 @@ var bonusTab = document.getElementById("bonusTab");
 
 function nextVideo() {
   if (next.title == "One") {
-       next.src = "https://www.youtube.com/embed/CiIRz7JGKcE?si=Q6b0aTS-0kc3Luh9";
+    next.src = "https://www.youtube.com/embed/CiIRz7JGKcE";
+    //next.src = "https://www.youtube.com/embed/CiIRz7JGKcE?si=Q6b0aTS-0kc3Luh9";
     next.title = "Two";
     delayBTN();
   } else {
     if (next.title == "Two") {
-      next.src =
-        "https://www.youtube.com/embed/yBu_Bmvqp8M?si=pUGqMGRv1qh9I935";
+      next.src = "https://www.youtube.com/embed/yBu_Bmvqp8M";
+      // next.src ="https://www.youtube.com/embed/yBu_Bmvqp8M?si=pUGqMGRv1qh9I935";
       next.title = "Three";
       delayBTN();
     } else {
