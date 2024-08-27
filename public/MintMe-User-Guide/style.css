@@ -34,6 +34,7 @@ p {
   float: right;
   margin: 25px;
   padding: 3px;
+  overflow: scroll;
 }
 
 .next {
@@ -69,18 +70,18 @@ p {
 
 .playlist {
   float: left;
-  width: 40%;
-  height: 99%;
+  margin-top: -2.5rem;
+  width: 35%;
   overflow: scroll;
 }
 
 .playme {
   float: left;
   display: block;
-  width: 30%;
+  width: 99%;
   height: 2.3rem;
   border-style: solid;
-  margin: 5px;
+  margin: 20px;
   padding: 4px;
   font-size: 16px;
   color: white;
