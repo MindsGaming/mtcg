@@ -1,0 +1,44 @@
+<div class="sponsor" id="sponsored" title="Open">
+  <label clas="spuns">
+    <token class="gamer" id="gamer" onclick="getGamerSponsor();"></token>
+    <token class="bob" id="bobdub" onclick="getBobSponsor();"></token>
+    <token class="dwmw" id="dwmw" onclick="getDwmwSponsor();"></token>
+    <token class="w8w" id="w8w" onclick="getW8wSponsor();"></token>
+    <token class="wwow" id="wwow" onclick="getWwowSponsor();"></token>
+    <token class="satorid" id="satorid" onclick="getSatoridSponsor();"></token>
+    <token class="candys" id="candys" onclick="getCandysSponsor();"></token>
+  </label>
+  <br />
+  <div id="bonusTab" class="hide">
+    <label style="color: black; font-weight: bolder">Sponsor Attempts:</label>
+    <label id="attempts">0</label>
+    <br />
+    <label style="color: black; font-weight: bolder">Member Points:</label>
+    <label id="sponsor">0</label>
+    <br />
+    <label id="pushAlert"></label>
+  </div>
+  <br />
+  <div>
+    <form id="form" class="hide">
+      <label style="font-weight: bolder; color: black; font-sixe: 13px"
+        >Claim Sponsorship:
+      </label>
+      <input
+        name="dream"
+        aria-label="a new dream"
+        type="text"
+        maxlength="100"
+        placeholder=" Wallet Deposit Address"
+        required
+      />
+      <button type="submit" id="submit-dream">Claim</button>
+    </form>
+    <br />
+    <br />
+    <section class="hide">
+      <ul id="dreams"></ul>
+      <button id="clear-dreams">Clear Dreams</button>
+    </section>
+  </div>
+</div>

@@ -41,8 +41,7 @@ function nextVideo() {
             } else {
               if (next.title == "Seven") {
                 next.src =
-                  "https://www.youtube.com/embed/38ncPWdbsYs?si=e3wMjnfttgI7CEj2";
-                // next.src ="https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
+                  "https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
                 next.title = "Seven";
                 let nextBTN = document.getElementById("nextBTN");
                 nextBTN.className = "hide";
