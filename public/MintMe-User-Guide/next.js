@@ -4,7 +4,7 @@ var bonusTab = document.getElementById("bonusTab");
 
 function nextVideo() {
   if (next.title == "One") {
-    next.src = "https://www.youtube.com/embed/CiIRz7JGKcE?si=Q6b0aTS-0kc3Luh9";
+       next.src = "https://www.youtube.com/embed/CiIRz7JGKcE?si=Q6b0aTS-0kc3Luh9";
     next.title = "Two";
     delayBTN();
   } else {
