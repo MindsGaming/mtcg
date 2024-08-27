@@ -5,13 +5,11 @@ var bonusTab = document.getElementById("bonusTab");
 function nextVideo() {
   if (next.title == "One") {
     next.src = "https://www.youtube.com/embed/CiIRz7JGKcE";
-    //next.src = "https://www.youtube.com/embed/CiIRz7JGKcE?si=Q6b0aTS-0kc3Luh9";
     next.title = "Two";
     delayBTN();
   } else {
     if (next.title == "Two") {
       next.src = "https://www.youtube.com/embed/yBu_Bmvqp8M";
-      // next.src ="https://www.youtube.com/embed/yBu_Bmvqp8M?si=pUGqMGRv1qh9I935";
       next.title = "Three";
       delayBTN();
     } else {
@@ -23,27 +21,36 @@ function nextVideo() {
       } else {
         if (next.title == "Four") {
           next.src =
-            "https://www.youtube.com/embed/zy0LF44jbkE?si=2yQdm1-DGJY4fwVO";
+            "https://www.youtube.com/embed/zy0LF44jbkE?si=YW0Kd_Ikckis2kul";
           next.title = "Five";
           delayBTN();
         } else {
           if (next.title == "Five") {
             next.src =
-              "https://www.youtube.com/embed/38ncPWdbsYs?si=e3wMjnfttgI7CEj2";
-
+              "https://www.youtube.com/embed/eeS1mf-N4PE?si=LgLSvzpFC5G-Jtbq";
             next.title = "Six";
             delayBTN();
           } else {
             if (next.title == "Six") {
               next.src =
-                "https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
-              next.title = "Six";
+                "https://www.youtube.com/embed/38ncPWdbsYs?si=e3wMjnfttgI7CEj2";
+              // next.src ="https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
+              next.title = "Seven";
               let nextBTN = document.getElementById("nextBTN");
-              nextBTN.className = "hide";
+              delayBTN();
+            } else {
+              if (next.title == "Seven") {
+                next.src =
+                  "https://www.youtube.com/embed/38ncPWdbsYs?si=e3wMjnfttgI7CEj2";
+                // next.src ="https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
+                next.title = "Seven";
+                let nextBTN = document.getElementById("nextBTN");
+                nextBTN.className = "hide";
 
-              if (bonusTab.className == "") {
-                let form = document.getElementById("form");
-                form.className = "";
+                if (bonusTab.className == "") {
+                  let form = document.getElementById("form");
+                  form.className = "";
+                }
               }
             }
           }
