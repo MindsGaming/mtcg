@@ -26,7 +26,7 @@
   float: left;
   margin: 15px;
   display: block;
-  width: 10%;
+  width: 14.1%;
   height: 32px;
   border-style: groove;
   color: white;
@@ -65,11 +65,23 @@
   overflow: scroll;
 }
 
+.highlight {
+  display: block;
+  width: 60%;
+  height: 3.5rem;
+  border-style: solid;
+  margin: 20px;
+  padding: 4px;
+  font-size: 16px;
+  color: blue;
+  background-color: yellow;
+  font-weight: bolder;
+}
 
 .playme {
   display: block;
   width: 60%;
-  height: 2.3rem;
+  height: 3.5rem;
   border-style: solid;
   margin: 20px;
   padding: 4px;
@@ -127,7 +139,7 @@ token {
   width: 50px;
   height: 50px;
 }
-.home{
+.home {
   display: block;
 }
 

@@ -89,11 +89,15 @@ function delayBTN() {
 /* playlist */
 
 function whyisMintmegreat() {
+  let v = document.getElementById("vzero");
+  v.className = "highlight";
   next.title = "Zero";
   nextVideo();
 }
 
 function creatingAtoken() {
+  let v = document.getElementById("vone");
+  v.className = "highlight";
   next.title = "One";
   nextVideo();
 }
