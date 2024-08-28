@@ -21,20 +21,21 @@ function nextVideo() {
       } else {
         if (next.title == "Four") {
           next.src =
-            "https://www.youtube.com/embed/zy0LF44jbkE?si=YW0Kd_Ikckis2kul";
+            "https://www.youtube.com/embed/BhS_OF0tYSE?si=4mJEpOvAoIKA17bR";
+          // next.src ="https://www.youtube.com/embed/zy0LF44jbkE?si=YW0Kd_Ikckis2kul";
           next.title = "Five";
           delayBTN();
         } else {
           if (next.title == "Five") {
             next.src =
-              "https://www.youtube.com/embed/eeS1mf-N4PE?si=LgLSvzpFC5G-Jtbq";
+              "https://www.youtube.com/embed/BhS_OF0tYSE?si=4mJEpOvAoIKA17bR";
+            // next.src = "https://www.youtube.com/embed/eeS1mf-N4PE?si=LgLSvzpFC5G-Jtbq";
             next.title = "Six";
             delayBTN();
           } else {
             if (next.title == "Six") {
               next.src =
                 "https://www.youtube.com/embed/38ncPWdbsYs?si=e3wMjnfttgI7CEj2";
-              // next.src ="https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
               next.title = "Seven";
               let nextBTN = document.getElementById("nextBTN");
               delayBTN();
