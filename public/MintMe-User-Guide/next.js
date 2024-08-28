@@ -22,34 +22,52 @@ function nextVideo() {
         if (next.title == "Four") {
           next.src =
             "https://www.youtube.com/embed/BhS_OF0tYSE?si=4mJEpOvAoIKA17bR";
-          // next.src ="https://www.youtube.com/embed/zy0LF44jbkE?si=YW0Kd_Ikckis2kul";
+
           next.title = "Five";
           delayBTN();
         } else {
           if (next.title == "Five") {
             next.src =
-              "https://www.youtube.com/embed/BhS_OF0tYSE?si=4mJEpOvAoIKA17bR";
-            // next.src = "https://www.youtube.com/embed/eeS1mf-N4PE?si=LgLSvzpFC5G-Jtbq";
+              "https://www.youtube.com/embed/zy0LF44jbkE?si=YW0Kd_Ikckis2kul";
             next.title = "Six";
             delayBTN();
           } else {
             if (next.title == "Six") {
               next.src =
-                "https://www.youtube.com/embed/38ncPWdbsYs?si=e3wMjnfttgI7CEj2";
+                "https://www.youtube.com/embed/eeS1mf-N4PE?si=LgLSvzpFC5G-Jtbq";
               next.title = "Seven";
               let nextBTN = document.getElementById("nextBTN");
               delayBTN();
             } else {
               if (next.title == "Seven") {
                 next.src =
-                  "https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
-                next.title = "Seven";
+                  "https://www.youtube.com/embed/38ncPWdbsYs?si=e3wMjnfttgI7CEj2";
+                next.title = "Eight";
                 let nextBTN = document.getElementById("nextBTN");
-                nextBTN.className = "hide";
-
-                if (bonusTab.className == "") {
-                  let form = document.getElementById("form");
-                  form.className = "";
+                delayBTN();
+              } else {
+                if (next.title == "Eight") {
+                  next.src =
+                    "https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
+                  next.title = "Nine";
+                  let nextBTN = document.getElementById("nextBTN");
+                  delayBTN();
+                } else {
+                  if (next.title == "Nine") {
+                    next.src =
+                      "https://www.youtube.com/embed/aiyRy1P163o?si=_5wAco2qkCQm8CV-";
+                    next.title = "Zero";
+                    let nextBTN = document.getElementById("nextBTN");
+                    delayBTN();
+                  } else {
+                    if (next.title == "Zero") {
+                      next.src =
+                        "https://www.youtube.com/embed/ryPIIDtyHTQ?si=CxaTLsUfnR8ankti";
+                      next.title = "One";
+                      let nextBTN = document.getElementById("nextBTN");
+                      delayBTN();
+                    }
+                  }
                 }
               }
             }
@@ -69,6 +87,12 @@ function delayBTN() {
 }
 
 /* playlist */
+
+
+function whyisMintmegreat() {
+  next.title = "Zero";
+  nextVideo();
+}
 
 function creatingAtoken() {
   next.title = "One";
