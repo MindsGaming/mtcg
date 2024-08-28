@@ -88,7 +88,6 @@ function delayBTN() {
 
 /* playlist */
 
-
 function whyisMintmegreat() {
   next.title = "Zero";
   nextVideo();
@@ -109,18 +108,33 @@ function wheresYourwallet() {
   nextVideo();
 }
 
-function sellBuydonate() {
+function sendAndrecive() {
   next.title = "Four";
   nextVideo();
 }
 
-function ladderTrading() {
+function sellBuydonate() {
   next.title = "Five";
   nextVideo();
 }
 
-function mintmeTometa() {
+function ladderTrading() {
   next.title = "Six";
+  nextVideo();
+}
+
+function mintmeTometa() {
+  next.title = "Seven";
+  nextVideo();
+}
+
+function exploringTools() {
+  next.title = "Eight";
+  nextVideo();
+}
+
+function deployingTokens() {
+  next.title = "Nine";
   nextVideo();
 }
 
