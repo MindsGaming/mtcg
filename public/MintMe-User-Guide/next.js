@@ -103,41 +103,57 @@ function creatingAtoken() {
 }
 
 function settingYourmarket() {
+   let v = document.getElementById("vtwo");
+  v.className = "highlight";
   next.title = "Two";
   nextVideo();
 }
 
 function wheresYourwallet() {
+   let v = document.getElementById("vthree");
+  v.className = "highlight";
   next.title = "Three";
   nextVideo();
 }
 
 function sendAndrecive() {
+   let v = document.getElementById("vfour");
+  v.className = "highlight";
   next.title = "Four";
   nextVideo();
 }
 
 function sellBuydonate() {
+   let v = document.getElementById("vfive");
+  v.className = "highlight";
   next.title = "Five";
   nextVideo();
 }
 
 function ladderTrading() {
+   let v = document.getElementById("vsix");
+  v.className = "highlight";
   next.title = "Six";
   nextVideo();
 }
 
 function mintmeTometa() {
+   let v = document.getElementById("vseven");
+  v.className = "highlight";
   next.title = "Seven";
   nextVideo();
 }
 
 function exploringTools() {
+   let v = document.getElementById("veight");
+  v.className = "highlight";
   next.title = "Eight";
   nextVideo();
 }
 
 function deployingTokens() {
+   let v = document.getElementById("vnine");
+  v.className = "highlight";
   next.title = "Nine";
   nextVideo();
 }

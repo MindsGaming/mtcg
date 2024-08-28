@@ -54,6 +54,19 @@
   font-size: 6.2px;
 }
 
+.next{
+  display: block;
+  border-style: groove;
+  border-radius: 10px 20px 20px 10px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  padding: 3px;
+  width: 50px;
+  
+}
+
 .playlist {
   margin-top: 3rem;
   width: 80%;
