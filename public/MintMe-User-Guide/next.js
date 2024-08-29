@@ -55,16 +55,15 @@ function nextVideo() {
                   delayBTN();
                 } else {
                   if (next.title == "Nine") {
-                    next.src = "https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
-                    next.title = "Ten";
+                    next.src =
+                      "https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
+                    next.title = "Zero";
                     let nextBTN = document.getElementById("nextBTN");
                     delayBTN();
                   } else {
                     if (next.title == "Zero") {
-                      // next.src =
-                      "https://www.youtube.com/embed/aiyRy1P163o?si=_5wAco2qkCQm8CV-";
                       next.src =
-                        "https://www.youtube.com/embed/ryPIIDtyHTQ?si=CxaTLsUfnR8ankti";
+                        "https://www.youtube.com/embed/aiyRy1P163o?si=_5wAco2qkCQm8CV-";
                       next.title = "One";
                       let nextBTN = document.getElementById("nextBTN");
                       delayBTN();
@@ -99,72 +98,57 @@ function delayBTN() {
 /* playlist */
 
 function whyisMintmegreat() {
-  let v = document.getElementById("vzero");
-  v.className = "highlight";
   next.title = "Zero";
   nextVideo();
 }
 
 function creatingAtoken() {
-  let v = document.getElementById("vone");
-  v.className = "highlight";
   next.title = "One";
   nextVideo();
 }
 
-function settingYourmarket() {
-  let v = document.getElementById("vtwo");
-  v.className = "highlight";
+function collectingAbounty() {
   next.title = "Two";
   nextVideo();
 }
 
-function wheresYourwallet() {
-  let v = document.getElementById("vthree");
-  v.className = "highlight";
+function settingYourmarket() {
   next.title = "Three";
   nextVideo();
 }
 
-function sendAndrecive() {
-  let v = document.getElementById("vfour");
-  v.className = "highlight";
+function wheresYourwallet() {
   next.title = "Four";
   nextVideo();
 }
 
-function sellBuydonate() {
-  let v = document.getElementById("vfive");
-  v.className = "highlight";
+function sendAndrecive() {
   next.title = "Five";
   nextVideo();
 }
 
-function ladderTrading() {
-  let v = document.getElementById("vsix");
-  v.className = "highlight";
+function sellBuydonate() {
   next.title = "Six";
   nextVideo();
 }
 
-function mintmeTometa() {
-  let v = document.getElementById("vseven");
-  v.className = "highlight";
+function ladderTrading() {
   next.title = "Seven";
   nextVideo();
 }
 
-function exploringTools() {
-  let v = document.getElementById("veight");
-  v.className = "highlight";
+function mintmeTometa() {
   next.title = "Eight";
   nextVideo();
 }
 
-function deployingTokens() {
-  let v = document.getElementById("vnine");
-  v.className = "highlight";
+function exploringTools() {
   next.title = "Nine";
+  nextVideo();
+}
+
+function deployingTokens() {
+  next.title = "Ten";
   nextVideo();
 }
 
