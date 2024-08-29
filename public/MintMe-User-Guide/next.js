@@ -9,63 +9,73 @@ function nextVideo() {
     delayBTN();
   } else {
     if (next.title == "Two") {
-      next.src = "https://www.youtube.com/embed/yBu_Bmvqp8M";
+      next.src =
+        "https://www.youtube.com/embed/Ul1HDuktKkY?si=ERrs5BVo4NaE66px";
       next.title = "Three";
       delayBTN();
     } else {
       if (next.title == "Three") {
-        next.src =
-          "https://www.youtube.com/embed/szNGaEEICLM?si=bQWIfWMVy6xM9vBR";
+        next.src = next.src = "https://www.youtube.com/embed/yBu_Bmvqp8M";
+
         next.title = "Four";
         delayBTN();
       } else {
         if (next.title == "Four") {
           next.src =
-            "https://www.youtube.com/embed/BhS_OF0tYSE?si=4mJEpOvAoIKA17bR";
-
+            "https://www.youtube.com/embed/szNGaEEICLM?si=bQWIfWMVy6xM9vBR";
           next.title = "Five";
           delayBTN();
         } else {
           if (next.title == "Five") {
             next.src =
-              "https://www.youtube.com/embed/zy0LF44jbkE?si=YW0Kd_Ikckis2kul";
+              "https://www.youtube.com/embed/BhS_OF0tYSE?si=4mJEpOvAoIKA17bR";
+
             next.title = "Six";
             delayBTN();
           } else {
             if (next.title == "Six") {
               next.src =
-                "https://www.youtube.com/embed/eeS1mf-N4PE?si=LgLSvzpFC5G-Jtbq";
+                "https://www.youtube.com/embed/zy0LF44jbkE?si=YW0Kd_Ikckis2kul";
               next.title = "Seven";
               let nextBTN = document.getElementById("nextBTN");
               delayBTN();
             } else {
               if (next.title == "Seven") {
                 next.src =
-                  "https://www.youtube.com/embed/38ncPWdbsYs?si=e3wMjnfttgI7CEj2";
+                  "https://www.youtube.com/embed/eeS1mf-N4PE?si=LgLSvzpFC5G-Jtbq";
                 next.title = "Eight";
                 let nextBTN = document.getElementById("nextBTN");
                 delayBTN();
               } else {
                 if (next.title == "Eight") {
                   next.src =
-                    "https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
+                    "https://www.youtube.com/embed/38ncPWdbsYs?si=e3wMjnfttgI7CEj2";
                   next.title = "Nine";
                   let nextBTN = document.getElementById("nextBTN");
                   delayBTN();
                 } else {
                   if (next.title == "Nine") {
-                    next.src =
-                      "https://www.youtube.com/embed/aiyRy1P163o?si=_5wAco2qkCQm8CV-";
-                    next.title = "Zero";
+                    next.src = "https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
+                    next.title = "Ten";
                     let nextBTN = document.getElementById("nextBTN");
                     delayBTN();
                   } else {
                     if (next.title == "Zero") {
+                      // next.src =
+                      "https://www.youtube.com/embed/aiyRy1P163o?si=_5wAco2qkCQm8CV-";
                       next.src =
                         "https://www.youtube.com/embed/ryPIIDtyHTQ?si=CxaTLsUfnR8ankti";
                       next.title = "One";
                       let nextBTN = document.getElementById("nextBTN");
                       delayBTN();
+                    } else {
+                      if (next.title == "Zero") {
+                        next.src =
+                          "https://www.youtube.com/embed/ryPIIDtyHTQ?si=CxaTLsUfnR8ankti";
+                        next.title = "One";
+                        let nextBTN = document.getElementById("nextBTN");
+                        delayBTN();
+                      }
                     }
                   }
                 }
@@ -103,56 +113,56 @@ function creatingAtoken() {
 }
 
 function settingYourmarket() {
-   let v = document.getElementById("vtwo");
+  let v = document.getElementById("vtwo");
   v.className = "highlight";
   next.title = "Two";
   nextVideo();
 }
 
 function wheresYourwallet() {
-   let v = document.getElementById("vthree");
+  let v = document.getElementById("vthree");
   v.className = "highlight";
   next.title = "Three";
   nextVideo();
 }
 
 function sendAndrecive() {
-   let v = document.getElementById("vfour");
+  let v = document.getElementById("vfour");
   v.className = "highlight";
   next.title = "Four";
   nextVideo();
 }
 
 function sellBuydonate() {
-   let v = document.getElementById("vfive");
+  let v = document.getElementById("vfive");
   v.className = "highlight";
   next.title = "Five";
   nextVideo();
 }
 
 function ladderTrading() {
-   let v = document.getElementById("vsix");
+  let v = document.getElementById("vsix");
   v.className = "highlight";
   next.title = "Six";
   nextVideo();
 }
 
 function mintmeTometa() {
-   let v = document.getElementById("vseven");
+  let v = document.getElementById("vseven");
   v.className = "highlight";
   next.title = "Seven";
   nextVideo();
 }
 
 function exploringTools() {
-   let v = document.getElementById("veight");
+  let v = document.getElementById("veight");
   v.className = "highlight";
   next.title = "Eight";
   nextVideo();
 }
 
 function deployingTokens() {
-   let v = document.getElementById("vnine");
+  let v = document.getElementById("vnine");
   v.className = "highlight";
   next.title = "Nine";
   nextVideo();
