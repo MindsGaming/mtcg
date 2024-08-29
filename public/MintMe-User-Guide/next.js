@@ -57,14 +57,14 @@ function nextVideo() {
                   if (next.title == "Nine") {
                     next.src =
                       "https://www.youtube.com/embed/4D5oNiqYnbQ?si=jmRcBuLKuFEH2Jjs";
-                    next.title = "Zero";
+                    next.title = "Ten";
                     let nextBTN = document.getElementById("nextBTN");
                     delayBTN();
                   } else {
-                    if (next.title == "Zero") {
+                    if (next.title == "Ten") {
                       next.src =
                         "https://www.youtube.com/embed/aiyRy1P163o?si=_5wAco2qkCQm8CV-";
-                      next.title = "One";
+                      next.title = "Zero";
                       let nextBTN = document.getElementById("nextBTN");
                       delayBTN();
                     } else {
