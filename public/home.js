@@ -15,7 +15,7 @@ function communityTokens() {
     if (tokenList.className == "token-list") {
       tokenList.className = "hide";
       holder.className = "holder";
-      footers.className = "hide";
+      footers.className = "topics";
     }
   }
 }
