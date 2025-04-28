@@ -4,12 +4,18 @@ function mtcgToken() {
 
 function communityTokens() {
   let tokenList = document.getElementById("token-list");
+  let holder = document.getElementById("holder");
+  let footers = document.getElementById("topics");
 
   if (tokenList.className == "hide") {
     tokenList.className = "token-list";
+    holder.className = "hide";
+    footers.className = "hide";
   } else {
     if (tokenList.className == "token-list") {
       tokenList.className = "hide";
+      holder.className = "holder";
+      footers.className = "hide";
     }
   }
 }
