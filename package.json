@@ -10,17 +10,16 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.19.2",
-    "sqlite3": "^5.1.7",
-    "metamask-react": "^2.7.0",
-    "web3": "^4.8.0",
-    "axios": "^0.28.1",
-    "socket.io-client": "^4.7.5",
+    "axios": "^1.9.0",
+    "express": "^5.1.0",
     "has-yarn": "^3.0.0",
-    "networked-aframe": "^0.12.2"
+    "metamask-react": "^2.7.0",
+    "networked-aframe": "^0.14.0",
+    "sqlite3": "^5.1.7",
+    "web3": "^4.16.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=16.X"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/mtcg"
